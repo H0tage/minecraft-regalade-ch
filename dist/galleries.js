@@ -12,12 +12,12 @@ const galleries = [
   },
   {
     title: "Explorer un monde vivant",
-    source: "https://modrinth.com/mod/sgjourney",
-    sourceName: "Stargate Journey",
+    source: "https://modrinth.com/mod/yungs-better-dungeons",
+    sourceName: "YUNG's Better Dungeons, Towns and Towers & Stargate Journey",
     images: [
-      ["https://cdn.modrinth.com/data/qlc8dxM6/images/4aad03c48768aa1818878dbcfc0d5808c19f5b80_350.webp", "Porte enterrée — Stargate Journey", "https://modrinth.com/mod/sgjourney"],
-      ["https://cdn.modrinth.com/data/qlc8dxM6/images/5b9e55329ab2c9468edc526fbf717e1085b9f3bb_350.webp", "Porte découverte — Stargate Journey", "https://modrinth.com/mod/sgjourney"],
-      ["https://cdn.modrinth.com/data/qlc8dxM6/images/f0907c9b0779e8b613d3ebf3571cf14ced51b490_350.webp", "Pyramide d'Abydos — Stargate Journey", "https://modrinth.com/mod/sgjourney"],
+      ["https://cdn.modrinth.com/data/o1C1Dkj5/images/1a3ee86e7269bd3703d8ece03cf897b70d2188df_350.webp", "Forteresse des morts-vivants — YUNG's Better Dungeons", "https://modrinth.com/mod/yungs-better-dungeons"],
+      ["https://cdn.modrinth.com/data/o1C1Dkj5/images/30252f3a39f459bcbf98926baad798590d35c17c_350.webp", "Catacombes — YUNG's Better Dungeons", "https://modrinth.com/mod/yungs-better-dungeons"],
+      ["https://cdn.modrinth.com/data/DjLobEOy/images/48a216a3f454dd61c929bd4f73fb2f14355d3ea5_350.webp", "Village généré — Towns and Towers", "https://modrinth.com/mod/towns-and-towers"],
       ["https://cdn.modrinth.com/data/qlc8dxM6/images/4cbcee3531cfb4c1a7c254a747cc416cbbd10cc7_350.webp", "Porte de Pégase — Stargate Journey", "https://modrinth.com/mod/sgjourney"]
     ]
   },
@@ -35,9 +35,9 @@ const galleries = [
   {
     title: "Jouer avec les autres, à son rythme",
     source: "https://modrinth.com/mod/simple-voice-chat",
-    sourceName: "Simple Voice Chat, Exposure & Etched",
+    sourceName: "Collector's Album, Simple Voice Chat, Exposure & Etched",
     images: [
-      ["https://cdn.modrinth.com/data/9eGKb6K1/images/972b1b3ddd3d7a3305b018ac73b960378a034b34_350.webp", "Créer un groupe — Simple Voice Chat", "https://modrinth.com/mod/simple-voice-chat"],
+      ["https://cdn.modrinth.com/data/4pdmGHx9/images/3d29225f0dbbef6e95ae2d6eb016c2a35f92de51_350.webp", "Ouverture de booster — Collector's Album", "https://modrinth.com/mod/collectors-album"],
       ["https://cdn.modrinth.com/data/9eGKb6K1/images/95490c1c7cf1be0d2981476efbc6acfe79c8b58b_350.webp", "Discussion de proximité — Simple Voice Chat", "https://modrinth.com/mod/simple-voice-chat"],
       ["https://cdn.modrinth.com/data/hB899VmG/images/5a84f1c7734227560999184ca8e6ab4dec8f7b15.png", "Maison de village — Exposure", "https://modrinth.com/mod/exposure"],
       ["https://cdn.modrinth.com/data/zi3Fnfmc/images/15d486da752dd0cca6bcfbc578aa065b7786c1a3_350.webp", "Le barde — Etched", "https://modrinth.com/mod/etched"]
@@ -49,6 +49,6 @@ for (const gallery of galleries) {
   if (!chapter) continue;
   const element = document.createElement('div');
   element.className = 'chapter-gallery';
-  element.innerHTML = gallery.images.map(([image, alt, link]) => `<figure><a href="${link}" target="_blank" rel="noreferrer"><img src="${image}" alt="${alt}" loading="lazy"></a><figcaption>${alt}</figcaption></figure>`).join('') + `<p class="image-credit">Visuels issus des pages officielles de <a href="${gallery.source}" target="_blank" rel="noreferrer">${gallery.sourceName}</a>.</p>`;
+  element.innerHTML = gallery.images.map(([image, alt, link]) => `<figure><a href="${link}" target="_blank" rel="noreferrer"><img src="${image}" alt="${alt}" loading="lazy"></a><figcaption>${alt}</figcaption></figure>`).join('') + `<p class="image-credit">Chaque visuel renvoie vers sa page officielle.</p>`;
   chapter.append(element);
 }
