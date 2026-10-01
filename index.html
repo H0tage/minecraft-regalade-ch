@@ -20,6 +20,9 @@
   <style>
     .presentation-chapter.heart{background:#486d5f}.chapter-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:25px}.chapter-gallery figure{margin:0;border:1px solid rgba(40,61,68,.15);border-radius:13px;overflow:hidden;background:#fff}.chapter-gallery img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .22s ease}.chapter-gallery a:hover img{transform:scale(1.035)}.chapter-gallery figcaption{padding:9px 11px;color:var(--muted);font-size:.77rem;line-height:1.35}.rule-general{display:block;grid-column:1/-1}.rule-general h3{margin:0 0 8px;color:var(--orange)}.rule-general p strong{color:var(--cyan);font-weight:850}@media(max-width:560px){.chapter-gallery{grid-template-columns:1fr}}
   </style>
+  <style>
+    .mod-heading{display:flex;align-items:center;gap:11px;margin:12px 0 7px}.mod-heading h3{margin:0;line-height:1.18}.mod-icon{width:38px;height:38px;flex:0 0 38px;object-fit:contain;padding:4px;border:1px solid var(--line);border-radius:10px;background:var(--cyan-pale)}
+  </style>
 </head>
 <body>
   <div class="topbar"></div>
@@ -35,6 +38,7 @@
   <script src="mods.js"></script>
   <script src="galleries.js"></script>
   <script src="mods-details.js"></script>
+  <script src="mods-icons.js"></script>
   <script>
     const mods=window.REGALE_MODS;
     const grid=document.querySelector('#mods-grid'),count=document.querySelector('#mod-count'),tabs=document.querySelector('#mod-tabs');let activeCategory='tous';
@@ -47,6 +51,7 @@
   <script>
     (() => {
       const detailMods = window.REGALE_MOD_DETAILS;
+      const modIcons = new Map(window.REGALE_MOD_ICONS);
       const grid = document.querySelector('#mods-grid');
       const count = document.querySelector('#mod-count');
       const tabs = document.querySelector('#mod-tabs');
@@ -56,7 +61,7 @@
         const query = search.value.toLowerCase();
         const matches = detailMods.filter(mod => (category === 'tous' || mod[1] === category) && mod.join(' ').toLowerCase().includes(query));
         count.textContent = `${matches.length} mod${matches.length > 1 ? 's' : ''} affiché${matches.length > 1 ? 's' : ''} · 147 mods principaux, sans les librairies ni dépendances.`;
-        grid.innerHTML = matches.map(mod => `<a class="card mod mod-link" target="_blank" rel="noreferrer" href="${mod[4]}"><span class="tag">${mod[1]}</span><h3>${mod[0]}</h3><p class="mod-version">Version ${mod[2]}</p><p class="mod-description">${mod[3]}</p></a>`).join('') || '<p>Aucun mod ne correspond à cette recherche.</p>';
+        grid.innerHTML = matches.map(mod => `<a class="card mod mod-link" target="_blank" rel="noreferrer" href="${mod[4]}"><span class="tag">${mod[1]}</span><div class="mod-heading"><img class="mod-icon" loading="lazy" src="${modIcons.get(mod[0])}" alt=""><h3>${mod[0]}</h3></div><p class="mod-version">Version ${mod[2]}</p><p class="mod-description">${mod[3]}</p></a>`).join('') || '<p>Aucun mod ne correspond à cette recherche.</p>';
       }
       tabs.addEventListener('click', event => {
         const button = event.target.closest('.mod-tab');
