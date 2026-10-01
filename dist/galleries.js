@@ -49,6 +49,6 @@ for (const gallery of galleries) {
   if (!chapter) continue;
   const element = document.createElement('div');
   element.className = 'chapter-gallery';
-  element.innerHTML = gallery.images.map(([image, alt, link]) => `<figure><a href="${link}" target="_blank" rel="noreferrer"><img src="${image}" alt="${alt}" loading="lazy"></a><figcaption>${alt}</figcaption></figure>`).join('') + `<p class="image-credit">Chaque visuel renvoie vers sa page officielle.</p>`;
+  element.innerHTML = gallery.images.map(([image, alt, link]) => `<figure><a href="${link}" target="_blank" rel="noreferrer"><img src="${image}" alt="${alt}" loading="lazy"></a><figcaption>${alt}</figcaption></figure>`).join('');
   chapter.append(element);
 }
