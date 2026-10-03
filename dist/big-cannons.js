@@ -123,7 +123,7 @@
   document.head.append(style);
 
   const responsiveFix = document.createElement('style');
-  responsiveFix.textContent = '.cbc-mission > div{min-width:0}.tutorial-panel .cbc-hero{display:block;height:auto}';
+  responsiveFix.textContent = '.cbc-mission > div{min-width:0}.tutorial-panel .cbc-hero{display:block;height:auto}.cbc-card-icon{display:grid!important;grid-template-columns:48px minmax(0,1fr);column-gap:12px;align-items:start}.cbc-card-icon>img{display:block!important;float:none!important;grid-column:1;grid-row:1 / span 2;width:48px!important;height:48px!important;max-width:48px!important;padding:6px!important;object-fit:contain!important}.cbc-card-icon h3,.cbc-card-icon p{grid-column:2;align-self:start}.cbc-card-icon h3{margin:0 0 6px!important}.cbc-card-icon p{margin:0!important}';
   document.head.append(responsiveFix);
 
   const modeTabs = [...panel.querySelectorAll('.cbc-switcher [role="tab"]')];
