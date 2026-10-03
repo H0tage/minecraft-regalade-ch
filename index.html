@@ -102,11 +102,11 @@
       if (faq && rules) rules.after(faq);
     })();
   </script>
-  <script src="big-cannons-tutorial.js"></script>
+  <script src="big-cannons.js"></script>
   <script>
     (() => {
-      const tabs = [...document.querySelectorAll('#tutoriels [role="tab"]')];
-      const panels = [...document.querySelectorAll('#tutoriels [role="tabpanel"]')];
+      const tabs = [...document.querySelectorAll('#tutoriels > .tutorial-tabs [role="tab"]')];
+      const panels = [...document.querySelectorAll('#tutoriels > .tutorial-content > .tutorial-panel[role="tabpanel"]')];
       function selectTutorial(tab) {
         tabs.forEach(item => {
           const selected = item === tab;
