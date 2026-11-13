@@ -20,7 +20,7 @@
 .install-callout{padding:15px 17px;margin-top:17px;border-left:4px solid var(--orange);border-radius:0 11px 11px 0;background:var(--orange-pale);color:#70411f;font-size:.9rem}
 .install-success{margin:32px 0;padding:27px;border:1px solid #b9dfcf;border-radius:18px;background:#eef9f4}
 .install-success h2{margin:0 0 7px;color:#166b4a}.install-success p{margin:0;color:#47665a}
-.install-aftercare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.install-aftercare{display:grid;grid-template-columns:1fr;gap:16px;margin-top:22px}
 .install-aftercare .card h2{margin-top:0}.install-aftercare .card p{color:var(--muted)}
 .install-aftercare ol,.install-aftercare ul{padding-left:21px;margin-bottom:0}.install-aftercare li{padding:5px 0;color:#4f5f66}
 .install-faq{display:grid;gap:9px;margin-top:28px}.install-faq details{padding:15px 17px;border:1px solid var(--line);border-radius:12px;background:#fff}.install-faq summary{cursor:pointer;font-weight:850}.install-faq p{margin:10px 0 0;color:var(--muted)}
