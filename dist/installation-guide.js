@@ -18,7 +18,7 @@
     </section>
 
     <aside class="install-start">
-      <div><h2>Le fichier à utiliser</h2><p>Télécharge le ZIP CurseForge et garde-le tel quel. Ne l’ouvre pas et ne le décompresse pas.</p></div>
+      <div><h2>Le modpack du serveur</h2><p>Télécharge le ZIP qui contient tous les mods du serveur, et garde-le tel quel. Ne l’ouvre pas et ne le décompresse pas : CurseForge va s’occuper de tout.</p></div>
       <a class="button" href="${packFile}" download>Télécharger le modpack</a>
     </aside>
 
@@ -42,8 +42,8 @@
 
       <article class="install-step">
         <div>
-          <h2>Importe le ZIP du serveur</h2>
-          <p>Dans CurseForge, ouvre la section Minecraft et clique sur <strong>Importer</strong> ou <strong>Import</strong>. Choisis ensuite le fichier <strong>Regalade-Minecraft-Client-CurseForge-0.1.4-preparation.zip</strong>.</p>
+          <h2>Importer le modpack dans CurseForge</h2>
+          <p>Dans CurseForge, ouvre la section Minecraft et clique sur <strong>Importer</strong> ou <strong>Import</strong>. Choisis ensuite le fichier <strong>Regalade-Minecraft-Client-CurseForge.zip</strong>. Vous pouvez aussi cliquer-glisser le ZIP dans CurseForge.</p>
           <div class="install-path" aria-label="Chemin d’importation"><span>CurseForge</span><span>Minecraft</span><span>Importer</span><span>Choisir le ZIP</span></div>
         </div>
       </article>
@@ -51,14 +51,14 @@
       <article class="install-step">
         <div>
           <h2>Laisse CurseForge terminer l’installation</h2>
-          <p>Le profil <strong>${packName}</strong> apparaît dans « Mes modpacks ». CurseForge télécharge alors les mods ; la durée dépend de ta connexion.</p>
+          <p>Le profil <strong>${packName}</strong> apparaît dans « Mes modpacks ». CurseForge télécharge tous les mods et leurs dépendances : c’est magique oOo.</p>
           <p>Attends que l’activité soit terminée avant de cliquer sur <strong>Jouer</strong>.</p>
         </div>
       </article>
 
       <article class="install-step">
         <div>
-          <h2>Alloue suffisamment de mémoire</h2>
+          <h2>Alloue suffisamment de mémoire RAM</h2>
           <p>Dans les paramètres Minecraft de CurseForge, règle la mémoire allouée à <strong>8&nbsp;192 Mo</strong> si ton ordinateur possède au moins 16 Go de RAM. Avec 8 Go de RAM au total, commence à 6&nbsp;144 Mo et ferme les autres programmes.</p>
           <div class="install-callout">N’alloue pas toute la mémoire de l’ordinateur à Minecraft : Windows doit aussi pouvoir fonctionner.</div>
         </div>
@@ -66,7 +66,7 @@
 
       <article class="install-step">
         <div>
-          <h2>Lance le profil</h2>
+          <h2>Lance le jeu ! (letzgo !)</h2>
           <p>Dans CurseForge, ouvre <strong>${packName}</strong> puis clique sur <strong>Jouer</strong>. Connecte-toi au launcher Minecraft avec le compte Microsoft qui possède Java Edition.</p>
           <p>Le premier démarrage est le plus long. Une fenêtre qui semble immobile pendant quelques minutes n’est pas forcément bloquée.</p>
         </div>
