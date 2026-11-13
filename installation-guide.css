@@ -1,14 +1,28 @@
-#tutorial-install .install-heading{max-width:760px;margin-bottom:24px}
-#tutorial-install .install-heading h1{margin:7px 0 8px;font-size:clamp(2rem,4vw,3rem);line-height:1;letter-spacing:-.045em}
-#tutorial-install .install-heading p{margin:0;color:var(--muted)}
-#tutorial-install .install-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;counter-reset:install-step;margin:0;padding:0;list-style:none}
-#tutorial-install .install-step{counter-increment:install-step;min-width:0;padding:17px;border:1px solid var(--line);border-radius:14px;background:#fff}
-#tutorial-install .install-step::before{content:counter(install-step);display:grid;place-items:center;width:30px;height:30px;margin-bottom:12px;border-radius:9px;background:var(--cyan-pale);color:#087ca9;font-weight:900}
-#tutorial-install .install-step:nth-child(even)::before{background:var(--orange-pale);color:#bd510e}
-#tutorial-install .install-step h2{margin:0 0 7px;font-size:1rem}
-#tutorial-install .install-step p{margin:0;color:var(--muted);font-size:.88rem;line-height:1.5}
-#tutorial-install .install-step a{display:inline-block;margin-top:11px;color:#087ca9;font-size:.83rem;font-weight:850;text-decoration:none}
-#tutorial-install .install-step a:hover{text-decoration:underline}
-#tutorial-install .install-note{margin:16px 0 0;padding:11px 14px;border-left:3px solid var(--orange);background:var(--orange-pale);color:#654128;font-size:.86rem}
-@media(max-width:900px){#tutorial-install .install-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:540px){#tutorial-install .install-steps{grid-template-columns:1fr}#tutorial-install .install-heading h1{font-size:2rem}}
+#tutorial-install .install-overview{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:24px;padding:17px 20px;margin-bottom:22px;border:1px solid var(--line);border-radius:14px;background:#fff}
+#tutorial-install .install-overview .eyebrow{white-space:nowrap}
+#tutorial-install .install-overview ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0;padding:0;list-style:none}
+#tutorial-install .install-overview li{display:flex;align-items:center;gap:9px;min-width:0;color:#43555d;font-size:.82rem;font-weight:800;line-height:1.25}
+#tutorial-install .install-overview li strong{display:grid;place-items:center;flex:0 0 29px;width:29px;height:29px;border-radius:9px;background:var(--cyan-pale);color:#087ca9}
+#tutorial-install .install-overview li:nth-child(even) strong{background:var(--orange-pale);color:#bd510e}
+.install-start{display:grid;grid-template-columns:1fr auto;align-items:center;gap:22px;padding:23px 25px;margin:22px 0 35px;border-radius:16px;background:#202d33;color:#fff}
+.install-start h2{margin:0 0 5px;font-size:1.25rem}.install-start p{margin:0;color:#cad6da;font-size:.92rem}
+.install-start .button{white-space:nowrap;background:var(--orange);border-color:var(--orange);color:#281205}
+.install-steps{display:grid;gap:16px;counter-reset:install-step}
+.install-step{counter-increment:install-step;display:grid;grid-template-columns:62px minmax(0,1fr);gap:18px;padding:25px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.install-step::before{content:counter(install-step,decimal-leading-zero);display:grid;place-items:center;width:54px;height:54px;border-radius:15px;background:var(--cyan-pale);color:#087ca9;font-size:1.1rem;font-weight:900}
+.install-step:nth-child(even)::before{background:var(--orange-pale);color:#bd510e}
+.install-step h2{margin:2px 0 8px;font-size:1.28rem}.install-step p{margin:0;color:var(--muted)}
+.install-step p+p{margin-top:10px}.install-step strong{color:#26373f}
+.install-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:17px}.install-actions .button{font-size:.88rem;padding:10px 14px}
+.install-path{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin-top:18px}
+.install-path span{position:relative;padding:10px 8px;border:1px solid #cfe1e8;border-radius:10px;background:#f4fafc;text-align:center;color:#31515f;font-size:.78rem;font-weight:850}
+.install-path span:not(:last-child)::after{content:"→";position:absolute;right:-9px;top:50%;z-index:1;transform:translateY(-50%);color:var(--orange)}
+.install-callout{padding:15px 17px;margin-top:17px;border-left:4px solid var(--orange);border-radius:0 11px 11px 0;background:var(--orange-pale);color:#70411f;font-size:.9rem}
+.install-success{margin:32px 0;padding:27px;border:1px solid #b9dfcf;border-radius:18px;background:#eef9f4}
+.install-success h2{margin:0 0 7px;color:#166b4a}.install-success p{margin:0;color:#47665a}
+.install-aftercare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.install-aftercare .card h2{margin-top:0}.install-aftercare .card p{color:var(--muted)}
+.install-aftercare ol,.install-aftercare ul{padding-left:21px;margin-bottom:0}.install-aftercare li{padding:5px 0;color:#4f5f66}
+.install-faq{display:grid;gap:9px;margin-top:28px}.install-faq details{padding:15px 17px;border:1px solid var(--line);border-radius:12px;background:#fff}.install-faq summary{cursor:pointer;font-weight:850}.install-faq p{margin:10px 0 0;color:var(--muted)}
+@media(max-width:720px){#tutorial-install .install-overview{grid-template-columns:1fr}#tutorial-install .install-overview ol{grid-template-columns:repeat(2,minmax(0,1fr))}.install-start{grid-template-columns:1fr}.install-start .button{width:100%}.install-path{grid-template-columns:1fr}.install-path span:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-14px;transform:translateX(-50%)}.install-aftercare{grid-template-columns:1fr}}
+@media(max-width:510px){#tutorial-install .install-overview ol{grid-template-columns:1fr 1fr}.install-step{grid-template-columns:1fr;padding:21px}.install-step::before{width:46px;height:46px}.install-actions{display:block}.install-actions .button{width:100%;margin-top:8px}}
