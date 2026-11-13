@@ -13,7 +13,7 @@
 .install-step:nth-child(even)::before{background:var(--orange-pale);color:#bd510e}
 .install-step h2{margin:2px 0 8px;font-size:1.28rem}.install-step p{margin:0;color:var(--muted)}
 .install-step p+p{margin-top:10px}.install-step strong{color:#26373f}
-.install-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:17px}.install-actions .button{padding:10px 14px;border-color:var(--ink);background:var(--ink);color:#fff;font-size:.88rem}
+.install-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:17px}.install-actions .button{padding:10px 14px!important;border-color:#243137!important;background:#243137!important;color:#fff!important;font-size:.88rem}.install-actions .button:visited{color:#fff!important}
 .install-path{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin-top:18px}
 .install-path span{position:relative;padding:10px 8px;border:1px solid #cfe1e8;border-radius:10px;background:#f4fafc;text-align:center;color:#31515f;font-size:.78rem;font-weight:850}
 .install-path span:not(:last-child)::after{content:"→";position:absolute;right:-9px;top:50%;z-index:1;transform:translateY(-50%);color:var(--orange)}
