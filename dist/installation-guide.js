@@ -3,8 +3,7 @@
   if (!panel) return;
 
   const packName = 'Régalade Minecraft';
-  const packVersion = '0.1.4-preparation';
-  const packFile = 'assets/downloads/Regalade-Minecraft-Client-CurseForge-0.1.4-preparation.zip';
+  const packFile = 'assets/downloads/ModPack%20Regalade%20v1.0.zip';
 
   panel.innerHTML = `
     <section class="install-overview" aria-label="Étapes de l’installation">
@@ -43,7 +42,7 @@
       <article class="install-step">
         <div>
           <h2>Importer le modpack dans CurseForge</h2>
-          <p>Dans CurseForge, ouvre la section Minecraft et clique sur <strong>Importer</strong> ou <strong>Import</strong>. Choisis ensuite le fichier <strong>Regalade-Minecraft-Client-CurseForge.zip</strong>. Vous pouvez aussi cliquer-glisser le ZIP dans CurseForge.</p>
+          <p>Dans CurseForge, ouvre la section Minecraft et clique sur <strong>Importer</strong> ou <strong>Import</strong>. Choisis ensuite le fichier <strong>ModPack Regalade v1.0.zip</strong>. Tu peux aussi cliquer-glisser le ZIP dans CurseForge.</p>
           <div class="install-path" aria-label="Chemin d’importation"><span>CurseForge</span><span>Minecraft</span><span>Importer</span><span>Choisir le ZIP</span></div>
         </div>
       </article>
