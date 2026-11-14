@@ -127,6 +127,7 @@
 
     <section class="cbc-survival-step cbc-welding" id="cbc-auto-welding">
       <div class="cbc-step-title"><span>10</span><div><p class="cbc-step-kicker">Réparation et montage</p><h2>Reconnecter deux pièces avec la soudure.</h2></div></div>
+      <p class="cbc-checkpoint"><b>Cette section ne vous concerne que si vous avez récupéré les pièces avec une pioche Silk Touch, puis les avez reposées séparément.</b><span>Si elles ont été cassées sans Silk Touch et transformées en ferraille, elles sont irrécupérables : vous devez recommencer leur fabrication depuis le début.</span></p>
       <p class="cbc-body-copy">La soudure n’est utile que si les pièces ont été coulées séparément, démontées ou replacées. Elle relie deux blocs adjacents pour que le jeu les reconnaisse comme un seul canon.</p>
       <div class="cbc-weld-recipe"><b>[Cannon Welder / Soudeur de canon]</b><span>1 [Valve Handle / Poignée de vanne]</span><span>1 plaque de fer</span><span>3 plaques de laiton</span><span>1 [Blaze Burner / Brûleur à Blaze]</span></div>
       <div class="cbc-weld-line"><div><b>1</b><span>Prends le soudeur en main.</span></div><i>→</i><div><b>2</b><span>Clic droit sur la première pièce.</span></div><i>→</i><div><b>3</b><span>Clic droit sur la pièce voisine.</span></div><i>→</i><div><b>4</b><span>Recommence à chaque jonction.</span></div></div>
