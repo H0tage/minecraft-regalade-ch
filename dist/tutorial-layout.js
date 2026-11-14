@@ -113,9 +113,15 @@
       return;
     }
 
-    chapterList.innerHTML = observedSections.map((section, index) =>
-      `<a href="#${section.id}">${chapterTitle(section, index)}</a>`
-    ).join('');
+    let currentPhase = '';
+    chapterList.innerHTML = observedSections.map((section, index) => {
+      const phase = section.dataset.phase || '';
+      const phaseLabel = phase && phase !== currentPhase
+        ? `<span class="tutorial-chapter-phase">${phase}</span>`
+        : '';
+      currentPhase = phase || currentPhase;
+      return `${phaseLabel}<a href="#${section.id}">${chapterTitle(section, index)}</a>`;
+    }).join('');
     chapterList.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', event => {
         const target = document.getElementById(link.hash.slice(1));

@@ -145,6 +145,18 @@
 }
 .tutorial-chapter-list a.active { font-weight: 900; }
 
+.tutorial-chapter-phase {
+  display: block;
+  margin: 14px 0 3px;
+  color: var(--ink);
+  font-size: .61rem;
+  font-weight: 950;
+  letter-spacing: .07em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+.tutorial-chapter-phase:first-child { margin-top: 0; }
+
 .tutorial-chapter-empty {
   margin: 0;
   color: var(--muted);
