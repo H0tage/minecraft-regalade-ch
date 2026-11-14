@@ -1,7 +1,7 @@
 .cbc-survival{color:var(--cbc-ink);font:15px/1.55 Inter,"Segoe UI",Arial,sans-serif}
 .cbc-survival[hidden]{display:none!important}
-.cbc-survival-hero{padding:24px 0 28px;border-bottom:1px solid var(--cbc-line)}
-.cbc-survival-hero h1{max-width:760px;margin:0;font-size:clamp(2rem,4.2vw,3.5rem);line-height:1;letter-spacing:-.055em}
+.cbc-survival-hero{display:block;height:auto;align-items:initial;justify-content:initial;padding:24px 0 28px;border-bottom:1px solid var(--cbc-line)}
+.cbc-survival-hero h1{max-width:760px;margin:0;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.02;letter-spacing:-.05em}
 .cbc-survival-hero>p:not(.cbc-eyebrow){max-width:800px;margin:12px 0 0;color:var(--cbc-muted);font-size:1rem}
 .cbc-project-line,.cbc-process-line,.cbc-ammo-chain{display:flex;align-items:center;gap:8px;overflow:auto;margin-top:18px;padding:13px;border:1px solid var(--cbc-line);border-radius:12px;background:#fff;white-space:nowrap}
 .cbc-project-line b,.cbc-process-line b,.cbc-process-line strong,.cbc-ammo-chain b,.cbc-ammo-chain strong{padding:8px 10px;border:1px solid var(--cbc-line);border-radius:8px;background:#f5f8f9;font-size:.83rem}
