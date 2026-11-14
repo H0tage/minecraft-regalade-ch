@@ -7,12 +7,25 @@
   const workspace = document.createElement('div');
   workspace.className = 'tutorial-workspace';
 
+  const masthead = document.createElement('header');
+  masthead.className = 'tutorial-masthead';
+  masthead.innerHTML = `
+    <div class="tutorial-masthead-cue tutorial-masthead-cue-left">
+      <span>01</span><strong>Choix du tutoriel</strong><i aria-hidden="true">↓</i>
+    </div>
+    <div class="tutorial-masthead-title">
+      <span>Centre d’aide</span>
+      <h1>Consultez les divers tutoriels et aides du serveur</h1>
+    </div>
+    <div class="tutorial-masthead-cue tutorial-masthead-cue-right">
+      <span>02</span><strong>Navigation dans le tuto</strong><i aria-hidden="true">↓</i>
+    </div>`;
+
   const library = document.createElement('aside');
   library.className = 'tutorial-library';
   library.setAttribute('aria-label', 'Choisir un tutoriel');
   library.innerHTML = `
     <div class="tutorial-library-sticky">
-      <p class="tutorial-side-label">Documentation</p>
       <button class="tutorial-library-toggle" type="button" aria-expanded="false"></button>
     </div>`;
   library.querySelector('.tutorial-library-sticky').append(tabList);
@@ -26,13 +39,12 @@
   chapters.setAttribute('aria-label', 'Chapitres du tutoriel');
   chapters.innerHTML = `
     <div class="tutorial-chapters-sticky">
-      <p class="tutorial-side-label">Navigation</p>
       <button class="tutorial-chapter-toggle" type="button" aria-expanded="false">Afficher les chapitres</button>
       <nav class="tutorial-chapter-list" aria-label="Dans ce tutoriel"></nav>
     </div>`;
 
   workspace.append(library, reader, chapters);
-  root.append(workspace);
+  root.append(masthead, workspace);
 
   const libraryToggle = library.querySelector('.tutorial-library-toggle');
   const chapterToggle = chapters.querySelector('.tutorial-chapter-toggle');
