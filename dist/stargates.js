@@ -35,13 +35,6 @@
         </ul>
       </section>
 
-      <nav class="sgx-route" aria-label="Parcours du tutoriel">
-        <a href="#sgx-m1"><b>01</b>Atelier</a><a href="#sgx-m2"><b>02</b>Essai</a><a href="#sgx-m3"><b>03</b>Série</a>
-        <a href="#sgx-m4"><b>04</b>Plaques</a><a href="#sgx-m5"><b>05</b>Machines</a><a href="#sgx-m6"><b>06</b>Cristaux</a>
-        <a href="#sgx-m7"><b>07</b>Composants</a><a href="#sgx-m8"><b>08</b>Montage</a><a href="#sgx-m9"><b>09</b>Énergie</a>
-        <a href="#sgx-m10"><b>10</b>Voyage</a><a href="#sgx-m11"><b>11</b>Dépannage</a>
-      </nav>
-
       ${mission(1, 'Préparer', 'Construire d’abord la raffinerie.', 'Ne pas collecter 21 fournées avant d’avoir validé la chaîne. Assembler les postes ci-dessous et prévoir de la place pour les relier.', `
         <div class="sgx-workshops">
           <article><h3>Préparation</h3><p>Millstone ou Crushing Wheels, Mechanical Mixer + Basin chauffé, stockage de fluides et pompes.</p></article>
