@@ -1680,16 +1680,38 @@
 
 #tutorial-stargates .sgu-routing-diagram div {
   display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr);
   gap: .2rem;
+  align-items: center;
   padding: .55rem;
   border: 1px solid var(--sg-line, #cddce3);
   border-radius: .45rem;
 }
 
 #tutorial-stargates .sgu-routing-diagram i {
+  grid-column: 1 / -1;
   color: var(--sg-orange, #ff963f);
   font-style: normal;
   font-weight: 900;
+}
+
+#tutorial-stargates .sgu-routing-diagram img {
+  grid-row: 2 / span 2;
+  width: 2.6rem;
+  height: 2.6rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+#tutorial-stargates .sgu-routing-diagram b,
+#tutorial-stargates .sgu-routing-diagram small {
+  text-align: left;
+}
+
+#tutorial-stargates .sgu-routing-diagram small {
+  color: #60737d;
+  font-size: .7rem;
+  line-height: 1.35;
 }
 
 #tutorial-stargates .sgu-loop-blueprint {
@@ -1822,6 +1844,7 @@
 
   #tutorial-stargates .sgu-map-split,
   #tutorial-stargates .sgu-map-precursors,
+  #tutorial-stargates .sgu-routing-diagram,
   #tutorial-stargates .sgu-bulk-lessons,
   #tutorial-stargates .sgu-scale-grid {
     grid-template-columns: 1fr;

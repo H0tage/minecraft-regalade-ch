@@ -190,7 +190,7 @@
 
     ${step(10, 'Industrialiser', 'Production de masse', 'Produire et répartir 168 Cryostabilized Naquadah Crystals', `
       <p class="sgu-copy">Réalise vingt et une fournées au total, prototype compris. Chaque sortie rejoint d’abord le coffre de comptage, puis trois stockages séparés.</p>
-      <div class="sgu-routing-diagram"><span class="source">Coffre : 168 Cryostabilized Naquadah Crystals</span><div><i>↙</i><b>128 · Naquadah Plates</b></div><div><i>↓</i><b>33 · Crystal Bases</b></div><div><i>↘</i><b>7 · Liquid Naquadah</b></div></div>
+      <div class="sgu-routing-diagram"><span class="source">Coffre : 168 Cryostabilized Naquadah Crystals</span><div><i>↙</i>${icon('naquadah-plate.png', 'Naquadah Plate')}<b>128 · Naquadah Plates</b><small>Étapes 11–12 · métallurgie détaillée</small></div><div><i>↓</i>${icon('crystal-base.png', 'Crystal Base')}<b>33 · Crystal Bases</b><small>Étapes 13–15 · cristallisation détaillée</small></div><div><i>↘</i>${icon('liquid-naquadah-bucket.png', 'Liquid Naquadah')}<b>7 · Liquid Naquadah</b><small>Étapes 13–15 · circuit liquide détaillé</small></div></div>
       `)}
 
     ${step(11, 'Fabriquer les Naquadah Plates', 'Atelier de métallurgie', 'Construire la boucle du Stabilized Naquadah Billet', `
