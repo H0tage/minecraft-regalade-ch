@@ -1,5 +1,5 @@
 (() => {
-  const root = document.querySelector('#tutorial-big-cannons-panel .cbc');
+  const root = document.querySelector('#tutorial-big-cannons .cbc');
   if (!root || document.getElementById('cbc-autocannon-panel')) return;
 
   const oldManual = root.querySelector('#cbc-manual-panel');
