@@ -842,6 +842,79 @@
   line-height: 1.45;
 }
 
+#tutorial-stargates .sgu-machine-sketch {
+  display: grid;
+  justify-items: center;
+  gap: .22rem;
+  margin: .65rem 0;
+  padding: .65rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .6rem;
+  background: #f9fbfc;
+}
+
+#tutorial-stargates .sgu-machine-sketch > i {
+  color: var(--sg-orange, #ff963f);
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+}
+
+#tutorial-stargates .sgu-sketch-block {
+  display: block;
+  width: min(100%, 19rem);
+  padding: .45rem .6rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .45rem;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-sketch-block.machine {
+  border-color: #9ecfe4;
+  background: #eaf6fb;
+}
+
+#tutorial-stargates .sgu-sketch-block.basin {
+  background: #fff;
+}
+
+#tutorial-stargates .sgu-sketch-block.heat {
+  border-color: #f4c49d;
+  background: #fff1e6;
+}
+
+#tutorial-stargates .sgu-sketch-block.no-heat {
+  background: #f1f4f5;
+  color: #60737d;
+}
+
+#tutorial-stargates .sgu-sketch-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .3rem;
+  margin-top: .4rem;
+}
+
+#tutorial-stargates .sgu-sketch-inputs span {
+  padding: .25rem .4rem;
+  border-radius: .35rem;
+  background: #eef3f5;
+  color: #52666f;
+  font-size: .72rem;
+  font-weight: 700;
+}
+
+#tutorial-stargates .sgu-sketch-output {
+  margin-top: .18rem;
+  padding: .35rem .55rem;
+  border-radius: .4rem;
+  background: #edf8f4;
+  color: #116e59;
+  font-size: .8rem;
+  font-weight: 900;
+}
+
 #tutorial-stargates .sgu-side-diagram {
   display: grid;
   justify-items: center;
