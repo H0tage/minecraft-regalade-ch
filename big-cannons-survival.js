@@ -1,0 +1,200 @@
+(() => {
+  const root = document.querySelector('#tutorial-big-cannons-panel .cbc');
+  if (!root || document.getElementById('cbc-autocannon-panel')) return;
+
+  const oldManual = root.querySelector('#cbc-manual-panel');
+  const oldRecipes = root.querySelector('#cbc-recipes-panel');
+  oldManual?.remove();
+  oldRecipes?.remove();
+
+  const switcher = root.querySelector('.cbc-switcher');
+  switcher.innerHTML = `
+    <button id="cbc-guide-tab" type="button" role="tab" aria-selected="true" aria-controls="cbc-guide-panel">Fonctionnement général</button>
+    <button id="cbc-autocannon-tab" type="button" role="tab" aria-selected="false" aria-controls="cbc-autocannon-panel" tabindex="-1">Premier autocanon</button>`;
+
+  const panel = document.createElement('div');
+  panel.className = 'cbc-survival';
+  panel.id = 'cbc-autocannon-panel';
+  panel.setAttribute('role', 'tabpanel');
+  panel.setAttribute('aria-labelledby', 'cbc-autocannon-tab');
+  panel.hidden = true;
+  panel.innerHTML = `
+    <header class="cbc-survival-hero">
+      <p class="cbc-eyebrow">Parcours survie · de zéro au premier tir</p>
+      <h1>Construire un autocanon simple.</h1>
+      <p>On part de matières premières et on fabrique une arme réellement fonctionnelle : pièces coulées ensemble, tube alésé, culasse terminée, munitions chargées et affût commandé.</p>
+      <div class="cbc-project-line" aria-label="Architecture du premier autocanon">
+        <b>[Breech / Culasse]</b><i>→</i><b>[Barrel / Canon]</b><i>→</i><b>[Barrel / Canon]</b><i>→</i><b>Air</b>
+      </div>
+    </header>
+
+    <section class="cbc-survival-step" id="cbc-auto-project">
+      <div class="cbc-step-title"><span>01</span><div><p class="cbc-step-kicker">Le projet</p><h2>Savoir exactement ce que l’on construit.</h2></div></div>
+      <p class="cbc-body-copy">Pour un premier essai, construis un autocanon en <strong>fonte</strong> composé d’une <strong>[Breech / Culasse]</strong> et de deux <strong>[Barrels / Canons]</strong>. Il est court, bon marché et exploite entièrement les deux augmentations de vitesse permises par la fonte.</p>
+      <div class="cbc-reason-grid">
+        <article><b>Pourquoi la fonte ?</b><span>Elle se fabrique tôt avec du fer et du charbon.</span></article>
+        <article><b>Pourquoi deux canons ?</b><span>Chaque section ajoute de la vitesse et réduit la dispersion, jusqu’à la limite du matériau.</span></article>
+        <article><b>Pourquoi aucun ressort ?</b><span>Le [Recoil Spring / Ressort de recul] anime le recul, mais ne le réduit pas. Il compterait aussi comme une section.</span></article>
+      </div>
+      <div class="cbc-checkpoint"><b>Objectif final</b><span>Une ligne droite de trois blocs, fermée côté culasse et ouverte côté cible.</span></div>
+    </section>
+
+    <section class="cbc-survival-step" id="cbc-auto-shopping">
+      <div class="cbc-step-title"><span>02</span><div><p class="cbc-step-kicker">Avant de commencer</p><h2>Réunir l’atelier et les consommables.</h2></div></div>
+      <div class="cbc-budget-grid">
+        <article><h3>Atelier réutilisable</h3><ul><li>1 [Basin Foundry Lid / Couvercle de fonderie]</li><li>1 [Cannon Drill / Foreuse à canon]</li><li>1 [Mechanical Bearing / Roulement mécanique]</li><li>1 [Mechanical Saw / Scie mécanique]</li><li>1 [Cannon Mount / Affût de canon]</li><li>1 [Cannon Mount Extension / Extension d’affût]</li></ul></article>
+        <article><h3>Pour ce premier canon</h3><ul><li>11 lingots de fonte</li><li>3 blocs de sable de moulage</li><li>2 bûches pour les moules</li><li>8 plaques de fer</li><li>1 lingot de laiton + 3 plaques de laiton</li><li>6 arbres, 2 boîtiers d’andésite</li><li>16 poudres à canon + 12 pépites de cuivre</li></ul></article>
+      </div>
+      <p class="cbc-note"><strong>Les 11 lingots de fonte :</strong> 10 seront fondus pour couler les trois pièces ; le dernier deviendra l’extracteur qui termine la culasse.</p>
+    </section>
+
+    <section class="cbc-survival-step" id="cbc-auto-cast-iron">
+      <div class="cbc-step-title"><span>03</span><div><p class="cbc-step-kicker">Métallurgie</p><h2>Produire 11 lingots de fonte.</h2></div></div>
+      <div class="cbc-process-line"><b>1 lingot de fer</b><i>+</i><b>1 charbon</b><i>→</i><b>[Mechanical Press / Presse mécanique]</b><i>→</i><strong>1 lingot de fonte</strong></div>
+      <div class="cbc-actions">
+        <article><b>1.</b><span>Place un [Basin / Bassin] sous une presse.</span></article>
+        <article><b>2.</b><span>Chauffe le bassin avec un [Blaze Burner / Brûleur à Blaze]. Le niveau chauffé ordinaire suffit.</span></article>
+        <article><b>3.</b><span>Compacte 11 lingots de fer avec 11 charbons.</span></article>
+      </div>
+      <p class="cbc-checkpoint"><b>Tu dois repartir avec :</b><span>11 lingots de fonte solides.</span></p>
+    </section>
+
+    <section class="cbc-survival-step" id="cbc-auto-foundry">
+      <div class="cbc-step-title"><span>04</span><div><p class="cbc-step-kicker">Fonderie</p><h2>Faire fondre 10 lingots.</h2></div></div>
+      <p class="cbc-body-copy">Pose le <strong>[Basin Foundry Lid / Couvercle de fonderie]</strong> sur un bassin chauffé. Il transforme les lingots de fonte en métal liquide, que tu peux transporter avec les tuyaux et pompes de Create.</p>
+      <div class="cbc-math"><span>10 lingots</span><i>×</i><span>90 mB</span><i>=</i><strong>900 mB de fonte liquide</strong></div>
+      <p class="cbc-note">Garde le onzième lingot sous forme solide : il sert à fabriquer le [Breech Extractor / Extracteur de culasse].</p>
+    </section>
+
+    <section class="cbc-survival-step" id="cbc-auto-moulds">
+      <div class="cbc-step-title"><span>05</span><div><p class="cbc-step-kicker">Moules</p><h2>Préparer les trois couches de coulée.</h2></div></div>
+      <div class="cbc-recipe-pairs">
+        <article><h3>Moules en bois</h3><p><strong>1 bûche passée à la scie</strong> produit un moule de culasse. Une seconde bûche produit le moule de canon, réutilisable pour les deux canons.</p></article>
+        <article><h3>Sable de moulage</h3><p><strong>2 sables + 1 terre + 1 boule d’argile</strong> produisent 1 bloc. Fabrique-en trois.</p></article>
+      </div>
+      <div class="cbc-cast-stack" aria-label="Trois couches du moule vertical">
+        <div><b>Haut</b><span>Moule de canon + sable</span></div>
+        <div><b>Milieu</b><span>Moule de canon + sable</span></div>
+        <div><b>Bas</b><span>Moule de culasse + sable</span></div>
+      </div>
+    </section>
+
+    <section class="cbc-survival-step" id="cbc-auto-casting">
+      <div class="cbc-step-title"><span>06</span><div><p class="cbc-step-kicker">Coulée connectée</p><h2>Couler les trois pièces en une seule colonne.</h2></div></div>
+      <p class="cbc-body-copy">Empile les trois formes <strong>directement les unes sur les autres</strong>, puis remplis-les sans les déplacer. La coulée commune crée automatiquement les connexions internes entre les pièces.</p>
+      <div class="cbc-workshop-diagram">
+        <div class="top"><b>[Barrel / Canon]</b><span>270 mB</span></div>
+        <div class="middle"><b>[Barrel / Canon]</b><span>270 mB</span></div>
+        <div class="bottom"><b>[Breech / Culasse]</b><span>360 mB</span></div>
+        <div class="out"><strong>Total : 900 mB</strong><span>Attends la solidification complète.</span></div>
+      </div>
+      <p class="cbc-checkpoint"><b>Pourquoi une seule colonne ?</b><span>Parce qu’un assemblage coulé ensemble est déjà connecté. Aucun soudage n’est nécessaire tant que tu ne sépares pas les blocs.</span></p>
+    </section>
+
+    <section class="cbc-survival-step" id="cbc-auto-boring">
+      <div class="cbc-step-title"><span>07</span><div><p class="cbc-step-kicker">Usinage</p><h2>Aléser le tube de part en part.</h2></div></div>
+      <p class="cbc-body-copy">Les pièces sorties du moule sont pleines. Il faut créer leur passage intérieur avec la <strong>[Cannon Drill / Foreuse à canon]</strong>.</p>
+      <div class="cbc-boring-diagram"><div class="drill">Foreuse + eau</div><i>→</i><div class="work">Canon vertical sur roulement mécanique</div></div>
+      <ol class="cbc-numbered">
+        <li>Fixe la colonne sur un [Mechanical Bearing / Roulement mécanique] afin qu’elle tourne comme sur un tour.</li>
+        <li>Aligne la foreuse exactement avec l’axe du canon.</li>
+        <li>Alimente la foreuse en eau.</li>
+        <li>Donne à la foreuse et au roulement la <strong>même vitesse de rotation</strong>.</li>
+        <li>Fais traverser les trois blocs par la tête de forage.</li>
+      </ol>
+      <p class="cbc-warning"><strong>Si rien ne se passe :</strong> vérifie d’abord l’eau, l’alignement et l’égalité des vitesses.</p>
+    </section>
+
+    <section class="cbc-survival-step" id="cbc-auto-extractor">
+      <div class="cbc-step-title"><span>08</span><div><p class="cbc-step-kicker">Terminer la culasse</p><h2>Fabriquer et installer l’extracteur.</h2></div></div>
+      <div class="cbc-process-line"><b>1 lingot de fonte</b><i>→</i><b>Scie × 3 passages</b><i>→</i><strong>[Breech Extractor / Extracteur de culasse]</strong></div>
+      <p class="cbc-body-copy">Prends l’extracteur en main et fais un clic droit sur la culasse incomplète. Elle devient une véritable <strong>[Autocannon Breech / Culasse d’autocanon]</strong>, sans perdre les connexions créées pendant la coulée.</p>
+    </section>
+
+    <section class="cbc-survival-step" id="cbc-auto-moving">
+      <div class="cbc-step-title"><span>09</span><div><p class="cbc-step-kicker">Déplacer sans casser</p><h2>Préserver l’assemblage coulé.</h2></div></div>
+      <div class="cbc-choice-grid">
+        <article><b>Solution recommandée</b><p>Déplace tout le canon d’un seul tenant avec une contraption Create ou construis l’atelier près de l’affût.</p></article>
+        <article><b>Avec Silk Touch</b><p>Tu récupères les blocs, mais les reposer séparément ne recrée pas leurs connexions. Il faudra souder chaque jonction.</p></article>
+        <article><b>Sans Silk Touch</b><p>Une pièce de canon coulée cassée normalement risque de devenir de la ferraille.</p></article>
+      </div>
+    </section>
+
+    <section class="cbc-survival-step cbc-welding" id="cbc-auto-welding">
+      <div class="cbc-step-title"><span>10</span><div><p class="cbc-step-kicker">Réparation et montage</p><h2>Reconnecter deux pièces avec la soudure.</h2></div></div>
+      <p class="cbc-body-copy">La soudure n’est utile que si les pièces ont été coulées séparément, démontées ou replacées. Elle relie deux blocs adjacents pour que le jeu les reconnaisse comme un seul canon.</p>
+      <div class="cbc-weld-recipe"><b>[Cannon Welder / Soudeur de canon]</b><span>1 [Valve Handle / Poignée de vanne]</span><span>1 plaque de fer</span><span>3 plaques de laiton</span><span>1 [Blaze Burner / Brûleur à Blaze]</span></div>
+      <div class="cbc-weld-line"><div><b>1</b><span>Prends le soudeur en main.</span></div><i>→</i><div><b>2</b><span>Clic droit sur la première pièce.</span></div><i>→</i><div><b>3</b><span>Clic droit sur la pièce voisine.</span></div><i>→</i><div><b>4</b><span>Recommence à chaque jonction.</span></div></div>
+      <p class="cbc-note"><strong>Pour annuler une sélection :</strong> accroupis-toi avec Maj. Tu peux ensuite recommencer sur la bonne paire.</p>
+      <h3>Si le soudage refuse de fonctionner</h3>
+      <div class="cbc-condition-grid">
+        <span>Même matériau</span><span>Même famille de canon</span><span>Blocs directement adjacents</span><span>Ouvertures parfaitement alignées</span><span>Pièces terminées et alésées</span><span>Une jonction à la fois</span>
+      </div>
+      <p class="cbc-warning"><strong>Attention :</strong> sur certains matériaux, un canon soudé supporte moins de pression. Pour cet autocanon en fonte, retiens surtout qu’une coulée commune évite le problème.</p>
+    </section>
+
+    <section class="cbc-survival-step" id="cbc-auto-mount">
+      <div class="cbc-step-title"><span>11</span><div><p class="cbc-step-kicker">Installation</p><h2>Poser le canon sur son affût.</h2></div></div>
+      <div class="cbc-recipe-pairs">
+        <article><h3>[Cannon Mount / Affût]</h3><p>1 boîtier d’andésite + 4 arbres + 2 plaques de fer + 2 poudres à canon.</p></article>
+        <article><h3>[Mount Extension / Extension]</h3><p>1 boîtier d’andésite + 2 arbres + 2 poudres à canon.</p></article>
+      </div>
+      <ol class="cbc-numbered"><li>Pose l’affût.</li><li>Place l’extension au-dessus.</li><li>Pose l’autocanon horizontalement sur l’extension, culasse vers l’arrière.</li><li>Maintiens un signal redstone sur la face marquée d’un marteau : c’est la commande d’assemblage.</li></ol>
+      <p class="cbc-checkpoint"><b>Test immédiat :</b><span>si seul un bloc s’assemble, une jonction manque. Retourne à l’étape de soudure.</span></p>
+    </section>
+
+    <section class="cbc-survival-step" id="cbc-auto-ammo">
+      <div class="cbc-step-title"><span>12</span><div><p class="cbc-step-kicker">Munitions</p><h2>Fabriquer douze cartouches et leur chargeur.</h2></div></div>
+      <div class="cbc-ammo-chain"><b>1 plaque de fer</b><i>Scie</i><b>3 feuilles de cartouche</b><i>Scie</i><b>12 douilles vides</b><i>+ poudre + cuivre</i><strong>12 cartouches</strong></div>
+      <p class="cbc-body-copy">Chaque douille vide reçoit <strong>1 poudre à canon + 1 pépite de cuivre</strong>. Fabrique ensuite un <strong>[Autocannon Ammo Container / Conteneur de munitions]</strong> avec 1 lingot de laiton et 5 plaques de fer. Il peut contenir 128 cartouches.</p>
+      <p class="cbc-note">Remplis le conteneur puis fais un clic droit sur la culasse avec celui-ci pour l’attacher.</p>
+    </section>
+
+    <section class="cbc-survival-step" id="cbc-auto-fire">
+      <div class="cbc-step-title"><span>13</span><div><p class="cbc-step-kicker">Premier tir</p><h2>Assembler, viser et tirer sans transformer l’essai en mitraillage.</h2></div></div>
+      <div class="cbc-control-grid">
+        <article><b>Face marteau</b><span>Signal maintenu : assemble le canon sur l’affût.</span></article>
+        <article><b>Face lumineuse opposée</b><span>Le niveau du signal règle la cadence de l’autocanon.</span></article>
+        <article><b>Entrées cinétiques</b><span>Les arbres latéraux et inférieur orientent l’affût.</span></article>
+      </div>
+      <ol class="cbc-numbered"><li>Alimente la face marteau et vérifie que les trois blocs deviennent une seule contraption.</li><li>Attache le conteneur rempli à la culasse.</li><li>Place une cible sûre devant la bouche.</li><li>Utilise un [Analog Lever / Levier analogique] réglé sur <strong>1</strong> sur la face de tir.</li><li>Augmente ensuite progressivement. Un signal de 15 correspond à 300 coups par minute.</li></ol>
+      <div class="cbc-diagnosis-grid"><article><b>Un seul bloc bouge</b><span>Jonction absente : soude ou recoule.</span></article><article><b>Le canon ne tire pas</b><span>Vérifie le conteneur, les cartouches et la face redstone utilisée.</span></article><article><b>Le projectile reste coincé</b><span>Canon trop long pour le matériau ou construction invalide.</span></article></div>
+    </section>
+
+    <section class="cbc-survival-step" id="cbc-auto-next">
+      <div class="cbc-step-title"><span>14</span><div><p class="cbc-step-kicker">Après le prototype</p><h2>Améliorer sans repartir dans le flou.</h2></div></div>
+      <p class="cbc-body-copy">Ton premier autocanon valide toute la chaîne : fonte, coulée connectée, alésage, finition, affût et munitions. Tu peux maintenant ajouter un ressort pour l’animation, automatiser l’approvisionnement, passer au bronze ou à l’acier, puis concevoir un système de visée.</p>
+      <p class="cbc-checkpoint"><b>La règle utile :</b><span>ne change qu’un élément à la fois. Tu sauras ainsi immédiatement quelle modification améliore — ou casse — le canon.</span></p>
+    </section>`;
+  root.append(panel);
+
+  const tabs = [...switcher.querySelectorAll('[role="tab"]')];
+  const panels = [root.querySelector('#cbc-guide-panel'), panel];
+  const storageKey = 'regalade.big-cannons.mode';
+  const select = mode => {
+    const safeMode = mode === 'autocannon' ? mode : 'guide';
+    tabs.forEach(button => {
+      const selected = button.id === `cbc-${safeMode}-tab`;
+      button.setAttribute('aria-selected', String(selected));
+      button.tabIndex = selected ? 0 : -1;
+    });
+    panels.forEach(item => { if (item) item.hidden = item.id !== `cbc-${safeMode}-panel`; });
+    try { localStorage.setItem(storageKey, safeMode); } catch (_) { /* Storage is optional. */ }
+    document.dispatchEvent(new CustomEvent('regalade:tutorial-content-changed'));
+  };
+  tabs.forEach((button, index) => {
+    const mode = button.id === 'cbc-autocannon-tab' ? 'autocannon' : 'guide';
+    button.addEventListener('click', () => select(mode));
+    button.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      tabs[next].focus();
+      tabs[next].click();
+    });
+  });
+
+  let saved = 'guide';
+  try { saved = localStorage.getItem(storageKey) === 'autocannon' ? 'autocannon' : 'guide'; } catch (_) { /* Storage is optional. */ }
+  select(saved);
+})();

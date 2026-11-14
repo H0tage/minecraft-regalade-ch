@@ -36,7 +36,7 @@
       <section class="cbc-overview-section" id="cbc-overview-length">
         <div class="cbc-section-heading"><span>02</span><div><h2>La longueur : autocanon et gros canon ne suivent pas la même règle</h2><p>C’est la confusion la plus importante à éviter.</p></div></div>
         <div class="cbc-compare-grid">
-          <article><p class="cbc-overview-label">[Autocannon / Autocanon]</p><h3>Une longueur utile fixée par le matériau</h3><div class="cbc-length-scale"><span><b>3</b>Fonte</span><span><b>5</b>Bronze</span><span><b>7</b>Acier</span></div><p>Ces nombres incluent la culasse et le ressort éventuel. Au-delà, le projectile risque de rester coincé.</p></article>
+          <article><p class="cbc-overview-label">[Autocannon / Autocanon]</p><h3>Une longueur utile fixée par le matériau</h3><div class="cbc-length-scale"><span><b>3</b>Fonte</span><span><b>5</b>Bronze</span><span><b>7</b>Acier</span></div><p>Ces limites comptent les sections parcourues après la culasse. Un éventuel ressort de recul compte donc comme une section. Au-delà, le projectile risque de rester coincé.</p></article>
           <article><p class="cbc-overview-label">[Big Cannon / Gros canon]</p><h3>64 blocs structurels, quel que soit le matériau</h3><div class="cbc-limit-line"><b>1</b><span></span><b>64</b></div><p>Le matériau ne change pas cette limite générale. Il détermine plutôt la quantité de poudre supportée et la puissance nécessaire pour parcourir le tube sans incident.</p></article>
         </div>
         <div class="cbc-cause-chain"><div><b>Tube plus long</b><span>le tir devient plus précis</span></div><i>→</i><div><b>Charge suffisante obligatoire</b><span>sinon le projectile se coince</span></div><i>→</i><div><b>Canon assez résistant</b><span>sinon la charge le fait rompre</span></div></div>
@@ -80,7 +80,7 @@
       <section class="cbc-overview-section" id="cbc-overview-summary">
         <div class="cbc-section-heading"><span>05</span><div><h2>La phrase à retenir</h2><p>Si tu comprends ceci, le reste du mod devient beaucoup plus lisible.</p></div></div>
         <blockquote>Un gros canon possède une fermeture arrière, une zone épaisse réservée à la poudre, puis une longueur de tube qui améliore la précision du tir. La poudre détermine principalement la vitesse et la portée ; le matériau détermine surtout quelle charge et quelle longueur peuvent être utilisées sans incident.</blockquote>
-        <div class="cbc-next-links"><span><b>Besoin des chiffres précis ?</b> Consulte le Manuel technique.</span><span><b>Prêt à fabriquer les pièces ?</b> Ouvre Toutes les recettes.</span></div>
+        <div class="cbc-next-links"><span><b>Prêt à construire ?</b> Le parcours Premier autocanon reprend tout depuis les matières premières.</span><span><b>Pas de raccourci créatif :</b> la fabrication est expliquée pour une partie en survie.</span></div>
       </section>
     </div>`;
 
@@ -123,7 +123,7 @@
   panel.setAttribute('role', 'tabpanel');
   panel.setAttribute('aria-labelledby', tab.id);
   const recipes = window.REGALE_CBC_RECIPES_HTML || '';
-  panel.innerHTML = `<section class="cbc"><div class="cbc-switcher" role="tablist" aria-label="Choisir le contenu Big Cannons"><button id="cbc-guide-tab" type="button" role="tab" aria-selected="true" aria-controls="cbc-guide-panel">Fonctionnement général</button><button id="cbc-manual-tab" type="button" role="tab" aria-selected="false" aria-controls="cbc-manual-panel" tabindex="-1">Manuel technique</button><button id="cbc-recipes-tab" type="button" role="tab" aria-selected="false" aria-controls="cbc-recipes-panel" tabindex="-1">Toutes les recettes</button></div>${guided}${manual}${recipes}</section>`;
+  panel.innerHTML = `<section class="cbc"><div class="cbc-switcher" role="tablist" aria-label="Choisir le contenu Big Cannons"><button id="cbc-guide-tab" type="button" role="tab" aria-selected="true" aria-controls="cbc-guide-panel">Fonctionnement général</button></div>${guided}</section>`;
   content.append(panel);
 
   const style = document.createElement('style');

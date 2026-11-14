@@ -1,0 +1,58 @@
+.cbc-survival{color:var(--cbc-ink);font:15px/1.55 Inter,"Segoe UI",Arial,sans-serif}
+.cbc-survival[hidden]{display:none!important}
+.cbc-survival-hero{padding:24px 0 28px;border-bottom:1px solid var(--cbc-line)}
+.cbc-survival-hero h1{max-width:760px;margin:0;font-size:clamp(2rem,4.2vw,3.5rem);line-height:1;letter-spacing:-.055em}
+.cbc-survival-hero>p:not(.cbc-eyebrow){max-width:800px;margin:12px 0 0;color:var(--cbc-muted);font-size:1rem}
+.cbc-project-line,.cbc-process-line,.cbc-ammo-chain{display:flex;align-items:center;gap:8px;overflow:auto;margin-top:18px;padding:13px;border:1px solid var(--cbc-line);border-radius:12px;background:#fff;white-space:nowrap}
+.cbc-project-line b,.cbc-process-line b,.cbc-process-line strong,.cbc-ammo-chain b,.cbc-ammo-chain strong{padding:8px 10px;border:1px solid var(--cbc-line);border-radius:8px;background:#f5f8f9;font-size:.83rem}
+.cbc-project-line i,.cbc-process-line i{color:var(--cbc-orange);font-style:normal;font-weight:900}
+.cbc-survival-step{padding:28px 0;border-bottom:1px solid var(--cbc-line);scroll-margin-top:20px}
+.cbc-step-title{display:grid;grid-template-columns:42px minmax(0,1fr);gap:13px;align-items:start;margin-bottom:14px}
+.cbc-step-title>span{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:var(--cbc-orange-soft);color:#af4d15;font-weight:950}
+.cbc-step-title h2{margin:0;font-size:clamp(1.35rem,2.6vw,1.9rem);line-height:1.08;letter-spacing:-.035em}
+.cbc-step-kicker{margin:0 0 3px;color:var(--cbc-cyan);font-size:.69rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.cbc-body-copy{max-width:860px;margin:0 0 15px;color:#45575f}
+.cbc-reason-grid,.cbc-budget-grid,.cbc-recipe-pairs,.cbc-choice-grid,.cbc-control-grid,.cbc-diagnosis-grid{display:grid;gap:10px}
+.cbc-reason-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cbc-budget-grid,.cbc-recipe-pairs,.cbc-choice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cbc-choice-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cbc-control-grid,.cbc-diagnosis-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cbc-reason-grid article,.cbc-budget-grid article,.cbc-recipe-pairs article,.cbc-choice-grid article,.cbc-control-grid article,.cbc-diagnosis-grid article{padding:14px;border:1px solid var(--cbc-line);border-radius:11px;background:#fff}
+.cbc-reason-grid b,.cbc-reason-grid span,.cbc-control-grid b,.cbc-control-grid span,.cbc-diagnosis-grid b,.cbc-diagnosis-grid span{display:block}
+.cbc-reason-grid span,.cbc-control-grid span,.cbc-diagnosis-grid span{margin-top:4px;color:var(--cbc-muted);font-size:.86rem}
+.cbc-budget-grid h3,.cbc-recipe-pairs h3{margin:0 0 8px;font-size:1rem}
+.cbc-budget-grid ul{margin:0;padding-left:19px;color:#45575f}
+.cbc-budget-grid li+li{margin-top:3px}
+.cbc-recipe-pairs p,.cbc-choice-grid p{margin:4px 0 0;color:var(--cbc-muted);font-size:.9rem}
+.cbc-checkpoint{display:flex;gap:9px;margin-top:14px;padding:11px 13px;border-left:3px solid var(--cbc-cyan);background:#f1f8fb;color:#355660}
+.cbc-math{display:flex;align-items:center;gap:10px;width:max-content;max-width:100%;margin-top:14px;padding:12px 15px;border:1px solid var(--cbc-line);border-radius:11px;background:#fff;font-weight:800}
+.cbc-math i{color:var(--cbc-orange);font-style:normal}
+.cbc-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:14px}
+.cbc-actions article{display:flex;gap:9px;padding:12px;border:1px solid var(--cbc-line);border-radius:10px;background:#fff}
+.cbc-actions b{color:var(--cbc-orange)}
+.cbc-cast-stack{display:grid;gap:4px;width:min(100%,420px);margin:16px auto 0}
+.cbc-cast-stack div{display:flex;justify-content:space-between;gap:18px;padding:10px 13px;border:2px solid #ab835f;background:#fff8f1}
+.cbc-cast-stack div:first-child{border-radius:10px 10px 0 0}.cbc-cast-stack div:last-child{border-radius:0 0 10px 10px}
+.cbc-cast-stack span{color:#6f5947}
+.cbc-workshop-diagram{display:grid;grid-template-columns:minmax(230px,420px) minmax(180px,1fr);gap:4px 15px;margin-top:15px}
+.cbc-workshop-diagram>div:not(.out){display:flex;justify-content:space-between;padding:11px 13px;border:2px solid #46575e;background:#edf2f4}
+.cbc-workshop-diagram .top{border-radius:10px 10px 0 0}.cbc-workshop-diagram .bottom{border-radius:0 0 10px 10px}
+.cbc-workshop-diagram .out{grid-column:2;grid-row:1/span 3;align-self:center;padding:14px;border-left:3px solid var(--cbc-orange)}
+.cbc-workshop-diagram .out strong,.cbc-workshop-diagram .out span{display:block}.cbc-workshop-diagram .out span{color:var(--cbc-muted)}
+.cbc-boring-diagram{display:flex;align-items:center;gap:10px;overflow:auto;margin:14px 0;padding:14px;border:1px solid var(--cbc-line);border-radius:11px;background:#fff}
+.cbc-boring-diagram>div{min-width:180px;padding:12px;border:2px solid #46575e;background:#edf2f4;text-align:center;font-weight:850}
+.cbc-boring-diagram i{color:var(--cbc-orange);font-style:normal;font-size:1.5rem;font-weight:900}
+.cbc-numbered{margin:14px 0 0;padding:0;list-style:none;counter-reset:survival-step}
+.cbc-numbered li{position:relative;min-height:34px;margin:7px 0;padding:7px 10px 7px 42px;border-bottom:1px solid #e7edef}
+.cbc-numbered li:before{position:absolute;top:5px;left:0;display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--cbc-orange-soft);color:#ad4c15;font-weight:900;counter-increment:survival-step;content:counter(survival-step)}
+.cbc-welding{border-left:3px solid var(--cbc-orange);padding-left:18px}
+.cbc-weld-recipe{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0;padding:13px;border:1px solid var(--cbc-line);border-radius:11px;background:#fff}
+.cbc-weld-recipe b{width:100%;margin-bottom:3px}.cbc-weld-recipe span{padding:6px 8px;border-radius:7px;background:#f1f5f6;font-size:.82rem}
+.cbc-weld-line{display:flex;align-items:stretch;gap:7px;overflow:auto;margin:14px 0}
+.cbc-weld-line div{min-width:145px;padding:11px;border:1px solid var(--cbc-line);border-radius:9px;background:#fff}
+.cbc-weld-line b{display:block;color:var(--cbc-orange)}.cbc-weld-line span{font-size:.84rem}.cbc-weld-line i{align-self:center;color:var(--cbc-orange);font-style:normal;font-weight:900}
+.cbc-condition-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:10px}
+.cbc-condition-grid span{padding:9px 10px;border:1px solid var(--cbc-line);border-radius:8px;background:#fff;font-size:.84rem;font-weight:750}
+.cbc-ammo-chain i{color:var(--cbc-orange);font-size:.72rem;font-style:normal;font-weight:850;text-transform:uppercase}
+@media(max-width:850px){.cbc-reason-grid,.cbc-choice-grid,.cbc-control-grid,.cbc-diagnosis-grid,.cbc-actions{grid-template-columns:1fr 1fr}.cbc-workshop-diagram{grid-template-columns:1fr}.cbc-workshop-diagram .out{grid-column:1;grid-row:auto}}
+@media(max-width:600px){.cbc-survival-step{padding:23px 0}.cbc-step-title{grid-template-columns:36px minmax(0,1fr)}.cbc-step-title>span{width:34px;height:34px}.cbc-reason-grid,.cbc-budget-grid,.cbc-recipe-pairs,.cbc-choice-grid,.cbc-control-grid,.cbc-diagnosis-grid,.cbc-actions,.cbc-condition-grid{grid-template-columns:1fr}.cbc-checkpoint{display:block}.cbc-welding{padding-left:12px}.cbc-project-line,.cbc-process-line,.cbc-ammo-chain{padding:10px}}
