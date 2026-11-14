@@ -32,9 +32,9 @@
     <section class="sg-step sgu-step" id="sgu-general-system" data-phase="Comprendre le système">
       <div class="sgu-step-title compact"><span>A</span><div><p class="sgx-eyebrow">Les quatre éléments</p><h2>Qui fait quoi ?</h2></div></div>
       <div class="sgu-role-grid">
-        <article>${icon('classic-stargate-base.png', 'Base de porte')}<div><b>[Stargate / Porte des étoiles]</b><span>Crée le passage. Sa structure formée contient l’adresse et son tampon de 1,36 MFE.</span></div></article>
-        <article>${icon('classic-dhd.png', 'DHD')}<div><b>[DHD / Console de composition]</b><span>Permet de saisir une adresse, d’ouvrir la connexion et de la fermer. Il doit lui aussi recevoir de l’énergie.</span></div></article>
-        <article>${icon('basic-interface.png', 'Interface basique')}<div><b>[Basic Interface / Interface basique]</b><span>Transfère le FE du réseau externe vers la porte. Elle n’est pas la batterie principale.</span></div></article>
+        <article>${icon('classic-stargate-base.png', 'Classic Stargate Base Block')}<div><b>Stargate</b><span>Crée le passage. Sa structure formée contient l’adresse et son tampon de 1,36 MFE.</span></div></article>
+        <article>${icon('classic-dhd.png', 'Classic DHD')}<div><b>DHD</b><span>Permet de saisir une adresse, d’ouvrir la connexion et de la fermer. Il doit lui aussi recevoir de l’énergie.</span></div></article>
+        <article>${icon('basic-interface.png', 'Basic Interface')}<div><b>Basic Interface</b><span>Transfère le FE du réseau externe vers la porte. Elle n’est pas la batterie principale.</span></div></article>
         <article><span class="sgu-symbol">FE</span><div><b>Production et accumulateurs</b><span>Fournissent le million de FE initial et les 4 500 FE/t nécessaires au maintien.</span></div></article>
       </div>
       <div class="sgu-system-line"><b>Adresse</b><i>→</i><b>DHD</b><i>→</i><b>Porte</b><i>←</i><b>Interface</b><i>←</i><b>Stock FE</b></div>
@@ -54,7 +54,7 @@
     <section class="sg-step sgu-step" id="sgu-general-address" data-phase="Utiliser le réseau">
       <div class="sgu-step-title compact"><span>C</span><div><p class="sgx-eyebrow">Adresses</p><h2>Chaque porte possède sa propre destination.</h2></div></div>
       <div class="sgu-address-flow">
-        <article><b>1 · Lire</b><span>Clic droit sur une porte avec la [Wrench / Clé] Create : son adresse apparaît dans le chat.</span></article>
+        <article><b>1 · Lire</b><span>Clic droit sur une porte avec la Create Wrench : son adresse apparaît dans le chat.</span></article>
         <i>→</i><article><b>2 · Noter</b><span>Conserve l’ordre exact des symboles ou des nombres.</span></article>
         <i>→</i><article><b>3 · Composer</b><span>Maintiens Maj pour voir les numéros, saisis l’adresse puis presse le bouton central : il ajoute le Point d’origine et lance l’appel.</span></article>
       </div>

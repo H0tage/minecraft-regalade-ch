@@ -175,27 +175,27 @@
       </section>
 
       <section class="sgx-reference-section" id="sgx-ref-totaux"><p class="sgx-eyebrow">Nomenclature</p><h2>Première installation complète</h2>
-        <div class="sgx-metrics"><div><b>21</b><span>fournées</span></div><div><b>168</b><span>cristaux cryostabilisés</span></div><div><b>64</b><span>plaques</span></div><div><b>33</b><span>cristaux technologiques</span></div><div><b>24</b><span>blocs de porte</span></div></div>
-        <div class="sgx-table-wrap" tabindex="0"><table><thead><tr><th>Élément</th><th>Quantité</th><th>Plaques</th></tr></thead><tbody>
-          <tr><td>14 anneaux</td><td>14</td><td>28</td></tr><tr><td>9 chevrons</td><td>9</td><td>18</td></tr><tr><td>Base</td><td>1</td><td>4</td></tr><tr><td>DHD</td><td>1</td><td>2</td></tr><tr><td>Basic Interface</td><td>1</td><td>4</td></tr><tr><td>Liquidizer + Crystallizer</td><td>2</td><td>8</td></tr><tr class="sgx-total"><td>Total première installation</td><td>—</td><td>64</td></tr>
+        <div class="sgx-metrics"><div><b>21</b><span>fournées</span></div><div><b>168</b><span>Cryostabilized Naquadah Crystals</span></div><div><b>64</b><span>Naquadah Plates</span></div><div><b>33</b><span>cristaux technologiques</span></div><div><b>24</b><span>blocs de Stargate</span></div></div>
+        <div class="sgx-table-wrap" tabindex="0"><table><thead><tr><th>Élément</th><th>Quantité</th><th>Naquadah Plates</th></tr></thead><tbody>
+          <tr><td>Classic Stargate Ring Blocks</td><td>14</td><td>28</td></tr><tr><td>Classic Stargate Chevron Blocks</td><td>9</td><td>18</td></tr><tr><td>Classic Stargate Base Block</td><td>1</td><td>4</td></tr><tr><td>Classic DHD</td><td>1</td><td>2</td></tr><tr><td>Basic Interface</td><td>1</td><td>4</td></tr><tr><td>Naquadah Liquidizer + Crystallizer</td><td>2</td><td>8</td></tr><tr class="sgx-total"><td>Total première installation</td><td>—</td><td>64</td></tr>
         </tbody></table></div>
       </section>
 
       <section class="sgx-reference-section" id="sgx-ref-raffinerie"><p class="sgx-eyebrow">Raffinerie</p><h2>Une fournée standard</h2>
-        <div class="sgx-flow compact">${item('Matrice', 'crystalline-matrix.png', '×4')}${item('Briquette', 'refractory-briquette.png', '×4')}${item('Flux', 'catalytic-flux.png', '×4 utilisés')}${item('Scorie', 'unstable-slag.png', '×4')}${item('Cristal', 'cryostabilized-crystal.png', '×8')}</div>
+        <div class="sgx-flow compact">${item('Crystalline Matrix', 'crystalline-matrix.png', '×4')}${item('Refractory Briquette', 'refractory-briquette.png', '×4')}${item('Catalytic Flux', 'catalytic-flux.png', '×4 utilisés')}${item('Unstable Naquadah Slag', 'unstable-slag.png', '×4')}${item('Cryostabilized Naquadah Crystal', 'cryostabilized-crystal.png', '×8')}</div>
         <p>Entrées par fournée : 16 améthystes, 4 or, 4 zinc, 8 obsidiennes, 8 netherracks, 8 Blaze Powder, 8 redstone, 4 glowstones, 1 000 mB de potion étrange et 1 000 mB de lave au total.</p>
       </section>
 
       <section class="sgx-reference-section" id="sgx-ref-cristaux"><p class="sgx-eyebrow">Crystallizer</p><h2>Recettes des cinq cristaux</h2>
-        <p><strong>Socle commun :</strong> 1 Crystal Base + 100 mB de Liquid Naquadah. La base coûte 1 cristal cryostabilisé, 1 améthyste, 2 quartz et 1 diamant.</p>
-        <div class="sgx-table-wrap" tabindex="0"><table><thead><tr><th>Cristal</th><th>Quantité</th><th>Réactif A</th><th>Réactif B</th></tr></thead><tbody>
-          <tr><td>Energy</td><td>10</td><td>3 redstone</td><td>3 redstone</td></tr><tr><td>Transfer</td><td>10</td><td>3 redstone</td><td>3 glowstone</td></tr><tr><td>Materialization</td><td>9</td><td>3 ender pearls</td><td>3 redstone</td></tr><tr><td>Communication</td><td>3</td><td>3 quartz</td><td>3 redstone</td></tr><tr><td>Control</td><td>1</td><td>3 diamants</td><td>3 redstone</td></tr>
+        <p><strong>Base commune :</strong> 1 Crystal Base + 100 mB de Liquid Naquadah. La Crystal Base coûte 1 Cryostabilized Naquadah Crystal, 1 Amethyst Shard, 2 Quartz et 1 Diamond.</p>
+        <div class="sgx-table-wrap" tabindex="0"><table><thead><tr><th>Crystal</th><th>Quantité</th><th>Réactif A</th><th>Réactif B</th></tr></thead><tbody>
+          <tr><td>Energy Crystal</td><td>10</td><td>3 Redstone Dust</td><td>3 Redstone Dust</td></tr><tr><td>Transfer Crystal</td><td>10</td><td>3 Redstone Dust</td><td>3 Glowstone Dust</td></tr><tr><td>Materialization Crystal</td><td>9</td><td>3 Ender Pearls</td><td>3 Redstone Dust</td></tr><tr><td>Communication Crystal</td><td>3</td><td>3 Quartz</td><td>3 Redstone Dust</td></tr><tr><td>Control Crystal</td><td>1</td><td>3 Diamonds</td><td>3 Redstone Dust</td></tr>
         </tbody></table></div>
       </section>
 
       <section class="sgx-reference-section" id="sgx-ref-composants"><p class="sgx-eyebrow">Assemblage</p><h2>Composants de la porte</h2>
-        <div class="sgx-components compact">${item('Anneau', 'ring-segment.png', '2 plaques chacun')}${item('Chevron', 'chevron.png', '2 plaques + Energy + Transfer + Materialization')}${item('Base', 'classic-stargate-base.png', '4 plaques + Control + Communication + Transfer')}${item('DHD', 'classic-dhd.png', '2 plaques + Communication')}${item('Interface', 'basic-interface.png', '4 plaques + Energy + Communication')}</div>
-        <figure class="sgx-official-figure small"><img src="${A}official-classic-stargate-structure.png" alt="Structure officielle de la Stargate classique" loading="lazy"><figcaption>Structure officielle : 14 anneaux, 9 chevrons et la base centrale inférieure.</figcaption></figure>
+        <div class="sgx-components compact">${item('Classic Stargate Ring Block', 'ring-segment.png', '2 Naquadah Plates chacun')}${item('Classic Stargate Chevron Block', 'chevron.png', '2 Naquadah Plates + Energy Crystal + Transfer Crystal + Materialization Crystal')}${item('Classic Stargate Base Block', 'classic-stargate-base.png', '4 Naquadah Plates + Control Crystal + Communication Crystal + Transfer Crystal')}${item('Classic DHD', 'classic-dhd.png', '2 Naquadah Plates + Communication Crystal')}${item('Basic Interface', 'basic-interface.png', '4 Naquadah Plates + Energy Crystal + Communication Crystal')}</div>
+        <figure class="sgx-official-figure small"><img src="${A}official-classic-stargate-structure.png" alt="Structure officielle de la Classic Stargate" loading="lazy"><figcaption>Structure officielle : 14 Classic Stargate Ring Blocks, 9 Classic Stargate Chevron Blocks et le Classic Stargate Base Block.</figcaption></figure>
       </section>
 
       <section class="sgx-reference-section" id="sgx-ref-energie"><p class="sgx-eyebrow">Configuration Régalade</p><h2>Énergie et durée</h2>
