@@ -231,10 +231,20 @@
         <article>${icon('naquadah-liquidizer.png', 'Naquadah Liquidizer')}<h3>1 Naquadah Liquidizer</h3><pre>PFP\nBRB\nPMP</pre><span>P : Naquadah Plate · F : Fluid Tank · B : Brass Sheet · R : Reaction Chamber · M : Mechanical Pump</span></article>
         <article>${icon('crystallizer.png', 'Crystallizer')}<h3>1 Crystallizer</h3><pre>PDP\nERE\nPMP</pre><span>P : Naquadah Plate · D : Diamond · E : Electron Tube · R : Reaction Chamber · M : Precision Mechanism</span></article>
       </div>
-      <div class="sgu-blueprint compact" aria-label="Disposition des machines de cristallisation">
-        <div class="sgu-lane"><span class="buffer">Cryostabilized Naquadah Crystals réservés</span><i>→</i><span class="machine">Naquadah Liquidizer</span><i>→ tuyau →</i><span class="buffer">Fluid Tank de Liquid Naquadah</span></div>
-        <div class="sgu-lane"><span class="buffer">Crystal Bases + réactifs</span><i>→</i><span class="machine">Crystallizer</span><i>→</i><span class="buffer">Cristaux triés</span></div>
-        <div class="sgu-converge horizontal"><span>Réseau FE</span><i>→</i><strong>1 000 FE/t par machine en fonctionnement</strong></div>
+      <div class="sgu-electronics-map" role="img" aria-label="Installation du Naquadah Liquidizer, du Fluid Tank et du Crystallizer">
+        <div class="sgu-electronics-power"><b>Réseau FE commun</b><span>1 000 FE/t pour le Naquadah Liquidizer</span><span>1 000 FE/t pour le Crystallizer</span></div>
+        <div class="sgu-electronics-main">
+          <div class="sgu-electronics-node input">${icon('cryostabilized-crystal.png', 'Cryostabilized Naquadah Crystal')}<b>Crystals + Lava</b><small>entrées du Liquidizer</small></div>
+          <i>→</i>
+          <div class="sgu-electronics-node machine">${icon('naquadah-liquidizer.png', 'Naquadah Liquidizer')}<b>Naquadah Liquidizer</b><small>produit le liquide</small></div>
+          <i class="pipe"><span>→</span><small>Fluid Pipe<br>+ Mechanical Pump</small></i>
+          <div class="sgu-electronics-node tank"><b>Fluid Tank</b><small>stock tampon de<br>Liquid Naquadah</small></div>
+          <i class="pipe"><span>→</span><small>Fluid Pipe<br>+ Mechanical Pump</small></i>
+          <div class="sgu-electronics-node machine">${icon('crystallizer.png', 'Crystallizer')}<b>Crystallizer</b><small>consomme 100 mB</small></div>
+          <i>→</i>
+          <div class="sgu-electronics-node output"><b>5 stockages triés</b><small>un par famille de cristal</small></div>
+        </div>
+        <div class="sgu-crystallizer-feeds"><span>33 Crystal Bases</span><i>+</i><span>Réactif A</span><i>+</i><span>Réactif B</span><i>↑</i><strong>Entrées solides du Crystallizer</strong></div>
       </div>
       <ol class="sgu-actions">
         <li><b>Pose un Fluid Tank entre les deux machines.</b><span>Le Naquadah Liquidizer le remplit ; le Crystallizer y prélève ensuite son Liquid Naquadah.</span></li>
@@ -244,20 +254,41 @@
       `)}
 
     ${step(14, 'Construire l’électronique', 'Liquid Naquadah et Crystal Bases', 'Préparer les entrées du Crystallizer', `
-      <div class="sgu-two-column">
-        <article><h3>3 500 mB de Liquid Naquadah</h3><p>Charge successivement les 7 Cryostabilized Naquadah Crystals réservés. Pour chaque opération, le Naquadah Liquidizer reçoit aussi 100 mB de lave et produit 500 mB dans le Fluid Tank.</p><div class="sgu-mini-process"><b>1 Cryostabilized Naquadah Crystal + 100 mB lave</b><i>→</i><strong>500 mB Liquid Naquadah</strong></div></article>
-        <article><h3>33 Crystal Bases</h3><p>Fabrique les Crystal Bases à la Crafting Table. Chacune consomme 1 Cryostabilized Naquadah Crystal, 1 Amethyst Shard, 2 Quartz et 1 Diamond.</p><div class="sgu-mini-process"><b>Cryostabilized Naquadah Crystal + Amethyst Shard + 2 Quartz + Diamond</b><i>→</i><strong>Crystal Base</strong></div></article>
+      <div class="sgu-electronics-supplies">
+        <article>
+          <div class="sgu-supply-heading">${icon('liquid-naquadah-bucket.png', 'Liquid Naquadah')}<div><b>Produire 3 500 mB de Liquid Naquadah</b><small>7 cycles dans le Naquadah Liquidizer</small></div></div>
+          <div class="sgu-supply-inputs"><span>7 Cryostabilized Naquadah Crystals</span><i>+</i><span>700 mB Lava</span></div>
+          <div class="sgu-production-arrow">↓</div>
+          <div class="sgu-supply-machine">${icon('naquadah-liquidizer.png', 'Naquadah Liquidizer')}<b>Naquadah Liquidizer</b><small>1 Crystal + 100 mB Lava → 500 mB</small></div>
+          <div class="sgu-production-arrow">↓</div>
+          <div class="sgu-supply-output"><b>3 500 mB Liquid Naquadah</b><small>dans le Fluid Tank</small></div>
+        </article>
+        <article>
+          <div class="sgu-supply-heading">${icon('crystal-base.png', 'Crystal Base')}<div><b>Fabriquer 33 Crystal Bases</b><small>33 recettes à la Crafting Table</small></div></div>
+          <div class="sgu-supply-inputs compact"><span>33 Cryostabilized Crystals</span><i>+</i><span>33 Amethyst Shards</span><i>+</i><span>66 Quartz</span><i>+</i><span>33 Diamonds</span></div>
+          <div class="sgu-production-arrow">↓</div>
+          <div class="sgu-supply-machine crafting"><b>Crafting Table</b><small>1 Crystal + 1 Amethyst Shard + 2 Quartz + 1 Diamond</small></div>
+          <div class="sgu-production-arrow">↓</div>
+          <div class="sgu-supply-output">${icon('crystal-base.png', 'Crystal Base')}<b>33 Crystal Bases</b></div>
+        </article>
       </div>
+      <div class="sgu-supply-balance"><div><b>3 500 mB produits</b><i>−</i><span>3 300 mB pour 33 cristaux</span><i>=</i><strong>200 mB de réserve</strong></div><div><b>33 Crystal Bases</b><i>−</i><span>33 utilisées</span><i>=</i><strong>0 restante</strong></div></div>
       `)}
 
     ${step(15, 'Construire l’électronique', 'Cristallisation', 'Produire les 33 cristaux technologiques', `
       <p class="sgu-copy">Chaque opération du Crystallizer consomme 1 Crystal Base, 100 mB de Liquid Naquadah et les deux réactifs indiqués.</p>
-      <div class="sgu-crystal-grid">
-        <article><b>10 × Energy Crystal</b><span>3 Redstone Dust + 3 Redstone Dust</span></article>
-        <article><b>10 × Transfer Crystal</b><span>3 Redstone Dust + 3 Glowstone Dust</span></article>
-        <article><b>9 × Materialization Crystal</b><span>3 Ender Pearls + 3 Redstone Dust</span></article>
-        <article><b>3 × Communication Crystal</b><span>3 Quartz + 3 Redstone Dust</span></article>
-        <article><b>1 × Control Crystal</b><span>3 Diamonds + 3 Redstone Dust</span></article>
+      <div class="sgu-crystal-production" role="img" aria-label="Production des cinq familles de cristaux technologiques">
+        <div class="sgu-crystal-intake"><span>1 Crystal Base</span><i>+</i><span>100 mB Liquid Naquadah</span><i>+</i><span>Réactif A</span><i>+</i><span>Réactif B</span></div>
+        <div class="sgu-production-arrow">↓</div>
+        <div class="sgu-crystallizer-core">${icon('crystallizer.png', 'Crystallizer')}<div><b>Crystallizer</b><small>Une opération produit un cristal</small></div></div>
+        <div class="sgu-crystal-branch" aria-hidden="true"><i></i><span>↓</span></div>
+        <div class="sgu-crystal-families">
+          <article>${icon('energy-crystal.png', 'Energy Crystal')}<div><b>10 × Energy Crystal</b><span>3 Redstone Dust + 3 Redstone Dust</span></div></article>
+          <article>${icon('transfer-crystal.png', 'Transfer Crystal')}<div><b>10 × Transfer Crystal</b><span>3 Redstone Dust + 3 Glowstone Dust</span></div></article>
+          <article>${icon('materialization-crystal.png', 'Materialization Crystal')}<div><b>9 × Materialization Crystal</b><span>3 Ender Pearls + 3 Redstone Dust</span></div></article>
+          <article>${icon('communication-crystal.png', 'Communication Crystal')}<div><b>3 × Communication Crystal</b><span>3 Quartz + 3 Redstone Dust</span></div></article>
+          <article>${icon('control-crystal.png', 'Control Crystal')}<div><b>1 × Control Crystal</b><span>3 Diamonds + 3 Redstone Dust</span></div></article>
+        </div>
       </div>
       <ol class="sgu-actions">
         <li><b>Teste d’abord un Energy Crystal.</b><span>Insère une Crystal Base, 3 Redstone Dust dans chaque entrée de réactif et laisse la machine prendre 100 mB.</span></li>

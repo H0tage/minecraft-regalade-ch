@@ -1714,6 +1714,444 @@
   line-height: 1.35;
 }
 
+#tutorial-stargates .sgu-electronics-map {
+  display: grid;
+  gap: .7rem;
+  margin-top: .75rem;
+  padding: .8rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .65rem;
+  background: #fff;
+}
+
+#tutorial-stargates .sgu-electronics-power {
+  display: grid;
+  grid-template-columns: .8fr 1fr 1fr;
+  gap: .4rem;
+  align-items: center;
+  padding: .5rem;
+  border: 1px solid #9ecfe4;
+  border-radius: .48rem;
+  background: #eef7fb;
+  font-size: .75rem;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-electronics-power span {
+  padding-left: .4rem;
+  border-left: 1px solid #bdd8e4;
+  color: #4f6873;
+}
+
+#tutorial-stargates .sgu-electronics-main {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) auto minmax(0, 1fr) minmax(0, .62fr) minmax(0, .8fr) minmax(0, .62fr) minmax(0, 1fr) auto minmax(0, .9fr);
+  gap: .35rem;
+  align-items: center;
+}
+
+#tutorial-stargates .sgu-electronics-main > i {
+  color: var(--sg-orange, #ff963f);
+  font-style: normal;
+  font-weight: 900;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-electronics-main > i.pipe {
+  display: grid;
+  justify-items: center;
+  gap: .08rem;
+  color: #60737d;
+}
+
+#tutorial-stargates .sgu-electronics-main > i.pipe span {
+  color: var(--sg-orange, #ff963f);
+  font-size: 1.15rem;
+}
+
+#tutorial-stargates .sgu-electronics-main > i.pipe small {
+  font-size: .61rem;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+#tutorial-stargates .sgu-electronics-node {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: .2rem;
+  min-width: 0;
+  min-height: 6rem;
+  padding: .5rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .48rem;
+  background: #f8fafb;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-electronics-node img {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+#tutorial-stargates .sgu-electronics-node b {
+  font-size: .72rem;
+  line-height: 1.25;
+}
+
+#tutorial-stargates .sgu-electronics-node small {
+  color: #60737d;
+  font-size: .64rem;
+  line-height: 1.3;
+}
+
+#tutorial-stargates .sgu-electronics-node.machine {
+  border-color: #9ecfe4;
+  background: #eef7fb;
+}
+
+#tutorial-stargates .sgu-electronics-node.tank {
+  border-color: #8cc6d9;
+  background: #f0fbfe;
+}
+
+#tutorial-stargates .sgu-electronics-node.output {
+  border-color: #a9d8c9;
+  background: #edf8f4;
+}
+
+#tutorial-stargates .sgu-crystallizer-feeds {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: .35rem;
+  padding: .5rem;
+  border: 1px dashed #9ecfe4;
+  border-radius: .48rem;
+  background: #fbfdfe;
+  font-size: .72rem;
+}
+
+#tutorial-stargates .sgu-crystallizer-feeds span,
+#tutorial-stargates .sgu-crystallizer-feeds strong {
+  padding: .3rem .45rem;
+  border-radius: .32rem;
+  background: #eef3f5;
+}
+
+#tutorial-stargates .sgu-crystallizer-feeds i {
+  color: var(--sg-orange, #ff963f);
+  font-style: normal;
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-crystallizer-feeds strong {
+  background: #eaf6fb;
+}
+
+#tutorial-stargates .sgu-electronics-supplies {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .7rem;
+}
+
+#tutorial-stargates .sgu-electronics-supplies > article {
+  display: grid;
+  align-content: start;
+  gap: .4rem;
+  padding: .7rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .65rem;
+  background: #fff;
+}
+
+#tutorial-stargates .sgu-supply-heading {
+  display: grid;
+  grid-template-columns: 2.7rem minmax(0, 1fr);
+  gap: .55rem;
+  align-items: center;
+}
+
+#tutorial-stargates .sgu-supply-heading img {
+  width: 2.7rem;
+  height: 2.7rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+#tutorial-stargates .sgu-supply-heading b,
+#tutorial-stargates .sgu-supply-heading small {
+  display: block;
+}
+
+#tutorial-stargates .sgu-supply-heading small {
+  margin-top: .1rem;
+  color: #60737d;
+  font-size: .72rem;
+}
+
+#tutorial-stargates .sgu-supply-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: .3rem;
+  padding: .5rem;
+  border-radius: .45rem;
+  background: #f5f8f9;
+}
+
+#tutorial-stargates .sgu-supply-inputs span {
+  padding: .32rem .42rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .35rem;
+  background: #fff;
+  font-size: .7rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-supply-inputs i {
+  color: var(--sg-orange, #ff963f);
+  font-style: normal;
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-supply-machine {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: .15rem .5rem;
+  align-items: center;
+  padding: .5rem;
+  border: 1px solid #9ecfe4;
+  border-radius: .45rem;
+  background: #eef7fb;
+}
+
+#tutorial-stargates .sgu-supply-machine img {
+  grid-row: 1 / span 2;
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+#tutorial-stargates .sgu-supply-machine b,
+#tutorial-stargates .sgu-supply-machine small {
+  text-align: left;
+}
+
+#tutorial-stargates .sgu-supply-machine small {
+  color: #60737d;
+  font-size: .68rem;
+}
+
+#tutorial-stargates .sgu-supply-machine.crafting {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-supply-machine.crafting b,
+#tutorial-stargates .sgu-supply-machine.crafting small {
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-supply-output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  min-height: 3.2rem;
+  padding: .48rem;
+  border: 1px solid #a9d8c9;
+  border-radius: .45rem;
+  background: #edf8f4;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-supply-output img {
+  width: 2.2rem;
+  height: 2.2rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+#tutorial-stargates .sgu-supply-output small {
+  color: #557169;
+  font-size: .68rem;
+}
+
+#tutorial-stargates .sgu-supply-balance {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .55rem;
+  margin-top: .7rem;
+}
+
+#tutorial-stargates .sgu-supply-balance > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: .35rem;
+  padding: .6rem;
+  border: 1px solid #9ecfe4;
+  border-radius: .5rem;
+  background: #eef7fb;
+  font-size: .72rem;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-supply-balance i {
+  color: var(--sg-orange, #ff963f);
+  font-style: normal;
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-supply-balance strong {
+  color: var(--sg-blue-deep, #197cab);
+}
+
+#tutorial-stargates .sgu-crystal-production {
+  display: grid;
+  justify-items: stretch;
+  margin-top: .7rem;
+  padding: .8rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .65rem;
+  background: #fff;
+}
+
+#tutorial-stargates .sgu-crystal-intake {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: .3rem;
+}
+
+#tutorial-stargates .sgu-crystal-intake span {
+  padding: .38rem .5rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .4rem;
+  background: #f7fafb;
+  font-size: .72rem;
+  font-weight: 800;
+}
+
+#tutorial-stargates .sgu-crystal-intake i {
+  color: var(--sg-orange, #ff963f);
+  font-style: normal;
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-crystallizer-core {
+  display: grid;
+  grid-template-columns: 3rem auto;
+  gap: .55rem;
+  align-items: center;
+  justify-self: center;
+  min-width: 14rem;
+  padding: .55rem .75rem;
+  border: 1px solid #9ecfe4;
+  border-radius: .5rem;
+  background: #eef7fb;
+}
+
+#tutorial-stargates .sgu-crystallizer-core img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+#tutorial-stargates .sgu-crystallizer-core b,
+#tutorial-stargates .sgu-crystallizer-core small {
+  display: block;
+}
+
+#tutorial-stargates .sgu-crystallizer-core small {
+  margin-top: .1rem;
+  color: #60737d;
+  font-size: .7rem;
+}
+
+#tutorial-stargates .sgu-crystal-branch {
+  position: relative;
+  height: 2rem;
+}
+
+#tutorial-stargates .sgu-crystal-branch::before {
+  content: "";
+  position: absolute;
+  top: .6rem;
+  left: 10%;
+  right: 10%;
+  border-top: 2px solid #f4a260;
+}
+
+#tutorial-stargates .sgu-crystal-branch i {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 1.1rem;
+  border-left: 2px solid #f4a260;
+}
+
+#tutorial-stargates .sgu-crystal-branch span {
+  position: absolute;
+  top: .8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--sg-orange, #ff963f);
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-crystal-families {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .45rem;
+}
+
+#tutorial-stargates .sgu-crystal-families article {
+  display: grid;
+  justify-items: center;
+  gap: .35rem;
+  padding: .55rem;
+  border: 1px solid #a9d8c9;
+  border-radius: .48rem;
+  background: #edf8f4;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-crystal-families img {
+  width: 2.6rem;
+  height: 2.6rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+#tutorial-stargates .sgu-crystal-families b,
+#tutorial-stargates .sgu-crystal-families span {
+  display: block;
+}
+
+#tutorial-stargates .sgu-crystal-families b {
+  font-size: .72rem;
+  line-height: 1.3;
+}
+
+#tutorial-stargates .sgu-crystal-families span {
+  margin-top: .2rem;
+  color: #557169;
+  font-size: .64rem;
+  line-height: 1.35;
+}
+
 #tutorial-stargates .sgu-loop-blueprint {
   overflow: hidden;
 }
@@ -1864,6 +2302,34 @@
     grid-template-columns: 1fr;
   }
 
+  #tutorial-stargates .sgu-electronics-power,
+  #tutorial-stargates .sgu-electronics-main,
+  #tutorial-stargates .sgu-electronics-supplies,
+  #tutorial-stargates .sgu-supply-balance {
+    grid-template-columns: 1fr;
+  }
+
+  #tutorial-stargates .sgu-electronics-power span {
+    padding-top: .35rem;
+    padding-left: 0;
+    border-top: 1px solid #bdd8e4;
+    border-left: 0;
+  }
+
+  #tutorial-stargates .sgu-electronics-main > i,
+  #tutorial-stargates .sgu-electronics-main > i.pipe {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+
+  #tutorial-stargates .sgu-electronics-main > i.pipe small {
+    display: none;
+  }
+
+  #tutorial-stargates .sgu-crystal-families {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   #tutorial-stargates .sgu-synthesis-flow > i,
   #tutorial-stargates .sgu-transfer-flow i {
     justify-self: center;
@@ -1933,6 +2399,10 @@
   #tutorial-stargates .sgu-metrics,
   #tutorial-stargates .sgu-allocation,
   #tutorial-stargates .sgu-metrics.compact {
+    grid-template-columns: 1fr;
+  }
+
+  #tutorial-stargates .sgu-crystal-families {
     grid-template-columns: 1fr;
   }
 }
