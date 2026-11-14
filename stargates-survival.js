@@ -33,7 +33,7 @@
       <div class="sgu-step-title compact"><span>A</span><div><p class="sgx-eyebrow">Les quatre éléments</p><h2>Qui fait quoi ?</h2></div></div>
       <div class="sgu-role-grid">
         <article>${icon('classic-stargate-base.png', 'Base de porte')}<div><b>[Stargate / Porte des étoiles]</b><span>Crée le passage. Sa structure formée contient l’adresse et son tampon de 1,36 MFE.</span></div></article>
-        <article>${icon('classic-dhd.png', 'DHD')}<div><b>[DHD / Console de composition]</b><span>Permet de saisir une adresse, d’ouvrir la connexion et de la fermer.</span></div></article>
+        <article>${icon('classic-dhd.png', 'DHD')}<div><b>[DHD / Console de composition]</b><span>Permet de saisir une adresse, d’ouvrir la connexion et de la fermer. Il doit lui aussi recevoir de l’énergie.</span></div></article>
         <article>${icon('basic-interface.png', 'Interface basique')}<div><b>[Basic Interface / Interface basique]</b><span>Transfère le FE du réseau externe vers la porte. Elle n’est pas la batterie principale.</span></div></article>
         <article><span class="sgu-symbol">FE</span><div><b>Production et accumulateurs</b><span>Fournissent le million de FE initial et les 4 500 FE/t nécessaires au maintien.</span></div></article>
       </div>
@@ -56,7 +56,7 @@
       <div class="sgu-address-flow">
         <article><b>1 · Lire</b><span>Clic droit sur une porte avec la [Wrench / Clé] Create : son adresse apparaît dans le chat.</span></article>
         <i>→</i><article><b>2 · Noter</b><span>Conserve l’ordre exact des symboles ou des nombres.</span></article>
-        <i>→</i><article><b>3 · Composer</b><span>Saisis l’adresse d’une autre porte sur le DHD, puis valide avec le bouton central.</span></article>
+        <i>→</i><article><b>3 · Composer</b><span>Maintiens Maj pour voir les numéros, saisis l’adresse puis presse le bouton central : il ajoute le Point d’origine et lance l’appel.</span></article>
       </div>
       <p class="sgu-note">Construire une porte ne suffit pas à créer une destination connue : il faut également obtenir l’adresse d’une porte sauvage, du spawn ou d’un autre joueur.</p>
     </section>
@@ -64,7 +64,7 @@
     <section class="sg-step sgu-step" id="sgu-general-travel" data-phase="Utiliser le réseau">
       <div class="sgu-step-title compact"><span>D</span><div><p class="sgx-eyebrow">Voyage</p><h2>Attendre la stabilisation, traverser, puis fermer.</h2></div></div>
       <ol class="sgu-actions">
-        <li><b>Reste hors du plan de la porte pendant l’ouverture.</b><span>Le vortex initial détruit les blocs, objets et entités placés devant lui.</span></li>
+        <li><b>Reste hors du plan de la porte pendant l’ouverture.</b><span>Conserve au moins sept blocs libres devant elle : le vortex initial détruit les blocs, objets et entités placés dans cet axe.</span></li>
         <li><b>Traverse depuis la face avant.</b><span>Le passage est bidirectionnel après stabilisation, mais entrer par l’arrière reste mortel.</span></li>
         <li><b>Ferme depuis le DHD d’arrivée.</b><span>Sur Régalade, les deux côtés peuvent couper la connexion afin d’économiser l’énergie.</span></li>
       </ol>

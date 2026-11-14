@@ -45,11 +45,20 @@
   gap: .55rem;
   margin-top: 1rem;
   padding: .7rem;
-  overflow-x: auto;
+  overflow: visible;
   border: 1px solid var(--sg-line, #cddce3);
   border-radius: .65rem;
   background: #fff;
   scrollbar-width: thin;
+}
+
+#tutorial-stargates .sgu-project-line,
+#tutorial-stargates .sgu-system-line,
+#tutorial-stargates .sgu-process,
+#tutorial-stargates .sgu-power-line {
+  flex-wrap: wrap;
+  gap: .35rem;
+  font-size: .84rem;
 }
 
 #tutorial-stargates .sgu-project-line > *,
@@ -74,7 +83,11 @@
   gap: 0;
   padding: 1.45rem 0;
   border-bottom: 1px solid var(--sg-line, #cddce3);
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 12rem;
+}
+
+#tutoriels #tutorial-stargates .sg-step.sgu-step {
+  scroll-margin-top: 12rem;
 }
 
 #tutorial-stargates .sgu-step:last-child {
@@ -203,10 +216,11 @@
 
 #tutorial-stargates .sgu-address-flow,
 #tutorial-stargates .sgu-refining-line {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
   align-items: stretch;
   gap: .45rem;
-  overflow-x: auto;
+  overflow: visible;
   padding: .1rem 0 .45rem;
   scrollbar-width: thin;
 }
@@ -240,6 +254,10 @@
   color: var(--sg-orange, #ff963f);
   font-style: normal;
   font-weight: 900;
+}
+
+#tutorial-stargates .sgu-refining-line > i {
+  display: none;
 }
 
 #tutorial-stargates .sgu-refining-line article {
@@ -430,7 +448,8 @@
   display: flex;
   align-items: center;
   gap: .4rem;
-  overflow-x: auto;
+  flex-wrap: wrap;
+  overflow: visible;
   scrollbar-width: thin;
 }
 
@@ -459,6 +478,10 @@
   padding: .65rem;
   border: 1px solid var(--sg-line, #cddce3);
   border-radius: .65rem;
+}
+
+#tutorial-stargates .sgu-metallurgy-line {
+  flex-wrap: wrap;
 }
 
 #tutorial-stargates .sgu-metallurgy-line img {
@@ -570,6 +593,531 @@
   line-height: 1.4;
 }
 
+/* Industrial survival course ------------------------------------------------ */
+#tutorial-stargates .sgu-readiness,
+#tutorial-stargates .sgu-blueprint,
+#tutorial-stargates .sgu-factory-map,
+#tutorial-stargates .sgu-loop-blueprint {
+  margin-top: .75rem;
+  padding: .8rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .65rem;
+  background: #fff;
+}
+
+#tutorial-stargates .sgu-readiness h3,
+#tutorial-stargates .sgu-readiness p {
+  margin: 0;
+}
+
+#tutorial-stargates .sgu-readiness p {
+  margin-top: .25rem;
+  color: #60737d;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+#tutorial-stargates .sgu-readiness > div {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: .65rem;
+  padding: .55rem 0;
+  border-top: 1px solid var(--sg-line, #cddce3);
+  font-size: .88rem;
+  line-height: 1.4;
+}
+
+#tutorial-stargates .sgu-readiness > div:first-of-type {
+  margin-top: .6rem;
+}
+
+#tutorial-stargates .sgu-readiness > div span:first-child {
+  color: var(--sg-blue-deep, #197cab);
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-map-row,
+#tutorial-stargates .sgu-map-drop,
+#tutorial-stargates .sgu-map-split > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+}
+
+#tutorial-stargates .sgu-map-row span,
+#tutorial-stargates .sgu-map-split span,
+#tutorial-stargates .sgu-map-split b,
+#tutorial-stargates .sgu-map-split strong {
+  padding: .5rem .65rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .5rem;
+  background: #f7fafb;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-map-row i,
+#tutorial-stargates .sgu-map-drop i,
+#tutorial-stargates .sgu-map-split i {
+  color: var(--sg-orange, #ff963f);
+  font-style: normal;
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-map-drop {
+  flex-direction: column;
+  gap: .2rem;
+  padding: .4rem 0;
+  color: var(--sg-blue-deep, #197cab);
+}
+
+#tutorial-stargates .sgu-map-split {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .6rem;
+}
+
+#tutorial-stargates .sgu-map-split > div {
+  flex-direction: column;
+  gap: .3rem;
+  min-width: 0;
+  padding: .65rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .6rem;
+}
+
+#tutorial-stargates .sgu-map-split span,
+#tutorial-stargates .sgu-map-split b,
+#tutorial-stargates .sgu-map-split strong {
+  width: 100%;
+  border: 0;
+}
+
+#tutorial-stargates .sgu-map-split small {
+  color: #60737d;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-blueprint {
+  display: grid;
+  gap: .45rem;
+}
+
+#tutorial-stargates .sgu-blueprint-title b,
+#tutorial-stargates .sgu-blueprint-title span {
+  display: block;
+}
+
+#tutorial-stargates .sgu-blueprint-title span {
+  margin-top: .15rem;
+  color: #60737d;
+  font-size: .84rem;
+}
+
+#tutorial-stargates .sgu-lane,
+#tutorial-stargates .sgu-converge,
+#tutorial-stargates .sgu-industrial-lane,
+#tutorial-stargates .sgu-batch-logic,
+#tutorial-stargates .sgu-batch-ledger,
+#tutorial-stargates .sgu-sequence-rule {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+}
+
+#tutorial-stargates .sgu-lane > span,
+#tutorial-stargates .sgu-industrial-lane > span,
+#tutorial-stargates .sgu-industrial-lane > strong,
+#tutorial-stargates .sgu-loop-track > span,
+#tutorial-stargates .sgu-loop-exit > *,
+#tutorial-stargates .sgu-sequence-rule > * {
+  min-width: 0;
+  padding: .45rem .6rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .45rem;
+  background: #f7fafb;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-lane > span,
+#tutorial-stargates .sgu-industrial-lane > span,
+#tutorial-stargates .sgu-industrial-lane > strong {
+  flex: 1 1 0;
+}
+
+#tutorial-stargates .sgu-lane i,
+#tutorial-stargates .sgu-converge i,
+#tutorial-stargates .sgu-industrial-lane i,
+#tutorial-stargates .sgu-batch-logic i,
+#tutorial-stargates .sgu-batch-ledger i,
+#tutorial-stargates .sgu-loop-track i,
+#tutorial-stargates .sgu-loop-exit i {
+  flex: 0 0 auto;
+  color: var(--sg-orange, #ff963f);
+  font-style: normal;
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-lane .machine,
+#tutorial-stargates .sgu-loop-track .machine {
+  border-color: #9ecfe4;
+  background: #eef7fb;
+  color: #17313c;
+  font-weight: 850;
+}
+
+#tutorial-stargates .sgu-lane .buffer,
+#tutorial-stargates .sgu-loop-exit .buffer {
+  border-color: #a9d8c9;
+  background: #edf8f4;
+}
+
+#tutorial-stargates .sgu-converge {
+  justify-content: center;
+  padding-top: .15rem;
+  color: var(--sg-blue-deep, #197cab);
+}
+
+#tutorial-stargates .sgu-converge:not(.horizontal) {
+  flex-direction: column;
+  gap: .2rem;
+}
+
+#tutorial-stargates .sgu-blueprint.compact .sgu-converge {
+  border-top: 1px solid var(--sg-line, #cddce3);
+  padding-top: .55rem;
+}
+
+#tutorial-stargates .sgu-station-head {
+  display: grid;
+  grid-template-columns: 3.2rem minmax(0, 1fr) auto;
+  gap: .7rem;
+  align-items: center;
+  margin-bottom: .7rem;
+  padding: .7rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .65rem;
+  background: #fff;
+}
+
+#tutorial-stargates .sgu-station-head img {
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: contain;
+}
+
+#tutorial-stargates .sgu-station-head b,
+#tutorial-stargates .sgu-station-head span {
+  display: block;
+}
+
+#tutorial-stargates .sgu-station-head span {
+  margin-top: .15rem;
+  color: #60737d;
+  font-size: .86rem;
+  line-height: 1.4;
+}
+
+#tutorial-stargates .sgu-station-head > strong {
+  padding: .45rem .65rem;
+  border-radius: .45rem;
+  background: #edf8f4;
+  color: #116e59;
+}
+
+#tutorial-stargates .sgu-plain-steps {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #566b75;
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
+#tutorial-stargates .sgu-card-note {
+  margin: .55rem 0 0;
+  padding-top: .5rem;
+  border-top: 1px solid var(--sg-line, #cddce3);
+  color: #60737d;
+  font-size: .82rem;
+  line-height: 1.45;
+}
+
+#tutorial-stargates .sgu-side-diagram {
+  display: grid;
+  justify-items: center;
+  gap: .25rem;
+  margin-top: .7rem;
+  padding: .7rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .65rem;
+  background: #fff;
+}
+
+#tutorial-stargates .sgu-side-diagram span {
+  min-width: 12rem;
+  padding: .45rem .6rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .45rem;
+  text-align: center;
+  font-weight: 850;
+}
+
+#tutorial-stargates .sgu-side-diagram .machine {
+  background: #eef7fb;
+}
+
+#tutorial-stargates .sgu-side-diagram .catalyst {
+  background: #fff3e8;
+}
+
+#tutorial-stargates .sgu-side-diagram i {
+  color: var(--sg-orange, #ff963f);
+  font-style: normal;
+}
+
+#tutorial-stargates .sgu-side-diagram small {
+  color: #60737d;
+}
+
+#tutorial-stargates .sgu-batch-logic {
+  justify-content: center;
+  margin-top: .7rem;
+  padding: .7rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .65rem;
+  background: #fff;
+}
+
+#tutorial-stargates .sgu-batch-logic div {
+  padding: .5rem .65rem;
+  border-radius: .45rem;
+  background: #eef7fb;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-batch-logic b,
+#tutorial-stargates .sgu-batch-logic span {
+  display: block;
+}
+
+#tutorial-stargates .sgu-batch-logic span {
+  margin-top: .15rem;
+  color: #60737d;
+  font-size: .8rem;
+}
+
+#tutorial-stargates .sgu-bulk-lessons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .65rem;
+  margin-top: .7rem;
+}
+
+#tutorial-stargates .sgu-bulk-lessons.single {
+  grid-template-columns: 1fr;
+}
+
+#tutorial-stargates .sgu-bulk-lessons article {
+  padding: .75rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .65rem;
+  background: #fff;
+}
+
+#tutorial-stargates .sgu-bulk-lessons h3,
+#tutorial-stargates .sgu-bulk-lessons p {
+  margin: 0;
+}
+
+#tutorial-stargates .sgu-bulk-lessons p {
+  margin-top: .5rem;
+  color: #60737d;
+  font-size: .86rem;
+  line-height: 1.45;
+}
+
+#tutorial-stargates .sgu-bulk-diagram {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  margin-top: .5rem;
+}
+
+#tutorial-stargates .sgu-bulk-diagram span {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: .45rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .4rem;
+  background: #f7fafb;
+  text-align: center;
+  font-size: .8rem;
+  font-weight: 800;
+}
+
+#tutorial-stargates .sgu-bulk-diagram .fan {
+  background: #eef7fb;
+}
+
+#tutorial-stargates .sgu-bulk-diagram .catalyst {
+  background: #fff3e8;
+}
+
+#tutorial-stargates .sgu-bulk-diagram i {
+  color: var(--sg-blue-deep, #197cab);
+  font-style: normal;
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-batch-ledger {
+  padding: .75rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .65rem;
+  background: #fff;
+}
+
+#tutorial-stargates .sgu-batch-ledger div {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+#tutorial-stargates .sgu-batch-ledger b,
+#tutorial-stargates .sgu-batch-ledger span {
+  display: block;
+}
+
+#tutorial-stargates .sgu-batch-ledger span {
+  margin-top: .2rem;
+  color: #60737d;
+  font-size: .83rem;
+  line-height: 1.4;
+}
+
+#tutorial-stargates .sgu-scale-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .65rem;
+}
+
+#tutorial-stargates .sgu-scale-grid article {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: .6rem;
+  padding: .75rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .65rem;
+  background: #fff;
+}
+
+#tutorial-stargates .sgu-scale-grid article > span {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: .45rem;
+  background: #e8f6fc;
+  color: var(--sg-blue-deep, #197cab);
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-scale-grid b,
+#tutorial-stargates .sgu-scale-grid p {
+  display: block;
+  margin: 0;
+}
+
+#tutorial-stargates .sgu-scale-grid p {
+  margin-top: .2rem;
+  color: #60737d;
+  font-size: .86rem;
+  line-height: 1.45;
+}
+
+#tutorial-stargates .sgu-industrial-lane {
+  margin-top: .7rem;
+}
+
+#tutorial-stargates .sgu-routing-diagram {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .45rem;
+  margin-top: .7rem;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-routing-diagram .source {
+  grid-column: 1 / -1;
+  justify-self: center;
+  padding: .5rem .7rem;
+  border-radius: .45rem;
+  background: #eef7fb;
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-routing-diagram div {
+  display: grid;
+  gap: .2rem;
+  padding: .55rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .45rem;
+}
+
+#tutorial-stargates .sgu-routing-diagram i {
+  color: var(--sg-orange, #ff963f);
+  font-style: normal;
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-loop-blueprint {
+  overflow: hidden;
+}
+
+#tutorial-stargates .sgu-loop-track,
+#tutorial-stargates .sgu-loop-exit {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+}
+
+#tutorial-stargates .sgu-loop-track > span {
+  flex: 1 1 0;
+}
+
+#tutorial-stargates .sgu-loop-return {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: .55rem 0;
+  padding: .45rem .65rem;
+  border: 1px dashed #96b7c5;
+  border-radius: .45rem;
+  color: #536772;
+  font-size: .84rem;
+}
+
+#tutorial-stargates .sgu-loop-return i {
+  color: var(--sg-blue-deep, #197cab);
+  font-style: normal;
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-loop-exit {
+  justify-content: flex-end;
+}
+
+#tutorial-stargates .sgu-sequence-rule {
+  justify-content: center;
+  margin-top: .7rem;
+}
+
+#tutorial-stargates .sgu-sequence-rule b {
+  color: var(--sg-blue-deep, #197cab);
+}
+
+#tutorial-stargates .energy-options {
+  margin-top: .7rem;
+}
+
 @media (max-width: 1050px) {
   #tutorial-stargates .sgu-machine-grid,
   #tutorial-stargates .sgu-crystal-grid {
@@ -621,6 +1169,59 @@
 
   #tutorial-stargates .sgu-address-flow > i,
   #tutorial-stargates .sgu-refining-line > i {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+
+  #tutorial-stargates .sgu-map-row,
+  #tutorial-stargates .sgu-lane,
+  #tutorial-stargates .sgu-industrial-lane,
+  #tutorial-stargates .sgu-batch-logic,
+  #tutorial-stargates .sgu-batch-ledger,
+  #tutorial-stargates .sgu-loop-track,
+  #tutorial-stargates .sgu-loop-exit,
+  #tutorial-stargates .sgu-sequence-rule {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #tutorial-stargates .sgu-map-row i,
+  #tutorial-stargates .sgu-lane i,
+  #tutorial-stargates .sgu-industrial-lane i,
+  #tutorial-stargates .sgu-batch-logic i,
+  #tutorial-stargates .sgu-batch-ledger i,
+  #tutorial-stargates .sgu-loop-track i,
+  #tutorial-stargates .sgu-loop-exit i {
+    align-self: center;
+    transform: rotate(90deg);
+  }
+
+  #tutorial-stargates .sgu-map-split,
+  #tutorial-stargates .sgu-bulk-lessons,
+  #tutorial-stargates .sgu-scale-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #tutorial-stargates .sgu-station-head {
+    grid-template-columns: 2.8rem minmax(0, 1fr);
+  }
+
+  #tutorial-stargates .sgu-station-head img {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  #tutorial-stargates .sgu-station-head > strong {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  #tutorial-stargates .sgu-bulk-diagram {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #tutorial-stargates .sgu-bulk-diagram i {
     justify-self: center;
     transform: rotate(90deg);
   }
