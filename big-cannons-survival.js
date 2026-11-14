@@ -20,23 +20,21 @@
   panel.hidden = true;
   panel.innerHTML = `
     <header class="cbc-survival-hero">
-      <p class="cbc-eyebrow">Parcours survie · de zéro au premier tir</p>
+      <p class="cbc-eyebrow">De zéro au premier tir</p>
       <h1>Construire un autocanon simple.</h1>
-      <p>On part de matières premières et on fabrique une arme réellement fonctionnelle : pièces coulées ensemble, tube alésé, culasse terminée, munitions chargées et affût commandé.</p>
+      <p>De la boue à la bombe nucléaire… Bon, peut-être pas, mais pas loin ! Grâce à ce guide, tu vas pouvoir créer ta première tourelle ou ton premier canon mobile, de A à Z : de la matière première au premier assas… hum, au « premier tir de test en conditions sécurisées ».</p>
       <div class="cbc-project-line" aria-label="Architecture du premier autocanon">
         <b>[Breech / Culasse]</b><i>→</i><b>[Recoil Spring / Ressort de recul]</b><i>→</i><b>[Barrel / Canon]</b><i>→</i><b>[Barrel / Canon]</b><i>→</i><b>Air</b>
       </div>
     </header>
 
     <section class="cbc-survival-step" id="cbc-auto-project">
-      <div class="cbc-step-title"><span>01</span><div><p class="cbc-step-kicker">Le projet</p><h2>Savoir exactement ce que l’on construit.</h2></div></div>
-      <p class="cbc-body-copy">Pour un premier essai, construis un autocanon en <strong>fonte</strong> composé d’une <strong>[Breech / Culasse]</strong>, d’un <strong>[Recoil Spring / Ressort de recul]</strong> et de deux <strong>[Barrels / Canons]</strong>. Le ressort est facultatif pour tirer, mais ce parcours l’inclut afin d’apprendre sa fabrication et d’obtenir l’animation de recul complète.</p>
+      <div class="cbc-step-title"><span>01</span><div><p class="cbc-step-kicker">Le projet</p><h2>Préparation du projet</h2></div></div>
+      <p class="cbc-body-copy">Pour un premier essai, construis un autocanon en <strong>fonte</strong> composé d’une <strong>[Breech / Culasse]</strong>, d’un <strong>[Recoil Spring / Ressort de recul]</strong> et de deux <strong>[Barrels / Canons]</strong>.</p>
       <div class="cbc-reason-grid">
         <article><b>Pourquoi la fonte ?</b><span>Elle se fabrique tôt avec du fer et du charbon.</span></article>
         <article><b>Pourquoi deux canons ?</b><span>Avec le ressort, ils remplissent les trois sections disponibles après la culasse en fonte.</span></article>
-        <article><b>À quoi sert le ressort ?</b><span>Il fait reculer visuellement le tube à chaque tir. Il est optionnel et ne supprime pas le recul physique de l’arme.</span></article>
       </div>
-      <div class="cbc-checkpoint"><b>Objectif final</b><span>Une ligne droite de quatre blocs, fermée côté culasse et ouverte côté cible.</span></div>
     </section>
 
     <section class="cbc-survival-step" id="cbc-auto-shopping">
@@ -71,13 +69,14 @@
       <div class="cbc-step-title"><span>05</span><div><p class="cbc-step-kicker">Moules</p><h2>Préparer les quatre couches de coulée.</h2></div></div>
       <div class="cbc-recipe-pairs">
         <article><h3>Moules en bois</h3><p>Découpe trois bûches pour obtenir les moules de <strong>culasse</strong>, de <strong>ressort de recul</strong> et de <strong>canon</strong>. Le moule de canon est réutilisé pour les deux canons.</p></article>
-        <article><h3>Sable de moulage</h3><p><strong>2 sables + 1 terre + 1 boule d’argile</strong> produisent 1 bloc. Fabrique-en quatre.</p></article>
+        <article><h3>Sable de moulage</h3><p><strong>2 sables + 1 terre + 1 boule d’argile</strong> produisent 1 bloc. Fabrique-en quatre : un pour remplir le moule central de chaque couche.</p></article>
       </div>
+      <p class="cbc-checkpoint"><b>Pour cet autocanon, aucun carré de 3 × 3 :</b><span>pose simplement le moule central, puis fais un clic droit dessus avec 1 [Casting Sand / Sable de moulage]. Les huit blocs de sable de moulage autour du centre ne sont nécessaires que pour les grands moules de gros canon — et ils doivent eux aussi être en sable de moulage, pas en sable vanilla ou dans une matière quelconque.</span></p>
       <div class="cbc-cast-stack" aria-label="Quatre couches du moule vertical">
-        <div><b>Haut</b><span>Moule de canon + sable</span></div>
-        <div><b>Couche 3</b><span>Moule de canon + sable</span></div>
-        <div><b>Couche 2</b><span>Moule de ressort de recul + sable</span></div>
-        <div><b>Bas</b><span>Moule de culasse + sable</span></div>
+        <div><b>Haut</b><span>Moule de canon rempli</span></div>
+        <div><b>Couche 3</b><span>Moule de canon rempli</span></div>
+        <div><b>Couche 2</b><span>Moule de ressort de recul rempli</span></div>
+        <div><b>Bas</b><span>Moule de culasse rempli</span></div>
       </div>
     </section>
 
@@ -195,7 +194,7 @@
     </section>
 
     <section class="cbc-survival-step" id="cbc-auto-next">
-      <div class="cbc-step-title"><span>14</span><div><p class="cbc-step-kicker">Après le prototype</p><h2>Améliorer sans repartir dans le flou.</h2></div></div>
+      <div class="cbc-step-title"><span>14</span><div><p class="cbc-step-kicker">Après le prototype</p><h2>Améliorer :)</h2></div></div>
       <p class="cbc-body-copy">Ton premier autocanon valide toute la chaîne : fonte, coulée connectée, alésage, ressort interne, finition de la culasse, affût et munitions. Tu peux maintenant automatiser l’approvisionnement, passer au bronze ou à l’acier, puis concevoir un système de visée.</p>
       <p class="cbc-checkpoint"><b>La règle utile :</b><span>ne change qu’un élément à la fois. Tu sauras ainsi immédiatement quelle modification améliore — ou casse — le canon.</span></p>
     </section>`;

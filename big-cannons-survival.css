@@ -19,7 +19,7 @@
 .cbc-step-kicker{margin:0 0 3px;color:var(--cbc-cyan);font-size:.69rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
 .cbc-body-copy{max-width:860px;margin:0 0 15px;color:#45575f}
 .cbc-reason-grid,.cbc-budget-grid,.cbc-recipe-pairs,.cbc-choice-grid,.cbc-control-grid,.cbc-diagnosis-grid{display:grid;gap:10px}
-.cbc-reason-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cbc-reason-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .cbc-budget-grid,.cbc-recipe-pairs,.cbc-choice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .cbc-choice-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .cbc-control-grid,.cbc-diagnosis-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
