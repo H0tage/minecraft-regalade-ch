@@ -11,14 +11,13 @@
   masthead.className = 'tutorial-masthead';
   masthead.innerHTML = `
     <div class="tutorial-masthead-cue tutorial-masthead-cue-left">
-      <span>01</span><strong>Choix du tutoriel</strong><i aria-hidden="true">↓</i>
+      <strong>Choix du tutoriel</strong><i aria-hidden="true">↓</i>
     </div>
-    <div class="tutorial-masthead-title">
-      <span>Centre d’aide</span>
-      <h1>Consultez les divers tutoriels et aides du serveur</h1>
+    <div class="tutorial-masthead-cue tutorial-masthead-cue-content">
+      <strong>Contenu du tuto</strong><i aria-hidden="true">↓</i>
     </div>
     <div class="tutorial-masthead-cue tutorial-masthead-cue-right">
-      <span>02</span><strong>Navigation dans le tuto</strong><i aria-hidden="true">↓</i>
+      <strong>Navigation dans le tuto</strong><i aria-hidden="true">↓</i>
     </div>`;
 
   const library = document.createElement('aside');

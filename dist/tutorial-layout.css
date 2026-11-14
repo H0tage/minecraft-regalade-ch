@@ -10,53 +10,24 @@
   display: grid;
   grid-template-columns: 190px minmax(0, 1fr) 190px;
   height: auto;
-  min-height: 82px;
+  min-height: 48px;
   border: 1px solid var(--line);
   border-bottom: 0;
   background: #fff;
 }
 
-.tutorial-masthead-title {
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
-  justify-content: center;
-  padding: 13px 24px;
+.tutorial-masthead-cue-content {
   border-right: 1px solid var(--line);
   border-left: 1px solid var(--line);
 }
 
-.tutorial-masthead-title span {
-  margin-bottom: 3px;
-  color: #147fa9;
-  font-size: .61rem;
-  font-weight: 900;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
-
-.tutorial-masthead-title h1 {
-  max-width: 720px;
-  margin: 0;
-  font-size: clamp(1.25rem, 1.8vw, 1.65rem);
-  line-height: 1.05;
-  letter-spacing: -.045em;
-}
-
 .tutorial-masthead-cue {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 7px;
-  padding: 12px 14px;
+  padding: 9px 14px;
   color: #485961;
-}
-
-.tutorial-masthead-cue span {
-  color: var(--orange);
-  font-size: .64rem;
-  font-weight: 950;
-  letter-spacing: .08em;
 }
 
 .tutorial-masthead-cue strong {
@@ -83,7 +54,7 @@
 .tutorial-library,
 .tutorial-chapters {
   min-width: 0;
-  padding: 30px 16px 72px;
+  padding: 12px 16px 72px;
 }
 
 .tutorial-library { border-right: 1px solid var(--line); }
@@ -140,7 +111,7 @@
 #tutoriels .tutorial-reader .tutorial-content {
   width: min(100%, 900px);
   margin: 0 auto;
-  padding: 46px 28px 80px;
+  padding: 12px 28px 80px;
 }
 
 #tutoriels .tutorial-chapter-list {
@@ -300,14 +271,13 @@
   #tutoriels.view.active { width: min(1120px, calc(100vw - 28px)); }
   .tutorial-workspace { grid-template-columns: 180px minmax(0, 1fr); }
   .tutorial-masthead { grid-template-columns: 180px minmax(0, 1fr) 180px; }
-  .tutorial-masthead-title { padding-right: 24px; padding-left: 24px; }
   .tutorial-reader { grid-column: 2; grid-row: 1; }
   .tutorial-chapters {
     grid-column: 2;
     grid-row: 1;
     z-index: 2;
     align-self: start;
-    margin: 20px 26px -25px;
+    margin: 10px 26px -15px;
     padding: 0;
     border: 0;
   }
@@ -348,34 +318,25 @@
   }
   .tutorial-workspace { display: flex; flex-direction: column; border: 0; }
   .tutorial-masthead {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     min-height: 0;
     margin-top: 12px;
     border-bottom: 1px solid var(--line);
     border-radius: 14px;
     overflow: hidden;
   }
-  .tutorial-masthead-title {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    padding: 12px 14px;
-    border: 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .tutorial-masthead-title span { display: none; }
-  .tutorial-masthead-title h1 { font-size: 1.2rem; letter-spacing: -.035em; }
   .tutorial-masthead-cue {
-    grid-template-columns: auto 1fr;
-    padding: 9px 11px;
+    padding: 9px 8px;
+    justify-content: center;
+    text-align: center;
   }
-  .tutorial-masthead-cue-left { grid-column: 1; grid-row: 2; border-right: 1px solid var(--line); }
-  .tutorial-masthead-cue-right { grid-column: 2; grid-row: 2; }
+  .tutorial-masthead-cue strong { font-size: .64rem; }
   .tutorial-masthead-cue i { display: none; }
   .tutorial-library { order: 1; }
   .tutorial-chapters { order: 2; }
   .tutorial-reader { order: 3; }
   .tutorial-library {
-    padding: 18px 0 0;
+    padding: 10px 0 0;
     border: 0;
   }
   .tutorial-library-sticky { position: static; }
