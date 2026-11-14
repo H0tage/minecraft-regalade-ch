@@ -957,15 +957,9 @@
   font-weight: 850;
 }
 
-#tutorial-stargates .sgu-refinery-continue {
-  display: grid;
-  justify-items: center;
-  color: var(--sg-orange, #ff963f);
-}
-
-#tutorial-stargates .sgu-refinery-continue i {
-  font-style: normal;
-  font-weight: 900;
+#tutorial-stargates .sgu-refinery-row .material.continued {
+  border-style: dashed;
+  background: #fbfcfd;
 }
 
 #tutorial-stargates .sgu-map-batch-total {
@@ -1411,6 +1405,14 @@
   line-height: 1;
 }
 
+#tutorial-stargates .sgu-stack-relation {
+  color: #60737d;
+  font-size: .68rem;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 #tutorial-stargates .sgu-sketch-block {
   display: block;
   width: min(100%, 19rem);
@@ -1704,14 +1706,23 @@
 }
 
 #tutorial-stargates .sgu-routing-diagram b,
+#tutorial-stargates .sgu-routing-diagram strong,
 #tutorial-stargates .sgu-routing-diagram small {
   text-align: left;
 }
 
+#tutorial-stargates .sgu-routing-diagram strong {
+  color: #116e59;
+  font-size: .76rem;
+}
+
 #tutorial-stargates .sgu-routing-diagram small {
+  grid-column: 1 / -1;
+  margin-top: .12rem;
   color: #60737d;
   font-size: .7rem;
   line-height: 1.35;
+  text-align: center;
 }
 
 #tutorial-stargates .sgu-electronics-map {
