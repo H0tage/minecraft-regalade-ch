@@ -162,7 +162,7 @@
           <details><summary>L’adresse est refusée</summary><p>Vérifier l’ordre, ajouter le symbole 0 à la fin, puis s’assurer que la destination existe, est chargée et n’est pas déjà occupée.</p></details>
           <details><summary>La connexion coupe toute seule</summary><p>Le débit de maintien est probablement insuffisant, le tampon est vide ou la durée maximale de 60 secondes est atteinte.</p></details>
         </div>
-        <div class="sgx-finish"><span>✓</span><div><h3>Première ligne terminée.</h3><p>Conserver la raffinerie, le Liquidizer et le Crystallizer : la porte suivante ne demande plus que 56 plaques et 19 fournées de raffinerie.</p></div></div>`)}
+        <div class="sgx-finish"><span>✓</span><div><h3>Première ligne terminée</h3><p>Conserver la raffinerie, le Liquidizer et le Crystallizer : la porte suivante ne demande plus que 56 plaques et 19 fournées de raffinerie.</p></div></div>`)}
     </div>`;
 
   const reference = `

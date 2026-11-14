@@ -24,7 +24,7 @@
   general.innerHTML = `
     <header class="sgu-hero">
       <p class="sgx-eyebrow">Fonctionnement général</p>
-      <h1>Comprendre une porte avant de construire l’usine.</h1>
+      <h1>Comprendre une porte avant de construire l’usine</h1>
       <p>Une installation complète repose sur quatre éléments : la porte, son clavier de composition, une interface énergétique et un stock d’électricité externe.</p>
       <p class="sgu-version">Stargate Journey 0.6.54 · règles énergétiques Régalade</p>
     </header>
@@ -41,7 +41,7 @@
     </section>
 
     <section class="sg-step sgu-step" id="sgu-general-energy" data-phase="Comprendre le système">
-      <div class="sgu-step-title compact"><span>B</span><div><p class="sgx-eyebrow">Énergie</p><h2>Une ouverture est un événement coûteux.</h2></div></div>
+      <div class="sgu-step-title compact"><span>B</span><div><p class="sgx-eyebrow">Énergie</p><h2>Une ouverture est un événement coûteux</h2></div></div>
       <div class="sgu-metrics">
         <div><b>1 MFE</b><span>au moment de l’ouverture</span></div>
         <div><b>4 500 FE/t</b><span>pendant le maintien</span></div>
@@ -52,7 +52,7 @@
     </section>
 
     <section class="sg-step sgu-step" id="sgu-general-address" data-phase="Utiliser le réseau">
-      <div class="sgu-step-title compact"><span>C</span><div><p class="sgx-eyebrow">Adresses</p><h2>Chaque porte possède sa propre destination.</h2></div></div>
+      <div class="sgu-step-title compact"><span>C</span><div><p class="sgx-eyebrow">Adresses</p><h2>Chaque porte possède sa propre destination</h2></div></div>
       <div class="sgu-address-flow">
         <article><b>1 · Lire</b><span>Clic droit sur une porte avec la Create Wrench : son adresse apparaît dans le chat.</span></article>
         <i>→</i><article><b>2 · Noter</b><span>Conserve l’ordre exact des symboles ou des nombres.</span></article>
@@ -62,7 +62,7 @@
     </section>
 
     <section class="sg-step sgu-step" id="sgu-general-travel" data-phase="Utiliser le réseau">
-      <div class="sgu-step-title compact"><span>D</span><div><p class="sgx-eyebrow">Voyage</p><h2>Attendre la stabilisation, traverser, puis fermer.</h2></div></div>
+      <div class="sgu-step-title compact"><span>D</span><div><p class="sgx-eyebrow">Voyage</p><h2>Attendre la stabilisation, traverser, puis fermer</h2></div></div>
       <ol class="sgu-actions">
         <li><b>Reste hors du plan de la porte pendant l’ouverture.</b><span>Conserve au moins sept blocs libres devant elle : le vortex initial détruit les blocs, objets et entités placés dans cet axe.</span></li>
         <li><b>Traverse depuis la face avant.</b><span>Le passage est bidirectionnel après stabilisation, mais entrer par l’arrière reste mortel.</span></li>
@@ -79,13 +79,13 @@
   guided.innerHTML = `
     <header class="sgu-hero">
       <p class="sgx-eyebrow">De la première poudre au premier voyage</p>
-      <h1>Construire sa première porte.</h1>
+      <h1>Construire sa première porte</h1>
       <p>Ce parcours suit réellement la matière : une fournée d’essai, la production industrielle, les cristaux technologiques, les vingt-quatre blocs de la porte, puis l’énergie et le premier appel.</p>
       <p class="sgu-version">Première installation : 21 fournées · 168 cristaux cryostabilisés · 64 plaques</p>
       <div class="sgu-project-line"><b>Raffinerie</b><i>→</i><b>Plaques et cristaux</b><i>→</i><b>24 blocs</b><i>→</i><b>Énergie</b><i>→</i><strong>Premier voyage</strong></div>
     </header>
 
-    ${step(1, 'Préparer le projet', 'Le résultat final', 'Savoir exactement ce que l’on construit.', `
+    ${step(1, 'Préparer le projet', 'Le résultat final', 'Savoir exactement ce que l’on construit', `
       <p class="sgu-copy">L’objectif n’est pas seulement de fabriquer un anneau. Une installation utilisable comprend une <strong>porte classique formée</strong>, un <strong>[DHD / Console de composition]</strong>, une <strong>[Basic Interface / Interface basique]</strong> et une alimentation FE externe.</p>
       <div class="sgu-target-grid">
         <article><b>Structure</b><span>1 base + 14 anneaux + 9 chevrons.</span></article>
@@ -95,7 +95,7 @@
       </div>
       ${checkpoint('Projet retenu :', 'une porte classique avec son DHD, son interface et un stock externe capable de fournir au moins 1 MFE.')}`)}
 
-    ${step(2, 'Préparer le projet', 'Avant de commencer', 'Préparer l’atelier sans récolter aveuglément toute l’usine.', `
+    ${step(2, 'Préparer le projet', 'Avant de commencer', 'Préparer l’atelier sans récolter aveuglément toute l’usine', `
       <p class="sgu-copy">Commence par construire les postes nécessaires à <strong>une seule fournée d’essai</strong>. La production de masse ne démarre qu’après avoir obtenu huit cristaux cryostabilisés.</p>
       <div class="sgu-workshop-grid">
         <article><h3>Préparation</h3><ul><li>Millstone ou Crushing Wheels</li><li>Mechanical Mixer + Basin</li><li>Blaze Burner chauffé et surchauffé</li><li>Cuves, tuyaux, pompes et Spout</li></ul></article>
@@ -111,7 +111,7 @@
       </div></details>
       <p class="sgu-note"><b>La liste complète est volontairement repliée :</b> valide d’abord une fournée. Une erreur répétée vingt et une fois coûterait beaucoup plus cher qu’un prototype raté.</p>`)}
 
-    ${step(3, 'Valider une fournée', 'Trois branches', 'Produire les trois ingrédients de départ.', `
+    ${step(3, 'Valider une fournée', 'Trois branches', 'Produire les trois ingrédients de départ', `
       <div class="sgu-branch-grid">
         <article>${icon('crystalline-matrix.png', 'Matrice cristalline')}<h3>4 matrices cristallines</h3><ol><li>Broie 16 éclats d’améthyste.</li><li>Verse 1 000 mB de potion étrange dans un Basin chauffé.</li><li>Ajoute les 16 poudres, 4 lingots d’or et 4 lingots de zinc.</li><li>Fais tourner le Mixer jusqu’à obtenir 4 matrices.</li></ol></article>
         <article>${icon('refractory-briquette.png', 'Briquette réfractaire')}<h3>4 briquettes réfractaires</h3><ol><li>Produis 8 Powdered Obsidian et 8 Cinder Flour.</li><li>Place-les dans un Basin chauffé sous une presse.</li><li>Ajoute 250 mB de lave.</li><li>Compacte pour obtenir 4 briquettes.</li></ol></article>
@@ -119,7 +119,7 @@
       </div>
       ${checkpoint('Ne continue pas avant d’avoir :', '4 matrices, 4 briquettes et 8 flux catalytiques.')}`)}
 
-    ${step(4, 'Valider une fournée', 'Convergence', 'Synthétiser quatre scories instables.', `
+    ${step(4, 'Valider une fournée', 'Convergence', 'Synthétiser quatre scories instables', `
       <div class="sgu-process"><b>4 matrices</b><i>+</i><b>4 briquettes</b><i>+</i><b>4 flux</b><i>+</i><b>250 mB lave</b><i>→</i><strong>Mixer surchauffé</strong></div>
       <ol class="sgu-actions">
         <li><b>Place le Basin au-dessus d’un Blaze Burner surchauffé.</b><span>Le niveau chauffé ordinaire ne suffit pas.</span></li>
@@ -128,7 +128,7 @@
       </ol>
       ${checkpoint('Sortie attendue :', '4 [Unstable Naquadah Slag / Scories instables de Naquadah].')}`)}
 
-    ${step(5, 'Valider une fournée', 'Raffinage', 'Transformer les quatre scories en huit cristaux.', `
+    ${step(5, 'Valider une fournée', 'Raffinage', 'Transformer les quatre scories en huit cristaux', `
       <p class="sgu-copy">Aligne les postes dans cet ordre. Les objets peuvent circuler sur un tapis, mais chaque procédé peut aussi être testé séparément.</p>
       <div class="sgu-refining-line">
         <article>${icon('unstable-slag.png', 'Scorie instable')}<b>Presse</b><span>4 scories → 4 briquettes brutes</span></article><i>→</i>
@@ -140,7 +140,7 @@
       <p class="sgu-warning"><b>Un procédé Bulk ne consiste pas à jeter l’objet dans le fluide :</b> le ventilateur doit souffler à travers le feu, l’eau ou la neige poudreuse, puis atteindre l’objet posé derrière.</p>
       ${checkpoint('Fournée validée :', '8 cristaux de Naquadah cryostabilisés. Tu peux maintenant reproduire exactement cette ligne.')}`)}
 
-    ${step(6, 'Industrialiser', 'Production de masse', 'Produire 168 cristaux et les répartir immédiatement.', `
+    ${step(6, 'Industrialiser', 'Production de masse', 'Produire 168 cristaux et les répartir immédiatement', `
       <p class="sgu-copy">Répète la fournée validée vingt et une fois au total. Place les sorties dans trois stockages séparés pour ne pas transformer par erreur les cristaux destinés à l’électronique.</p>
       <div class="sgu-allocation">
         <article><b>128</b><span>pour fabriquer 64 plaques</span></article>
@@ -149,7 +149,7 @@
       </div>
       ${checkpoint('Total obligatoire :', '168 cristaux, répartis 128 / 33 / 7 avant de commencer la métallurgie.')}`)}
 
-    ${step(7, 'Industrialiser', 'Métallurgie', 'Transformer 128 cristaux en 64 plaques.', `
+    ${step(7, 'Industrialiser', 'Métallurgie', 'Transformer 128 cristaux en 64 plaques', `
       <div class="sgu-process"><b>8 cristaux</b><i>→</i><b>Compacting chauffé</b><i>→</i><strong>1 billet incomplet</strong></div>
       <div class="sgu-loop">
         <p><b>Faire quatre boucles dans cet ordre :</b></p>
@@ -161,7 +161,7 @@
       <p class="sgu-warning"><b>Bulk Ending :</b> le ventilateur doit souffler à travers une tête de dragon et atteindre les lingots dormants. Cette opération reste la dernière activation du matériau.</p>
       ${checkpoint('Répète seize fois :', '16 billets × 4 plaques = 64 plaques de Naquadah.')}`)}
 
-    ${step(8, 'Cristalliser', 'Machines Journey', 'Construire le Liquidizer et le Crystallizer.', `
+    ${step(8, 'Cristalliser', 'Machines Journey', 'Construire le Liquidizer et le Crystallizer', `
       <p class="sgu-copy">Les deux [Reaction Chambers / Chambres de réaction] sont des composants de recette : elles seront absorbées par les deux machines finales.</p>
       <div class="sgu-machine-grid">
         <article>${icon('reaction-chamber.png', 'Reaction Chamber')}<h3>2 Reaction Chambers</h3><pre>SES\nBMB\nSDS</pre><span>S : Sturdy Sheet · E : Electron Tube · B : Brass Sheet · M : Precision Mechanism · D : Diamond</span></article>
@@ -171,14 +171,14 @@
       <p class="sgu-note"><b>Alimentation :</b> raccorde chaque machine à un réseau FE. Chacune consomme 1 000 FE/t pendant le traitement et possède un tampon de 1 MFE.</p>
       ${checkpoint('À poser dans l’atelier :', '1 Liquidizer et 1 Crystallizer alimentés en FE. Les Reaction Chambers n’existent plus séparément.')}`)}
 
-    ${step(9, 'Cristalliser', 'Liquide et socles', 'Produire le liquide puis trente-trois Crystal Bases.', `
+    ${step(9, 'Cristalliser', 'Liquide et socles', 'Produire le liquide puis trente-trois Crystal Bases', `
       <div class="sgu-two-column">
         <article><h3>3 500 mB de Liquid Naquadah</h3><p>Dans le Liquidizer, traite successivement 7 cristaux cryostabilisés avec 100 mB de lave chacun. Chaque opération produit 500 mB.</p><div class="sgu-mini-process"><b>1 cristal + 100 mB lave</b><i>→</i><strong>500 mB liquide</strong></div></article>
         <article><h3>33 Crystal Bases</h3><p>Fabrique les socles à l’établi. Chaque base consomme 1 cristal cryostabilisé, 1 améthyste, 2 quartz et 1 diamant.</p><div class="sgu-mini-process"><b>Cristal + améthyste + 2 quartz + diamant</b><i>→</i><strong>Crystal Base</strong></div></article>
       </div>
       ${checkpoint('Avant le Crystallizer :', '33 Crystal Bases et 3 500 mB de Liquid Naquadah disponibles.')}`)}
 
-    ${step(10, 'Cristalliser', 'Électronique', 'Fabriquer les trente-trois cristaux technologiques.', `
+    ${step(10, 'Cristalliser', 'Électronique', 'Fabriquer les trente-trois cristaux technologiques', `
       <p class="sgu-copy">Chaque opération du Crystallizer consomme 1 Crystal Base, 100 mB de Liquid Naquadah et les deux réactifs indiqués.</p>
       <div class="sgu-crystal-grid">
         <article><b>10 × Energy</b><span>3 redstones + 3 redstones</span></article>
@@ -189,7 +189,7 @@
       </div>
       ${checkpoint('Compte avant de continuer :', '10 Energy, 10 Transfer, 9 Materialization, 3 Communication et 1 Control. Il reste 200 mB de liquide.')}`)}
 
-    ${step(11, 'Fabriquer les composants', 'Assemblage séquencé', 'Produire les quatorze anneaux et neuf corps de chevrons.', `
+    ${step(11, 'Fabriquer les composants', 'Assemblage séquencé', 'Produire les quatorze anneaux et neuf corps de chevrons', `
       <div class="sgu-sequence-grid">
         <article><h3>14 [Ring Blocks / Blocs d’anneau]</h3><p><b>Base :</b> 1 Andesite Casing.</p><div><span>Iron Sheet</span><i>→</i><span>Sturdy Sheet</span><i>→</i><span>Plaque de Naquadah</span><i>→</i><span>Presse</span></div><p><b>Deux boucles par anneau.</b></p></article>
         <article><h3>9 corps de chevrons</h3><p><b>Base :</b> 1 Polished Rose Quartz.</p><div><span>Plaque de Naquadah</span><i>→</i><span>Brass Sheet</span><i>→</i><span>Electron Tube</span><i>→</i><span>Presse</span></div><p><b>Deux boucles par corps.</b></p></article>
@@ -197,7 +197,7 @@
       <p class="sgu-note">Les Deployers doivent recevoir les ingrédients dans cet ordre. L’objet intermédiaire revient au début de la ligne jusqu’à la fin de la deuxième boucle.</p>
       ${checkpoint('Sorties de ligne :', '14 blocs d’anneau terminés et 9 corps de chevrons incomplets.')}`)}
 
-    ${step(12, 'Fabriquer les composants', 'Mechanical Crafting', 'Terminer les chevrons, la base, le DHD et l’interface.', `
+    ${step(12, 'Fabriquer les composants', 'Mechanical Crafting', 'Terminer les chevrons, la base, le DHD et l’interface', `
       <div class="sgu-crafting-grid">
         <article><h3>Chevron · 3 × 3</h3><pre> T \nEIM\n PR</pre><span>T Transfer · E Energy · I corps incomplet · M Materialization · P Precision Mechanism · R Redstone Link</span></article>
         <article><h3>Base · 5 × 3</h3><pre>SPTPS\nBMCMB\nSPGPS</pre><span>S Sturdy Sheet · P plaque · T Transfer · B Brass Casing · M Precision Mechanism · C Control · G Communication</span></article>
@@ -206,7 +206,7 @@
       </div>
       ${checkpoint('Inventaire final :', '14 anneaux + 9 chevrons + 1 base + 1 DHD + 1 Basic Interface.')}`)}
 
-    ${step(13, 'Installer la porte', 'Construction', 'Monter l’anneau et former la structure.', `
+    ${step(13, 'Installer la porte', 'Construction', 'Monter l’anneau et former la structure', `
       <div class="sgu-build-layout">
         <figure><img src="${A}official-classic-stargate-structure.png" alt="Structure exacte de la porte classique" loading="lazy"><figcaption>Vue de face officielle : base au centre inférieur, intérieur entièrement vide.</figcaption></figure>
         <ol class="sgu-actions">
@@ -218,7 +218,7 @@
       </div>
       ${checkpoint('Résultat visible :', 'les blocs séparés deviennent une seule porte formée et animée.')}`)}
 
-    ${step(14, 'Installer la porte', 'Alimentation', 'Relier l’interface à un véritable stock externe.', `
+    ${step(14, 'Installer la porte', 'Alimentation', 'Relier l’interface à un véritable stock externe', `
       <div class="sgu-power-line"><b>Centrale ou accumulateurs</b><i>→ câble FE →</i><b>Basic Interface</b><i>→ sans câble →</i><strong>Porte</strong></div>
       <ol class="sgu-actions">
         <li><b>Pose l’interface face à la porte.</b><span>Le côté noir regarde vers l’extérieur ; la face de communication regarde la porte.</span></li>
@@ -228,7 +228,7 @@
       <div class="sgu-metrics compact"><div><b>1 MFE</b><span>ouverture</span></div><div><b>4 500 FE/t</b><span>maintien</span></div><div><b>6,4 MFE</b><span>60 secondes</span></div></div>
       ${checkpoint('Test sans appel :', 'Jade ou l’interface doit montrer que l’énergie entre réellement dans la porte.')}`)}
 
-    ${step(15, 'Effectuer le voyage', 'Adresse et DHD', 'Lire une adresse, appeler et fermer depuis l’arrivée.', `
+    ${step(15, 'Effectuer le voyage', 'Adresse et DHD', 'Lire une adresse, appeler et fermer depuis l’arrivée', `
       <ol class="sgu-actions numbered">
         <li><b>Lis ta propre adresse.</b><span>Clic droit sur un bloc de la porte avec la [Wrench / Clé] Create ; copie l’adresse affichée dans le chat.</span></li>
         <li><b>Pose le DHD à moins de 16 blocs.</b><span>Ouvre son interface et vérifie qu’il contrôle la porte.</span></li>
@@ -240,7 +240,7 @@
       <p class="sgu-warning"><b>Sécurité :</b> entrer par l’arrière de la porte reste mortel. Le passage stable est bidirectionnel, mais uniquement par les faces avant.</p>
       ${checkpoint('Premier voyage réussi :', 'tu peux revenir, conserver les deux adresses et couper la connexion depuis le côté où tu te trouves.')}`)}
 
-    ${step(16, 'Après le premier voyage', 'Dépannage', 'Identifier le problème par son symptôme.', `
+    ${step(16, 'Après le premier voyage', 'Dépannage', 'Identifier le problème par son symptôme', `
       <div class="sgu-diagnosis">
         <article><b>Le Mixer refuse la scorie</b><span>Vérifie les quatre matrices, quatre briquettes, quatre flux, 250 mB de lave et le Blaze Burner surchauffé.</span></article>
         <article><b>Le Bulk Freezing ne produit rien</b><span>Le ventilateur doit souffler à travers la neige poudreuse avant d’atteindre les granulés.</span></article>
@@ -252,7 +252,7 @@
         <article><b>La connexion coupe rapidement</b><span>Le stock externe est vide ou ne fournit pas les 4 500 FE/t nécessaires au maintien.</span></article>
       </div>`)}
 
-    ${step(17, 'Après le premier voyage', 'Après le prototype', 'Réutiliser l’usine au lieu de recommencer de zéro.', `
+    ${step(17, 'Après le premier voyage', 'Après le prototype', 'Réutiliser l’usine au lieu de recommencer de zéro', `
       <p class="sgu-copy">La première porte finance toute l’infrastructure : raffinerie, Liquidizer, Crystallizer, circuits de traitement et mur de Mechanical Crafters. Conserve-les comme une usine communautaire.</p>
       <div class="sgu-next-grid">
         <article><b>Une seconde porte</b><span>Elle réutilise les machines existantes et demande 19 fournées selon la nomenclature actuelle.</span></article>

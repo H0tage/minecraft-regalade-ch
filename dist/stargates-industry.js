@@ -15,13 +15,13 @@
   guided.innerHTML = `
     <header class="sgu-hero">
       <p class="sgx-eyebrow">De l’atelier expérimental au premier voyage</p>
-      <h1>Construire sa première porte.</h1>
+      <h1>Construire sa première porte</h1>
       <p>Ce parcours construit une véritable usine de bout en bout : un prototype manuel, des lignes reproductibles, les vingt-quatre blocs de la porte, puis l’énergie et le premier appel.</p>
       <p class="sgu-version">Première installation : 21 fournées · 168 Cryostabilized Naquadah Crystals · 64 Naquadah Plates</p>
       <div class="sgu-project-line"><b>Prototype</b><i>→</i><b>Raffinerie</b><i>→</i><b>Naquadah Plates et Crystals</b><i>→</i><b>24 blocs</b><i>→</i><b>Énergie</b><i>→</i><strong>Premier voyage</strong></div>
     </header>
 
-    ${step(1, 'Préparer le projet', 'Le résultat final', 'Définir l’installation complète avant de produire.', `
+    ${step(1, 'Préparer le projet', 'Le résultat final', 'Définir l’installation complète avant de produire', `
       <p class="sgu-copy">L’objectif n’est pas seulement de fabriquer un Ring Block. Une installation utilisable comprend une <strong>Classic Stargate formée</strong>, un <strong>DHD</strong>, une <strong>Basic Interface</strong> et une alimentation FE externe.</p>
       <div class="sgu-target-grid">
         <article><b>Structure</b><span>1 Classic Stargate Base Block + 14 Classic Stargate Ring Blocks + 9 Classic Stargate Chevron Blocks.</span></article>
@@ -39,7 +39,7 @@
       </div>
       ${checkpoint('Projet retenu :', 'une Classic Stargate avec son DHD alimenté, sa Basic Interface, une destination connue et un stock externe capable de financer le voyage.')}`)}
 
-    ${step(2, 'Préparer le projet', 'Carte de l’usine', 'Voir où va la matière avant de poser les machines.', `
+    ${step(2, 'Préparer le projet', 'Carte de l’usine', 'Voir où va la matière avant de poser les machines', `
       <p class="sgu-copy">L’usine possède un tronc commun puis deux branches. Les <strong>Cryostabilized Naquadah Crystals</strong> sont le carrefour : certains deviennent des Naquadah Plates, les autres alimentent l’électronique.</p>
       <div class="sgu-factory-map" role="img" aria-label="Carte de production de la porte des étoiles">
         <div class="sgu-map-row"><span>Trois précurseurs</span><i>→</i><span>Unstable Naquadah Slag</span><i>→</i><span>Raffinerie</span></div>
@@ -58,7 +58,7 @@
       </div></details>
       <p class="sgu-warning"><b>Ne rassemble pas encore les vingt et une fournées :</b> valide d’abord le prototype. Une erreur répétée vingt et une fois coûterait beaucoup plus cher qu’une fournée ratée.</p>`)}
 
-    ${step(3, 'Construire le prototype', 'Atelier minimal', 'Rassembler uniquement les postes de la première fournée.', `
+    ${step(3, 'Construire le prototype', 'Atelier minimal', 'Rassembler uniquement les postes de la première fournée', `
       <p class="sgu-copy">Installe les machines dans un espace lisible. Elles peuvent partager la même transmission, mais garde assez de place pour observer chaque sortie et intervenir à la main.</p>
       <div class="sgu-workshop-grid">
         <article><h3>Préparation</h3><ul><li>Millstone ou Crushing Wheels</li><li>cuve d’eau pour produire la potion</li><li>Mechanical Mixer + Basin</li><li>Blaze Burner chauffé puis surchauffé</li></ul></article>
@@ -75,7 +75,7 @@
       </div>
       ${checkpoint('Atelier prêt :', 'chaque branche possède son poste, sa source de fluide éventuelle et son stockage de sortie.')}`)}
 
-    ${step(4, 'Construire le prototype', 'Branche 1', 'Produire quatre Crystalline Matrices.', `
+    ${step(4, 'Construire le prototype', 'Branche 1', 'Produire quatre Crystalline Matrices', `
       <div class="sgu-station-head">${icon('crystalline-matrix.png', 'Crystalline Matrix')}<div><b>Entrée d’une fournée</b><span>16 éclats d’améthyste · 4 or · 4 zinc · 1 000 mB de potion étrange</span></div><strong>4 Crystalline Matrices</strong></div>
       <div class="sgu-two-column">
         <article><h3>Préparer la potion avec Create</h3><ol class="sgu-plain-steps"><li>Injecte 1 000 mB d’eau dans un Basin chauffé.</li><li>Ajoute 1 Nether Wart et mélange avec le Mechanical Mixer.</li><li>Récupère les 1 000 mB de potion étrange dans un Fluid Tank dédié.</li><li>Relie cette réserve au Basin des Crystalline Matrices avec une Mechanical Pump orientée vers celui-ci.</li></ol><p class="sgu-card-note">Des potions brassées peuvent aussi être vidées avec un Item Drain, mais la production liquide est plus simple à répéter.</p></article>
@@ -84,7 +84,7 @@
       <div class="sgu-side-diagram"><span class="machine top">Mechanical Mixer</span><i>↓</i><span class="machine">Basin</span><i>↓</i><span class="catalyst">Blaze Burner chauffé</span><small>La recette exige la chaleur normale, pas le niveau surchauffé.</small></div>
       ${checkpoint('Sortie de la branche 1 :', '4 Crystalline Matrices dans leur stockage dédié.')}`)}
 
-    ${step(5, 'Construire le prototype', 'Branches 2 et 3', 'Produire les Refractory Briquettes et le Catalytic Flux.', `
+    ${step(5, 'Construire le prototype', 'Branches 2 et 3', 'Produire les Refractory Briquettes et le Catalytic Flux', `
       <div class="sgu-branch-grid">
         <article>${icon('refractory-briquette.png', 'Refractory Briquette')}<h3>4 Refractory Briquettes</h3><ol><li>Broie 8 obsidiennes en Powdered Obsidian.</li><li>Broie 8 Netherracks dans les Crushing Wheels pour obtenir au moins 8 Cinder Flour.</li><li>Place les 16 poudres dans un Basin chauffé sous une Mechanical Press.</li><li>Injecte 250 mB de lave et laisse la Mechanical Press compacter.</li></ol></article>
         <article>${icon('catalytic-flux.png', 'Catalytic Flux')}<h3>8 Catalytic Flux</h3><ol><li>Place 8 Blaze Powder dans un second Basin.</li><li>Ajoute 8 redstones et 4 glowstones.</li><li>Mélange avec le Mechanical Mixer ; aucune chaleur n’est nécessaire.</li><li>Sépare immédiatement la sortie en deux piles de 4.</li></ol></article>
@@ -92,7 +92,7 @@
       <div class="sgu-batch-logic"><div><b>4 Catalytic Flux</b><span>partent maintenant dans la synthèse</span></div><i>+</i><div><b>4 Catalytic Flux</b><span>sont réservés au futur billet</span></div><i>=</i><strong>8 Catalytic Flux utilisés sans perte</strong></div>
       ${checkpoint('Avant la synthèse :', '4 Crystalline Matrices, 4 Refractory Briquettes et 4 Catalytic Flux disponibles ; 4 autres Catalytic Flux sont rangés dans le stock métallurgie.')}`)}
 
-    ${step(6, 'Construire le prototype', 'Convergence', 'Synthétiser quatre Unstable Naquadah Slag.', `
+    ${step(6, 'Construire le prototype', 'Convergence', 'Synthétiser quatre Unstable Naquadah Slag', `
       <div class="sgu-process"><b>4 Crystalline Matrices</b><i>+</i><b>4 Refractory Briquettes</b><i>+</i><b>4 Catalytic Flux</b><i>+</i><b>250 mB lave</b><i>→</i><strong>Mechanical Mixer surchauffé</strong></div>
       <ol class="sgu-actions">
         <li><b>Place le Basin au-dessus d’un Blaze Burner surchauffé.</b><span>Le niveau chauffé ordinaire ne suffit pas.</span></li>
@@ -101,7 +101,7 @@
       </ol>
       ${checkpoint('Sortie attendue :', '4 Unstable Naquadah Slag.')}`)}
 
-    ${step(7, 'Construire le prototype', 'Ligne de raffinage', 'Construire les cinq transformations dans le bon ordre.', `
+    ${step(7, 'Construire le prototype', 'Ligne de raffinage', 'Construire les cinq transformations dans le bon ordre', `
       <p class="sgu-copy">Commence par des Depots séparés, puis relie-les avec des tapis lorsque chaque poste fonctionne. Cette ligne double la quantité au passage dans les Crushing Wheels : quatre Unstable Naquadah Slag deviennent huit Cryostabilized Naquadah Crystals.</p>
       <div class="sgu-refining-line">
         <article>${icon('unstable-slag.png', 'Unstable Naquadah Slag')}<b>Mechanical Press</b><span>4 Unstable Naquadah Slag → 4 Raw Naquadah Briquettes</span></article><i>→</i>
@@ -123,7 +123,7 @@
       </ol>
       ${checkpoint('Ligne construite :', 'les cinq postes produisent correctement 8 Cryostabilized Naquadah Crystals à partir des 4 Unstable Naquadah Slag.')}`)}
 
-    ${step(8, 'Valider le prototype', 'Premier cycle complet', 'Faire circuler une fournée sans automatiser les quantités.', `
+    ${step(8, 'Valider le prototype', 'Premier cycle complet', 'Faire circuler une fournée sans automatiser les quantités', `
       <p class="sgu-copy">Exécute maintenant la chaîne entière avec les quantités d’une seule fournée. Déplace les objets manuellement entre les stocks : le but est de valider la recette, pas encore la vitesse.</p>
       <div class="sgu-batch-ledger">
         <div><b>Entrée</b><span>16 améthystes · 4 or · 4 zinc · 8 obsidiennes · 8 Netherracks · 8 Blaze Powder · 8 redstones · 4 glowstones · 1 000 mB potion · 500 mB lave</span></div>
@@ -133,7 +133,7 @@
       <p class="sgu-note"><b>Pourquoi cette fournée est pratique :</b> ses 8 Cryostabilized Naquadah Crystals et ses 4 Catalytic Flux réservés correspondent exactement aux besoins d’un Stabilized Naquadah Billet, qui donnera ensuite 4 Naquadah Plates.</p>
       ${checkpoint('Prototype validé :', '8 Cryostabilized Naquadah Crystals et 4 Catalytic Flux sont stockés, sans objet intermédiaire bloqué dans une machine.')}`)}
 
-    ${step(9, 'Industrialiser', 'Passage à l’échelle', 'Transformer le prototype en atelier reproductible.', `
+    ${step(9, 'Industrialiser', 'Passage à l’échelle', 'Transformer le prototype en atelier reproductible', `
       <p class="sgu-copy">Tu peux automatiser les tapis sans automatiser le dosage. La version la plus robuste utilise trois postes de précurseurs, une synthèse lente, puis la ligne de raffinage continue.</p>
       <div class="sgu-scale-grid">
         <article><span>1</span><div><b>Prépare les lots</b><p>Place dans trois coffres les ingrédients déjà comptés pour une fournée. N’alimente jamais le Basin depuis un vrac non contrôlé.</p></div></article>
@@ -144,7 +144,7 @@
       <div class="sgu-industrial-lane"><span>3 postes de précurseurs</span><i>→</i><span>stocks tampons</span><i>→</i><strong>1 synthèse surchauffée</strong><i>→</i><span>5 postes de raffinage</span><i>→</i><span>coffre de comptage</span></div>
       ${checkpoint('Atelier industrialisé :', 'un nouveau lot peut être lancé sans retirer ni mélanger le contenu du lot précédent.')}`)}
 
-    ${step(10, 'Industrialiser', 'Production de masse', 'Produire 168 Cryostabilized Naquadah Crystals et les répartir immédiatement.', `
+    ${step(10, 'Industrialiser', 'Production de masse', 'Produire 168 Cryostabilized Naquadah Crystals et les répartir immédiatement', `
       <p class="sgu-copy">Réalise vingt et une fournées au total, prototype compris. Chaque sortie rejoint d’abord le coffre de comptage, puis trois stockages séparés.</p>
       <div class="sgu-allocation">
         <article><b>128</b><span>pour fabriquer 64 Naquadah Plates</span></article>
@@ -155,7 +155,7 @@
       <p class="sgu-warning"><b>Répartis avant de fabriquer :</b> si les 168 Cryostabilized Naquadah Crystals passent accidentellement dans la métallurgie, tu devras relancer cinq fournées pour l’électronique.</p>
       ${checkpoint('Total obligatoire :', '168 Cryostabilized Naquadah Crystals répartis 128 / 33 / 7, plus 84 Catalytic Flux issus des fournées.')}`)}
 
-    ${step(11, 'Fabriquer les Naquadah Plates', 'Atelier de métallurgie', 'Construire la boucle du billet avant de consommer les Cryostabilized Naquadah Crystals.', `
+    ${step(11, 'Fabriquer les Naquadah Plates', 'Atelier de métallurgie', 'Construire la boucle du billet avant de consommer les Cryostabilized Naquadah Crystals', `
       <div class="sgu-process"><b>8 Cryostabilized Naquadah Crystals</b><i>→</i><b>Compacting chauffé</b><i>→</i><strong>1 Incomplete Naquadah Billet</strong></div>
       <p class="sgu-copy">L’Incomplete Naquadah Billet doit parcourir quatre fois la même séquence. Construis une boucle fermée et place une sortie filtrée sur le Stabilized Naquadah Billet : les objets incomplets continuent de tourner, le produit fini quitte la boucle.</p>
       <div class="sgu-loop-blueprint" role="img" aria-label="Boucle d’assemblage du billet de Naquadah">
@@ -171,7 +171,7 @@
       </ol>
       ${checkpoint('Boucle validée :', 'le Stabilized Naquadah Billet sort après quatre tours ; 4 Catalytic Flux et 500 mB de lave ont été consommés.')}`)}
 
-    ${step(12, 'Fabriquer les Naquadah Plates', 'Activation finale', 'Transformer seize Stabilized Naquadah Billets en soixante-quatre Naquadah Plates.', `
+    ${step(12, 'Fabriquer les Naquadah Plates', 'Activation finale', 'Transformer seize Stabilized Naquadah Billets en soixante-quatre Naquadah Plates', `
       <div class="sgu-metallurgy-line">
         ${icon('stabilized-billet.png', 'Stabilized Naquadah Billet')}<b>Stabilized Naquadah Billet</b><i>→ Mechanical Saw →</i>${icon('dormant-ingot.png', 'Dormant Naquadah Ingot')}<b>4 Dormant Naquadah Ingots</b><i>→ Bulk Ending →</i><b>4 Naquadah Ingots</b><i>→ Mechanical Press →</i>${icon('naquadah-plate.png', 'Naquadah Plate')}<strong>4 Naquadah Plates</strong>
       </div>
@@ -186,7 +186,7 @@
       </ol>
       ${checkpoint('Métallurgie terminée :', '64 Naquadah Plates dans leur stock ; 20 Catalytic Flux de réserve doivent encore rester.')}`)}
 
-    ${step(13, 'Construire l’électronique', 'Machines spécialisées', 'Fabriquer puis installer le Naquadah Liquidizer et le Crystallizer.', `
+    ${step(13, 'Construire l’électronique', 'Machines spécialisées', 'Fabriquer puis installer le Naquadah Liquidizer et le Crystallizer', `
       <p class="sgu-copy">Les deux Reaction Chambers sont des composants de recette : elles seront absorbées par les deux machines finales.</p>
       <div class="sgu-machine-grid">
         <article>${icon('reaction-chamber.png', 'Reaction Chamber')}<h3>2 Reaction Chambers</h3><pre>SES\nBMB\nSDS</pre><span>S : Sturdy Sheet · E : Electron Tube · B : Brass Sheet · M : Precision Mechanism · D : Diamond</span></article>
@@ -206,14 +206,14 @@
       </ol>
       ${checkpoint('Atelier électrique prêt :', 'les deux machines reçoivent du FE et la cuve intermédiaire est reliée sans mélange avec la lave.')}`)}
 
-    ${step(14, 'Construire l’électronique', 'Liquid Naquadah et Crystal Bases', 'Préparer les deux entrées du Crystallizer.', `
+    ${step(14, 'Construire l’électronique', 'Liquid Naquadah et Crystal Bases', 'Préparer les deux entrées du Crystallizer', `
       <div class="sgu-two-column">
         <article><h3>3 500 mB de Liquid Naquadah</h3><p>Charge successivement les 7 Cryostabilized Naquadah Crystals réservés. Pour chaque opération, le Naquadah Liquidizer reçoit aussi 100 mB de lave et produit 500 mB dans le Fluid Tank.</p><div class="sgu-mini-process"><b>1 Cryostabilized Naquadah Crystal + 100 mB lave</b><i>→</i><strong>500 mB Liquid Naquadah</strong></div><p><b>Contrôle :</b> après sept cycles, le Fluid Tank contient exactement 3 500 mB.</p></article>
         <article><h3>33 Crystal Bases</h3><p>Fabrique les Crystal Bases à la Crafting Table. Chacune consomme 1 Cryostabilized Naquadah Crystal, 1 Amethyst Shard, 2 Quartz et 1 Diamond.</p><div class="sgu-mini-process"><b>Cryostabilized Naquadah Crystal + Amethyst Shard + 2 Quartz + Diamond</b><i>→</i><strong>Crystal Base</strong></div><p><b>Contrôle :</b> le coffre électronique doit contenir les 33 Crystal Bases avant le premier cycle.</p></article>
       </div>
       ${checkpoint('Avant le Crystallizer :', '33 Crystal Bases et 3 500 mB de Liquid Naquadah disponibles.')}`)}
 
-    ${step(15, 'Construire l’électronique', 'Cristallisation', 'Fabriquer et trier les trente-trois cristaux technologiques.', `
+    ${step(15, 'Construire l’électronique', 'Cristallisation', 'Fabriquer et trier les trente-trois cristaux technologiques', `
       <p class="sgu-copy">Chaque opération du Crystallizer consomme 1 Crystal Base, 100 mB de Liquid Naquadah et les deux réactifs indiqués.</p>
       <div class="sgu-crystal-grid">
         <article><b>10 × Energy Crystal</b><span>3 Redstone Dust + 3 Redstone Dust</span></article>
@@ -230,7 +230,7 @@
       </ol>
       ${checkpoint('Compte avant de continuer :', '10 Energy Crystals, 10 Transfer Crystals, 9 Materialization Crystals, 3 Communication Crystals et 1 Control Crystal. Il reste 200 mB de Liquid Naquadah.')}`)}
 
-    ${step(16, 'Fabriquer les composants', 'Deux lignes séquencées', 'Produire les quatorze Classic Stargate Ring Blocks et neuf Incomplete Stargate Chevrons.', `
+    ${step(16, 'Fabriquer les composants', 'Deux lignes séquencées', 'Produire les quatorze Classic Stargate Ring Blocks et neuf Incomplete Stargate Chevrons', `
       <p class="sgu-copy">Ces deux recettes demandent deux passages. Elles utilisent la même logique que le billet, mais pas les mêmes ingrédients : construis deux petites boucles ou change soigneusement les filtres entre les séries.</p>
       <div class="sgu-sequence-grid">
         <article><h3>14 Classic Stargate Ring Blocks</h3><p><b>Objet de départ :</b> 1 Andesite Casing par bloc.</p><div><span>Deployer : Iron Sheet</span><i>→</i><span>Deployer : Sturdy Sheet</span><i>→</i><span>Deployer : Naquadah Plate</span><i>→</i><span>Mechanical Press</span></div><p><b>Deux tours.</b> Filtre la sortie sur le Classic Stargate Ring Block terminé.</p></article>
@@ -239,7 +239,7 @@
       <div class="sgu-sequence-rule"><b>Règle commune</b><span>objet de départ → quatre opérations → retour au début → deuxième passage → sortie filtrée</span></div>
       ${checkpoint('Sorties de ligne :', '14 Classic Stargate Ring Blocks et 9 Incomplete Stargate Chevrons.')}`)}
 
-    ${step(17, 'Fabriquer les composants', 'Mechanical Crafting', 'Terminer les Classic Stargate Chevron Blocks, le Classic Stargate Base Block, le Classic DHD et la Basic Interface.', `
+    ${step(17, 'Fabriquer les composants', 'Mechanical Crafting', 'Terminer les Classic Stargate Chevron Blocks, le Classic Stargate Base Block, le Classic DHD et la Basic Interface', `
       <p class="sgu-copy">Ces quatre recettes se réalisent avec des Mechanical Crafters orientés vers une sortie commune. La taille indiquée correspond au rectangle réellement nécessaire.</p>
       <div class="sgu-crafting-grid">
         <article><h3>Classic Stargate Chevron Block · 3 × 3</h3><pre> T \nEIM\n PR</pre><span>T Transfer Crystal · E Energy Crystal · I Incomplete Stargate Chevron · M Materialization Crystal · P Precision Mechanism · R Redstone Link</span></article>
@@ -249,7 +249,7 @@
       </div>
       ${checkpoint('Inventaire final :', '14 Classic Stargate Ring Blocks + 9 Classic Stargate Chevron Blocks + 1 Classic Stargate Base Block + 1 Classic DHD + 1 Basic Interface.')}`)}
 
-    ${step(18, 'Installer la porte', 'Construction', 'Monter l’anneau et former la structure.', `
+    ${step(18, 'Installer la porte', 'Construction', 'Monter l’anneau et former la structure', `
       <div class="sgu-build-layout">
         <figure><img src="${A}official-classic-stargate-structure.png" alt="Structure exacte de la Classic Stargate" loading="lazy"><figcaption>Vue de face officielle : Classic Stargate Base Block au centre inférieur, intérieur entièrement vide.</figcaption></figure>
         <ol class="sgu-actions">
@@ -262,7 +262,7 @@
       <p class="sgu-warning"><b>Zone de sécurité :</b> laisse au moins sept blocs entièrement libres devant la porte. Le vortex d’ouverture peut détruire les blocs, objets et entités présents dans cet axe.</p>
       ${checkpoint('Résultat visible :', 'les blocs séparés deviennent une seule Classic Stargate formée et animée.')}`)}
 
-    ${step(19, 'Installer la porte', 'Alimentation', 'Relier l’interface à un véritable stock externe.', `
+    ${step(19, 'Installer la porte', 'Alimentation', 'Relier l’interface à un véritable stock externe', `
       <div class="sgu-power-line"><b>Centrale ou accumulateurs</b><i>→ Large Connector →</i><b>Basic Interface</b><i>→ contact direct →</i><strong>Stargate</strong></div>
       <ol class="sgu-actions">
         <li><b>Colle la Basic Interface directement à un bloc de la Stargate.</b><span>Aucun vide ni bloc intermédiaire : la face de communication touche la Stargate et le côté noir regarde vers l’extérieur.</span></li>
@@ -277,7 +277,7 @@
       </div>
       ${checkpoint('Test sans appel :', 'Jade ou l’interface montre que l’énergie entre réellement ; la porte est pleine et le stock externe dépasse 5,04 MFE.')}`)}
 
-    ${step(20, 'Effectuer le voyage', 'Adresse et DHD', 'Préparer l’aller et le retour avant de composer.', `
+    ${step(20, 'Effectuer le voyage', 'Adresse et DHD', 'Préparer l’aller et le retour avant de composer', `
       <ol class="sgu-actions">
         <li><b>Lis ta propre adresse.</b><span>Clic droit sur un bloc de la Stargate avec la Create Wrench ; copie l’adresse affichée dans le chat.</span></li>
         <li><b>Pose et alimente le DHD à moins de 16 blocs.</b><span>Relie-le au FE ou fournis-lui un conteneur énergétique chargé, puis vérifie qu’il contrôle la porte.</span></li>
@@ -289,7 +289,7 @@
       <p class="sgu-warning"><b>Sécurité :</b> entrer par l’arrière de la porte reste mortel. Le passage stable est bidirectionnel, mais uniquement par les faces avant.</p>
       ${checkpoint('Premier voyage réussi :', 'les deux adresses sont conservées, le DHD d’arrivée est alimenté et tu peux couper puis recomposer la connexion pour revenir.')}`)}
 
-    ${step(21, 'Après le premier voyage', 'Dépannage', 'Identifier le problème par son symptôme.', `
+    ${step(21, 'Après le premier voyage', 'Dépannage', 'Identifier le problème par son symptôme', `
       <div class="sgu-diagnosis">
         <article><b>La potion n’arrive pas dans le Basin</b><span>Vérifie la pompe et son sens. La route recommandée produit 1 000 mB avec de l’eau et une Nether Wart ; des bouteilles peuvent aussi être vidées avec un Item Drain.</span></article>
         <article><b>Le Mechanical Mixer refuse la recette</b><span>Vérifie les quatre Crystalline Matrices, quatre Refractory Briquettes, quatre Catalytic Flux, 250 mB de lave et le Blaze Burner surchauffé.</span></article>
@@ -303,7 +303,7 @@
         <article><b>La connexion coupe rapidement</b><span>Le stock externe est vide ou ne fournit pas les 4 500 FE/t nécessaires au maintien.</span></article>
       </div>`)}
 
-    ${step(22, 'Après le premier voyage', 'Après le prototype', 'Réutiliser l’usine au lieu de recommencer de zéro.', `
+    ${step(22, 'Après le premier voyage', 'Après le prototype', 'Réutiliser l’usine au lieu de recommencer de zéro', `
       <p class="sgu-copy">La première porte finance toute l’infrastructure : raffinerie, Naquadah Liquidizer, Crystallizer, circuits de traitement et mur de Mechanical Crafters. Conserve-les comme une usine communautaire.</p>
       <div class="sgu-next-grid">
         <article><b>Une seconde porte</b><span>Elle réutilise les machines existantes et demande 19 fournées selon la nomenclature actuelle.</span></article>
