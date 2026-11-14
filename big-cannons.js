@@ -39,8 +39,20 @@
           <article><p class="cbc-overview-label">[Autocannon / Autocanon]</p><h3>Une longueur utile fixée par le matériau</h3><div class="cbc-length-scale"><span><b>3</b>Fonte</span><span><b>5</b>Bronze</span><span><b>7</b>Acier</span></div><p>Ces nombres incluent la culasse et le ressort éventuel. Au-delà, le projectile risque de rester coincé.</p></article>
           <article><p class="cbc-overview-label">[Big Cannon / Gros canon]</p><h3>64 blocs structurels, quel que soit le matériau</h3><div class="cbc-limit-line"><b>1</b><span></span><b>64</b></div><p>Le matériau ne change pas cette limite générale. Il détermine plutôt la quantité de poudre supportée et la puissance nécessaire pour parcourir le tube sans incident.</p></article>
         </div>
-        <div class="cbc-cause-chain"><div><b>Canon plus long</b><span>davantage de tube à parcourir</span></div><i>→</i><div><b>Besoin de puissance</b><span>sinon le projectile se coince</span></div><i>→</i><div><b>Besoin de résistance</b><span>sinon le canon rompt</span></div></div>
+        <div class="cbc-cause-chain"><div><b>Tube plus long</b><span>le tir devient plus précis</span></div><i>→</i><div><b>Charge suffisante obligatoire</b><span>sinon le projectile se coince</span></div><i>→</i><div><b>Canon assez résistant</b><span>sinon la charge le fait rompre</span></div></div>
         <div class="cbc-note"><strong>En résumé :</strong> la longueur maximale d’un gros canon n’est pas donnée directement par son matériau. Le matériau décide surtout si la charge nécessaire à cette longueur peut être utilisée sans danger.</div>
+        <div class="cbc-stat-guide">
+          <div class="cbc-stat-guide-heading"><p class="cbc-overview-label">[Big Cannon / Gros canon]</p><h3>Quelle modification change quelle statistique ?</h3></div>
+          <div class="cbc-stat-grid">
+            <article><b>Ajouter de la poudre</b><strong>Vitesse et portée ↑</strong><span>Le recul, la dispersion initiale et la contrainte imposée au canon augmentent également.</span></article>
+            <article><b>Allonger le tube</b><strong>Précision ↑</strong><span>Chaque bloc parcouru réduit la dispersion. Le tube n’ajoute pas directement de vitesse.</span></article>
+            <article><b>Choisir un meilleur matériau</b><strong>Charge supportée ↑</strong><span>Le matériau fixe surtout la résistance, le risque de projectile coincé et l’efficacité du tube sur la précision.</span></article>
+            <article><b>Modifier l’angle</b><strong>Trajectoire modifiée</strong><span>Un tir plus haut décrit une courbe différente ; l’angle participe donc à la distance réellement atteinte.</span></article>
+            <article><b>Changer de projectile</b><strong>Effet et comportement modifiés</strong><span>Dégâts, explosion, pénétration et comportement en vol dépendent de la munition choisie.</span></article>
+            <article><b>Épaissir le profil extérieur</b><strong>Portée inchangée</strong><span>Les tailles extérieures organisent la chambre et la forme du canon ; elles ne créent pas un nouveau calibre.</span></article>
+          </div>
+          <div class="cbc-autocannon-exception"><b>Exception — [Autocannon / Autocanon]</b><span>Sur un autocanon, chaque bloc de tube augmente réellement la vitesse et réduit la dispersion, jusqu’aux limites propres à son matériau.</span></div>
+        </div>
       </section>
 
       <section class="cbc-overview-section" id="cbc-overview-diameter">
@@ -67,7 +79,7 @@
 
       <section class="cbc-overview-section" id="cbc-overview-summary">
         <div class="cbc-section-heading"><span>05</span><div><h2>La phrase à retenir</h2><p>Si tu comprends ceci, le reste du mod devient beaucoup plus lisible.</p></div></div>
-        <blockquote>Un gros canon possède une fermeture arrière, une zone épaisse réservée à la poudre, puis une longueur de tube destinée à accélérer et guider le projectile. Le matériau ne fixe pas directement sa longueur maximale : il détermine surtout la charge et la longueur qu’il peut supporter sans incident.</blockquote>
+        <blockquote>Un gros canon possède une fermeture arrière, une zone épaisse réservée à la poudre, puis une longueur de tube qui améliore la précision du tir. La poudre détermine principalement la vitesse et la portée ; le matériau détermine surtout quelle charge et quelle longueur peuvent être utilisées sans incident.</blockquote>
         <div class="cbc-next-links"><span><b>Besoin des chiffres précis ?</b> Consulte le Manuel technique.</span><span><b>Prêt à fabriquer les pièces ?</b> Ouvre Toutes les recettes.</span></div>
       </section>
     </div>`;
