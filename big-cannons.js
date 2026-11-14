@@ -113,7 +113,8 @@
   panel.hidden = true;
   panel.setAttribute('role', 'tabpanel');
   panel.setAttribute('aria-labelledby', tab.id);
-  panel.innerHTML = `<section class="cbc"><div class="cbc-switcher" role="tablist" aria-label="Choisir le contenu Big Cannons"><button id="cbc-guide-tab" type="button" role="tab" aria-selected="true" aria-controls="cbc-guide-panel">Tutoriel guidé</button><button id="cbc-manual-tab" type="button" role="tab" aria-selected="false" aria-controls="cbc-manual-panel" tabindex="-1">Manuel technique</button></div>${guided}${manual}</section>`;
+  const recipes = window.REGALE_CBC_RECIPES_HTML || '';
+  panel.innerHTML = `<section class="cbc"><div class="cbc-switcher" role="tablist" aria-label="Choisir le contenu Big Cannons"><button id="cbc-guide-tab" type="button" role="tab" aria-selected="true" aria-controls="cbc-guide-panel">Tutoriel guidé</button><button id="cbc-manual-tab" type="button" role="tab" aria-selected="false" aria-controls="cbc-manual-panel" tabindex="-1">Manuel technique</button><button id="cbc-recipes-tab" type="button" role="tab" aria-selected="false" aria-controls="cbc-recipes-panel" tabindex="-1">Toutes les recettes</button></div>${guided}${manual}${recipes}</section>`;
   content.append(panel);
 
   const style = document.createElement('style');
@@ -123,11 +124,11 @@
   document.head.append(style);
 
   const responsiveFix = document.createElement('style');
-  responsiveFix.textContent = '.cbc-mission > div{min-width:0}.cbc-guide[hidden],.cbc-manual[hidden]{display:none!important}.tutorial-panel .cbc-hero{display:block;height:auto}.cbc-card-icon{display:grid!important;grid-template-columns:48px minmax(0,1fr);column-gap:12px;align-items:start}.cbc-card-icon>img{display:block!important;float:none!important;grid-column:1;grid-row:1 / span 2;width:48px!important;height:48px!important;max-width:48px!important;padding:6px!important;object-fit:contain!important}.cbc-card-icon h3,.cbc-card-icon p{grid-column:2;align-self:start}.cbc-card-icon h3{margin:0 0 6px!important}.cbc-card-icon p{margin:0!important}.cbc-muzzle-part img{transform:scaleX(-1)}.cbc-load-order span{display:flex!important;min-width:118px;flex-direction:column;align-items:center;justify-content:center;gap:5px}.cbc-load-order .cbc-load-breech,.cbc-load-order .cbc-load-barrel{background:#e3ebee}.cbc-load-order .cbc-target{border-color:var(--cbc-orange);background:var(--cbc-orange-soft);color:#b64e10}.cbc-target i{display:block;width:34px;height:34px;border:7px solid var(--cbc-orange);border-radius:50%;background:radial-gradient(circle,#b64e10 0 4px,transparent 5px)}';
+  responsiveFix.textContent = '.cbc-mission > div{min-width:0}.cbc-guide[hidden],.cbc-manual[hidden],.cbc-recipes[hidden]{display:none!important}.tutorial-panel .cbc-hero{display:block;height:auto}.cbc-card-icon{display:grid!important;grid-template-columns:48px minmax(0,1fr);column-gap:12px;align-items:start}.cbc-card-icon>img{display:block!important;float:none!important;grid-column:1;grid-row:1 / span 2;width:48px!important;height:48px!important;max-width:48px!important;padding:6px!important;object-fit:contain!important}.cbc-card-icon h3,.cbc-card-icon p{grid-column:2;align-self:start}.cbc-card-icon h3{margin:0 0 6px!important}.cbc-card-icon p{margin:0!important}.cbc-muzzle-part img{transform:scaleX(-1)}.cbc-load-order span{display:flex!important;min-width:118px;flex-direction:column;align-items:center;justify-content:center;gap:5px}.cbc-load-order .cbc-load-breech,.cbc-load-order .cbc-load-barrel{background:#e3ebee}.cbc-load-order .cbc-target{border-color:var(--cbc-orange);background:var(--cbc-orange-soft);color:#b64e10}.cbc-target i{display:block;width:34px;height:34px;border:7px solid var(--cbc-orange);border-radius:50%;background:radial-gradient(circle,#b64e10 0 4px,transparent 5px)}';
   document.head.append(responsiveFix);
 
   const modeTabs = [...panel.querySelectorAll('.cbc-switcher [role="tab"]')];
-  const modePanels = [...panel.querySelectorAll('.cbc-guide, .cbc-manual')];
+  const modePanels = [...panel.querySelectorAll('.cbc-guide, .cbc-manual, .cbc-recipes')];
   const storageKey = 'regalade.big-cannons.mode';
   const selectMode = mode => {
     modeTabs.forEach(button => {
@@ -139,13 +140,14 @@
     try { localStorage.setItem(storageKey, mode); } catch (_) { /* Storage is optional. */ }
   };
   modeTabs.forEach((button, index) => {
-    button.addEventListener('click', () => selectMode(button.id === 'cbc-manual-tab' ? 'manual' : 'guide'));
+    const buttonMode = () => button.id.replace(/^cbc-|\-tab$/g, '');
+    button.addEventListener('click', () => selectMode(buttonMode()));
     button.addEventListener('keydown', event => {
       if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
       event.preventDefault();
       const next = event.key === 'Home' ? 0 : event.key === 'End' ? modeTabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + modeTabs.length) % modeTabs.length;
       modeTabs[next].focus();
-      selectMode(modeTabs[next].id === 'cbc-manual-tab' ? 'manual' : 'guide');
+      selectMode(modeTabs[next].id.replace(/^cbc-|\-tab$/g, ''));
     });
   });
   panel.querySelectorAll('.cbc a[href^="#cbc-"]').forEach(link => link.addEventListener('click', event => {
@@ -155,6 +157,9 @@
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }));
   let savedMode = 'guide';
-  try { savedMode = localStorage.getItem(storageKey) === 'manual' ? 'manual' : 'guide'; } catch (_) { /* Storage is optional. */ }
+  try {
+    const storedMode = localStorage.getItem(storageKey);
+    savedMode = ['guide', 'manual', 'recipes'].includes(storedMode) ? storedMode : 'guide';
+  } catch (_) { /* Storage is optional. */ }
   selectMode(savedMode);
 })();
