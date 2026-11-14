@@ -145,8 +145,8 @@
         <article><h3>[Cannon Mount / Affût]</h3><p>1 boîtier d’andésite + 4 arbres + 2 plaques de fer + 2 poudres à canon.</p></article>
         <article><h3>[Mount Extension / Extension]</h3><p>1 boîtier d’andésite + 2 arbres + 2 poudres à canon.</p></article>
       </div>
-      <ol class="cbc-numbered"><li>Pose l’affût.</li><li>Place l’extension au-dessus.</li><li>Pose l’autocanon horizontalement, culasse vers l’arrière, en alignant le bloc de ressort au-dessus de l’extension.</li><li>Maintiens un signal redstone sur la face marquée d’un marteau : c’est la commande d’assemblage.</li></ol>
-      <p class="cbc-checkpoint"><b>Test immédiat :</b><span>si seul un bloc s’assemble, une jonction manque. Retourne à l’étape de soudure.</span></p>
+      <ol class="cbc-numbered"><li>Pose l’affût.</li><li>Place l’extension au-dessus.</li><li>Pose l’autocanon horizontalement, culasse vers l’arrière, en alignant le bloc de ressort au-dessus de l’extension.</li><li>Ne mets pas encore l’affût sous tension : laisse le canon sous forme de blocs pour préparer ses commandes.</li></ol>
+      <p class="cbc-checkpoint"><b>À ce stade, rien ne bouge :</b><span>c’est normal. L’étape 13 transformera ces blocs en un véritable canon manipulable.</span></p>
     </section>
 
     <section class="cbc-survival-step" id="cbc-auto-ammo">
@@ -157,14 +157,20 @@
     </section>
 
     <section class="cbc-survival-step" id="cbc-auto-fire">
-      <div class="cbc-step-title"><span>13</span><div><p class="cbc-step-kicker">Premier tir</p><h2>Assembler, viser et tirer sans transformer l’essai en mitraillage.</h2></div></div>
-      <div class="cbc-control-grid">
-        <article><b>Face marteau</b><span>Signal maintenu : assemble le canon sur l’affût.</span></article>
-        <article><b>Face lumineuse opposée</b><span>Le niveau du signal règle la cadence de l’autocanon.</span></article>
-        <article><b>Entrées cinétiques</b><span>Les arbres latéraux et inférieur orientent l’affût.</span></article>
-      </div>
-      <ol class="cbc-numbered"><li>Alimente la face marteau et vérifie que les quatre blocs deviennent une seule contraption.</li><li>Attache le conteneur rempli à la culasse.</li><li>Place une cible sûre devant la bouche.</li><li>Utilise un [Analog Lever / Levier analogique] réglé sur <strong>1</strong> sur la face de tir.</li><li>Augmente ensuite progressivement. Un signal de 15 correspond à 300 coups par minute.</li></ol>
-      <div class="cbc-diagnosis-grid"><article><b>Un seul bloc bouge</b><span>Jonction absente : soude ou recoule.</span></article><article><b>Le canon ne tire pas</b><span>Vérifie le conteneur, les cartouches et la face redstone utilisée.</span></article><article><b>Le projectile reste coincé</b><span>Canon trop long pour le matériau ou construction invalide.</span></article></div>
+      <div class="cbc-step-title"><span>13</span><div><p class="cbc-step-kicker">Premier tir</p><h2>Transformer les blocs en canon contrôlable, puis tirer.</h2></div></div>
+      <p class="cbc-body-copy">Pour l’instant, ton autocanon est encore une rangée de blocs immobiles. Le <strong>[Cannon Mount / Affût de canon]</strong> va les convertir en une <strong>contraption Create</strong> : un seul objet mobile, attaché à l’affût, que le jeu peut orienter et faire tirer. Il ne faut ni colle ni outil spécial pour cette conversion.</p>
+
+      <h3>1. Activer le pilotage manuel</h3>
+      <ol class="cbc-numbered"><li>Vérifie que la face de l’affût marquée d’un marteau n’est pas alimentée.</li><li>Avec une <strong>[Wrench / Clé]</strong> de Create, fais un clic droit sur la <strong>[Breech / Culasse]</strong>. Des poignées doivent apparaître.</li><li>Ces poignées sont l’élément important : elles permettent au joueur de monter sur l’autocanon et de l’orienter avec sa caméra.</li><li>Si ce n’est pas déjà fait, fixe le conteneur de munitions rempli sur la culasse.</li></ol>
+      <p class="cbc-checkpoint"><b>Option vivement conseillée — ajouter un siège :</b><span>prends n’importe quel [Seat / Siège] de Create et fais un clic droit sur la culasse munie de poignées. Le siège est purement visuel : les poignées assurent le pilotage, mais le siège donne enfin au canon l’apparence d’un vrai poste de tir. Sur cet affût, il tourne avec le canon sans rouler au sol ; un véritable canon mobile utilise un [Cannon Carriage / Chariot de canon].</span></p>
+
+      <h3>2. Transformer le canon en contraption</h3>
+      <ol class="cbc-numbered"><li>Place un levier de façon à alimenter la face de l’affût portant le symbole du marteau.</li><li>Active le levier. Toute la rangée — culasse, ressort et canons — doit quitter la grille de blocs et devenir un seul ensemble mobile attaché à l’affût.</li><li>Garde ce signal actif pendant l’utilisation. Si tu le coupes, l’affût désassemble le canon et replace ses blocs dans le monde.</li></ol>
+      <p class="cbc-checkpoint"><b>Si seule une pièce est emportée :</b><span>les blocs ne sont pas tous connectés. Coupe le signal, puis retourne à l’étape 10 pour souder les jonctions manquantes.</span></p>
+
+      <h3>3. Monter, viser et tirer</h3>
+      <ol class="cbc-numbered"><li>Fais un clic droit sur la culasse assemblée — ou sur son siège — pour prendre les commandes.</li><li>Déplace la souris : l’autocanon suit ton regard en hauteur et en direction.</li><li>Place un <strong>[Analog Lever / Levier analogique]</strong> sur la face lumineuse de l’affût et règle-le sur <strong>1</strong>. Avec les poignées, ce signal fixe la cadence sans déclencher le tir tout seul.</li><li>Vise une cible sûre, puis maintiens le clic gauche pour tirer. Relâche-le pour cesser le feu.</li><li>Appuie sur Maj pour quitter le poste de tir. Tu pourras ensuite augmenter progressivement le levier ; le niveau 15 correspond à 300 coups par minute.</li></ol>
+      <p class="cbc-checkpoint"><b>Le canon ne tire pas ?</b><span>vérifie d’abord que tu es bien monté sur la culasse à poignées, que le conteneur contient des cartouches et que le levier de cadence n’est pas à zéro.</span></p>
     </section>
 
     <section class="cbc-survival-step" id="cbc-auto-next">
