@@ -34,19 +34,6 @@
   text-transform: uppercase;
 }
 
-.tutorial-library h2 {
-  margin: 0 0 8px;
-  font-size: 1.35rem;
-  letter-spacing: -.035em;
-}
-
-.tutorial-library-intro {
-  margin: 0 0 24px;
-  color: var(--muted);
-  font-size: .82rem;
-  line-height: 1.55;
-}
-
 #tutoriels .tutorial-library .tutorial-tabs {
   display: grid;
   gap: 5px;
@@ -96,13 +83,6 @@
   width: min(100%, 980px);
   margin: 0 auto;
   padding: 58px 38px 90px;
-}
-
-.tutorial-chapters-heading {
-  margin: 0 0 13px;
-  color: var(--ink);
-  font-size: .85rem;
-  font-weight: 900;
 }
 
 #tutoriels .tutorial-chapter-list {
@@ -185,7 +165,6 @@
   }
   .tutorial-chapter-toggle::after { content: "+"; color: var(--cyan); font-size: 1.1rem; }
   .tutorial-chapters.open .tutorial-chapter-toggle::after { content: "−"; }
-  .tutorial-chapters-heading,
   .tutorial-chapters .tutorial-side-label { display: none; }
   #tutoriels .tutorial-chapter-list {
     display: none;
@@ -216,8 +195,6 @@
   }
   .tutorial-library-sticky { position: static; }
   .tutorial-library .tutorial-side-label,
-  .tutorial-library h2,
-  .tutorial-library-intro { display: none; }
   .tutorial-library-toggle {
     display: flex;
     width: 100%;

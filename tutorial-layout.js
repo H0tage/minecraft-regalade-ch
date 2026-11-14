@@ -13,8 +13,6 @@
   library.innerHTML = `
     <div class="tutorial-library-sticky">
       <p class="tutorial-side-label">Documentation</p>
-      <h2>Tutoriels</h2>
-      <p class="tutorial-library-intro">Choisis ce que tu veux apprendre, puis avance chapitre par chapitre.</p>
       <button class="tutorial-library-toggle" type="button" aria-expanded="false"></button>
     </div>`;
   library.querySelector('.tutorial-library-sticky').append(tabList);
@@ -29,7 +27,6 @@
   chapters.innerHTML = `
     <div class="tutorial-chapters-sticky">
       <p class="tutorial-side-label">Navigation</p>
-      <p class="tutorial-chapters-heading">Dans ce tutoriel</p>
       <button class="tutorial-chapter-toggle" type="button" aria-expanded="false">Afficher les chapitres</button>
       <nav class="tutorial-chapter-list" aria-label="Dans ce tutoriel"></nav>
     </div>`;
