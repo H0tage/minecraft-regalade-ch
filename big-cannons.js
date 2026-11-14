@@ -12,74 +12,71 @@
   const card = (title, text, image) => `<article class="cbc-card${image ? ' cbc-card-icon' : ''}">${image ? icon(image, '') : ''}<h3>${title}</h3><p>${text}</p></article>`;
 
   const guided = `
-    <div class="cbc-guide" id="cbc-guide-panel" role="tabpanel" aria-labelledby="cbc-guide-tab">
-      <header class="cbc-hero cbc-guide-hero">
-        <p class="cbc-eyebrow">Create Big Cannons · guide débutant</p>
-        <h1>Ton premier canon, bloc par bloc.</h1>
-        <p>On commence par <strong>construire quelque chose qui tire réellement</strong>, puis on explique pourquoi cela fonctionne.</p>
+    <div class="cbc-guide cbc-overview" id="cbc-guide-panel" role="tabpanel" aria-labelledby="cbc-guide-tab">
+      <header class="cbc-hero cbc-overview-hero">
+        <p class="cbc-eyebrow">Create Big Cannons · les bases</p>
+        <h1>Comprendre un canon avant de le construire.</h1>
+        <p>Un gros canon n’est pas une recette unique : c’est une ligne de pièces compatibles. Voici les règles à comprendre avant de choisir un matériau ou de fabriquer le moindre bloc.</p>
       </header>
-      <section class="cbc-goal" aria-label="Objectif du tutoriel">
-        <div><h2>Objectif : un petit canon en fonte</h2><p>Une culasse rapide, une chambre, un canon, un affût et une seule charge. Le parcours va de la fonte au premier tir.</p></div>
-        <div class="cbc-goal-icons" aria-hidden="true">${['cast-iron-ingot.png', 'cannon-drill.png', 'cannon-welder.png', 'solid-shot.png'].map(name => `<span>${icon(name)}</span>`).join('')}</div>
+
+      <section class="cbc-overview-section" id="cbc-overview-shape">
+        <div class="cbc-section-heading"><span>01</span><div><h2>La forme générale</h2><p>Un arrière fermé, un tube continu et une extrémité ouverte.</p></div></div>
+        <div class="cbc-structure-diagram" role="img" aria-label="Culasse, chambres, canons puis bouche ouverte">
+          <div class="cbc-structure-block rear"><b>[Breech / Culasse]</b><small>ou extrémité fermée</small></div>
+          <i aria-hidden="true">→</i>
+          <div class="cbc-structure-block chamber"><b>[Chamber / Chambre]</b><small>× 1 ou davantage · poudre</small></div>
+          <i aria-hidden="true">→</i>
+          <div class="cbc-structure-block barrel"><b>[Barrel / Canon]</b><small>× 0 ou davantage · trajet</small></div>
+          <i aria-hidden="true">→</i>
+          <div class="cbc-structure-block muzzle"><b>Bouche ouverte</b><small>c’est simplement de l’air</small></div>
+        </div>
+        <div class="cbc-overview-callout"><strong>La bouche n’est pas une pièce.</strong><span>C’est la face ouverte du dernier bloc de tube. Si tu poses un bouchon devant, le canon n’a plus de sortie.</span></div>
       </section>
-      <nav class="cbc-mission-nav" aria-label="Sommaire des six missions">
-        <a href="#cbc-m1"><b>MISSION 01</b>Préparer</a><a href="#cbc-m2"><b>MISSION 02</b>Couler</a><a href="#cbc-m3"><b>MISSION 03</b>Percer</a><a href="#cbc-m4"><b>MISSION 04</b>Culasse</a><a href="#cbc-m5"><b>MISSION 05</b>Monter</a><a href="#cbc-m6"><b>MISSION 06</b>Tirer</a>
-      </nav>
 
-      <section class="cbc-mission" id="cbc-m1"><div class="cbc-number">01</div><div>
-        <p class="cbc-eyebrow">Mission 1 · Préparer l’atelier</p><h2>Comprendre la forme avant de crafter</h2><p class="cbc-lead">Le canon est un tube continu, fermé à l’arrière et ouvert vers la cible. Chaque bloc a une fonction claire.</p>
-        <div class="cbc-diagram"><p class="cbc-diagram-title">Vue de côté — forme exacte du canon-école</p><div class="cbc-cannon-line"><div class="cbc-part">${icon('cast-iron-breech-side.png', 'Culasse rapide')}<b>Culasse rapide</b><small>arrière fermé</small></div><div class="cbc-part">${icon('cast-iron-chamber-side.png', 'Chambre')}<b>Chambre</b><small>reçoit la charge</small></div><div class="cbc-part">${icon('cast-iron-barrel-side.png', 'Canon')}<b>Canon</b><small>guide le projectile</small></div><div class="cbc-part cbc-muzzle-part">${icon('cast-iron-barrel-side.png', 'Bouche ouverte')}<b>Bouche</b><small>sortie libre →</small></div></div></div>
-        <div class="cbc-cards">${card('31 lingots de fonte', '28 seront fondus. Les 3 derniers servent au bloc coulissant de la culasse.', 'cast-iron-ingot.png')}${card('Trois moulages', 'Very Small pour le canon, Medium pour la chambre, Sliding Breech pour la culasse.', 'casting-sand.png')}${card('Un affût', 'Le Cannon Mount assemble, oriente et déclenche le tube.', 'cannon-mount.png')}</div>
-        <div class="cbc-note"><strong>À préparer :</strong> Mechanical Press + Basin chauffé, Mechanical Saw, stockage et pompage de fluides, Mechanical Bearing, Super Glue, Cannon Drill avec eau et une source de rotation.</div>
-        ${table(['Objet', 'Quantité', 'Utilité'], [['Cast Iron Ingot', '<strong>31</strong>', '28 pour les coulées, 3 pour le Breechblock'], ['Very Small / Medium / Sliding Breech Cast Mould', '1 chacun', 'canon, chambre et culasse'], ['Cannon Welder, Cannon Mount', '1 chacun', 'assembler et tirer']], 'Matériel minimum pour le premier canon')}
-      </div></section>
+      <section class="cbc-overview-section" id="cbc-overview-length">
+        <div class="cbc-section-heading"><span>02</span><div><h2>La longueur : autocanon et gros canon ne suivent pas la même règle</h2><p>C’est la confusion la plus importante à éviter.</p></div></div>
+        <div class="cbc-compare-grid">
+          <article><p class="cbc-overview-label">[Autocannon / Autocanon]</p><h3>Une longueur utile fixée par le matériau</h3><div class="cbc-length-scale"><span><b>3</b>Fonte</span><span><b>5</b>Bronze</span><span><b>7</b>Acier</span></div><p>Ces nombres incluent la culasse et le ressort éventuel. Au-delà, le projectile risque de rester coincé.</p></article>
+          <article><p class="cbc-overview-label">[Big Cannon / Gros canon]</p><h3>64 blocs structurels, quel que soit le matériau</h3><div class="cbc-limit-line"><b>1</b><span></span><b>64</b></div><p>Le matériau ne change pas cette limite générale. Il détermine plutôt la quantité de poudre supportée et la puissance nécessaire pour parcourir le tube sans incident.</p></article>
+        </div>
+        <div class="cbc-cause-chain"><div><b>Canon plus long</b><span>davantage de tube à parcourir</span></div><i>→</i><div><b>Besoin de puissance</b><span>sinon le projectile se coince</span></div><i>→</i><div><b>Besoin de résistance</b><span>sinon le canon rompt</span></div></div>
+        <div class="cbc-note"><strong>En résumé :</strong> la longueur maximale d’un gros canon n’est pas donnée directement par son matériau. Le matériau décide surtout si la charge nécessaire à cette longueur peut être utilisée sans danger.</div>
+      </section>
 
-      <section class="cbc-mission" id="cbc-m2"><div class="cbc-number">02</div><div>
-        <p class="cbc-eyebrow">Mission 2 · Couler les pièces</p><h2>Couler les trois pièces</h2><p class="cbc-lead">Chaque moulage est haut d’une seule couche : il produit donc une pièce longue d’un bloc.</p>
-        <div class="cbc-diagram"><p class="cbc-diagram-title">Vue du dessus d’une couche de moulage</p><div class="cbc-cast-grid"><span>S</span><span>S</span><span>S</span><span>S</span><span class="core">M</span><span>S</span><span>S</span><span>S</span><span>S</span></div><p class="cbc-centred"><b>S</b> = Casting Sand · <b>M</b> = moule en bois</p></div>
-        <ol class="cbc-checklist"><li>Fais un anneau 3 × 3 avec huit Casting Sand et laisse le centre vide.</li><li>Place le moule choisi au centre, puis remplis-le avec le neuvième Casting Sand.</li><li>Forme la couche de Cannon Cast, pompe le métal liquide, attends la solidification et récupère la pièce.</li></ol>
-        ${table(['Moule', 'Métal à verser', 'Pièce brute'], [['Very Small', '630 mB · 7 lingots', 'Unbored Cast Iron Cannon Barrel'], ['Medium', '1 080 mB · 12 lingots', 'Unbored Cast Iron Cannon Chamber'], ['Sliding Breech', '810 mB · 9 lingots', 'Unbored Cast Iron Sliding Breech']], 'Volumes des trois coulées')}
-        <div class="cbc-success"><strong>Vérification :</strong> tu dois posséder trois blocs dont le nom commence par <em>Unbored Cast Iron</em>. Le comparateur donne 15 lorsque la pièce est terminée.</div>
-      </div></section>
+      <section class="cbc-overview-section" id="cbc-overview-diameter">
+        <div class="cbc-section-heading"><span>03</span><div><h2>Le diamètre extérieur change, pas le calibre</h2><p>Les cinq tailles décrivent l’épaisseur de la pièce, pas une nouvelle famille de munitions.</p></div></div>
+        <div class="cbc-diameter-row" aria-label="Cinq épaisseurs extérieures avec le même passage intérieur">
+          <div><span class="cbc-ring size-1"><i></i></span><b>[Very Small / Très petit]</b><small>canon</small></div>
+          <div><span class="cbc-ring size-2"><i></i></span><b>[Small / Petit]</b><small>canon renforcé</small></div>
+          <div><span class="cbc-ring size-3"><i></i></span><b>[Medium / Moyen]</b><small>chambre</small></div>
+          <div><span class="cbc-ring size-4"><i></i></span><b>[Large / Grand]</b><small>chambre renforcée</small></div>
+          <div><span class="cbc-ring size-5"><i></i></span><b>[Very Large / Très grand]</b><small>chambre épaisse</small></div>
+        </div>
+        <div class="cbc-diameter-explain"><article><h3>Même passage intérieur</h3><p>Les projectiles de gros canon utilisent le même calibre. Une pièce plus épaisse ne demande pas une munition plus grosse.</p></article><article><h3>Deux fonctions différentes</h3><p>Une <b>[Chamber / Chambre]</b> peut recevoir la poudre. Un <b>[Barrel / Canon]</b> guide le projectile ; placer de la poudre dedans peut provoquer une rupture.</p></article><article><h3>Plusieurs profils possibles</h3><p>L’acier et le Nethersteel permettent de construire un canon qui s’amincit progressivement de la culasse vers la bouche.</p></article></div>
+      </section>
 
-      <section class="cbc-mission" id="cbc-m3"><div class="cbc-number">03</div><div>
-        <p class="cbc-eyebrow">Mission 3 · Aléser</p><h2>Percer les pièces sur un tour</h2><p class="cbc-lead">Le Bearing fait tourner la pièce. Le Cannon Drill, alimenté en eau, avance dans le même axe.</p>
-        <div class="cbc-diagram"><p class="cbc-diagram-title">Les centres doivent être parfaitement alignés</p><div class="cbc-axis"><div class="cbc-machine"><b>Mechanical Bearing</b><small>pièce collée et en rotation</small></div><strong>⇆</strong><div class="cbc-machine">${icon('cannon-drill.png', 'Cannon Drill')}<b>Cannon Drill</b><small>mobile + arrivée d’eau</small></div></div></div>
-        <ol class="cbc-checklist"><li>Colle une pièce brute sur la face du Mechanical Bearing.</li><li>Place le Cannon Drill en face, sur une contraption qui peut avancer.</li><li>Branche l’eau au foret et règle le Bearing et le Drill à la même valeur absolue de RPM.</li><li>Fais traverser lentement la pièce par le foret, puis recommence pour les deux autres.</li></ol>
-        <div class="cbc-warning"><strong>Le piège classique :</strong> 16 RPM d’un côté et 32 RPM de l’autre ne fonctionnent pas. Les vitesses doivent correspondre.</div>
-        <div class="cbc-success">Résultats : <b>Cast Iron Barrel</b>, <b>Cast Iron Chamber</b> et <b>Incomplete Cast Iron Sliding Breech</b>.</div>
-      </div></section>
+      <section class="cbc-overview-section" id="cbc-overview-combinations">
+        <div class="cbc-section-heading"><span>04</span><div><h2>Les combinaisons possibles</h2><p>Le jeu accepte beaucoup de variantes tant que les règles structurelles sont respectées.</p></div></div>
+        <div class="cbc-build-examples">
+          <article><h3>Canon simple</h3><div class="cbc-mini-build"><span class="rear">Culasse</span><span class="chamber">Chambre</span><span class="barrel">Canon</span><span class="air">Air</span></div><p>La formule minimale facile à comprendre.</p></article>
+          <article><h3>Canon allongé</h3><div class="cbc-mini-build"><span class="rear">Culasse</span><span class="chamber">Chambre</span><span class="chamber">Chambre</span><span class="barrel">Canon</span><span class="barrel">Canon</span><span class="air">Air</span></div><p>Plus de place pour la charge et davantage de guidage.</p></article>
+          <article><h3>Canon progressif en acier</h3><div class="cbc-mini-build tapered"><span class="rear">Culasse à vis</span><span class="chamber thick">Chambre épaisse</span><span class="chamber built">Chambre renforcée</span><span class="chamber">Chambre</span><span class="barrel built">Canon renforcé</span><span class="barrel">Canon</span><span class="air">Air</span></div><p>Un profil qui s’amincit vers la bouche, sans changer de calibre.</p></article>
+        </div>
+        <div class="cbc-overview-rules"><div><b>1</b><span><strong>Un seul matériau</strong> sur toute la longueur.</span></div><div><b>2</b><span><strong>Une seule fermeture</strong> à l’arrière.</span></div><div><b>3</b><span><strong>Toutes les jonctions</strong> connectées ou soudées.</span></div><div><b>4</b><span><strong>Uniquement des pièces terminées</strong>, jamais non alésées ou incomplètes.</span></div><div><b>5</b><span><strong>La face avant reste libre</strong> pour former la bouche.</span></div></div>
+      </section>
 
-      <section class="cbc-mission" id="cbc-m4"><div class="cbc-number">04</div><div>
-        <p class="cbc-eyebrow">Mission 4 · Terminer la culasse</p><h2>Finir la culasse, dans le bon ordre</h2><p class="cbc-lead">La culasse incomplète n’est pas ratée : elle attend ses deux composants mécaniques.</p>
-        <ol class="cbc-checklist"><li>Clic droit sur la culasse incomplète avec un <b>Shaft</b>.</li><li>Clic droit avec le <b>Cast Iron Sliding Breechblock</b>.</li><li>Fabrique un <b>Quick-Firing Mechanism</b>, puis clic droit sur la culasse terminée.</li></ol>
-        <div class="cbc-cards">${card('Sliding Breechblock', '3 Cast Iron Ingots et 2 Cogwheels. Installe-le après le Shaft.', 'cast-iron-breechblock-side.png')}${card('Quick-Firing Mechanism', 'Lever, Cogwheel et Large Cogwheel : il permet le rechargement assemblé.', 'quickfiring-mechanism.png')}${card('Version rapide', 'Elle s’ouvre et se recharge même lorsque le canon reste sur son affût.', 'quickfiring-mechanism.png')}</div>
-      </div></section>
-
-      <section class="cbc-mission" id="cbc-m5"><div class="cbc-number">05</div><div>
-        <p class="cbc-eyebrow">Mission 5 · Assembler</p><h2>Relier le tube et le poser correctement</h2><p class="cbc-lead">Juxtaposer les blocs ne suffit pas : les deux jonctions doivent être connectées.</p>
-        <ol class="cbc-checklist"><li>Aligne : Quick-Firing Breech, Chamber, puis Barrel vers la cible.</li><li>Avec le Cannon Welder : clic sur la culasse, puis la chambre.</li><li>Recommence : clic sur la chambre, puis le canon.</li><li>Place le Cannon Mount sous le tube, avec une case vide entre les deux.</li></ol>
-        <div class="cbc-diagram"><p class="cbc-diagram-title">Placement vertical exact</p><div class="cbc-mount-stack"><div class="cbc-tube"><span>Culasse</span><span>Chambre</span><span>Canon →</span></div><small>une case vide</small><b>↕</b><div class="cbc-mount">${icon('cannon-mount.png', '')}Cannon Mount</div></div></div>
-        <div class="cbc-cards">${card('Face marteau', 'Un signal maintenu assemble le canon. Coupe-le pour désassembler.', 'cannon-mount-hammer-face.png')}${card('Face allumée', 'Une impulsion redstone sur cette face déclenche le tir.', 'cannon-mount-firing-face.png')}${card('Test immédiat', 'Si le tube ne devient pas une contraption, ne charge rien : corrige le montage.', 'cannon-welder.png')}</div>
-      </div></section>
-
-      <section class="cbc-mission" id="cbc-m6"><div class="cbc-number">06</div><div>
-        <p class="cbc-eyebrow">Mission 6 · Charger et tirer</p><h2>Charger puis réussir le premier tir</h2><p class="cbc-lead">Le projectile entre d’abord. La poudre vient ensuite, derrière lui.</p>
-        <ol class="cbc-checklist"><li>Laisse le signal d’assemblage actif puis ouvre la culasse rapide.</li><li>Place le <b>Solid Shot</b> dans l’ouverture arrière.</li><li>Ajoute <b>une seule Powder Charge</b>, puis referme la culasse.</li><li>Dégage la ligne de tir et envoie une impulsion sur la face allumée de l’affût.</li></ol>
-        <div class="cbc-diagram"><p class="cbc-diagram-title">Ordre final dans le tube</p><div class="cbc-load-order"><span class="cbc-load-breech">${icon('cast-iron-breech-side.png', 'Culasse fermée')}<b>culasse fermée</b></span><span>${icon('powder-charge.png', 'Powder Charge')}<b>1 Powder Charge</b></span><span class="cbc-shot">${icon('solid-shot.png', 'Solid Shot')}<b>Solid Shot</b></span><span class="cbc-load-barrel">${icon('cast-iron-barrel-side.png', 'Canon vide')}<b>canon vide</b></span><span class="cbc-target" aria-label="Cible"><i aria-hidden="true"></i><b>cible</b></span></div></div>
-        <div class="cbc-warning"><strong>Une seule charge.</strong> La fonte soudée garde un point de résistance utile : exactement la contrainte d’une Powder Charge. Deux charges rendent ce montage dangereux.</div>
-        <div class="cbc-success"><strong>Si le coup part, le parcours est terminé.</strong> Tu sais désormais couler, aléser, compléter, souder, monter, charger et tirer un gros canon.</div>
-        <details class="cbc-details"><summary>Le canon ne s’assemble pas</summary><ul><li>Le tube est-il deux blocs au-dessus de l’affût ?</li><li>Les pièces partagent-elles exactement le même axe ?</li><li>Les deux jonctions ont-elles été soudées ?</li><li>La bouche est-elle ouverte et l’arrière fermé ?</li></ul></details>
-        <details class="cbc-details"><summary>Le foret ne travaille pas</summary><ul><li>Vérifie l’arrivée d’eau.</li><li>Compare les RPM absolus du Bearing et du Drill.</li><li>Vérifie leur axe commun.</li></ul></details>
-      </div></section>
-      <section class="cbc-goal"><div><h2>Et ensuite ?</h2><p>Refais le même projet en bronze, apprends le chargement mécanique, puis passe aux canons en acier montés par couches et aux autocanons.</p></div><div class="cbc-goal-icons" aria-hidden="true">${['bronze-ingot.png', 'steel-ingot.png', 'steel-autocannon.png'].map(name => `<span>${icon(name)}</span>`).join('')}</div></section>
+      <section class="cbc-overview-section" id="cbc-overview-summary">
+        <div class="cbc-section-heading"><span>05</span><div><h2>La phrase à retenir</h2><p>Si tu comprends ceci, le reste du mod devient beaucoup plus lisible.</p></div></div>
+        <blockquote>Un gros canon possède une fermeture arrière, une zone épaisse réservée à la poudre, puis une longueur de tube destinée à accélérer et guider le projectile. Le matériau ne fixe pas directement sa longueur maximale : il détermine surtout la charge et la longueur qu’il peut supporter sans incident.</blockquote>
+        <div class="cbc-next-links"><span><b>Besoin des chiffres précis ?</b> Consulte le Manuel technique.</span><span><b>Prêt à fabriquer les pièces ?</b> Ouvre Toutes les recettes.</span></div>
+      </section>
     </div>`;
 
   const manual = `
     <div class="cbc-manual" id="cbc-manual-panel" role="tabpanel" aria-labelledby="cbc-manual-tab" hidden>
       <aside class="cbc-manual-nav"><div><b>Manuel technique</b><small>Create Big Cannons 5.11.7 · MC 1.21.1</small></div><nav aria-label="Sommaire du manuel"><a href="#cbc-architecture">A · Architecture</a><a href="#cbc-pieces">B · Composants</a><a href="#cbc-materials">C · Matériaux</a><a href="#cbc-production">D · Production</a><a href="#cbc-pressure">E · Pression</a><a href="#cbc-loading">F · Chargement</a><a href="#cbc-mounts">G · Affûts</a><a href="#cbc-ammo">H · Munitions</a><a href="#cbc-fuzes">I · Fusées</a><a href="#cbc-autocannons">J · Autocanons</a><a href="#cbc-interfaces">K · Interfaces</a><a href="#cbc-diagnosis">L · Diagnostic</a><a href="#cbc-server">M · Serveur</a></nav></aside>
       <div class="cbc-manual-content">
-        <header class="cbc-hero"><p class="cbc-eyebrow">Documentation de référence</p><h1>Create Big Cannons</h1><p>Catalogue des composants, caractéristiques, interfaces, formules et limites. Pour construire un premier canon, utilise le <strong>Tutoriel guidé</strong>.</p></header>
+        <header class="cbc-hero"><p class="cbc-eyebrow">Documentation de référence</p><h1>Create Big Cannons</h1><p>Catalogue des composants, caractéristiques, interfaces, formules et limites. Pour comprendre l’architecture d’un canon, consulte <strong>Fonctionnement général</strong>.</p></header>
         <section class="cbc-manual-section" id="cbc-architecture"><div class="cbc-section-heading"><span>A</span><div><h2>Architecture et validité</h2><p>Règles structurelles communes aux gros canons.</p></div></div><div class="cbc-flow"><b>Extrémité fermée<small>Breech / Cannon End</small></b><i>›</i><b>Chamber(s)<small>zone des propulseurs</small></b><i>›</i><b>Barrel(s)<small>trajet du projectile</small></b><i>›</i><b>Bouche unique<small>ouverte vers la cible</small></b></div><div class="cbc-legend"><div><b>Axe unique</b><small>Tous les alésages sont colinéaires.</small></div><div><b>Connexions</b><small>Coulée commune ou soudure valide.</small></div><div><b>Pièces finies</b><small>Aucun bloc Unbored ou Incomplete.</small></div><div><b>Longueur</b><small>64 blocs maximum par défaut.</small></div></div></section>
         <section class="cbc-manual-section" id="cbc-pieces"><div class="cbc-section-heading"><span>B</span><div><h2>Catalogue des composants</h2><p>Fonction de chaque famille de blocs.</p></div></div><div class="cbc-cards">${card('Cannon Barrel', 'Section de guidage. Une charge placée ici augmente le risque de rupture.', 'cast-iron-barrel-side.png')}${card('Cannon Chamber', 'Section conçue pour recevoir les propulseurs.', 'cast-iron-chamber-side.png')}${card('Sliding Breech', 'Ouverture cinétique ; limites 2 / 4 / 4 en fonte, bronze et acier.', 'cast-iron-breech-side.png')}${card('Quick-Firing Breech', 'Rechargement assemblé ; résistance maximale 2.', 'quickfiring-mechanism.png')}${card('Cannon Welder', 'Crée une connexion entre deux pièces adjacentes compatibles.', 'cannon-welder.png')}${card('Cannon Drill', 'Alèse les pièces : eau et tour synchronisé requis.', 'cannon-drill.png')}</div>${table(['Type', 'Matériaux', 'Limite', 'Commande', 'Usage'], [['Sliding', 'fonte / bronze / acier', '2 / 4 / 4', 'rotation', 'chargement mécanique'], ['Quick-Firing', 'fonte / bronze / acier', '2', 'interaction / bras', 'rechargement assemblé'], ['Screw', 'acier / Nethersteel', '8 / 10', 'rotation + translation', 'charges lourdes']], 'Tableau des culasses')}</section>
         <section class="cbc-manual-section" id="cbc-materials"><div class="cbc-section-heading"><span>C</span><div><h2>Profils des matériaux</h2><p>Résistance, exigence balistique et comportement à la rupture.</p></div></div>${table(['Matériau', 'Résistance', 'Minimum / barrel', 'Rupture', 'Soudure'], [['Fer forgé', '1', '2,000', 'locale', '0'], [`<span class="cbc-inline-item">${icon('cast-iron-ingot.png', '')}Fonte</span>`, '2', '2,000', 'fragmentation', '−1'], [`<span class="cbc-inline-item">${icon('bronze-ingot.png', '')}Bronze</span>`, '4', '1,333…', 'locale', '0'], [`<span class="cbc-inline-item">${icon('steel-ingot.png', '')}Acier</span>`, '8', '1,000', 'fragmentation', '−2'], [`<span class="cbc-inline-item">${icon('nethersteel-ingot.png', '')}Nethersteel</span>`, '10', '0,666…', 'fragmentation', 'non soudable']], 'Profils des matériaux')}<div class="cbc-note">La pénalité de soudure est appliquée une fois au canon, et non une fois par jonction. L’usure du Cannon Welder est distincte.</div></section>
@@ -114,7 +111,7 @@
   panel.setAttribute('role', 'tabpanel');
   panel.setAttribute('aria-labelledby', tab.id);
   const recipes = window.REGALE_CBC_RECIPES_HTML || '';
-  panel.innerHTML = `<section class="cbc"><div class="cbc-switcher" role="tablist" aria-label="Choisir le contenu Big Cannons"><button id="cbc-guide-tab" type="button" role="tab" aria-selected="true" aria-controls="cbc-guide-panel">Tutoriel guidé</button><button id="cbc-manual-tab" type="button" role="tab" aria-selected="false" aria-controls="cbc-manual-panel" tabindex="-1">Manuel technique</button><button id="cbc-recipes-tab" type="button" role="tab" aria-selected="false" aria-controls="cbc-recipes-panel" tabindex="-1">Toutes les recettes</button></div>${guided}${manual}${recipes}</section>`;
+  panel.innerHTML = `<section class="cbc"><div class="cbc-switcher" role="tablist" aria-label="Choisir le contenu Big Cannons"><button id="cbc-guide-tab" type="button" role="tab" aria-selected="true" aria-controls="cbc-guide-panel">Fonctionnement général</button><button id="cbc-manual-tab" type="button" role="tab" aria-selected="false" aria-controls="cbc-manual-panel" tabindex="-1">Manuel technique</button><button id="cbc-recipes-tab" type="button" role="tab" aria-selected="false" aria-controls="cbc-recipes-panel" tabindex="-1">Toutes les recettes</button></div>${guided}${manual}${recipes}</section>`;
   content.append(panel);
 
   const style = document.createElement('style');
