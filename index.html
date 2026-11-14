@@ -115,7 +115,8 @@
     (() => {
       const tabs = [...document.querySelectorAll('#tutoriels > .tutorial-tabs [role="tab"]')];
       const panels = [...document.querySelectorAll('#tutoriels > .tutorial-content > .tutorial-panel[role="tabpanel"]')];
-      function selectTutorial(tab) {
+      const storageKey = 'regalade.tutorial.active';
+      function selectTutorial(tab, remember = true) {
         tabs.forEach(item => {
           const selected = item === tab;
           item.classList.toggle('active', selected);
@@ -127,6 +128,9 @@
           panel.classList.toggle('active', selected);
           panel.hidden = !selected;
         });
+        if (remember) {
+          try { localStorage.setItem(storageKey, tab.id); } catch (_) { /* Storage is optional. */ }
+        }
       }
       tabs.forEach((tab, index) => {
         tab.addEventListener('click', () => selectTutorial(tab));
@@ -138,7 +142,12 @@
           selectTutorial(tabs[nextIndex]);
         });
       });
-      if (tabs[0]) selectTutorial(tabs[0]);
+      let initialTab = tabs[0];
+      try {
+        const savedId = localStorage.getItem(storageKey);
+        initialTab = tabs.find(tab => tab.id === savedId) || initialTab;
+      } catch (_) { /* Storage is optional. */ }
+      if (initialTab) selectTutorial(initialTab, false);
     })();
   </script>
   <script src="tutorial-layout.js?v=005"></script>
