@@ -1084,6 +1084,261 @@
   padding-top: .55rem;
 }
 
+#tutorial-stargates .sgu-prototype-convergence {
+  display: grid;
+  gap: .15rem;
+  margin-top: .25rem;
+  padding-top: .7rem;
+  border-top: 1px solid var(--sg-line, #cddce3);
+}
+
+#tutorial-stargates .sgu-convergence-inputs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .45rem;
+}
+
+#tutorial-stargates .sgu-convergence-inputs > span {
+  display: grid;
+  align-content: center;
+  min-height: 3.6rem;
+  padding: .48rem;
+  border: 1px solid #a9d8c9;
+  border-radius: .45rem;
+  background: #edf8f4;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-convergence-inputs > span.fluid {
+  border-color: #a9cfe4;
+  background: #eef7fb;
+}
+
+#tutorial-stargates .sgu-convergence-inputs b,
+#tutorial-stargates .sgu-convergence-inputs small {
+  display: block;
+}
+
+#tutorial-stargates .sgu-convergence-inputs b {
+  font-size: .75rem;
+  line-height: 1.3;
+}
+
+#tutorial-stargates .sgu-convergence-inputs small {
+  margin-top: .15rem;
+  color: #60737d;
+  font-size: .66rem;
+}
+
+#tutorial-stargates .sgu-convergence-rail {
+  position: relative;
+  height: 2rem;
+}
+
+#tutorial-stargates .sgu-convergence-rail::before {
+  content: "";
+  position: absolute;
+  top: .55rem;
+  left: 12.5%;
+  right: 12.5%;
+  border-top: 2px solid #f4a260;
+}
+
+#tutorial-stargates .sgu-convergence-rail i {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 1.1rem;
+  border-left: 2px solid #f4a260;
+}
+
+#tutorial-stargates .sgu-convergence-rail span {
+  position: absolute;
+  top: .75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--sg-orange, #ff963f);
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-synthesis-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) auto minmax(0, 1fr);
+  gap: .55rem;
+  align-items: center;
+  max-width: 36rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#tutorial-stargates .sgu-synthesis-flow > i {
+  color: var(--sg-orange, #ff963f);
+  font-style: normal;
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-synthesis-machine,
+#tutorial-stargates .sgu-machine-stack {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid #9ecfe4;
+  border-radius: .48rem;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-synthesis-machine > *,
+#tutorial-stargates .sgu-machine-stack > * {
+  padding: .4rem .55rem;
+  background: #eef7fb;
+}
+
+#tutorial-stargates .sgu-synthesis-machine > * + *,
+#tutorial-stargates .sgu-machine-stack > * + * {
+  border-top: 1px solid #c8dfe9;
+}
+
+#tutorial-stargates .sgu-synthesis-machine strong,
+#tutorial-stargates .sgu-machine-stack strong {
+  background: #fff1e7;
+  color: #5f3418;
+}
+
+#tutorial-stargates .sgu-synthesis-output,
+#tutorial-stargates .sgu-matrix-output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  min-height: 4.2rem;
+  padding: .55rem;
+  border: 1px solid #a9d8c9;
+  border-radius: .48rem;
+  background: #edf8f4;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-synthesis-output img,
+#tutorial-stargates .sgu-matrix-output img {
+  width: 2.4rem;
+  height: 2.4rem;
+  object-fit: contain;
+}
+
+#tutorial-stargates .sgu-matrix-production {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 7.5rem minmax(0, 1.25fr);
+  gap: .65rem;
+  align-items: center;
+  margin-bottom: .75rem;
+}
+
+#tutorial-stargates .sgu-production-card {
+  display: grid;
+  align-content: start;
+  gap: .4rem;
+  min-width: 0;
+  padding: .7rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .65rem;
+  background: #fff;
+}
+
+#tutorial-stargates .sgu-production-heading {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+#tutorial-stargates .sgu-production-heading > span {
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  flex: 0 0 auto;
+  border-radius: .4rem;
+  background: #e8f6fc;
+  color: var(--sg-blue-deep, #197cab);
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-production-heading b,
+#tutorial-stargates .sgu-production-heading small,
+#tutorial-stargates .sgu-liquid-output b,
+#tutorial-stargates .sgu-liquid-output small {
+  display: block;
+}
+
+#tutorial-stargates .sgu-production-heading small,
+#tutorial-stargates .sgu-liquid-output small {
+  margin-top: .08rem;
+  color: #60737d;
+  font-size: .7rem;
+}
+
+#tutorial-stargates .sgu-production-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .3rem;
+  padding: .45rem;
+  border-radius: .45rem;
+  background: #f5f8f9;
+}
+
+#tutorial-stargates .sgu-production-inputs span {
+  padding: .3rem .4rem;
+  border: 1px solid var(--sg-line, #cddce3);
+  border-radius: .35rem;
+  background: #fff;
+  font-size: .72rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-production-inputs i,
+#tutorial-stargates .sgu-production-arrow {
+  align-self: center;
+  color: var(--sg-orange, #ff963f);
+  font-style: normal;
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-production-arrow {
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-liquid-output {
+  padding: .5rem;
+  border: 1px solid #9ecfe4;
+  border-radius: .45rem;
+  background: #eef7fb;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-transfer-flow {
+  display: grid;
+  justify-items: center;
+  gap: .1rem;
+  color: #60737d;
+  text-align: center;
+}
+
+#tutorial-stargates .sgu-transfer-flow span {
+  font-size: .72rem;
+  font-weight: 850;
+}
+
+#tutorial-stargates .sgu-transfer-flow i {
+  color: var(--sg-orange, #ff963f);
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 900;
+}
+
+#tutorial-stargates .sgu-transfer-flow small {
+  font-size: .68rem;
+}
+
 #tutorial-stargates .sgu-station-head {
   display: grid;
   grid-template-columns: 3.2rem minmax(0, 1fr) auto;
@@ -1570,6 +1825,30 @@
   #tutorial-stargates .sgu-bulk-lessons,
   #tutorial-stargates .sgu-scale-grid {
     grid-template-columns: 1fr;
+  }
+
+  #tutorial-stargates .sgu-convergence-inputs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #tutorial-stargates .sgu-convergence-rail::before {
+    left: 25%;
+    right: 25%;
+  }
+
+  #tutorial-stargates .sgu-synthesis-flow,
+  #tutorial-stargates .sgu-matrix-production {
+    grid-template-columns: 1fr;
+  }
+
+  #tutorial-stargates .sgu-synthesis-flow > i,
+  #tutorial-stargates .sgu-transfer-flow i {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+
+  #tutorial-stargates .sgu-transfer-flow {
+    padding: .2rem 0;
   }
 
   #tutorial-stargates .sgu-map-equation,

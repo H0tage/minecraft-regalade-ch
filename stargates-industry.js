@@ -96,17 +96,48 @@
         <div class="sgu-lane"><span class="input">Potion + Amethyst Powder + or + zinc</span><i>→</i><span class="machine">Mixer / Basin / Heated Blaze Burner</span><i>→</i><span class="buffer">Crystalline Matrices</span></div>
         <div class="sgu-lane"><span class="input">Powdered Obsidian + Cinder Flour + lave</span><i>→</i><span class="machine">Press / Basin / Heated Blaze Burner</span><i>→</i><span class="buffer">Refractory Briquettes</span></div>
         <div class="sgu-lane"><span class="input">Blaze Powder + Redstone Dust + Glowstone Dust</span><i>→</i><span class="machine">Mixer / Basin / sans chaleur</span><i>→</i><span class="buffer">Catalytic Flux</span></div>
-        <div class="sgu-industrial-lane"><span>3 stockages</span><i>→</i><span>Mechanical Mixer</span><i>↓</i><span>Basin</span><i>↓</i><strong>Superheated Blaze Burner</strong><i>→</i><span>Unstable Naquadah Slag</span></div>
+        <div class="sgu-prototype-convergence">
+          <div class="sgu-convergence-inputs">
+            <span><b>4 Crystalline Matrices</b><small>stock branche 1</small></span>
+            <span><b>4 Refractory Briquettes</b><small>stock branche 2</small></span>
+            <span><b>4 Catalytic Flux</b><small>stock branche 3</small></span>
+            <span class="fluid"><b>250 mB Lava</b><small>cuve de lave</small></span>
+          </div>
+          <div class="sgu-convergence-rail" aria-hidden="true"><i></i><span>↓</span></div>
+          <div class="sgu-synthesis-flow">
+            <div class="sgu-synthesis-machine"><b>Mechanical Mixer</b><span>Basin</span><strong>Superheated Blaze Burner</strong></div>
+            <i>→</i>
+            <div class="sgu-synthesis-output">${icon('unstable-slag.png', 'Unstable Naquadah Slag')}<b>4 Unstable Naquadah Slag</b></div>
+          </div>
+        </div>
       </div>`)}
 
     ${step(4, 'Construire le prototype', 'Branche 1', 'Produire 4 Crystalline Matrices', `
       <div class="sgu-station-head">${icon('crystalline-matrix.png', 'Crystalline Matrix')}<div><b>Entrée d’une fournée</b><span>16 éclats d’améthyste · 4 or · 4 zinc · 1 000 mB de potion étrange</span></div><strong>4 Crystalline Matrices</strong></div>
-      <div class="sgu-industrial-lane"><span>Water Tank</span><i>→</i><span>Basin + Nether Wart + Mechanical Mixer</span><i>→</i><span>Awkward Potion Tank</span><i>→</i><span>Basin des Crystalline Matrices</span></div>
+      <div class="sgu-matrix-production" role="img" aria-label="Fabrication de l’Awkward Potion puis des Crystalline Matrices">
+        <article class="sgu-production-card potion">
+          <div class="sgu-production-heading"><span>1</span><div><b>Fabriquer l’Awkward Potion</b><small>Une cuve séparée pour le liquide</small></div></div>
+          <div class="sgu-production-inputs"><span>1 000 mB Water</span><i>+</i><span>1 Nether Wart</span></div>
+          <div class="sgu-production-arrow">↓</div>
+          <div class="sgu-machine-stack"><b>Mechanical Mixer</b><span>Basin</span><strong>Heated Blaze Burner</strong></div>
+          <div class="sgu-production-arrow">↓</div>
+          <div class="sgu-liquid-output"><b>1 000 mB Awkward Potion</b><small>Transférer vers la seconde cuve</small></div>
+        </article>
+        <div class="sgu-transfer-flow"><span>Mechanical Pump</span><i>→</i><small>1 000 mB</small></div>
+        <article class="sgu-production-card matrix">
+          <div class="sgu-production-heading"><span>2</span><div><b>Former les Crystalline Matrices</b><small>La potion devient un ingrédient</small></div></div>
+          <div class="sgu-production-inputs four"><span>16 Amethyst Powder</span><i>+</i><span>4 Gold Ingots</span><i>+</i><span>4 Zinc Ingots</span><i>+</i><span>1 000 mB Awkward Potion</span></div>
+          <div class="sgu-production-arrow">↓</div>
+          <div class="sgu-machine-stack"><b>Mechanical Mixer</b><span>Basin</span><strong>Heated Blaze Burner</strong></div>
+          <div class="sgu-production-arrow">↓</div>
+          <div class="sgu-matrix-output">${icon('crystalline-matrix.png', 'Crystalline Matrix')}<b>4 Crystalline Matrices</b></div>
+        </article>
+      </div>
       <div class="sgu-two-column">
         <article><h3>Préparer la potion avec Create</h3><ol class="sgu-plain-steps"><li>Injecte 1 000 mB d’eau dans un Basin chauffé.</li><li>Ajoute 1 Nether Wart et mélange avec le Mechanical Mixer.</li><li>Transfère la potion dans le Basin des Crystalline Matrices.</li></ol></article>
         <article><h3>Mélanger</h3><ol class="sgu-plain-steps"><li>Broie les 16 éclats en 16 poudres d’améthyste.</li><li>Place le Basin au-dessus d’un Blaze Burner chauffé.</li><li>Ajoute les poudres, l’or et le zinc.</li><li>Injecte 1 000 mB de potion puis démarre le Mixer.</li></ol></article>
       </div>
-      <div class="sgu-side-diagram"><span class="machine top">Mechanical Mixer</span><i>↓</i><span class="machine">Basin</span><i>↓</i><span class="catalyst">Heated Blaze Burner</span></div>`)}
+      `)}
 
     ${step(5, 'Construire le prototype', 'Branches 2 et 3', 'Produire 4 Refractory Briquettes et 8 Catalytic Flux', `
       <div class="sgu-branch-grid">
