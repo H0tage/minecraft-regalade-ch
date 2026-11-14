@@ -37,7 +37,7 @@
 .cbc-workshop-diagram{display:grid;grid-template-columns:minmax(230px,420px) minmax(180px,1fr);gap:4px 15px;margin-top:15px}
 .cbc-workshop-diagram>div:not(.out){display:flex;justify-content:space-between;padding:11px 13px;border:2px solid #46575e;background:#edf2f4}
 .cbc-workshop-diagram .top{border-radius:10px 10px 0 0}.cbc-workshop-diagram .bottom{border-radius:0 0 10px 10px}
-.cbc-workshop-diagram .out{grid-column:2;grid-row:1/span 3;align-self:center;padding:14px;border-left:3px solid var(--cbc-orange)}
+.cbc-workshop-diagram .out{grid-column:2;grid-row:1/span 4;align-self:center;padding:14px;border-left:3px solid var(--cbc-orange)}
 .cbc-workshop-diagram .out strong,.cbc-workshop-diagram .out span{display:block}.cbc-workshop-diagram .out span{color:var(--cbc-muted)}
 .cbc-boring-diagram{display:flex;align-items:center;gap:10px;overflow:auto;margin:14px 0;padding:14px;border:1px solid var(--cbc-line);border-radius:11px;background:#fff}
 .cbc-boring-diagram>div{min-width:180px;padding:12px;border:2px solid #46575e;background:#edf2f4;text-align:center;font-weight:850}
