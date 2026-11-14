@@ -77,7 +77,7 @@
         <div class="cbc-overview-rules"><div><b>1</b><span><strong>Un seul matériau</strong> sur toute la longueur.</span></div><div><b>2</b><span><strong>Une seule fermeture</strong> à l’arrière.</span></div><div><b>3</b><span><strong>Toutes les jonctions</strong> connectées ou soudées.</span></div><div><b>4</b><span><strong>Uniquement des pièces terminées</strong>, jamais non alésées ou incomplètes.</span></div><div><b>5</b><span><strong>La face avant reste libre</strong> pour former la bouche.</span></div></div>
       </section>
 
-      <section id="cbc-overview-summary">
+      <section class="cbc-overview-section" id="cbc-overview-summary">
         <div class="cbc-summary-heading"><span>05</span><div><p class="cbc-eyebrow">En bref</p><h2>Ce qu’il faut retenir</h2></div></div>
         <p class="cbc-summary-text">Un gros canon suit toujours le même ordre : <strong>fermeture arrière → chambre(s) pour la poudre → canon(s) → bouche ouverte</strong>. La poudre augmente surtout la vitesse et la portée ; le matériau limite la charge et la longueur utilisables sans casse.</p>
         <p class="cbc-summary-next">La suite se trouve dans <strong>Premier autocanon</strong>, un parcours complet pensé pour une partie en survie.</p>

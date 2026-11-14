@@ -364,8 +364,6 @@
 }
 
 #cbc-overview-summary {
-  padding: 26px 0 0;
-  border-top: 1px solid var(--cbc-line);
   scroll-margin-top: 18px;
 }
 
