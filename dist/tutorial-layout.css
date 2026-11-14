@@ -1,0 +1,254 @@
+/* Disposition documentaire des tutoriels : bibliothèque, lecture, chapitres. */
+#tutoriels.view.active {
+  width: min(1540px, calc(100vw - 32px));
+  max-width: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.tutorial-workspace {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr) 230px;
+  min-height: calc(100vh - 90px);
+  border-right: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.tutorial-library,
+.tutorial-chapters {
+  min-width: 0;
+  padding: 34px 22px 80px;
+}
+
+.tutorial-library { border-right: 1px solid var(--line); }
+.tutorial-chapters { border-left: 1px solid var(--line); }
+.tutorial-library-sticky,
+.tutorial-chapters-sticky { position: sticky; top: 24px; }
+
+.tutorial-side-label {
+  margin: 0 0 9px;
+  color: var(--cyan);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.tutorial-library h2 {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+  letter-spacing: -.035em;
+}
+
+.tutorial-library-intro {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.55;
+}
+
+#tutoriels .tutorial-library .tutorial-tabs {
+  display: grid;
+  gap: 5px;
+  overflow: visible;
+  border: 0;
+}
+
+#tutoriels .tutorial-library .tutorial-tab {
+  position: relative;
+  width: 100%;
+  padding: 12px 13px 12px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--muted);
+  text-align: left;
+  white-space: normal;
+  line-height: 1.25;
+}
+
+#tutoriels .tutorial-library .tutorial-tab::after {
+  top: 9px;
+  bottom: 9px;
+  left: 0;
+  width: 3px;
+  height: auto;
+  border-radius: 3px;
+  background: transparent;
+}
+
+#tutoriels .tutorial-library .tutorial-tab:hover {
+  background: var(--cyan-pale);
+  color: var(--ink);
+}
+
+#tutoriels .tutorial-library .tutorial-tab.active {
+  background: var(--cyan-pale);
+  color: var(--ink);
+}
+
+#tutoriels .tutorial-library .tutorial-tab.active::after {
+  background: linear-gradient(180deg, var(--cyan), var(--orange));
+}
+
+.tutorial-reader { min-width: 0; }
+#tutoriels .tutorial-reader .tutorial-content {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 58px 38px 90px;
+}
+
+.tutorial-chapters-heading {
+  margin: 0 0 13px;
+  color: var(--ink);
+  font-size: .85rem;
+  font-weight: 900;
+}
+
+#tutoriels .tutorial-chapter-list {
+  display: grid;
+  position: static;
+  gap: 0;
+  width: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.tutorial-chapter-list a {
+  display: block;
+  padding: 11px 2px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 650;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: color .16s ease, padding-left .16s ease;
+}
+
+.tutorial-chapter-list a:last-child { border-bottom: 1px solid var(--line); }
+.tutorial-chapter-list a:hover,
+.tutorial-chapter-list a.active {
+  padding-left: 8px;
+  color: #147fa9;
+}
+.tutorial-chapter-list a.active { font-weight: 900; }
+
+.tutorial-chapter-empty {
+  margin: 0;
+  color: var(--muted);
+  font-size: .8rem;
+  line-height: 1.5;
+}
+
+.tutorial-library-toggle,
+.tutorial-chapter-toggle { display: none; }
+
+/* Le sommaire global remplace le sommaire interne du manuel Big Cannons. */
+#tutoriels .cbc-manual { grid-template-columns: minmax(0, 1fr) !important; }
+#tutoriels .cbc-manual-nav { display: none !important; }
+
+#tutoriels .install-step,
+#tutoriels .sg-step,
+#tutoriels .cbc-mission,
+#tutoriels .cbc-manual-section,
+#tutoriels .eco-section { scroll-margin-top: 24px; }
+
+@media (max-width: 1180px) {
+  #tutoriels.view.active { width: min(1120px, calc(100vw - 28px)); }
+  .tutorial-workspace { grid-template-columns: 210px minmax(0, 1fr); }
+  .tutorial-reader { grid-column: 2; grid-row: 1; }
+  .tutorial-chapters {
+    grid-column: 2;
+    grid-row: 1;
+    z-index: 2;
+    align-self: start;
+    margin: 20px 26px -25px;
+    padding: 0;
+    border: 0;
+  }
+  .tutorial-chapters-sticky { position: static; }
+  .tutorial-chapter-toggle {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: #fff;
+    color: var(--ink);
+    font: 850 .82rem/1.2 inherit;
+    cursor: pointer;
+  }
+  .tutorial-chapter-toggle::after { content: "+"; color: var(--cyan); font-size: 1.1rem; }
+  .tutorial-chapters.open .tutorial-chapter-toggle::after { content: "−"; }
+  .tutorial-chapters-heading,
+  .tutorial-chapters .tutorial-side-label { display: none; }
+  #tutoriels .tutorial-chapter-list {
+    display: none;
+    margin-top: 7px;
+    padding: 4px 14px;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: #fff;
+    box-shadow: 0 12px 30px rgba(20, 48, 61, .08);
+  }
+  #tutoriels .tutorial-chapters.open .tutorial-chapter-list { display: grid; }
+  #tutoriels .tutorial-reader .tutorial-content { padding-top: 82px; }
+}
+
+@media (max-width: 800px) {
+  #tutoriels.view.active {
+    width: 100%;
+    margin-left: 0;
+    transform: none;
+  }
+  .tutorial-workspace { display: flex; flex-direction: column; border: 0; }
+  .tutorial-library { order: 1; }
+  .tutorial-chapters { order: 2; }
+  .tutorial-reader { order: 3; }
+  .tutorial-library {
+    padding: 18px 0 0;
+    border: 0;
+  }
+  .tutorial-library-sticky { position: static; }
+  .tutorial-library .tutorial-side-label,
+  .tutorial-library h2,
+  .tutorial-library-intro { display: none; }
+  .tutorial-library-toggle {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 15px;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: #fff;
+    color: var(--ink);
+    font: 850 .84rem/1.2 inherit;
+    cursor: pointer;
+  }
+  .tutorial-library-toggle::after { content: "▾"; color: var(--orange); }
+  #tutoriels .tutorial-library .tutorial-tabs {
+    display: none !important;
+    position: static !important;
+    width: 100%;
+    margin-top: 7px;
+    padding: 7px;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: #fff;
+    box-shadow: 0 12px 30px rgba(20, 48, 61, .08);
+  }
+  #tutoriels .tutorial-library.open .tutorial-tabs { display: grid !important; }
+  .tutorial-chapters {
+    margin: 10px 0 -28px;
+  }
+  #tutoriels .tutorial-reader .tutorial-content {
+    width: 100%;
+    padding: 58px 0 72px;
+  }
+}
