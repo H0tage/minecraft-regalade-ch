@@ -39,10 +39,38 @@
 
     ${step(2, 'Préparer le projet', 'Carte de l’usine', 'Comprendre la chaîne complète', `
       <div class="sgu-factory-map" role="img" aria-label="Carte de production de la porte des étoiles">
-        <div class="sgu-blueprint-title"><b>Tronc commun</b><span>Les trois productions convergent vers la même synthèse</span></div>
-        <div class="sgu-industrial-lane"><span>4 Crystalline Matrices</span><i>+</i><span>4 Refractory Briquettes</span><i>+</i><span>4 Catalytic Flux</span><i>→</i><strong>Mechanical Mixer + Superheated Blaze Burner</strong><i>→</i><span>4 Unstable Naquadah Slag</span></div>
-        <div class="sgu-industrial-lane"><span>Mechanical Press</span><i>→</i><span>Bulk Blasting</span><i>→</i><span>Crushing Wheels</span><i>→</i><span>Bulk Washing</span><i>→</i><span>Bulk Freezing</span></div>
-        <div class="sgu-map-drop"><i>↓</i><strong>168 Cryostabilized Naquadah Crystals</strong><i>↓</i></div>
+        <section class="sgu-map-stage">
+          <div class="sgu-map-stage-title"><span>1</span><div><b>Produire les trois précurseurs</b><small>Quantités pour une fournée</small></div></div>
+          <div class="sgu-map-precursors">
+            <article><div class="sgu-map-inputs"><span>16 Amethyst Powder</span><span>4 Gold Ingots</span><span>4 Zinc Ingots</span><span>1 000 mB Awkward Potion</span></div><div class="sgu-map-machine">Mechanical Mixer · Basin · Heated Blaze Burner</div><i>↓</i><div class="sgu-map-material">${icon('crystalline-matrix.png', 'Crystalline Matrix')}<b>4 Crystalline Matrices</b></div></article>
+            <article><div class="sgu-map-inputs"><span>8 Powdered Obsidian</span><span>8 Cinder Flour</span><span>250 mB Lava</span></div><div class="sgu-map-machine">Mechanical Press · Basin · Heated Blaze Burner</div><i>↓</i><div class="sgu-map-material">${icon('refractory-briquette.png', 'Refractory Briquette')}<b>4 Refractory Briquettes</b></div></article>
+            <article><div class="sgu-map-inputs"><span>8 Blaze Powder</span><span>8 Redstone Dust</span><span>4 Glowstone Dust</span></div><div class="sgu-map-machine">Mechanical Mixer · Basin · sans chaleur</div><i>↓</i><div class="sgu-map-material">${icon('catalytic-flux.png', 'Catalytic Flux')}<b>8 Catalytic Flux</b><small>4 pour la synthèse · 4 réservés</small></div></article>
+          </div>
+        </section>
+
+        <div class="sgu-map-merge"><i>↓</i><span>Les trois branches convergent</span><i>↓</i></div>
+
+        <section class="sgu-map-stage">
+          <div class="sgu-map-stage-title"><span>2</span><div><b>Synthétiser le Naquadah brut</b><small>Mechanical Mixer surchauffé</small></div></div>
+          <div class="sgu-map-equation"><span>4 Crystalline Matrices</span><i>+</i><span>4 Refractory Briquettes</span><i>+</i><span>4 Catalytic Flux</span><i>+</i><span>250 mB Lava</span><i>→</i><strong>Mechanical Mixer<br>Superheated Blaze Burner</strong><i>→</i><span class="output">${icon('unstable-slag.png', 'Unstable Naquadah Slag')}4 Unstable Naquadah Slag</span></div>
+        </section>
+
+        <div class="sgu-map-merge"><i>↓</i><span>Raffinage</span><i>↓</i></div>
+
+        <section class="sgu-map-stage">
+          <div class="sgu-map-stage-title"><span>3</span><div><b>Raffiner les matériaux intermédiaires</b><small>Chaque machine reçoit la matière produite par la précédente</small></div></div>
+          <div class="sgu-refinery-map">
+            <div class="sgu-refinery-row"><span class="material">${icon('unstable-slag.png', 'Unstable Naquadah Slag')}<b>4 Unstable Naquadah Slag</b></span><i>→</i><span class="machine">Mechanical Press</span><i>→</i><span class="material">${icon('raw-briquette.png', 'Raw Naquadah Briquette')}<b>4 Raw Naquadah Briquettes</b></span><i>→</i><span class="machine">Bulk Blasting</span><i>→</i><span class="material">${icon('calcined-naquadah.png', 'Calcined Naquadah')}<b>4 Calcined Naquadah</b></span></div>
+            <div class="sgu-refinery-continue"><i>↓</i></div>
+            <div class="sgu-refinery-row"><span class="material">${icon('calcined-naquadah.png', 'Calcined Naquadah')}<b>4 Calcined Naquadah</b></span><i>→</i><span class="machine">Crushing Wheels</span><i>→</i><span class="material doubled">${icon('impure-powder.png', 'Impure Naquadah Dust')}<b>8 Impure Naquadah Dust</b><small>La quantité double ici</small></span><i>→</i><span class="machine">Bulk Washing</span><i>→</i><span class="material">${icon('purified-granules.png', 'Purified Naquadah Granule')}<b>8 Purified Naquadah Granules</b></span></div>
+            <div class="sgu-refinery-continue"><i>↓</i></div>
+            <div class="sgu-refinery-row final"><span class="material">${icon('purified-granules.png', 'Purified Naquadah Granule')}<b>8 Purified Naquadah Granules</b></span><i>→</i><span class="machine">Bulk Freezing</span><i>→</i><span class="material output">${icon('cryostabilized-crystal.png', 'Cryostabilized Naquadah Crystal')}<b>8 Cryostabilized Naquadah Crystals</b></span></div>
+          </div>
+        </section>
+
+        <div class="sgu-map-batch-total"><span>1 fournée</span><i>→</i><b>8 Cryostabilized Naquadah Crystals</b><i>× 21</i><strong>168 Cryostabilized Naquadah Crystals</strong></div>
+
+        <div class="sgu-map-stage-title split"><span>4</span><div><b>Répartir la production</b><small>Trois stocks distincts avant toute transformation</small></div></div>
         <div class="sgu-map-split">
           <div><b>128 Crystals</b><i>↓</i><span>Métallurgie</span><i>↓</i><strong>64 Naquadah Plates</strong><small>Structure et machines</small></div>
           <div><b>33 Crystals</b><i>↓</i><span>Crystal Bases</span><i>↓</i><strong>33 cristaux technologiques</strong><small>Commande et fonctionnement</small></div>
