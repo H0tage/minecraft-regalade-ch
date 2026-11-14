@@ -3,6 +3,7 @@
 }
 
 #tutorial-stargates .sgu-hero {
+  display: block;
   padding: 1.45rem 0 1.15rem;
   border-bottom: 1px solid var(--sg-line, #cddce3);
 }
@@ -67,6 +68,9 @@
 }
 
 #tutorial-stargates .sgu-step {
+  display: block;
+  grid-template-columns: none;
+  gap: 0;
   padding: 1.45rem 0;
   border-bottom: 1px solid var(--sg-line, #cddce3);
   scroll-margin-top: 5rem;
