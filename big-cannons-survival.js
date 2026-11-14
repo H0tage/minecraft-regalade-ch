@@ -140,13 +140,27 @@
     </section>
 
     <section class="cbc-survival-step" id="cbc-auto-mount">
-      <div class="cbc-step-title"><span>11</span><div><p class="cbc-step-kicker">Installation</p><h2>Poser le canon sur son affût.</h2></div></div>
-      <div class="cbc-recipe-pairs">
-        <article><h3>[Cannon Mount / Affût]</h3><p>1 boîtier d’andésite + 4 arbres + 2 plaques de fer + 2 poudres à canon.</p></article>
-        <article><h3>[Mount Extension / Extension]</h3><p>1 boîtier d’andésite + 2 arbres + 2 poudres à canon.</p></article>
+      <div class="cbc-step-title"><span>11</span><div><p class="cbc-step-kicker">Choix du support</p><h2>Tourelle fixe ou canon mobile ?</h2></div></div>
+      <p class="cbc-body-copy">Les deux supports utilisent exactement le même autocanon et les mêmes munitions. Choisis maintenant ton parcours, puis reste dans la même colonne à l’étape 13.</p>
+      <div class="cbc-support-grid">
+        <article class="cbc-support-route fixed">
+          <p class="cbc-route-tag">A · Installation fixe</p><h3>[Cannon Mount / Support de canon]</h3>
+          <p>Une tourelle permanente, pilotable par un joueur ou automatisable avec Create. Elle reste ancrée au sol.</p>
+          <h4>À fabriquer</h4>
+          <ul><li><b>1 support :</b> 1 boîtier d’andésite + 4 arbres + 2 plaques de fer + 2 poudres à canon.</li><li><b>1 extension :</b> 1 boîtier d’andésite + 2 arbres + 2 poudres à canon.</li></ul>
+          <h4>À installer</h4>
+          <ol class="cbc-numbered"><li>Pose le support au sol.</li><li>Place l’extension au-dessus.</li><li>Pose l’autocanon horizontalement, culasse vers l’arrière, avec le ressort aligné au-dessus de l’extension.</li><li>Ne l’alimente pas encore : il doit rester sous forme de blocs.</li></ol>
+        </article>
+        <article class="cbc-support-route mobile">
+          <p class="cbc-route-tag">B · Installation mobile</p><h3>[Cannon Carriage / Chariot de canon]</h3>
+          <p>Un véhicule d’artillerie conduit manuellement. Il roule et tire, mais ne s’automatise pas comme le support fixe.</p>
+          <h4>À fabriquer</h4>
+          <ul><li><b>2 paires de roues :</b> 1 bûche + 4 plaques de fer.</li><li><b>1 chariot :</b> 4 planches + 1 arbre + les 2 paires de roues.</li><li><b>Option confort :</b> 1 selle vanilla.</li></ul>
+          <h4>À installer</h4>
+          <ol class="cbc-numbered"><li>Pose le chariot sur un terrain plat, orienté vers la future cible.</li><li>Si tu veux un véritable siège conducteur, fais un clic droit sur le chariot avec une selle.</li><li>Pose l’autocanon directement au-dessus, sur le même axe et dans la même direction, culasse vers l’arrière.</li><li>Pour ce premier essai, laisse la culasse sans poignées : le chariot assurera les commandes.</li></ol>
+        </article>
       </div>
-      <ol class="cbc-numbered"><li>Pose l’affût.</li><li>Place l’extension au-dessus.</li><li>Pose l’autocanon horizontalement, culasse vers l’arrière, en alignant le bloc de ressort au-dessus de l’extension.</li><li>Ne mets pas encore l’affût sous tension : laisse le canon sous forme de blocs pour préparer ses commandes.</li></ol>
-      <p class="cbc-checkpoint"><b>À ce stade, rien ne bouge :</b><span>c’est normal. L’étape 13 transformera ces blocs en un véritable canon manipulable.</span></p>
+      <p class="cbc-checkpoint"><b>À ce stade, rien ne bouge encore :</b><span>c’est normal. Le support choisi transformera les blocs en canon utilisable à l’étape 13.</span></p>
     </section>
 
     <section class="cbc-survival-step" id="cbc-auto-ammo">
@@ -157,20 +171,27 @@
     </section>
 
     <section class="cbc-survival-step" id="cbc-auto-fire">
-      <div class="cbc-step-title"><span>13</span><div><p class="cbc-step-kicker">Premier tir</p><h2>Transformer les blocs en canon contrôlable, puis tirer.</h2></div></div>
-      <p class="cbc-body-copy">Pour l’instant, ton autocanon est encore une rangée de blocs immobiles. Le <strong>[Cannon Mount / Affût de canon]</strong> va les convertir en une <strong>contraption Create</strong> : un seul objet mobile, attaché à l’affût, que le jeu peut orienter et faire tirer. Il ne faut ni colle ni outil spécial pour cette conversion.</p>
-
-      <h3>1. Activer le pilotage manuel</h3>
-      <ol class="cbc-numbered"><li>Vérifie que la face de l’affût marquée d’un marteau n’est pas alimentée.</li><li>Avec une <strong>[Wrench / Clé]</strong> de Create, fais un clic droit sur la <strong>[Breech / Culasse]</strong>. Des poignées doivent apparaître.</li><li>Ces poignées sont l’élément important : elles permettent au joueur de monter sur l’autocanon et de l’orienter avec sa caméra.</li><li>Si ce n’est pas déjà fait, fixe le conteneur de munitions rempli sur la culasse.</li></ol>
-      <p class="cbc-checkpoint"><b>Option vivement conseillée — ajouter un siège :</b><span>prends n’importe quel [Seat / Siège] de Create et fais un clic droit sur la culasse munie de poignées. Le siège est purement visuel : les poignées assurent le pilotage, mais le siège donne enfin au canon l’apparence d’un vrai poste de tir. Sur cet affût, il tourne avec le canon sans rouler au sol ; un véritable canon mobile utilise un [Cannon Carriage / Chariot de canon].</span></p>
-
-      <h3>2. Transformer le canon en contraption</h3>
-      <ol class="cbc-numbered"><li>Place un levier de façon à alimenter la face de l’affût portant le symbole du marteau.</li><li>Active le levier. Toute la rangée — culasse, ressort et canons — doit quitter la grille de blocs et devenir un seul ensemble mobile attaché à l’affût.</li><li>Garde ce signal actif pendant l’utilisation. Si tu le coupes, l’affût désassemble le canon et replace ses blocs dans le monde.</li></ol>
-      <p class="cbc-checkpoint"><b>Si seule une pièce est emportée :</b><span>les blocs ne sont pas tous connectés. Coupe le signal, puis retourne à l’étape 10 pour souder les jonctions manquantes.</span></p>
-
-      <h3>3. Monter, viser et tirer</h3>
-      <ol class="cbc-numbered"><li>Fais un clic droit sur la culasse assemblée — ou sur son siège — pour prendre les commandes.</li><li>Déplace la souris : l’autocanon suit ton regard en hauteur et en direction.</li><li>Place un <strong>[Analog Lever / Levier analogique]</strong> sur la face lumineuse de l’affût et règle-le sur <strong>1</strong>. Avec les poignées, ce signal fixe la cadence sans déclencher le tir tout seul.</li><li>Vise une cible sûre, puis maintiens le clic gauche pour tirer. Relâche-le pour cesser le feu.</li><li>Appuie sur Maj pour quitter le poste de tir. Tu pourras ensuite augmenter progressivement le levier ; le niveau 15 correspond à 300 coups par minute.</li></ol>
-      <p class="cbc-checkpoint"><b>Le canon ne tire pas ?</b><span>vérifie d’abord que tu es bien monté sur la culasse à poignées, que le conteneur contient des cartouches et que le levier de cadence n’est pas à zéro.</span></p>
+      <div class="cbc-step-title"><span>13</span><div><p class="cbc-step-kicker">Assemblage et premier tir</p><h2>Suivre la procédure de son support.</h2></div></div>
+      <p class="cbc-body-copy">Assembler signifie convertir la rangée de blocs en une seule contraption utilisable. Il ne faut pas de colle : le support récupère automatiquement toutes les pièces correctement connectées.</p>
+      <div class="cbc-support-grid cbc-operation-grid">
+        <article class="cbc-support-route fixed">
+          <p class="cbc-route-tag">A · Support fixe</p><h3>Une tourelle pilotée depuis la culasse</h3>
+          <h4>Préparer le poste de tir</h4>
+          <ol class="cbc-numbered"><li>Avec une <b>[Wrench / Clé]</b> de Create, fais un clic droit sur la <b>[Breech / Culasse]</b> : des poignées doivent apparaître.</li><li>Option conseillée : prends un [Seat / Siège] de Create et fais un clic droit sur la culasse à poignées. Le siège est esthétique ; les poignées activent réellement le pilotage.</li><li>Vérifie que le conteneur de munitions rempli est fixé à la culasse.</li></ol>
+          <h4>Assembler et tirer</h4>
+          <ol class="cbc-numbered"><li>Pose un levier contre la face du support portant le marteau, puis active-le.</li><li>Le canon entier doit devenir un seul ensemble mobile. Laisse le levier actif pendant l’utilisation.</li><li>Fais un clic droit sur la culasse ou son siège pour monter.</li><li>Vise avec la souris.</li><li>Sur la face lumineuse du support, règle un [Analog Lever / Levier analogique] sur 1 pour choisir une cadence lente.</li><li>Maintiens le clic gauche pour tirer ; relâche-le pour arrêter. Maj permet de descendre.</li></ol>
+          <p class="cbc-route-help"><b>Pour le redéposer :</b> coupe le levier de la face marteau. Le canon redevient immédiatement une rangée de blocs.</p>
+        </article>
+        <article class="cbc-support-route mobile">
+          <p class="cbc-route-tag">B · Chariot mobile</p><h3>Un canon conduit comme un véhicule</h3>
+          <h4>Assembler</h4>
+          <ol class="cbc-numbered"><li>Vérifie que le conteneur de munitions rempli est fixé à la culasse.</li><li>Fais un clic droit avec la <b>[Wrench / Clé]</b> sur le chariot encore posé comme un bloc.</li><li>Le chariot devient un véhicule et emporte automatiquement le canon placé juste au-dessus. Aucune redstone n’est nécessaire.</li><li>Fais un clic droit à main vide sur le chariot pour prendre les commandes.</li></ol>
+          <h4>Conduire et tirer</h4>
+          <ol class="cbc-numbered"><li><b>Z/S</b> font avancer ou reculer le chariot ; <b>Q/D</b> le font tourner.</li><li>Maintiens <b>C</b>, puis utilise <b>Z/S</b> pour lever ou abaisser le canon au lieu d’avancer.</li><li>Maintiens le clic gauche pour tirer.</li><li>Utilise la molette pour modifier la cadence de l’autocanon.</li><li>Appuie sur Maj pour descendre.</li></ol>
+          <p class="cbc-route-help"><b>Pour le redéposer :</b> fais un clic droit avec la clé sur le chariot assemblé. Il redevient un bloc avec le canon au-dessus.</p>
+        </article>
+      </div>
+      <p class="cbc-checkpoint"><b>Le support part sans tout le canon ?</b><span>une jonction manque, ou le chariot et le canon ne regardent pas dans la même direction. Désassemble, corrige l’alignement et retourne à l’étape 10 si une soudure est nécessaire.</span></p>
     </section>
 
     <section class="cbc-survival-step" id="cbc-auto-next">

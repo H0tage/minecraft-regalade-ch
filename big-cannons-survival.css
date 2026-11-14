@@ -60,6 +60,18 @@
 .cbc-condition-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:10px}
 .cbc-condition-grid span{padding:9px 10px;border:1px solid var(--cbc-line);border-radius:8px;background:#fff;font-size:.84rem;font-weight:750}
 .cbc-ammo-chain i{color:var(--cbc-orange);font-size:.72rem;font-style:normal;font-weight:850;text-transform:uppercase}
+.cbc-support-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:15px;align-items:start}
+.cbc-support-route{min-width:0;padding:16px;border:1px solid var(--cbc-line);border-top:3px solid var(--cbc-cyan);border-radius:12px;background:#fff}
+.cbc-support-route.mobile{border-top-color:var(--cbc-orange)}
+.cbc-route-tag{margin:0 0 5px;color:var(--cbc-cyan);font-size:.69rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase}
+.cbc-support-route.mobile .cbc-route-tag{color:#b65118}
+.cbc-support-route h3{margin:0;font-size:1.08rem}.cbc-support-route>p:not(.cbc-route-tag):not(.cbc-route-help){margin:7px 0 12px;color:var(--cbc-muted)}
+.cbc-support-route h4{margin:15px 0 5px;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+.cbc-support-route ul{margin:6px 0 0;padding-left:18px;color:#45575f}.cbc-support-route li+li{margin-top:4px}
+.cbc-support-route .cbc-numbered{margin-top:7px}.cbc-support-route .cbc-numbered li{padding-right:0}
+.cbc-route-help{margin:14px 0 0;padding:10px 11px;border-left:3px solid var(--cbc-cyan);background:#f1f8fb;color:#355660;font-size:.88rem}
+.cbc-support-route.mobile .cbc-route-help{border-left-color:var(--cbc-orange);background:#fff5ee;color:#6d472f}
 @media(max-width:850px){.cbc-reason-grid,.cbc-choice-grid,.cbc-control-grid,.cbc-diagnosis-grid,.cbc-actions{grid-template-columns:1fr 1fr}.cbc-workshop-diagram{grid-template-columns:1fr}.cbc-workshop-diagram .out{grid-column:1;grid-row:auto}}
+@media(max-width:780px){.cbc-support-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.cbc-survival-step{padding:23px 0}.cbc-step-title{grid-template-columns:36px minmax(0,1fr)}.cbc-step-title>span{width:34px;height:34px}.cbc-reason-grid,.cbc-budget-grid,.cbc-recipe-pairs,.cbc-choice-grid,.cbc-control-grid,.cbc-diagnosis-grid,.cbc-actions,.cbc-condition-grid{grid-template-columns:1fr}.cbc-checkpoint{display:block}.cbc-welding{padding-left:12px}.cbc-project-line,.cbc-process-line,.cbc-ammo-chain{padding:10px}}
 @container (max-width:650px){.cbc-project-line{display:grid;grid-template-columns:1fr;justify-items:stretch}.cbc-project-line i{justify-self:center;line-height:.65;transform:rotate(90deg)}.cbc-project-line b{width:100%;font-size:.78rem}.cbc-project-line b:nth-of-type(2),.cbc-project-line b:last-child{width:100%}}
