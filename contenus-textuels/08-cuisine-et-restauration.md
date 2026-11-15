@@ -10,6 +10,8 @@ De la bouffe à l’assiette
 
 Ma première cuisine
 
+Automatiser un repas
+
 Faire pousser, transformer, cuisiner, servir
 
 # De la bouffe à l’assiette
@@ -485,3 +487,359 @@ Place les ingrédients près des postes et garde les Bols à côté de la Marmit
 ### Passer à Create
 
 Slice & Dice et Central Kitchen permettront ensuite d’automatiser les gestes que tu viens d’apprendre.
+
+Du plat cuisiné à la chaîne de production
+
+# Automatiser un repas
+
+On reprend le Ragoût de bœuf du parcours précédent, mais cette fois personne ne remplit la Marmite à la main. Les
+ingrédients arrivent sur un tapis, un Mechanical Mixer s’occupe de la cuisson et le plat terminé repart vers son
+coffre.
+
+01
+
+Ce qu’on remplace
+
+## Passer de la cuisine manuelle à la cuisine Create
+
+Les recettes restent les mêmes. Ce sont les postes de travail et le transport qui changent. Le but n’est pas de
+réinventer le Ragoût, mais de faire exécuter chaque geste par une machine.
+
+**Planche à découper** travail manuel au Couteau
+
+→
+
+**Trancheuse** découpe alimentée par rotation
+
+**Marmite + Four** ingrédients placés à la main
+
+→
+
+**Mixer + Bassin + Blaze Burner** mélange chauffé automatique
+
+**Inventaire du joueur** transport entre chaque poste
+
+→
+
+**Belts + Funnels** entrée, sortie et stockage
+
+02
+
+Qui fait quoi ?
+
+## Ne pas mélanger les deux addons
+
+### Slice & Dice
+
+Ajoute la Trancheuse et transforme les recettes de Marmite en recettes de mélange chauffé. C’est lui qui rend
+possible notre premier Ragoût dans un Bassin Create.
+
+### Central Kitchen
+
+Ajoute surtout les interactions avancées avec les Mechanical Arms et les Packagers. On le gardera pour une
+cuisine logistique plus ambitieuse, pas pour ce premier prototype.
+
+**En bref :** la Trancheuse et la cuisson dans le Bassin viennent de Slice & Dice. Central
+Kitchen ne rajoute pas une seconde machine de cuisson à fabriquer ici.
+
+03
+
+Carte de l’installation
+
+## Comprendre la chaîne avant de poser les machines
+
+**4 stockages** Bœuf cru, Carottes, Pommes de terre et Bols
+
+→
+
+**Input Belt** un exemplaire de chaque ingrédient
+
+→
+
+**Basin + Mechanical Mixer** chauffés par le Blaze Burner
+
+→
+
+**Brass Funnel filtré** ne laisse sortir que le plat terminé
+
+→
+
+**Stockage de sortie** Ragoûts de bœuf
+
+Module de découpe séparé
+
+**Bœuf cru**
+
+→
+
+**Trancheuse + Couteau**
+
+→
+
+**2 Bœufs hachés**
+
+**Pourquoi séparer la Trancheuse ?** Le Ragoût accepte directement le Bœuf cru. La chaîne principale
+reste donc équilibrée avec un ratio simple de 1:1:1:1. Le module de découpe est construit à côté pour apprendre à
+automatiser les futures recettes qui demandent réellement un ingrédient découpé.
+
+04
+
+Liste de construction
+
+## Rassembler les machines et la logistique
+
+### Cuisson automatique
+
+- **1** Mechanical Mixer
+
+- **1** Basin
+
+- **1** Blaze Burner avec un Blaze capturé
+
+- **1** source de rotation
+
+- **1** réseau de Shafts et Cogwheels
+
+### Transport et stockage
+
+- **4** coffres ou Barrels d’entrée
+
+- **1** coffre de sortie
+
+- **2** Mechanical Belts
+
+- **5** Andesite Funnels
+
+- **1** Brass Funnel
+
+### Module de découpe
+
+- **1** Trancheuse
+
+- **1** Couteau
+
+- **1** petit Belt
+
+- **2** Funnels
+
+- **2** stockages
+
+### Premier lot de test
+
+- **1** Bœuf cru
+
+- **1** Carotte
+
+- **1** Pomme de terre
+
+- **1** Bol
+
+- **1** combustible pour le Blaze Burner
+
+Les longueurs de Belts et de transmission dépendent de ton bâtiment. Les quantités indiquées couvrent les points
+de connexion, pas une distance imposée entre les machines.
+
+05
+
+Premier module
+
+## Automatiser la Planche à découper
+
+### Trancheuse
+
+1 Cogwheel + 1 Andesite Casing + 1 Turntable
+
+Cogwheel Andesite Casing Turntable
+
+**Trancheuse alimentée en rotation**
+↓
+**Couteau installé dans la machine**
+↓
+**Mechanical Belt avec le Bœuf cru**
+
+- Installe un petit Mechanical Belt entre deux stockages.
+
+- Place la Trancheuse au-dessus du tapis et relie-la à ton réseau de rotation.
+
+- Prends le Couteau et fais un clic droit sur la Trancheuse pour l’installer.
+
+- Envoie un Bœuf cru sur le Belt. La machine doit produire deux Bœufs hachés.
+
+### La machine bouge, mais ne coupe rien
+
+Le sens de rotation est probablement mauvais. Inverse-le avec ta transmission ou un Gearshift.
+
+### Le Couteau finit par casser
+
+C’est normal : la Trancheuse consomme sa durabilité. Prévois un Couteau de remplacement.
+
+En cas de doute, survole la Trancheuse dans l’inventaire et maintiens `W`. La scène Ponder montre sa
+disposition et l’installation du Couteau directement en jeu.
+
+06
+
+Deuxième module
+
+## Construire le cœur de cuisson
+
+Les trois blocs doivent former une seule colonne. Le Mechanical Mixer travaille dans le Basin, tandis que le Blaze
+Burner fournit la chaleur par le dessous.
+
+**Mechanical Mixer** relié à la rotation
+↓
+**Basin** contient les quatre ingrédients
+↓
+**Blaze Burner** allumé avec un combustible classique
+
+### Ce qu’il faut vérifier
+
+- Le Mixer est bien centré au-dessus du Basin.
+
+- Sa tête peut descendre dans le Basin sans bloc entre les deux.
+
+- Le Blaze Burner est directement sous le Basin.
+
+- Le Mixer tourne et le Blaze Burner est actif.
+
+**Pas besoin de Superheated Blaze Burner.** La recette demande simplement un mélange chauffé. Du
+combustible normal suffit.
+
+07
+
+Avant les tapis
+
+## Valider la recette directement dans le Basin
+
+Teste toujours la machine centrale avant d’ajouter la logistique. Si le Ragoût fonctionne maintenant mais plus
+tard avec les Belts, tu sauras que le problème vient du transport et pas de la recette.
+
+**1 Bœuf cru**
+
+**1 Carotte**
+
+**1 Pomme de terre**
+
+**1 Bol**
+
+→
+
+**Heated Mixing** Mixer + Basin + Blaze Burner
+
+→
+
+**1 Ragoût de bœuf** déjà servi dans son Bol
+
+- Jette les quatre ingrédients dans le Basin.
+
+- Alimente le Mechanical Mixer en rotation.
+
+- Active le Blaze Burner sous le Basin.
+
+- Attends que le Mixer descende et termine le mélange.
+
+- Récupère le Ragoût et garde-le pour configurer le filtre de sortie.
+
+Dans cette version automatisée, le Bol entre dans le Basin avec les aliments. Il ne va pas dans une case séparée
+comme dans l’interface de la Marmite.
+
+08
+
+Approvisionnement
+
+## Faire entrer les quatre ingrédients automatiquement
+
+**Bœuf cru** Andesite Funnel
+
+**Carottes** Andesite Funnel
+
+**Pommes de terre** Andesite Funnel
+
+**Bols** Andesite Funnel
+
+↓
+
+**Input Belt** les ingrédients avancent vers le Basin
+
+→
+
+**Andesite Funnel sur le Basin** flèche orientée vers l’intérieur
+
+- Aligne quatre coffres ou Barrels le long du tapis d’entrée.
+
+- Place un Andesite Funnel entre chaque stockage et le Belt.
+
+- Installe un dernier Andesite Funnel sur le côté du Basin, face à l’arrivée du Belt.
+
+- Vérifie avec la Wrench que sa flèche pointe vers le Basin : il doit insérer, pas extraire.
+
+- Charge chaque stockage avec un seul type d’ingrédient.
+
+Les quatre ingrédients sont consommés dans un ratio de 1:1:1:1. Si un stockage se vide, la cuisine s’arrête sans
+perdre les autres ingrédients et reprend dès que l’élément manquant revient.
+
+09
+
+Ne pas vider le Basin trop tôt
+
+## Filtrer la sortie sur le plat terminé
+
+Un Funnel de sortie non filtré pourrait récupérer les ingrédients avant la cuisson. Le Brass Funnel doit donc
+accepter uniquement le Ragoût de bœuf.
+
+**Basin** ingrédients et mélange
+
+→
+
+**Brass Funnel** filtre : Ragoût de bœuf
+
+→
+
+**Output Belt** transporte uniquement le plat fini
+
+→
+
+**Coffre de sortie** stockage des repas
+
+- Place le Brass Funnel sur une face libre du Basin et oriente-le vers l’extérieur.
+
+- Utilise le Ragoût obtenu au test précédent pour régler son filtre.
+
+- Ajoute un petit Belt de sortie puis un coffre à son extrémité.
+
+- Recharge les quatre stockages d’entrée et observe un cycle complet.
+
+10
+
+Si le restaurant attend toujours
+
+## Isoler le module qui bloque
+
+**La Trancheuse refuse de couper** Couteau absent, cassé ou rotation dans le mauvais sens.
+
+**Le Mixer reste en haut** Rotation absente, trop lente ou réseau surchargé.
+
+**Le Mixer tourne sans cuisiner** Blaze Burner froid ou ingrédient manquant.
+
+**Le Basin se remplit sans produire** Vérifie la présence du Bol et retire tout objet étranger.
+
+**Les ingrédients repartent en sortie** Le Brass Funnel n’est pas filtré sur le Ragoût.
+
+**Les objets restent sur le Belt** Le Funnel d’entrée pointe dans le mauvais sens.
+
+11
+
+Le prototype fonctionne
+
+## Passer d’une recette à une vraie cuisine
+
+### Ajouter des réserves
+
+Utilise des Vaults ou des Drawers pour que la ligne continue à produire pendant ton absence.
+
+### Contrôler les quantités
+
+Ajoute des Stockpile Switches ou des gauges pour arrêter la production quand le coffre est plein.
+
+### Utiliser Central Kitchen
+
+Les Packagers et Mechanical Arms permettront plus tard d’alimenter plusieurs recettes et postes spécialisés.

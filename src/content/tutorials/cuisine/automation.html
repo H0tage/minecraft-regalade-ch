@@ -1,0 +1,404 @@
+<div class="food-panel" id="food-automation-panel" role="tabpanel" aria-labelledby="food-automation-tab" hidden="">
+  <header class="food-hero food-automation-hero">
+    <p class="food-eyebrow">Du plat cuisiné à la chaîne de production</p>
+    <h1>Automatiser un repas</h1>
+    <p>
+      On reprend le Ragoût de bœuf du parcours précédent, mais cette fois personne ne remplit la Marmite à la main. Les
+      ingrédients arrivent sur un tapis, un Mechanical Mixer s’occupe de la cuisson et le plat terminé repart vers son
+      coffre.
+    </p>
+  </header>
+
+  <section class="food-section food-kitchen-step" id="food-auto-project" data-phase="Le projet">
+    <div class="food-title">
+      <span>01</span>
+      <div>
+        <p>Ce qu’on remplace</p>
+        <h2>Passer de la cuisine manuelle à la cuisine Create</h2>
+      </div>
+    </div>
+    <p class="food-lead">
+      Les recettes restent les mêmes. Ce sont les postes de travail et le transport qui changent. Le but n’est pas de
+      réinventer le Ragoût, mais de faire exécuter chaque geste par une machine.
+    </p>
+    <div class="food-auto-replacements" aria-label="Équivalences entre cuisine manuelle et cuisine automatisée">
+      <article>
+        <div><b>Planche à découper</b><span>travail manuel au Couteau</span></div>
+        <i>→</i>
+        <div><b>Trancheuse</b><span>découpe alimentée par rotation</span></div>
+      </article>
+      <article>
+        <div><b>Marmite + Four</b><span>ingrédients placés à la main</span></div>
+        <i>→</i>
+        <div><b>Mixer + Bassin + Blaze Burner</b><span>mélange chauffé automatique</span></div>
+      </article>
+      <article>
+        <div><b>Inventaire du joueur</b><span>transport entre chaque poste</span></div>
+        <i>→</i>
+        <div><b>Belts + Funnels</b><span>entrée, sortie et stockage</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-auto-mods" data-phase="Comprendre">
+    <div class="food-title">
+      <span>02</span>
+      <div>
+        <p>Qui fait quoi ?</p>
+        <h2>Ne pas mélanger les deux addons</h2>
+      </div>
+    </div>
+    <div class="food-split">
+      <article>
+        <h3>Slice &amp; Dice</h3>
+        <p>
+          Ajoute la Trancheuse et transforme les recettes de Marmite en recettes de mélange chauffé. C’est lui qui rend
+          possible notre premier Ragoût dans un Bassin Create.
+        </p>
+      </article>
+      <article>
+        <h3>Central Kitchen</h3>
+        <p>
+          Ajoute surtout les interactions avancées avec les Mechanical Arms et les Packagers. On le gardera pour une
+          cuisine logistique plus ambitieuse, pas pour ce premier prototype.
+        </p>
+      </article>
+    </div>
+    <p class="food-note">
+      <strong>En bref :</strong> la Trancheuse et la cuisson dans le Bassin viennent de Slice &amp; Dice. Central
+      Kitchen ne rajoute pas une seconde machine de cuisson à fabriquer ici.
+    </p>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-auto-map" data-phase="Le projet">
+    <div class="food-title">
+      <span>03</span>
+      <div>
+        <p>Carte de l’installation</p>
+        <h2>Comprendre la chaîne avant de poser les machines</h2>
+      </div>
+    </div>
+    <div class="food-auto-main-flow" aria-label="Chaîne automatique du Ragoût de bœuf">
+      <article><b>4 stockages</b><small>Bœuf cru, Carottes, Pommes de terre et Bols</small></article>
+      <i>→</i>
+      <article><b>Input Belt</b><small>un exemplaire de chaque ingrédient</small></article>
+      <i>→</i>
+      <article><b>Basin + Mechanical Mixer</b><small>chauffés par le Blaze Burner</small></article>
+      <i>→</i>
+      <article><b>Brass Funnel filtré</b><small>ne laisse sortir que le plat terminé</small></article>
+      <i>→</i>
+      <article><b>Stockage de sortie</b><small>Ragoûts de bœuf</small></article>
+    </div>
+    <div class="food-auto-side-flow">
+      <span>Module de découpe séparé</span>
+      <article><b>Bœuf cru</b></article>
+      <i>→</i>
+      <article><b>Trancheuse + Couteau</b></article>
+      <i>→</i>
+      <article><b>2 Bœufs hachés</b></article>
+    </div>
+    <p class="food-note">
+      <strong>Pourquoi séparer la Trancheuse ?</strong> Le Ragoût accepte directement le Bœuf cru. La chaîne principale
+      reste donc équilibrée avec un ratio simple de 1:1:1:1. Le module de découpe est construit à côté pour apprendre à
+      automatiser les futures recettes qui demandent réellement un ingrédient découpé.
+    </p>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-auto-shopping" data-phase="Préparer">
+    <div class="food-title">
+      <span>04</span>
+      <div>
+        <p>Liste de construction</p>
+        <h2>Rassembler les machines et la logistique</h2>
+      </div>
+    </div>
+    <div class="food-shopping-grid food-auto-shopping-grid">
+      <article>
+        <h3>Cuisson automatique</h3>
+        <ul>
+          <li><b>1</b> Mechanical Mixer</li>
+          <li><b>1</b> Basin</li>
+          <li><b>1</b> Blaze Burner avec un Blaze capturé</li>
+          <li><b>1</b> source de rotation</li>
+          <li><b>1</b> réseau de Shafts et Cogwheels</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Transport et stockage</h3>
+        <ul>
+          <li><b>4</b> coffres ou Barrels d’entrée</li>
+          <li><b>1</b> coffre de sortie</li>
+          <li><b>2</b> Mechanical Belts</li>
+          <li><b>5</b> Andesite Funnels</li>
+          <li><b>1</b> Brass Funnel</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Module de découpe</h3>
+        <ul>
+          <li><b>1</b> Trancheuse</li>
+          <li><b>1</b> Couteau</li>
+          <li><b>1</b> petit Belt</li>
+          <li><b>2</b> Funnels</li>
+          <li><b>2</b> stockages</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Premier lot de test</h3>
+        <ul>
+          <li><b>1</b> Bœuf cru</li>
+          <li><b>1</b> Carotte</li>
+          <li><b>1</b> Pomme de terre</li>
+          <li><b>1</b> Bol</li>
+          <li><b>1</b> combustible pour le Blaze Burner</li>
+        </ul>
+      </article>
+    </div>
+    <p class="food-note">
+      Les longueurs de Belts et de transmission dépendent de ton bâtiment. Les quantités indiquées couvrent les points
+      de connexion, pas une distance imposée entre les machines.
+    </p>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-auto-slicer" data-phase="Découper">
+    <div class="food-title">
+      <span>05</span>
+      <div>
+        <p>Premier module</p>
+        <h2>Automatiser la Planche à découper</h2>
+      </div>
+    </div>
+    <div class="food-recipe-pair food-auto-slicer-layout">
+      <article class="food-craft-card">
+        <div>
+          <h3>Trancheuse</h3>
+          <p>1 Cogwheel + 1 Andesite Casing + 1 Turntable</p>
+        </div>
+        <div class="food-craft-grid" aria-label="Recette de la Trancheuse">
+          <span>Cogwheel</span><span class="empty"></span><span class="empty"></span> <span>Andesite Casing</span
+          ><span class="empty"></span><span class="empty"></span> <span>Turntable</span><span class="empty"></span
+          ><span class="empty"></span>
+        </div>
+      </article>
+      <article class="food-auto-machine-stack" aria-label="Disposition de la Trancheuse au-dessus du tapis">
+        <b>Trancheuse alimentée en rotation</b>
+        <i>↓</i>
+        <b>Couteau installé dans la machine</b>
+        <i>↓</i>
+        <b>Mechanical Belt avec le Bœuf cru</b>
+      </article>
+    </div>
+    <ol class="food-auto-steps">
+      <li>Installe un petit Mechanical Belt entre deux stockages.</li>
+      <li>Place la Trancheuse au-dessus du tapis et relie-la à ton réseau de rotation.</li>
+      <li>Prends le Couteau et fais un clic droit sur la Trancheuse pour l’installer.</li>
+      <li>Envoie un Bœuf cru sur le Belt. La machine doit produire deux Bœufs hachés.</li>
+    </ol>
+    <div class="food-split">
+      <article>
+        <h3>La machine bouge, mais ne coupe rien</h3>
+        <p>Le sens de rotation est probablement mauvais. Inverse-le avec ta transmission ou un Gearshift.</p>
+      </article>
+      <article>
+        <h3>Le Couteau finit par casser</h3>
+        <p>C’est normal : la Trancheuse consomme sa durabilité. Prévois un Couteau de remplacement.</p>
+      </article>
+    </div>
+    <p class="food-note">
+      En cas de doute, survole la Trancheuse dans l’inventaire et maintiens <kbd>W</kbd>. La scène Ponder montre sa
+      disposition et l’installation du Couteau directement en jeu.
+    </p>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-auto-cooking-core" data-phase="Cuisiner">
+    <div class="food-title">
+      <span>06</span>
+      <div>
+        <p>Deuxième module</p>
+        <h2>Construire le cœur de cuisson</h2>
+      </div>
+    </div>
+    <p class="food-lead">
+      Les trois blocs doivent former une seule colonne. Le Mechanical Mixer travaille dans le Basin, tandis que le Blaze
+      Burner fournit la chaleur par le dessous.
+    </p>
+    <div class="food-auto-cooking-core">
+      <div
+        class="food-auto-machine-stack"
+        aria-label="Disposition verticale du Mechanical Mixer, du Basin et du Blaze Burner"
+      >
+        <b>Mechanical Mixer</b><small>relié à la rotation</small>
+        <i>↓</i>
+        <b>Basin</b><small>contient les quatre ingrédients</small>
+        <i>↓</i>
+        <b>Blaze Burner</b><small>allumé avec un combustible classique</small>
+      </div>
+      <div>
+        <h3>Ce qu’il faut vérifier</h3>
+        <ol>
+          <li>Le Mixer est bien centré au-dessus du Basin.</li>
+          <li>Sa tête peut descendre dans le Basin sans bloc entre les deux.</li>
+          <li>Le Blaze Burner est directement sous le Basin.</li>
+          <li>Le Mixer tourne et le Blaze Burner est actif.</li>
+        </ol>
+      </div>
+    </div>
+    <p class="food-note">
+      <strong>Pas besoin de Superheated Blaze Burner.</strong> La recette demande simplement un mélange chauffé. Du
+      combustible normal suffit.
+    </p>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-auto-dry-run" data-phase="Tester">
+    <div class="food-title">
+      <span>07</span>
+      <div>
+        <p>Avant les tapis</p>
+        <h2>Valider la recette directement dans le Basin</h2>
+      </div>
+    </div>
+    <p class="food-lead">
+      Teste toujours la machine centrale avant d’ajouter la logistique. Si le Ragoût fonctionne maintenant mais plus
+      tard avec les Belts, tu sauras que le problème vient du transport et pas de la recette.
+    </p>
+    <div class="food-pot-flow food-auto-test-flow" aria-label="Recette automatique du Ragoût de bœuf dans le Basin">
+      <div class="food-pot-ingredients">
+        <article><b>1 Bœuf cru</b></article>
+        <article><b>1 Carotte</b></article>
+        <article><b>1 Pomme de terre</b></article>
+        <article><b>1 Bol</b></article>
+      </div>
+      <i>→</i>
+      <article class="food-pot-process"><b>Heated Mixing</b><small>Mixer + Basin + Blaze Burner</small></article>
+      <i>→</i>
+      <article class="food-pot-result"><b>1 Ragoût de bœuf</b><small>déjà servi dans son Bol</small></article>
+    </div>
+    <ol class="food-auto-steps">
+      <li>Jette les quatre ingrédients dans le Basin.</li>
+      <li>Alimente le Mechanical Mixer en rotation.</li>
+      <li>Active le Blaze Burner sous le Basin.</li>
+      <li>Attends que le Mixer descende et termine le mélange.</li>
+      <li>Récupère le Ragoût et garde-le pour configurer le filtre de sortie.</li>
+    </ol>
+    <p class="food-note">
+      Dans cette version automatisée, le Bol entre dans le Basin avec les aliments. Il ne va pas dans une case séparée
+      comme dans l’interface de la Marmite.
+    </p>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-auto-input" data-phase="Transporter">
+    <div class="food-title">
+      <span>08</span>
+      <div>
+        <p>Approvisionnement</p>
+        <h2>Faire entrer les quatre ingrédients automatiquement</h2>
+      </div>
+    </div>
+    <div class="food-auto-input-plan" aria-label="Disposition des stockages, du tapis et du Basin">
+      <div class="food-auto-stores">
+        <article><b>Bœuf cru</b><small>Andesite Funnel</small></article>
+        <article><b>Carottes</b><small>Andesite Funnel</small></article>
+        <article><b>Pommes de terre</b><small>Andesite Funnel</small></article>
+        <article><b>Bols</b><small>Andesite Funnel</small></article>
+      </div>
+      <i>↓</i>
+      <article class="food-auto-belt"><b>Input Belt</b><small>les ingrédients avancent vers le Basin</small></article>
+      <i>→</i>
+      <article class="food-auto-basin-input">
+        <b>Andesite Funnel sur le Basin</b><small>flèche orientée vers l’intérieur</small>
+      </article>
+    </div>
+    <ol class="food-auto-steps">
+      <li>Aligne quatre coffres ou Barrels le long du tapis d’entrée.</li>
+      <li>Place un Andesite Funnel entre chaque stockage et le Belt.</li>
+      <li>Installe un dernier Andesite Funnel sur le côté du Basin, face à l’arrivée du Belt.</li>
+      <li>Vérifie avec la Wrench que sa flèche pointe vers le Basin : il doit insérer, pas extraire.</li>
+      <li>Charge chaque stockage avec un seul type d’ingrédient.</li>
+    </ol>
+    <p class="food-note">
+      Les quatre ingrédients sont consommés dans un ratio de 1:1:1:1. Si un stockage se vide, la cuisine s’arrête sans
+      perdre les autres ingrédients et reprend dès que l’élément manquant revient.
+    </p>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-auto-output" data-phase="Transporter">
+    <div class="food-title">
+      <span>09</span>
+      <div>
+        <p>Ne pas vider le Basin trop tôt</p>
+        <h2>Filtrer la sortie sur le plat terminé</h2>
+      </div>
+    </div>
+    <p class="food-lead">
+      Un Funnel de sortie non filtré pourrait récupérer les ingrédients avant la cuisson. Le Brass Funnel doit donc
+      accepter uniquement le Ragoût de bœuf.
+    </p>
+    <div class="food-auto-output-flow" aria-label="Extraction filtrée du Ragoût de bœuf">
+      <article><b>Basin</b><small>ingrédients et mélange</small></article>
+      <i>→</i>
+      <article><b>Brass Funnel</b><small>filtre : Ragoût de bœuf</small></article>
+      <i>→</i>
+      <article><b>Output Belt</b><small>transporte uniquement le plat fini</small></article>
+      <i>→</i>
+      <article><b>Coffre de sortie</b><small>stockage des repas</small></article>
+    </div>
+    <ol class="food-auto-steps">
+      <li>Place le Brass Funnel sur une face libre du Basin et oriente-le vers l’extérieur.</li>
+      <li>Utilise le Ragoût obtenu au test précédent pour régler son filtre.</li>
+      <li>Ajoute un petit Belt de sortie puis un coffre à son extrémité.</li>
+      <li>Recharge les quatre stockages d’entrée et observe un cycle complet.</li>
+    </ol>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-auto-troubleshooting" data-phase="Dépanner">
+    <div class="food-title">
+      <span>10</span>
+      <div>
+        <p>Si le restaurant attend toujours</p>
+        <h2>Isoler le module qui bloque</h2>
+      </div>
+    </div>
+    <div class="food-check-grid food-auto-check-grid">
+      <article>
+        <b>La Trancheuse refuse de couper</b><span>Couteau absent, cassé ou rotation dans le mauvais sens.</span>
+      </article>
+      <article><b>Le Mixer reste en haut</b><span>Rotation absente, trop lente ou réseau surchargé.</span></article>
+      <article><b>Le Mixer tourne sans cuisiner</b><span>Blaze Burner froid ou ingrédient manquant.</span></article>
+      <article>
+        <b>Le Basin se remplit sans produire</b><span>Vérifie la présence du Bol et retire tout objet étranger.</span>
+      </article>
+      <article>
+        <b>Les ingrédients repartent en sortie</b><span>Le Brass Funnel n’est pas filtré sur le Ragoût.</span>
+      </article>
+      <article>
+        <b>Les objets restent sur le Belt</b><span>Le Funnel d’entrée pointe dans le mauvais sens.</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-auto-next" data-phase="La suite">
+    <div class="food-title">
+      <span>11</span>
+      <div>
+        <p>Le prototype fonctionne</p>
+        <h2>Passer d’une recette à une vraie cuisine</h2>
+      </div>
+    </div>
+    <div class="food-card-grid food-card-grid-3">
+      <article>
+        <h3>Ajouter des réserves</h3>
+        <p>Utilise des Vaults ou des Drawers pour que la ligne continue à produire pendant ton absence.</p>
+      </article>
+      <article>
+        <h3>Contrôler les quantités</h3>
+        <p>Ajoute des Stockpile Switches ou des gauges pour arrêter la production quand le coffre est plein.</p>
+      </article>
+      <article>
+        <h3>Utiliser Central Kitchen</h3>
+        <p>
+          Les Packagers et Mechanical Arms permettront plus tard d’alimenter plusieurs recettes et postes spécialisés.
+        </p>
+      </article>
+    </div>
+  </section>
+</div>
