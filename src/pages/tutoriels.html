@@ -33,6 +33,17 @@
           </button>
           <button
             class="tutorial-tab"
+            id="tutorial-jei-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-jei"
+            tabindex="-1"
+          >
+            JEI
+          </button>
+          <button
+            class="tutorial-tab"
             id="tutorial-create-first-factory-tab"
             type="button"
             role="tab"
@@ -76,6 +87,9 @@
           aria-labelledby="tutorial-economy-tab"
         >
           <!-- @include ../content/tutorials/economy.html -->
+        </section>
+        <section class="tutorial-panel" id="tutorial-jei" role="tabpanel" aria-labelledby="tutorial-jei-tab" hidden>
+          <!-- @include ../content/tutorials/jei.html -->
         </section>
         <section
           class="tutorial-panel"

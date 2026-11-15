@@ -30,7 +30,7 @@
     if (!panel) return [];
     const preferred = [
       ...panel.querySelectorAll(
-        '.install-step, .sg-step[id], .cbc-overview-section[id], .cbc-survival-step[id], .eco-section[id], .cff-step[id]',
+        '.install-step, .sg-step[id], .cbc-overview-section[id], .cbc-survival-step[id], .eco-section[id], .jei-section[id], .cff-step[id]',
       ),
     ].filter(isVisible);
     if (preferred.length) return preferred;
@@ -121,7 +121,9 @@
   });
   tabList.addEventListener('keydown', () => requestAnimationFrame(refresh));
   content.addEventListener('click', (event) => {
-    if (event.target.closest('.cbc-switcher [role="tab"], .cff-switcher [role="tab"]')) requestAnimationFrame(refresh);
+    if (event.target.closest('.cbc-switcher [role="tab"], .cff-switcher [role="tab"], .jei-switcher [role="tab"]')) {
+      requestAnimationFrame(refresh);
+    }
   });
 
   const changes = new MutationObserver(() => requestAnimationFrame(refresh));

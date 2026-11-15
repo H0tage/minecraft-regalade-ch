@@ -1,0 +1,217 @@
+<div class="jei-panel" id="jei-overview-panel" role="tabpanel" aria-labelledby="jei-overview-tab">
+  <header class="jei-hero">
+    <p class="jei-eyebrow">Le moteur de recherche qui t’évite de fabriquer au hasard</p>
+    <h1>JEI : trouver n’importe quelle recette</h1>
+    <p>
+      Le pack contient une quantité parfaitement raisonnable de machines, de poissons, de meubles, de canons et de trucs
+      dont personne ne connaît le nom. JEI range tout ça à droite de ton inventaire et t’explique comment le fabriquer.
+      Heureusement, parce qu’essayer de retenir toutes les recettes serait une idée catastrophique.
+    </p>
+  </header>
+
+  <section class="jei-section" id="jei-principle" data-phase="Les bases">
+    <div class="jei-title">
+      <span>01</span>
+      <div>
+        <p>Le principe</p>
+        <h2>Trouver un objet, sa recette et son utilité</h2>
+      </div>
+    </div>
+    <p class="jei-lead">
+      Ouvre ton inventaire. La grande liste à droite, c’est JEI. La barre tout en bas permet de chercher un objet sans
+      fouiller neuf pages de blocs presque identiques.
+    </p>
+    <div class="jei-flow" aria-label="Utilisation de base de JEI">
+      <article>
+        <b>1. Cherche l’objet</b>
+        <span>Tape une partie de son nom dans la barre de recherche</span>
+      </article>
+      <i>→</i>
+      <article>
+        <b>2. Survole-le et appuie sur <kbd>R</kbd></b>
+        <span>JEI affiche les recettes qui permettent de le fabriquer</span>
+      </article>
+      <i>→</i>
+      <article>
+        <b>3. Appuie sur <kbd>U</kbd></b>
+        <span>JEI montre toutes les recettes dans lesquelles cet objet est utilisé</span>
+      </article>
+    </div>
+    <div class="jei-card-grid jei-card-grid-2">
+      <article>
+        <h3><kbd>R</kbd> comme recette</h3>
+        <p>
+          Tu veux une Mechanical Press ? Survole-la, appuie sur <kbd>R</kbd> et JEI te montre ce qu’il faut mettre dans
+          la grille ou dans la machine appropriée.
+        </p>
+      </article>
+      <article>
+        <h3><kbd>U</kbd> comme utilisation</h3>
+        <p>
+          Tu viens de récupérer un matériau bizarre ? Appuie sur <kbd>U</kbd> pour savoir à quoi il sert avant de le
+          jeter dans le premier coffre venu.
+        </p>
+      </article>
+    </div>
+    <p class="jei-note">
+      <strong>Si les touches ne répondent pas :</strong> elles ont peut-être été modifiées. Cherche JEI dans le menu des
+      raccourcis du jeu pour retrouver ou changer les commandes.
+    </p>
+  </section>
+
+  <section class="jei-section" id="jei-search" data-phase="Chercher efficacement">
+    <div class="jei-title">
+      <span>02</span>
+      <div>
+        <p>La barre de recherche</p>
+        <h2>Passer de « le machin avec un engrenage » à trois résultats utiles</h2>
+      </div>
+    </div>
+    <div class="jei-search-examples">
+      <article>
+        <code>presse</code>
+        <div>
+          <h3>Chercher par nom</h3>
+          <p>Quelques lettres suffisent. Tu n’as pas besoin de connaître le nom complet de l’objet.</p>
+        </div>
+      </article>
+      <article>
+        <code>@create</code>
+        <div>
+          <h3>Afficher un seul mod</h3>
+          <p>Le préfixe <code>@</code> limite la liste aux objets du mod indiqué.</p>
+        </div>
+      </article>
+      <article>
+        <code>@create presse</code>
+        <div>
+          <h3>Combiner les deux</h3>
+          <p>Tu peux filtrer un mod puis chercher un objet précis à l’intérieur.</p>
+        </div>
+      </article>
+    </div>
+    <p class="jei-note">
+      Le second sous-onglet contient les codes <code>@...</code> utiles pour le pack. Certains identifiants n’ont pas le
+      même nom que le mod affiché en jeu, donc autant éviter de les deviner.
+    </p>
+  </section>
+
+  <section class="jei-section" id="jei-recipes" data-phase="Lire une recette">
+    <div class="jei-title">
+      <span>03</span>
+      <div>
+        <p>Les écrans de recette</p>
+        <h2>Comprendre ce que le jeu te demande réellement</h2>
+      </div>
+    </div>
+    <p class="jei-lead">
+      JEI ne montre pas seulement l’établi. Il affiche aussi les recettes des fours, des machines Create, des bassins,
+      des presses, des ventilateurs et de tout ce que les autres mods ont décidé d’inventer.
+    </p>
+    <div class="jei-recipe-map" aria-label="Lecture d’une recette JEI">
+      <article>
+        <b>Entrées</b>
+        <span>les objets et liquides à fournir</span>
+      </article>
+      <i>→</i>
+      <article>
+        <b>Procédé</b>
+        <span>la grille, la machine ou le traitement nécessaire</span>
+      </article>
+      <i>→</i>
+      <article>
+        <b>Sortie</b>
+        <span>ce que tu obtiens et en quelle quantité</span>
+      </article>
+    </div>
+    <div class="jei-card-grid jei-card-grid-3">
+      <article>
+        <h3>Regarde les onglets</h3>
+        <p>
+          Un objet peut avoir plusieurs méthodes de fabrication. Les onglets en haut changent de machine ou de procédé.
+        </p>
+      </article>
+      <article>
+        <h3>Regarde les quantités</h3>
+        <p>
+          Une recette peut demander plusieurs exemplaires, un volume de liquide précis ou produire plusieurs sorties.
+        </p>
+      </article>
+      <article>
+        <h3>Remonte la chaîne</h3>
+        <p>
+          Si un ingrédient est lui-même fabriqué, appuie sur <kbd>R</kbd> dessus et continue jusqu’aux matières de base.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="jei-section" id="jei-create" data-phase="Avec Create">
+    <div class="jei-title">
+      <span>04</span>
+      <div>
+        <p>Le truc vraiment pratique</p>
+        <h2>Voir les machines Create fonctionner avant de les construire</h2>
+      </div>
+    </div>
+    <p class="jei-lead">
+      Create ajoute ses propres démonstrations animées. Tu peux donc passer d’une recette à une petite scène qui montre
+      comment placer la machine, par où arrivent les objets et ce qui doit tourner.
+    </p>
+    <div class="jei-create-flow" aria-label="Ouvrir une démonstration Create depuis JEI">
+      <article><b>1</b><span>Trouve un composant Create dans JEI</span></article>
+      <i>→</i>
+      <article><b>2</b><span>Laisse la souris dessus</span></article>
+      <i>→</i>
+      <article>
+        <b>3</b><span>Maintiens <kbd>W</kbd></span>
+      </article>
+      <i>→</i>
+      <article><b>4</b><span>Regarde la démonstration et change de scène si plusieurs sont proposées</span></article>
+    </div>
+    <p class="jei-note">
+      <strong>Si <kbd>W</kbd> ne fait rien :</strong> l’objet n’a probablement pas de démonstration. JEI continuera
+      quand même d’afficher ses recettes et ses utilisations normalement.
+    </p>
+  </section>
+
+  <section class="jei-section" id="jei-reflexes" data-phase="À retenir">
+    <div class="jei-title">
+      <span>05</span>
+      <div>
+        <p>Les bons réflexes</p>
+        <h2>Ne plus apprendre une recette par cœur</h2>
+      </div>
+    </div>
+    <div class="jei-card-grid jei-card-grid-2">
+      <article>
+        <h3>Pars toujours de l’objet final</h3>
+        <p>
+          Cherche ce que tu veux construire, ouvre sa recette, puis remonte les ingrédients un par un. C’est beaucoup
+          plus simple que de fabriquer des machines au hasard en espérant qu’elles servent plus tard.
+        </p>
+      </article>
+      <article>
+        <h3>Utilise <kbd>U</kbd> sur les matériaux inconnus</h3>
+        <p>
+          C’est le moyen le plus rapide de comprendre pourquoi un mod ajoute encore une nouvelle plaque de métal, une
+          poudre étrange ou un poisson dont personne n’avait besoin.
+        </p>
+      </article>
+      <article>
+        <h3>Filtre quand la liste devient absurde</h3>
+        <p>
+          Un simple <code>@create</code> ou <code>@sgjourney</code> transforme plusieurs centaines d’objets en une liste
+          lisible.
+        </p>
+      </article>
+      <article>
+        <h3>Ajoute les objets importants aux favoris</h3>
+        <p>
+          Par défaut, survole un objet et appuie sur <kbd>A</kbd>. Il restera à gauche de l’inventaire pendant que tu
+          prépares ton projet.
+        </p>
+      </article>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,32 @@
+<section class="jei-shell">
+  <nav
+    class="jei-switcher"
+    role="tablist"
+    aria-label="Choisir une partie du tutoriel JEI"
+    data-tab-storage="regalade.jei.active"
+  >
+    <button
+      id="jei-overview-tab"
+      type="button"
+      role="tab"
+      aria-selected="true"
+      aria-controls="jei-overview-panel"
+      tabindex="0"
+    >
+      Comprendre JEI
+    </button>
+    <button
+      id="jei-filters-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="jei-filters-panel"
+      tabindex="-1"
+    >
+      Filtres par mod
+    </button>
+  </nav>
+
+  <!-- @include jei/overview.html -->
+  <!-- @include jei/filters.html -->
+</section>

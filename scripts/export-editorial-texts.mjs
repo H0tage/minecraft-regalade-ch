@@ -41,6 +41,11 @@ const groups = [
     title: 'Porte des étoiles',
     sources: ['src/content/tutorials/stargates.html'],
   },
+  {
+    file: '07-jei.md',
+    title: 'JEI (fonctionnement et filtres par mod)',
+    sources: ['src/content/tutorials/jei.html'],
+  },
 ];
 
 const entities = new Map([

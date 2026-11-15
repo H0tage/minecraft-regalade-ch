@@ -62,6 +62,7 @@ for (const width of widths) {
   await auditTabList(page, '#tutoriels [data-tab-storage="regalade.tutorial.active"]', `Tutoriels à ${width}px`);
   for (const panelId of [
     'tutorial-economy',
+    'tutorial-jei',
     'tutorial-create-first-factory',
     'tutorial-big-cannons',
     'tutorial-stargates',
