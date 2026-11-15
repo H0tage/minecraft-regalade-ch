@@ -4,6 +4,7 @@
   if (!tabList || !tutorialContent || document.querySelector('#tutorial-economy')) return;
 
   const asset = name => `assets/economy/${name}.png`;
+  const icon = (name, alt = '') => `<img class="eco-icon" src="${asset(name)}" alt="${alt}">`;
 
   const tab = document.createElement('button');
   tab.className = 'tutorial-tab';
@@ -22,138 +23,248 @@
   panel.setAttribute('aria-labelledby', tab.id);
   panel.hidden = true;
   panel.innerHTML = `
-    <article class="eco-intro">
-      <div>
-        <p class="eco-kicker">Vie du serveur</p>
-        <h1>Une économie pour faire vivre le monde</h1>
-        <p>Ici, l’argent n’est pas un score à faire monter. Il permet à une prise de pêche de finir dans la cuisine d’un restaurant, à un constructeur de commander ses matériaux ou à une petite gare de devenir le point de départ d’un service de livraison. Tu peux garder quelques pièces dans un coffre, ouvrir un compte, utiliser une carte bancaire ou installer ta propre boutique.</p>
-      </div>
-      <div class="eco-coins" aria-label="Pièces Sprocket, Cog et Crown">
-        <span class="eco-coin"><img src="${asset('sprocket')}" alt="Sprocket"></span>
-        <span class="eco-coin"><img src="${asset('cog')}" alt="Cog"></span>
-        <span class="eco-coin"><img src="${asset('crown')}" alt="Crown"></span>
-      </div>
-    </article>
+    <section class="eco-tutorial">
+      <nav class="eco-switcher" role="tablist" aria-label="Choisir le parcours Argent et échanges">
+        <button id="eco-first-tab" type="button" role="tab" aria-selected="true" aria-controls="eco-first-panel">Premières pièces</button>
+        <button id="eco-bank-tab" type="button" role="tab" aria-selected="false" aria-controls="eco-bank-panel" tabindex="-1">Banque et carte</button>
+        <button id="eco-shop-tab" type="button" role="tab" aria-selected="false" aria-controls="eco-shop-panel" tabindex="-1">Commercer</button>
+      </nav>
 
-    <nav class="eco-route" aria-label="Sommaire du tutoriel économie">
-      <a href="#eco-revenus"><span>01</span>Comment l’argent circule</a>
-      <a href="#eco-missions"><span>02</span>Les petits boulots</a>
-      <a href="#eco-vendre"><span>03</span>Vendre son surplus</a>
-      <a href="#eco-echanges"><span>04</span>Boutiques et services</a>
-    </nav>
-
-    <section class="eco-section" id="eco-revenus">
-      <div class="eco-marker">01</div>
-      <div>
-        <div class="eco-heading">
-          <p class="eco-label">Présente, mais pas envahissante</p>
-          <h2>L’argent arrive en jouant normalement</h2>
-          <p>Pas besoin de choisir une « classe » ni de passer sa soirée à farmer des pièces. Le système accompagne ce que tu fais déjà : construire, explorer, cuisiner, pêcher ou bricoler avec Create.</p>
-        </div>
-        <div class="eco-income-grid">
-          <article class="eco-income"><img src="${asset('sprocket')}" alt=""><h3>En avançant dans ta partie</h3><p>Certains progrès Vanilla et Create glissent automatiquement quelques pièces dans ta poche. Construire ta première machine ou franchir une étape importante peut donc aussi alimenter tes futurs échanges.</p></article>
-          <article class="eco-income"><img src="${asset('sprocket')}" alt=""><h3>En prenant simplement ton temps</h3><p>Chaque heure de jeu apporte <strong>1 Sprocket</strong>. Une soirée passée à décorer une maison ou discuter dans un café compte autant qu’une soirée dans une grosse usine.</p></article>
-          <article class="eco-income"><img src="${asset('cog')}" alt=""><h3>En regardant les petites annonces</h3><p>La commande <code>/missions</code> présente six petits boulots : fabriquer, cuisiner, pêcher, élever des animaux, voyager ou utiliser Create, par exemple.</p></article>
-          <article class="eco-income"><img src="${asset('fish')}" alt=""><h3>En vendant ce que tu ramènes</h3><p>Une pêche ou une récolte dont tu n’as pas besoin peut être déposée dans un bac de vente. Les poissons rares, grands ou dorés valent davantage.</p></article>
-        </div>
-        <div class="eco-reward-strip" aria-label="Récompenses des progrès">
-          <article class="eco-reward"><img src="${asset('sprocket')}" alt="Sprocket"><div><b>Progrès ordinaire</b><span>1 Sprocket</span></div></article>
-          <article class="eco-reward"><img src="${asset('cog')}" alt="Cog"><div><b>Étape importante</b><span>1 Cog</span></div></article>
-          <article class="eco-reward"><img src="${asset('crown')}" alt="Crown"><div><b>Défi rare</b><span>1 Crown</span></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="eco-section" id="eco-missions">
-      <div class="eco-marker">02</div>
-      <div>
-        <div class="eco-heading">
-          <p class="eco-label">Le panneau des petits boulots</p>
-          <h2>Trouver quelque chose à faire cette semaine</h2>
-          <p>Les missions ressemblent davantage à de petites annonces qu’à une quête principale. Elles sont facultatives, personnelles et peuvent différer d’un joueur à l’autre. Si l’une correspond à ce que tu avais déjà envie de faire, elle te rapportera quelques Sprockets.</p>
-        </div>
-        <div class="eco-missions">
-          <article class="eco-panel">
-            <h3>La procédure</h3>
-            <ol class="eco-list">
-              <li>Tape <span class="eco-command">/missions</span> dans le chat.</li>
-              <li>Parcours les six annonces et ignore simplement celles qui ne t’intéressent pas.</li>
-              <li>Si une proposition te plaît, réalise l’action demandée : pêcher, cuisiner, fabriquer, marcher, élever des animaux ou utiliser une machine Create.</li>
-              <li>Retourne dans l’interface pour récupérer le paiement du travail terminé.</li>
-            </ol>
-          </article>
-          <aside class="eco-panel eco-reset"><strong>Dimanche · 00:00</strong><span>Les missions sont renouvelées chaque semaine, à l’heure suisse. Si tu es absent, ton renouvellement est appliqué à ta prochaine connexion.</span></aside>
-        </div>
-      </div>
-    </section>
-
-    <section class="eco-section" id="eco-vendre">
-      <div class="eco-marker">03</div>
-      <div>
-        <div class="eco-heading">
-          <p class="eco-label">Donner une valeur au surplus</p>
-          <h2>Vendre une récolte ou une prise</h2>
-          <p>Le Selling Bin est la solution la plus simple quand tu n’as pas encore de commerce. Tu y déposes les objets pris en charge et il les convertit en monnaie. Tout n’est pas vendable : vérifie le prix affiché avant de confirmer.</p>
-        </div>
-        <div class="eco-sell-layout">
-          <article class="eco-recipe">
-            <div class="eco-recipe-head"><img src="${asset('selling-bin')}" alt="Icône du mod Selling Bin"><div><h3>Recette du Selling Bin</h3><p>3 tapis · 1 tonneau · 5 dalles en bois</p></div></div>
-            <div class="eco-craft" aria-label="Recette de fabrication du Selling Bin">
-              <span class="eco-slot carpet">Tapis</span><span class="eco-slot carpet">Tapis</span><span class="eco-slot carpet">Tapis</span>
-              <span class="eco-slot">Dalle</span><span class="eco-slot barrel">Tonneau</span><span class="eco-slot">Dalle</span>
-              <span class="eco-slot">Dalle</span><span class="eco-slot">Dalle</span><span class="eco-slot">Dalle</span>
-            </div>
-          </article>
-          <div class="eco-sell-steps">
-            <article class="eco-sell-step"><div><h3>Pose puis ouvre le bac</h3><p>Un clic droit ouvre son interface de vente.</p></div></article>
-            <article class="eco-sell-step"><div><h3>Dépose les objets à vendre</h3><p>Commence avec une petite quantité. Si l’objet est accepté, l’interface indique sa valeur.</p></div></article>
-            <article class="eco-sell-step"><div><h3>Choisis la monnaie</h3><p>Sélectionne une pièce Numismatics adaptée au montant proposé. Une carte bancaire Numismatics peut aussi être placée dans l’emplacement prévu.</p></div></article>
-            <article class="eco-sell-step"><div><h3>Confirme la vente</h3><p><strong>Sell</strong> vend la sélection ; <strong>Sell All</strong> vend tout le contenu accepté. Récupère ensuite le paiement indiqué.</p></div></article>
+      <div class="eco-panel" id="eco-first-panel" role="tabpanel" aria-labelledby="eco-first-tab">
+        <header class="eco-hero">
+          <div>
+            <p class="eco-eyebrow">De la première ressource à la première pièce</p>
+            <h1>Faire entrer de l’argent dans le monde</h1>
+            <p>Une récolte, une prise de pêche ou un petit boulot peut devenir de la monnaie. Ce premier parcours montre d’où viennent les pièces, comment réaliser une vente volontaire et comment vérifier les prix sans apprendre un catalogue par cœur.</p>
           </div>
-        </div>
-        <p class="eco-note"><strong>Auto-Sell :</strong> cette option vend automatiquement les objets compatibles déposés dans le bac. Active-la seulement après avoir vérifié ce que tu lui envoies, surtout si le bac est relié à une automatisation.</p>
+          <div class="eco-hero-coins" aria-label="Exemples de pièces Numismatics">${icon('sprocket', 'Sprocket')}${icon('cog', 'Cog')}${icon('crown', 'Crown')}</div>
+        </header>
 
-        <div class="eco-fish-layout">
-          <div class="eco-table-wrap">
-            <table class="eco-table">
-              <thead><tr><th>Rareté du poisson</th><th>Valeur de base</th></tr></thead>
-              <tbody>
-                <tr><td>Commun</td><td>25</td></tr>
-                <tr><td>Peu commun</td><td>50</td></tr>
-                <tr><td>Rare</td><td>100</td></tr>
-                <tr><td>Épique</td><td>150</td></tr>
-                <tr><td>Légendaire</td><td>200</td></tr>
-              </tbody>
-            </table>
+        <section class="eco-section" id="eco-money-map" data-phase="Comprendre">
+          <div class="eco-title"><span>01</span><div><p>La règle essentielle</p><h2>Création et circulation de l’argent</h2></div></div>
+          <p class="eco-lead">Le serveur peut créer des pièces pour certaines actions. Une Boutique, elle, ne crée rien : elle transmet simplement l’argent d’un joueur à un autre.</p>
+          <div class="eco-flow eco-flow-four" aria-label="Sources et usages de la monnaie">
+            <article><b>Progrès</b><span>Vanilla et Create</span></article><i>+</i>
+            <article><b>Missions</b><span>Petits boulots hebdomadaires</span></article><i>+</i>
+            <article><b>Selling Bin</b><span>Vente de ressources compatibles</span></article><i>→</i>
+            <article class="eco-result">${icon('sprocket')}<b>Pièces</b><span>À garder ou à échanger</span></article>
           </div>
-          <aside class="eco-fish-card"><img src="${asset('fish')}" alt="Poisson Starcatcher"><h3>Une prise peut finir au marché</h3><p>La taille et la qualité modifient le prix. Un poisson doré vaut <strong>dix fois</strong> sa valeur habituelle.</p></aside>
-        </div>
-        <p class="eco-note eco-warning"><strong>Pas besoin de transformer la pêche en usine.</strong> Tu peux simplement jeter ta ligne, attendre une prise, la vendre et repartir construire. Le système récompense aussi ce rythme-là.</p>
-      </div>
-    </section>
+          <div class="eco-card-grid eco-card-grid-2">
+            <article><h3>Créer de la monnaie</h3><p>Les progrès, les missions, le temps de jeu et le Selling Bin injectent de nouvelles pièces dans le monde.</p></article>
+            <article><h3>Faire circuler la monnaie</h3><p>Un paiement direct ou une Boutique déplace des pièces déjà existantes entre les joueurs.</p></article>
+          </div>
+        </section>
 
-    <section class="eco-section" id="eco-echanges">
-      <div class="eco-marker">04</div>
-      <div>
-        <div class="eco-heading">
-          <p class="eco-label">Des lieux et des métiers</p>
-          <h2>Du porte-monnaie à la rue commerçante</h2>
-          <p>Les pièces peuvent rester de simples objets rangés dans un coffre, mais elles peuvent aussi devenir le début d’un commerce, d’une banque de groupe ou d’un service entre plusieurs villes. Rien ne t’oblige à jouer un rôle : ces possibilités donnent seulement du contexte aux constructions et aux rencontres.</p>
-        </div>
-        <div class="eco-loop" aria-label="Possibilités de l’économie entre joueurs">
-          <article><b>1. Garde des pièces</b><span>La monnaie est physique : transporte-la, range-la ou cache-la dans un coffre.</span></article>
-          <article><b>2. Ouvre un compte</b><span>Un terminal bancaire et une carte permettent de payer sans promener toute ta fortune.</span></article>
-          <article><b>3. Monte une boutique</b><span>Un Vendor peut acheter ou vendre tes produits même quand tu n’es pas connecté.</span></article>
-          <article><b>4. Organise la logistique</b><span>Packagers, gares et trains peuvent alimenter des commerces éloignés.</span></article>
-        </div>
-        <p class="eco-note eco-warning"><strong>Ce ne sont pas des métiers imposés.</strong> Tu peux vendre trois poissons une fois dans ta vie, tenir une boulangerie tous les soirs ou devenir la personne déterminée qui livre les marchandises des autres par train. Le jeu fournit les outils ; les joueurs décident de l’histoire qui se construit autour.</p>
-        <div class="eco-examples">
-          <article class="eco-example"><h3>Le pêcheur, le restaurant et le livreur</h3><p>L’un ramène les prises, le second les achète pour ses recettes et un troisième peut assurer les livraisons entre le port et la ville.</p></article>
-          <article class="eco-example"><h3>Une boutique qui existe vraiment</h3><p>Construis ton échoppe, remplis les rayons et configure un Vendor. Les autres joueurs peuvent acheter sans attendre que tu sois présent.</p></article>
-          <article class="eco-example"><h3>Une entreprise de transport</h3><p>Avec assez d’organisation, une gare peut recevoir les commandes, charger les colis et desservir plusieurs commerces par le rail.</p></article>
-        </div>
+        <section class="eco-section" id="eco-first-bin" data-phase="Première vente">
+          <div class="eco-title"><span>02</span><div><p>L’outil de départ</p><h2>Fabriquer un Selling Bin</h2></div></div>
+          <p class="eco-lead">Le Selling Bin rachète certains objets et crée les pièces correspondantes. Ce n’est pas une boutique destinée aux autres joueurs.</p>
+          <div class="eco-recipe-layout">
+            <article class="eco-recipe-card">
+              <div class="eco-object-heading">${icon('selling-bin', 'Selling Bin')}<div><h3>Selling Bin</h3><p>3 Carpets · 1 Barrel · 5 Wooden Slabs</p></div></div>
+              <div class="eco-craft" aria-label="Recette du Selling Bin">
+                <span class="carpet">Carpet</span><span class="carpet">Carpet</span><span class="carpet">Carpet</span>
+                <span>Slab</span><span class="barrel">Barrel</span><span>Slab</span>
+                <span>Slab</span><span>Slab</span><span>Slab</span>
+              </div>
+            </article>
+            <article class="eco-info-card">
+              <h3>Consulter les ventes disponibles</h3>
+              <ol><li>Cherche le <strong>Selling Bin</strong> dans JEI</li><li>Place le curseur sur son icône</li><li>Appuie sur <kbd>U</kbd> pour afficher ses utilisations</li><li>JEI montre les objets rachetés et les monnaies proposées</li></ol>
+              <p class="eco-mini-note">La liste vient directement du pack : elle reste correcte même si un prix est modifié plus tard.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="eco-section" id="eco-first-sale" data-phase="Première vente">
+          <div class="eco-title"><span>03</span><div><p>Première action</p><h2>Vendre un seul objet</h2></div></div>
+          <div class="eco-action-grid">
+            <article><b>1</b><div><h3>Ouvre le bac</h3><p>Pose le Selling Bin dans un endroit sûr puis fais un clic droit.</p></div></article>
+            <article><b>2</b><div><h3>Dépose une unité</h3><p>Commence volontairement petit. Tout objet n’est pas nécessairement vendable.</p></div></article>
+            <article><b>3</b><div><h3>Lis le prix</h3><p>Maintiens <kbd>Maj</kbd> en survolant l’objet pour afficher sa valeur.</p></div></article>
+            <article><b>4</b><div><h3>Choisis la monnaie</h3><p>Sélectionne une pièce ou <strong>Highest Possible</strong> pour obtenir la meilleure dénomination possible.</p></div></article>
+            <article><b>5</b><div><h3>Confirme avec Sell</h3><p>L’objet est consommé et sa valeur est convertie en pièces.</p></div></article>
+            <article><b>6</b><div><h3>Vérifie le résultat</h3><p>Récupère le paiement. Un éventuel reste de valeur demeure dans le bac et n’est pas perdu.</p></div></article>
+          </div>
+          <div class="eco-callout"><strong>Plus tard seulement</strong><span><b>Sell All</b> vend tout le contenu compatible. <b>Auto-Sell</b> vend automatiquement ce qui entre dans le bac : ne l’active qu’après avoir vérifié ton installation.</span></div>
+        </section>
+
+        <section class="eco-section" id="eco-coins" data-phase="Comprendre les pièces">
+          <div class="eco-title"><span>04</span><div><p>Six dénominations</p><h2>Lire la valeur des pièces</h2></div></div>
+          <p class="eco-lead">Toutes les pièces représentent la même monnaie. Une grosse pièce évite simplement de transporter une pile entière de petites pièces.</p>
+          <div class="eco-coin-scale" aria-label="Conversion des monnaies Numismatics">
+            <article>${icon('spur', 'Spur')}<b>Spur</b><span>1</span></article><i>× 8</i>
+            <article>${icon('bevel', 'Bevel')}<b>Bevel</b><span>8</span></article><i>× 2</i>
+            <article>${icon('sprocket', 'Sprocket')}<b>Sprocket</b><span>16</span></article><i>× 4</i>
+            <article>${icon('cog', 'Cog')}<b>Cog</b><span>64</span></article><i>× 8</i>
+            <article>${icon('crown', 'Crown')}<b>Crown</b><span>512</span></article><i>× 8</i>
+            <article>${icon('sun', 'Sun')}<b>Sun</b><span>4 096</span></article>
+          </div>
+          <p class="eco-checkpoint"><strong>À ce stade</strong><span>Tu sais faire apparaître tes premières pièces, vérifier les objets vendables et comprendre la valeur reçue. La banque n’est pas nécessaire pour commencer.</span></p>
+        </section>
+
+        <section class="eco-section" id="eco-other-income" data-phase="Autres revenus">
+          <div class="eco-title"><span>05</span><div><p>Sans obligation</p><h2>Progrès et missions hebdomadaires</h2></div></div>
+          <div class="eco-card-grid eco-card-grid-2">
+            <article><h3>En avançant normalement</h3><p>Certains progrès Vanilla et Create donnent automatiquement des pièces : <strong>1 Sprocket</strong> pour un progrès ordinaire, <strong>1 Cog</strong> pour un objectif important et <strong>1 Crown</strong> pour un défi.</p></article>
+            <article><h3>En consultant les missions</h3><p>Tape <code>/missions</code>, parcours les six propositions personnelles et choisis seulement celles qui correspondent à ce que tu voulais déjà faire.</p></article>
+          </div>
+          <div class="eco-timeline"><b>Dimanche · 00:00</b><span>Six missions disponibles pendant la semaine</span><b>Dimanche suivant · 00:00</b></div>
+          <p class="eco-mini-note">Les missions sont renouvelées à minuit, heure suisse. Si tu es absent, le renouvellement est appliqué à ta prochaine connexion.</p>
+        </section>
       </div>
-    </section>
-  `;
+
+      <div class="eco-panel" id="eco-bank-panel" role="tabpanel" aria-labelledby="eco-bank-tab" hidden>
+        <header class="eco-hero eco-hero-compact">
+          <div><p class="eco-eyebrow">Des pièces physiques au compte bancaire</p><h1>Déposer, retirer et payer par carte</h1><p>Quelques pièces dans un coffre suffisent au début. Lorsque ton atelier sait produire des Precision Mechanisms, tu peux construire une véritable infrastructure bancaire.</p></div>
+          <div class="eco-hero-coins">${icon('bank-terminal', 'Terminal bancaire')}${icon('bank-card', 'Carte bancaire')}</div>
+        </header>
+
+        <section class="eco-section" id="eco-bank-model" data-phase="Comprendre">
+          <div class="eco-title"><span>01</span><div><p>Trois éléments</p><h2>Ce que conserve réellement la banque</h2></div></div>
+          <div class="eco-flow eco-bank-flow">
+            <article>${icon('sprocket')}<b>Pièces physiques</b><span>Des objets transportables</span></article><i>→ dépôt →</i>
+            <article class="eco-result">${icon('bank-terminal')}<b>Compte bancaire</b><span>Une valeur enregistrée</span></article><i>← liée à ←</i>
+            <article>${icon('bank-card')}<b>Carte bancaire</b><span>Une clé vers le compte</span></article>
+          </div>
+          <p class="eco-callout"><strong>À retenir</strong><span>La carte ne contient pas l’argent. Le solde reste sur le compte même si la carte est perdue ou détruite.</span></p>
+        </section>
+
+        <section class="eco-section" id="eco-bank-build" data-phase="Construire">
+          <div class="eco-title"><span>02</span><div><p>L’infrastructure</p><h2>Fabriquer le Terminal bancaire</h2></div></div>
+          <div class="eco-inline-recipe">${icon('bank-terminal', 'Terminal bancaire')}<span>1 Precision Mechanism</span><i>+</i><span>1 Industrial Iron Block</span><i>+</i><span>1 Electron Tube</span><i>→</i><strong>1 Terminal bancaire</strong></div>
+          <div class="eco-action-grid eco-action-grid-3">
+            <article><b>1</b><div><h3>Fabrique et pose le Terminal</h3><p>La recette est sans forme : les trois composants peuvent être placés n’importe où dans l’établi.</p></div></article>
+            <article><b>2</b><div><h3>Ouvre-le</h3><p>Ton compte personnel est créé automatiquement au premier accès.</p></div></article>
+            <article><b>3</b><div><h3>Vérifie le compte</h3><p>L’interface doit afficher ton nom et ton solde actuel. Aucun formulaire ni commande n’est nécessaire.</p></div></article>
+          </div>
+        </section>
+
+        <section class="eco-section" id="eco-bank-card" data-phase="Construire">
+          <div class="eco-title"><span>03</span><div><p>Le moyen de paiement</p><h2>Fabriquer et lier une Carte bancaire</h2></div></div>
+          <div class="eco-inline-recipe">${icon('bank-card', 'Carte bancaire rouge')}<span>1 Precision Mechanism</span><i>+</i><span>1 Iron Sheet</span><i>+</i><span>1 Dye</span><i>→</i><strong>1 Carte bancaire</strong></div>
+          <div class="eco-action-grid eco-action-grid-3">
+            <article><b>1</b><div><h3>Choisis sa couleur</h3><p>La teinture détermine seulement l’apparence de la carte.</p></div></article>
+            <article><b>2</b><div><h3>Prends-la en main</h3><p>Fais un clic droit avec la carte vide pour la lier à ton compte personnel.</p></div></article>
+            <article><b>3</b><div><h3>Contrôle l’infobulle</h3><p>La carte doit passer de <strong>Vide</strong> à <strong>Liée</strong> et afficher le compte associé.</p></div></article>
+          </div>
+          <p class="eco-mini-note"><strong>Maj + clic droit</strong> efface l’association de la carte que tu tiens.</p>
+        </section>
+
+        <section class="eco-section" id="eco-bank-deposit" data-phase="Utiliser le compte">
+          <div class="eco-title"><span>04</span><div><p>Aller-retour</p><h2>Déposer puis retirer une pièce</h2></div></div>
+          <div class="eco-split-path">
+            <article><p class="eco-path-label">Déposer</p><ol><li>Ouvre le Terminal et note ton solde</li><li>Place une pièce dans l’emplacement de dépôt à droite</li><li>Vérifie que la pièce disparaît</li><li>Contrôle l’augmentation exacte du solde</li></ol><p>Maj + clic sur une pièce l’envoie directement vers le dépôt.</p></article>
+            <article><p class="eco-path-label">Retirer</p><ol><li>Choisis l’une des six dénominations</li><li>Prends la pièce dans la sortie correspondante</li><li>Vérifie son apparition dans ton inventaire</li><li>Contrôle la diminution exacte du solde</li></ol><p>Le retrait est possible tant que le compte possède la valeur nécessaire.</p></article>
+          </div>
+        </section>
+
+        <section class="eco-section" id="eco-bank-pay" data-phase="Utiliser le compte">
+          <div class="eco-title"><span>05</span><div><p>Paiement</p><h2>Utiliser sa carte dans une Boutique</h2></div></div>
+          <div class="eco-flow eco-payment-flow">
+            <article>${icon('bank-card')}<b>Carte liée en main</b></article><i>+</i><article>${icon('vendor')}<b>Clic droit sur la Boutique</b></article><i>→</i><article class="eco-result"><b>Objet reçu</b><span>Solde débité automatiquement</span></article>
+          </div>
+          <div class="eco-card-grid eco-card-grid-2">
+            <article><h3>Sans carte</h3><p>La Boutique prélève les pièces compatibles que tu transportes.</p></article>
+            <article><h3>Si tu perds ta carte</h3><p>L’argent reste sur le compte et un joueur non autorisé ne peut pas utiliser ta carte personnelle. Tu peux simplement en fabriquer et en lier une nouvelle.</p></article>
+          </div>
+          <p class="eco-mini-note">Les Authorized Cards permettent de déléguer des accès à des sous-comptes. C’est une fonction avancée, volontairement laissée hors de ce parcours.</p>
+        </section>
+      </div>
+
+      <div class="eco-panel" id="eco-shop-panel" role="tabpanel" aria-labelledby="eco-shop-tab" hidden>
+        <header class="eco-hero eco-hero-compact">
+          <div><p class="eco-eyebrow">Du surplus au commerce entre joueurs</p><h1>Ouvrir une première Boutique</h1><p>Le Selling Bin injecte de l’argent contre des ressources configurées par le serveur. Une Boutique fait autre chose : elle permet à un joueur de vendre ses propres produits aux autres, même lorsqu’il est absent.</p></div>
+          <div class="eco-hero-coins">${icon('vendor', 'Boutique Numismatics')}${icon('sprocket', 'Sprocket')}</div>
+        </header>
+
+        <section class="eco-section" id="eco-shop-difference" data-phase="Comprendre">
+          <div class="eco-title"><span>01</span><div><p>Deux machines, deux rôles</p><h2>Selling Bin ou Boutique</h2></div></div>
+          <div class="eco-card-grid eco-card-grid-2 eco-compare">
+            <article>${icon('selling-bin')}<h3>Selling Bin</h3><p>Le serveur rachète certains objets et crée de nouvelles pièces. Il sert à faire entrer de l’argent dans l’économie.</p></article>
+            <article>${icon('vendor')}<h3>Boutique</h3><p>Un joueur propose un produit et reçoit l’argent d’un autre joueur. Elle fait circuler la monnaie existante.</p></article>
+          </div>
+        </section>
+
+        <section class="eco-section" id="eco-shop-build" data-phase="Préparer la vente">
+          <div class="eco-title"><span>02</span><div><p>Le bloc de commerce</p><h2>Fabriquer et poser la Boutique</h2></div></div>
+          <div class="eco-vertical-recipe" aria-label="Recette verticale de la Boutique"><span>Framed Glass</span><i>↓</i><span>Brass Casing</span><i>↓</i><span>Electron Tube</span><i>→</i><strong>${icon('vendor')} 1 Boutique</strong></div>
+          <p class="eco-callout"><strong>Avant de la configurer</strong><span>Choisis un produit simple, la quantité vendue à chaque transaction, un prix lisible et prépare un petit stock.</span></p>
+        </section>
+
+        <section class="eco-section" id="eco-shop-config" data-phase="Préparer la vente">
+          <div class="eco-title"><span>03</span><div><p>Côté vendeur</p><h2>Configurer une vente</h2></div></div>
+          <div class="eco-action-grid">
+            <article><b>1</b><div><h3>Ouvre les réglages</h3><p>Le propriétaire fait <strong>Maj + clic droit</strong> sur la Boutique.</p></div></article>
+            <article><b>2</b><div><h3>Choisis Sell / Vente</h3><p>Ce mode distribue tes produits contre le paiement défini.</p></div></article>
+            <article><b>3</b><div><h3>Définis le produit</h3><p>Place un objet témoin dans le filtre et règle la quantité par transaction.</p></div></article>
+            <article><b>4</b><div><h3>Fixe le prix</h3><p>Utilise les six contrôles de monnaie pour composer le montant souhaité.</p></div></article>
+            <article><b>5</b><div><h3>Ajoute le stock</h3><p>La Boutique possède neuf emplacements internes pour les produits.</p></div></article>
+            <article><b>6</b><div><h3>Choisis où va l’argent</h3><p>Sans carte, les pièces restent dans la Boutique. Avec une carte liée insérée, les recettes partent directement sur ton compte.</p></div></article>
+          </div>
+        </section>
+
+        <section class="eco-section" id="eco-shop-test" data-phase="Ouvrir le commerce">
+          <div class="eco-title"><span>04</span><div><p>Côté acheteur</p><h2>Tester la première transaction</h2></div></div>
+          <div class="eco-flow eco-shop-flow"><article><b>Produit en stock</b><span>Quantité et prix affichés</span></article><i>→</i><article>${icon('vendor')}<b>Clic droit</b><span>Une transaction</span></article><i>→</i><article class="eco-result"><b>Objet à l’acheteur</b><span>Paiement au vendeur</span></article></div>
+          <div class="eco-action-grid eco-action-grid-3">
+            <article><b>1</b><div><h3>Note l’état initial</h3><p>Le vendeur contrôle son stock et son argent avant le test.</p></div></article>
+            <article><b>2</b><div><h3>Achète une fois</h3><p>L’acheteur paie avec sa carte tenue en main ou avec ses pièces.</p></div></article>
+            <article><b>3</b><div><h3>Vérifie les deux côtés</h3><p>L’objet doit arriver chez l’acheteur, le stock baisser et le vendeur recevoir le paiement.</p></div></article>
+          </div>
+          <p class="eco-mini-note">En étant accroupi pendant le clic droit, l’acheteur peut effectuer plusieurs transactions, jusqu’à la limite d’une pile et des ressources disponibles.</p>
+        </section>
+
+        <section class="eco-section" id="eco-shop-security" data-phase="Gérer la Boutique">
+          <div class="eco-title"><span>05</span><div><p>Propriété et confiance</p><h2>Protéger et réapprovisionner le commerce</h2></div></div>
+          <div class="eco-card-grid eco-card-grid-3">
+            <article><h3>Propriétaire</h3><p>La Boutique appartient au joueur qui l’a posée. Les autres joueurs ne peuvent pas modifier librement ses réglages.</p></article>
+            <article><h3>Liste de confiance</h3><p>Le propriétaire peut autoriser d’autres joueurs depuis le bouton prévu dans l’interface.</p></article>
+            <article><h3>Réapprovisionnement</h3><p>Remplis les neuf emplacements internes. Une rupture de stock empêche simplement les nouvelles ventes.</p></article>
+          </div>
+        </section>
+
+        <section class="eco-section" id="eco-shop-buy" data-phase="Pour aller plus loin">
+          <div class="eco-title"><span>06</span><div><p>Optionnel</p><h2>Faire racheter des objets par la Boutique</h2></div></div>
+          <p class="eco-lead">Le mode <strong>Buy / Achat</strong> inverse la transaction : la Boutique reçoit l’objet tenu par le joueur et lui verse le prix configuré.</p>
+          <div class="eco-flow eco-buy-flow"><article><b>Objet tenu par le joueur</b></article><i>→</i><article>${icon('vendor')}<b>Boutique en mode Buy</b><span>Stockage libre + fonds disponibles</span></article><i>→</i><article class="eco-result"><b>Paiement au joueur</b></article></div>
+          <p class="eco-callout"><strong>Les deux conditions</strong><span>La Boutique doit posséder assez d’argent pour payer et assez de place pour recevoir les objets. Commence par maîtriser le mode Vente avant d’utiliser celui-ci.</span></p>
+        </section>
+      </div>
+    </section>`;
+
   tutorialContent.append(panel);
+
+  const tabs = [...panel.querySelectorAll('.eco-switcher [role="tab"]')];
+  const panels = [...panel.querySelectorAll(':scope .eco-panel[role="tabpanel"]')];
+  const storageKey = 'regalade.economy.active';
+
+  function select(selectedTab, remember = true) {
+    tabs.forEach(item => {
+      const active = item === selectedTab;
+      item.setAttribute('aria-selected', String(active));
+      item.tabIndex = active ? 0 : -1;
+    });
+    panels.forEach(item => { item.hidden = item.id !== selectedTab.getAttribute('aria-controls'); });
+    if (remember) {
+      try { localStorage.setItem(storageKey, selectedTab.id); } catch (_) { /* Storage is optional. */ }
+    }
+  }
+
+  tabs.forEach((item, index) => {
+    item.addEventListener('click', () => select(item));
+    item.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      tabs[next].focus();
+      select(tabs[next]);
+    });
+  });
+
+  let initial = tabs[0];
+  try {
+    const saved = localStorage.getItem(storageKey);
+    initial = tabs.find(item => item.id === saved) || initial;
+  } catch (_) { /* Storage is optional. */ }
+  select(initial, false);
 })();
