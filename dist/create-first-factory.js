@@ -36,9 +36,6 @@
             <h1>Comprendre Create</h1>
             <p>Create transforme Minecraft en atelier mécanique. Le mod ne donne pas une machine magique pour chaque ressource : il fournit des pièces, des mouvements et des procédés que tu assembles pour fabriquer tes propres installations.</p>
           </div>
-          <div class="cff-overview-icons" aria-label="Composants emblématiques de Create">
-            ${icon('water-wheel', 'Water Wheel')}${icon('cogwheel', 'Cogwheel')}${icon('belt', 'Mechanical Belt')}${icon('press', 'Mechanical Press')}
-          </div>
         </header>
 
         <section class="cff-overview-section" id="cff-overview-concept" data-phase="Les bases">
@@ -63,9 +60,9 @@
             <article class="cff-card"><h3>SU : la capacité</h3><p>Les Stress Units représentent la charge que la source peut supporter. Lorsque les machines demandent trop de SU, tout le réseau devient <strong>Overstressed</strong> et s’arrête.</p></article>
           </div>
           <div class="cff-power-model" aria-label="Fonctionnement d’un réseau Create">
-            <article class="source">${icon('water-wheel')}<b>Source</b><span>crée rotation et capacité</span></article><i>→</i>
-            <article>${icon('cogwheel')}<b>Transmission</b><span>transporte ou modifie la rotation</span></article><i>→</i>
-            <article>${icon('millstone')}<b>Machine</b><span>consomme une partie de la capacité</span></article>
+            <article class="source"><b>Source de rotation</b><span>crée le mouvement et fournit la capacité</span></article><i>→</i>
+            <article><b>Transmission</b><span>transporte ou modifie la rotation</span></article><i>→</i>
+            <article><b>Machine</b><span>utilise la rotation pour effectuer une tâche</span></article>
           </div>
           <p class="cff-note"><strong>La règle simple :</strong> la source détermine ce que ton réseau peut supporter ; les engrenages déterminent sa vitesse et son sens.</p>
         </section>
@@ -73,10 +70,10 @@
         <section class="cff-overview-section" id="cff-overview-families" data-phase="Construire une machine">
           <div class="cff-title"><span>03</span><div><p>Quatre familles de composants</p><h2>Comprendre le rôle de chaque bloc</h2></div></div>
           <div class="cff-family-grid">
-            <article><div class="cff-family-icons">${icon('water-wheel')}${icon('cogwheel')}</div><h3>Énergie et transmission</h3><p>Water Wheels, Shafts, Cogwheels et Gearboxes créent puis distribuent la rotation dans l’atelier.</p></article>
-            <article><div class="cff-family-icons">${icon('millstone')}${icon('press')}</div><h3>Transformation</h3><p>Millstone, Mechanical Press, Mixer, Saw et Encased Fan modifient les matières selon des recettes Create.</p></article>
-            <article><div class="cff-family-icons">${icon('belt')}${icon('funnel')}</div><h3>Logistique</h3><p>Belts, Funnels, Chutes, Tunnels et Vaults déplacent, filtrent, distribuent et stockent les objets.</p></article>
-            <article><div class="cff-family-icons">${icon('wrench')}${icon('goggles')}</div><h3>Contrôle</h3><p>Wrench, Goggles, Clutch, Gearshift, Speedometer et Redstone Link permettent de régler et piloter l’installation.</p></article>
+            <article><h3>Énergie et transmission</h3><p>Water Wheels, Shafts, Cogwheels et Gearboxes créent puis distribuent la rotation dans l’atelier.</p></article>
+            <article><h3>Transformation</h3><p>Millstone, Mechanical Press, Mixer, Saw et Encased Fan modifient les matières selon des recettes Create.</p></article>
+            <article><h3>Logistique</h3><p>Belts, Funnels, Chutes, Tunnels et Vaults déplacent, filtrent, distribuent et stockent les objets.</p></article>
+            <article><h3>Contrôle</h3><p>Wrench, Goggles, Clutch, Gearshift, Speedometer et Redstone Link permettent de régler et piloter l’installation.</p></article>
           </div>
         </section>
 
@@ -84,12 +81,12 @@
           <div class="cff-title"><span>04</span><div><p>Les procédés</p><h2>Une ressource peut suivre plusieurs chemins</h2></div></div>
           <p class="cff-lead">Dans JEI, une même matière peut avoir plusieurs transformations. Le choix de la machine modifie parfois le rendement ou les sous-produits.</p>
           <div class="cff-process-library">
-            <article>${icon('millstone')}<b>Milling</b><span>broyer avec une Millstone</span></article>
-            <article>${icon('press')}<b>Pressing</b><span>aplatir sur Belt ou Depot</span></article>
-            <article>${icon('basin')}<b>Mixing</b><span>mélanger dans une Basin</span></article>
-            <article>${icon('fan')}<b>Bulk Processing</b><span>souffler à travers eau, feu ou lave</span></article>
-            <article>${icon('drill')}<b>Mechanical Harvesting</b><span>casser ou récolter automatiquement</span></article>
-            <article>${icon('belt')}<b>Sequenced Assembly</b><span>enchaîner plusieurs opérations</span></article>
+            <article><b>Milling</b><span>broyer avec une Millstone</span></article>
+            <article><b>Pressing</b><span>aplatir avec une Mechanical Press</span></article>
+            <article><b>Mixing</b><span>mélanger dans une Basin</span></article>
+            <article><b>Bulk Processing</b><span>souffler à travers de l’eau, du feu ou de la lave</span></article>
+            <article><b>Mechanical Harvesting</b><span>casser ou récolter automatiquement</span></article>
+            <article><b>Sequenced Assembly</b><span>enchaîner plusieurs opérations</span></article>
           </div>
           <div class="cff-method"><b>Pour concevoir une usine</b><span>Pars de l’objet final dans JEI, remonte ses recettes, choisis les procédés puis relie les machines avec une circulation d’objets et une circulation de rotation.</span></div>
         </section>
