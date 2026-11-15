@@ -84,7 +84,6 @@
 }
 
 .photo-hero {
-  position: relative;
   display: block;
   height: auto;
   min-height: 0;
@@ -92,24 +91,6 @@
   border: 1px solid var(--photo-line);
   border-radius: 17px;
   background: #fff;
-}
-
-.photo-hero::after {
-  position: absolute;
-  top: 18px;
-  right: 20px;
-  padding: 4px 8px;
-  border: 1px solid #d8c9c4;
-  border-radius: 4px;
-  background: #fff;
-  color: var(--photo-burgundy);
-  content: attr(data-plate);
-  font:
-    800 0.63rem/1.2 Georgia,
-    'Times New Roman',
-    serif;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .photo-hero-featured {
@@ -556,7 +537,6 @@
 .photo-note,
 .photo-warning,
 .photo-check {
-  position: relative;
   margin: 14px 0 0;
   padding: 13px 15px;
   border-left: 3px solid var(--photo-blue);
@@ -564,32 +544,6 @@
   color: var(--photo-muted);
   font-size: 0.84rem;
   line-height: 1.55;
-}
-
-.photo-note::before,
-.photo-warning::before,
-.photo-check::before {
-  position: absolute;
-  top: -8px;
-  right: 10px;
-  padding: 2px 6px;
-  border: 1px solid #d9cec0;
-  background: #fff;
-  color: var(--photo-burgundy);
-  content: 'NOTE';
-  font:
-    800 0.55rem/1.2 Georgia,
-    'Times New Roman',
-    serif;
-  letter-spacing: 0.08em;
-}
-
-.photo-warning::before {
-  content: 'À VÉRIFIER';
-}
-
-.photo-check::before {
-  content: 'RÉSULTAT';
 }
 
 .photo-warning {
@@ -777,23 +731,8 @@
 }
 
 #photo-studio-panel .photo-film-table > article {
-  position: relative;
-  padding-top: 29px;
   border-top: 3px solid #20292d;
   background: var(--photo-paper);
-}
-
-#photo-studio-panel .photo-film-table > article::before {
-  position: absolute;
-  top: 8px;
-  right: 11px;
-  color: var(--photo-burgundy);
-  content: 'FRAME';
-  font:
-    800 0.54rem/1.2 Georgia,
-    'Times New Roman',
-    serif;
-  letter-spacing: 0.08em;
 }
 
 #photo-paintings-panel :is(.photo-compare, .photo-card-grid, .photo-upload-methods) > article {
@@ -863,12 +802,6 @@
 
   .photo-section {
     padding: 23px 18px;
-  }
-
-  .photo-hero::after {
-    position: static;
-    display: table;
-    margin: 18px 0 0 auto;
   }
 
   .photo-hero-featured .photo-hero-copy {
