@@ -76,8 +76,7 @@ puissance nécessaire pour parcourir le tube sans incident.
 **Canon assez résistant** sinon la charge le fait rompre
 
 **En résumé :** le matériau ne pose pas simplement un chiffre « longueur maximale ». Il décide
-surtout si ton canon survivra à la charge nécessaire pour exploiter cette longueur. Oui, la nuance est un peu
-vicieuse.
+surtout si ton canon survivra à la charge nécessaire pour exploiter cette longueur.
 
 [Big Cannon / Gros canon]
 
@@ -199,8 +198,8 @@ Le projet
 
 Pour un premier essai, construis un autocanon en **fonte** composé d’une
 **[Breech / Culasse]** , d’un **[Recoil Spring / Ressort de recul]** et de deux
-**[Barrels / Canons]** . Ce n’est pas le monstre ultime, mais c’est assez complet pour apprendre toute
-la chaîne sans sacrifier ta semaine entière.
+**[Barrels / Canons]** . Ce modèle suffit pour apprendre toute la chaîne de fabrication sans demander
+trop de matériaux.
 
 **Pourquoi la fonte ?** Elle se fabrique tôt avec du fer et du charbon.
 
@@ -328,8 +327,7 @@ canons.
 le moule central de chaque couche.
 
 Chaque étage se prépare de la même manière. Le **deuxième clic** est indispensable : sans lui, tu
-n’as pas encore créé une véritable couche de coulée. C’est typiquement le clic qu’on oublie avant d’accuser le mod
-de ne pas fonctionner.
+n’as pas encore créé une véritable couche de coulée. Vérifie donc cette étape avant de continuer.
 
 **1 · Poser le moulePlace au sol le moule en bois correspondant à la pièce.
 
@@ -395,8 +393,8 @@ Usinage
 ## Aléser le tube de part en part.
 
 Les pièces sorties du moule sont pleines. Il faut créer leur passage intérieur avec la
-**[Cannon Drill / Foreuse à canon]** . Pour l’instant, tu as donc surtout fabriqué une très jolie
-barre de fonte extrêmement lourde.
+**[Cannon Drill / Foreuse à canon]** . Tant que cette étape n’est pas terminée, la pièce n’est pas
+utilisable comme canon.
 
 **Rotation Create** fait avancer la foreuse
 

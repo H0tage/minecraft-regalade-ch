@@ -628,8 +628,8 @@ Machines spécialisées
 ## Installer le Naquadah Liquidizer et le Crystallizer
 
 Les deux Reaction Chambers ne sont pas des machines à poser dans l’atelier. Ce sont des composants de recette, et
-elles disparaîtront dans le Naquadah Liquidizer et le Crystallizer. Autant le savoir avant de leur construire une
-jolie salle dédiée.
+elles disparaîtront dans le Naquadah Liquidizer et le Crystallizer. Ne les prévois donc pas comme des machines
+permanentes dans ton atelier.
 
 [Illustration : Reaction Chamber]
 
@@ -960,7 +960,7 @@ automatiquement le Point d’origine et lance l’appel.
 **Ferme depuis l’autre côté.Sur Régalade, le DHD d’arrivée peut couper la connexion et arrêter immédiatement la dépense.
 
 **Sécurité :** entrer par l’arrière de la porte reste mortel. Le passage stable est bidirectionnel, mais
-uniquement par les faces avant. La physique extraterrestre a visiblement décidé d’être très stricte sur ce point.
+uniquement par les faces avant. Vérifie donc soigneusement leur orientation.
 
 **Premier voyage réussi :les deux adresses sont conservées, le DHD d’arrivée est alimenté et tu peux couper puis recomposer la connexion
 pour revenir.
@@ -1015,8 +1015,8 @@ Référence technique
 
 ## Trouver rapidement une recette ou une valeur
 
-Cette page sert quand tu veux un chiffre précis sans relire toute l’épopée industrielle. Choisis une rubrique et
-va directement à l’information utile.
+Cette page rassemble les recettes, quantités et valeurs utiles. Choisis une rubrique pour accéder directement à
+l’information recherchée.
 
 TotauxRaffinerieCristauxComposantsÉnergieRéseau
 

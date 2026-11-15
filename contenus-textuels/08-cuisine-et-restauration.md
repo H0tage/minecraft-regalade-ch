@@ -21,8 +21,8 @@ Faire pousser, transformer, cuisiner, servir
 # De la bouffe à l’assiette
 
 Faire pousser des trucs, les découper, les cuire, les transformer en plats, en boissons ou en produits plus
-élaborés et, pourquoi pas, monter tout un restaurant autour. Avant de remplir une pièce avec quinze machines
-dont tu ignores l’utilité, on va surtout voir ce que tous ces mods permettent réellement de faire.
+élaborés et, pourquoi pas, monter tout un restaurant autour. Cette page présente les possibilités des différents
+mods et la manière dont ils se complètent.
 
 01
 
@@ -717,8 +717,7 @@ Avant les tapis
 ## Valider la recette directement dans le Basin
 
 Teste toujours la machine centrale avant d’ajouter la logistique. Si le Ragoût fonctionne maintenant mais plus
-tard avec les Belts, tu sauras que le problème vient du transport. Sinon, tu vas démonter la moitié de la cuisine
-en accusant une recette parfaitement innocente.
+tard avec les Belts, tu sauras que le problème vient du transport et non de la recette.
 
 **1 Bœuf cru**
 
@@ -1166,9 +1165,8 @@ Ici, on ne pose plus deux machines autour d’un Cooking Pot. On construit un vr
 rotation, des réserves, des tapis roulants, des Packagers et des Mechanical Arms. C’est imposant, ça demande des
 ressources et ça prend du temps, mais le résultat peut alimenter un restaurant, une gare ou une ville entière.
 
-Pas question de te balancer une liste de vingt machines en espérant que ça forme une usine par magie. On va suivre
-un seul Beef Stew du coffre jusqu’au stockage final, comprendre ce qui se passe, puis copier cette première ligne
-quand elle fonctionne vraiment.
+Le parcours suit un seul Beef Stew, du coffre jusqu’au stockage final. Une fois cette première ligne comprise et
+fonctionnelle, tu pourras la reproduire pour les autres recettes.
 
 01
 

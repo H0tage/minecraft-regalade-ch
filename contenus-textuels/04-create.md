@@ -171,7 +171,7 @@ produit final.
 **Assemblage séquencé** enchaîner plusieurs opérations
 
 **Le réflexe qui sauve la vieCommence par l’objet final dans JEI, puis remonte ses recettes à l’envers. Tu sauras quelles machines
-construire et dans quel ordre les relier, au lieu de poser cinquante blocs au hasard et de pleurer après.
+construire et dans quel ordre les relier.
 
 05
 

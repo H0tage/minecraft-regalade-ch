@@ -251,7 +251,7 @@ Ton compte personnel est créé automatiquement au premier accès.
 
 ### Vérifie le compte
 
-L’interface doit afficher ton nom et ton solde. Pas de formulaire absurde à remplir, le compte existe déjà.
+L’interface doit afficher ton nom et ton solde. Le compte existe déjà, sans inscription supplémentaire.
 
 03
 

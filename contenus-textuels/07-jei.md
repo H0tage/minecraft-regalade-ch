@@ -14,9 +14,8 @@ Le moteur de recherche qui t’évite de fabriquer au hasard
 
 # JEI : trouver n’importe quelle recette
 
-Le pack contient une quantité parfaitement raisonnable de machines, de poissons, de meubles, de canons et de trucs
-dont personne ne connaît le nom. JEI range tout ça à droite de ton inventaire et t’explique comment le fabriquer.
-Heureusement, parce qu’essayer de retenir toutes les recettes serait une idée catastrophique.
+Le pack contient beaucoup de machines, de poissons, de meubles, de canons et d’objets dont tu ne connais pas
+encore le nom. JEI range tout ça à droite de ton inventaire et t’explique comment le fabriquer.
 
 01
 
@@ -150,8 +149,8 @@ Les bons réflexes
 
 ### Pars toujours de l’objet final
 
-Cherche ce que tu veux construire, ouvre sa recette, puis remonte les ingrédients un par un. C’est beaucoup
-plus simple que de fabriquer des machines au hasard en espérant qu’elles servent plus tard.
+Cherche ce que tu veux construire, ouvre sa recette, puis remonte les ingrédients un par un. Tu sauras ainsi
+quelles ressources et quelles machines préparer.
 
 ### Utilise `U` sur les matériaux inconnus
 
