@@ -16,8 +16,33 @@ Exposure · de la pellicule au mur
 
 # Prendre une photo et l’accrocher chez soi
 
-Exposure ne prend pas une simple capture d’écran. Tu fabriques un appareil, tu charges une pellicule, tu prends
-tes photos, tu développes le rouleau et tu imprimes les clichés que tu veux garder.
+Dans Minecraft, on finit souvent par construire des endroits auxquels on s’attache : une première maison un
+peu bancale, une gare gigantesque, une usine qui fonctionne enfin ou simplement un coucher de soleil
+particulièrement joli. Avec Exposure, ces moments peuvent devenir de véritables objets du jeu. Tu fabriques
+ton appareil, choisis une pellicule, cadres ta photo, développes le rouleau puis accroches le résultat chez
+toi.
+
+Immersive Paintings complète tout ça en permettant d’importer tes propres images. Tu peux créer une galerie,
+décorer un café, afficher le menu d’un restaurant, préparer des panneaux pour une gare ou couvrir les murs du
+serveur avec des œuvres plus ou moins sérieuses.
+
+Ce premier parcours commence simplement : prendre une photo en noir et blanc, la développer et l’accrocher au
+mur. Une fois le principe compris, tu pourras passer à la couleur, aux réglages avancés et aux images
+personnalisées.
+
+[Illustration : Coucher de soleil photographié avec Exposure]
+
+**Photographier** Garder un instant du monde
+
+[Illustration : Maison de village photographiée avec Exposure]
+
+**Développer** Transformer le cliché en objet
+
+[Illustration : Mur décoré avec Immersive Paintings]
+
+**Exposer** Faire vivre les murs du serveur
+
+Captures issues des galeries officielles d’Exposure et d’Immersive Paintings
 
 01
 
