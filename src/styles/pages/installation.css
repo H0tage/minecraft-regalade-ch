@@ -141,15 +141,15 @@
 }
 
 .install-actions .button {
-  padding: 10px 14px !important;
-  border-color: #243137 !important;
-  background: #243137 !important;
-  color: #fff !important;
+  padding: 10px 14px;
+  border-color: #243137;
+  background: #243137;
+  color: #fff;
   font-size: 0.88rem;
 }
 
 .install-actions .button:visited {
-  color: #fff !important;
+  color: #fff;
 }
 
 .install-path {
@@ -392,7 +392,7 @@
 }
 
 .installation-page-content #tutorial-connection .connection-intro {
-  display: block !important;
+  display: block;
   width: 100%;
   max-width: 760px;
   margin: 0 0 18px;
@@ -400,20 +400,20 @@
 }
 
 .installation-page-content #tutorial-connection .connection-intro h1 {
-  display: block !important;
-  width: auto !important;
-  max-width: none !important;
-  margin: 0 0 7px !important;
-  font-size: clamp(1.55rem, 2.6vw, 2rem) !important;
-  line-height: 1.08 !important;
-  letter-spacing: -0.03em !important;
+  display: block;
+  width: auto;
+  max-width: none;
+  margin: 0 0 7px;
+  font-size: clamp(1.55rem, 2.6vw, 2rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
 }
 
 .installation-page-content #tutorial-connection .connection-intro p {
-  display: block !important;
-  width: auto !important;
-  max-width: 700px !important;
-  margin: 0 !important;
+  display: block;
+  width: auto;
+  max-width: 700px;
+  margin: 0;
   color: var(--muted);
   font-size: 0.94rem;
   line-height: 1.55;
