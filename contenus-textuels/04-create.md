@@ -169,10 +169,6 @@ De la pierre au fer
 
 Cette installation transforme automatiquement une source infinie de Cobblestone en **Iron Ingots** et en **Flint** . Chaque module sera construit et testé séparément avant de former l’usine complète.
 
-Wrench
-
-Goggles
-
 01
 
 Vue d’ensemble

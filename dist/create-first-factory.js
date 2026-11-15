@@ -3,9 +3,6 @@
   const tutorialContent = document.querySelector('#tutoriels .tutorial-content');
   if (!tabList || !tutorialContent || document.querySelector('#tutorial-create-first-factory')) return;
 
-  const asset = name => `assets/create-first-factory/${name}.png`;
-  const icon = (name, alt = '') => `<img class="cff-icon" src="${asset(name)}" alt="${alt}">`;
-
   const tab = document.createElement('button');
   tab.className = 'tutorial-tab';
   tab.id = 'tutorial-create-first-factory-tab';
@@ -120,10 +117,6 @@
           <h1>Construire une première usine Create</h1>
           <p>Cette installation transforme automatiquement une source infinie de Cobblestone en <strong>Iron Ingots</strong> et en <strong>Flint</strong>. Chaque module sera construit et testé séparément avant de former l’usine complète.</p>
         </div>
-        <div class="cff-hero-tools" aria-label="Outils indispensables">
-          <figure>${icon('wrench', 'Wrench')}<figcaption>Wrench</figcaption></figure>
-          <figure>${icon('goggles', "Engineer's Goggles")}<figcaption>Goggles</figcaption></figure>
-        </div>
       </header>
 
       <section class="cff-step" id="cff-project" data-phase="Le projet">
@@ -131,11 +124,11 @@
         <p class="cff-lead">La Cobblestone est générée gratuitement, broyée en Gravel, lavée puis compactée. Le Flint sort sur une branche séparée.</p>
         <div class="cff-main-flow" aria-label="Chaîne complète de la ferme à fer">
           <article><b>Cobblestone</b><small>source infinie</small></article><i>→</i>
-          <article>${icon('drill')}<b>Mechanical Drill</b><small>récolte</small></article><i>→</i>
-          <article>${icon('millstone')}<b>Millstone</b><small>Gravel</small></article><i>→</i>
-          <article>${icon('fan')}<b>Bulk Washing</b><small>eau + Encased Fan</small></article><i>→</i>
+          <article><b>Mechanical Drill</b><small>récolte</small></article><i>→</i>
+          <article><b>Millstone</b><small>Gravel</small></article><i>→</i>
+          <article><b>Bulk Washing</b><small>eau + Encased Fan</small></article><i>→</i>
           <article class="cff-junction"><b>Iron Nuggets</b><small>12,5 % par Gravel</small></article><i>→</i>
-          <article>${icon('press')}<b>Compacting</b><small>9 nuggets</small></article><i>→</i>
+          <article><b>Compacting</b><small>9 nuggets</small></article><i>→</i>
           <article class="cff-result"><b>Iron Ingot</b><small>stockage final</small></article>
           <article class="cff-byproduct"><b>Flint</b><small>25 % par Gravel</small></article>
         </div>
@@ -151,8 +144,8 @@
         <div class="cff-two-columns">
           <article class="cff-card">
             <h3>Les deux objets à garder sur toi</h3>
-            <div class="cff-object-row">${icon('wrench', 'Wrench')}<div><b>Wrench</b><p>Oriente et démonte proprement les composants Create. Un clic droit modifie le bloc ; Maj + clic droit le récupère.</p></div></div>
-            <div class="cff-object-row">${icon('goggles', "Engineer's Goggles")}<div><b>Engineer's Goggles</b><p>Affichent la vitesse, la capacité et la consommation lorsque tu regardes le réseau.</p></div></div>
+            <div class="cff-object-row"><div><b>Wrench</b><p>Oriente et démonte proprement les composants Create. Un clic droit modifie le bloc ; Maj + clic droit le récupère.</p></div></div>
+            <div class="cff-object-row"><div><b>Engineer's Goggles</b><p>Affichent la vitesse, la capacité et la consommation lorsque tu regardes le réseau.</p></div></div>
           </article>
           <article class="cff-card">
             <h3>Ponder avant de deviner</h3>
@@ -169,12 +162,12 @@
         <div class="cff-title"><span>03</span><div><p>Liste de courses</p><h2>Fabriquer les composants du prototype</h2></div></div>
         <p class="cff-lead">Les machines fixes sont exactes. La quantité de transmission contient une petite marge afin que tu puisses espacer les modules sans devoir recompter chaque Shaft.</p>
         <div class="cff-shopping-grid">
-          <article>${icon('water-wheel')}<b>1 Water Wheel</b><span>1 Shaft + 8 Planks</span></article>
-          <article>${icon('drill')}<b>1 Mechanical Drill</b><span>3 Andesite Alloys + 1 Iron Ingot + 1 Andesite Casing</span></article>
-          <article>${icon('millstone')}<b>1 Millstone</b><span>1 Cogwheel + 1 Andesite Casing + 1 Stone</span></article>
-          <article>${icon('fan')}<b>1 Encased Fan</b><span>1 Shaft + 1 Andesite Casing + 1 Propeller</span></article>
-          <article>${icon('press')}<b>1 Mechanical Press</b><span>1 Shaft + 1 Andesite Casing + 1 Iron Block</span></article>
-          <article>${icon('basin')}<b>1 Basin</b><span>5 Andesite Alloys</span></article>
+          <article><b>1 Water Wheel</b><span>1 Shaft + 8 Planks</span></article>
+          <article><b>1 Mechanical Drill</b><span>3 Andesite Alloys + 1 Iron Ingot + 1 Andesite Casing</span></article>
+          <article><b>1 Millstone</b><span>1 Cogwheel + 1 Andesite Casing + 1 Stone</span></article>
+          <article><b>1 Encased Fan</b><span>1 Shaft + 1 Andesite Casing + 1 Propeller</span></article>
+          <article><b>1 Mechanical Press</b><span>1 Shaft + 1 Andesite Casing + 1 Iron Block</span></article>
+          <article><b>1 Basin</b><span>5 Andesite Alloys</span></article>
         </div>
         <div class="cff-supplies">
           <article><h3>Transmission</h3><p>16 Shafts, 8 Cogwheels, 2 Gearboxes et 4 Belt Connectors forment une réserve confortable.</p></article>
@@ -200,7 +193,7 @@
         <div class="cff-module-layout">
           <div class="cff-module-diagram" aria-label="Disposition du générateur de Cobblestone">
             <span class="water">Water</span><i>→</i><span class="stone">Cobblestone</span><i>←</i><span class="lava">Lava</span>
-            <span class="drill">${icon('drill')}Mechanical Drill</span><i>→</i><span class="storage">Belt ou stockage tampon</span>
+            <span class="drill">Mechanical Drill</span><i>→</i><span class="storage">Belt ou stockage tampon</span>
           </div>
           <ol class="cff-instructions"><li>Construis d’abord un générateur vanilla et vérifie que le bloc central devient bien de la Cobblestone.</li><li>Enferme la lave avec des blocs non inflammables.</li><li>Place le Mechanical Drill face au bloc central, pointe dirigée vers la Cobblestone.</li><li>Relie son axe au réseau de la Water Wheel.</li><li>Récupère les blocs sous ou derrière la zone de forage avec un Belt, un Funnel ou un Hopper.</li></ol>
         </div>
@@ -210,10 +203,9 @@
       <section class="cff-step" id="cff-milling" data-phase="Transformation">
         <div class="cff-title"><span>06</span><div><p>Module broyage</p><h2>Transformer la Cobblestone en Gravel</h2></div></div>
         <div class="cff-machine-explain">
-          ${icon('millstone', 'Millstone')}
           <div><h3>La Millstone possède une entrée et un inventaire interne</h3><p>Les objets entrent par le dessus. La rotation arrive par un Shaft placé dessous ou par un Cogwheel contre le côté.</p></div>
         </div>
-        <div class="cff-process cff-process-three"><article><b>1 Cobblestone</b><span>entrée par le dessus</span></article><i>→</i><article>${icon('millstone')}<b>Millstone</b><span>250 unités de traitement</span></article><i>→</i><article class="cff-result"><b>1 Gravel</b><span>conservée dans la machine</span></article></div>
+        <div class="cff-process cff-process-three"><article><b>1 Cobblestone</b><span>entrée par le dessus</span></article><i>→</i><article><b>Millstone</b><span>250 unités de traitement</span></article><i>→</i><article class="cff-result"><b>1 Gravel</b><span>conservée dans la machine</span></article></div>
         <div class="cff-two-columns">
           <article class="cff-card"><h3>Premier essai manuel</h3><p>Jette quelques Cobblestones sur le dessus. Attends la fin du broyage puis fais un clic droit à main vide pour récupérer la Gravel.</p></article>
           <article class="cff-card"><h3>Automatiser la sortie</h3><p>La Gravel ne tombe pas spontanément. Place un Andesite Funnel sur un côté ou un Hopper en dessous pour vider l’inventaire interne vers le Belt suivant.</p></article>
@@ -225,7 +217,7 @@
         <div class="cff-title"><span>07</span><div><p>Module lavage</p><h2>Laver la Gravel avec un Encased Fan</h2></div></div>
         <p class="cff-lead">Le traitement vient du souffle : l’Encased Fan doit pousser de l’air à travers une source d’eau avant que ce courant atteigne les objets.</p>
         <div class="cff-wash-diagram" aria-label="Disposition du Bulk Washing">
-          <article>${icon('fan')}<b>Encased Fan</b><span>alimenté par un Shaft</span></article><i>→</i>
+          <article><b>Encased Fan</b><span>alimenté par un Shaft</span></article><i>→</i>
           <article class="water"><b>Water</b><span>dans le courant d’air</span></article><i>→</i>
           <article><b>Gravel sur Belt ou Depot</b><span>reste exposée au souffle</span></article><i>→</i>
           <article class="result"><b>Iron Nuggets + Flint</b><span>après les particules de lavage</span></article>
@@ -239,7 +231,7 @@
         <div class="cff-title"><span>08</span><div><p>Module compactage</p><h2>Transformer les nuggets en lingots</h2></div></div>
         <div class="cff-compacting-layout">
           <div class="cff-stack-diagram" aria-label="Montage de la Mechanical Press et de la Basin">
-            <article>${icon('press')}<b>Mechanical Press</b><span>rotation par le haut</span></article><i>↓</i><article>${icon('basin')}<b>Basin</b><span>un bloc sous la Press</span></article><i>↓</i><article class="cff-result"><b>Iron Ingot</b><span>sortie latérale filtrée</span></article>
+            <article><b>Mechanical Press</b><span>rotation par le haut</span></article><i>↓</i><article><b>Basin</b><span>un bloc sous la Press</span></article><i>↓</i><article class="cff-result"><b>Iron Ingot</b><span>sortie latérale filtrée</span></article>
           </div>
           <div class="cff-card"><h3>La recette appliquée</h3><div class="cff-nugget-grid" aria-label="Neuf Iron Nuggets"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><p>Quand la Basin contient neuf Iron Nuggets, la Press descend et applique la recette carrée standard : <strong>9 nuggets → 1 lingot</strong>.</p></div>
         </div>
