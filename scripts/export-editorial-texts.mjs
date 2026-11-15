@@ -51,6 +51,11 @@ const groups = [
     title: 'Cuisine et restauration',
     sources: ['src/content/tutorials/cuisine.html'],
   },
+  {
+    file: '09-photographie-et-tableaux.md',
+    title: 'Photographie et tableaux',
+    sources: ['src/content/tutorials/photography.html'],
+  },
 ];
 
 const entities = new Map([

@@ -1,0 +1,43 @@
+<section class="photo-tutorial">
+  <nav
+    class="photo-switcher"
+    role="tablist"
+    aria-label="Choisir le parcours Photographie et tableaux"
+    data-tab-storage="regalade.photography.active"
+  >
+    <button
+      id="photo-first-tab"
+      type="button"
+      role="tab"
+      aria-selected="true"
+      aria-controls="photo-first-panel"
+      tabindex="0"
+    >
+      Ma première photo
+    </button>
+    <button
+      id="photo-studio-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="photo-studio-panel"
+      tabindex="-1"
+    >
+      Mon studio photo
+    </button>
+    <button
+      id="photo-paintings-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="photo-paintings-panel"
+      tabindex="-1"
+    >
+      Importer un tableau
+    </button>
+  </nav>
+
+  <!-- @include photography/first-photo.html -->
+  <!-- @include photography/studio.html -->
+  <!-- @include photography/paintings.html -->
+</section>

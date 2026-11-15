@@ -30,7 +30,7 @@
     if (!panel) return [];
     const preferred = [
       ...panel.querySelectorAll(
-        '.install-step, .sg-step[id], .cbc-overview-section[id], .cbc-survival-step[id], .eco-section[id], .food-section[id], .jei-section[id], .cff-step[id]',
+        '.install-step, .sg-step[id], .cbc-overview-section[id], .cbc-survival-step[id], .eco-section[id], .food-section[id], .photo-section[id], .jei-section[id], .cff-step[id]',
       ),
     ].filter(isVisible);
     if (preferred.length) return preferred;
@@ -121,7 +121,11 @@
   });
   tabList.addEventListener('keydown', () => requestAnimationFrame(refresh));
   content.addEventListener('click', (event) => {
-    if (event.target.closest('.cbc-switcher [role="tab"], .cff-switcher [role="tab"], .jei-switcher [role="tab"]')) {
+    if (
+      event.target.closest(
+        '.cbc-switcher [role="tab"], .cff-switcher [role="tab"], .jei-switcher [role="tab"], .photo-switcher [role="tab"]',
+      )
+    ) {
       requestAnimationFrame(refresh);
     }
   });

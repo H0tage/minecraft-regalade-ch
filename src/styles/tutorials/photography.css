@@ -1,0 +1,648 @@
+#tutorial-photography {
+  --photo-ink: var(--tutorial-ink);
+  --photo-muted: var(--tutorial-muted);
+  --photo-line: #d2dfe4;
+  --photo-blue: #087fae;
+  --photo-orange: #e96f21;
+  --photo-green: #218565;
+  color: var(--photo-ink);
+}
+
+#tutorial-photography * {
+  box-sizing: border-box;
+}
+
+#tutorial-photography [hidden] {
+  display: none !important;
+}
+
+#tutorial-photography :is(kbd, code) {
+  padding: 2px 6px;
+  border: 1px solid #ccd8dd;
+  border-radius: 5px;
+  background: #f1f4f5;
+  color: #17556d;
+  font:
+    800 0.9em ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+}
+
+.photo-tutorial {
+  max-width: 100%;
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.photo-switcher {
+  position: sticky;
+  top: 0;
+  z-index: 12;
+  display: flex;
+  width: max-content;
+  max-width: 100%;
+  gap: 4px;
+  margin: 0 0 22px;
+  padding: 4px;
+  border: 1px solid var(--photo-line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgb(25 52 64 / 7%);
+}
+
+.photo-switcher button {
+  min-height: 40px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #53656d;
+  font-family: var(--tutorial-font);
+  font-size: var(--tutorial-tab-size);
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.photo-switcher button:hover {
+  background: #f1f6f8;
+  color: var(--photo-ink);
+}
+
+.photo-switcher button[aria-selected='true'] {
+  background: var(--photo-ink);
+  color: #fff;
+}
+
+.photo-switcher button:focus-visible {
+  outline: 3px solid var(--photo-blue);
+  outline-offset: 2px;
+}
+
+.photo-hero {
+  padding: 27px 29px;
+  border: 1px solid var(--photo-line);
+  border-radius: 17px;
+  background: #fff;
+}
+
+.photo-eyebrow {
+  margin: 0 0 8px;
+  color: var(--photo-blue);
+  font-size: var(--tutorial-label-size);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.photo-hero h1 {
+  max-width: 820px;
+  margin: 0;
+  font-size: var(--tutorial-title-size);
+  line-height: 1.03;
+  letter-spacing: -0.045em;
+}
+
+.photo-hero-compact h1 {
+  font-size: clamp(1.85rem, 3.5vw, 2.65rem);
+}
+
+.photo-hero > p:not(.photo-eyebrow) {
+  max-width: 790px;
+  margin: 13px 0 0;
+  color: var(--photo-muted);
+  font-size: var(--tutorial-lead-size);
+  line-height: 1.6;
+}
+
+.photo-section {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--photo-line);
+  scroll-margin-top: 58px;
+}
+
+.photo-section:last-child {
+  border-bottom: 0;
+}
+
+.photo-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.photo-title > span {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  place-items: center;
+  border-radius: 12px;
+  background: #eef7fb;
+  color: var(--photo-blue);
+  font-size: 0.86rem;
+  font-weight: 950;
+}
+
+.photo-title p {
+  margin: 1px 0 4px;
+  color: var(--photo-blue);
+  font-size: var(--tutorial-label-size);
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.photo-title h2 {
+  margin: 0;
+  font-size: var(--tutorial-section-size);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.photo-lead {
+  max-width: 850px;
+  margin: 0 0 16px;
+  color: var(--photo-muted);
+  font-size: var(--tutorial-lead-size);
+  line-height: 1.6;
+}
+
+.photo-flow,
+.photo-recipe {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.photo-flow article,
+.photo-recipe article {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 92px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px;
+  border: 1px solid var(--photo-line);
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+}
+
+.photo-flow article b,
+.photo-recipe article b {
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.photo-flow article span,
+.photo-recipe article span {
+  margin-top: 4px;
+  color: var(--photo-muted);
+  font-size: 0.77rem;
+  line-height: 1.4;
+}
+
+.photo-flow > i,
+.photo-recipe > i {
+  display: grid;
+  place-items: center;
+  color: var(--photo-orange);
+  font-style: normal;
+  font-weight: 950;
+}
+
+.photo-flow article.photo-result,
+.photo-recipe article.photo-result {
+  border-color: #a9d5c7;
+}
+
+.photo-flow-short {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.photo-compare,
+.photo-card-grid,
+.photo-trouble,
+.photo-film-table,
+.photo-upload-methods,
+.photo-setting-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.photo-compare,
+.photo-card-grid-2,
+.photo-trouble,
+.photo-film-table,
+.photo-upload-methods {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.photo-card-grid-3,
+.photo-setting-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.photo-compare > article,
+.photo-card-grid > article,
+.photo-trouble > article,
+.photo-film-table > article,
+.photo-upload-methods > article,
+.photo-setting-grid > article {
+  padding: 16px;
+  border: 1px solid var(--photo-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.photo-compare h3,
+.photo-card-grid h3,
+.photo-trouble h3,
+.photo-film-table h3,
+.photo-upload-methods h3 {
+  margin: 0 0 6px;
+  font-size: var(--tutorial-card-title-size);
+  line-height: 1.3;
+}
+
+.photo-compare p,
+.photo-card-grid p,
+.photo-trouble p,
+.photo-film-table p,
+.photo-upload-methods p {
+  margin: 0;
+  color: var(--photo-muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.photo-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.photo-steps article {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 14px;
+  border: 1px solid var(--photo-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.photo-steps article > b {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 9px;
+  background: #fff1e7;
+  color: #b95012;
+}
+
+.photo-steps p {
+  margin: 1px 0 0;
+  color: var(--photo-muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.photo-steps strong {
+  color: var(--photo-ink);
+}
+
+.photo-note,
+.photo-warning,
+.photo-check {
+  margin: 14px 0 0;
+  padding: 13px 15px;
+  border-left: 3px solid var(--photo-blue);
+  background: #f5f8f9;
+  color: var(--photo-muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.photo-warning {
+  border-color: var(--photo-orange);
+}
+
+.photo-check {
+  display: flex;
+  gap: 12px;
+  border-color: var(--photo-green);
+}
+
+.photo-check strong {
+  flex: 0 0 auto;
+  color: var(--photo-ink);
+}
+
+.photo-shot-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  gap: 12px;
+}
+
+.photo-shot-view {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 7px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--photo-line);
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+}
+
+.photo-shot-view :is(span, strong) {
+  padding: 12px 8px;
+  border: 1px solid #dae3e7;
+  border-radius: 9px;
+}
+
+.photo-shot-view strong {
+  border-color: #99cce0;
+}
+
+.photo-shot-view i {
+  color: var(--photo-orange);
+  font-size: 0.74rem;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.photo-shot-layout ol {
+  margin: 0;
+  padding: 15px 18px 15px 36px;
+  border: 1px solid var(--photo-line);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--photo-muted);
+}
+
+.photo-shot-layout li {
+  padding: 3px 0;
+}
+
+.photo-size-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.photo-size-row article {
+  display: grid;
+  min-height: 85px;
+  place-items: center;
+  padding: 12px;
+  border: 1px solid var(--photo-line);
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+}
+
+.photo-size-row b {
+  font-size: 1.08rem;
+}
+
+.photo-size-row span {
+  color: var(--photo-muted);
+  font-size: 0.78rem;
+}
+
+.photo-color-process {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 14px;
+  border: 1px solid var(--photo-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.photo-color-process b {
+  margin-right: auto;
+}
+
+.photo-color-process span {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #f1f5f6;
+  font-size: 0.79rem;
+  font-weight: 750;
+}
+
+.photo-color-process i {
+  color: var(--photo-orange);
+  font-style: normal;
+  font-weight: 950;
+}
+
+.photo-attachment-list {
+  display: grid;
+  gap: 9px;
+}
+
+.photo-attachment-list article {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.35fr) minmax(0, 1fr);
+  gap: 15px;
+  padding: 14px 16px;
+  border: 1px solid var(--photo-line);
+  border-radius: 11px;
+  background: #fff;
+}
+
+.photo-attachment-list span,
+.photo-setting-grid span {
+  color: var(--photo-muted);
+  font-size: 0.83rem;
+}
+
+.photo-create-flow {
+  display: grid;
+  gap: 10px;
+}
+
+.photo-create-flow article {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid var(--photo-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.photo-create-flow b {
+  flex: 0 0 110px;
+}
+
+.photo-create-flow span,
+.photo-create-flow strong {
+  flex: 1 1 0;
+  padding: 9px;
+  border-radius: 8px;
+  background: #f2f6f7;
+  text-align: center;
+  font-size: 0.79rem;
+}
+
+.photo-create-flow strong {
+  border: 1px solid #add6c8;
+  background: #fff;
+}
+
+.photo-create-flow i {
+  color: var(--photo-orange);
+  font-style: normal;
+  font-weight: 950;
+}
+
+.photo-setting-grid article {
+  display: grid;
+  gap: 5px;
+}
+
+.photo-setting-grid b {
+  font-size: 0.91rem;
+}
+
+@media (width <= 920px) {
+  .photo-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .photo-card-grid-3,
+  .photo-setting-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .photo-color-process {
+    flex-wrap: wrap;
+  }
+
+  .photo-color-process b {
+    flex: 1 0 100%;
+  }
+
+  .photo-create-flow article {
+    display: grid;
+    grid-template-columns: 110px 1fr auto 1fr;
+  }
+
+  .photo-create-flow article:last-child {
+    grid-template-columns: 110px 1fr auto 1fr auto 1fr;
+  }
+
+  .photo-create-flow strong {
+    grid-column: 2/-1;
+  }
+}
+
+@media (width <= 720px) {
+  .photo-switcher {
+    position: static;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .photo-switcher button {
+    flex: 0 0 auto;
+  }
+
+  .photo-hero {
+    padding: 22px 20px;
+  }
+
+  .photo-flow,
+  .photo-recipe,
+  .photo-flow-short,
+  .photo-shot-layout,
+  .photo-compare,
+  .photo-card-grid-2,
+  .photo-card-grid-3,
+  .photo-trouble,
+  .photo-film-table,
+  .photo-upload-methods,
+  .photo-setting-grid,
+  .photo-size-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .photo-flow > i,
+  .photo-recipe > i,
+  .photo-flow-short > i {
+    height: 12px;
+    transform: rotate(90deg);
+  }
+
+  .photo-flow article,
+  .photo-recipe article {
+    min-height: 0;
+  }
+
+  .photo-attachment-list article {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .photo-create-flow article,
+  .photo-create-flow article:last-child {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-create-flow b,
+  .photo-create-flow strong {
+    grid-column: auto;
+  }
+
+  .photo-create-flow i {
+    text-align: center;
+    transform: rotate(90deg);
+  }
+}
+
+@media (width <= 520px) {
+  .photo-section {
+    padding: 25px 0;
+  }
+
+  .photo-title {
+    gap: 11px;
+  }
+
+  .photo-title > span {
+    width: 42px;
+    height: 40px;
+    flex-basis: 42px;
+  }
+
+  .photo-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-check {
+    display: block;
+  }
+
+  .photo-check strong {
+    display: block;
+    margin-bottom: 4px;
+  }
+}

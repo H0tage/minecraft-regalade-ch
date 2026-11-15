@@ -63,6 +63,7 @@ for (const width of widths) {
   for (const [panelId, hasNestedTabs] of [
     ['tutorial-economy', true],
     ['tutorial-cuisine', true],
+    ['tutorial-photography', true],
     ['tutorial-jei', true],
     ['tutorial-create-first-factory', true],
     ['tutorial-big-cannons', true],

@@ -55,6 +55,17 @@
           </button>
           <button
             class="tutorial-tab"
+            id="tutorial-photography-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-photography"
+            tabindex="-1"
+          >
+            Photographie et tableaux
+          </button>
+          <button
+            class="tutorial-tab"
             id="tutorial-create-first-factory-tab"
             type="button"
             role="tab"
@@ -110,6 +121,15 @@
           hidden
         >
           <!-- @include ../content/tutorials/cuisine.html -->
+        </section>
+        <section
+          class="tutorial-panel"
+          id="tutorial-photography"
+          role="tabpanel"
+          aria-labelledby="tutorial-photography-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/photography.html -->
         </section>
         <section
           class="tutorial-panel"
