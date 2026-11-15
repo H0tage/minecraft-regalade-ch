@@ -81,6 +81,9 @@
 }
 
 .photo-hero {
+  display: block;
+  height: auto;
+  min-height: 0;
   padding: 27px 29px;
   border: 1px solid var(--photo-line);
   border-radius: 17px;
