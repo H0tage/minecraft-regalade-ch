@@ -38,9 +38,9 @@
         <section class="cff-world-intro" id="cff-overview-world" data-phase="Découvrir Create">
           <div class="cff-world-heading">
             <p class="cff-eyebrow">Avant de parler d’engrenages</p>
-            <h2>Construire une activité, pas juste une machine</h2>
+            <h2>Tout un tas de domaines d'application</h2>
           </div>
-          <p class="cff-lead">Le vrai intérêt de Create, ce n’est pas seulement de regarder une roue tourner. C’est de prendre une idée un peu débile — « et si je devenais le fournisseur officiel de frites du serveur ? » — puis de construire toute l’infrastructure nécessaire pour qu’elle fonctionne réellement.</p>
+          <p class="cff-lead">Le vrai intérêt de Create, ce n’est pas seulement de regarder une roue tourner. C’est de prendre une idée un peu débile (« et si je devenais le fournisseur officiel de frites du serveur ? »), puis de construire toute l’infrastructure nécessaire pour qu’elle fonctionne réellement.</p>
           <div class="cff-world-grid">
             <article><h3>Devenir le nouvel Amazon</h3><p>Construis des entrepôts, trie automatiquement les colis et utilise des trains pour approvisionner plusieurs villes. À terme, tu peux carrément monter une entreprise de transport pour les autres joueurs.</p></article>
             <article><h3>Ouvrir une vraie boutique</h3><p>Une usine fabrique les produits, des tapis roulants remplissent les stocks et ta boutique continue d’exister même quand tu es occupé ailleurs. Il ne reste plus qu’à convaincre les gens d’acheter ta merde.</p></article>
@@ -70,13 +70,13 @@
         <section class="cff-overview-section" id="cff-overview-power" data-phase="Les bases">
           <div class="cff-title"><span>02</span><div><p>Le truc fondamental</p><h2>Tout doit tourner, mais pas n’importe comment</h2></div></div>
           <div class="cff-two-columns">
-            <article class="cff-card"><h3>RPM : à quelle vitesse ça tourne</h3><p>Plus il y a de RPM — rotations par minute — plus les machines travaillent vite. En revanche, elles demandent aussi davantage de puissance.</p></article>
+            <article class="cff-card"><h3>RPM : à quelle vitesse ça tourne</h3><p>Plus il y a de RPM (rotations par minute), plus les machines travaillent vite. En revanche, elles demandent aussi davantage de puissance.</p></article>
             <article class="cff-card"><h3>SU : combien de machines ça supporte</h3><p>Les unités de contrainte représentent la charge supportée par ta source. Si tu branches trop de machines, tout le réseau devient <strong>surchargé</strong> et décide collectivement de ne plus rien faire.</p></article>
           </div>
           <div class="cff-power-model" aria-label="Fonctionnement d’un réseau Create">
-            <article class="source"><b>Source de rotation</b><span>crée le mouvement et fournit la capacité — par exemple, une roue à eau</span></article><i>→</i>
-            <article><b>Transmission</b><span>transporte ou modifie la rotation — par exemple, un axe de transmission</span></article><i>→</i>
-            <article><b>Machine</b><span>utilise la rotation pour effectuer une tâche — par exemple, une découpeuse à patates</span></article>
+            <article class="source"><b>Source de rotation</b><span>crée le mouvement et fournit la capacité (par exemple, une roue à eau)</span></article><i>→</i>
+            <article><b>Transmission</b><span>transporte ou modifie la rotation (par exemple, un axe de transmission)</span></article><i>→</i>
+            <article><b>Machine</b><span>utilise la rotation pour effectuer une tâche (par exemple, une découpeuse à patates)</span></article>
           </div>
           <p class="cff-note"><strong>La version courte :</strong> la source conditionne combien de machines tu peux alimenter ; les engrenages décident à quelle vitesse et dans quel sens elles tournent.</p>
         </section>
@@ -118,7 +118,7 @@
         <section class="cff-overview-section" id="cff-overview-learn" data-phase="Commencer">
           <div class="cff-title"><span>06</span><div><p>Avant de devenir fou</p><h2>Trois trucs à connaître, vraiment</h2></div></div>
           <div class="cff-learning-grid">
-            <article><b>1</b><div><h3>JEI pour savoir quoi fabriquer</h3><p>JEI — à droite de ton inventaire — permet de trier les recettes. Survole un objet et regarde sa recette ou ses usages.</p></div></article>
+            <article><b>1</b><div><h3>JEI pour savoir quoi fabriquer</h3><p>JEI (à droite de ton inventaire) permet de trier les recettes. Survole un objet et regarde sa recette ou ses usages.</p></div></article>
             <article><b>2</b><div><h3>W pour comprendre le machin</h3><p>Maintiens <kbd>W</kbd> sur un composant Create : le jeu te montre directement une animation de son fonctionnement. C’est trop bien fait, ça.</p></div></article>
             <article><b>3</b><div><h3>Les lunettes quand ça ne marche plus</h3><p>Regarde les axes et les machines avec les lunettes d’ingénieur pour lire leur vitesse, leur capacité et leur consommation.</p></div></article>
           </div>

@@ -172,7 +172,7 @@
         <div class="cbc-heading"><h2>Comprendre la pression avant de charger</h2><p>La puissance du tir vient des propulseurs ; la sécurité dépend de la pièce la plus faible, de la culasse et d’un éventuel malus de soudure.</p></div>
         <div class="cbc-formula">Contrainte sûre = min(résistance du matériau, limite de la culasse) − malus de soudure</div>
         <div class="cbc-table-wrap"><table class="cbc-table"><thead><tr><th>Culasse</th><th>Fonte</th><th>Bronze</th><th>Acier</th><th>Nethersteel</th></tr></thead><tbody>
-          <tr><td>Coulissante</td><td>2</td><td>4</td><td>4</td><td>—</td></tr><tr><td>Rapide</td><td>2</td><td>2</td><td>2</td><td>—</td></tr><tr><td>À vis</td><td>—</td><td>—</td><td>8</td><td>10</td></tr>
+          <tr><td>Coulissante</td><td>2</td><td>4</td><td>4</td><td>Indisponible</td></tr><tr><td>Rapide</td><td>2</td><td>2</td><td>2</td><td>Indisponible</td></tr><tr><td>À vis</td><td>Indisponible</td><td>Indisponible</td><td>8</td><td>10</td></tr>
         </tbody></table></div>
         <div class="cbc-cards">
           <article class="cbc-card with-icon"><img class="cbc-icon" src="${icon('powder-charge')}" alt="Powder Charge"><h3>Powder Charge</h3><p><strong>Puissance 2</strong> et <strong>contrainte 1</strong>. Plusieurs charges peuvent être alignées tant que le canon les supporte.</p></article>
@@ -204,7 +204,7 @@
           <article class="cbc-card"><h3>Cannon Loader</h3><p>Version mécanisée du refouloir. Longueur maximale par défaut : <strong>64 blocs</strong>. Le canon normal doit être désassemblé pendant cette opération.</p></article>
           <article class="cbc-card"><h3>Culasse rapide</h3><p>Elle permet le rechargement alors que le canon reste assemblé. Ouverture : 5 ticks ; délai de tir : 40 ticks.</p></article>
         </div>
-        <div class="cbc-note"><p>Un gros canon valide doit avoir <strong>exactement une ouverture</strong> — la bouche — et <strong>une extrémité fermée</strong> — la culasse.</p></div>
+        <div class="cbc-note"><p>Un gros canon valide doit avoir <strong>exactement une ouverture</strong> (la bouche) et <strong>une extrémité fermée</strong> (la culasse).</p></div>
       </div>
     </section>
 

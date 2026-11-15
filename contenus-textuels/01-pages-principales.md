@@ -133,7 +133,7 @@ Utilise l’adresse du serveur et retrouve la communauté au spawn.
 ## Ce qu’il te faudra
 
 - Minecraft: Java Edition acheté sur ordinateur
-- Java 21 — le guide d’installation expliquera tout
+- Java 21 (le guide d’installation expliquera tout)
 - Le modpack Régalade
 - Un peu d’espace disque et une connexion stable
 
@@ -385,15 +385,15 @@ Préparez les deux chambres en premier ; elles seront ensuite absorbées par les
 Energy Crystal10Transfer Crystal10Materialization Crystal9Communication Crystal3Control Crystal1
 
 [Illustration : Reaction Chamber]
-**1 — Deux Reaction Chambers**
+**1 (Deux Reaction Chambers)**
 Pour chacune : 4 sturdy sheets, 1 electron tube, 2 brass sheets, 1 Precision Mechanism et 1 diamant. Faites-en **deux** avant de poursuivre.
 
 [Illustration : Naquadah Liquidizer]
-**2 — Liquidizer**
+**2 (Liquidizer)**
 Assemblez 4 plaques, 1 fluid tank, 2 brass sheets, 1 Reaction Chamber et 1 mechanical pump. Il transforme 1 cristal + 100 mB de lave en 500 mB de Liquid Naquadah.
 
 [Illustration : Crystallizer]
-**3 — Crystallizer**
+**3 (Crystallizer)**
 Assemblez 4 plaques, 1 diamant, 2 electron tubes, 1 Reaction Chamber et 1 Precision Mechanism. C’est lui qui produit les cristaux technologiques.
 
 **Règle de fabrication :** chaque cristal technologique passe par le Crystallizer et consomme **1 Crystal Base + 100 mB de Liquid Naquadah** , avec son réactif propre. Vous pouvez conserver cette ligne de production pour de futures portes.
@@ -451,19 +451,19 @@ Mechanical Crafting : 3 stone buttons, 4 electron tubes, 2 plaques, 2 Precision 
 Mechanical Crafting : 4 plaques, 2 copper spools, 2 capacitors, 1 Energy Crystal, 1 Communication Crystal, 1 brass casing et 1 Redstone Link.
 
 [Illustration : Anneau de Stargate]
-**1 — Anneaux**
+**1 (Anneaux)**
 Fabriquez les 14 anneaux un par un : 1 andesite casing, puis deux passages de feuille de fer + sturdy sheet + plaque, avant le Mechanical Press.
 
 [Illustration : Chevron de Stargate]
-**2 — Chevrons**
+**2 (Chevrons)**
 Faites 9 cadres avec rose quartz, plaque, brass sheet et electron tube ; réalisez ensuite le Mechanical Crafting avec leurs trois cristaux, mécanisme et Redstone Link.
 
 [Illustration : DHD classique]
-**3 — Équipements externes**
+**3 (Équipements externes)**
 Fabriquez la base, le DHD et la Basic Interface dans leur grille de Mechanical Crafting, avec les plaques et cristaux indiqués ci-dessus.
 
 [Illustration : Base de Stargate classique]
-**4 — Formation de la porte**
+**4 (Formation de la porte)**
 Construisez les 14 anneaux et 9 chevrons autour de la base, puis cliquez la base à main nue pour former la Stargate. Placez le DHD et l’interface à l’extérieur.
 
 07
@@ -540,7 +540,7 @@ Pas de triche, d’exploitation volontaire de bugs ou de contournement des prote
 
 ### Partager les grands projets
 
-Les infrastructures communes — trains, spawn, Stargates — se construisent avec coordination et bonne humeur.
+Les infrastructures communes (trains, spawn et Stargates) se construisent avec coordination et bonne humeur.
 
 **06**
 

@@ -51,7 +51,7 @@
             <article><b>Changer de projectile</b><strong>Effet et comportement modifiés</strong><span>Dégâts, explosion, pénétration et comportement en vol dépendent de la munition choisie.</span></article>
             <article><b>Épaissir le profil extérieur</b><strong>Portée inchangée</strong><span>Les tailles extérieures organisent la chambre et la forme du canon ; elles ne créent pas un nouveau calibre.</span></article>
           </div>
-          <div class="cbc-autocannon-exception"><b>Exception — [Autocannon / Autocanon]</b><span>Sur un autocanon, chaque bloc de tube augmente réellement la vitesse et réduit la dispersion, jusqu’aux limites propres à son matériau.</span></div>
+          <div class="cbc-autocannon-exception"><b>Exception ([Autocannon / Autocanon])</b><span>Sur un autocanon, chaque bloc de tube augmente réellement la vitesse et réduit la dispersion, jusqu’aux limites propres à son matériau.</span></div>
         </div>
       </section>
 

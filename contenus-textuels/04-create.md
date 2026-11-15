@@ -1,4 +1,4 @@
-# Create — description générale et première usine
+# Create (description générale et première usine)
 
 > Copie éditoriale locale du contenu actuellement présent sur le site.
 > Tu peux modifier les titres et paragraphes directement dans ce fichier, puis demander à Codex de synchroniser ces changements avec le site.
@@ -17,9 +17,9 @@ En gros, Create transforme Minecraft en gigantesque atelier mécanique. Le mod t
 
 Avant de parler d’engrenages
 
-## Construire une activité, pas juste une machine
+## Tout un tas de domaines d'application
 
-Le vrai intérêt de Create, ce n’est pas seulement de regarder une roue tourner. C’est de prendre une idée un peu débile — « et si je devenais le fournisseur officiel de frites du serveur ? » — puis de construire toute l’infrastructure nécessaire pour qu’elle fonctionne réellement.
+Le vrai intérêt de Create, ce n’est pas seulement de regarder une roue tourner. C’est de prendre une idée un peu débile (« et si je devenais le fournisseur officiel de frites du serveur ? »), puis de construire toute l’infrastructure nécessaire pour qu’elle fonctionne réellement.
 
 ### Devenir le nouvel Amazon
 

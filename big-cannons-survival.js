@@ -231,7 +231,7 @@
       <div class="cbc-step-title"><span>13</span><div><p class="cbc-step-kicker">Après le prototype</p><h2>Améliorer :)</h2></div></div>
       <p class="cbc-body-copy">Ton premier autocanon valide toute la chaîne : fonte, coulée connectée, alésage, ressort interne, finition de la culasse, affût et munitions. Tu peux maintenant choisir une seule piste à la fois.</p>
       <div class="cbc-reason-grid"><article><b>Changer de matériau</b><span>Passe au bronze ou à l’acier pour construire un canon plus performant.</span></article><article><b>Automatiser les munitions</b><span>Relie la production, le stockage et l’approvisionnement à ton usine Create.</span></article><article><b>Passer aux gros canons</b><span>Réutilise les principes appris ici avec des chambres, des charges propulsives et de plus gros projectiles.</span></article></div>
-      <p class="cbc-checkpoint"><b>La règle utile :</b><span>ne change qu’un élément à la fois. Tu sauras ainsi immédiatement quelle modification améliore — ou casse — le canon.</span></p>
+      <p class="cbc-checkpoint"><b>La règle utile :</b><span>ne change qu’un élément à la fois. Tu sauras ainsi immédiatement quelle modification améliore (ou casse) le canon.</span></p>
     </section>`;
   root.append(panel);
 

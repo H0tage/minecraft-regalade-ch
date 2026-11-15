@@ -13,12 +13,16 @@ Codex comparera alors ta version au contenu actuellement affiché, intégrera le
 
 ## Organisation
 
-- `01-pages-principales.md` — accueil, règlement, état du serveur, inscription et autres textes présents directement dans la page principale.
-- `02-installation-et-connexion.md` — installation du modpack et informations de connexion.
-- `03-argent-et-echanges.md` — monnaie, banque, carte bancaire, ventes et boutiques.
-- `04-create.md` — description générale de Create et tutoriel de la première usine.
-- `05-big-cannons.md` — fonctionnement général, premier autocanon, manuel et recettes.
-- `06-porte-des-etoiles.md` — présentation, première porte et chaîne industrielle.
+- `01-pages-principales.md` (accueil, règlement, état du serveur, inscription et autres textes présents directement dans la page principale).
+- `02-installation-et-connexion.md` (installation du modpack et informations de connexion).
+- `03-argent-et-echanges.md` (monnaie, banque, carte bancaire, ventes et boutiques).
+- `04-create.md` (description générale de Create et tutoriel de la première usine).
+- `05-big-cannons.md` (fonctionnement général, premier autocanon, manuel et recettes).
+- `06-porte-des-etoiles.md` (présentation, première porte et chaîne industrielle).
+
+## Règle éditoriale permanente
+
+Ne jamais utiliser de tiret cadratin. Lorsqu’une précision doit être isolée dans une phrase, utiliser des parenthèses.
 
 ## Important
 

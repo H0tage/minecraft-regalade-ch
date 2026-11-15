@@ -177,7 +177,7 @@
       <section class="sgx-reference-section" id="sgx-ref-totaux"><p class="sgx-eyebrow">Nomenclature</p><h2>Première installation complète</h2>
         <div class="sgx-metrics"><div><b>21</b><span>fournées</span></div><div><b>168</b><span>Cryostabilized Naquadah Crystals</span></div><div><b>64</b><span>Naquadah Plates</span></div><div><b>33</b><span>cristaux technologiques</span></div><div><b>24</b><span>blocs de Stargate</span></div></div>
         <div class="sgx-table-wrap" tabindex="0"><table><thead><tr><th>Élément</th><th>Quantité</th><th>Naquadah Plates</th></tr></thead><tbody>
-          <tr><td>Classic Stargate Ring Blocks</td><td>14</td><td>28</td></tr><tr><td>Classic Stargate Chevron Blocks</td><td>9</td><td>18</td></tr><tr><td>Classic Stargate Base Block</td><td>1</td><td>4</td></tr><tr><td>Classic DHD</td><td>1</td><td>2</td></tr><tr><td>Basic Interface</td><td>1</td><td>4</td></tr><tr><td>Naquadah Liquidizer + Crystallizer</td><td>2</td><td>8</td></tr><tr class="sgx-total"><td>Total première installation</td><td>—</td><td>64</td></tr>
+          <tr><td>Classic Stargate Ring Blocks</td><td>14</td><td>28</td></tr><tr><td>Classic Stargate Chevron Blocks</td><td>9</td><td>18</td></tr><tr><td>Classic Stargate Base Block</td><td>1</td><td>4</td></tr><tr><td>Classic DHD</td><td>1</td><td>2</td></tr><tr><td>Basic Interface</td><td>1</td><td>4</td></tr><tr><td>Naquadah Liquidizer + Crystallizer</td><td>2</td><td>8</td></tr><tr class="sgx-total"><td>Total première installation</td><td>Sans objet</td><td>64</td></tr>
         </tbody></table></div>
       </section>
 

@@ -80,7 +80,7 @@ Le matériau ne change pas cette limite générale. Il détermine plutôt la qua
 
 **Épaissir le profil extérieur** **Portée inchangée** Les tailles extérieures organisent la chambre et la forme du canon ; elles ne créent pas un nouveau calibre.
 
-**Exception — [Autocannon / Autocanon]** Sur un autocanon, chaque bloc de tube augmente réellement la vitesse et réduit la dispersion, jusqu’aux limites propres à son matériau.
+**Exception ([Autocannon / Autocanon])** Sur un autocanon, chaque bloc de tube augmente réellement la vitesse et réduit la dispersion, jusqu’aux limites propres à son matériau.
 
 03
 
@@ -672,7 +672,7 @@ Ton premier autocanon valide toute la chaîne : fonte, coulée connectée, alés
 
 **Passer aux gros canons** Réutilise les principes appris ici avec des chambres, des charges propulsives et de plus gros projectiles.
 
-**La règle utile :** ne change qu’un élément à la fois. Tu sauras ainsi immédiatement quelle modification améliore — ou casse — le canon.
+**La règle utile :** ne change qu’un élément à la fois. Tu sauras ainsi immédiatement quelle modification améliore (ou casse) le canon.
 
 ---
 
@@ -1001,7 +1001,7 @@ Coulissante
 
 4
 
-—
+Indisponible
 
 Rapide
 
@@ -1011,13 +1011,13 @@ Rapide
 
 2
 
-—
+Indisponible
 
 À vis
 
-—
+Indisponible
 
-—
+Indisponible
 
 8
 
@@ -1084,7 +1084,7 @@ Version mécanisée du refouloir. Longueur maximale par défaut : **64 blocs** .
 
 Elle permet le rechargement alors que le canon reste assemblé. Ouverture : 5 ticks ; délai de tir : 40 ticks.
 
-Un gros canon valide doit avoir **exactement une ouverture** — la bouche — et **une extrémité fermée** — la culasse.
+Un gros canon valide doit avoir **exactement une ouverture** (la bouche) et **une extrémité fermée** (la culasse).
 
 07
 

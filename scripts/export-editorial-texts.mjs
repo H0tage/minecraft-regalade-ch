@@ -22,7 +22,7 @@ const groups = [
   },
   {
     file: '04-create.md',
-    title: 'Create — description générale et première usine',
+    title: 'Create (description générale et première usine)',
     sources: ['create-first-factory.js'],
   },
   {
