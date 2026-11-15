@@ -1,0 +1,418 @@
+<div class="food-panel" id="food-industrial-panel" role="tabpanel" aria-labelledby="food-industrial-tab" hidden="">
+  <header class="food-hero food-industrial-hero">
+    <p class="food-eyebrow">De la cuisine automatisée à l’usine alimentaire</p>
+    <h1>La Central Kitchen : l’usine à bouffe industrielle ultratransformée qui bouche les artères</h1>
+    <p>
+      Ici, on ne pose plus deux machines autour d’un Cooking Pot. On construit un vrai bâtiment avec un réseau de
+      rotation, des réserves, des tapis roulants, des Packagers et des Mechanical Arms. C’est imposant, ça demande des
+      ressources et ça prend du temps, mais le résultat peut alimenter un restaurant, une gare ou une ville entière.
+    </p>
+  </header>
+
+  <section class="food-section food-kitchen-step" id="food-industrial-building" data-phase="Préparer">
+    <div class="food-title">
+      <span>01</span>
+      <div>
+        <p>Avant de poser les machines</p>
+        <h2>Prévoir un bâtiment, pas un coin cuisine</h2>
+      </div>
+    </div>
+    <p class="food-lead">
+      Une Central Kitchen fonctionne comme une petite usine. Il faut pouvoir circuler autour des machines, atteindre les
+      coffres, modifier les filtres et ajouter une nouvelle ligne sans démolir la moitié du bâtiment.
+    </p>
+    <div class="food-industrial-zones">
+      <article><b>Réception</b><span>fermes, élevages et livraisons</span></article>
+      <article><b>Réserves</b><span>un stockage lisible par ingrédient</span></article>
+      <article><b>Préparation</b><span>découpe, emballage et liquides</span></article>
+      <article><b>Cuisson</b><span>une cellule dédiée par recette</span></article>
+      <article><b>Expédition</b><span>restaurant, boutique ou train</span></article>
+    </div>
+    <div class="food-industrial-warning">
+      <strong>Garde un couloir technique derrière les cellules.</strong>
+      <span>Les Shafts, Belts, Funnels, filtres et conduites doivent rester accessibles.</span>
+    </div>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-industrial-role" data-phase="Comprendre">
+    <div class="food-title">
+      <span>02</span>
+      <div>
+        <p>Ce que fait réellement le mod</p>
+        <h2>Central Kitchen relie les blocs de cuisine aux machines Create</h2>
+      </div>
+    </div>
+    <p class="food-lead">
+      Le mod n’ajoute pas une machine magique capable de préparer tous les plats. Il permet aux outils Create de
+      manipuler les postes de cuisine que tu utilises déjà.
+    </p>
+    <div class="food-industrial-tools">
+      <article>
+        <h3>Packager</h3>
+        <p>Place une recette complète dans un colis, puis décharge cette recette dans un Cooking Pot ou un Keg.</p>
+      </article>
+      <article>
+        <h3>Mechanical Arm</h3>
+        <p>Apporte les récipients, récupère les plats terminés et manipule plusieurs postes culinaires.</p>
+      </article>
+      <article>
+        <h3>Deployer ou Mechanical Saw</h3>
+        <p>Automatise la découpe sur une Cutting Board. Le Deployer doit tenir un Knife et être en mode Use.</p>
+      </article>
+      <article>
+        <h3>Blaze Burner</h3>
+        <p>Chauffe les ustensiles de cuisine et peut accélérer certaines cuissons selon son niveau de chaleur.</p>
+      </article>
+    </div>
+    <p class="food-note">
+      <strong>Le meilleur réflexe :</strong> survole un Cooking Pot, une Cutting Board ou un Keg dans JEI et maintiens
+      <kbd>W</kbd>. Les scènes Ponder montrent directement leurs interactions avec Create.
+    </p>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-industrial-map" data-phase="Planifier">
+    <div class="food-title">
+      <span>03</span>
+      <div>
+        <p>La carte de l’usine</p>
+        <h2>Comprendre le trajet d’un plat avant de construire</h2>
+      </div>
+    </div>
+    <div class="food-industrial-map" aria-label="Chaîne générale d’une Central Kitchen">
+      <article><b>Fermes et livraisons</b><small>matières premières</small></article>
+      <i>→</i>
+      <article><b>Entrepôt central</b><small>stocks séparés et visibles</small></article>
+      <i>→</i>
+      <article><b>Réserve de recette</b><small>dosage exact d’un seul plat</small></article>
+      <i>→</i>
+      <article><b>Packager</b><small>crée un colis complet</small></article>
+      <i>→</i>
+      <article><b>Cooking Pot</b><small>déballage et cuisson</small></article>
+      <i>→</i>
+      <article><b>Stock de plats</b><small>service ou expédition</small></article>
+    </div>
+    <div class="food-industrial-side-lines">
+      <article>
+        <b>Ligne des bols</b><span>réserve séparée</span><i>→</i><strong>Mechanical Arm</strong><i>→</i
+        ><span>Cooking Pot</span>
+      </article>
+      <article>
+        <b>Ligne des liquides</b><span>Tank ou source</span><i>→</i><strong>Fluid Pipe</strong><i>→</i
+        ><span>poste de cuisine</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-industrial-prototype" data-phase="Prototype">
+    <div class="food-title">
+      <span>04</span>
+      <div>
+        <p>Une recette, une cellule</p>
+        <h2>Commencer par une ligne de Beef Stew</h2>
+      </div>
+    </div>
+    <p class="food-lead">
+      Le Beef Stew est parfait pour comprendre le système : trois ingrédients solides entrent dans le colis, un Bowl
+      arrive séparément et le Cooking Pot produit un plat terminé. Tant que cette cellule ne fonctionne pas, ne la
+      duplique pas.
+    </p>
+    <div class="food-industrial-recipe">
+      <div class="food-industrial-recipe-items">
+        <article><b>1 Raw Beef</b></article>
+        <i>+</i>
+        <article><b>1 Carrot</b></article>
+        <i>+</i>
+        <article><b>1 Potato</b></article>
+      </div>
+      <i>→</i>
+      <article class="food-industrial-package">
+        <b>1 colis recette</b><small>les trois ingrédients, pas le Bowl</small>
+      </article>
+      <i>→</i>
+      <article class="food-industrial-result"><b>1 Beef Stew</b><small>après cuisson et ajout du Bowl</small></article>
+    </div>
+    <p class="food-note">
+      <strong>Vérifie toujours la recette dans JEI.</strong> Le principe de la cellule reste le même, mais les
+      ingrédients changent d’un plat à l’autre.
+    </p>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-industrial-shopping" data-phase="Prototype">
+    <div class="food-title">
+      <span>05</span>
+      <div>
+        <p>Liste de courses</p>
+        <h2>Rassembler une cellule complète avant de la monter</h2>
+      </div>
+    </div>
+    <div class="food-industrial-shopping">
+      <article>
+        <h3>Cuisson et colis</h3>
+        <ul>
+          <li>1 Cooking Pot</li>
+          <li>1 Blaze Burner</li>
+          <li>2 Packagers</li>
+          <li>2 Mechanical Arms</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Transport et stockage</h3>
+        <ul>
+          <li>3 coffres ou Barrels</li>
+          <li>Belts, Funnels et Chutes</li>
+          <li>3 Depots</li>
+          <li>filtres pour les sorties</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Rotation et commande</h3>
+        <ul>
+          <li>Shafts et Cogwheels</li>
+          <li>une source de rotation</li>
+          <li>un Clutch par zone</li>
+          <li>un levier ou signal Redstone</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Premier test</h3>
+        <ul>
+          <li>Raw Beef, Carrots et Potatoes</li>
+          <li>une réserve de Bowls</li>
+          <li>du combustible pour le Blaze Burner</li>
+          <li>de la place pour circuler</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-industrial-package" data-phase="Construire">
+    <div class="food-title">
+      <span>06</span>
+      <div>
+        <p>Cellule de conditionnement</p>
+        <h2>Fabriquer un colis que la marmite peut réellement accepter</h2>
+      </div>
+    </div>
+    <div class="food-industrial-two-columns">
+      <article>
+        <h3>1. Prépare la réserve de recette</h3>
+        <ol>
+          <li>Place un coffre dédié au Beef Stew.</li>
+          <li>Alimente-le avec Raw Beef, Carrots et Potatoes.</li>
+          <li>Garde uniquement des lots complets et équilibrés.</li>
+          <li>Ne mélange aucune autre recette dans ce coffre.</li>
+        </ol>
+      </article>
+      <article>
+        <h3>2. Crée le colis</h3>
+        <ol>
+          <li>Fixe le premier Packager sur la réserve.</li>
+          <li>Demande un lot contenant un ingrédient de chaque type.</li>
+          <li>Envoie une impulsion Redstone au Packager.</li>
+          <li>Récupère le Cardboard Package sur un Belt.</li>
+        </ol>
+      </article>
+    </div>
+    <div class="food-industrial-flow-short">
+      <article><b>Coffre recette</b><small>lots exacts</small></article>
+      <i>→</i>
+      <article><b>Packager source</b><small>impulsion Redstone</small></article>
+      <i>→</i>
+      <article><b>Cardboard Package</b><small>une recette complète</small></article>
+    </div>
+    <p class="food-industrial-rule">
+      Un colis incomplet, déséquilibré ou contenant plusieurs recettes est refusé. Commence avec une seule portion par
+      colis. Tu testeras les lots multiples quand la cellule de base sera stable.
+    </p>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-industrial-cooking" data-phase="Construire">
+    <div class="food-title">
+      <span>07</span>
+      <div>
+        <p>Cellule de cuisson</p>
+        <h2>Déballer, cuire et sortir le plat</h2>
+      </div>
+    </div>
+    <div class="food-industrial-cell" aria-label="Disposition de la cellule de cuisson">
+      <div class="food-industrial-cell-main">
+        <article><b>Belt d’arrivée</b><small>transporte le colis</small></article>
+        <i>→</i>
+        <article><b>Packager destination</b><small>décharge le colis dans le Cooking Pot</small></article>
+        <i>→</i>
+        <div class="food-industrial-pot-stack">
+          <article><b>Cooking Pot</b><small>ingrédients et Bowl</small></article>
+          <i>↓</i>
+          <article><b>Blaze Burner</b><small>source de chaleur</small></article>
+        </div>
+      </div>
+      <div class="food-industrial-arms">
+        <article><b>Arm A</b><span>réserve de Bowls</span><i>→</i><span>Cooking Pot</span></article>
+        <article><b>Arm B</b><span>Cooking Pot</span><i>→</i><span>stock des plats</span></article>
+      </div>
+    </div>
+    <p class="food-note">
+      <strong>Pourquoi deux bras ?</strong> Un seul peut gérer plusieurs points, mais deux circuits séparés sont plus
+      faciles à régler, à observer et à dépanner pour une première usine.
+    </p>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-industrial-test" data-phase="Tester">
+    <div class="food-title">
+      <span>08</span>
+      <div>
+        <p>Premier démarrage</p>
+        <h2>Faire un seul plat et regarder chaque étape</h2>
+      </div>
+    </div>
+    <div class="food-industrial-test">
+      <article><b>1</b><span>Coupe toutes les alimentations automatiques</span></article>
+      <i>→</i>
+      <article><b>2</b><span>Place un lot exact dans le coffre recette</span></article>
+      <i>→</i>
+      <article><b>3</b><span>Déclenche un seul colis</span></article>
+      <i>→</i>
+      <article><b>4</b><span>Vérifie le déballage et l’arrivée du Bowl</span></article>
+      <i>→</i>
+      <article><b>5</b><span>Attends que le Beef Stew rejoigne le coffre de sortie</span></article>
+    </div>
+    <div class="food-industrial-checks">
+      <article>
+        <h3>Le colis reste bloqué</h3>
+        <p>Le contenu n’est pas une recette complète ou la marmite ne peut pas tout recevoir.</p>
+      </article>
+      <article>
+        <h3>Les ingrédients entrent, mais rien ne cuit</h3>
+        <p>Vérifie la chaleur, le Bowl et les éventuels liquides demandés.</p>
+      </article>
+      <article>
+        <h3>Le plat reste dans la marmite</h3>
+        <p>Vérifie les points du Mechanical Arm, son filtre et la place dans le stockage final.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-industrial-preparation" data-phase="Agrandir">
+    <div class="food-title">
+      <span>09</span>
+      <div>
+        <p>Préparer les ingrédients</p>
+        <h2>Ajouter une zone de découpe automatique</h2>
+      </div>
+    </div>
+    <p class="food-lead">
+      Certains plats demandent des ingrédients découpés avant la cuisson. Central Kitchen permet de faire cette étape
+      sur une Cutting Board sans rester devant avec un Knife à la main.
+    </p>
+    <div class="food-industrial-cutting">
+      <article><b>Ingrédient brut</b><small>stock d’entrée</small></article>
+      <i>→</i>
+      <article><b>Mechanical Arm</b><small>pose sur la Cutting Board</small></article>
+      <i>→</i>
+      <article><b>Deployer + Knife</b><small>mode Use</small></article>
+      <strong>ou</strong>
+      <article><b>Mechanical Saw</b><small>découpe automatique</small></article>
+      <i>→</i>
+      <article><b>Ingrédient préparé</b><small>vers la réserve recette</small></article>
+    </div>
+    <p class="food-note">
+      Teste d’abord la recette de découpe dans JEI. Toutes les préparations n’utilisent pas forcément la Cutting Board.
+    </p>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-industrial-scale" data-phase="Agrandir">
+    <div class="food-title">
+      <span>10</span>
+      <div>
+        <p>Passer du prototype à l’usine</p>
+        <h2>Dupliquer les cellules sans mélanger les recettes</h2>
+      </div>
+    </div>
+    <p class="food-lead">
+      Une fois le Beef Stew produit sans intervention, reproduis le même principe pour un deuxième plat. L’entrepôt peut
+      être commun, mais chaque recette garde sa propre réserve, son propre conditionnement et sa propre cellule de
+      cuisson.
+    </p>
+    <div class="food-industrial-scale">
+      <article><b>Entrepôt partagé</b><small>toutes les matières premières</small></article>
+      <i>→</i>
+      <div>
+        <article><b>Ligne A</b><span>Beef Stew</span></article>
+        <article><b>Ligne B</b><span>Soup ou Pasta</span></article>
+        <article><b>Ligne C</b><span>dessert ou plat à servir</span></article>
+      </div>
+      <i>→</i>
+      <article><b>Stock final partagé</b><small>plats terminés uniquement</small></article>
+    </div>
+    <div class="food-industrial-two-columns food-industrial-scale-notes">
+      <article>
+        <h3>À partager</h3>
+        <p>La rotation, les matières premières, les emballages, les couloirs et le bâtiment.</p>
+      </article>
+      <article>
+        <h3>À séparer</h3>
+        <p>Les dosages, les colis, les filtres, les marmites et les sorties de chaque recette.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-industrial-keg" data-phase="Boissons">
+    <div class="food-title">
+      <span>11</span>
+      <div>
+        <p>Ajouter une branche liquide</p>
+        <h2>Relier le Keg à l’usine</h2>
+      </div>
+    </div>
+    <div class="food-industrial-keg">
+      <article><b>Fluid Pipe</b><small>injecte ou extrait les liquides</small></article>
+      <i>+</i>
+      <article><b>Colis recette</b><small>ingrédients solides complets</small></article>
+      <i>→</i>
+      <article><b>Keg</b><small>fermentation normale</small></article>
+      <i>→</i>
+      <article><b>Spout</b><small>remplit les Tankards</small></article>
+    </div>
+    <p class="food-note">
+      <strong>Le Keg garde ses propres règles.</strong> Le colis fournit les ingrédients solides, mais les liquides, le
+      temps de fermentation et la récupération du résultat doivent toujours être prévus dans la ligne.
+    </p>
+  </section>
+
+  <section class="food-section food-kitchen-step" id="food-industrial-finish" data-phase="Finaliser">
+    <div class="food-title">
+      <span>12</span>
+      <div>
+        <p>Faire tourner l’usine sans la surveiller</p>
+        <h2>Contrôler, stocker et expédier</h2>
+      </div>
+    </div>
+    <div class="food-industrial-finish">
+      <article>
+        <h3>Contrôle</h3>
+        <p>
+          Place un Clutch par zone et surveille les RPM et les SU. Une cellule arrêtée ne doit pas bloquer toute
+          l’usine.
+        </p>
+      </article>
+      <article>
+        <h3>Stocks</h3>
+        <p>
+          Prévois un tampon avant chaque recette et après chaque cuisson. Une sortie pleine doit être visible
+          immédiatement.
+        </p>
+      </article>
+      <article>
+        <h3>Expédition</h3>
+        <p>Envoie les plats vers un restaurant, une boutique, une gare ou un nouveau Packager pour la livraison.</p>
+      </article>
+    </div>
+    <div class="food-industrial-final-rule">
+      <strong>La règle qui évite quatre heures de dépannage</strong>
+      <p>
+        Construis une cellule, fais-lui produire un plat complet, puis copie-la. Ne construis jamais toute l’usine avant
+        le premier test.
+      </p>
+    </div>
+  </section>
+</div>

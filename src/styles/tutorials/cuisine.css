@@ -1097,6 +1097,443 @@
   line-height: 1.4;
 }
 
+.food-industrial-zones,
+.food-industrial-tools,
+.food-industrial-shopping,
+.food-industrial-finish {
+  display: grid;
+  gap: 9px;
+}
+
+.food-industrial-zones {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.food-industrial-zones article,
+.food-industrial-tools article,
+.food-industrial-shopping article,
+.food-industrial-two-columns article,
+.food-industrial-checks article,
+.food-industrial-finish article,
+.food-industrial-scale-notes article {
+  padding: 15px;
+  border: 1px solid var(--food-line);
+  border-radius: 11px;
+  background: #fff;
+}
+
+.food-industrial-zones article {
+  display: flex;
+  min-height: 92px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.food-industrial-zones b,
+.food-industrial-zones span {
+  display: block;
+}
+
+.food-industrial-zones b {
+  font-size: 0.8rem;
+}
+
+.food-industrial-zones span {
+  margin-top: 4px;
+  color: var(--food-muted);
+  font-size: 0.71rem;
+  line-height: 1.4;
+}
+
+.food-industrial-warning,
+.food-industrial-rule,
+.food-industrial-final-rule {
+  margin-top: 10px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--food-orange);
+  background: #f7f9fa;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.food-industrial-warning strong,
+.food-industrial-warning span {
+  display: block;
+}
+
+.food-industrial-warning span,
+.food-industrial-rule,
+.food-industrial-final-rule p {
+  color: var(--food-muted);
+}
+
+.food-industrial-warning span {
+  margin-top: 2px;
+}
+
+.food-industrial-tools,
+.food-industrial-shopping,
+.food-industrial-finish {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.food-industrial-tools h3,
+.food-industrial-shopping h3,
+.food-industrial-two-columns h3,
+.food-industrial-checks h3,
+.food-industrial-finish h3 {
+  margin: 0 0 7px;
+  font-size: var(--tutorial-card-title-size);
+  line-height: 1.3;
+}
+
+.food-industrial-tools p,
+.food-industrial-two-columns p,
+.food-industrial-checks p,
+.food-industrial-finish p,
+.food-industrial-scale-notes p {
+  margin: 0;
+  color: var(--food-muted);
+  font-size: 0.79rem;
+  line-height: 1.5;
+}
+
+.food-industrial-map,
+.food-industrial-test,
+.food-industrial-cutting,
+.food-industrial-keg {
+  display: flex;
+  align-items: stretch;
+  gap: 7px;
+}
+
+.food-industrial-map article,
+.food-industrial-test article,
+.food-industrial-cutting article,
+.food-industrial-keg article,
+.food-industrial-flow-short article,
+.food-industrial-cell-main > article,
+.food-industrial-pot-stack article,
+.food-industrial-scale > article {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 10px;
+  border: 1px solid var(--food-line);
+  border-radius: 10px;
+  background: #fff;
+  text-align: center;
+}
+
+.food-industrial-map b,
+.food-industrial-test span,
+.food-industrial-cutting b,
+.food-industrial-keg b,
+.food-industrial-flow-short b,
+.food-industrial-cell-main b,
+.food-industrial-scale b {
+  font-size: 0.77rem;
+  line-height: 1.35;
+}
+
+.food-industrial-map small,
+.food-industrial-cutting small,
+.food-industrial-keg small,
+.food-industrial-flow-short small,
+.food-industrial-cell-main small,
+.food-industrial-scale small {
+  margin-top: 4px;
+  color: var(--food-muted);
+  font-size: 0.69rem;
+  line-height: 1.35;
+}
+
+.food-industrial-map > i,
+.food-industrial-test > i,
+.food-industrial-cutting > i,
+.food-industrial-keg > i,
+.food-industrial-flow-short > i,
+.food-industrial-cell-main > i,
+.food-industrial-scale > i,
+.food-industrial-recipe > i {
+  display: grid;
+  place-items: center;
+  color: var(--food-orange);
+  font-style: normal;
+  font-weight: 950;
+}
+
+.food-industrial-side-lines,
+.food-industrial-arms {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 9px;
+}
+
+.food-industrial-side-lines article,
+.food-industrial-arms article {
+  display: grid;
+  grid-template-columns: minmax(100px, 0.8fr) minmax(100px, 1fr) auto minmax(120px, 1fr) auto minmax(100px, 1fr);
+  gap: 7px;
+  align-items: center;
+  padding: 13px;
+  border: 1px solid var(--food-line);
+  border-radius: 11px;
+  background: #fff;
+}
+
+.food-industrial-side-lines b,
+.food-industrial-arms b {
+  color: var(--food-blue);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.food-industrial-side-lines span,
+.food-industrial-side-lines strong,
+.food-industrial-arms span {
+  font-size: 0.74rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.food-industrial-side-lines i,
+.food-industrial-arms i {
+  color: var(--food-orange);
+  font-style: normal;
+  font-weight: 950;
+}
+
+.food-industrial-recipe {
+  display: grid;
+  grid-template-columns: minmax(310px, 1.6fr) auto minmax(165px, 0.8fr) auto minmax(165px, 0.8fr);
+  gap: 8px;
+  align-items: stretch;
+}
+
+.food-industrial-recipe-items {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 6px;
+  align-items: stretch;
+  padding: 10px;
+  border: 1px solid var(--food-line);
+  border-radius: 11px;
+  background: #fff;
+}
+
+.food-industrial-recipe-items article,
+.food-industrial-package,
+.food-industrial-result {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 9px;
+  border: 1px solid var(--food-line);
+  border-radius: 9px;
+  background: #fff;
+  text-align: center;
+}
+
+.food-industrial-recipe-items i {
+  display: grid;
+  place-items: center;
+  color: var(--food-orange);
+  font-style: normal;
+  font-weight: 950;
+}
+
+.food-industrial-recipe b {
+  font-size: 0.77rem;
+  line-height: 1.35;
+}
+
+.food-industrial-recipe small {
+  margin-top: 4px;
+  color: var(--food-muted);
+  font-size: 0.69rem;
+  line-height: 1.35;
+}
+
+.food-industrial-result {
+  border-color: #acd9c8;
+}
+
+.food-industrial-shopping ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--food-muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.food-industrial-shopping li + li {
+  margin-top: 4px;
+}
+
+.food-industrial-two-columns,
+.food-industrial-checks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.food-industrial-two-columns ol {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--food-muted);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.food-industrial-two-columns li + li {
+  margin-top: 4px;
+}
+
+.food-industrial-flow-short {
+  display: flex;
+  align-items: stretch;
+  gap: 7px;
+  margin-top: 9px;
+}
+
+.food-industrial-flow-short article {
+  flex: 1 1 0;
+}
+
+.food-industrial-rule {
+  margin-bottom: 0;
+}
+
+.food-industrial-cell {
+  padding: 14px;
+  border: 1px solid var(--food-line);
+  border-radius: 13px;
+  background: #fff;
+}
+
+.food-industrial-cell-main {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.8fr) auto minmax(190px, 1.2fr) auto minmax(175px, 0.9fr);
+  gap: 8px;
+  align-items: center;
+}
+
+.food-industrial-pot-stack {
+  display: grid;
+  gap: 5px;
+}
+
+.food-industrial-pot-stack > i {
+  color: var(--food-orange);
+  font-style: normal;
+  font-weight: 950;
+  text-align: center;
+}
+
+.food-industrial-test article {
+  flex: 1 1 0;
+  min-height: 100px;
+  gap: 7px;
+}
+
+.food-industrial-test b {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 8px;
+  background: #eef7fb;
+  color: var(--food-blue);
+  font-size: 0.75rem;
+}
+
+.food-industrial-test span {
+  font-size: 0.73rem;
+  text-align: center;
+}
+
+.food-industrial-checks {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 9px;
+}
+
+.food-industrial-cutting article,
+.food-industrial-keg article {
+  min-height: 95px;
+}
+
+.food-industrial-cutting > strong {
+  display: grid;
+  place-items: center;
+  color: var(--food-blue);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.food-industrial-scale {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.7fr) auto minmax(260px, 1.4fr) auto minmax(150px, 0.7fr);
+  gap: 8px;
+  align-items: stretch;
+}
+
+.food-industrial-scale > div {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.food-industrial-scale > div article {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 8px;
+  border: 1px solid var(--food-line);
+  border-radius: 9px;
+  background: #fff;
+  text-align: center;
+}
+
+.food-industrial-scale > div b,
+.food-industrial-scale > div span {
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.food-industrial-scale > div span {
+  margin-top: 3px;
+  color: var(--food-muted);
+}
+
+.food-industrial-scale-notes {
+  margin-top: 9px;
+}
+
+.food-industrial-finish {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.food-industrial-final-rule strong,
+.food-industrial-final-rule p {
+  display: block;
+}
+
+.food-industrial-final-rule p {
+  margin: 3px 0 0;
+}
+
 @media (width <= 760px) {
   .food-switcher {
     width: 100%;
@@ -1242,6 +1679,61 @@
   .food-specialty-flow > i,
   .food-specialty-start > i {
     height: 12px;
+    transform: rotate(90deg);
+  }
+
+  .food-industrial-zones,
+  .food-industrial-tools,
+  .food-industrial-shopping,
+  .food-industrial-side-lines,
+  .food-industrial-recipe,
+  .food-industrial-two-columns,
+  .food-industrial-cell-main,
+  .food-industrial-arms,
+  .food-industrial-checks,
+  .food-industrial-scale,
+  .food-industrial-finish {
+    grid-template-columns: 1fr;
+  }
+
+  .food-industrial-map,
+  .food-industrial-test,
+  .food-industrial-cutting,
+  .food-industrial-keg,
+  .food-industrial-flow-short {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .food-industrial-map > i,
+  .food-industrial-test > i,
+  .food-industrial-cutting > i,
+  .food-industrial-keg > i,
+  .food-industrial-flow-short > i,
+  .food-industrial-cell-main > i,
+  .food-industrial-scale > i,
+  .food-industrial-recipe > i {
+    height: 12px;
+    transform: rotate(90deg);
+  }
+
+  .food-industrial-side-lines article,
+  .food-industrial-arms article {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .food-industrial-side-lines i,
+  .food-industrial-arms i {
+    transform: rotate(90deg);
+  }
+
+  .food-industrial-recipe-items,
+  .food-industrial-scale > div {
+    grid-template-columns: 1fr;
+  }
+
+  .food-industrial-recipe-items i {
     transform: rotate(90deg);
   }
 }

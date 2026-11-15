@@ -14,6 +14,8 @@ Automatiser un repas
 
 Choisir sa spécialité
 
+Nourrir tout le serveur
+
 Faire pousser, transformer, cuisiner, servir
 
 # De la bouffe à l’assiette
@@ -1151,3 +1153,381 @@ Une filière, un bâtiment, un produit
 Tu n’as pas besoin de choisir définitivement. Une boulangerie peut acheter son lait à une fromagerie, un café
 vendre les pâtisseries d’un autre joueur et une brasserie alimenter plusieurs tavernes. Les spécialités servent
 surtout à créer des échanges et des lieux différents sur le serveur.
+
+De la cuisine automatisée à l’usine alimentaire
+
+# La Central Kitchen : l’usine à bouffe industrielle ultratransformée qui bouche les artères
+
+Ici, on ne pose plus deux machines autour d’un Cooking Pot. On construit un vrai bâtiment avec un réseau de
+rotation, des réserves, des tapis roulants, des Packagers et des Mechanical Arms. C’est imposant, ça demande des
+ressources et ça prend du temps, mais le résultat peut alimenter un restaurant, une gare ou une ville entière.
+
+01
+
+Avant de poser les machines
+
+## Prévoir un bâtiment, pas un coin cuisine
+
+Une Central Kitchen fonctionne comme une petite usine. Il faut pouvoir circuler autour des machines, atteindre les
+coffres, modifier les filtres et ajouter une nouvelle ligne sans démolir la moitié du bâtiment.
+
+**Réception** fermes, élevages et livraisons
+
+**Réserves** un stockage lisible par ingrédient
+
+**Préparation** découpe, emballage et liquides
+
+**Cuisson** une cellule dédiée par recette
+
+**Expédition** restaurant, boutique ou train
+
+**Garde un couloir technique derrière les cellules.**
+Les Shafts, Belts, Funnels, filtres et conduites doivent rester accessibles.
+
+02
+
+Ce que fait réellement le mod
+
+## Central Kitchen relie les blocs de cuisine aux machines Create
+
+Le mod n’ajoute pas une machine magique capable de préparer tous les plats. Il permet aux outils Create de
+manipuler les postes de cuisine que tu utilises déjà.
+
+### Packager
+
+Place une recette complète dans un colis, puis décharge cette recette dans un Cooking Pot ou un Keg.
+
+### Mechanical Arm
+
+Apporte les récipients, récupère les plats terminés et manipule plusieurs postes culinaires.
+
+### Deployer ou Mechanical Saw
+
+Automatise la découpe sur une Cutting Board. Le Deployer doit tenir un Knife et être en mode Use.
+
+### Blaze Burner
+
+Chauffe les ustensiles de cuisine et peut accélérer certaines cuissons selon son niveau de chaleur.
+
+**Le meilleur réflexe :** survole un Cooking Pot, une Cutting Board ou un Keg dans JEI et maintiens
+`W`. Les scènes Ponder montrent directement leurs interactions avec Create.
+
+03
+
+La carte de l’usine
+
+## Comprendre le trajet d’un plat avant de construire
+
+**Fermes et livraisons** matières premières
+
+→
+
+**Entrepôt central** stocks séparés et visibles
+
+→
+
+**Réserve de recette** dosage exact d’un seul plat
+
+→
+
+**Packager** crée un colis complet
+
+→
+
+**Cooking Pot** déballage et cuisson
+
+→
+
+**Stock de plats** service ou expédition
+
+**Ligne des bols** réserve séparée→**Mechanical Arm** →Cooking Pot
+
+**Ligne des liquides** Tank ou source→**Fluid Pipe** →poste de cuisine
+
+04
+
+Une recette, une cellule
+
+## Commencer par une ligne de Beef Stew
+
+Le Beef Stew est parfait pour comprendre le système : trois ingrédients solides entrent dans le colis, un Bowl
+arrive séparément et le Cooking Pot produit un plat terminé. Tant que cette cellule ne fonctionne pas, ne la
+duplique pas.
+
+**1 Raw Beef**
+
++
+
+**1 Carrot**
+
++
+
+**1 Potato**
+
+→
+
+**1 colis recette** les trois ingrédients, pas le Bowl
+
+→
+
+**1 Beef Stew** après cuisson et ajout du Bowl
+
+**Vérifie toujours la recette dans JEI.** Le principe de la cellule reste le même, mais les
+ingrédients changent d’un plat à l’autre.
+
+05
+
+Liste de courses
+
+## Rassembler une cellule complète avant de la monter
+
+### Cuisson et colis
+
+- 1 Cooking Pot
+
+- 1 Blaze Burner
+
+- 2 Packagers
+
+- 2 Mechanical Arms
+
+### Transport et stockage
+
+- 3 coffres ou Barrels
+
+- Belts, Funnels et Chutes
+
+- 3 Depots
+
+- filtres pour les sorties
+
+### Rotation et commande
+
+- Shafts et Cogwheels
+
+- une source de rotation
+
+- un Clutch par zone
+
+- un levier ou signal Redstone
+
+### Premier test
+
+- Raw Beef, Carrots et Potatoes
+
+- une réserve de Bowls
+
+- du combustible pour le Blaze Burner
+
+- de la place pour circuler
+
+06
+
+Cellule de conditionnement
+
+## Fabriquer un colis que la marmite peut réellement accepter
+
+### 1. Prépare la réserve de recette
+
+- Place un coffre dédié au Beef Stew.
+
+- Alimente-le avec Raw Beef, Carrots et Potatoes.
+
+- Garde uniquement des lots complets et équilibrés.
+
+- Ne mélange aucune autre recette dans ce coffre.
+
+### 2. Crée le colis
+
+- Fixe le premier Packager sur la réserve.
+
+- Demande un lot contenant un ingrédient de chaque type.
+
+- Envoie une impulsion Redstone au Packager.
+
+- Récupère le Cardboard Package sur un Belt.
+
+**Coffre recette** lots exacts
+
+→
+
+**Packager source** impulsion Redstone
+
+→
+
+**Cardboard Package** une recette complète
+
+Un colis incomplet, déséquilibré ou contenant plusieurs recettes est refusé. Commence avec une seule portion par
+colis. Tu testeras les lots multiples quand la cellule de base sera stable.
+
+07
+
+Cellule de cuisson
+
+## Déballer, cuire et sortir le plat
+
+**Belt d’arrivée** transporte le colis
+
+→
+
+**Packager destination** décharge le colis dans le Cooking Pot
+
+→
+
+**Cooking Pot** ingrédients et Bowl
+
+↓
+
+**Blaze Burner** source de chaleur
+
+**Arm A** réserve de Bowls→Cooking Pot
+
+**Arm B** Cooking Pot→stock des plats
+
+**Pourquoi deux bras ?** Un seul peut gérer plusieurs points, mais deux circuits séparés sont plus
+faciles à régler, à observer et à dépanner pour une première usine.
+
+08
+
+Premier démarrage
+
+## Faire un seul plat et regarder chaque étape
+
+**1** Coupe toutes les alimentations automatiques
+
+→
+
+**2** Place un lot exact dans le coffre recette
+
+→
+
+**3** Déclenche un seul colis
+
+→
+
+**4** Vérifie le déballage et l’arrivée du Bowl
+
+→
+
+**5** Attends que le Beef Stew rejoigne le coffre de sortie
+
+### Le colis reste bloqué
+
+Le contenu n’est pas une recette complète ou la marmite ne peut pas tout recevoir.
+
+### Les ingrédients entrent, mais rien ne cuit
+
+Vérifie la chaleur, le Bowl et les éventuels liquides demandés.
+
+### Le plat reste dans la marmite
+
+Vérifie les points du Mechanical Arm, son filtre et la place dans le stockage final.
+
+09
+
+Préparer les ingrédients
+
+## Ajouter une zone de découpe automatique
+
+Certains plats demandent des ingrédients découpés avant la cuisson. Central Kitchen permet de faire cette étape
+sur une Cutting Board sans rester devant avec un Knife à la main.
+
+**Ingrédient brut** stock d’entrée
+
+→
+
+**Mechanical Arm** pose sur la Cutting Board
+
+→
+
+**Deployer + Knife** mode Use
+
+**ou**
+
+**Mechanical Saw** découpe automatique
+
+→
+
+**Ingrédient préparé** vers la réserve recette
+
+Teste d’abord la recette de découpe dans JEI. Toutes les préparations n’utilisent pas forcément la Cutting Board.
+
+10
+
+Passer du prototype à l’usine
+
+## Dupliquer les cellules sans mélanger les recettes
+
+Une fois le Beef Stew produit sans intervention, reproduis le même principe pour un deuxième plat. L’entrepôt peut
+être commun, mais chaque recette garde sa propre réserve, son propre conditionnement et sa propre cellule de
+cuisson.
+
+**Entrepôt partagé** toutes les matières premières
+
+→
+
+**Ligne A** Beef Stew
+
+**Ligne B** Soup ou Pasta
+
+**Ligne C** dessert ou plat à servir
+
+→
+
+**Stock final partagé** plats terminés uniquement
+
+### À partager
+
+La rotation, les matières premières, les emballages, les couloirs et le bâtiment.
+
+### À séparer
+
+Les dosages, les colis, les filtres, les marmites et les sorties de chaque recette.
+
+11
+
+Ajouter une branche liquide
+
+## Relier le Keg à l’usine
+
+**Fluid Pipe** injecte ou extrait les liquides
+
++
+
+**Colis recette** ingrédients solides complets
+
+→
+
+**Keg** fermentation normale
+
+→
+
+**Spout** remplit les Tankards
+
+**Le Keg garde ses propres règles.** Le colis fournit les ingrédients solides, mais les liquides, le
+temps de fermentation et la récupération du résultat doivent toujours être prévus dans la ligne.
+
+12
+
+Faire tourner l’usine sans la surveiller
+
+## Contrôler, stocker et expédier
+
+### Contrôle
+
+Place un Clutch par zone et surveille les RPM et les SU. Une cellule arrêtée ne doit pas bloquer toute
+l’usine.
+
+### Stocks
+
+Prévois un tampon avant chaque recette et après chaque cuisson. Une sortie pleine doit être visible
+immédiatement.
+
+### Expédition
+
+Envoie les plats vers un restaurant, une boutique, une gare ou un nouveau Packager pour la livraison.
+
+**La règle qui évite quatre heures de dépannage**
+
+Construis une cellule, fais-lui produire un plat complet, puis copie-la. Ne construis jamais toute l’usine avant
+le premier test.
