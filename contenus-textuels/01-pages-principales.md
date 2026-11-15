@@ -568,14 +568,16 @@ N’importe qui peut rejoindre ?
 Oui !
 Faut-il être expert en mods ?
 Non. Le pack et les tutoriels sont pensés pour accueillir aussi les personnes peu habituées aux mods.
-Que se passe-t-il si on contrevient aux règles ?
-Ce projet a été fait pour vous, mais aussi pour moi. Son concept général, à savoir une safe place dans laquelle je peux me détendre, a aussi été pensé pour mes propres nerfs.
+Que se passe-t-il en cas de non-respect des règles ?
+Ce projet a été créé pour offrir un espace agréable et apaisé à tout le monde, moi compris. L’idée est de pouvoir jouer, construire et échanger dans une ambiance saine, sans transformer le serveur en terrain de médiation permanent.
 
-Dans cette logique , et étant passablement pris par la vie, comme vous, je n'ai pas le temps ni l'envie de passer mes soirées à faire de la médiation.
+Les désaccords, malentendus ou tensions peuvent arriver. Dans ces situations, je prendrai le temps d’écouter les personnes concernées et de chercher une solution raisonnable.
 
-Dans cette logique, s'il y a des petits conflits ou des petites tensions, je me chargerais d'assumer ce rôle de médiation. Mais par contre, dans le cas d'une violation évidente du réglement, d'une volonté claire de nuire, ou tout autre constat d'abus clair et évident, il n'y aura qu'une réponse, et sans discussion. L'exclusion du serveur, et la destruction totale de toutes vos constructions.
+En revanche, une violation évidente du règlement, une volonté claire de nuire ou un comportement abusif pourra entraîner une exclusion du serveur. Les constructions ou installations réalisées dans le cadre de ces abus pourront également être supprimées.
 
-L'inscription de cette règle n'est pas là pour exercer sur les joueurs une quelconque forme de pression, mais uniquement pour couper court aux éventuelles tentatives de négociations. Contrevenir aux règles, simples et humaines, de ce serveur mène au bann et destruction des constructions. Tout simplement.
+Ce texte n’a pas vocation à mettre la pression sur qui que ce soit. Il sert simplement à poser un cadre clair au cas où un problème sérieux surviendrait. Les erreurs de bonne foi seront traitées comme telles, mais les abus manifestes ne donneront pas lieu à des négociations interminables.
+
+Les règles sont simples et s’appliquent à tout le monde. Leur objectif est de protéger les joueurs, l’ambiance du serveur et le plaisir que nous avons tous à faire vivre ce projet.
 
 
 
