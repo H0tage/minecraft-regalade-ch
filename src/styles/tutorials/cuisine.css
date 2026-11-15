@@ -23,6 +23,53 @@
     monospace;
 }
 
+.food-switcher {
+  position: sticky;
+  top: 0;
+  z-index: 12;
+  display: flex;
+  width: max-content;
+  max-width: 100%;
+  gap: 4px;
+  margin: 0 0 22px;
+  padding: 4px;
+  border: 1px solid var(--food-line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgb(25 52 64 / 7%);
+}
+
+.food-switcher button {
+  min-height: 40px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #52636b;
+  font-size: 0.82rem;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.food-switcher button:hover {
+  background: #f1f6f8;
+  color: var(--food-ink);
+}
+
+.food-switcher button[aria-selected='true'] {
+  background: var(--food-ink);
+  color: #fff;
+}
+
+.food-switcher button:focus-visible {
+  outline: 3px solid var(--food-blue);
+  outline-offset: 2px;
+}
+
+.food-panel[hidden] {
+  display: none;
+}
+
 .food-hero {
   display: block;
   height: auto;
@@ -297,7 +344,343 @@
   background: #28434f;
 }
 
+.food-production-map {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.8fr) auto minmax(180px, 1fr) auto minmax(180px, 1fr);
+  gap: 8px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--food-line);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.food-production-map > article,
+.food-map-branches > div,
+.food-layout-stack article,
+.food-pot-process,
+.food-pot-result {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
+  border: 1px solid var(--food-line);
+  border-radius: 10px;
+  background: #fff;
+  text-align: center;
+}
+
+.food-production-map > i,
+.food-map-branches i,
+.food-pot-flow > i {
+  color: var(--food-orange);
+  font-style: normal;
+  font-weight: 950;
+}
+
+.food-production-map small,
+.food-layout-stack small,
+.food-pot-flow small {
+  margin-top: 4px;
+  color: var(--food-muted);
+  font-size: 0.74rem;
+  line-height: 1.35;
+}
+
+.food-map-branches {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 2px;
+  padding-left: 44%;
+}
+
+.food-map-branches > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) auto minmax(75px, 0.7fr) auto minmax(95px, 0.9fr);
+  gap: 7px;
+}
+
+.food-map-branches span {
+  color: var(--food-muted);
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.food-map-branches strong {
+  font-size: 0.8rem;
+}
+
+.food-shopping-grid,
+.food-recipe-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.food-shopping-grid article,
+.food-craft-card,
+.food-stove-test,
+.food-pot-interface article,
+.food-check-grid article {
+  padding: 16px;
+  border: 1px solid var(--food-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.food-shopping-grid h3,
+.food-craft-card h3 {
+  margin: 0 0 9px;
+  font-size: var(--tutorial-card-title-size);
+}
+
+.food-shopping-grid ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.food-shopping-grid li,
+.food-shopping-grid p {
+  color: var(--food-muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.food-shopping-grid p {
+  margin: 13px 0 0;
+}
+
+.food-shopping-grid b {
+  color: var(--food-ink);
+}
+
+.food-search-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 13px 15px;
+  border: 1px solid var(--food-line);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--food-muted);
+  font-size: 0.82rem;
+}
+
+.food-search-line b {
+  color: var(--food-ink);
+}
+
+.food-craft-card {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.8fr) minmax(210px, 1.2fr);
+  gap: 18px;
+  align-items: center;
+}
+
+.food-craft-card p {
+  margin: 0;
+  color: var(--food-muted);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.food-craft-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+}
+
+.food-craft-grid span {
+  display: grid;
+  min-height: 49px;
+  place-items: center;
+  padding: 5px;
+  border: 1px solid #cfdbe0;
+  border-radius: 7px;
+  background: #fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.food-craft-grid .empty {
+  background: #f5f7f8;
+  color: transparent;
+}
+
+.food-action-sequence {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, auto));
+  gap: 7px;
+  align-items: stretch;
+  margin-bottom: 10px;
+}
+
+.food-action-sequence article {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 9px;
+  padding: 13px;
+  border: 1px solid var(--food-line);
+  border-radius: 11px;
+  background: #fff;
+}
+
+.food-action-sequence b,
+.food-pot-interface > article > span {
+  display: grid;
+  width: 27px;
+  height: 27px;
+  flex: 0 0 27px;
+  place-items: center;
+  border-radius: 8px;
+  background: #eef7fb;
+  color: var(--food-blue);
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.food-action-sequence span {
+  font-size: 0.77rem;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.food-action-sequence > i {
+  display: grid;
+  place-items: center;
+  color: var(--food-orange);
+  font-style: normal;
+  font-weight: 950;
+}
+
+.food-stove-test {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.75fr) minmax(0, 1.4fr);
+  gap: 18px;
+  align-items: center;
+}
+
+.food-layout-stack {
+  display: grid;
+  gap: 6px;
+}
+
+.food-layout-stack > i {
+  color: var(--food-orange);
+  font-style: normal;
+  font-weight: 950;
+  text-align: center;
+}
+
+.food-stove-test ol {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--food-muted);
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.food-stove-test li + li {
+  margin-top: 5px;
+}
+
+.food-pot-flow {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.2fr) auto minmax(150px, 0.8fr) auto minmax(150px, 0.8fr);
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.food-pot-ingredients {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.food-pot-ingredients article {
+  display: grid;
+  min-height: 70px;
+  place-items: center;
+  padding: 10px;
+  border: 1px solid var(--food-line);
+  border-radius: 10px;
+  background: #fff;
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.food-pot-interface {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.food-pot-interface article {
+  display: flex;
+  gap: 10px;
+}
+
+.food-pot-interface b {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.82rem;
+}
+
+.food-pot-interface p {
+  margin: 0;
+  color: var(--food-muted);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.food-check-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.food-check-grid b,
+.food-check-grid span {
+  display: block;
+}
+
+.food-check-grid b {
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.food-check-grid span {
+  color: var(--food-muted);
+  font-size: 0.74rem;
+  line-height: 1.45;
+}
+
 @media (width <= 760px) {
+  .food-switcher {
+    width: 100%;
+  }
+
+  .food-switcher button {
+    min-width: 0;
+    flex: 1 1 0;
+    white-space: normal;
+  }
+
   .food-hero {
     padding: 22px 20px;
   }
@@ -333,5 +716,52 @@
   .food-jei-filters {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .food-production-map,
+  .food-shopping-grid,
+  .food-recipe-pair,
+  .food-stove-test,
+  .food-pot-flow,
+  .food-pot-interface,
+  .food-check-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-production-map > i,
+  .food-pot-flow > i {
+    transform: rotate(90deg);
+    text-align: center;
+  }
+
+  .food-map-branches {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+
+  .food-map-branches > div {
+    grid-template-columns: 1fr;
+  }
+
+  .food-map-branches i {
+    transform: rotate(90deg);
+  }
+
+  .food-shopping-grid ul,
+  .food-pot-ingredients {
+    grid-template-columns: 1fr;
+  }
+
+  .food-craft-card {
+    grid-template-columns: 1fr;
+  }
+
+  .food-action-sequence {
+    grid-template-columns: 1fr;
+  }
+
+  .food-action-sequence > i {
+    height: 12px;
+    transform: rotate(90deg);
   }
 }
