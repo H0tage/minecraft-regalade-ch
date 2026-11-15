@@ -8,32 +8,32 @@ const groups = [
   {
     file: '01-pages-principales.md',
     title: 'Pages principales du site',
-    sources: ['index.html'],
+    sources: ['src/pages/accueil.html', 'src/pages/mods.html', 'src/pages/reglement.html', 'src/pages/statut.html', 'src/pages/inscription.html'],
   },
   {
     file: '02-installation-et-connexion.md',
     title: 'Installation et connexion',
-    sources: ['installation-guide.js', 'installation-connection-page.js'],
+    sources: ['src/pages/installation.html', 'src/scripts/pages/installation-guide.js', 'src/scripts/pages/installation-connection-page.js'],
   },
   {
     file: '03-argent-et-echanges.md',
     title: 'Argent et échanges',
-    sources: ['economy-tutorial.js'],
+    sources: ['src/scripts/tutorials/economy.js'],
   },
   {
     file: '04-create.md',
     title: 'Create (description générale et première usine)',
-    sources: ['create-first-factory.js'],
+    sources: ['src/scripts/tutorials/create.js'],
   },
   {
     file: '05-big-cannons.md',
     title: 'Big Cannons',
-    sources: ['big-cannons.js', 'big-cannons-survival.js'],
+    sources: ['src/scripts/tutorials/big-cannons.js', 'src/scripts/tutorials/big-cannons-survival.js'],
   },
   {
     file: '06-porte-des-etoiles.md',
     title: 'Porte des étoiles',
-    sources: ['stargates.js', 'stargates-survival.js', 'stargates-industry.js'],
+    sources: ['src/scripts/tutorials/stargates.js', 'src/scripts/tutorials/stargates-survival.js', 'src/scripts/tutorials/stargates-industry.js'],
   },
 ];
 

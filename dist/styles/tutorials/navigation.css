@@ -1,0 +1,89 @@
+/* Navigation interne des tutoriels.
+   Source canonique : modifier ce fichier, jamais les sorties générées. */
+
+#tutoriels.view {
+  padding-top:0
+}
+
+.tutorial-tabs {
+  display:flex;
+  gap:4px;
+  overflow-x:auto;
+  border-bottom:1px solid var(--line);
+  scrollbar-width:thin
+}
+
+.tutorial-tab {
+  position:relative;
+  flex:0 0 auto;
+  padding:18px 20px;
+  border:0;
+  background:transparent;
+  color:var(--muted);
+  font-weight:800;
+  font-size:.93rem;
+  white-space:nowrap
+}
+
+.tutorial-tab:hover,.tutorial-tab.active {
+  color:var(--cyan)
+}
+
+.tutorial-tab.active::after {
+  content:"";
+  position:absolute;
+  right:20px;
+  bottom:-1px;
+  left:20px;
+  height:3px;
+  border-radius:3px 3px 0 0;
+  background:var(--orange)
+}
+
+.tutorial-tab:focus-visible {
+  outline:3px solid var(--cyan);
+  outline-offset:-3px
+}
+
+.tutorial-content {
+  padding:62px 0 90px
+}
+
+.tutorial-panel {
+  animation:in .24s ease
+}
+
+.tutorial-placeholder {
+  max-width:680px
+}
+
+.tutorial-placeholder p {
+  color:var(--muted);
+  margin-bottom:0
+}
+
+@media(max-width:800px) {
+  .tutorial-content {
+    padding-top:42px
+  }
+
+  .tutorial-tab {
+    padding:16px 15px
+  }
+}
+
+.tutorial-tabs {
+  overflow:visible
+}
+
+@media(max-width:800px) {
+  .tutorial-tabs {
+    overflow-x:auto;
+    overflow-y:hidden;
+    scrollbar-width:none
+  }
+
+  .tutorial-tabs::-webkit-scrollbar {
+    display:none
+  }
+}

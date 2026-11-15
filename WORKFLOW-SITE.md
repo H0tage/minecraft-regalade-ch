@@ -1,8 +1,27 @@
 # Workflow du site Régalade
 
-Le site possède une seule source technique : les fichiers situés à la racine du dépôt. Le dossier `dist` est un résultat généré. Il ne doit jamais être modifié ou synchronisé manuellement.
+## Règle fondamentale
 
-Les fichiers de `contenus-textuels` servent d’interface éditoriale lisible. Après une modification dans ces documents, il faut reporter le changement dans la source technique correspondante, puis lancer le workflow. La commande `node scripts/locate-content.mjs "fragment du texte"` permet de trouver immédiatement le fichier concerné.
+Le dossier `src` est la seule source applicative.
+
+Ne jamais modifier directement :
+
+- `index.html` à la racine ;
+- `styles` à la racine ;
+- `js` à la racine ;
+- `dist`.
+
+Ces sorties sont supprimées puis reconstruites par `npm run build`. La racine générée permet de conserver le déploiement GitHub Pages actuel. `dist` alimente l’hébergement déclaré dans `.openai/hosting.json`.
+
+Les fichiers de `contenus-textuels` sont des exports de lecture. Ils ne remplacent pas la source canonique située dans `src`.
+
+## Trouver le bon fichier
+
+```powershell
+npm run locate -- "fragment reconnaissable du texte"
+```
+
+L’outil recherche récursivement dans les pages et scripts source.
 
 ## 1. Contenu express
 
@@ -14,64 +33,79 @@ Les fichiers de `contenus-textuels` servent d’interface éditoriale lisible. A
 - corriger une faute ;
 - mettre à jour une version ou une information déjà affichée.
 
-Le composant, ses classes, sa position et son apparence doivent rester identiques.
+Le composant, ses classes, sa position, son apparence et son comportement doivent rester identiques.
 
 ### Procédure
 
-1. Localiser la source avec `node scripts/locate-content.mjs "fragment reconnaissable"` si elle n’est pas déjà connue.
-2. Modifier uniquement le contenu concerné avec `apply_patch`.
+1. Localiser la source dans `src`.
+2. Modifier uniquement le fichier source concerné.
 3. Lancer `node scripts/site-workflow.mjs express`.
-4. Examiner le diff, puis effectuer un seul commit et un seul push.
-5. S’arrêter après le push réussi.
+4. Examiner le diff.
+5. Effectuer un seul commit et un seul push.
 
-Cette commande régénère entièrement `dist`, ajoute automatiquement une version de cache aux CSS et JavaScript, contrôle les références locales, la syntaxe JavaScript, les identifiants HTML, la synchronisation des assets et les règles éditoriales.
-
-### À ne pas faire
-
-- copier manuellement un fichier dans `dist` ;
-- lancer un serveur local ;
-- ouvrir le site dans un navigateur ;
-- faire une capture d’écran ;
-- inspecter toutes les pages ;
-- attendre le déploiement GitHub Pages.
+Le workflow reconstruit les deux sorties publiques, ajoute les versions de cache et vérifie automatiquement les références, la syntaxe, les identifiants, l’absence de CSS incorporé et la synchronisation du déploiement.
 
 ## 2. Modification structurelle
 
 ### À utiliser pour
 
-- créer ou retirer une section ;
-- déplacer du contenu ;
-- changer la mise en page ;
-- modifier les menus ou les onglets ;
-- intervenir sur le CSS ou le responsive ;
+- créer, retirer ou déplacer une section ;
+- modifier la mise en page ;
+- changer les menus ou les onglets ;
+- intervenir sur le CSS, le responsive ou la typographie ;
 - ajouter une interaction JavaScript ;
-- ajouter des images ou des icônes ;
+- ajouter une image ou une icône ;
 - refondre un tutoriel ;
 - résoudre un problème visuel.
 
 ### Procédure
 
-1. Identifier les fichiers et les dépendances concernés.
-2. Modifier les sources avec `apply_patch`.
-3. Lancer `node scripts/site-workflow.mjs structure`.
-4. Prévisualiser uniquement les pages touchées.
-5. Vérifier les largeurs pertinentes parmi 390, 800 et 1366 pixels.
+1. Identifier les fichiers dans `src` et leurs dépendances.
+2. Modifier les sources.
+3. Lancer `npm run qa`.
+4. Démarrer `npm run serve` si une inspection visuelle est nécessaire.
+5. Vérifier les pages touchées aux largeurs pertinentes parmi 390, 800 et 1366 pixels.
 6. Corriger les problèmes observés.
-7. Relancer le workflow structurel.
-8. Effectuer un seul commit et un seul push.
-9. Confirmer le déploiement uniquement si le changement concerne l’hébergement ou si le résultat en ligne doit absolument être garanti.
+7. Relancer `npm run qa`.
+8. Examiner le diff, puis effectuer un seul commit et un seul push.
 
-## Source et publication
+## Arborescence
 
-- `index.html`, les CSS et les JavaScript racine constituent la source canonique.
-- `assets` contient les fichiers publiés.
-- `contenus-textuels` contient la copie éditoriale destinée aux corrections humaines.
-- `dist` est supprimé et reconstruit par `scripts/build-site.mjs`.
-- seuls les CSS et JavaScript réellement référencés par `index.html` sont envoyés dans `dist`.
-- `.openai/hosting.json` publie `dist`.
+```text
+src/
+  index.html
+  pages/
+  styles/
+    core/
+    components/
+    pages/
+    tutorials/
+  scripts/
+    core/
+    data/
+    pages/
+    tutorials/
+assets/
+scripts/
+dist/                 sortie générée
+index.html            sortie générée
+styles/               sortie générée
+js/                   sortie générée
+```
+
+## Garde-fous
+
+Le contrôle technique refuse :
+
+- une balise `<style>` ou un attribut `style` dans la source HTML ;
+- la création dynamique d’une feuille de style en JavaScript ;
+- une inclusion HTML non résolue ;
+- une référence locale absente ;
+- un identifiant dupliqué ;
+- un script invalide ;
+- une sortie désynchronisée ;
+- le caractère éditorial interdit défini par le projet.
 
 ## Cas frontière
 
-Si un simple texte reste difficile à modifier parce qu’il est enfoui dans un fichier monolithique, il faut extraire le bloc concerné dans un fichier JavaScript dédié. Cette refactorisation ne doit être faite qu’une fois. Les corrections suivantes pourront alors suivre le parcours express.
-
-Le critère principal reste l’effet du changement : si la géométrie, le style ou le comportement ne changent pas, il s’agit d’une modification de contenu.
+Si un texte est difficile à modifier parce qu’il se trouve dans un grand gabarit JavaScript, une modification structurelle dédiée peut extraire ce gabarit dans un fichier de contenu séparé. Cette extraction ne doit être faite qu’une fois. Les corrections suivantes utiliseront le workflow express.

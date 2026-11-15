@@ -1,0 +1,133 @@
+(() => {
+  const panel = document.getElementById('tutorial-connection');
+  if (!panel) return;
+
+  const serverName = 'Régalade';
+  const serverAddress = 'XXX.XXX.X.X';
+
+  panel.innerHTML = `
+    <div class="connection-intro">
+      <h1>Se connecter au serveur</h1>
+      <p>Pars de CurseForge, lance le bon profil, puis ajoute Régalade dans Minecraft. Tout est détaillé ci-dessous, clic par clic.</p>
+    </div>
+
+    <section class="connection-route" aria-label="Résumé des étapes de connexion">
+      <span>CurseForge</span>
+      <span>Profil Régalade</span>
+      <span>Minecraft</span>
+      <span>Multijoueur</span>
+      <span>Serveur Régalade</span>
+    </section>
+
+    <aside class="connection-address" aria-label="Adresse du serveur">
+      <div>
+        <span>Adresse du serveur</span>
+        <strong>${serverAddress}</strong>
+      </div>
+      <p>Cette adresse est provisoire. Elle sera remplacée ici par la véritable adresse du serveur avant l’ouverture.</p>
+    </aside>
+
+    <section class="connection-stage">
+      <p class="connection-stage-label">Première partie</p>
+      <h2>Lancer le bon Minecraft depuis CurseForge</h2>
+    </section>
+
+    <div class="install-steps connection-steps">
+      <article class="install-step">
+        <div>
+          <h2>Ouvre CurseForge</h2>
+          <p>Lance l’application <strong>CurseForge</strong> sur ton ordinateur. Si elle te demande de choisir un jeu, clique sur <strong>Minecraft</strong>.</p>
+          <p>Ne lance pas directement Minecraft depuis un raccourci classique : il faut passer par CurseForge pour charger tous les mods du serveur.</p>
+        </div>
+      </article>
+
+      <article class="install-step">
+        <div>
+          <h2>Ouvre « Mes modpacks »</h2>
+          <p>Dans la partie Minecraft de CurseForge, ouvre l’onglet <strong>Mes modpacks</strong> ou <strong>My Modpacks</strong>. Tu dois voir une vignette nommée <strong>Régalade Minecraft</strong>.</p>
+          <div class="connection-callout"><strong>Tu ne vois pas ce profil ?</strong> Retourne dans l’onglet « Guide d’installation » de cette page et importe d’abord le modpack.</div>
+        </div>
+      </article>
+
+      <article class="install-step">
+        <div>
+          <h2>Lance le profil Régalade</h2>
+          <p>Clique sur la vignette <strong>Régalade Minecraft</strong>, puis sur le bouton <strong>Jouer</strong>.</p>
+          <p>Le launcher officiel de Minecraft va s’ouvrir. S’il te demande de te connecter, utilise le compte Microsoft qui possède <strong>Minecraft: Java Edition</strong>.</p>
+        </div>
+      </article>
+
+      <article class="install-step">
+        <div>
+          <h2>Lance Minecraft depuis le launcher</h2>
+          <p>Dans le launcher Minecraft, ne change ni la version ni le profil sélectionné. Clique simplement sur le grand bouton vert <strong>Jouer</strong>.</p>
+          <p>Le premier lancement peut prendre plusieurs minutes. Attends l’apparition du menu principal de Minecraft, même si la fenêtre semble immobile pendant un moment.</p>
+        </div>
+      </article>
+    </div>
+
+    <section class="connection-stage">
+      <p class="connection-stage-label">Deuxième partie</p>
+      <h2>Ajouter Régalade à la liste des serveurs</h2>
+    </section>
+
+    <div class="install-steps connection-steps connection-steps-game">
+      <article class="install-step">
+        <div>
+          <h2>Ouvre le menu Multijoueur</h2>
+          <p>Depuis le menu principal de Minecraft, clique sur <strong>Multijoueur</strong> ou <strong>Multiplayer</strong>.</p>
+          <p>Si Minecraft affiche un avertissement concernant le jeu en ligne, lis-le puis clique sur le bouton permettant de continuer.</p>
+        </div>
+      </article>
+
+      <article class="install-step">
+        <div>
+          <h2>Clique sur « Ajouter un serveur »</h2>
+          <p>En bas de l’écran multijoueur, clique sur <strong>Ajouter un serveur</strong> ou <strong>Add Server</strong>.</p>
+          <p>N’utilise pas « Connexion directe » : ajouter le serveur permet de conserver son adresse pour les prochaines fois.</p>
+        </div>
+      </article>
+
+      <article class="install-step">
+        <div>
+          <h2>Remplis les deux champs</h2>
+          <p>Dans <strong>Nom du serveur</strong>, écris <strong>${serverName}</strong>. Ce nom sert uniquement à reconnaître le serveur dans ta propre liste.</p>
+          <p>Dans <strong>Adresse du serveur</strong>, écris exactement :</p>
+          <div class="connection-address-inline">${serverAddress}</div>
+          <p>Laisse le réglage des packs de ressources sur sa valeur par défaut, puis clique sur <strong>Terminé</strong> ou <strong>Done</strong>.</p>
+        </div>
+      </article>
+
+      <article class="install-step">
+        <div>
+          <h2>Sélectionne le serveur Régalade</h2>
+          <p>Tu reviens maintenant à la liste des serveurs. Une nouvelle ligne nommée <strong>${serverName}</strong> doit apparaître.</p>
+          <p>Clique une fois sur cette ligne, puis clique sur <strong>Rejoindre le serveur</strong>. Tu peux aussi double-cliquer directement sur la ligne.</p>
+        </div>
+      </article>
+
+      <article class="install-step">
+        <div>
+          <h2>Patiente pendant la première connexion</h2>
+          <p>Minecraft contacte le serveur, vérifie les mods puis charge le monde. La première connexion peut être plus longue que les suivantes.</p>
+          <p>Quand le terrain apparaît et que tu peux déplacer ton personnage, c’est bon : tu es sur Régalade.</p>
+        </div>
+      </article>
+    </div>
+
+    <section class="install-success connection-success">
+      <h2>Pour revenir les prochaines fois</h2>
+      <p>Ouvre CurseForge, lance <strong>Régalade Minecraft</strong>, clique sur <strong>Multijoueur</strong>, puis double-clique sur <strong>${serverName}</strong>. L’adresse restera enregistrée.</p>
+    </section>
+
+    <section class="connection-help">
+      <h2>Si la connexion ne fonctionne pas</h2>
+      <div class="install-faq">
+        <details><summary>Le serveur affiche une croix rouge ou reste introuvable</summary><p>Vérifie que l’adresse a été recopiée sans espace ni faute. Si elle est correcte, le serveur est peut-être momentanément éteint ou en maintenance.</p></details>
+        <details><summary>Minecraft parle de mods incompatibles ou manquants</summary><p>Tu n’utilises probablement pas la bonne version du modpack. Ferme le jeu, retourne dans CurseForge et vérifie que tu as lancé le profil Régalade le plus récent sans modifier ses mods.</p></details>
+        <details><summary>La connexion expire ou affiche « timed out »</summary><p>Vérifie ta connexion Internet, ferme complètement Minecraft puis relance le profil depuis CurseForge. Si le problème touche plusieurs joueurs, il vient probablement du serveur.</p></details>
+        <details><summary>Le serveur refuse ton pseudo ou demande une autorisation</summary><p>Vérifie que tu es connecté au bon compte Microsoft. Si le serveur utilise une liste d’autorisation, demande à un administrateur de vérifier ton pseudo Minecraft exact.</p></details>
+      </div>
+    </section>
+  `;
+})();

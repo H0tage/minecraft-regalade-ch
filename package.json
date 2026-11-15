@@ -1,0 +1,16 @@
+{
+  "name": "regalade-minecraft-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "verify": "node scripts/verify-site.mjs",
+    "qa": "node scripts/site-workflow.mjs structure",
+    "serve": "node scripts/serve-site.mjs",
+    "locate": "node scripts/locate-content.mjs",
+    "export-content": "node scripts/export-editorial-texts.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

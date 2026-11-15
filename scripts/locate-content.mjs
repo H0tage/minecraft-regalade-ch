@@ -1,29 +1,38 @@
-import { readdirSync, readFileSync } from 'node:fs';
-import { dirname, extname, join, relative, resolve } from 'node:path';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { extname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const root = resolve(fileURLToPath(new URL('..', import.meta.url)));
+const sourceRoot = join(root, 'src');
 const query = process.argv.slice(2).join(' ').trim().toLocaleLowerCase('fr');
 
 if (!query) {
-  console.error('Usage : node scripts/locate-content.mjs "fragment du texte"');
+  console.error('Usage : npm run locate -- "fragment du texte"');
   process.exit(1);
 }
 
-const files = readdirSync(root)
-  .filter(name => ['.html', '.js'].includes(extname(name)))
-  .map(name => join(root, name));
+function walk(directory) {
+  if (!existsSync(directory)) return [];
+  return readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
+    const path = join(directory, entry.name);
+    return entry.isDirectory() ? walk(path) : [path];
+  });
+}
+
+const files = walk(sourceRoot).filter(file => ['.html', '.js'].includes(extname(file)));
 const results = [];
 
 for (const file of files) {
   const lines = readFileSync(file, 'utf8').split(/\r?\n/);
   lines.forEach((line, index) => {
-    if (line.toLocaleLowerCase('fr').includes(query)) results.push(`${relative(root, file)}:${index + 1}`);
+    if (line.toLocaleLowerCase('fr').includes(query)) {
+      results.push(`${relative(root, file)}:${index + 1}`);
+    }
   });
 }
 
 if (!results.length) {
-  console.error('Aucune source technique ne contient ce fragment.');
+  console.error('Aucune source canonique ne contient ce fragment.');
   process.exit(1);
 }
 

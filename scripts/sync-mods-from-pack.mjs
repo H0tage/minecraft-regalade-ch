@@ -162,11 +162,10 @@ function writeDataset(fileName, variable, value) {
     throw new Error(`${fileName} contient un tiret cadratin interdit.`);
   }
   writeFileSync(join(siteDir, fileName), content, 'utf8');
-  writeFileSync(join(siteDir, 'dist', fileName), content, 'utf8');
 }
 
-const oldDetails = loadWindowArray('mods-details.js', 'REGALE_MOD_DETAILS');
-const oldMods = loadWindowArray('mods.js', 'REGALE_MODS');
+const oldDetails = loadWindowArray('src/scripts/data/mods-details.js', 'REGALE_MOD_DETAILS');
+const oldMods = loadWindowArray('src/scripts/data/mods.js', 'REGALE_MODS');
 const oldDetailsByName = new Map(oldDetails.map(record => [record[0], record]));
 const oldStatusByName = new Map(oldMods.map(record => [record[0], record[3]]));
 const oldByNormalizedName = new Map(oldDetails.map(record => [normalize(record[0]), record]));
@@ -234,9 +233,9 @@ for (const record of records) {
   names.add(record.name);
 }
 
-writeDataset('mods.js', 'REGALE_MODS', records.map(({ name, category, version, status }) => [name, category, version, status]));
-writeDataset('mods-details.js', 'REGALE_MOD_DETAILS', records.map(({ name, category, version, description, link }) => [name, category, version, description, link]));
-writeDataset('mods-icons.js', 'REGALE_MOD_ICONS', records.map(({ name, icon }) => [name, icon]));
+writeDataset('src/scripts/data/mods.js', 'REGALE_MODS', records.map(({ name, category, version, status }) => [name, category, version, status]));
+writeDataset('src/scripts/data/mods-details.js', 'REGALE_MOD_DETAILS', records.map(({ name, category, version, description, link }) => [name, category, version, description, link]));
+writeDataset('src/scripts/data/mods-icons.js', 'REGALE_MOD_ICONS', records.map(({ name, icon }) => [name, icon]));
 
 console.log(`${records.length} mods principaux synchronisés depuis ${activeJars.size} JAR actifs.`);
 for (const category of CATEGORY_ORDER) {

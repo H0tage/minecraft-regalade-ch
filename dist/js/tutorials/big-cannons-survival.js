@@ -2,10 +2,6 @@
   const root = document.querySelector('#tutorial-big-cannons .cbc');
   if (!root || document.getElementById('cbc-autocannon-panel')) return;
 
-  const oldManual = root.querySelector('#cbc-manual-panel');
-  const oldRecipes = root.querySelector('#cbc-recipes-panel');
-  oldManual?.remove();
-  oldRecipes?.remove();
 
   const switcher = root.querySelector('.cbc-switcher');
   switcher.innerHTML = `

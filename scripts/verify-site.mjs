@@ -1,15 +1,17 @@
 import { createHash } from 'node:crypto';
 import { execFileSync, spawnSync } from 'node:child_process';
-import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
-import { dirname, extname, join, relative, resolve } from 'node:path';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
+import { extname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const root = resolve(fileURLToPath(new URL('..', import.meta.url)));
+const sourceRoot = join(root, 'src');
 const dist = join(root, 'dist');
 const failures = [];
 const notices = [];
 
 function walk(directory) {
+  if (!existsSync(directory)) return [];
   return readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
     const path = join(directory, entry.name);
     return entry.isDirectory() ? walk(path) : [path];
@@ -24,28 +26,48 @@ function fail(message) {
   failures.push(message);
 }
 
+function compareTrees(source, target, label) {
+  for (const sourceFile of walk(source)) {
+    const targetFile = join(target, relative(source, sourceFile));
+    if (!existsSync(targetFile)) fail(`${label} absent : ${relative(root, targetFile)}`);
+    else if (hash(sourceFile) !== hash(targetFile)) fail(`${label} désynchronisé : ${relative(root, targetFile)}`);
+  }
+}
+
+const sourceIndex = join(sourceRoot, 'index.html');
 const indexPath = join(root, 'index.html');
-const html = readFileSync(indexPath, 'utf8');
+if (!existsSync(sourceIndex)) fail('La source src/index.html est absente.');
+if (!existsSync(indexPath)) fail('La sortie index.html est absente. Lance le build.');
+
+const sourceFiles = walk(sourceRoot).filter(file => ['.html', '.css', '.js'].includes(extname(file)));
+for (const file of sourceFiles) {
+  const content = readFileSync(file, 'utf8');
+  if (extname(file) === '.html' && /<style\b|\sstyle="/i.test(content)) {
+    fail(`CSS incorporé interdit dans la source : ${relative(root, file)}`);
+  }
+}
+
+const sourceScripts = sourceFiles.filter(file => extname(file) === '.js');
+for (const script of sourceScripts) {
+  const result = spawnSync(process.execPath, ['--check', script], { encoding: 'utf8' });
+  if (result.status !== 0) fail(`JavaScript invalide : ${relative(root, script)}\n${result.stderr.trim()}`);
+}
+
+const html = existsSync(indexPath) ? readFileSync(indexPath, 'utf8') : '';
+if (!html.includes('FICHIER GÉNÉRÉ')) fail('index.html ne porte pas la signature de fichier généré.');
+if (/<style\b|\sstyle="/i.test(html)) fail('La sortie HTML contient encore du CSS incorporé.');
+
 const localReferences = [...html.matchAll(/\b(?:href|src)="([^"#]+)"/g)]
   .map(match => match[1].split('?')[0])
   .filter(value => !/^(?:https?:|data:|mailto:|tel:)/.test(value));
 
 for (const reference of new Set(localReferences)) {
-  if (!existsSync(join(root, reference.replaceAll('/', '\\')))) fail(`Référence locale absente : ${reference}`);
+  if (!existsSync(join(root, reference))) fail(`Référence locale absente : ${reference}`);
 }
 
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
 const duplicateIds = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
 if (duplicateIds.length) fail(`Identifiants HTML dupliqués : ${duplicateIds.join(', ')}`);
-
-const rootScripts = readdirSync(root)
-  .filter(name => extname(name) === '.js')
-  .map(name => join(root, name));
-
-for (const script of rootScripts) {
-  const result = spawnSync(process.execPath, ['--check', script], { encoding: 'utf8' });
-  if (result.status !== 0) fail(`JavaScript invalide : ${relative(root, script)}\n${result.stderr.trim()}`);
-}
 
 try {
   execFileSync(process.execPath, [join(root, 'scripts', 'check-editorial-style.mjs')], { cwd: root, stdio: 'pipe' });
@@ -53,34 +75,18 @@ try {
   fail(error.stderr?.toString().trim() || 'Le contrôle éditorial a échoué.');
 }
 
-if (/Collector's Album/i.test(html) || /Collector's Album/i.test(readFileSync(join(root, 'galleries.js'), 'utf8'))) {
-  fail("Référence obsolète détectée : Collector's Album.");
-}
+const searchableSource = sourceFiles.map(file => readFileSync(file, 'utf8')).join('\n');
+if (/Collector's Album/i.test(searchableSource)) fail("Référence obsolète détectée : Collector's Album.");
+if (/members\.map\([^\n]+innerHTML/s.test(searchableSource)) fail('Les inscriptions réinjectent des données utilisateur avec innerHTML.');
+if (/createElement\(\s*['"]style['"]\s*\)/.test(searchableSource)) fail('Le JavaScript crée encore une feuille de style dynamique.');
+if (/@include\b/.test(html)) fail('Une inclusion HTML non résolue subsiste dans la sortie.');
+if (!/aria-expanded="false"[^>]+aria-controls="main-navigation"/.test(html)) fail('Le menu mobile ne déclare pas complètement son état accessible.');
 
-if (/members\.map\([^\n]+innerHTML/s.test(html)) {
-  fail('Le tableau des inscriptions réinjecte encore des données utilisateur avec innerHTML.');
-}
-
-if (!/aria-expanded="false"[^>]+aria-controls="main-navigation"/.test(html)) {
-  fail('Le bouton du menu mobile ne déclare pas complètement son état accessible.');
-}
-
-if (!existsSync(dist)) {
-  fail('Le dossier dist est absent. Lance le build avant la vérification.');
-} else {
-  const canonicalFiles = [...new Set(localReferences.filter(name => ['.css', '.js'].includes(extname(name))))];
-  for (const name of canonicalFiles) {
-    const deployed = join(dist, name);
-    if (!existsSync(deployed)) fail(`Fichier absent de dist : ${name}`);
-    else if (hash(join(root, name)) !== hash(deployed)) fail(`Fichier désynchronisé dans dist : ${name}`);
-  }
-
-  const sourceAssets = walk(join(root, 'assets'));
-  for (const source of sourceAssets) {
-    const deployed = join(dist, relative(root, source));
-    if (!existsSync(deployed)) fail(`Asset absent de dist : ${relative(root, source)}`);
-    else if (statSync(source).size !== statSync(deployed).size) fail(`Asset désynchronisé dans dist : ${relative(root, source)}`);
-  }
+compareTrees(join(root, 'styles'), join(dist, 'styles'), 'Style déployé');
+compareTrees(join(root, 'js'), join(dist, 'js'), 'Script déployé');
+compareTrees(join(root, 'assets'), join(dist, 'assets'), 'Asset déployé');
+if (existsSync(join(dist, 'index.html')) && hash(indexPath) !== hash(join(dist, 'index.html'))) {
+  fail('index.html est désynchronisé dans dist.');
 }
 
 const oversizedImages = walk(join(root, 'assets'))
@@ -94,5 +100,5 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Vérification réussie : ${rootScripts.length} scripts, ${new Set(localReferences).size} références locales et ${ids.length} identifiants contrôlés.`);
+console.log(`Vérification réussie : ${sourceScripts.length} scripts source, ${new Set(localReferences).size} références locales et ${ids.length} identifiants contrôlés.`);
 notices.forEach(message => console.warn(`À optimiser : ${message}`));

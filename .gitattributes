@@ -1,0 +1,12 @@
+# Les sorties publiques sont générées depuis src/.
+index.html linguist-generated=true
+styles/** linguist-generated=true
+js/** linguist-generated=true
+dist/** linguist-generated=true
+
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.md text eol=lf
