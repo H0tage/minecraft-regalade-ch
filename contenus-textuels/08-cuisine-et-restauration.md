@@ -12,6 +12,8 @@ Ma première cuisine
 
 Automatiser un repas
 
+Choisir sa spécialité
+
 Faire pousser, transformer, cuisiner, servir
 
 # De la bouffe à l’assiette
@@ -843,3 +845,309 @@ Ajoute des Stockpile Switches ou des gauges pour arrêter la production quand le
 ### Utiliser Central Kitchen
 
 Les Packagers et Mechanical Arms permettront plus tard d’alimenter plusieurs recettes et postes spécialisés.
+
+Trouver le projet qui donnera une identité à ta cuisine
+
+# Choisir sa spécialité
+
+Tu sais préparer un repas et construire une première chaîne automatique. Maintenant, tu peux décider si ton
+bâtiment deviendra une boulangerie, un vignoble, une fromagerie, un café ou une brasserie. Chaque filière part de
+ressources différentes et ne demande pas le même type d’installation.
+
+01
+
+Le bâtiment avant les recettes
+
+## Choisis d’abord ce que tu as envie de faire vivre
+
+Ne commence pas par fabriquer toutes les machines de tous les mods. Choisis un lieu, un produit emblématique et
+une première chaîne courte. Le reste viendra quand tu auras réellement envie d’agrandir ton activité.
+
+### Une boulangerie
+
+Pétrir des pâtes, cuire du pain, préparer des pâtisseries et remplir une vitrine.
+
+Voir la filière
+
+### Un vignoble
+
+Planter des vignes, presser les récoltes, fermenter les jus et aménager une cave.
+
+Voir la filière
+
+### Une fromagerie
+
+Élever plusieurs animaux, récupérer leur lait et transformer celui-ci en meules.
+
+Voir la filière
+
+### Un café
+
+Cultiver du thé ou du café et préparer des boissons à servir sur place.
+
+Voir la filière
+
+### Une brasserie
+
+Faire fermenter des cuves, combiner plusieurs boissons et alimenter une taverne.
+
+Voir la filière
+
+02
+
+Vue d’ensemble
+
+## Comparer les cinq filières en trente secondes
+
+Filière
+
+Point de départ
+
+Machine centrale
+
+Premier objectif
+
+Boulangerie
+
+Blé, lait, œufs, fruits
+
+Crafting Bowl, Baking Station et Stove
+
+Une fournée de pains
+
+Vignoble
+
+Raisins, pommes ou cerises
+
+Wine Press et Fermentation Barrel
+
+Une bouteille de Red Wine
+
+Fromagerie
+
+Lait et Rennet
+
+Cheese Form
+
+Une première Cheese Wheel
+
+Café
+
+Feuilles de thé ou grains de café
+
+Kettle
+
+Une Kettle de Black Tea
+
+Brasserie
+
+Eau, céréales et ingrédients variés
+
+Keg
+
+Une première cuve de Beer
+
+03
+
+Bakery + Farm & Charm
+
+## Transformer un champ de blé en boulangerie
+
+**Céréales** Blé et autres cultures
+
+→
+
+**Flour** Mincer ou Millstone
+
+→
+
+**Dough** Crafting Bowl
+
+→
+
+**Mise en forme** Baking Station ou Rolling Pin
+
+→
+
+**Cuisson** Stove
+
+### Premier projet conseillé
+
+Commence par produire une pâte simple, puis cuis une fournée de Bread. Quand cette chaîne fonctionne, ajoute
+seulement les confitures, tartes, gâteaux et présentoirs.
+
+### Ce que Create peut prendre en charge
+
+La récolte du blé, la production de farine, le transport et le stockage peuvent être automatisés. Les postes
+propres à Bakery restent au centre de l’atelier et JEI indique les gestes nécessaires pour chaque pâtisserie.
+
+Dans JEI : `@bakery` et `@farm_and_charm`
+
+04
+
+Vinery
+
+## Faire pousser, presser puis fermenter
+
+**Grapevine** culture sur Lattice
+
+→
+
+**Récolte** raisins ou autres fruits
+
+→
+
+**Wine Press** prépare le jus
+
+→
+
+**Fermentation Barrel** jus + ingrédients + bouteille
+
+→
+
+**Cave** bouteilles et Wine Racks
+
+### Premier projet conseillé
+
+Plante quelques Red Grapes, fabrique une Wine Press et vise une seule bouteille de Red Wine. Elle demande du
+jus rouge, du sucre et une Wine Bottle dans le Fermentation Barrel.
+
+### Ce qui donne de l’ampleur au projet
+
+Les cépages changent selon les biomes et de nombreux vins utilisent d’autres fruits ou ingrédients. Le petit
+pressoir peut donc devenir un vrai domaine avec plusieurs parcelles et une cave de stockage.
+
+Dans JEI : `@vinery`
+
+05
+
+Meadow
+
+## Faire du lait une véritable matière première
+
+**Élevage** vaches, chèvres, moutons ou buffles
+
+→
+
+**Traite** Wooden Bucket ou Milk Can
+
+→
+
+**Préparation** lait adapté à la recette
+
+→
+
+**Cheese Form** lait + Rennet
+
+→
+
+**Cheese Wheel** meule à découper ou cuisiner
+
+### Premier projet conseillé
+
+Reste sur du lait de vache, fabrique du Rennet et produis une Cheese Wheel classique. Les autres animaux et
+les variantes de lait pourront ensuite donner leurs propres fromages.
+
+### Pourquoi cette filière prend de la place
+
+Elle demande des animaux, de la traite, des formes, des rangements et une cuisine capable d’utiliser les
+meules. C’est une bonne spécialité si tu veux construire une ferme complète plutôt qu’une simple machine.
+
+Dans JEI : `@meadow`
+
+06
+
+Farmer’s Respite
+
+## Ouvrir un café sans construire une usine énorme
+
+**Cultures** thé, café et plantes
+
+→
+
+**Préparation** feuilles ou grains
+
+→
+
+**Kettle** eau + chaleur + ingrédients
+
+→
+
+**Boisson** Tea, Coffee ou Hot Cocoa
+
+→
+
+**Service** nature, avec lait ou avec sucre
+
+### Premier projet conseillé
+
+Trouve ou cultive du Black Tea, remplis une Kettle avec de l’eau et prépare une première théière. Une recette
+produit un litre de thé, soit plusieurs portions à servir.
+
+### La filière la plus simple à relier à Create
+
+Farmer’s Respite fournit directement des recettes Create : broyage de certaines plantes, mélange chauffé des
+boissons et remplissage avec lait ou sucre. Tu peux donc conserver la Kettle pour le café et industrialiser la
+production ailleurs.
+
+Dans JEI : `@farmersrespite`
+
+07
+
+Brewin’ and Chewin’
+
+## Laisser le temps travailler dans les cuves
+
+**Base liquide** souvent 1 000 mB d’eau
+
+→
+
+**Ingrédients** céréales, graines, miel ou autres
+
+→
+
+**Keg** fermentation
+
+→
+
+**Boisson** Beer, Mead, Vodka ou Rice Wine
+
+→
+
+**Service** Tankard et stockage
+
+### Premier projet conseillé
+
+Commence par une cuve de Beer : de l’eau, du blé, des graines de blé et un champignon brun. Apprends d’abord à
+remplir et vider correctement le Keg avant de multiplier les recettes.
+
+### Pourquoi la chaîne devient vite intéressante
+
+Certaines boissons servent de base à la suivante. Une Beer peut devenir une Strongroot Ale, une Mead peut
+mener au Saccharine Rum et la Vodka ouvre d’autres recettes. La brasserie se développe donc par étapes.
+
+Dans JEI : `@brewinandchewin`
+
+08
+
+Une filière, un bâtiment, un produit
+
+## Commencer petit avant de tout relier
+
+**1** Choisis une seule spécialité
+
+→
+
+**2** Repère son produit le plus simple dans JEI
+
+→
+
+**3** Construis la chaîne manuelle complète
+
+→
+
+**4** Automatise uniquement ce qui te fait perdre du temps
+
+Tu n’as pas besoin de choisir définitivement. Une boulangerie peut acheter son lait à une fromagerie, un café
+vendre les pâtisseries d’un autre joueur et une brasserie alimenter plusieurs tavernes. Les spécialités servent
+surtout à créer des échanges et des lieux différents sur le serveur.
