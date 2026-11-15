@@ -135,8 +135,6 @@ Le premier déclenchement
 
 ## Cadrer la scène et libérer l’obturateur
 
-Sujet← cadre →**Camera** ← clic droit →Viseur
-
 - Choisis un sujet bien éclairé et garde un peu de recul.
 
 - Maintiens **Utiliser** (clic droit par défaut) pour regarder dans le viseur.
