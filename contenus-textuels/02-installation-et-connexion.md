@@ -118,15 +118,6 @@ cette page sans ajouter ni mettre à jour de mod.
 
 # Se connecter au serveur
 
-Pars de CurseForge, lance le bon profil, puis ajoute Régalade dans Minecraft. Tout est détaillé ci-dessous, clic par
-clic.
-
-CurseForge
-Profil Régalade
-Minecraft
-Multijoueur
-Serveur Régalade
-
 Adresse du serveur
 **XXX.XXX.X.X**
 
@@ -158,14 +149,6 @@ Clique sur la vignette **Régalade Minecraft** , puis sur le bouton **Jouer** .
 
 Le launcher officiel de Minecraft va s’ouvrir. S’il te demande de te connecter, utilise le compte Microsoft qui
 possède **Minecraft: Java Edition** .
-
-## Lance Minecraft depuis le launcher
-
-Dans le launcher Minecraft, ne change ni la version ni le profil sélectionné. Clique simplement sur le grand
-bouton vert **Jouer** .
-
-Le premier lancement peut prendre plusieurs minutes. Attends l’apparition du menu principal de Minecraft, même
-si la fenêtre semble immobile pendant un moment.
 
 Deuxième partie
 
