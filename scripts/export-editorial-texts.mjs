@@ -28,7 +28,7 @@ const groups = [
   {
     file: '05-big-cannons.md',
     title: 'Big Cannons',
-    sources: ['big-cannons.js', 'big-cannons-survival.js', 'big-cannons-tutorial.js', 'big-cannons-recipes.js'],
+    sources: ['big-cannons.js', 'big-cannons-survival.js'],
   },
   {
     file: '06-porte-des-etoiles.md',

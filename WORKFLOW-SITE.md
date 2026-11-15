@@ -1,6 +1,8 @@
 # Workflow du site Régalade
 
-Ce document sépare volontairement les petites corrections éditoriales des modifications qui exigent une vérification visuelle complète.
+Le site possède une seule source technique : les fichiers situés à la racine du dépôt. Le dossier `dist` est un résultat généré. Il ne doit jamais être modifié ou synchronisé manuellement.
+
+Les fichiers de `contenus-textuels` servent d’interface éditoriale lisible. Après une modification dans ces documents, il faut reporter le changement dans la source technique correspondante, puis lancer le workflow. La commande `node scripts/locate-content.mjs "fragment du texte"` permet de trouver immédiatement le fichier concerné.
 
 ## 1. Contenu express
 
@@ -16,26 +18,22 @@ Le composant, ses classes, sa position et son apparence doivent rester identique
 
 ### Procédure
 
-1. Repérer le fichier qui constitue la source du contenu.
-2. Modifier uniquement ce contenu avec `apply_patch`.
-3. Copier le fichier modifié dans `dist` lorsqu’il y possède un équivalent.
-4. Exécuter uniquement le contrôle directement lié au fichier :
-   - `node --check` si un fichier JavaScript a été touché ;
-   - contrôle éditorial si le texte du site a été modifié ;
-   - `git diff --check` avant le commit.
-5. Regrouper la synchronisation, le commit et le push dans une seule opération.
-6. S’arrêter après le push réussi.
+1. Localiser la source avec `node scripts/locate-content.mjs "fragment reconnaissable"` si elle n’est pas déjà connue.
+2. Modifier uniquement le contenu concerné avec `apply_patch`.
+3. Lancer `node scripts/site-workflow.mjs express`.
+4. Examiner le diff, puis effectuer un seul commit et un seul push.
+5. S’arrêter après le push réussi.
+
+Cette commande régénère entièrement `dist`, ajoute automatiquement une version de cache aux CSS et JavaScript, contrôle les références locales, la syntaxe JavaScript, les identifiants HTML, la synchronisation des assets et les règles éditoriales.
 
 ### À ne pas faire
 
+- copier manuellement un fichier dans `dist` ;
 - lancer un serveur local ;
 - ouvrir le site dans un navigateur ;
 - faire une capture d’écran ;
 - inspecter toutes les pages ;
-- surveiller le workflow GitHub Pages ;
-- attendre le déploiement avant de répondre.
-
-Une correction éditoriale doit normalement demander une édition et une publication, pas une séance complète de contrôle qualité visuel.
+- attendre le déploiement GitHub Pages.
 
 ## 2. Modification structurelle
 
@@ -54,16 +52,26 @@ Une correction éditoriale doit normalement demander une édition et une publica
 ### Procédure
 
 1. Identifier les fichiers et les dépendances concernés.
-2. Modifier la source et synchroniser `dist`.
-3. Exécuter les contrôles techniques adaptés.
-4. Lancer une prévisualisation locale.
-5. Vérifier visuellement les formats pertinents.
+2. Modifier les sources avec `apply_patch`.
+3. Lancer `node scripts/site-workflow.mjs structure`.
+4. Prévisualiser uniquement les pages touchées.
+5. Vérifier les largeurs pertinentes parmi 390, 800 et 1366 pixels.
 6. Corriger les problèmes observés.
-7. Faire un commit et pousser.
-8. Confirmer le déploiement lorsqu’il est utile de garantir le résultat en ligne.
+7. Relancer le workflow structurel.
+8. Effectuer un seul commit et un seul push.
+9. Confirmer le déploiement uniquement si le changement concerne l’hébergement ou si le résultat en ligne doit absolument être garanti.
+
+## Source et publication
+
+- `index.html`, les CSS et les JavaScript racine constituent la source canonique.
+- `assets` contient les fichiers publiés.
+- `contenus-textuels` contient la copie éditoriale destinée aux corrections humaines.
+- `dist` est supprimé et reconstruit par `scripts/build-site.mjs`.
+- seuls les CSS et JavaScript réellement référencés par `index.html` sont envoyés dans `dist`.
+- `.openai/hosting.json` publie `dist`.
 
 ## Cas frontière
 
-Si un simple texte est difficile à modifier parce qu’il est enfoui dans un gros fichier monolithique, la difficulté vient de l’architecture du site. Il faut alors effectuer une seule refactorisation structurelle pour donner à ce contenu une source claire. Les modifications suivantes pourront utiliser le workflow express.
+Si un simple texte reste difficile à modifier parce qu’il est enfoui dans un fichier monolithique, il faut extraire le bloc concerné dans un fichier JavaScript dédié. Cette refactorisation ne doit être faite qu’une fois. Les corrections suivantes pourront alors suivre le parcours express.
 
-Dans le doute, le critère n’est pas la taille apparente de la demande, mais son effet : si la géométrie, le style ou le comportement ne changent pas, il s’agit normalement d’une modification de contenu.
+Le critère principal reste l’effet du changement : si la géométrie, le style ou le comportement ne changent pas, il s’agit d’une modification de contenu.

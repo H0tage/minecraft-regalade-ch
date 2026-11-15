@@ -429,7 +429,8 @@
 @media (max-width: 1180px) {
   #tutoriels.view.active { width: min(1120px, calc(100vw - 28px)); }
   .tutorial-workspace { grid-template-columns: 180px minmax(0, 1fr); }
-  .tutorial-masthead { grid-template-columns: 180px minmax(0, 1fr) 180px; }
+  .tutorial-masthead { grid-template-columns: 180px minmax(0, 1fr); }
+  .tutorial-masthead-cue-right { display: none; }
   .tutorial-reader { grid-column: 2; grid-row: 1; }
   .tutorial-chapters {
     grid-column: 2;
@@ -484,6 +485,7 @@
     border-radius: 14px;
     overflow: hidden;
   }
+  .tutorial-masthead-cue-right { display: flex; }
   .tutorial-masthead-cue {
     padding: 9px 8px;
     justify-content: center;

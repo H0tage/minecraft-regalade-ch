@@ -35,9 +35,9 @@ const galleries = [
   {
     title: "Jouer avec les autres, à son rythme",
     source: "https://modrinth.com/mod/simple-voice-chat",
-    sourceName: "Collector's Album, Simple Voice Chat, Exposure & Etched",
+    sourceName: "Buddycards, Simple Voice Chat, Exposure & Etched",
     images: [
-      ["https://media.forgecdn.net/attachments/1708/698/2026-05-31_20-13-43-png.png", "Collector's Album"],
+      ["https://media.forgecdn.net/avatars/thumbnails/470/383/256/256/637757191265711349.png", "Buddycards"],
       ["https://cdn.modrinth.com/data/9eGKb6K1/images/975131df603729941d6549a8e78fed1509bf0518.png", "Discussion de proximité (Simple Voice Chat)", "https://modrinth.com/mod/simple-voice-chat"],
       ["https://cdn.modrinth.com/data/hB899VmG/images/5a84f1c7734227560999184ca8e6ab4dec8f7b15.png", "Maison de village (Exposure)", "https://modrinth.com/mod/exposure"],
       ["https://cdn.modrinth.com/data/zi3Fnfmc/images/795340620699a1d0dd46cbda6518a4cc5acf24f3.png", "Le barde (Etched)", "https://modrinth.com/mod/etched"]
@@ -49,7 +49,7 @@ for (const gallery of galleries) {
   if (!chapter) continue;
   const element = document.createElement('div');
   element.className = 'chapter-gallery';
-  element.innerHTML = gallery.images.map(([image, alt]) => `<figure><button class="gallery-trigger" type="button" data-image="${image}" data-alt="${alt}" aria-label="Afficher ${alt} en grand"><img src="${image}" alt="${alt}" loading="lazy"></button></figure>`).join('');
+  element.innerHTML = gallery.images.map(([image, alt]) => `<figure><button class="gallery-trigger" type="button" data-image="${image}" data-alt="${alt}" aria-label="Afficher ${alt} en grand"><img src="${image}" alt="${alt}" loading="lazy"${alt === 'Buddycards' ? ' class="gallery-image-contained"' : ''}></button></figure>`).join('');
   chapter.append(element);
 }
 

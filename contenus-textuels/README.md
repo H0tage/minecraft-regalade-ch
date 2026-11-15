@@ -9,7 +9,7 @@ Ce dossier est la **copie éditoriale lisible** du site. Il sépare les textes d
 3. Enregistre le fichier.
 4. Dis simplement à Codex : **« Synchronise mes modifications textuelles avec le site »**.
 
-Codex comparera alors ta version au contenu actuellement affiché, intégrera les changements dans les fichiers techniques, vérifiera le rendu et publiera le site.
+Codex comparera alors ta version au contenu actuellement affiché, localisera la source technique avec `scripts/locate-content.mjs`, intégrera les changements et lancera le workflow adapté.
 
 ## Organisation
 
@@ -28,5 +28,6 @@ Ne jamais utiliser de tiret cadratin. Lorsqu’une précision doit être isolée
 
 - Ces fichiers ne sont **pas lus directement par le navigateur**. Tu peux donc les modifier sans risquer de casser la mise en page du site.
 - Ils servent de référence éditoriale. Le site continue de fonctionner avec ses fichiers HTML et JavaScript actuels.
+- Le dossier `dist` n’est jamais modifié manuellement. Il est entièrement régénéré après chaque changement.
 - Les noms d’objets, valeurs techniques, recettes et quantités doivent rester exacts. Si tu modifies seulement le ton ou la formulation, Codex peut synchroniser directement.
 - Le script `scripts/export-editorial-texts.mjs` a servi à créer la première copie. Ne le relance pas après tes corrections, sauf si tu souhaites volontairement repartir du contenu actuellement publié.

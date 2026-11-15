@@ -75,11 +75,11 @@ Tu peux fabriquer une usine gigantissime, automatiser ta bouffe, organiser des l
 
 ## Explorer un monde vivant
 
-Le monde est pensé pour donner envie de sortir de chez soi. Vous pourrez trouver des structures, donjons, villages, animaux, artefacts et autres découvertes permettent de renouveler les expéditions.
+Le monde est pensé pour donner envie de sortir de chez soi. Vous pourrez trouver des structures, donjons, villages, animaux, artefacts et autres découvertes qui renouvellent les expéditions.
 
 L’exploration n’est pas juste là pour faire joli : elle peut apporter des récompenses, des objets utiles et des idées pour la suite. En fin de game, vous pourrez même fabriquer un réseau de Stargates et voyager à travers le monde en quelques secondes.
 
-Pour les fans de collectionnites, le jeu aura même un TCG intégré. Compléter votre collection augmentera vos statistiques de manière permanentes !
+Pour les fans de collectionnites, le jeu aura même un TCG intégré. Compléter votre collection augmentera vos statistiques de manière permanente !
 
 ## Donner vie à tout ça
 
@@ -91,7 +91,7 @@ De l'usine hardcore au bord d’une voie ferrée, une taverne de petit bled, un 
 
 Le serveur est pensé pour accueillir autant les gros zinzins qui jouent vingt heures par jour que les personnes qui passent juste une demi-heure à avancer leur petit projet.
 
-Il y aura des claims pour protéger les constructions, une économie entre joueurs, des boutiques, des missions pour gagner de l’argent en jouant.. L’objectif est que les joueurs aient la possibilité de se croiser, de commercer, de s’entraider et de construire ensemble sans que personne soit obligé de suivre le rythme des autres.
+Il y aura des claims pour protéger les constructions, une économie entre joueurs, des boutiques et des missions pour gagner de l’argent en jouant. L’objectif est que les joueurs aient la possibilité de se croiser, de commercer, de s’entraider et de construire ensemble sans que personne soit obligé de suivre le rythme des autres.
 
 ## Un projet fait avec le cœur
 
@@ -510,7 +510,7 @@ Bien vivre ensemble
 
 ### Concept général
 
-Ce serveur a pour but de créer un espace devenu rare aujourd'hui: une vraie safe place, positive et bienveillante. Vous acceptez en rejoignant le serveur ce concept principal: chacun a le droit de s'amuser dans le respect des limites et des espaces des autres. **Vous êtes la pour partager, vous amuser avec le sourire, bref kiffer dans la paix et le respect des autres.** Si ce concept vous parait trop bisounours, et que vous êtes en manque de matraques, n'hésitez pas à vous rendre sur X.
+Ce serveur a pour but de créer un espace devenu rare aujourd'hui: une vraie safe place, positive et bienveillante. Vous acceptez en rejoignant le serveur ce concept principal: chacun a le droit de s'amuser dans le respect des limites et des espaces des autres. **Vous êtes là pour partager, vous amuser avec le sourire, bref kiffer dans la paix et le respect des autres.** Si ce concept vous paraît trop bisounours et que vous êtes en manque de matraques, n'hésitez pas à vous rendre sur X.
 
 **01**
 

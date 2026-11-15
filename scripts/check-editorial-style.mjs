@@ -1,11 +1,11 @@
 import { execFileSync } from 'node:child_process';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 
 const forbiddenCharacter = String.fromCodePoint(0x2014);
 const textExtensions = /\.(?:css|csv|html|js|json|md|mjs|txt)$/i;
 const files = execFileSync('git', ['ls-files'], { encoding: 'utf8' })
   .split(/\r?\n/)
-  .filter(file => file && textExtensions.test(file));
+  .filter(file => file && textExtensions.test(file) && existsSync(file));
 
 const violations = [];
 
