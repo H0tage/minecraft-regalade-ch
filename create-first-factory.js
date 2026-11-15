@@ -35,6 +35,23 @@
           </div>
         </header>
 
+        <section class="cff-world-intro" id="cff-overview-world" data-phase="Découvrir Create">
+          <div class="cff-world-heading">
+            <p class="cff-eyebrow">Avant de parler d’engrenages</p>
+            <h2>Construire une activité, pas juste une machine</h2>
+          </div>
+          <p class="cff-lead">Le vrai intérêt de Create, ce n’est pas seulement de regarder une roue tourner. C’est de prendre une idée un peu débile — « et si je devenais le fournisseur officiel de frites du serveur ? » — puis de construire toute l’infrastructure nécessaire pour qu’elle fonctionne réellement.</p>
+          <div class="cff-world-grid">
+            <article><h3>Devenir le nouvel Amazon</h3><p>Construis des entrepôts, trie automatiquement les colis et utilise des trains pour approvisionner plusieurs villes. À terme, tu peux carrément monter une entreprise de transport pour les autres joueurs.</p></article>
+            <article><h3>Ouvrir une vraie boutique</h3><p>Une usine fabrique les produits, des tapis roulants remplissent les stocks et ta boutique continue d’exister même quand tu es occupé ailleurs. Il ne reste plus qu’à convaincre les gens d’acheter ta merde.</p></article>
+            <article><h3>Devenir le fermier du futur</h3><p>Récolte, replante et transporte automatiquement des champs entiers. Ton exploitation peut alimenter ta cuisine, les restaurants du serveur ou les usines d’autres joueurs.</p></article>
+            <article><h3>Créer un vignoble ou une brasserie</h3><p>Combine les récoltes automatisées avec les systèmes de cuisine et de boissons. Les ingrédients poussent, voyagent, sont pressés, mélangés puis transformés sans finir dans douze coffres posés au hasard.</p></article>
+            <article><h3>Industrialiser la frite</h3><p>Produis des patates en quantité absurde, lave-les, découpe-les, cuisine-les puis emballe-les. Est-ce nécessaire ? Absolument pas. Est-ce que ça mérite une usine de trois étages ? Évidemment.</p></article>
+            <article><h3>Fabriquer des armes</h3><p>Monte une fonderie, transforme les métaux, produis les pièces et organise toute la logistique nécessaire aux canons et à leurs munitions. Une industrie légèrement moins paisible, mais une industrie quand même.</p></article>
+          </div>
+          <p class="cff-world-summary"><strong>Et surtout, tout peut se connecter.</strong> La ferme alimente le restaurant, l’entrepôt ravitaille la boutique, les trains relient les villes et plusieurs joueurs peuvent se spécialiser. Create devient alors moins un mod de machines qu’une manière de construire un petit monde qui fonctionne vraiment.</p>
+        </section>
+
         <section class="cff-overview-section" id="cff-overview-concept" data-phase="Les bases">
           <div class="cff-title"><span>01</span><div><p>L’idée de base</p><h2>Énormément de possibilités</h2></div></div>
           <p class="cff-lead">Les mêmes composants peuvent servir à faire une boulangerie, une scierie, une ferme, une gare ou une giga-usine qui traverse trois bâtiments parce que, visiblement, tu avais du temps.</p>

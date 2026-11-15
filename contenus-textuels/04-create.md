@@ -15,6 +15,38 @@ Des machines, des engrenages et probablement un bordel monstrueux
 
 En gros, Create transforme Minecraft en gigantesque atelier mécanique. Le mod te file des pièces, des machines et différentes façons de les assembler. Après, c’est à toi de construire tout et n'importe quoi avec.
 
+Avant de parler d’engrenages
+
+## Construire une activité, pas juste une machine
+
+Le vrai intérêt de Create, ce n’est pas seulement de regarder une roue tourner. C’est de prendre une idée un peu débile — « et si je devenais le fournisseur officiel de frites du serveur ? » — puis de construire toute l’infrastructure nécessaire pour qu’elle fonctionne réellement.
+
+### Devenir le nouvel Amazon
+
+Construis des entrepôts, trie automatiquement les colis et utilise des trains pour approvisionner plusieurs villes. À terme, tu peux carrément monter une entreprise de transport pour les autres joueurs.
+
+### Ouvrir une vraie boutique
+
+Une usine fabrique les produits, des tapis roulants remplissent les stocks et ta boutique continue d’exister même quand tu es occupé ailleurs. Il ne reste plus qu’à convaincre les gens d’acheter ta merde.
+
+### Devenir le fermier du futur
+
+Récolte, replante et transporte automatiquement des champs entiers. Ton exploitation peut alimenter ta cuisine, les restaurants du serveur ou les usines d’autres joueurs.
+
+### Créer un vignoble ou une brasserie
+
+Combine les récoltes automatisées avec les systèmes de cuisine et de boissons. Les ingrédients poussent, voyagent, sont pressés, mélangés puis transformés sans finir dans douze coffres posés au hasard.
+
+### Industrialiser la frite
+
+Produis des patates en quantité absurde, lave-les, découpe-les, cuisine-les puis emballe-les. Est-ce nécessaire ? Absolument pas. Est-ce que ça mérite une usine de trois étages ? Évidemment.
+
+### Fabriquer des armes
+
+Monte une fonderie, transforme les métaux, produis les pièces et organise toute la logistique nécessaire aux canons et à leurs munitions. Une industrie légèrement moins paisible, mais une industrie quand même.
+
+**Et surtout, tout peut se connecter.** La ferme alimente le restaurant, l’entrepôt ravitaille la boutique, les trains relient les villes et plusieurs joueurs peuvent se spécialiser. Create devient alors moins un mod de machines qu’une manière de construire un petit monde qui fonctionne vraiment.
+
 01
 
 L’idée de base
