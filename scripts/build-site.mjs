@@ -34,6 +34,7 @@ const scriptSources = [
   'pages/mods-page.js',
   'core/tab-groups.js',
   'tutorials/layout.js',
+  'tutorials/jei.js',
 ];
 
 function listFiles(directory, extension, baseDirectory = directory) {

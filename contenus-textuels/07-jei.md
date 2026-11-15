@@ -183,6 +183,12 @@ Le tableau contient les mods qui ajoutent des objets ou des blocs utiles à cons
 de performances et les modifications purement visuelles ne sont pas là, puisqu’ils ne donnent rien d’intéressant à
 chercher dans JEI.
 
+Rechercher un mod
+
+La recherche fonctionne avec le nom du mod comme avec son code JEI.
+
+Aucun mod ne correspond à cette recherche. Essaie avec un nom plus court.
+
 Mod
 
 Filtre JEI
