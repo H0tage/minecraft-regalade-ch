@@ -32,54 +32,54 @@
       <div class="cff-panel" id="cff-overview-panel" role="tabpanel" aria-labelledby="cff-overview-tab">
         <header class="cff-overview-hero">
           <div>
-            <p class="cff-eyebrow">Machines, mouvement et imagination</p>
-            <h1>Comprendre Create</h1>
-            <p>Create transforme Minecraft en atelier mécanique. Le mod ne donne pas une machine magique pour chaque ressource : il fournit des pièces, des mouvements et des procédés que tu assembles pour fabriquer tes propres installations.</p>
+            <p class="cff-eyebrow">Des machines, des engrenages et probablement un bordel monstrueux</p>
+            <h1>Create, c’est quoi ce machin ?</h1>
+            <p>En gros, Create transforme Minecraft en gigantesque atelier mécanique. Le mod ne te donne pas un bloc magique qui fabrique tout tout seul : il te file des pièces, des machines et différentes façons de les assembler. Après, c’est à toi de construire le truc plus ou moins absurde qui va avec.</p>
           </div>
         </header>
 
         <section class="cff-overview-section" id="cff-overview-concept" data-phase="Les bases">
-          <div class="cff-title"><span>01</span><div><p>L’idée centrale</p><h2>Une boîte à outils plutôt qu’un arbre de compétences</h2></div></div>
-          <p class="cff-lead">Create ne t’impose pas une seule manière de jouer. Les mêmes composants peuvent servir à une boulangerie, une scierie, une ferme, une gare ou une usine de plusieurs bâtiments.</p>
+          <div class="cff-title"><span>01</span><div><p>L’idée de base</p><h2>Pas une machine magique, mais de quoi tout fabriquer</h2></div></div>
+          <p class="cff-lead">Create ne te dit pas vraiment quoi construire. Les mêmes composants peuvent servir à faire une boulangerie, une scierie, une ferme, une gare ou une giga-usine qui traverse trois bâtiments parce que, visiblement, tu avais du temps.</p>
           <div class="cff-concept-grid">
-            <article><b>Produire un mouvement</b><span>Water Wheel, Windmill Bearing, Steam Engine ou simple Hand Crank</span></article>
-            <i>→</i><article><b>Transmettre ce mouvement</b><span>Shafts, Cogwheels, Gearboxes, Belts et Chain Drives</span></article>
-            <i>→</i><article><b>Faire travailler des machines</b><span>Press, Millstone, Mixer, Saw, Drill, Fan et beaucoup d’autres</span></article>
+            <article><b>Faire tourner un truc</b><span>Avec une Water Wheel, un Windmill Bearing, une Steam Engine ou même une simple Hand Crank</span></article>
+            <i>→</i><article><b>Amener la rotation quelque part</b><span>Avec des Shafts, Cogwheels, Gearboxes, Belts et Chain Drives</span></article>
+            <i>→</i><article><b>Brancher une machine dessus</b><span>Press, Millstone, Mixer, Saw, Drill, Fan et plein d’autres joyeusetés</span></article>
           </div>
           <div class="cff-card-grid cff-card-grid-3">
-            <article><h3>Pas de câble électrique</h3><p>La plupart des machines Create utilisent une rotation visible. Si un axe ne tourne pas, la machine ne fonctionne pas.</p></article>
-            <article><h3>Pas de bloc universel</h3><p>Une usine est un assemblage de machines, de transports et de stockages adaptés au résultat recherché.</p></article>
-            <article><h3>Tout reste visible</h3><p>Les objets circulent sur les Belts, les engrenages tournent et les procédés se déroulent réellement dans le monde.</p></article>
+            <article><h3>Pas de câble électrique</h3><p>Ici, l’énergie est une rotation visible. Si ton axe ne tourne pas, ta machine ne fait rien. C’est assez honnête comme système.</p></article>
+            <article><h3>Pas de bloc qui fait tout</h3><p>Une usine, c’est plusieurs machines, du transport et du stockage que tu relies pour obtenir le résultat voulu.</p></article>
+            <article><h3>Tout se passe devant toi</h3><p>Les objets circulent sur les Belts, les engrenages tournent et les machines travaillent réellement dans le monde.</p></article>
           </div>
         </section>
 
         <section class="cff-overview-section" id="cff-overview-power" data-phase="Les bases">
-          <div class="cff-title"><span>02</span><div><p>Le moteur de Create</p><h2>Rotation, RPM et SU</h2></div></div>
+          <div class="cff-title"><span>02</span><div><p>Le truc fondamental</p><h2>Tout doit tourner, mais pas n’importe comment</h2></div></div>
           <div class="cff-two-columns">
-            <article class="cff-card"><h3>RPM : la vitesse</h3><p>Les Revolutions Per Minute indiquent à quelle vitesse tourne le réseau. Davantage de RPM accélère généralement le travail, mais augmente aussi la charge des machines.</p></article>
-            <article class="cff-card"><h3>SU : la capacité</h3><p>Les Stress Units représentent la charge que la source peut supporter. Lorsque les machines demandent trop de SU, tout le réseau devient <strong>Overstressed</strong> et s’arrête.</p></article>
+            <article class="cff-card"><h3>RPM : à quelle vitesse ça tourne</h3><p>Plus il y a de RPM, plus les machines travaillent vite. En revanche, elles demandent aussi davantage de puissance. Évidemment, on ne pouvait pas juste les faire tourner à fond gratuitement.</p></article>
+            <article class="cff-card"><h3>SU : combien de machines ça supporte</h3><p>Les Stress Units représentent la charge supportée par ta source. Si tu branches trop de machines, tout le réseau devient <strong>Overstressed</strong> et décide collectivement de ne plus rien faire.</p></article>
           </div>
           <div class="cff-power-model" aria-label="Fonctionnement d’un réseau Create">
             <article class="source"><b>Source de rotation</b><span>crée le mouvement et fournit la capacité</span></article><i>→</i>
             <article><b>Transmission</b><span>transporte ou modifie la rotation</span></article><i>→</i>
             <article><b>Machine</b><span>utilise la rotation pour effectuer une tâche</span></article>
           </div>
-          <p class="cff-note"><strong>La règle simple :</strong> la source détermine ce que ton réseau peut supporter ; les engrenages déterminent sa vitesse et son sens.</p>
+          <p class="cff-note"><strong>La version courte :</strong> la source décide combien de machines tu peux alimenter ; les engrenages décident à quelle vitesse et dans quel sens elles tournent.</p>
         </section>
 
         <section class="cff-overview-section" id="cff-overview-families" data-phase="Construire une machine">
-          <div class="cff-title"><span>03</span><div><p>Quatre familles de composants</p><h2>Comprendre le rôle de chaque bloc</h2></div></div>
+          <div class="cff-title"><span>03</span><div><p>Les grandes familles</p><h2>Chaque bloc a un boulot, heureusement</h2></div></div>
           <div class="cff-family-grid">
-            <article><h3>Énergie et transmission</h3><p>Water Wheels, Shafts, Cogwheels et Gearboxes créent puis distribuent la rotation dans l’atelier.</p></article>
-            <article><h3>Transformation</h3><p>Millstone, Mechanical Press, Mixer, Saw et Encased Fan modifient les matières selon des recettes Create.</p></article>
-            <article><h3>Logistique</h3><p>Belts, Funnels, Chutes, Tunnels et Vaults déplacent, filtrent, distribuent et stockent les objets.</p></article>
-            <article><h3>Contrôle</h3><p>Wrench, Goggles, Clutch, Gearshift, Speedometer et Redstone Link permettent de régler et piloter l’installation.</p></article>
+            <article><h3>Faire et transmettre la rotation</h3><p>Water Wheels, Shafts, Cogwheels et Gearboxes servent à produire le mouvement, puis à l’emmener jusqu’aux machines.</p></article>
+            <article><h3>Transformer les matériaux</h3><p>Millstone, Mechanical Press, Mixer, Saw et Encased Fan font subir différentes opérations à tes ressources.</p></article>
+            <article><h3>Déplacer tout ce bazar</h3><p>Belts, Funnels, Chutes, Tunnels et Vaults déplacent, filtrent, distribuent et stockent les objets sans que tu doives tout porter toi-même.</p></article>
+            <article><h3>Contrôler l’usine</h3><p>Wrench, Goggles, Clutch, Gearshift, Speedometer et Redstone Link permettent de régler, mesurer ou arrêter ton installation.</p></article>
           </div>
         </section>
 
         <section class="cff-overview-section" id="cff-overview-processes" data-phase="Construire une machine">
-          <div class="cff-title"><span>04</span><div><p>Les procédés</p><h2>Une ressource peut suivre plusieurs chemins</h2></div></div>
-          <p class="cff-lead">Dans JEI, une même matière peut avoir plusieurs transformations. Le choix de la machine modifie parfois le rendement ou les sous-produits.</p>
+          <div class="cff-title"><span>04</span><div><p>Les procédés</p><h2>Faire subir plein de trucs à tes ressources</h2></div></div>
+          <p class="cff-lead">Une même matière peut être broyée, pressée, lavée, mélangée ou passer par plusieurs machines à la suite. Selon le procédé choisi, le rendement et les produits obtenus peuvent changer.</p>
           <div class="cff-process-library">
             <article><b>Milling</b><span>broyer avec une Millstone</span></article>
             <article><b>Pressing</b><span>aplatir avec une Mechanical Press</span></article>
@@ -88,27 +88,27 @@
             <article><b>Mechanical Harvesting</b><span>casser ou récolter automatiquement</span></article>
             <article><b>Sequenced Assembly</b><span>enchaîner plusieurs opérations</span></article>
           </div>
-          <div class="cff-method"><b>Pour concevoir une usine</b><span>Pars de l’objet final dans JEI, remonte ses recettes, choisis les procédés puis relie les machines avec une circulation d’objets et une circulation de rotation.</span></div>
+          <div class="cff-method"><b>Le réflexe qui sauve la vie</b><span>Commence par l’objet final dans JEI, puis remonte ses recettes à l’envers. Tu sauras quelles machines construire et dans quel ordre les relier, au lieu de poser cinquante blocs au hasard et de pleurer après.</span></div>
         </section>
 
         <section class="cff-overview-section" id="cff-overview-progression" data-phase="Progression">
-          <div class="cff-title"><span>05</span><div><p>Du premier engrenage au réseau ferroviaire</p><h2>La progression générale</h2></div></div>
+          <div class="cff-title"><span>05</span><div><p>La progression générale</p><h2>Tu commences avec une roue et tu finis avec le chemin de fer</h2></div></div>
           <div class="cff-progression">
             <article><span>Début</span><h3>Andesite</h3><p>Water Wheels, Shafts, Belts et premières machines de transformation. Tout le nécessaire pour une petite usine.</p></article>
             <i>→</i><article><span>Intermédiaire</span><h3>Brass</h3><p>Le laiton, produit avec Copper, Zinc et un Blaze Burner chauffé, ouvre la logistique précise, les filtres avancés et les Mechanical Arms.</p></article>
             <i>→</i><article><span>Infrastructure</span><h3>Vapeur et trains</h3><p>Les Steam Engines alimentent de grands réseaux. Les trains relient ensuite les usines, les villes et les joueurs.</p></article>
           </div>
-          <p class="cff-note">Ce ne sont pas des niveaux obligatoires. Tu peux rester longtemps avec de petites Water Wheels ou construire une centrale commune avec d’autres joueurs.</p>
+          <p class="cff-note">Rien ne t’oblige à tout faire dans cet ordre ni à construire une centrale nucléaire au bout de deux jours. Tu peux très bien rester avec de petites Water Wheels, ou monter une grosse centrale commune avec d’autres joueurs.</p>
         </section>
 
         <section class="cff-overview-section" id="cff-overview-learn" data-phase="Commencer">
-          <div class="cff-title"><span>06</span><div><p>Les trois réflexes</p><h2>Apprendre sans connaître tout le mod</h2></div></div>
+          <div class="cff-title"><span>06</span><div><p>Avant de devenir fou</p><h2>Trois trucs à connaître, vraiment</h2></div></div>
           <div class="cff-learning-grid">
-            <article><b>1</b><div><h3>JEI pour les recettes</h3><p>Survole un objet et utilise les touches indiquées par JEI pour voir comment le fabriquer ou à quoi il sert.</p></div></article>
-            <article><b>2</b><div><h3>W pour Ponder</h3><p>Maintiens <kbd>W</kbd> sur un composant Create afin de voir une animation expliquant son fonctionnement.</p></div></article>
-            <article><b>3</b><div><h3>Goggles pour diagnostiquer</h3><p>Regarde les axes et les machines avec les Engineer's Goggles pour lire vitesse, capacité et consommation.</p></div></article>
+            <article><b>1</b><div><h3>JEI pour savoir quoi fabriquer</h3><p>Survole un objet et regarde sa recette ou ses usages. Oui, tu vas passer une partie conséquente de ta vie dans JEI.</p></div></article>
+            <article><b>2</b><div><h3>W pour comprendre le machin</h3><p>Maintiens <kbd>W</kbd> sur un composant Create : le jeu te montre directement une animation de son fonctionnement.</p></div></article>
+            <article><b>3</b><div><h3>Goggles quand ça ne marche plus</h3><p>Regarde les axes et les machines avec les Engineer's Goggles pour lire leur vitesse, leur capacité et leur consommation.</p></div></article>
           </div>
-          <div class="cff-next-step"><div><b>Prêt à construire ?</b><span>Le parcours suivant applique immédiatement ces notions à une ferme automatisée de fer et de silex.</span></div><button type="button" data-open-cff-factory>Ouvrir « Ma première usine »</button></div>
+          <div class="cff-next-step"><div><b>Bon, maintenant on construit un truc</b><span>Le parcours suivant utilise tout ça pour fabriquer une ferme automatisée de fer et de silex, de zéro, sans te demander de deviner la moitié des étapes.</span></div><button type="button" data-open-cff-factory>Ouvrir « Ma première usine »</button></div>
         </section>
       </div>
 
