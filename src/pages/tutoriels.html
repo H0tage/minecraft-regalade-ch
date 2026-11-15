@@ -44,6 +44,17 @@
           </button>
           <button
             class="tutorial-tab"
+            id="tutorial-cuisine-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-cuisine"
+            tabindex="-1"
+          >
+            Cuisine et restauration
+          </button>
+          <button
+            class="tutorial-tab"
             id="tutorial-create-first-factory-tab"
             type="button"
             role="tab"
@@ -90,6 +101,15 @@
         </section>
         <section class="tutorial-panel" id="tutorial-jei" role="tabpanel" aria-labelledby="tutorial-jei-tab" hidden>
           <!-- @include ../content/tutorials/jei.html -->
+        </section>
+        <section
+          class="tutorial-panel"
+          id="tutorial-cuisine"
+          role="tabpanel"
+          aria-labelledby="tutorial-cuisine-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/cuisine.html -->
         </section>
         <section
           class="tutorial-panel"

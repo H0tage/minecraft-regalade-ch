@@ -46,6 +46,11 @@ const groups = [
     title: 'JEI (fonctionnement et filtres par mod)',
     sources: ['src/content/tutorials/jei.html'],
   },
+  {
+    file: '08-cuisine-et-restauration.md',
+    title: 'Cuisine et restauration',
+    sources: ['src/content/tutorials/cuisine.html'],
+  },
 ];
 
 const entities = new Map([
