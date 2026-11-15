@@ -1,0 +1,228 @@
+<div class="eco-panel" id="eco-shop-panel" role="tabpanel" aria-labelledby="eco-shop-tab" hidden="">
+  <header class="eco-hero eco-hero-compact">
+    <div>
+      <p class="eco-eyebrow">Du surplus au commerce entre joueurs</p>
+      <h1>Ouvrir une première Boutique</h1>
+      <p>
+        Le Selling Bin injecte de l’argent contre des ressources configurées par le serveur. Une Boutique fait autre
+        chose : elle permet à un joueur de vendre ses propres produits aux autres, même lorsqu’il est absent.
+      </p>
+    </div>
+    <div class="eco-hero-coins">
+      <img class="eco-icon" src="assets/economy/vendor.png" alt="Boutique Numismatics" /><img
+        class="eco-icon"
+        src="assets/economy/sprocket.png"
+        alt="Sprocket"
+      />
+    </div>
+  </header>
+
+  <section class="eco-section" id="eco-shop-difference" data-phase="Comprendre">
+    <div class="eco-title">
+      <span>01</span>
+      <div>
+        <p>Deux machines, deux rôles</p>
+        <h2>Selling Bin ou Boutique</h2>
+      </div>
+    </div>
+    <div class="eco-card-grid eco-card-grid-2 eco-compare">
+      <article>
+        <img class="eco-icon" src="assets/economy/selling-bin.png" alt="" />
+        <h3>Selling Bin</h3>
+        <p>
+          Le serveur rachète certains objets et crée de nouvelles pièces. Il sert à faire entrer de l’argent dans
+          l’économie.
+        </p>
+      </article>
+      <article>
+        <img class="eco-icon" src="assets/economy/vendor.png" alt="" />
+        <h3>Boutique</h3>
+        <p>
+          Un joueur propose un produit et reçoit l’argent d’un autre joueur. Elle fait circuler la monnaie existante.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="eco-section" id="eco-shop-build" data-phase="Préparer la vente">
+    <div class="eco-title">
+      <span>02</span>
+      <div>
+        <p>Le bloc de commerce</p>
+        <h2>Fabriquer et poser la Boutique</h2>
+      </div>
+    </div>
+    <div class="eco-vertical-recipe" aria-label="Recette verticale de la Boutique">
+      <span>Framed Glass</span><i>↓</i><span>Brass Casing</span><i>↓</i><span>Electron Tube</span><i>→</i
+      ><strong><img class="eco-icon" src="assets/economy/vendor.png" alt="" /> 1 Boutique</strong>
+    </div>
+    <p class="eco-callout">
+      <strong>Avant de la configurer</strong
+      ><span
+        >Choisis un produit simple, la quantité vendue à chaque transaction, un prix lisible et prépare un petit
+        stock.</span
+      >
+    </p>
+  </section>
+
+  <section class="eco-section" id="eco-shop-config" data-phase="Préparer la vente">
+    <div class="eco-title">
+      <span>03</span>
+      <div>
+        <p>Côté vendeur</p>
+        <h2>Configurer une vente</h2>
+      </div>
+    </div>
+    <div class="eco-action-grid">
+      <article>
+        <b>1</b>
+        <div>
+          <h3>Ouvre les réglages</h3>
+          <p>Le propriétaire fait <strong>Maj + clic droit</strong> sur la Boutique.</p>
+        </div>
+      </article>
+      <article>
+        <b>2</b>
+        <div>
+          <h3>Choisis Sell / Vente</h3>
+          <p>Ce mode distribue tes produits contre le paiement défini.</p>
+        </div>
+      </article>
+      <article>
+        <b>3</b>
+        <div>
+          <h3>Définis le produit</h3>
+          <p>Place un objet témoin dans le filtre et règle la quantité par transaction.</p>
+        </div>
+      </article>
+      <article>
+        <b>4</b>
+        <div>
+          <h3>Fixe le prix</h3>
+          <p>Utilise les six contrôles de monnaie pour composer le montant souhaité.</p>
+        </div>
+      </article>
+      <article>
+        <b>5</b>
+        <div>
+          <h3>Ajoute le stock</h3>
+          <p>La Boutique possède neuf emplacements internes pour les produits.</p>
+        </div>
+      </article>
+      <article>
+        <b>6</b>
+        <div>
+          <h3>Choisis où va l’argent</h3>
+          <p>
+            Sans carte, les pièces restent dans la Boutique. Avec une carte liée insérée, les recettes partent
+            directement sur ton compte.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="eco-section" id="eco-shop-test" data-phase="Ouvrir le commerce">
+    <div class="eco-title">
+      <span>04</span>
+      <div>
+        <p>Côté acheteur</p>
+        <h2>Tester la première transaction</h2>
+      </div>
+    </div>
+    <div class="eco-flow eco-shop-flow">
+      <article><b>Produit en stock</b><span>Quantité et prix affichés</span></article>
+      <i>→</i>
+      <article>
+        <img class="eco-icon" src="assets/economy/vendor.png" alt="" /><b>Clic droit</b><span>Une transaction</span>
+      </article>
+      <i>→</i>
+      <article class="eco-result"><b>Objet à l’acheteur</b><span>Paiement au vendeur</span></article>
+    </div>
+    <div class="eco-action-grid eco-action-grid-3">
+      <article>
+        <b>1</b>
+        <div>
+          <h3>Note l’état initial</h3>
+          <p>Le vendeur contrôle son stock et son argent avant le test.</p>
+        </div>
+      </article>
+      <article>
+        <b>2</b>
+        <div>
+          <h3>Achète une fois</h3>
+          <p>L’acheteur paie avec sa carte tenue en main ou avec ses pièces.</p>
+        </div>
+      </article>
+      <article>
+        <b>3</b>
+        <div>
+          <h3>Vérifie les deux côtés</h3>
+          <p>L’objet doit arriver chez l’acheteur, le stock baisser et le vendeur recevoir le paiement.</p>
+        </div>
+      </article>
+    </div>
+    <p class="eco-mini-note">
+      En étant accroupi pendant le clic droit, l’acheteur peut effectuer plusieurs transactions, jusqu’à la limite d’une
+      pile et des ressources disponibles.
+    </p>
+  </section>
+
+  <section class="eco-section" id="eco-shop-security" data-phase="Gérer la Boutique">
+    <div class="eco-title">
+      <span>05</span>
+      <div>
+        <p>Propriété et confiance</p>
+        <h2>Protéger et réapprovisionner le commerce</h2>
+      </div>
+    </div>
+    <div class="eco-card-grid eco-card-grid-3">
+      <article>
+        <h3>Propriétaire</h3>
+        <p>
+          La Boutique appartient au joueur qui l’a posée. Les autres joueurs ne peuvent pas modifier librement ses
+          réglages.
+        </p>
+      </article>
+      <article>
+        <h3>Liste de confiance</h3>
+        <p>Le propriétaire peut autoriser d’autres joueurs depuis le bouton prévu dans l’interface.</p>
+      </article>
+      <article>
+        <h3>Réapprovisionnement</h3>
+        <p>Remplis les neuf emplacements internes. Une rupture de stock empêche simplement les nouvelles ventes.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="eco-section" id="eco-shop-buy" data-phase="Pour aller plus loin">
+    <div class="eco-title">
+      <span>06</span>
+      <div>
+        <p>Optionnel</p>
+        <h2>Faire racheter des objets par la Boutique</h2>
+      </div>
+    </div>
+    <p class="eco-lead">
+      Le mode <strong>Buy / Achat</strong> inverse la transaction : la Boutique reçoit l’objet tenu par le joueur et lui
+      verse le prix configuré.
+    </p>
+    <div class="eco-flow eco-buy-flow">
+      <article><b>Objet tenu par le joueur</b></article>
+      <i>→</i>
+      <article>
+        <img class="eco-icon" src="assets/economy/vendor.png" alt="" /><b>Boutique en mode Buy</b
+        ><span>Stockage libre + fonds disponibles</span>
+      </article>
+      <i>→</i>
+      <article class="eco-result"><b>Paiement au joueur</b></article>
+    </div>
+    <p class="eco-callout">
+      <strong>Les deux conditions</strong
+      ><span
+        >La Boutique doit posséder assez d’argent pour payer et assez de place pour recevoir les objets. Commence par
+        maîtriser le mode Vente avant d’utiliser celui-ci.</span
+      >
+    </p>
+  </section>
+</div>

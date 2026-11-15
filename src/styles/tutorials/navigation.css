@@ -8,7 +8,7 @@
 .tutorial-tabs {
   display: flex;
   gap: 4px;
-  overflow-x: auto;
+  overflow: visible;
   border-bottom: 1px solid var(--line);
   scrollbar-width: thin;
 }
@@ -62,10 +62,6 @@
   .tutorial-tab {
     padding: 16px 15px;
   }
-}
-
-.tutorial-tabs {
-  overflow: visible;
 }
 
 @media (width <= 800px) {

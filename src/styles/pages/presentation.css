@@ -20,7 +20,7 @@
 
 .mod-tab:hover,
 .mod-tab.active {
-  background: var(--ink);
+  background: #486d5f;
   border-color: var(--ink);
   color: #fff;
 }
@@ -135,10 +135,6 @@
 
 .presentation-chapter.heart p {
   color: #d9e2e4;
-}
-
-.presentation-chapter.heart {
-  background: #486d5f;
 }
 
 .chapter-gallery {

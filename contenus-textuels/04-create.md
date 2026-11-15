@@ -56,8 +56,8 @@ Monte une fonderie, transforme les métaux, produis les pièces et organise tout
 canons et à leurs munitions. Une industrie légèrement moins paisible, mais une industrie quand même.
 
 **Et surtout, tout peut se connecter.** La ferme alimente le restaurant, l’entrepôt ravitaille la
-boutique, les trains relient les villes et plusieurs joueurs peuvent se spécialiser. Create devient alors moins
-un mod de machines qu’une manière de construire un petit monde qui fonctionne vraiment.
+boutique, les trains relient les villes et plusieurs joueurs peuvent se spécialiser. Create devient alors moins un
+mod de machines qu’une manière de construire un petit monde qui fonctionne vraiment.
 
 01
 
@@ -72,8 +72,8 @@ qui traverse trois bâtiments parce que, visiblement, tu avais du temps.
 
 →
 
-**Déplacer des trucsAvec des arbres de transmission, des roues dentées, des boîtes d’engrenages, des courroies, des
-transmissions par chaîne, des tapis roulants…
+**Déplacer des trucsAvec des arbres de transmission, des roues dentées, des boîtes d’engrenages, des courroies, des transmissions
+par chaîne, des tapis roulants…
 
 →
 
@@ -86,8 +86,7 @@ steampunk.
 
 ### Pas de bloc qui fait tout
 
-Une usine, c’est plusieurs machines, du transport et du stockage que tu relies pour obtenir le résultat
-voulu.
+Une usine, c’est plusieurs machines, du transport et du stockage que tu relies pour obtenir le résultat voulu.
 
 ### Tout se passe devant toi
 
@@ -107,8 +106,8 @@ aussi davantage de puissance.
 
 ### SU : combien de machines ça supporte
 
-Les unités de contrainte représentent la charge supportée par ta source. Si tu branches trop de machines,
-tout le réseau devient **surchargé** et décide collectivement de ne plus rien faire.
+Les unités de contrainte représentent la charge supportée par ta source. Si tu branches trop de machines, tout
+le réseau devient **surchargé** et décide collectivement de ne plus rien faire.
 
 **Source de rotation** crée le mouvement et fournit la capacité (par exemple, une roue à eau)
 
@@ -118,10 +117,10 @@ tout le réseau devient **surchargé** et décide collectivement de ne plus rien
 
 →
 
-**Machineutilise la rotation pour effectuer une tâche (par exemple, une découpeuse à patates)
+**Machine** utilise la rotation pour effectuer une tâche (par exemple, une découpeuse à patates)
 
-**La version courte :** la source conditionne combien de machines tu peux alimenter ; les
-engrenages décident à quelle vitesse et dans quel sens elles tournent.
+**La version courte :** la source conditionne combien de machines tu peux alimenter ; les engrenages
+décident à quelle vitesse et dans quel sens elles tournent.
 
 03
 
@@ -141,8 +140,8 @@ découper ou traiter tes ressources.
 
 ### Déplacer tout ce bazar
 
-Les tapis roulants, entonnoirs, goulottes, tunnels et coffres déplacent, filtrent, distribuent et stockent
-les objets sans que tu doives tout porter toi-même.
+Les tapis roulants, entonnoirs, goulottes, tunnels et coffres déplacent, filtrent, distribuent et stockent les
+objets sans que tu doives tout porter toi-même.
 
 ### Contrôler l’usine
 
@@ -155,8 +154,8 @@ Les procédés
 
 ## Faire plein de trucs avec tes ressources
 
-Une même matière peut être broyée, pressée, lavée, mélangée ou passer par plusieurs machines à la suite. Selon
-le procédé choisi, le rendement et les produits obtenus peuvent changer.
+Une même matière peut être broyée, pressée, lavée, mélangée ou passer par plusieurs machines à la suite. Selon le
+procédé choisi, le rendement et les produits obtenus peuvent changer.
 
 **Broyage** broyer avec une meule
 
@@ -171,8 +170,7 @@ le procédé choisi, le rendement et les produits obtenus peuvent changer.
 **Assemblage séquencé** enchaîner plusieurs opérations
 
 **Le réflexe qui sauve la vieCommence par l’objet final dans JEI, puis remonte ses recettes à l’envers. Tu sauras quelles machines
-construire et dans quel ordre les relier, au lieu de poser cinquante blocs au hasard et de pleurer
-après.
+construire et dans quel ordre les relier, au lieu de poser cinquante blocs au hasard et de pleurer après.
 
 05
 
@@ -184,8 +182,8 @@ Début
 
 ### Andésite
 
-Roues à eau, axes de transmission, tapis roulants et premières machines de transformation. Tout le
-nécessaire pour une petite usine.
+Roues à eau, axes de transmission, tapis roulants et premières machines de transformation. Tout le nécessaire
+pour une petite usine.
 
 →
 
@@ -205,8 +203,8 @@ Infrastructure
 Les moteurs à vapeur alimentent de grands réseaux. Les trains relient ensuite les usines, les villes et les
 joueurs.
 
-Rien ne t’oblige à tout faire dans cet ordre ni à construire une centrale nucléaire au bout de deux jours. Tu
-peux très bien rester avec de petites roues à eau, ou monter une grosse centrale commune avec d’autres joueurs.
+Rien ne t’oblige à tout faire dans cet ordre ni à construire une centrale nucléaire au bout de deux jours. Tu peux
+très bien rester avec de petites roues à eau, ou monter une grosse centrale commune avec d’autres joueurs.
 
 06
 
@@ -218,8 +216,8 @@ Avant de devenir fou
 
 ### JEI pour savoir quoi fabriquer
 
-JEI (à droite de ton inventaire) permet de trier les recettes. Survole un objet et regarde sa recette ou
-ses usages.
+JEI (à droite de ton inventaire) permet de trier les recettes. Survole un objet et regarde sa recette ou ses
+usages.
 
 **2**
 
@@ -232,11 +230,11 @@ fonctionnement. C’est trop bien fait, ça.
 
 ### Les lunettes quand ça ne marche plus
 
-Regarde les axes et les machines avec les lunettes d’ingénieur pour lire leur vitesse, leur capacité et
-leur consommation.
+Regarde les axes et les machines avec les lunettes d’ingénieur pour lire leur vitesse, leur capacité et leur
+consommation.
 
-**Bon, maintenant on construit un trucLe parcours suivant utilise tout ça pour fabriquer une ferme automatisée de fer et de silex, de zéro, sans
-te demander de deviner la moitié des étapes.
+**Bon, maintenant on construit un trucLe parcours suivant utilise tout ça pour fabriquer une ferme automatisée de fer et de silex, de zéro, sans te
+demander de deviner la moitié des étapes.
 
 Ouvrir « Ma première usine »
 
@@ -301,8 +299,8 @@ Avant de construire
 
 **Wrench**
 
-Oriente et démonte proprement les composants Create. Un clic droit modifie le bloc ; Maj + clic droit
-le récupère.
+Oriente et démonte proprement les composants Create. Un clic droit modifie le bloc ; Maj + clic droit le
+récupère.
 
 **Engineer's Goggles**
 
@@ -420,8 +418,8 @@ Module broyage
 
 ### La Millstone possède une entrée et un inventaire interne
 
-Les objets entrent par le dessus. La rotation arrive par un Shaft placé dessous ou par un Cogwheel contre
-le côté.
+Les objets entrent par le dessus. La rotation arrive par un Shaft placé dessous ou par un Cogwheel contre le
+côté.
 
 **1 Cobblestone** entrée par le dessus
 
@@ -440,8 +438,8 @@ pour récupérer la Gravel.
 
 ### Automatiser la sortie
 
-La Gravel ne tombe pas spontanément. Place un Andesite Funnel sur un côté ou un Hopper en dessous pour
-vider l’inventaire interne vers le Belt suivant.
+La Gravel ne tombe pas spontanément. Place un Andesite Funnel sur un côté ou un Hopper en dessous pour vider
+l’inventaire interne vers le Belt suivant.
 
 **Test obligatoireUne Cobblestone déposée au-dessus devient une Gravel qui peut être extraite sans casser la Millstone.
 
@@ -484,8 +482,8 @@ courant atteigne les objets.
 
 **Indépendantes** les deux chances sont calculées séparément
 
-**Test obligatoireLa Gravel affiche les particules de lavage puis disparaît. Plusieurs essais peuvent être nécessaires avant
-de voir un Iron Nugget.
+**Test obligatoireLa Gravel affiche les particules de lavage puis disparaît. Plusieurs essais peuvent être nécessaires avant de
+voir un Iron Nugget.
 
 08
 
@@ -546,8 +544,8 @@ un même mouvement dans plusieurs directions.
 
 ### Construis de gauche à droite
 
-Ne connecte un nouveau module qu’après son essai manuel. Une panne reste alors limitée à la dernière
-section ajoutée.
+Ne connecte un nouveau module qu’après son essai manuel. Une panne reste alors limitée à la dernière section
+ajoutée.
 
 10
 
@@ -637,8 +635,7 @@ Après le premier lingot
 
 ### Produire des Iron Sheets
 
-Dérive une partie des Iron Ingots vers une seconde Mechanical Press posée au-dessus d’un Belt ou d’un
-Depot.
+Dérive une partie des Iron Ingots vers une seconde Mechanical Press posée au-dessus d’un Belt ou d’un Depot.
 
 ### Mesurer le réseau
 
@@ -650,8 +647,8 @@ Place un Clutch sur le Shaft principal pour arrêter l’usine avec un signal Re
 
 ### Gagner de la place
 
-Le générateur mécanique de Create Cobblestone peut remplacer le couple eau–lave lorsque tu maîtrises déjà
-la chaîne.
+Le générateur mécanique de Create Cobblestone peut remplacer le couple eau–lave lorsque tu maîtrises déjà la
+chaîne.
 
 **Usine terminéeTu sais désormais produire de la rotation, connecter plusieurs machines, transformer une ressource et
 distribuer ses sorties. Tous les futurs projets Create réutilisent ces mêmes principes.

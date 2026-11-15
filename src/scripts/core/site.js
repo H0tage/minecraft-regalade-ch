@@ -142,20 +142,4 @@
     form.reset();
     showToast('Ton nom a été ajouté à la maquette.');
   });
-
-  const rules = document.querySelector('#reglement .rules');
-  const faq = document.querySelector('#statut .faq');
-  const consequence = [...document.querySelectorAll('#statut .faq details')].find((item) =>
-    item.querySelector('summary')?.textContent.includes('contrevi'),
-  );
-
-  if (consequence && rules) {
-    const card = document.createElement('article');
-    const heading = document.createElement('h2');
-    card.className = 'card rule-consequences';
-    heading.textContent = consequence.querySelector('summary').textContent;
-    card.append(heading, ...consequence.querySelectorAll('p'));
-    rules.after(card, faq);
-    consequence.remove();
-  }
 })();

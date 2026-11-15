@@ -1,0 +1,197 @@
+<div class="eco-panel" id="eco-bank-panel" role="tabpanel" aria-labelledby="eco-bank-tab" hidden="">
+  <header class="eco-hero eco-hero-compact">
+    <div>
+      <p class="eco-eyebrow">Des pièces physiques au compte bancaire</p>
+      <h1>Déposer, retirer et payer par carte</h1>
+      <p>
+        Quelques pièces dans un coffre suffisent au début. Lorsque ton atelier sait produire des Precision Mechanisms,
+        tu peux construire une véritable infrastructure bancaire.
+      </p>
+    </div>
+    <div class="eco-hero-coins">
+      <img class="eco-icon" src="assets/economy/bank-terminal.png" alt="Terminal bancaire" /><img
+        class="eco-icon"
+        src="assets/economy/bank-card.png"
+        alt="Carte bancaire"
+      />
+    </div>
+  </header>
+
+  <section class="eco-section" id="eco-bank-model" data-phase="Comprendre">
+    <div class="eco-title">
+      <span>01</span>
+      <div>
+        <p>Trois éléments</p>
+        <h2>Ce que conserve réellement la banque</h2>
+      </div>
+    </div>
+    <div class="eco-flow eco-bank-flow">
+      <article>
+        <img class="eco-icon" src="assets/economy/sprocket.png" alt="" /><b>Pièces physiques</b
+        ><span>Des objets transportables</span>
+      </article>
+      <i>→ dépôt →</i>
+      <article class="eco-result">
+        <img class="eco-icon" src="assets/economy/bank-terminal.png" alt="" /><b>Compte bancaire</b
+        ><span>Une valeur enregistrée</span>
+      </article>
+      <i>← liée à ←</i>
+      <article>
+        <img class="eco-icon" src="assets/economy/bank-card.png" alt="" /><b>Carte bancaire</b
+        ><span>Une clé vers le compte</span>
+      </article>
+    </div>
+    <p class="eco-callout">
+      <strong>À retenir</strong
+      ><span
+        >La carte ne contient pas l’argent. Le solde reste sur le compte même si la carte est perdue ou détruite.</span
+      >
+    </p>
+  </section>
+
+  <section class="eco-section" id="eco-bank-build" data-phase="Construire">
+    <div class="eco-title">
+      <span>02</span>
+      <div>
+        <p>L’infrastructure</p>
+        <h2>Fabriquer le Terminal bancaire</h2>
+      </div>
+    </div>
+    <div class="eco-inline-recipe">
+      <img class="eco-icon" src="assets/economy/bank-terminal.png" alt="Terminal bancaire" /><span
+        >1 Precision Mechanism</span
+      ><i>+</i><span>1 Industrial Iron Block</span><i>+</i><span>1 Electron Tube</span><i>→</i
+      ><strong>1 Terminal bancaire</strong>
+    </div>
+    <div class="eco-action-grid eco-action-grid-3">
+      <article>
+        <b>1</b>
+        <div>
+          <h3>Fabrique et pose le Terminal</h3>
+          <p>La recette est sans forme : les trois composants peuvent être placés n’importe où dans l’établi.</p>
+        </div>
+      </article>
+      <article>
+        <b>2</b>
+        <div>
+          <h3>Ouvre-le</h3>
+          <p>Ton compte personnel est créé automatiquement au premier accès.</p>
+        </div>
+      </article>
+      <article>
+        <b>3</b>
+        <div>
+          <h3>Vérifie le compte</h3>
+          <p>L’interface doit afficher ton nom et ton solde actuel. Aucun formulaire ni commande n’est nécessaire.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="eco-section" id="eco-bank-card" data-phase="Construire">
+    <div class="eco-title">
+      <span>03</span>
+      <div>
+        <p>Le moyen de paiement</p>
+        <h2>Fabriquer et lier une Carte bancaire</h2>
+      </div>
+    </div>
+    <div class="eco-inline-recipe">
+      <img class="eco-icon" src="assets/economy/bank-card.png" alt="Carte bancaire rouge" /><span
+        >1 Precision Mechanism</span
+      ><i>+</i><span>1 Iron Sheet</span><i>+</i><span>1 Dye</span><i>→</i><strong>1 Carte bancaire</strong>
+    </div>
+    <div class="eco-action-grid eco-action-grid-3">
+      <article>
+        <b>1</b>
+        <div>
+          <h3>Choisis sa couleur</h3>
+          <p>La teinture détermine seulement l’apparence de la carte.</p>
+        </div>
+      </article>
+      <article>
+        <b>2</b>
+        <div>
+          <h3>Prends-la en main</h3>
+          <p>Fais un clic droit avec la carte vide pour la lier à ton compte personnel.</p>
+        </div>
+      </article>
+      <article>
+        <b>3</b>
+        <div>
+          <h3>Contrôle l’infobulle</h3>
+          <p>La carte doit passer de <strong>Vide</strong> à <strong>Liée</strong> et afficher le compte associé.</p>
+        </div>
+      </article>
+    </div>
+    <p class="eco-mini-note"><strong>Maj + clic droit</strong> efface l’association de la carte que tu tiens.</p>
+  </section>
+
+  <section class="eco-section" id="eco-bank-deposit" data-phase="Utiliser le compte">
+    <div class="eco-title">
+      <span>04</span>
+      <div>
+        <p>Aller-retour</p>
+        <h2>Déposer puis retirer une pièce</h2>
+      </div>
+    </div>
+    <div class="eco-split-path">
+      <article>
+        <p class="eco-path-label">Déposer</p>
+        <ol>
+          <li>Ouvre le Terminal et note ton solde</li>
+          <li>Place une pièce dans l’emplacement de dépôt à droite</li>
+          <li>Vérifie que la pièce disparaît</li>
+          <li>Contrôle l’augmentation exacte du solde</li>
+        </ol>
+        <p>Maj + clic sur une pièce l’envoie directement vers le dépôt.</p>
+      </article>
+      <article>
+        <p class="eco-path-label">Retirer</p>
+        <ol>
+          <li>Choisis l’une des six dénominations</li>
+          <li>Prends la pièce dans la sortie correspondante</li>
+          <li>Vérifie son apparition dans ton inventaire</li>
+          <li>Contrôle la diminution exacte du solde</li>
+        </ol>
+        <p>Le retrait est possible tant que le compte possède la valeur nécessaire.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="eco-section" id="eco-bank-pay" data-phase="Utiliser le compte">
+    <div class="eco-title">
+      <span>05</span>
+      <div>
+        <p>Paiement</p>
+        <h2>Utiliser sa carte dans une Boutique</h2>
+      </div>
+    </div>
+    <div class="eco-flow eco-payment-flow">
+      <article><img class="eco-icon" src="assets/economy/bank-card.png" alt="" /><b>Carte liée en main</b></article>
+      <i>+</i>
+      <article>
+        <img class="eco-icon" src="assets/economy/vendor.png" alt="" /><b>Clic droit sur la Boutique</b>
+      </article>
+      <i>→</i>
+      <article class="eco-result"><b>Objet reçu</b><span>Solde débité automatiquement</span></article>
+    </div>
+    <div class="eco-card-grid eco-card-grid-2">
+      <article>
+        <h3>Sans carte</h3>
+        <p>La Boutique prélève les pièces compatibles que tu transportes.</p>
+      </article>
+      <article>
+        <h3>Si tu perds ta carte</h3>
+        <p>
+          L’argent reste sur le compte et un joueur non autorisé ne peut pas utiliser ta carte personnelle. Tu peux
+          simplement en fabriquer et en lier une nouvelle.
+        </p>
+      </article>
+    </div>
+    <p class="eco-mini-note">
+      Les Authorized Cards permettent de déléguer des accès à des sous-comptes. C’est une fonction avancée,
+      volontairement laissée hors de ce parcours.
+    </p>
+  </section>
+</div>

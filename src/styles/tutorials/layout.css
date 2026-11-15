@@ -525,19 +525,17 @@
 
   .tutorial-library {
     order: 1;
+    padding: 10px 0 0;
+    border: 0;
   }
 
   .tutorial-chapters {
     order: 2;
+    margin: 10px 0 -28px;
   }
 
   .tutorial-reader {
     order: 3;
-  }
-
-  .tutorial-library {
-    padding: 10px 0 0;
-    border: 0;
   }
 
   .tutorial-library-sticky {
@@ -577,10 +575,6 @@
 
   #tutoriels .tutorial-library.open .tutorial-tabs {
     display: grid !important;
-  }
-
-  .tutorial-chapters {
-    margin: 10px 0 -28px;
   }
 
   #tutoriels .tutorial-reader .tutorial-content {

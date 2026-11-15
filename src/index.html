@@ -30,10 +30,16 @@
     <div class="topbar"></div>
     <header class="shell">
       <a class="brand" href="#accueil"><img src="assets/hotage-logo.png" alt="Logo Hotage" />Minecraft</a
-      ><button class="menu" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-navigation">
+      ><button
+        class="menu"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
         ☰
       </button>
-      <nav id="main-navigation">
+      <nav id="main-navigation" aria-label="Navigation principale">
         <a href="#accueil">Accueil</a><a href="#installation">Installation et connexion</a
         ><a href="#tutoriels">Tutoriels</a><a href="#mods">Mods</a><a href="#reglement">Règlement</a
         ><a href="#statut">État</a><a href="#inscription">Inscription</a>
@@ -55,6 +61,10 @@
       </div>
     </footer>
     <div id="toast" class="toast" role="status"></div>
+    <div class="image-lightbox" role="dialog" aria-modal="true" aria-label="Aperçu de l’image" aria-hidden="true">
+      <button class="image-lightbox-close" type="button" aria-label="Fermer l’image">×</button>
+      <img class="image-lightbox-image" alt="" />
+    </div>
     <script src="js/site.js"></script>
   </body>
 </html>

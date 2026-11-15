@@ -7,7 +7,7 @@
     "declaration-property-value-no-unknown": null,
     "font-family-name-quotes": null,
     "no-descending-specificity": null,
-    "no-duplicate-selectors": null,
+    "no-duplicate-selectors": true,
     "selector-class-pattern": null,
     "selector-id-pattern": null,
     "value-keyword-case": null

@@ -78,7 +78,7 @@
 
 .sgx-components {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
 }
 
@@ -155,16 +155,12 @@
 }
 
 .sgx-metrics b {
-  font-size: 1.25rem;
+  font-size: 1.65rem;
 }
 
 .sgx-metrics span {
   font-size: 0.78rem;
   color: #5d7079;
-}
-
-.sgx-components {
-  grid-template-columns: repeat(2, 1fr);
 }
 
 .sgx-components .sgx-item:first-child {
@@ -263,10 +259,6 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 0.65rem;
   margin: 1rem 0;
-}
-
-.sgx-metrics b {
-  font-size: 1.65rem;
 }
 
 .sgx-table-wrap {

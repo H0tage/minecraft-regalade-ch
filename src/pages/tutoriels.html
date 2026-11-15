@@ -1,84 +1,117 @@
 <section id="tutoriels" class="view">
-  <div
-    class="tutorial-tabs"
-    role="tablist"
-    aria-label="Choisir un tutoriel"
-    data-tab-storage="regalade.tutorial.active"
-  >
-    <button
-      class="tutorial-tab active"
-      id="tutorial-economy-tab"
-      type="button"
-      role="tab"
-      aria-selected="true"
-      aria-controls="tutorial-economy"
-    >
-      Argent et échanges
-    </button>
-    <button
-      class="tutorial-tab"
-      id="tutorial-create-first-factory-tab"
-      type="button"
-      role="tab"
-      aria-selected="false"
-      aria-controls="tutorial-create-first-factory"
-      tabindex="-1"
-    >
-      Create
-    </button>
-    <button
-      class="tutorial-tab"
-      id="tutorial-big-cannons-tab"
-      type="button"
-      role="tab"
-      aria-selected="false"
-      aria-controls="tutorial-big-cannons"
-      tabindex="-1"
-    >
-      Big Cannons
-    </button>
-    <button
-      class="tutorial-tab"
-      id="tutorial-stargates-tab"
-      type="button"
-      role="tab"
-      aria-selected="false"
-      aria-controls="tutorial-stargates"
-    >
-      Porte des étoiles
-    </button>
-  </div>
+  <header class="tutorial-masthead">
+    <div class="tutorial-masthead-cue tutorial-masthead-cue-left">
+      <strong>Choix du tutoriel</strong><i aria-hidden="true">↓</i>
+    </div>
+    <div class="tutorial-masthead-cue tutorial-masthead-cue-content">
+      <strong>Contenu du tuto</strong><i aria-hidden="true">↓</i>
+    </div>
+    <div class="tutorial-masthead-cue tutorial-masthead-cue-right">
+      <strong>Navigation dans le tuto</strong><i aria-hidden="true">↓</i>
+    </div>
+  </header>
 
-  <div class="tutorial-content">
-    <section class="tutorial-panel active" id="tutorial-economy" role="tabpanel" aria-labelledby="tutorial-economy-tab">
-      <!-- @include ../content/tutorials/economy.html -->
-    </section>
-    <section
-      class="tutorial-panel"
-      id="tutorial-create-first-factory"
-      role="tabpanel"
-      aria-labelledby="tutorial-create-first-factory-tab"
-      hidden
-    >
-      <!-- @include ../content/tutorials/create.html -->
-    </section>
-    <section
-      class="tutorial-panel"
-      id="tutorial-big-cannons"
-      role="tabpanel"
-      aria-labelledby="tutorial-big-cannons-tab"
-      hidden
-    >
-      <!-- @include ../content/tutorials/big-cannons.html -->
-    </section>
-    <section
-      class="tutorial-panel"
-      id="tutorial-stargates"
-      role="tabpanel"
-      aria-labelledby="tutorial-stargates-tab"
-      hidden
-    >
-      <!-- @include ../content/tutorials/stargates.html -->
-    </section>
+  <div class="tutorial-workspace">
+    <aside class="tutorial-library" aria-label="Choisir un tutoriel">
+      <div class="tutorial-library-sticky">
+        <button class="tutorial-library-toggle" type="button" aria-expanded="false"></button>
+        <div
+          class="tutorial-tabs"
+          role="tablist"
+          aria-label="Choisir un tutoriel"
+          data-tab-storage="regalade.tutorial.active"
+        >
+          <button
+            class="tutorial-tab active"
+            id="tutorial-economy-tab"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="tutorial-economy"
+          >
+            Argent et échanges
+          </button>
+          <button
+            class="tutorial-tab"
+            id="tutorial-create-first-factory-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-create-first-factory"
+            tabindex="-1"
+          >
+            Create
+          </button>
+          <button
+            class="tutorial-tab"
+            id="tutorial-big-cannons-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-big-cannons"
+            tabindex="-1"
+          >
+            Big Cannons
+          </button>
+          <button
+            class="tutorial-tab"
+            id="tutorial-stargates-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-stargates"
+          >
+            Porte des étoiles
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="tutorial-reader">
+      <div class="tutorial-content">
+        <section
+          class="tutorial-panel active"
+          id="tutorial-economy"
+          role="tabpanel"
+          aria-labelledby="tutorial-economy-tab"
+        >
+          <!-- @include ../content/tutorials/economy.html -->
+        </section>
+        <section
+          class="tutorial-panel"
+          id="tutorial-create-first-factory"
+          role="tabpanel"
+          aria-labelledby="tutorial-create-first-factory-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/create.html -->
+        </section>
+        <section
+          class="tutorial-panel"
+          id="tutorial-big-cannons"
+          role="tabpanel"
+          aria-labelledby="tutorial-big-cannons-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/big-cannons.html -->
+        </section>
+        <section
+          class="tutorial-panel"
+          id="tutorial-stargates"
+          role="tabpanel"
+          aria-labelledby="tutorial-stargates-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/stargates.html -->
+        </section>
+      </div>
+    </div>
+
+    <aside class="tutorial-chapters" aria-label="Chapitres du tutoriel">
+      <div class="tutorial-chapters-sticky">
+        <button class="tutorial-chapter-toggle" type="button" aria-expanded="false">Afficher les chapitres</button>
+        <nav class="tutorial-chapter-list" aria-label="Dans ce tutoriel"></nav>
+      </div>
+    </aside>
   </div>
 </section>

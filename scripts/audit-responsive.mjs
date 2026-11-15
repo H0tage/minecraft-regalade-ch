@@ -118,6 +118,16 @@ for (const width of widths) {
     if ((await page.locator('.menu').getAttribute('aria-expanded')) !== 'false')
       failures.push('Le menu mobile ne se ferme pas avec Échap.');
 
+    const firstGalleryImage = page.locator('.gallery-trigger').first();
+    await firstGalleryImage.click();
+    if ((await page.locator('.image-lightbox').getAttribute('aria-hidden')) !== 'false') {
+      failures.push('La galerie ne signale pas correctement l’ouverture de l’image.');
+    }
+    await page.keyboard.press('Escape');
+    if ((await page.locator('.image-lightbox').getAttribute('aria-hidden')) !== 'true') {
+      failures.push('La galerie ne se ferme pas avec Échap.');
+    }
+
     await page.goto(`${baseUrl}?qa=${Date.now()}#inscription`, { waitUntil: 'networkidle' });
     await page.locator('#pseudo').fill('QaRegalade');
     await page.locator('#source').fill('<img src=x onerror=alert(1)>');

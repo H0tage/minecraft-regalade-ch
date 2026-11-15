@@ -63,8 +63,8 @@ L’outil de départ
 
 ## Fabriquer un Selling Bin
 
-Le Selling Bin rachète certains objets et crée les pièces correspondantes. Ce n’est pas une boutique destinée
-aux autres joueurs.
+Le Selling Bin rachète certains objets et crée les pièces correspondantes. Ce n’est pas une boutique destinée aux
+autres joueurs.
 
 [Illustration : Selling Bin]
 
@@ -115,8 +115,7 @@ Maintiens `Maj` en survolant l’objet pour afficher sa valeur.
 
 ### Choisis la monnaie
 
-Sélectionne une pièce ou **Highest Possible** pour obtenir la meilleure dénomination
-possible.
+Sélectionne une pièce ou **Highest Possible** pour obtenir la meilleure dénomination possible.
 
 **5**
 
@@ -130,8 +129,8 @@ L’objet est consommé et sa valeur est convertie en pièces.
 
 Récupère le paiement. Un éventuel reste de valeur demeure dans le bac et n’est pas perdu.
 
-**Plus tard seulement**Sell All** vend tout le contenu compatible. **Auto-Sell** vend automatiquement ce qui entre dans le
-bac : ne l’active qu’après avoir vérifié ton installation.
+**Plus tard seulement**Sell All** vend tout le contenu compatible. **Auto-Sell** vend automatiquement ce qui entre dans le bac
+: ne l’active qu’après avoir vérifié ton installation.
 
 04
 
@@ -139,8 +138,8 @@ Six dénominations
 
 ## Lire la valeur des pièces
 
-Toutes les pièces représentent la même monnaie. Une grosse pièce évite simplement de transporter une pile
-entière de petites pièces.
+Toutes les pièces représentent la même monnaie. Une grosse pièce évite simplement de transporter une pile entière
+de petites pièces.
 
 [Illustration : Spur]
 **Spur** 1
@@ -170,8 +169,8 @@ entière de petites pièces.
 [Illustration : Sun]
 **Sun** 4 096
 
-**À ce stadeTu sais faire apparaître tes premières pièces, vérifier les objets vendables et comprendre la valeur reçue.
-La banque n’est pas nécessaire pour commencer.
+**À ce stadeTu sais faire apparaître tes premières pièces, vérifier les objets vendables et comprendre la valeur reçue. La
+banque n’est pas nécessaire pour commencer.
 
 05
 
@@ -182,8 +181,7 @@ Sans obligation
 ### En avançant normalement
 
 Certains progrès Vanilla et Create donnent automatiquement des pièces : **1 Sprocket** pour un
-progrès ordinaire, **1 Cog** pour un objectif important et **1 Crown** pour un
-défi.
+progrès ordinaire, **1 Cog** pour un objectif important et **1 Crown** pour un défi.
 
 ### En consultant les missions
 
@@ -222,8 +220,7 @@ Trois éléments
 
 **Carte bancaireUne clé vers le compte
 
-**À retenirLa carte ne contient pas l’argent. Le solde reste sur le compte même si la carte est perdue ou
-détruite.
+**À retenirLa carte ne contient pas l’argent. Le solde reste sur le compte même si la carte est perdue ou détruite.
 
 02
 
@@ -453,8 +450,8 @@ L’acheteur paie avec sa carte tenue en main ou avec ses pièces.
 
 L’objet doit arriver chez l’acheteur, le stock baisser et le vendeur recevoir le paiement.
 
-En étant accroupi pendant le clic droit, l’acheteur peut effectuer plusieurs transactions, jusqu’à la limite
-d’une pile et des ressources disponibles.
+En étant accroupi pendant le clic droit, l’acheteur peut effectuer plusieurs transactions, jusqu’à la limite d’une
+pile et des ressources disponibles.
 
 05
 
@@ -481,8 +478,8 @@ Optionnel
 
 ## Faire racheter des objets par la Boutique
 
-Le mode **Buy / Achat** inverse la transaction : la Boutique reçoit l’objet tenu par le joueur et
-lui verse le prix configuré.
+Le mode **Buy / Achat** inverse la transaction : la Boutique reçoit l’objet tenu par le joueur et lui
+verse le prix configuré.
 
 **Objet tenu par le joueur**
 

@@ -12,6 +12,7 @@
           <label for="pseudo">Pseudo Minecraft</label
           ><input
             id="pseudo"
+            type="text"
             required
             maxlength="16"
             pattern="[A-Za-z0-9_]{3,16}"
@@ -22,7 +23,14 @@
         </div>
         <div class="field">
           <label for="source">Comment as-tu connu le projet ?</label
-          ><input id="source" required maxlength="120" placeholder="Ex. Discord, un ami, Twitch…" autocomplete="off" />
+          ><input
+            id="source"
+            type="text"
+            required
+            maxlength="120"
+            placeholder="Ex. Discord, un ami, Twitch…"
+            autocomplete="off"
+          />
         </div>
         <button class="button cyan" type="submit">Ajouter mon nom à la liste</button>
         <p class="hint">
@@ -37,9 +45,9 @@
         <table class="members">
           <thead>
             <tr>
-              <th>Pseudo</th>
-              <th>Découvert via</th>
-              <th>Inscription</th>
+              <th scope="col">Pseudo</th>
+              <th scope="col">Découvert via</th>
+              <th scope="col">Inscription</th>
             </tr>
           </thead>
           <tbody id="member-list">

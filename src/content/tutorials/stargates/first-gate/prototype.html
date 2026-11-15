@@ -1,0 +1,347 @@
+<section class="sg-step sgu-step" id="sgu-step-03" data-phase="Construire le prototype">
+  <div class="sgu-step-title">
+    <span aria-hidden="true">03</span>
+    <div>
+      <p class="sgx-eyebrow">Atelier minimal</p>
+      <h2>Préparer les postes de la première fournée</h2>
+    </div>
+  </div>
+
+  <div class="sgu-workshop-grid">
+    <article>
+      <h3>Préparation</h3>
+      <ul>
+        <li>Millstone ou Crushing Wheels</li>
+        <li>cuve d’eau pour produire la potion</li>
+        <li>Mechanical Mixer + Basin</li>
+        <li>Blaze Burner chauffé puis surchauffé</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Traitement</h3>
+      <ul>
+        <li>Mechanical Press et Mechanical Saw</li>
+        <li>3 Encased Fans minimum</li>
+        <li>eau, feu ou lave, neige poudreuse</li>
+        <li>tête de dragon conservée pour plus tard</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Fluides</h3>
+      <ul>
+        <li>1 petite cuve pour la potion</li>
+        <li>1 cuve séparée pour la lave</li>
+        <li>tuyaux et Mechanical Pumps</li>
+        <li>Spout pour les recettes de remplissage</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Logistique</h3>
+      <ul>
+        <li>tapis ou Depots entre les postes</li>
+        <li>6 stockages étiquetés</li>
+        <li>filtres pour les sorties finales</li>
+        <li>lunettes Create pour contrôler les recettes</li>
+      </ul>
+    </article>
+  </div>
+  <div class="sgu-blueprint" aria-label="Organisation recommandée du prototype">
+    <div class="sgu-blueprint-title">
+      <b>Disposition du prototype</b><span>Place un stockage à la sortie de chaque branche</span>
+    </div>
+    <div class="sgu-lane">
+      <span class="input">Potion + Amethyst Powder + or + zinc</span><i>→</i
+      ><span class="machine">Mixer / Basin / Heated Blaze Burner</span><i>→</i
+      ><span class="buffer">Crystalline Matrices</span>
+    </div>
+    <div class="sgu-lane">
+      <span class="input">Powdered Obsidian + Cinder Flour + lave</span><i>→</i
+      ><span class="machine">Press / Basin / Heated Blaze Burner</span><i>→</i
+      ><span class="buffer">Refractory Briquettes</span>
+    </div>
+    <div class="sgu-lane">
+      <span class="input">Blaze Powder + Redstone Dust + Glowstone Dust</span><i>→</i
+      ><span class="machine">Mixer / Basin / sans chaleur</span><i>→</i><span class="buffer">Catalytic Flux</span>
+    </div>
+    <div class="sgu-prototype-convergence">
+      <div class="sgu-convergence-inputs">
+        <span><b>4 Crystalline Matrices</b><small>stock branche 1</small></span>
+        <span><b>4 Refractory Briquettes</b><small>stock branche 2</small></span>
+        <span><b>4 Catalytic Flux</b><small>stock branche 3</small></span>
+        <span class="fluid"><b>250 mB Lava</b><small>cuve de lave</small></span>
+      </div>
+      <div class="sgu-convergence-rail" aria-hidden="true"><i></i><span>↓</span></div>
+      <div class="sgu-synthesis-flow">
+        <div class="sgu-synthesis-machine">
+          <b>Mechanical Mixer</b><span>Basin</span><strong>Superheated Blaze Burner</strong>
+        </div>
+        <i>→</i>
+        <div class="sgu-synthesis-output">
+          <img src="assets/stargate/unstable-slag.png" alt="Unstable Naquadah Slag" loading="lazy" /><b
+            >4 Unstable Naquadah Slag</b
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sg-step sgu-step" id="sgu-step-04" data-phase="Construire le prototype">
+  <div class="sgu-step-title">
+    <span aria-hidden="true">04</span>
+    <div>
+      <p class="sgx-eyebrow">Branche 1</p>
+      <h2>Produire 4 Crystalline Matrices</h2>
+    </div>
+  </div>
+
+  <div class="sgu-station-head">
+    <img src="assets/stargate/crystalline-matrix.png" alt="Crystalline Matrix" loading="lazy" />
+    <div>
+      <b>Entrée d’une fournée</b><span>16 éclats d’améthyste · 4 or · 4 zinc · 1 000 mB de potion étrange</span>
+    </div>
+    <strong>4 Crystalline Matrices</strong>
+  </div>
+  <div
+    class="sgu-matrix-production"
+    role="img"
+    aria-label="Fabrication de l’Awkward Potion puis des Crystalline Matrices"
+  >
+    <article class="sgu-production-card potion">
+      <div class="sgu-production-heading">
+        <span>1</span>
+        <div><b>Fabriquer l’Awkward Potion</b><small>Une cuve séparée pour le liquide</small></div>
+      </div>
+      <div class="sgu-production-inputs"><span>1 000 mB Water</span><i>+</i><span>1 Nether Wart</span></div>
+      <div class="sgu-production-arrow">↓</div>
+      <div class="sgu-machine-stack"><b>Mechanical Mixer</b><span>Basin</span><strong>Heated Blaze Burner</strong></div>
+      <div class="sgu-production-arrow">↓</div>
+      <div class="sgu-liquid-output"><b>1 000 mB Awkward Potion</b><small>Transférer vers la seconde cuve</small></div>
+    </article>
+    <div class="sgu-transfer-flow"><span>Mechanical Pump</span><i>→</i><small>1 000 mB</small></div>
+    <article class="sgu-production-card matrix">
+      <div class="sgu-production-heading">
+        <span>2</span>
+        <div><b>Former les Crystalline Matrices</b><small>La potion devient un ingrédient</small></div>
+      </div>
+      <div class="sgu-production-inputs four">
+        <span>16 Amethyst Powder</span><i>+</i><span>4 Gold Ingots</span><i>+</i><span>4 Zinc Ingots</span><i>+</i
+        ><span>1 000 mB Awkward Potion</span>
+      </div>
+      <div class="sgu-production-arrow">↓</div>
+      <div class="sgu-machine-stack"><b>Mechanical Mixer</b><span>Basin</span><strong>Heated Blaze Burner</strong></div>
+      <div class="sgu-production-arrow">↓</div>
+      <div class="sgu-matrix-output">
+        <img src="assets/stargate/crystalline-matrix.png" alt="Crystalline Matrix" loading="lazy" /><b
+          >4 Crystalline Matrices</b
+        >
+      </div>
+    </article>
+  </div>
+  <div class="sgu-two-column">
+    <article>
+      <h3>Préparer la potion avec Create</h3>
+      <ol class="sgu-plain-steps">
+        <li>Injecte 1 000 mB d’eau dans un Basin chauffé.</li>
+        <li>Ajoute 1 Nether Wart et mélange avec le Mechanical Mixer.</li>
+        <li>Transfère la potion dans le Basin des Crystalline Matrices.</li>
+      </ol>
+    </article>
+    <article>
+      <h3>Mélanger</h3>
+      <ol class="sgu-plain-steps">
+        <li>Broie les 16 éclats en 16 poudres d’améthyste.</li>
+        <li>Place le Basin au-dessus d’un Blaze Burner chauffé.</li>
+        <li>Ajoute les poudres, l’or et le zinc.</li>
+        <li>Injecte 1 000 mB de potion puis démarre le Mixer.</li>
+      </ol>
+    </article>
+  </div>
+</section>
+
+<section class="sg-step sgu-step" id="sgu-step-05" data-phase="Construire le prototype">
+  <div class="sgu-step-title">
+    <span aria-hidden="true">05</span>
+    <div>
+      <p class="sgx-eyebrow">Branches 2 et 3</p>
+      <h2>Produire 4 Refractory Briquettes et 8 Catalytic Flux</h2>
+    </div>
+  </div>
+
+  <div class="sgu-branch-grid">
+    <article>
+      <img src="assets/stargate/refractory-briquette.png" alt="Refractory Briquette" loading="lazy" />
+      <h3>4 Refractory Briquettes</h3>
+      <div
+        class="sgu-machine-sketch"
+        role="img"
+        aria-label="Mechanical Press au-dessus d’un Basin chauffé par un Blaze Burner"
+      >
+        <strong class="sgu-sketch-block machine">Mechanical Press</strong
+        ><span class="sgu-stack-relation">au-dessus du</span>
+        <div class="sgu-sketch-block basin">
+          <b>Basin</b>
+          <div class="sgu-sketch-inputs">
+            <span>8 Powdered Obsidian</span><span>8 Cinder Flour</span><span>250 mB Lava</span>
+          </div>
+        </div>
+        <span class="sgu-stack-relation">chauffé par</span
+        ><strong class="sgu-sketch-block heat">Heated Blaze Burner</strong>
+        <div class="sgu-sketch-output">Produit : 4 Refractory Briquettes</div>
+      </div>
+      <ol>
+        <li>Broie 8 obsidiennes en Powdered Obsidian.</li>
+        <li>Broie 8 Netherracks dans les Crushing Wheels pour obtenir au moins 8 Cinder Flour.</li>
+        <li>Place les 16 poudres dans le Basin.</li>
+        <li>Injecte 250 mB de lave et compacte.</li>
+      </ol>
+    </article>
+    <article>
+      <img src="assets/stargate/catalytic-flux.png" alt="Catalytic Flux" loading="lazy" />
+      <h3>8 Catalytic Flux</h3>
+      <div
+        class="sgu-machine-sketch"
+        role="img"
+        aria-label="Mechanical Mixer au-dessus d’un Basin sans source de chaleur"
+      >
+        <strong class="sgu-sketch-block machine">Mechanical Mixer</strong
+        ><span class="sgu-stack-relation">au-dessus du</span>
+        <div class="sgu-sketch-block basin">
+          <b>Basin</b>
+          <div class="sgu-sketch-inputs">
+            <span>8 Blaze Powder</span><span>8 Redstone Dust</span><span>4 Glowstone Dust</span>
+          </div>
+        </div>
+        <span class="sgu-stack-relation">avec</span
+        ><strong class="sgu-sketch-block no-heat">Aucune source de chaleur</strong>
+        <div class="sgu-sketch-output">Produit : 8 Catalytic Flux</div>
+      </div>
+      <ol>
+        <li>Place 8 Blaze Powder dans un second Basin.</li>
+        <li>Ajoute 8 Redstone Dust et 4 Glowstone Dust.</li>
+        <li>Mélange avec le Mechanical Mixer.</li>
+        <li>Réserve 4 Catalytic Flux pour la métallurgie.</li>
+      </ol>
+    </article>
+  </div>
+  <div class="sgu-batch-logic">
+    <div><b>4 Catalytic Flux</b><span>partent maintenant dans la synthèse</span></div>
+    <i>+</i>
+    <div><b>4 Catalytic Flux</b><span>sont réservés au futur billet</span></div>
+    <i>=</i><strong>8 Catalytic Flux utilisés sans perte</strong>
+  </div>
+</section>
+
+<section class="sg-step sgu-step" id="sgu-step-06" data-phase="Construire le prototype">
+  <div class="sgu-step-title">
+    <span aria-hidden="true">06</span>
+    <div>
+      <p class="sgx-eyebrow">Convergence</p>
+      <h2>Produire 4 Unstable Naquadah Slag</h2>
+    </div>
+  </div>
+
+  <div class="sgu-process">
+    <b>4 Crystalline Matrices</b><i>+</i><b>4 Refractory Briquettes</b><i>+</i><b>4 Catalytic Flux</b><i>+</i
+    ><b>250 mB Lava</b><i>→</i><strong>Mechanical Mixer surchauffé</strong><i>→</i><b>4 Unstable Naquadah Slag</b>
+  </div>
+  <div class="sgu-side-diagram">
+    <span class="machine">Mechanical Mixer</span><span class="sgu-stack-relation">au-dessus du</span
+    ><span class="machine">Basin</span><span class="sgu-stack-relation">chauffé par</span
+    ><span class="catalyst">Superheated Blaze Burner</span>
+  </div>
+  <ol class="sgu-actions" role="list">
+    <li role="listitem">
+      <b>Place le Basin au-dessus d’un Blaze Burner surchauffé.</b
+      ><span>Le niveau chauffé ordinaire ne suffit pas.</span>
+    </li>
+    <li role="listitem">
+      <b>Insère les quatre ingrédients et la lave.</b
+      ><span>Vérifie dans les lunettes Create que la recette est reconnue.</span>
+    </li>
+    <li role="listitem"><b>Laisse travailler environ 60 secondes.</b></li>
+  </ol>
+</section>
+
+<section class="sg-step sgu-step" id="sgu-step-07" data-phase="Construire le prototype">
+  <div class="sgu-step-title">
+    <span aria-hidden="true">07</span>
+    <div>
+      <p class="sgx-eyebrow">Ligne de raffinage</p>
+      <h2>Construire la ligne de raffinage</h2>
+    </div>
+  </div>
+
+  <div class="sgu-refining-line">
+    <article>
+      <img src="assets/stargate/unstable-slag.png" alt="Unstable Naquadah Slag" loading="lazy" /><b>Mechanical Press</b
+      ><span>4 Unstable Naquadah Slag → 4 Raw Naquadah Briquettes</span>
+    </article>
+    <i>→</i>
+    <article>
+      <img src="assets/stargate/raw-briquette.png" alt="Raw Naquadah Briquette" loading="lazy" /><b>Bulk Blasting</b
+      ><span>souffle à travers feu ou lave → 4 Calcined Naquadah</span>
+    </article>
+    <i>→</i>
+    <article>
+      <img src="assets/stargate/calcined-naquadah.png" alt="Calcined Naquadah" loading="lazy" /><b>Crushing Wheels</b
+      ><span>4 unités → 8 Impure Naquadah Dust</span>
+    </article>
+    <i>→</i>
+    <article>
+      <img src="assets/stargate/impure-powder.png" alt="Impure Naquadah Dust" loading="lazy" /><b>Bulk Washing</b
+      ><span>souffle à travers eau → 8 Purified Naquadah Granules</span>
+    </article>
+    <i>→</i>
+    <article>
+      <img src="assets/stargate/purified-granules.png" alt="Purified Naquadah Granule" loading="lazy" /><b
+        >Bulk Freezing</b
+      ><span>souffle à travers neige poudreuse → 8 Cryostabilized Naquadah Crystals</span>
+    </article>
+  </div>
+  <div class="sgu-bulk-lessons single">
+    <article>
+      <h3>Vue latérale d’un procédé Bulk</h3>
+      <div class="sgu-bulk-diagram">
+        <span class="fan">Encased Fan</span><i>»»</i><span class="catalyst">Feu, eau ou neige</span><i>»»</i
+        ><span class="belt">Objet sur Mechanical Belt ou Depot</span>
+      </div>
+      <p>Le souffle traverse le catalyseur puis atteint l’objet. L’objet n’est jamais jeté dans le fluide.</p>
+    </article>
+  </div>
+</section>
+
+<section class="sg-step sgu-step" id="sgu-step-08" data-phase="Valider le prototype">
+  <div class="sgu-step-title">
+    <span aria-hidden="true">08</span>
+    <div>
+      <p class="sgx-eyebrow">Premier cycle complet</p>
+      <h2>Valider une première fournée</h2>
+    </div>
+  </div>
+
+  <p class="sgu-copy">
+    Exécute maintenant la chaîne entière avec les quantités d’une seule fournée. Déplace les objets manuellement entre
+    les stocks : le but est de valider la recette, pas encore la vitesse.
+  </p>
+  <div class="sgu-batch-ledger">
+    <div>
+      <b>Entrée</b
+      ><span
+        >16 améthystes · 4 or · 4 zinc · 8 obsidiennes · 8 Netherracks · 8 Blaze Powder · 8 redstones · 4 glowstones · 1
+        000 mB potion · 500 mB lave</span
+      >
+    </div>
+    <i>→</i>
+    <div><b>Sortie immédiate</b><span>8 Cryostabilized Naquadah Crystals</span></div>
+    <i>+</i>
+    <div><b>Réserve</b><span>4 Catalytic Flux pour la métallurgie</span></div>
+  </div>
+  <p class="sgu-checkpoint">
+    <b>Prototype validé :</b
+    ><span
+      >8 Cryostabilized Naquadah Crystals et 4 Catalytic Flux sont stockés, sans objet intermédiaire bloqué dans une
+      machine.</span
+    >
+  </p>
+</section>

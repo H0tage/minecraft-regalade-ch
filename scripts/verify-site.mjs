@@ -47,6 +47,46 @@ for (const file of sourceFiles) {
   }
 }
 
+const modsPath = join(sourceRoot, 'data', 'mods.json');
+if (!existsSync(modsPath)) {
+  fail('La source src/data/mods.json est absente.');
+} else {
+  try {
+    const mods = JSON.parse(readFileSync(modsPath, 'utf8'));
+    const requiredFields = ['name', 'category', 'version', 'status', 'description', 'url', 'icon'];
+    if (!Array.isArray(mods)) {
+      fail('La liste des mods doit être un tableau JSON.');
+    } else {
+      const names = new Set();
+      mods.forEach((mod, index) => {
+        const label = `Mod ${index + 1}`;
+        if (!mod || typeof mod !== 'object' || Array.isArray(mod)) {
+          fail(`${label} n’est pas un objet valide.`);
+          return;
+        }
+        requiredFields.forEach((field) => {
+          if (typeof mod[field] !== 'string' || !mod[field].trim()) fail(`${label} : champ ${field} absent ou vide.`);
+        });
+        const normalizedName = typeof mod.name === 'string' ? mod.name.trim().toLocaleLowerCase('fr') : '';
+        if (normalizedName && names.has(normalizedName)) fail(`Mod dupliqué : ${mod.name}.`);
+        names.add(normalizedName);
+        for (const field of ['url', 'icon']) {
+          if (typeof mod[field] !== 'string') continue;
+          try {
+            const url = new URL(mod[field]);
+            if (!['http:', 'https:'].includes(url.protocol)) fail(`${label} : protocole invalide pour ${field}.`);
+          } catch {
+            fail(`${label} : URL invalide dans ${field}.`);
+          }
+        }
+      });
+      notices.push(`${mods.length} mods structurés contrôlés.`);
+    }
+  } catch (error) {
+    fail(`JSON des mods invalide : ${error.message}`);
+  }
+}
+
 const sourceScripts = sourceFiles.filter((file) => extname(file) === '.js');
 for (const script of sourceScripts) {
   const result = spawnSync(process.execPath, ['--check', script], { encoding: 'utf8' });

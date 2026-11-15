@@ -1,0 +1,214 @@
+<section class="sg-step sgu-step" id="sgu-step-01" data-phase="Préparer le projet">
+  <div class="sgu-step-title">
+    <span aria-hidden="true">01</span>
+    <div>
+      <p class="sgx-eyebrow">Le résultat final</p>
+      <h2>Préparer l’installation complète</h2>
+    </div>
+  </div>
+
+  <p class="sgu-copy">
+    L’installation comprend une <strong>Classic Stargate formée</strong>, un <strong>DHD</strong>, une
+    <strong>Basic Interface</strong> et une alimentation FE externe.
+  </p>
+  <div class="sgu-target-grid">
+    <article>
+      <b>Structure</b
+      ><span>1 Classic Stargate Base Block + 14 Classic Stargate Ring Blocks + 9 Classic Stargate Chevron Blocks.</span>
+    </article>
+    <article><b>Commande</b><span>1 DHD placé à portée de la porte.</span></article>
+    <article><b>Énergie</b><span>1 Basic Interface reliée aux accumulateurs ou à la centrale.</span></article>
+    <article><b>Destination</b><span>Une adresse valide appartenant à une autre porte.</span></article>
+  </div>
+  <div class="sgu-readiness">
+    <h3>Prérequis</h3>
+    <div><span>Nether</span><span>Blaze Burner, Blaze Powder, quartz et Cinder Flour</span></div>
+    <div><span>End</span><span>Une tête de dragon pour l’activation finale du Naquadah</span></div>
+    <div><span>Create</span><span>Brass, Precision Mechanisms, Mechanical Crafters et assemblage séquencé</span></div>
+    <div>
+      <span>Électricité</span
+      ><span>Réseau FE pour les machines et au moins 6,4 MFE disponibles pour un appel complet</span>
+    </div>
+  </div>
+</section>
+
+<section class="sg-step sgu-step" id="sgu-step-02" data-phase="Préparer le projet">
+  <div class="sgu-step-title">
+    <span aria-hidden="true">02</span>
+    <div>
+      <p class="sgx-eyebrow">Carte de l’usine</p>
+      <h2>Comprendre la chaîne complète</h2>
+    </div>
+  </div>
+
+  <div class="sgu-factory-map" role="img" aria-label="Carte de production de la porte des étoiles">
+    <section class="sgu-map-stage">
+      <div class="sgu-map-stage-title">
+        <span>1</span>
+        <div><b>Produire les trois précurseurs</b><small>Quantités pour une fournée</small></div>
+      </div>
+      <div class="sgu-map-precursors">
+        <article>
+          <div class="sgu-map-inputs">
+            <span>16 Amethyst Powder</span><span>4 Gold Ingots</span><span>4 Zinc Ingots</span
+            ><span>1 000 mB Awkward Potion</span>
+          </div>
+          <div class="sgu-map-machine">Mechanical Mixer · Basin · Heated Blaze Burner</div>
+          <i>↓</i>
+          <div class="sgu-map-material">
+            <img src="assets/stargate/crystalline-matrix.png" alt="Crystalline Matrix" loading="lazy" /><b
+              >4 Crystalline Matrices</b
+            >
+          </div>
+        </article>
+        <article>
+          <div class="sgu-map-inputs">
+            <span>8 Powdered Obsidian</span><span>8 Cinder Flour</span><span>250 mB Lava</span>
+          </div>
+          <div class="sgu-map-machine">Mechanical Press · Basin · Heated Blaze Burner</div>
+          <i>↓</i>
+          <div class="sgu-map-material">
+            <img src="assets/stargate/refractory-briquette.png" alt="Refractory Briquette" loading="lazy" /><b
+              >4 Refractory Briquettes</b
+            >
+          </div>
+        </article>
+        <article>
+          <div class="sgu-map-inputs">
+            <span>8 Blaze Powder</span><span>8 Redstone Dust</span><span>4 Glowstone Dust</span>
+          </div>
+          <div class="sgu-map-machine">Mechanical Mixer · Basin · sans chaleur</div>
+          <i>↓</i>
+          <div class="sgu-map-material">
+            <img src="assets/stargate/catalytic-flux.png" alt="Catalytic Flux" loading="lazy" /><b>8 Catalytic Flux</b
+            ><small>4 pour la synthèse · 4 réservés</small>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="sgu-map-merge"><i>↓</i><span>Les trois branches convergent</span><i>↓</i></div>
+
+    <section class="sgu-map-stage">
+      <div class="sgu-map-stage-title">
+        <span>2</span>
+        <div><b>Synthétiser le Naquadah brut</b><small>Mechanical Mixer surchauffé</small></div>
+      </div>
+      <div class="sgu-map-equation">
+        <span>4 Crystalline Matrices</span><i>+</i><span>4 Refractory Briquettes</span><i>+</i
+        ><span>4 Catalytic Flux</span><i>+</i><span>250 mB Lava</span><i>→</i
+        ><strong>Mechanical Mixer<br />Superheated Blaze Burner</strong><i>→</i
+        ><span class="output"
+          ><img src="assets/stargate/unstable-slag.png" alt="Unstable Naquadah Slag" loading="lazy" />4 Unstable
+          Naquadah Slag</span
+        >
+      </div>
+    </section>
+
+    <div class="sgu-map-merge"><i>↓</i><span>Raffinage</span><i>↓</i></div>
+
+    <section class="sgu-map-stage">
+      <div class="sgu-map-stage-title">
+        <span>3</span>
+        <div>
+          <b>Raffiner les matériaux intermédiaires</b
+          ><small>Chaque machine reçoit la matière produite par la précédente</small>
+        </div>
+      </div>
+      <div class="sgu-refinery-map">
+        <div class="sgu-refinery-row">
+          <span class="material"
+            ><img src="assets/stargate/unstable-slag.png" alt="Unstable Naquadah Slag" loading="lazy" /><b
+              >4 Unstable Naquadah Slag</b
+            ></span
+          ><i>→</i><span class="machine">Mechanical Press</span><i>→</i
+          ><span class="material"
+            ><img src="assets/stargate/raw-briquette.png" alt="Raw Naquadah Briquette" loading="lazy" /><b
+              >4 Raw Naquadah Briquettes</b
+            ></span
+          ><i>→</i><span class="machine">Bulk Blasting</span><i>→</i
+          ><span class="material"
+            ><img src="assets/stargate/calcined-naquadah.png" alt="Calcined Naquadah" loading="lazy" /><b
+              >4 Calcined Naquadah</b
+            ></span
+          >
+        </div>
+        <div class="sgu-refinery-row">
+          <span class="material continued"
+            ><img src="assets/stargate/calcined-naquadah.png" alt="Calcined Naquadah" loading="lazy" /><b
+              >4 Calcined Naquadah</b
+            ><small>Sortie précédente</small></span
+          ><i>→</i><span class="machine">Crushing Wheels</span><i>→</i
+          ><span class="material doubled"
+            ><img src="assets/stargate/impure-powder.png" alt="Impure Naquadah Dust" loading="lazy" /><b
+              >8 Impure Naquadah Dust</b
+            ><small>La quantité double ici</small></span
+          ><i>→</i><span class="machine">Bulk Washing</span><i>→</i
+          ><span class="material"
+            ><img src="assets/stargate/purified-granules.png" alt="Purified Naquadah Granule" loading="lazy" /><b
+              >8 Purified Naquadah Granules</b
+            ></span
+          >
+        </div>
+        <div class="sgu-refinery-row final">
+          <span class="material continued"
+            ><img src="assets/stargate/purified-granules.png" alt="Purified Naquadah Granule" loading="lazy" /><b
+              >8 Purified Naquadah Granules</b
+            ><small>Sortie précédente</small></span
+          ><i>→</i><span class="machine">Bulk Freezing</span><i>→</i
+          ><span class="material output"
+            ><img
+              src="assets/stargate/cryostabilized-crystal.png"
+              alt="Cryostabilized Naquadah Crystal"
+              loading="lazy"
+            /><b>8 Cryostabilized Naquadah Crystals</b></span
+          >
+        </div>
+      </div>
+    </section>
+
+    <div class="sgu-map-batch-total">
+      <span>1 fournée</span><i>→</i><b>8 Cryostabilized Naquadah Crystals</b><i>× 21</i
+      ><strong>168 Cryostabilized Naquadah Crystals</strong>
+    </div>
+
+    <div class="sgu-map-stage-title split">
+      <span>4</span>
+      <div><b>Répartir la production</b><small>Trois stocks distincts avant toute transformation</small></div>
+    </div>
+    <div class="sgu-map-split">
+      <div>
+        <b>128 Crystals</b><i>↓</i><span>Métallurgie</span><i>↓</i><strong>64 Naquadah Plates</strong
+        ><small>Structure et machines</small>
+      </div>
+      <div>
+        <b>33 Crystals</b><i>↓</i><span>Crystal Bases</span><i>↓</i><strong>33 cristaux technologiques</strong
+        ><small>Commande et fonctionnement</small>
+      </div>
+      <div>
+        <b>7 Crystals</b><i>↓</i><span>Naquadah Liquidizer</span><i>↓</i><strong>3 500 mB de Liquid Naquadah</strong
+        ><small>Alimente le Crystallizer</small>
+      </div>
+    </div>
+  </div>
+  <details class="sgu-details">
+    <summary>Voir les principales ressources consommées</summary>
+    <div class="sgu-details-body">
+      <p>
+        <b>Raffinerie, 21 fournées :</b> 336 améthystes, 84 or, 84 zinc, 168 obsidiennes, 168 Netherracks, 168 Blaze
+        Powder, 168 redstones, 84 glowstones, 21 000 mB de potion étrange et environ 21 seaux de lave avec marge.
+      </p>
+      <p>
+        <b>Électronique :</b> 33 améthystes, 75 quartz, 39 diamants, 27 Ender Pearls, 129 redstones et 30 glowstones, en
+        plus des cristaux réservés.
+      </p>
+      <p>
+        <b>Composants Create principaux :</b> 14 Andesite Casings, 28 Iron Sheets, 40 Sturdy Sheets, 24 Brass Sheets, 26
+        Electron Tubes, 16 Precision Mechanisms, 11 Redstone Links et 4 Brass Casings.
+      </p>
+    </div>
+  </details>
+  <p class="sgu-warning">
+    <b>Commence par une seule fournée</b> Produis les vingt suivantes après validation du prototype.
+  </p>
+</section>

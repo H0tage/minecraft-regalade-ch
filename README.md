@@ -10,7 +10,7 @@ Site statique de présentation et de documentation du serveur Régalade.
 src/
   index.html          document général et ordre des pages
   pages/              pages principales et enveloppes de navigation
-  content/            contenu HTML détaillé des guides et tutoriels
+  content/            contenu HTML détaillé, découpé par tutoriel et sous-onglet
   data/               données structurées, dont le catalogue des mods
   styles/             styles rangés par rôle et par fonctionnalité
   scripts/            comportements rangés par rôle et par fonctionnalité
@@ -34,7 +34,9 @@ npm run locate -- "fragment du texte"
 
 ## Modifier un contenu
 
-Les pages principales se trouvent dans `src/pages`. Les textes longs des tutoriels et guides se trouvent dans `src/content`. Le catalogue des mods se trouve dans `src/data/mods.json`.
+Les pages principales se trouvent dans `src/pages`. Les textes longs des tutoriels et guides se trouvent dans
+`src/content`. Les fichiers `src/content/tutorials/*.html` assemblent les sous-onglets rangés dans les dossiers du même
+nom. Le catalogue des mods se trouve dans `src/data/mods.json`.
 
 Pour localiser une phrase :
 

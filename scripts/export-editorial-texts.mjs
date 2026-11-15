@@ -19,11 +19,7 @@ const groups = [
   {
     file: '02-installation-et-connexion.md',
     title: 'Installation et connexion',
-    sources: [
-      'src/pages/installation.html',
-      'src/content/installation/guide.html',
-      'src/content/installation/connection.html',
-    ],
+    sources: ['src/pages/installation.html'],
   },
   {
     file: '03-argent-et-echanges.md',
@@ -90,6 +86,16 @@ function extractHtml(source, extension) {
   return fragments.join('\n');
 }
 
+function assembleHtml(sourcePath, stack = []) {
+  const absolutePath = path.resolve(sourcePath);
+  if (stack.includes(absolutePath)) throw new Error(`Inclusion circulaire : ${absolutePath}`);
+  const source = fs.readFileSync(absolutePath, 'utf8');
+  return source.replace(/<!--\s*@include\s+([^\s]+)\s*-->/g, (_match, requestedPath) => {
+    const includedPath = path.resolve(path.dirname(absolutePath), requestedPath);
+    return assembleHtml(includedPath, [...stack, absolutePath]).trim();
+  });
+}
+
 function htmlToMarkdown(source) {
   let text = source
     .replace(/\$\{[^}]*\}/g, '')
@@ -139,7 +145,8 @@ fs.mkdirSync(output, { recursive: true });
 for (const group of groups) {
   const sections = group.sources.map((sourceName) => {
     const sourcePath = path.join(root, sourceName);
-    const source = fs.readFileSync(sourcePath, 'utf8');
+    const source =
+      path.extname(sourceName) === '.html' ? assembleHtml(sourcePath) : fs.readFileSync(sourcePath, 'utf8');
     const extracted = htmlToMarkdown(extractHtml(source, path.extname(sourceName)));
     return `## Source actuelle : ${sourceName}\n\n${extracted}`;
   });

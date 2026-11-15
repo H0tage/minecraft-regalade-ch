@@ -29,7 +29,7 @@ Les quatre éléments
 
 [Illustration : Classic Stargate Base Block]
 
-**StargateCrée le passage. Sa structure formée contient l’adresse et son tampon de 1,36 MFE.
+**Stargate** Crée le passage. Sa structure formée contient l’adresse et son tampon de 1,36 MFE.
 
 [Illustration : Classic DHD]
 
@@ -60,8 +60,8 @@ B
 
 **1,36 MFE** dans la porte elle-même
 
-**Deux stratégies restent valables :** une petite production avec de gros accumulateurs pour voyager
-rarement, ou une centrale assez puissante pour soutenir la porte presque en continu.
+**Deux stratégies restent valables :** une petite production avec de gros accumulateurs pour voyager rarement,
+ou une centrale assez puissante pour soutenir la porte presque en continu.
 
 C
 
@@ -69,7 +69,7 @@ Adresses
 
 ## Chaque porte possède sa propre destination
 
-**1 · LireClic droit sur une porte avec la Create Wrench : son adresse apparaît dans le chat.
+**1 · Lire** Clic droit sur une porte avec la Create Wrench : son adresse apparaît dans le chat.
 
 →
 
@@ -108,7 +108,7 @@ alimentation.
 
 Première installation : 21 fournées · 168 Cryostabilized Naquadah Crystals · 64 Naquadah Plates
 
-**Prototype** →**Raffinerie** →**Naquadah Plates et Crystals** →**24 blocs→**Énergie** →**Premier voyage**
+**Prototype** →**Raffinerie** →**Naquadah Plates et Crystals** →**24 blocs** →**Énergie** →**Premier voyage**
 
 01
 
@@ -228,11 +228,11 @@ Voir les principales ressources consommées
 **Raffinerie, 21 fournées :** 336 améthystes, 84 or, 84 zinc, 168 obsidiennes, 168 Netherracks, 168 Blaze
 Powder, 168 redstones, 84 glowstones, 21 000 mB de potion étrange et environ 21 seaux de lave avec marge.
 
-**Électronique :** 33 améthystes, 75 quartz, 39 diamants, 27 Ender Pearls, 129 redstones et 30
-glowstones, en plus des cristaux réservés.
+**Électronique :** 33 améthystes, 75 quartz, 39 diamants, 27 Ender Pearls, 129 redstones et 30 glowstones, en
+plus des cristaux réservés.
 
-**Composants Create principaux :** 14 Andesite Casings, 28 Iron Sheets, 40 Sturdy Sheets, 24 Brass
-Sheets, 26 Electron Tubes, 16 Precision Mechanisms, 11 Redstone Links et 4 Brass Casings.
+**Composants Create principaux :** 14 Andesite Casings, 28 Iron Sheets, 40 Sturdy Sheets, 24 Brass Sheets, 26
+Electron Tubes, 16 Precision Mechanisms, 11 Redstone Links et 4 Brass Casings.
 
 **Commence par une seule fournée** Produis les vingt suivantes après validation du prototype.
 
@@ -482,11 +482,11 @@ Premier cycle complet
 
 ## Valider une première fournée
 
-Exécute maintenant la chaîne entière avec les quantités d’une seule fournée. Déplace les objets manuellement
-entre les stocks : le but est de valider la recette, pas encore la vitesse.
+Exécute maintenant la chaîne entière avec les quantités d’une seule fournée. Déplace les objets manuellement entre
+les stocks : le but est de valider la recette, pas encore la vitesse.
 
-**Entrée16 améthystes · 4 or · 4 zinc · 8 obsidiennes · 8 Netherracks · 8 Blaze Powder · 8 redstones · 4 glowstones
-· 1 000 mB potion · 500 mB lave
+**Entrée16 améthystes · 4 or · 4 zinc · 8 obsidiennes · 8 Netherracks · 8 Blaze Powder · 8 redstones · 4 glowstones · 1
+000 mB potion · 500 mB lave
 
 →
 
@@ -531,8 +531,8 @@ Production de masse
 
 ## Produire et répartir 168 Cryostabilized Naquadah Crystals
 
-Réalise vingt et une fournées au total, prototype compris. Chaque sortie rejoint d’abord le coffre de comptage,
-puis trois stockages séparés.
+Réalise vingt et une fournées au total, prototype compris. Chaque sortie rejoint d’abord le coffre de comptage, puis
+trois stockages séparés.
 
 Coffre : 168 Cryostabilized Naquadah Crystals
 
@@ -556,9 +556,9 @@ Atelier de métallurgie
 
 **8 Cryostabilized Naquadah Crystals** →**Compacting chauffé** →**1 Incomplete Naquadah Billet**
 
-L’Incomplete Naquadah Billet doit parcourir quatre fois la même séquence. Construis une boucle fermée et place
-une sortie filtrée sur le Stabilized Naquadah Billet : les objets incomplets continuent de tourner, le produit
-fini quitte la boucle.
+L’Incomplete Naquadah Billet doit parcourir quatre fois la même séquence. Construis une boucle fermée et place une
+sortie filtrée sur le Stabilized Naquadah Billet : les objets incomplets continuent de tourner, le produit fini
+quitte la boucle.
 
 Deployer
 1 flux→Spout
@@ -597,8 +597,8 @@ Activation finale
 
 Encased Fan»»Dragon Head»»Dormant Naquadah Ingots
 
-La Dragon Head reste en place et n’est pas consommée. Le souffle doit la traverser avant d’atteindre les
-Dormant Naquadah Ingots.
+La Dragon Head reste en place et n’est pas consommée. Le souffle doit la traverser avant d’atteindre les Dormant
+Naquadah Ingots.
 
 -
 **Produis seize Stabilized Naquadah Billets.Chaque billet consomme 8 Cryostabilized Naquadah Crystals, 4 Catalytic Flux et 500 mB de lave.
@@ -609,8 +609,7 @@ Dormant Naquadah Ingots.
 -
 **Active-les avec la Dragon Head.Ne presse pas les Naquadah Ingots avant cette dernière transformation.
 
--
-**Presse les 64 Naquadah Ingots.** Chaque lingot donne une Naquadah Plate.
+- **Presse les 64 Naquadah Ingots.** Chaque lingot donne une Naquadah Plate.
 
 **Métallurgie terminée :64 Naquadah Plates dans leur stock ; 20 Catalytic Flux de réserve doivent encore rester.
 
@@ -620,8 +619,7 @@ Machines spécialisées
 
 ## Installer le Naquadah Liquidizer et le Crystallizer
 
-Les deux Reaction Chambers sont des composants de recette : elles seront absorbées par les deux machines
-finales.
+Les deux Reaction Chambers sont des composants de recette : elles seront absorbées par les deux machines finales.
 
 [Illustration : Reaction Chamber]
 
@@ -653,7 +651,7 @@ P : Naquadah Plate · D : Diamond · E : Electron Tube · R : Reaction Chamber �
 **Réseau FE commun** 1 000 FE/t pour le Naquadah Liquidizer1 000 FE/t pour le Crystallizer
 
 [Illustration : Cryostabilized Naquadah Crystal]
-**Crystals + Lava** entrées du Liquidizer
+**Crystals + Lavaentrées du Liquidizer
 
 →
 
@@ -733,8 +731,7 @@ Cristallisation
 
 ## Produire les 33 cristaux technologiques
 
-Chaque opération du Crystallizer consomme 1 Crystal Base, 100 mB de Liquid Naquadah et les deux réactifs
-indiqués.
+Chaque opération du Crystallizer consomme 1 Crystal Base, 100 mB de Liquid Naquadah et les deux réactifs indiqués.
 
 1 Crystal Base+100 mB Liquid Naquadah+Réactif A+Réactif B
 
@@ -816,16 +813,16 @@ Mechanical Crafting
 
 ## Terminer les composants de la porte
 
-Ces quatre recettes se réalisent avec des Mechanical Crafters orientés vers une sortie commune. La taille
-indiquée correspond au rectangle réellement nécessaire.
+Ces quatre recettes se réalisent avec des Mechanical Crafters orientés vers une sortie commune. La taille indiquée
+correspond au rectangle réellement nécessaire.
 
 ### Classic Stargate Chevron Block · 3 × 3
 
 T
 EIM
 PR
-T Transfer Crystal · E Energy Crystal · I Incomplete Stargate Chevron · M Materialization Crystal · P
-Precision Mechanism · R Redstone Link
+T Transfer Crystal · E Energy Crystal · I Incomplete Stargate Chevron · M Materialization Crystal · P Precision
+Mechanism · R Redstone Link
 
 ### Classic Stargate Base Block · 5 × 3
 
@@ -840,8 +837,8 @@ Crystal · G Communication Crystal
 BEBEB
 PMAMP
 ECROE
-B Stone Button · E Electron Tube · P Naquadah Plate · M Precision Mechanism · A Brass Casing · C
-Communication Crystal · R Redstone Link · O Ender Eye
+B Stone Button · E Electron Tube · P Naquadah Plate · M Precision Mechanism · A Brass Casing · C Communication
+Crystal · R Redstone Link · O Ender Eye
 
 ### Basic Interface · 5 × 4
 
@@ -849,11 +846,11 @@ N W N
 K E K
 C B R
 N W N
-N Naquadah Plate · W Copper Spool · K Capacitor · E Energy Crystal · C Communication Crystal · B Brass
-Casing · R Redstone Link
+N Naquadah Plate · W Copper Spool · K Capacitor · E Energy Crystal · C Communication Crystal · B Brass Casing ·
+R Redstone Link
 
-**Inventaire final :14 Classic Stargate Ring Blocks + 9 Classic Stargate Chevron Blocks + 1 Classic Stargate Base Block + 1
-Classic DHD + 1 Basic Interface.
+**Inventaire final :14 Classic Stargate Ring Blocks + 9 Classic Stargate Chevron Blocks + 1 Classic Stargate Base Block + 1 Classic
+DHD + 1 Basic Interface.
 
 18
 
@@ -878,8 +875,8 @@ illustrées.
 -
 **Clique le Classic Stargate Base Block à main nue.Les vingt-quatre blocs se convertissent en une porte animée.
 
-**Zone de sécurité :** laisse au moins sept blocs entièrement libres devant la porte. Le vortex d’ouverture
-peut détruire les blocs, objets et entités présents dans cet axe.
+**Zone de sécurité :** laisse au moins sept blocs entièrement libres devant la porte. Le vortex d’ouverture peut
+détruire les blocs, objets et entités présents dans cet axe.
 
 19
 
@@ -897,8 +894,8 @@ l’extérieur.
 **Relie le réseau FE sur une autre face.L’interface et la porte acceptent jusqu’à 50 000 FE/t dans la configuration Régalade.
 
 -
-**Utilise un Large Connector.Le Small Connector plafonne à 1 000 FE/t et ne peut pas couvrir les 4 500 FE/t de maintien ; le Large
-Connector atteint 5 000 FE/t.
+**Utilise un Large Connector.Le Small Connector plafonne à 1 000 FE/t et ne peut pas couvrir les 4 500 FE/t de maintien ; le Large Connector
+atteint 5 000 FE/t.
 
 -
 **Charge la porte et le stock externe.La porte contient 1,36 MFE, mais un appel de 60 secondes demande 6,4 MFE au total.
@@ -916,11 +913,11 @@ confortable.
 
 ### Usage fréquent
 
-Construis une production réelle d’au moins 4 500 FE/t et conserve un tampon pour absorber l’ouverture
-initiale d’un million de FE.
+Construis une production réelle d’au moins 4 500 FE/t et conserve un tampon pour absorber l’ouverture initiale
+d’un million de FE.
 
-**Test sans appel :Jade ou l’interface montre que l’énergie entre réellement ; la porte est pleine et le stock externe dépasse
-5,04 MFE.
+**Test sans appel :Jade ou l’interface montre que l’énergie entre réellement ; la porte est pleine et le stock externe dépasse 5,04
+MFE.
 
 20
 
@@ -935,8 +932,8 @@ Adresse et DHD
 **Pose et alimente le DHD à moins de 16 blocs.Relie-le au FE ou fournis-lui un conteneur énergétique chargé, puis vérifie qu’il contrôle la porte.
 
 -
-**Choisis une destination sûre.Elle doit posséder une porte fonctionnelle, un DHD alimenté et assez d’énergie pour effectuer le retour
-après fermeture.
+**Choisis une destination sûre.Elle doit posséder une porte fonctionnelle, un DHD alimenté et assez d’énergie pour effectuer le retour après
+fermeture.
 
 -
 **Compose les nombres dans l’ordre.Maintiens Maj pour afficher les numéros du DHD, saisis l’adresse, puis presse le bouton central : il ajoute
@@ -951,8 +948,8 @@ automatiquement le Point d’origine et lance l’appel.
 **Sécurité :** entrer par l’arrière de la porte reste mortel. Le passage stable est bidirectionnel, mais
 uniquement par les faces avant.
 
-**Premier voyage réussi :les deux adresses sont conservées, le DHD d’arrivée est alimenté et tu peux couper puis recomposer la
-connexion pour revenir.
+**Premier voyage réussi :les deux adresses sont conservées, le DHD d’arrivée est alimenté et tu peux couper puis recomposer la connexion
+pour revenir.
 
 21
 
@@ -962,11 +959,10 @@ Dépannage
 
 **La potion n’arrive pas dans le BasinVérifie la Mechanical Pump et son sens. Le Basin doit recevoir 1 000 mB d’eau et une Nether Wart.
 
-**Le Mechanical Mixer refuse la recetteVérifie les quatre Crystalline Matrices, quatre Refractory Briquettes, quatre Catalytic Flux, 250 mB de
-lave et le Blaze Burner surchauffé.
+**Le Mechanical Mixer refuse la recetteVérifie les quatre Crystalline Matrices, quatre Refractory Briquettes, quatre Catalytic Flux, 250 mB de lave et
+le Blaze Burner surchauffé.
 
-**Le Bulk Freezing ne produit rienL’Encased Fan doit souffler à travers la Powder Snow avant d’atteindre les Purified Naquadah
-Granules.
+**Le Bulk Freezing ne produit rienL’Encased Fan doit souffler à travers la Powder Snow avant d’atteindre les Purified Naquadah Granules.
 
 **L’Incomplete Naquadah Billet ne progresse plusChaque boucle demande Catalytic Flux, 125 mB de lave, Mechanical Press et Mechanical Saw, dans cet ordre,
 quatre fois.
@@ -979,11 +975,9 @@ sortie liquide.
 **Les blocs ne forment pas la StargateCompare les 14 Classic Stargate Ring Blocks, 9 Classic Stargate Chevron Blocks et le Classic Stargate Base
 Block à l’image, puis clique ce dernier à main nue.
 
-**Le DHD ne réagit pasContrôle son énergie, sa distance de 16 blocs et sa liaison avec la porte avant de modifier
-l’adresse.
+**Le DHD ne réagit pasContrôle son énergie, sa distance de 16 blocs et sa liaison avec la porte avant de modifier l’adresse.
 
-**La Create Wrench n’affiche aucune adresseVise un bloc appartenant à la Stargate déjà formée et utilise bien la Create Wrench en main
-principale.
+**La Create Wrench n’affiche aucune adresseVise un bloc appartenant à la Stargate déjà formée et utilise bien la Create Wrench en main principale.
 
 **La connexion coupe rapidementLe stock externe est vide ou ne fournit pas les 4 500 FE/t nécessaires au maintien.
 
@@ -1103,8 +1097,8 @@ Crystallizer
 
 ## Recettes des cinq cristaux
 
-**Base commune :** 1 Crystal Base + 100 mB de Liquid Naquadah. La Crystal Base coûte 1
-Cryostabilized Naquadah Crystal, 1 Amethyst Shard, 2 Quartz et 1 Diamond.
+**Base commune :** 1 Crystal Base + 100 mB de Liquid Naquadah. La Crystal Base coûte 1 Cryostabilized
+Naquadah Crystal, 1 Amethyst Shard, 2 Quartz et 1 Diamond.
 
 Crystal
 
@@ -1180,8 +1174,8 @@ Assemblage
 
 [Illustration : Structure officielle de la Classic Stargate]
 
-Structure officielle : 14 Classic Stargate Ring Blocks, 9 Classic Stargate Chevron Blocks et le Classic
-Stargate Base Block.
+Structure officielle : 14 Classic Stargate Ring Blocks, 9 Classic Stargate Chevron Blocks et le Classic Stargate
+Base Block.
 
 Configuration Régalade
 

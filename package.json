@@ -19,6 +19,7 @@
     "node": ">=20"
   },
   "devDependencies": {
+    "playwright": "^1.65.1",
     "prettier": "^3.10.1",
     "purgecss": "^9.1.0",
     "stylelint": "^18.0.0",

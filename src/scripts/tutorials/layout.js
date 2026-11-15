@@ -1,49 +1,10 @@
 (() => {
   const root = document.querySelector('#tutoriels');
-  const tabList = root?.querySelector(':scope > .tutorial-tabs');
-  const content = root?.querySelector(':scope > .tutorial-content');
-  if (!root || !tabList || !content || root.querySelector('.tutorial-workspace')) return;
-
-  const workspace = document.createElement('div');
-  workspace.className = 'tutorial-workspace';
-
-  const masthead = document.createElement('header');
-  masthead.className = 'tutorial-masthead';
-  masthead.innerHTML = `
-    <div class="tutorial-masthead-cue tutorial-masthead-cue-left">
-      <strong>Choix du tutoriel</strong><i aria-hidden="true">↓</i>
-    </div>
-    <div class="tutorial-masthead-cue tutorial-masthead-cue-content">
-      <strong>Contenu du tuto</strong><i aria-hidden="true">↓</i>
-    </div>
-    <div class="tutorial-masthead-cue tutorial-masthead-cue-right">
-      <strong>Navigation dans le tuto</strong><i aria-hidden="true">↓</i>
-    </div>`;
-
-  const library = document.createElement('aside');
-  library.className = 'tutorial-library';
-  library.setAttribute('aria-label', 'Choisir un tutoriel');
-  library.innerHTML = `
-    <div class="tutorial-library-sticky">
-      <button class="tutorial-library-toggle" type="button" aria-expanded="false"></button>
-    </div>`;
-  library.querySelector('.tutorial-library-sticky').append(tabList);
-
-  const reader = document.createElement('div');
-  reader.className = 'tutorial-reader';
-  reader.append(content);
-
-  const chapters = document.createElement('aside');
-  chapters.className = 'tutorial-chapters';
-  chapters.setAttribute('aria-label', 'Chapitres du tutoriel');
-  chapters.innerHTML = `
-    <div class="tutorial-chapters-sticky">
-      <button class="tutorial-chapter-toggle" type="button" aria-expanded="false">Afficher les chapitres</button>
-      <nav class="tutorial-chapter-list" aria-label="Dans ce tutoriel"></nav>
-    </div>`;
-
-  workspace.append(library, reader, chapters);
-  root.append(masthead, workspace);
+  const tabList = root?.querySelector('.tutorial-tabs');
+  const content = root?.querySelector('.tutorial-content');
+  const library = root?.querySelector('.tutorial-library');
+  const chapters = root?.querySelector('.tutorial-chapters');
+  if (!root || !tabList || !content || !library || !chapters) return;
 
   const libraryToggle = library.querySelector('.tutorial-library-toggle');
   const chapterToggle = chapters.querySelector('.tutorial-chapter-toggle');

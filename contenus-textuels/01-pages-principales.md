@@ -24,6 +24,14 @@ village. Énormément de choses sont possibles grâce aux nombreux mods Create q
 l'expérience de Minecraft en ce qui concerne les automatisations. De la production de canons et munitions à la
 découpeuse et cuiseurs à frites, vous avez un choix immense pour vous amuser.
 
+[Illustration : Intérieur d]
+
+[Illustration : Logistique et automatisation Create]
+
+[Illustration : Construction industrielle Create]
+
+[Illustration : Véhicule à canons automatiques (Create Big Cannons)]
+
 ## Explorer un monde vivant
 
 Le monde est pensé pour donner envie de sortir de chez soi. Vous pourrez trouver des structures, donjons,
@@ -36,6 +44,14 @@ monde en quelques secondes.
 Pour les fans de collectionnites, le jeu aura même un TCG intégré. Compléter votre collection augmentera vos
 statistiques de manière permanente !
 
+[Illustration : Forteresse des morts-vivants (YUNG]
+
+[Illustration : Catacombes et exploration]
+
+[Illustration : Village généré (Towns and Towers)]
+
+[Illustration : Porte des étoiles (Stargate Journey)]
+
 ## Donner vie à tout ça
 
 Le pack contient beaucoup de contenu pour construire et donner une vraie ambiance aux lieux : déco, mobilier,
@@ -44,6 +60,14 @@ rôle-play.
 
 De l'usine hardcore au bord d’une voie ferrée, une taverne de petit bled, un domaine viticole tel Donatien, un
 camping paumé dans les montagnes ou juste une maison de giga bourgeois... Tout a sa place sur le serveur.
+
+[Illustration : Cuisine et ustensiles (Farmer]
+
+[Illustration : Paille, corde et compost (Farmer]
+
+[Illustration : Un grand festin (Farmer]
+
+[Illustration : Décoration cosy (Farmer]
 
 ## Jouer avec les autres, à son rythme
 
@@ -54,6 +78,14 @@ Il y aura des claims pour protéger les constructions, une économie entre joueu
 pour gagner de l’argent en jouant. L’objectif est que les joueurs aient la possibilité de se croiser, de
 commercer, de s’entraider et de construire ensemble sans que personne soit obligé de suivre le rythme des
 autres.
+
+[Illustration : Buddycards]
+
+[Illustration : Discussion de proximité (Simple Voice Chat)]
+
+[Illustration : Maison de village (Exposure)]
+
+[Illustration : Le barde (Etched)]
 
 ## Un projet fait avec le cœur
 
@@ -85,7 +117,7 @@ Bien vivre ensemble
 
 # Un serveur simple, accueillant et respectueux.
 
-### Concept général
+## Concept général
 
 Ce serveur a pour but de créer un espace devenu rare aujourd'hui: une vraie safe place, positive et
 bienveillante. Vous acceptez en rejoignant le serveur ce concept principal: chacun a le droit de s'amuser dans
@@ -131,6 +163,26 @@ Les infrastructures communes (trains, spawn et Stargates) se construisent avec c
 
 Une règle est floue ? On en parle. L’objectif est de garder un cadre clair, pas de piéger les joueurs.
 
+## Que se passe-t-il en cas de non-respect des règles ?
+
+Ce projet a été créé pour offrir un espace agréable et apaisé à tout le monde, moi compris. L’idée est de pouvoir
+jouer, construire et échanger dans une ambiance saine, sans transformer le serveur en terrain de médiation
+permanent.
+
+Les désaccords, malentendus ou tensions peuvent arriver. Dans ces situations, je prendrai le temps d’écouter les
+personnes concernées et de chercher une solution raisonnable.
+
+En revanche, une violation évidente du règlement, une volonté claire de nuire ou un comportement abusif pourra
+entraîner une exclusion du serveur. Les constructions ou installations réalisées dans le cadre de ces abus
+pourront également être supprimées.
+
+Ce texte n’a pas vocation à mettre la pression sur qui que ce soit. Il sert simplement à poser un cadre clair au
+cas où un problème sérieux surviendrait. Les erreurs de bonne foi seront traitées comme telles, mais les abus
+manifestes ne donneront pas lieu à des négociations interminables.
+
+Les règles sont simples et s’appliquent à tout le monde. Leur objectif est de protéger les joueurs, l’ambiance du
+serveur et le plaisir que nous avons tous à faire vivre ce projet.
+
 ---
 
 ## Source actuelle : src/pages/statut.html
@@ -163,26 +215,6 @@ Oui !
 Faut-il être expert en mods ?
 
 Non. Le pack et les tutoriels sont pensés pour accueillir aussi les personnes peu habituées aux mods.
-
-Que se passe-t-il en cas de non-respect des règles ?
-
-Ce projet a été créé pour offrir un espace agréable et apaisé à tout le monde, moi compris. L’idée est de
-pouvoir jouer, construire et échanger dans une ambiance saine, sans transformer le serveur en terrain de
-médiation permanent.
-
-Les désaccords, malentendus ou tensions peuvent arriver. Dans ces situations, je prendrai le temps d’écouter les
-personnes concernées et de chercher une solution raisonnable.
-
-En revanche, une violation évidente du règlement, une volonté claire de nuire ou un comportement abusif pourra
-entraîner une exclusion du serveur. Les constructions ou installations réalisées dans le cadre de ces abus
-pourront également être supprimées.
-
-Ce texte n’a pas vocation à mettre la pression sur qui que ce soit. Il sert simplement à poser un cadre clair au
-cas où un problème sérieux surviendrait. Les erreurs de bonne foi seront traitées comme telles, mais les abus
-manifestes ne donneront pas lieu à des négociations interminables.
-
-Les règles sont simples et s’appliquent à tout le monde. Leur objectif est de protéger les joueurs, l’ambiance
-du serveur et le plaisir que nous avons tous à faire vivre ce projet.
 
 ---
 

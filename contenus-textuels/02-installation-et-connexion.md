@@ -17,10 +17,6 @@ Guide d’installation
 
 Informations de connexion
 
----
-
-## Source actuelle : src/content/installation/guide.html
-
 En quatre étapes
 
 -
@@ -119,10 +115,6 @@ Le serveur annonce des mods incompatibles
 
 Tu utilises probablement un ancien profil ou un profil modifié. Réimporte la dernière archive indiquée en haut de
 cette page sans ajouter ni mettre à jour de mod.
-
----
-
-## Source actuelle : src/content/installation/connection.html
 
 # Se connecter au serveur
 

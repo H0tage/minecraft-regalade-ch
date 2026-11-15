@@ -14,8 +14,8 @@ Create Big Cannons · les bases
 
 # Comprendre un canon avant de le construire.
 
-Un gros canon n’est pas une recette unique : c’est une ligne de pièces compatibles. Voici les règles à
-comprendre avant de choisir un matériau ou de fabriquer le moindre bloc.
+Un gros canon n’est pas une recette unique : c’est une ligne de pièces compatibles. Voici les règles à comprendre
+avant de choisir un matériau ou de fabriquer le moindre bloc.
 
 01
 
@@ -52,8 +52,8 @@ C’est la confusion la plus importante à éviter.
 
 **3** Fonte**5** Bronze**7** Acier
 
-Ces limites comptent les sections parcourues après la culasse. Un éventuel ressort de recul compte donc
-comme une section. Au-delà, le projectile risque de rester coincé.
+Ces limites comptent les sections parcourues après la culasse. Un éventuel ressort de recul compte donc comme
+une section. Au-delà, le projectile risque de rester coincé.
 
 [Big Cannon / Gros canon]
 
@@ -206,8 +206,8 @@ Pour un premier essai, construis un autocanon en **fonte** composé d’une
 
 **B · Chariot mobileDevient un véhicule d’artillerie. Choisis cette route pour rouler, viser et tirer depuis le chariot.
 
-**Choisis maintenant :** le tube de l’autocanon reste identique, mais la liste de courses du
-support change.
+**Choisis maintenant :** le tube de l’autocanon reste identique, mais la liste de courses du support
+change.
 
 02
 
@@ -274,8 +274,8 @@ B · Chariot mobile
 **Pourquoi 7 plaques communes ?** Une devient le mécanisme du ressort, une produit les feuilles des
 douilles et cinq servent au conteneur de munitions.
 
-**Le soudeur n’est pas requis :** sa recette et son usage restent disponibles plus bas uniquement
-si tu démontes accidentellement le canon.
+**Le soudeur n’est pas requis :** sa recette et son usage restent disponibles plus bas uniquement si
+tu démontes accidentellement le canon.
 
 03
 
@@ -315,13 +315,13 @@ Moules
 ### Moules en bois
 
 Découpe trois bûches pour obtenir les moules de **culasse** , de
-**ressort de recul** et de **canon** . Le moule de canon est réutilisé pour les
-deux canons.
+**ressort de recul** et de **canon** . Le moule de canon est réutilisé pour les deux
+canons.
 
 ### Sable de moulage
 
-**2 sables + 1 terre + 1 boule d’argile** produisent 1 bloc. Fabrique-en quatre : un pour
-remplir le moule central de chaque couche.
+**2 sables + 1 terre + 1 boule d’argile** produisent 1 bloc. Fabrique-en quatre : un pour remplir
+le moule central de chaque couche.
 
 Chaque étage se prépare de la même manière. Le **deuxième clic** est indispensable : sans lui, tu
 n’as pas encore créé une véritable couche de coulée.
@@ -340,8 +340,8 @@ n’as pas encore créé une véritable couche de coulée.
 
 **4 · Continuer au-dessusPose le moule suivant sur la couche terminée et répète les deux clics.
 
-**Pas de carré de 3 × 3 ici :** cette couronne de sable sert aux grands moules de gros canon, pas
-aux petites pièces d’autocanon.
+**Pas de carré de 3 × 3 ici :** cette couronne de sable sert aux grands moules de gros canon, pas aux
+petites pièces d’autocanon.
 
 **Haut** Moule de canon rempli
 
@@ -357,8 +357,8 @@ Coulée connectée
 
 ## Couler les quatre pièces en une seule colonne.
 
-Empile les quatre formes **directement les unes sur les autres** , puis remplis-les sans les
-déplacer. La coulée commune crée automatiquement les connexions internes entre les pièces.
+Empile les quatre formes **directement les unes sur les autres** , puis remplis-les sans les déplacer.
+La coulée commune crée automatiquement les connexions internes entre les pièces.
 
 **Fonderie chaufféeElle contient les 1 260 mB de fonte liquide.
 
@@ -380,8 +380,8 @@ déplacer. La coulée commune crée automatiquement les connexions internes entr
 
 **Total : 1 260 mB** Attends la solidification complète.
 
-**Pourquoi une seule colonne ?Parce qu’un assemblage coulé ensemble est déjà connecté. Aucun soudage n’est nécessaire tant que tu ne
-sépares pas les blocs.
+**Pourquoi une seule colonne ?Parce qu’un assemblage coulé ensemble est déjà connecté. Aucun soudage n’est nécessaire tant que tu ne sépares
+pas les blocs.
 
 07
 
@@ -413,14 +413,14 @@ système d’extension doit lui permettre d’avancer tout droit.
 - Raccorde de l’eau à la foreuse avec un tuyau.
 
 -
-Alimente le roulement et la foreuse. La foreuse doit tourner **au moins aussi vite** que le tube
-; elle peut aller plus vite.
+Alimente le roulement et la foreuse. La foreuse doit tourner **au moins aussi vite** que le tube ;
+elle peut aller plus vite.
 
 -
 Laisse la tête de forage avancer et traverser successivement les quatre blocs, puis retire-la complètement.
 
-**Si rien ne se passe :** vérifie l’eau, l’alignement, le sens d’avancement et surtout que la
-foreuse n’est pas plus lente que le tube.
+**Si rien ne se passe :** vérifie l’eau, l’alignement, le sens d’avancement et surtout que la foreuse
+n’est pas plus lente que le tube.
 
 08
 
@@ -430,8 +430,8 @@ Terminer les mécanismes
 
 **1 plaque de fer** →**Scie** →**[Spring Wire / Fil à ressort]** →**Presse × 3 cycles** →**[Recoil Spring / Ressort de recul]**
 
-Prends l’objet ressort en main et fais un clic droit sur le bloc de ressort de recul incomplet. Tu termines
-ainsi le mécanisme placé entre la culasse et les canons.
+Prends l’objet ressort en main et fais un clic droit sur le bloc de ressort de recul incomplet. Tu termines ainsi
+le mécanisme placé entre la culasse et les canons.
 
 **1 lingot de fonte** →**Scie × 3 passages** →**[Breech Extractor / Extracteur de culasse]**
 
@@ -441,8 +441,8 @@ Prends l’extracteur en main et fais un clic droit sur la culasse incomplète. 
 Tu as démonté ou cassé une pièce ? Ouvre cette procédure de secours.
 
 **Cette section ne sert que si tu as récupéré les pièces avec une pioche Silk Touch avant de les reposer
-séparément.Si elles ont été cassées sans Silk Touch et transformées en ferraille, elles sont irrécupérables :
-recommence leur fabrication.
+séparément.Si elles ont été cassées sans Silk Touch et transformées en ferraille, elles sont irrécupérables : recommence
+leur fabrication.
 
 **Assemblage encore intact**
 
@@ -451,8 +451,8 @@ contraption Create.
 
 **Pièces récupérées avec Silk Touch**
 
-Les blocs sont sauvés, mais leurs anciennes connexions ne reviennent pas quand tu les reposes. Soude
-chaque jonction.
+Les blocs sont sauvés, mais leurs anciennes connexions ne reviennent pas quand tu les reposes. Soude chaque
+jonction.
 
 **Pièces devenues ferraille**
 
@@ -486,8 +486,8 @@ Choix du support
 
 ## Tourelle sur affût ou canon mobile ?
 
-Les deux supports utilisent exactement le même autocanon et les mêmes munitions. Choisis ton parcours, puis
-reste dans la même colonne à l’étape 11.
+Les deux supports utilisent exactement le même autocanon et les mêmes munitions. Choisis ton parcours, puis reste
+dans la même colonne à l’étape 11.
 
 A · Tourelle sur affût
 
@@ -551,8 +551,8 @@ Munitions
 
 **1 plaque de fer** Scie**3 feuilles de cartouche** Scie**12 douilles vides+ poudre + cuivre**12 [Machine Gun Rounds / Cartouches de mitrailleuse]**
 
-**Munition de départChaque douille vide reçoit 1 poudre à canon et 1 pépite de cuivre. Cette cartouche simple est acceptée
-par ton autocanon.
+**Munition de départChaque douille vide reçoit 1 poudre à canon et 1 pépite de cuivre. Cette cartouche simple est acceptée par
+ton autocanon.
 
 **[Autocannon Ammo Container / Conteneur de munitions]1 lingot de laiton + 5 plaques de fer. Il stocke jusqu’à 128 cartouches de mitrailleuse.
 
@@ -568,8 +568,8 @@ Assemblage et premier tir
 
 ## Suivre la procédure de ton support.
 
-Assembler signifie convertir la rangée de blocs en une seule contraption utilisable. Il ne faut pas de colle :
-le support récupère automatiquement toutes les pièces correctement connectées.
+Assembler signifie convertir la rangée de blocs en une seule contraption utilisable. Il ne faut pas de colle : le
+support récupère automatiquement toutes les pièces correctement connectées.
 
 A · Tourelle sur affût
 
@@ -578,8 +578,8 @@ A · Tourelle sur affût
 #### Préparer le poste de tir
 
 -
-Avec une **[Wrench / Clé]** de Create, fais un clic droit sur la **[Breech / Culasse]** : des
-poignées doivent apparaître.
+Avec une **[Wrench / Clé]** de Create, fais un clic droit sur la **[Breech / Culasse]** : des poignées
+doivent apparaître.
 
 -
 Option conseillée : prends un [Seat / Siège] de Create et fais un clic droit sur la culasse à poignées. Le
@@ -602,8 +602,8 @@ Sur la face lumineuse, règle un [Analog Lever / Levier analogique] sur 1 pour c
 
 - Maintiens le clic gauche pour tirer ; relâche-le pour arrêter. Maj permet de descendre.
 
-**Pour le redéposer :** coupe le levier de la face marteau. Le canon redevient immédiatement une rangée
-de blocs.
+**Pour le redéposer :** coupe le levier de la face marteau. Le canon redevient immédiatement une rangée de
+blocs.
 
 B · Chariot mobile
 

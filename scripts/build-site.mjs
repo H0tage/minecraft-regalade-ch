@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { cpSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, normalize, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -23,6 +23,7 @@ const styleSources = [
   'tutorials/big-cannons-survival.css',
   'tutorials/stargate-guide.css',
   'tutorials/stargates-survival.css',
+  'tutorials/stargates-industry.css',
   'tutorials/stargates-interactive.css',
 ];
 
@@ -33,6 +34,36 @@ const scriptSources = [
   'core/tab-groups.js',
   'tutorials/layout.js',
 ];
+
+function listFiles(directory, extension, baseDirectory = directory) {
+  function walk(currentDirectory) {
+    return readdirSync(currentDirectory, { withFileTypes: true }).flatMap((entry) => {
+      const target = join(currentDirectory, entry.name);
+      return entry.isDirectory() ? walk(target) : [target];
+    });
+  }
+
+  return walk(directory)
+    .filter((file) => file.endsWith(extension))
+    .map((file) => relative(baseDirectory, file).replaceAll('\\', '/'))
+    .sort();
+}
+
+function assertManifestCoverage(directory, extension, manifest, label) {
+  const actual = listFiles(directory, extension);
+  const expected = [...manifest].sort();
+  const unlisted = actual.filter((file) => !expected.includes(file));
+  const absent = expected.filter((file) => !actual.includes(file));
+  if (unlisted.length || absent.length) {
+    const details = [
+      unlisted.length ? `${label} non référencé${unlisted.length > 1 ? 's' : ''} : ${unlisted.join(', ')}` : '',
+      absent.length ? `${label} absent${absent.length > 1 ? 's' : ''} : ${absent.join(', ')}` : '',
+    ]
+      .filter(Boolean)
+      .join('\n');
+    throw new Error(`Manifest incomplet :\n${details}`);
+  }
+}
 
 function versionFor(file) {
   return createHash('sha256').update(readFileSync(file)).digest('hex').slice(0, 8);
@@ -83,6 +114,9 @@ function bundle(sourceDirectory, files, targetFile, separator) {
   mkdirSync(dirname(targetFile), { recursive: true });
   writeFileSync(targetFile, `${contents.join(separator)}\n`, 'utf8');
 }
+
+assertManifestCoverage(join(sourceRoot, 'styles'), '.css', styleSources, 'CSS');
+assertManifestCoverage(join(sourceRoot, 'scripts'), '.js', scriptSources, 'JavaScript');
 
 resetDirectory(dist);
 bundle('styles', styleSources, join(dist, 'styles', 'site.css'), '\n\n');
