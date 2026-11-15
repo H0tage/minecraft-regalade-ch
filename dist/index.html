@@ -21,6 +21,9 @@
     @media(max-width:800px){.shell{padding:0 18px}header{height:70px}.menu{display:block}nav{display:none;position:absolute;z-index:4;top:76px;left:18px;right:18px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:14px;border-radius:12px;flex-direction:column;align-items:stretch}nav.open{display:flex}.hero,.tutorial-grid,.status-grid,.form-layout{grid-template-columns:1fr}.hero{padding:40px 0 30px;gap:30px}.hero-mark{width:245px}.stats,.steps,.pillars,.mods-grid{grid-template-columns:repeat(2,1fr)}.info-band{grid-template-columns:1fr}.form-layout{gap:15px}}@media(max-width:510px){.stats,.steps,.pillars,.mods-grid,.rules{grid-template-columns:1fr}.hero h1{font-size:3.25rem}.view{padding-top:42px}.footer-inner{display:block}.footer-inner p{margin:8px 0}.stat{padding:18px}.button{width:100%}.actions{display:block}.actions .button{margin-bottom:9px}}
   </style>
   <style>
+    .rule-consequences{margin-top:16px;border-color:#f0c3a3;background:var(--orange-pale)}.rule-consequences h2{margin:0 0 12px;font-size:1.2rem;color:#9c430d}.rule-consequences p{color:#653b23;margin:0 0 12px}.rule-consequences p:last-child{margin-bottom:0}
+  </style>
+  <style>
     .mod-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}.mod-tab{border:1px solid var(--line);border-radius:999px;background:#fff;color:#526068;padding:8px 12px;font-size:.82rem;font-weight:750}.mod-tab:hover,.mod-tab.active{background:var(--ink);border-color:var(--ink);color:#fff}.mod-version{color:var(--muted);font-size:.82rem;margin:0}.mod-description{color:var(--muted);font-size:.87rem;margin:12px 0 0}.mod-link{color:inherit;display:flex;transition:transform .16s ease,border-color .16s ease}.mod-link:hover{border-color:var(--cyan);transform:translateY(-3px)}@media(max-width:510px){.mod-tabs{flex-wrap:nowrap;overflow:auto;padding-bottom:5px}.mod-tab{white-space:nowrap}}
     .presentation{max-width:860px;margin:0 auto}.presentation header{height:auto;display:block;border:0;margin-bottom:58px}.presentation header h1{font-size:clamp(2.8rem,6vw,5rem);letter-spacing:-.065em;line-height:.95;margin:16px 0 22px}.presentation header h1 strong{color:var(--orange);font-weight:inherit}.presentation header p{max-width:720px;color:var(--muted);font-size:1.16rem;margin:0}.presentation-chapter{padding:33px 0;border-top:1px solid var(--line)}.presentation-chapter h2{color:#147fa9;font-size:clamp(1.55rem,3vw,2.25rem);letter-spacing:-.045em;line-height:1.05;margin:0 0 16px}.presentation-chapter:nth-of-type(even) h2{color:var(--orange)}.presentation-chapter p{color:#4e5c63;font-size:1.04rem;margin:0 0 16px}.presentation-chapter p:last-child{margin-bottom:0}.presentation-chapter.heart{margin-top:30px;border:0;border-radius:var(--radius);padding:34px;background:var(--ink);box-shadow:var(--shadow)}.presentation-chapter.heart h2{color:#fff}.presentation-chapter.heart p{color:#d9e2e4}
   </style>
@@ -123,9 +126,17 @@
       });
       search.addEventListener('input', renderDetailedMods);
       renderDetailedMods();
-      const faq = document.querySelector('#statut .faq');
       const rules = document.querySelector('#reglement .rules');
-      if (faq && rules) rules.after(faq);
+      const consequence = [...document.querySelectorAll('#statut .faq details')].find((item) => item.querySelector('summary')?.textContent.includes('contrevi'));
+      if (consequence && rules) {
+        const card = document.createElement('article');
+        const heading = document.createElement('h2');
+        card.className = 'card rule-consequences';
+        heading.textContent = consequence.querySelector('summary').textContent;
+        card.append(heading, ...consequence.querySelectorAll('p'));
+        rules.after(card);
+        consequence.remove();
+      }
     })();
   </script>
   <script src="big-cannons.js?v=42d0052"></script>
