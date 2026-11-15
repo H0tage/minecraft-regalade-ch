@@ -7,6 +7,11 @@
       rotation, des réserves, des tapis roulants, des Packagers et des Mechanical Arms. C’est imposant, ça demande des
       ressources et ça prend du temps, mais le résultat peut alimenter un restaurant, une gare ou une ville entière.
     </p>
+    <p class="food-industrial-hero-note">
+      L’objectif de ce guide n’est pas de te faire mémoriser une liste de machines. On va suivre un seul Beef Stew du
+      coffre d’ingrédients jusqu’au stockage final, comprendre ce qui se passe à chaque étape, puis utiliser cette
+      première ligne comme modèle pour le reste de l’usine.
+    </p>
   </header>
 
   <section class="food-section food-kitchen-step" id="food-industrial-building" data-phase="Préparer">
@@ -49,19 +54,31 @@
     <div class="food-industrial-tools">
       <article>
         <h3>Packager</h3>
-        <p>Place une recette complète dans un colis, puis décharge cette recette dans un Cooking Pot ou un Keg.</p>
+        <p>
+          Il prépare l’équivalent d’un kit de cuisine : tous les ingrédients d’une portion sont réunis dans le même
+          colis. Un second Packager ouvre ensuite ce colis directement dans le Cooking Pot.
+        </p>
       </article>
       <article>
         <h3>Mechanical Arm</h3>
-        <p>Apporte les récipients, récupère les plats terminés et manipule plusieurs postes culinaires.</p>
+        <p>
+          Il s’occupe des gestes qui restent autour de la recette. Dans notre prototype, un bras apporte les Bowls et un
+          autre récupère les Beef Stews terminés.
+        </p>
       </article>
       <article>
         <h3>Deployer ou Mechanical Saw</h3>
-        <p>Automatise la découpe sur une Cutting Board. Le Deployer doit tenir un Knife et être en mode Use.</p>
+        <p>
+          Plus tard, ils remplaceront le joueur devant la Cutting Board. Le Deployer doit tenir un Knife et être en mode
+          Use, tandis que la Mechanical Saw peut effectuer directement certaines découpes.
+        </p>
       </article>
       <article>
         <h3>Blaze Burner</h3>
-        <p>Chauffe les ustensiles de cuisine et peut accélérer certaines cuissons selon son niveau de chaleur.</p>
+        <p>
+          C’est le feu sous la marmite. Sans source de chaleur valide, les ingrédients peuvent être présents et la
+          production rester parfaitement immobile.
+        </p>
       </article>
     </div>
     <p class="food-note">
@@ -69,6 +86,17 @@
       <kbd>W</kbd>. Les scènes Ponder montrent directement leurs interactions avec Create.
     </p>
   </section>
+
+  <div class="food-industrial-chapter">
+    <span>Première partie</span>
+    <div>
+      <h2>Dessiner le trajet avant de poser les machines</h2>
+      <p>
+        On commence par suivre la nourriture. Chaque zone doit avoir une entrée claire, une sortie claire et assez de
+        stockage pour que la chaîne ne s’arrête pas au premier coffre plein.
+      </p>
+    </div>
+  </div>
 
   <section class="food-section food-kitchen-step" id="food-industrial-map" data-phase="Planifier">
     <div class="food-title">
@@ -78,6 +106,10 @@
         <h2>Comprendre le trajet d’un plat avant de construire</h2>
       </div>
     </div>
+    <p class="food-lead">
+      Les ingrédients arrivent d’abord dans un entrepôt général. Ils sont ensuite dosés dans une petite réserve dédiée
+      au Beef Stew. Cette séparation évite qu’un Packager prenne trois Potatoes et aucun Raw Beef au mauvais moment.
+    </p>
     <div class="food-industrial-map" aria-label="Chaîne générale d’une Central Kitchen">
       <article><b>Fermes et livraisons</b><small>matières premières</small></article>
       <i>→</i>
@@ -116,6 +148,14 @@
       arrive séparément et le Cooking Pot produit un plat terminé. Tant que cette cellule ne fonctionne pas, ne la
       duplique pas.
     </p>
+    <div class="food-industrial-explanation">
+      <strong>Pourquoi le Bowl voyage-t-il à part ?</strong>
+      <p>
+        Le colis représente la recette à cuisiner. Le Bowl est le récipient utilisé au moment de servir. Central Kitchen
+        conserve cette différence : les ingrédients sont déballés dans la marmite, puis un Mechanical Arm lui apporte le
+        Bowl quand elle en a besoin.
+      </p>
+    </div>
     <div class="food-industrial-recipe">
       <div class="food-industrial-recipe-items">
         <article><b>1 Raw Beef</b></article>
@@ -185,6 +225,17 @@
     </div>
   </section>
 
+  <div class="food-industrial-chapter">
+    <span>Deuxième partie</span>
+    <div>
+      <h2>Construire une cellule que l’on peut regarder fonctionner</h2>
+      <p>
+        Le prototype tient volontairement en peu de machines. Tu dois pouvoir suivre le colis des yeux, voir le Bowl
+        arriver et repérer immédiatement l’endroit où le plat s’est arrêté.
+      </p>
+    </div>
+  </div>
+
   <section class="food-section food-kitchen-step" id="food-industrial-package" data-phase="Construire">
     <div class="food-title">
       <span>06</span>
@@ -193,6 +244,11 @@
         <h2>Fabriquer un colis que la marmite peut réellement accepter</h2>
       </div>
     </div>
+    <p class="food-lead">
+      Imagine un service de paniers-repas. Le premier Packager prend exactement de quoi faire une portion et ferme le
+      carton. Le second est placé près de la marmite : il reçoit ce carton, vérifie que tout peut entrer, puis dépose
+      les ingrédients dans le Cooking Pot.
+    </p>
     <div class="food-industrial-two-columns">
       <article>
         <h3>1. Prépare la réserve de recette</h3>
@@ -251,6 +307,14 @@
         <article><b>Arm B</b><span>Cooking Pot</span><i>→</i><span>stock des plats</span></article>
       </div>
     </div>
+    <div class="food-industrial-explanation">
+      <strong>Ce que tu dois voir en jeu</strong>
+      <p>
+        Le colis arrive par le Belt et disparaît lorsqu’il est déballé. Les trois ingrédients apparaissent dans le
+        Cooking Pot. L’Arm A dépose ensuite un Bowl. Après la cuisson, l’Arm B prend le Beef Stew et le pose dans le
+        stockage de sortie. Si une de ces actions ne se produit pas, tu sais exactement quelle partie vérifier.
+      </p>
+    </div>
     <p class="food-note">
       <strong>Pourquoi deux bras ?</strong> Un seul peut gérer plusieurs points, mais deux circuits séparés sont plus
       faciles à régler, à observer et à dépanner pour une première usine.
@@ -265,6 +329,10 @@
         <h2>Faire un seul plat et regarder chaque étape</h2>
       </div>
     </div>
+    <p class="food-lead">
+      Reste à côté de la ligne pour ce premier essai. Ne remplis pas les coffres et ne laisse pas tourner la production
+      en boucle : le but est de voir une seule portion traverser toute l’installation.
+    </p>
     <div class="food-industrial-test">
       <article><b>1</b><span>Coupe toutes les alimentations automatiques</span></article>
       <i>→</i>
@@ -291,6 +359,17 @@
       </article>
     </div>
   </section>
+
+  <div class="food-industrial-chapter">
+    <span>Troisième partie</span>
+    <div>
+      <h2>Transformer le prototype en véritable cuisine centrale</h2>
+      <p>
+        La première cellule a prouvé que le principe fonctionne. On peut maintenant préparer les ingrédients en amont,
+        ajouter d’autres recettes et relier les sorties au reste du serveur.
+      </p>
+    </div>
+  </div>
 
   <section class="food-section food-kitchen-step" id="food-industrial-preparation" data-phase="Agrandir">
     <div class="food-title">
@@ -373,6 +452,10 @@
       <i>→</i>
       <article><b>Spout</b><small>remplit les Tankards</small></article>
     </div>
+    <p class="food-lead food-industrial-after-flow">
+      Cette branche ne remplace pas la cellule de cuisson : elle vient à côté. Les aliments solides continuent vers les
+      Cooking Pots, tandis que les boissons disposent de leurs propres Tanks, Fluid Pipes et zones de fermentation.
+    </p>
     <p class="food-note">
       <strong>Le Keg garde ses propres règles.</strong> Le colis fournit les ingrédients solides, mais les liquides, le
       temps de fermentation et la récupération du résultat doivent toujours être prévus dans la ligne.

@@ -1162,6 +1162,10 @@ Ici, on ne pose plus deux machines autour d’un Cooking Pot. On construit un vr
 rotation, des réserves, des tapis roulants, des Packagers et des Mechanical Arms. C’est imposant, ça demande des
 ressources et ça prend du temps, mais le résultat peut alimenter un restaurant, une gare ou une ville entière.
 
+L’objectif de ce guide n’est pas de te faire mémoriser une liste de machines. On va suivre un seul Beef Stew du
+coffre d’ingrédients jusqu’au stockage final, comprendre ce qui se passe à chaque étape, puis utiliser cette
+première ligne comme modèle pour le reste de l’usine.
+
 01
 
 Avant de poser les machines
@@ -1195,28 +1199,42 @@ manipuler les postes de cuisine que tu utilises déjà.
 
 ### Packager
 
-Place une recette complète dans un colis, puis décharge cette recette dans un Cooking Pot ou un Keg.
+Il prépare l’équivalent d’un kit de cuisine : tous les ingrédients d’une portion sont réunis dans le même
+colis. Un second Packager ouvre ensuite ce colis directement dans le Cooking Pot.
 
 ### Mechanical Arm
 
-Apporte les récipients, récupère les plats terminés et manipule plusieurs postes culinaires.
+Il s’occupe des gestes qui restent autour de la recette. Dans notre prototype, un bras apporte les Bowls et un
+autre récupère les Beef Stews terminés.
 
 ### Deployer ou Mechanical Saw
 
-Automatise la découpe sur une Cutting Board. Le Deployer doit tenir un Knife et être en mode Use.
+Plus tard, ils remplaceront le joueur devant la Cutting Board. Le Deployer doit tenir un Knife et être en mode
+Use, tandis que la Mechanical Saw peut effectuer directement certaines découpes.
 
 ### Blaze Burner
 
-Chauffe les ustensiles de cuisine et peut accélérer certaines cuissons selon son niveau de chaleur.
+C’est le feu sous la marmite. Sans source de chaleur valide, les ingrédients peuvent être présents et la
+production rester parfaitement immobile.
 
 **Le meilleur réflexe :** survole un Cooking Pot, une Cutting Board ou un Keg dans JEI et maintiens
 `W`. Les scènes Ponder montrent directement leurs interactions avec Create.
+
+Première partie
+
+## Dessiner le trajet avant de poser les machines
+
+On commence par suivre la nourriture. Chaque zone doit avoir une entrée claire, une sortie claire et assez de
+stockage pour que la chaîne ne s’arrête pas au premier coffre plein.
 
 03
 
 La carte de l’usine
 
 ## Comprendre le trajet d’un plat avant de construire
+
+Les ingrédients arrivent d’abord dans un entrepôt général. Ils sont ensuite dosés dans une petite réserve dédiée
+au Beef Stew. Cette séparation évite qu’un Packager prenne trois Potatoes et aucun Raw Beef au mauvais moment.
 
 **Fermes et livraisons** matières premières
 
@@ -1253,6 +1271,12 @@ Une recette, une cellule
 Le Beef Stew est parfait pour comprendre le système : trois ingrédients solides entrent dans le colis, un Bowl
 arrive séparément et le Cooking Pot produit un plat terminé. Tant que cette cellule ne fonctionne pas, ne la
 duplique pas.
+
+**Pourquoi le Bowl voyage-t-il à part ?**
+
+Le colis représente la recette à cuisiner. Le Bowl est le récipient utilisé au moment de servir. Central Kitchen
+conserve cette différence : les ingrédients sont déballés dans la marmite, puis un Mechanical Arm lui apporte le
+Bowl quand elle en a besoin.
 
 **1 Raw Beef**
 
@@ -1321,11 +1345,22 @@ Liste de courses
 
 - de la place pour circuler
 
+Deuxième partie
+
+## Construire une cellule que l’on peut regarder fonctionner
+
+Le prototype tient volontairement en peu de machines. Tu dois pouvoir suivre le colis des yeux, voir le Bowl
+arriver et repérer immédiatement l’endroit où le plat s’est arrêté.
+
 06
 
 Cellule de conditionnement
 
 ## Fabriquer un colis que la marmite peut réellement accepter
+
+Imagine un service de paniers-repas. Le premier Packager prend exactement de quoi faire une portion et ferme le
+carton. Le second est placé près de la marmite : il reçoit ce carton, vérifie que tout peut entrer, puis dépose
+les ingrédients dans le Cooking Pot.
 
 ### 1. Prépare la réserve de recette
 
@@ -1384,6 +1419,12 @@ Cellule de cuisson
 
 **Arm B** Cooking Pot→stock des plats
 
+**Ce que tu dois voir en jeu**
+
+Le colis arrive par le Belt et disparaît lorsqu’il est déballé. Les trois ingrédients apparaissent dans le
+Cooking Pot. L’Arm A dépose ensuite un Bowl. Après la cuisson, l’Arm B prend le Beef Stew et le pose dans le
+stockage de sortie. Si une de ces actions ne se produit pas, tu sais exactement quelle partie vérifier.
+
 **Pourquoi deux bras ?** Un seul peut gérer plusieurs points, mais deux circuits séparés sont plus
 faciles à régler, à observer et à dépanner pour une première usine.
 
@@ -1392,6 +1433,9 @@ faciles à régler, à observer et à dépanner pour une première usine.
 Premier démarrage
 
 ## Faire un seul plat et regarder chaque étape
+
+Reste à côté de la ligne pour ce premier essai. Ne remplis pas les coffres et ne laisse pas tourner la production
+en boucle : le but est de voir une seule portion traverser toute l’installation.
 
 **1** Coupe toutes les alimentations automatiques
 
@@ -1422,6 +1466,13 @@ Vérifie la chaleur, le Bowl et les éventuels liquides demandés.
 ### Le plat reste dans la marmite
 
 Vérifie les points du Mechanical Arm, son filtre et la place dans le stockage final.
+
+Troisième partie
+
+## Transformer le prototype en véritable cuisine centrale
+
+La première cellule a prouvé que le principe fonctionne. On peut maintenant préparer les ingrédients en amont,
+ajouter d’autres recettes et relier les sorties au reste du serveur.
 
 09
 
@@ -1503,6 +1554,9 @@ Ajouter une branche liquide
 →
 
 **Spout** remplit les Tankards
+
+Cette branche ne remplace pas la cellule de cuisson : elle vient à côté. Les aliments solides continuent vers les
+Cooking Pots, tandis que les boissons disposent de leurs propres Tanks, Fluid Pipes et zones de fermentation.
 
 **Le Keg garde ses propres règles.** Le colis fournit les ingrédients solides, mais les liquides, le
 temps de fermentation et la récupération du résultat doivent toujours être prévus dans la ligne.
