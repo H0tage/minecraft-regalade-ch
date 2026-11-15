@@ -20,6 +20,7 @@
 
   const tutorialOrder = [
     ['tutorial-economy-tab', 'tutorial-economy'],
+    ['tutorial-create-first-factory-tab', 'tutorial-create-first-factory'],
     ['tutorial-big-cannons-tab', 'tutorial-big-cannons'],
     ['tutorial-stargates-tab', 'tutorial-stargates']
   ];

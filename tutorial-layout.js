@@ -68,7 +68,7 @@
   function chapterSections(panel) {
     if (!panel) return [];
     const preferred = [
-      ...panel.querySelectorAll('.install-step, .sg-step[id], .cbc-overview-section[id], .cbc-survival-step[id], .eco-section[id]')
+      ...panel.querySelectorAll('.install-step, .sg-step[id], .cbc-overview-section[id], .cbc-survival-step[id], .eco-section[id], .cff-step[id]')
     ].filter(isVisible);
     if (preferred.length) return preferred;
     return [...panel.querySelectorAll('section[id], article[id]')].filter(isVisible);
