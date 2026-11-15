@@ -1097,6 +1097,16 @@
   line-height: 1.4;
 }
 
+.food-industrial-hero h1 {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  line-height: 1.06;
+}
+
+#food-industrial-panel .food-title h2 {
+  font-size: clamp(1.2rem, 2.1vw, 1.58rem);
+  line-height: 1.12;
+}
+
 .food-industrial-zones,
 .food-industrial-tools,
 .food-industrial-shopping,
