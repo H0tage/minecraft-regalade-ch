@@ -154,8 +154,9 @@ Les procédés
 
 ## Faire plein de trucs avec tes ressources
 
-Une même matière peut être broyée, pressée, lavée, mélangée ou passer par plusieurs machines à la suite. Selon le
-procédé choisi, le rendement et les produits obtenus peuvent changer.
+Une même ressource peut être broyée, pressée, lavée, mélangée, puis repasser dans trois autres machines parce que
+visiblement la première transformation ne suffisait pas. Le chemin choisi change le rendement et parfois même le
+produit final.
 
 **Broyage** broyer avec une meule
 
@@ -242,9 +243,9 @@ De la pierre au fer
 
 # Construire une première usine Create
 
-Cette installation transforme automatiquement une source infinie de Cobblestone en
-**Iron Ingots** et en **Flint** . Chaque module sera construit et testé séparément
-avant de former l’usine complète.
+On va partir d’un caillou gratuit et finir avec des **Iron Ingots** et du **Flint** .
+C’est une vraie petite usine, mais on va la monter morceau par morceau. Comme ça, si un truc refuse de
+tourner, tu sauras au moins lequel.
 
 01
 
@@ -252,8 +253,9 @@ Vue d’ensemble
 
 ## Comprendre la chaîne avant de poser un bloc
 
-La Cobblestone est générée gratuitement, broyée en Gravel, lavée puis compactée. Le Flint sort sur une branche
-séparée.
+La Cobblestone apparaît gratuitement, devient de la Gravel, prend une grosse douche industrielle puis finit
+compactée en fer. Le Flint sort au passage sur une branche séparée au lieu de venir boucher le reste de la
+chaîne.
 
 **Cobblestone** source infinie
 
@@ -327,8 +329,9 @@ Liste de courses
 
 ## Fabriquer les composants du prototype
 
-Les machines fixes sont exactes. La quantité de transmission contient une petite marge afin que tu puisses
-espacer les modules sans devoir recompter chaque Shaft.
+Les machines indiquées sont le strict nécessaire. Pour les Shafts et les engrenages, on garde volontairement un
+peu de marge : personne n’a envie de recompter toute sa transmission parce que le mur était deux blocs plus loin
+que prévu.
 
 **1 Water Wheel** 1 Shaft + 8 Planks
 
@@ -355,7 +358,8 @@ espacer les modules sans devoir recompter chaque Shaft.
 Deux seaux d’eau et un seau de lave : un jeu pour la Cobblestone, un autre point d’eau pour le lavage.
 
 **Cette usine demande du fer avant d’en produire.** Il faut notamment un Iron Block pour la
-Mechanical Press. Elle devient autonome après sa construction ; elle ne se construit pas à partir de rien.
+Mechanical Press. Oui, il faut donc déjà avoir du fer pour fabriquer la machine à fer. Elle devient autonome
+après, pas avant.
 
 04
 
@@ -525,8 +529,8 @@ Relier les modules
 
 ## Faire circuler les objets et la rotation
 
-Pense l’usine comme deux réseaux superposés : les objets avancent en surface ; la rotation circule sous le sol
-ou derrière les machines.
+Imagine deux usines posées l’une sur l’autre. En surface, les objets avancent. Sous le sol ou derrière les murs,
+les Shafts font tourner tout le bazar. Si tu mélanges les deux partout, le dépannage devient vite infernal.
 
 **Objets** Drill→Millstone→Washing→Tri→Basin
 
@@ -603,7 +607,8 @@ réseau devient **Overstressed** et s’arrête.
 **Prototype complet** 144 / 256 SU · marge de 112 SU
 
 **N’accélère pas encore le réseau.** Une augmentation de RPM augmente aussi la consommation.
-Termine d’abord une usine stable à 8 RPM.
+Termine d’abord une usine stable à 8 RPM. Une usine lente qui marche reste plus utile qu’un monstre très rapide
+qui s’éteint toutes les six secondes.
 
 12
 

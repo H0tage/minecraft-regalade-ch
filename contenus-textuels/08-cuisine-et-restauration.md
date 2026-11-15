@@ -21,8 +21,8 @@ Faire pousser, transformer, cuisiner, servir
 # De la bouffe à l’assiette
 
 Faire pousser des trucs, les découper, les cuire, les transformer en plats, en boissons ou en produits plus
-élaborés et, pourquoi pas, monter tout un restaurant autour. Cette partie présente les possibilités offertes par
-les différents mods culinaires avant de commencer à construire une vraie cuisine.
+élaborés et, pourquoi pas, monter tout un restaurant autour. Avant de remplir une pièce avec quinze machines
+dont tu ignores l’utilité, on va surtout voir ce que tous ces mods permettent réellement de faire.
 
 01
 
@@ -30,9 +30,9 @@ Bien plus que remplir la barre de faim
 
 ## Tout ce qu’on peut faire avec de la nourriture
 
-La cuisine ne se limite plus à poser un steak dans un four. Les ingrédients passent par plusieurs préparations,
-les plats utilisent de vrais postes de travail et toute une activité peut se construire autour de leur
-production.
+Ici, la cuisine ne consiste plus à jeter un steak dans un four et attendre. Tu peux découper, mélanger,
+fermenter, faire vieillir, servir et finalement construire toute une activité autour d’un truc qui, au départ,
+était juste une patate.
 
 ### Cuisiner de vrais repas
 
@@ -104,8 +104,8 @@ Qui fait quoi là-dedans ?
 
 ## Plusieurs mods, mais un seul écosystème
 
-Tous ces mods ne remplacent pas Farmer’s Delight avec une autre version de la même cuisine. Ils ajoutent plutôt
-des couches différentes : les bases, l’automatisation, les boissons ou des métiers plus spécialisés.
+Les mods ne sont pas six versions concurrentes de la même casserole. Farmer’s Delight pose les bases, puis les
+autres viennent ajouter l’automatisation, les boissons ou des métiers beaucoup plus précis.
 
 ### Farmer’s Delight
 
@@ -156,7 +156,8 @@ Donner une forme à la production
 ## Quel genre d’endroit construire ?
 
 Rien ne t’oblige à installer toutes les machines et toutes les cultures dans le même hangar. Choisir une
-activité permet de construire un lieu cohérent, puis de l’agrandir quand de nouveaux besoins apparaissent.
+activité permet de construire un endroit qui ressemble à quelque chose, puis de l’agrandir quand tu as une vraie
+raison de le faire.
 
 ### Une ferme
 
@@ -264,8 +265,8 @@ sera grillé directement sur le Four et le second terminera dans la Marmite.
 
 1 portion + Carotte + Pomme de terre→**Marmite** →**Ragoût de bœuf**
 
-**Le point important :** on ne fabrique pas une décoration de cuisine. À la fin, chaque poste aura
-réellement servi.
+**Le point important :** on ne fabrique pas trois jolis blocs pour les oublier sur un plan de
+travail. À la fin, chaque poste aura réellement servi à produire quelque chose.
 
 02
 
@@ -498,7 +499,7 @@ Du plat cuisiné à la chaîne de production
 
 On reprend le Ragoût de bœuf du parcours précédent, mais cette fois personne ne remplit la Marmite à la main. Les
 ingrédients arrivent sur un tapis, un Mechanical Mixer s’occupe de la cuisson et le plat terminé repart vers son
-coffre.
+coffre. En gros, on remplace le cuisinier par une quantité probablement déraisonnable d’engrenages.
 
 01
 
@@ -507,7 +508,8 @@ Ce qu’on remplace
 ## Passer de la cuisine manuelle à la cuisine Create
 
 Les recettes restent les mêmes. Ce sont les postes de travail et le transport qui changent. Le but n’est pas de
-réinventer le Ragoût, mais de faire exécuter chaque geste par une machine.
+réinventer le Ragoût, mais de regarder chaque geste manuel et de se demander quelle machine peut le faire à ta
+place.
 
 **Planche à découper** travail manuel au Couteau
 
@@ -715,7 +717,8 @@ Avant les tapis
 ## Valider la recette directement dans le Basin
 
 Teste toujours la machine centrale avant d’ajouter la logistique. Si le Ragoût fonctionne maintenant mais plus
-tard avec les Belts, tu sauras que le problème vient du transport et pas de la recette.
+tard avec les Belts, tu sauras que le problème vient du transport. Sinon, tu vas démonter la moitié de la cuisine
+en accusant une recette parfaitement innocente.
 
 **1 Bœuf cru**
 
@@ -854,7 +857,7 @@ Trouver le projet qui donnera une identité à ta cuisine
 
 Tu sais préparer un repas et construire une première chaîne automatique. Maintenant, tu peux décider si ton
 bâtiment deviendra une boulangerie, un vignoble, une fromagerie, un café ou une brasserie. Chaque filière part de
-ressources différentes et ne demande pas le même type d’installation.
+ressources différentes, et surtout elles ne racontent pas du tout la même histoire une fois posées dans le monde.
 
 01
 
@@ -862,8 +865,9 @@ Le bâtiment avant les recettes
 
 ## Choisis d’abord ce que tu as envie de faire vivre
 
-Ne commence pas par fabriquer toutes les machines de tous les mods. Choisis un lieu, un produit emblématique et
-une première chaîne courte. Le reste viendra quand tu auras réellement envie d’agrandir ton activité.
+Ne fabrique pas toutes les machines de tous les mods juste parce qu’elles existent dans JEI. Choisis un lieu, un
+produit qui te fait marrer et une première chaîne courte. Le reste viendra quand tu auras une vraie raison
+d’agrandir.
 
 ### Une boulangerie
 
@@ -1151,8 +1155,8 @@ Une filière, un bâtiment, un produit
 **4** Automatise uniquement ce qui te fait perdre du temps
 
 Tu n’as pas besoin de choisir définitivement. Une boulangerie peut acheter son lait à une fromagerie, un café
-vendre les pâtisseries d’un autre joueur et une brasserie alimenter plusieurs tavernes. Les spécialités servent
-surtout à créer des échanges et des lieux différents sur le serveur.
+vendre les pâtisseries d’un autre joueur et une brasserie alimenter plusieurs tavernes. C’est même le but : avoir
+des endroits et des échanges différents, pas quinze joueurs qui possèdent chacun la même giga-cuisine.
 
 De la cuisine automatisée à l’usine alimentaire
 
@@ -1162,9 +1166,9 @@ Ici, on ne pose plus deux machines autour d’un Cooking Pot. On construit un vr
 rotation, des réserves, des tapis roulants, des Packagers et des Mechanical Arms. C’est imposant, ça demande des
 ressources et ça prend du temps, mais le résultat peut alimenter un restaurant, une gare ou une ville entière.
 
-L’objectif de ce guide n’est pas de te faire mémoriser une liste de machines. On va suivre un seul Beef Stew du
-coffre d’ingrédients jusqu’au stockage final, comprendre ce qui se passe à chaque étape, puis utiliser cette
-première ligne comme modèle pour le reste de l’usine.
+Pas question de te balancer une liste de vingt machines en espérant que ça forme une usine par magie. On va suivre
+un seul Beef Stew du coffre jusqu’au stockage final, comprendre ce qui se passe, puis copier cette première ligne
+quand elle fonctionne vraiment.
 
 01
 
@@ -1173,7 +1177,8 @@ Avant de poser les machines
 ## Prévoir un bâtiment, pas un coin cuisine
 
 Une Central Kitchen fonctionne comme une petite usine. Il faut pouvoir circuler autour des machines, atteindre les
-coffres, modifier les filtres et ajouter une nouvelle ligne sans démolir la moitié du bâtiment.
+coffres, modifier les filtres et ajouter une ligne sans démolir la moitié du bâtiment. Le couloir technique paraît
+inutile jusqu’au jour où un Funnel au fond décide de tout bloquer.
 
 **Réception** fermes, élevages et livraisons
 
@@ -1195,7 +1200,8 @@ Ce que fait réellement le mod
 ## Central Kitchen relie les blocs de cuisine aux machines Create
 
 Le mod n’ajoute pas une machine magique capable de préparer tous les plats. Il permet aux outils Create de
-manipuler les postes de cuisine que tu utilises déjà.
+manipuler les postes de cuisine que tu utilises déjà. C’est moins spectaculaire qu’un bloc « usine à steak », mais
+beaucoup plus intéressant à construire.
 
 ### Packager
 

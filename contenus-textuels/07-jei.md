@@ -24,8 +24,9 @@ Le principe
 
 ## Trouver un objet, sa recette et son utilité
 
-Ouvre ton inventaire. La grande liste à droite, c’est JEI. La barre tout en bas permet de chercher un objet sans
-fouiller neuf pages de blocs presque identiques.
+Ouvre ton inventaire. Le gros mur d’objets à droite, c’est JEI. Au lieu de fouiller neuf pages de blocs presque
+identiques en te demandant lequel est le bon, tu tapes quelques lettres dans la barre tout en bas. Voilà, tu viens
+déjà de gagner dix minutes.
 
 **1. Cherche l’objet**
 Tape une partie de son nom dans la barre de recherche
@@ -86,8 +87,8 @@ Les écrans de recette
 
 ## Comprendre ce que le jeu te demande réellement
 
-JEI ne montre pas seulement l’établi. Il affiche aussi les recettes des fours, des machines Create, des bassins,
-des presses, des ventilateurs et de tout ce que les autres mods ont décidé d’inventer.
+JEI ne s’arrête pas à l’établi. Il connaît aussi les fours, les machines Create, les bassins, les presses, les
+ventilateurs et globalement toutes les idées plus ou moins raisonnables ajoutées par les autres mods.
 
 **Entrées**
 les objets et liquides à fournir
@@ -120,8 +121,9 @@ Le truc vraiment pratique
 
 ## Voir les machines Create fonctionner avant de les construire
 
-Create ajoute ses propres démonstrations animées. Tu peux donc passer d’une recette à une petite scène qui montre
-comment placer la machine, par où arrivent les objets et ce qui doit tourner.
+Create fait encore mieux : certains objets ont une petite démonstration animée. Tu vois réellement comment la
+machine se pose, par où les objets arrivent et quel bout est censé tourner. Quand un montage te paraît
+incompréhensible, commence franchement par là.
 
 **1** Trouve un composant Create dans JEI
 
@@ -170,8 +172,9 @@ Les vrais identifiants du pack, sans jeu de devinettes
 
 # Filtres JEI par mod
 
-Tape le code dans la barre de recherche de JEI pour n’afficher que les objets du mod correspondant. Tu peux
-ajouter un mot après le filtre, par exemple `@create train` ou `@chipped verre`.
+Copie le code dans la barre de JEI et tous les autres mods dégagent temporairement de la liste. Tu peux même
+ajouter un mot derrière, par exemple `@create train` ou `@chipped verre`, pour éviter de
+chercher une aiguille dans une botte de blocs.
 
 01
 
@@ -179,9 +182,9 @@ Liste du pack
 
 ## Quel code taper dans JEI ?
 
-Le tableau contient les mods qui ajoutent des objets ou des blocs utiles à consulter. Les bibliothèques, les mods
-de performances et les modifications purement visuelles ne sont pas là, puisqu’ils ne donnent rien d’intéressant à
-chercher dans JEI.
+On a gardé ici les mods qui ajoutent vraiment des objets ou des blocs. Les bibliothèques, les optimisations et les
+trucs purement visuels ne sont pas dans le tableau : taper leur nom dans JEI ne t’apporterait de toute façon pas
+grand-chose.
 
 Rechercher un mod
 
@@ -492,4 +495,5 @@ Trading Post
 `@tradingpost`
 
 **Un filtre paraît vide ?** Certains petits addons ajoutent surtout des recettes ou modifient les
-objets d’un autre mod. Dans ce cas, cherche l’objet par son nom ou utilise le filtre du mod principal.
+objets d’un autre mod. Ce n’est pas forcément cassé : cherche directement le nom de l’objet ou utilise le filtre
+du mod principal.

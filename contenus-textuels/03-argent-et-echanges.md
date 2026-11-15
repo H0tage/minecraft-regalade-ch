@@ -16,9 +16,9 @@ De la première ressource à la première pièce
 
 # Faire entrer de l’argent dans le monde
 
-Une récolte, une prise de pêche ou un petit boulot peut devenir de la monnaie. Ce premier parcours montre d’où
-viennent les pièces, comment réaliser une vente volontaire et comment vérifier les prix sans apprendre un
-catalogue par cœur.
+Tu peux pêcher, cultiver, remplir une mission ou simplement avancer dans le jeu et finir avec quelques pièces en
+poche. Ce parcours montre d’où sort cet argent et comment vendre tes premiers objets sans devoir apprendre la
+cote officielle de la patate par cœur.
 
 [Illustration : Sprocket]
 
@@ -32,8 +32,9 @@ La règle essentielle
 
 ## Création et circulation de l’argent
 
-Le serveur peut créer des pièces pour certaines actions. Une Boutique, elle, ne crée rien : elle transmet
-simplement l’argent d’un joueur à un autre.
+Il y a une différence importante. Certaines actions font apparaître de nouvelles pièces. Une Boutique, elle, se
+contente de prendre l’argent d’un joueur pour le donner à un autre. Sinon, on aurait inventé une splendide machine
+à inflation infinie.
 
 **Progrès** Vanilla et Create
 
@@ -63,8 +64,8 @@ L’outil de départ
 
 ## Fabriquer un Selling Bin
 
-Le Selling Bin rachète certains objets et crée les pièces correspondantes. Ce n’est pas une boutique destinée aux
-autres joueurs.
+Le Selling Bin, c’est le bac de vente de Stardew Valley : tu poses dedans une ressource autorisée et le serveur te
+la rachète. Aucun autre joueur n’est impliqué, et ce n’est donc pas encore ta future supérette.
 
 [Illustration : Selling Bin]
 
@@ -85,7 +86,8 @@ SlabBarrelSlab SlabSlabSlab
 
 - JEI montre les objets rachetés et les monnaies proposées
 
-La liste vient directement du pack : elle reste correcte même si un prix est modifié plus tard.
+La liste vient directement du pack. Si un prix change un jour, JEI restera donc plus fiable qu’un vieux
+tableau perdu sur Discord.
 
 03
 
@@ -138,8 +140,8 @@ Six dénominations
 
 ## Lire la valeur des pièces
 
-Toutes les pièces représentent la même monnaie. Une grosse pièce évite simplement de transporter une pile entière
-de petites pièces.
+Toutes ces pièces représentent la même monnaie. Les grosses coupures servent juste à éviter de transporter
+l’équivalent d’un salaire entier sous forme de petite ferraille.
 
 [Illustration : Spur]
 **Spur** 1
@@ -197,8 +199,9 @@ Des pièces physiques au compte bancaire
 
 # Déposer, retirer et payer par carte
 
-Quelques pièces dans un coffre suffisent au début. Lorsque ton atelier sait produire des Precision Mechanisms,
-tu peux construire une véritable infrastructure bancaire.
+Au début, un coffre rempli de pièces fait parfaitement l’affaire. Quand ton atelier commence à sortir des
+Precision Mechanisms, tu peux arrêter de vivre comme un pirate et construire un vrai compte bancaire avec sa
+carte.
 
 [Illustration : Terminal bancaire]
 
@@ -220,7 +223,8 @@ Trois éléments
 
 **Carte bancaireUne clé vers le compte
 
-**À retenirLa carte ne contient pas l’argent. Le solde reste sur le compte même si la carte est perdue ou détruite.
+**À retenirLa carte ne contient pas ton argent, elle ouvre simplement l’accès au compte. Si tu la perds dans la lave, ton
+solde ne part pas avec. Heureusement.
 
 02
 
@@ -247,7 +251,7 @@ Ton compte personnel est créé automatiquement au premier accès.
 
 ### Vérifie le compte
 
-L’interface doit afficher ton nom et ton solde actuel. Aucun formulaire ni commande n’est nécessaire.
+L’interface doit afficher ton nom et ton solde. Pas de formulaire absurde à remplir, le compte existe déjà.
 
 03
 
@@ -333,15 +337,15 @@ La Boutique prélève les pièces compatibles que tu transportes.
 L’argent reste sur le compte et un joueur non autorisé ne peut pas utiliser ta carte personnelle. Tu peux
 simplement en fabriquer et en lier une nouvelle.
 
-Les Authorized Cards permettent de déléguer des accès à des sous-comptes. C’est une fonction avancée,
-volontairement laissée hors de ce parcours.
+Les Authorized Cards servent à donner accès à des sous-comptes. C’est utile pour une entreprise ou un projet de
+groupe, mais clairement pas nécessaire pour acheter ton premier sandwich.
 
 Du surplus au commerce entre joueurs
 
 # Ouvrir une première Boutique
 
-Le Selling Bin injecte de l’argent contre des ressources configurées par le serveur. Une Boutique fait autre
-chose : elle permet à un joueur de vendre ses propres produits aux autres, même lorsqu’il est absent.
+Le Selling Bin vend tes ressources au serveur. La Boutique, c’est autre chose : tu choisis le produit, le prix
+et le stock, puis les autres joueurs peuvent venir acheter même si tu es parti miner à trois kilomètres.
 
 [Illustration : Boutique Numismatics]
 
@@ -370,8 +374,8 @@ Le bloc de commerce
 
 Framed Glass↓Brass Casing↓Electron Tube→** 1 Boutique**
 
-**Avant de la configurerChoisis un produit simple, la quantité vendue à chaque transaction, un prix lisible et prépare un petit
-stock.
+**Avant de la configurerCommence avec un produit simple, une quantité évidente et un prix que les gens peuvent lire sans sortir une
+calculatrice. Prépare aussi un petit stock pour le test.
 
 03
 
@@ -450,8 +454,8 @@ L’acheteur paie avec sa carte tenue en main ou avec ses pièces.
 
 L’objet doit arriver chez l’acheteur, le stock baisser et le vendeur recevoir le paiement.
 
-En étant accroupi pendant le clic droit, l’acheteur peut effectuer plusieurs transactions, jusqu’à la limite d’une
-pile et des ressources disponibles.
+En restant accroupi pendant le clic droit, l’acheteur peut enchaîner plusieurs transactions. Pratique pour acheter
+douze repas sans cliquer comme un forcené.
 
 05
 
@@ -479,7 +483,7 @@ Optionnel
 ## Faire racheter des objets par la Boutique
 
 Le mode **Buy / Achat** inverse la transaction : la Boutique reçoit l’objet tenu par le joueur et lui
-verse le prix configuré.
+verse le prix configuré. En gros, tu transformes ton commerce en point de rachat automatique.
 
 **Objet tenu par le joueur**
 

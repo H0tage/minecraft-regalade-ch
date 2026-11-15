@@ -14,8 +14,9 @@ Create Big Cannons · les bases
 
 # Comprendre un canon avant de le construire.
 
-Un gros canon n’est pas une recette unique : c’est une ligne de pièces compatibles. Voici les règles à comprendre
-avant de choisir un matériau ou de fabriquer le moindre bloc.
+Un gros canon n’est pas « un bloc canon » avec une recette. C’est une ligne de pièces qui doivent toutes être
+compatibles et correctement placées. On va donc comprendre sa forme avant de couler cinquante blocs de métal pour
+découvrir ensuite que la bouche était du mauvais côté.
 
 01
 
@@ -74,8 +75,9 @@ puissance nécessaire pour parcourir le tube sans incident.
 
 **Canon assez résistant** sinon la charge le fait rompre
 
-**En résumé :** la longueur maximale d’un gros canon n’est pas donnée directement par son matériau.
-Le matériau décide surtout si la charge nécessaire à cette longueur peut être utilisée sans danger.
+**En résumé :** le matériau ne pose pas simplement un chiffre « longueur maximale ». Il décide
+surtout si ton canon survivra à la charge nécessaire pour exploiter cette longueur. Oui, la nuance est un peu
+vicieuse.
 
 [Big Cannon / Gros canon]
 
@@ -174,7 +176,8 @@ Un gros canon suit toujours le même ordre :
 **fermeture arrière → chambre(s) pour la poudre → canon(s) → bouche ouverte** . La poudre augmente
 surtout la vitesse et la portée ; le matériau limite la charge et la longueur utilisables sans casse.
 
-La suite se trouve dans **Premier autocanon** , un parcours complet pensé pour une partie en survie.
+Quand ce schéma te paraît enfin logique, passe à **Premier autocanon** . Là, on fabrique vraiment tout
+en survie, de la fonte jusqu’au premier tir.
 
 De zéro au premier tir
 
@@ -196,7 +199,8 @@ Le projet
 
 Pour un premier essai, construis un autocanon en **fonte** composé d’une
 **[Breech / Culasse]** , d’un **[Recoil Spring / Ressort de recul]** et de deux
-**[Barrels / Canons]** .
+**[Barrels / Canons]** . Ce n’est pas le monstre ultime, mais c’est assez complet pour apprendre toute
+la chaîne sans sacrifier ta semaine entière.
 
 **Pourquoi la fonte ?** Elle se fabrique tôt avec du fer et du charbon.
 
@@ -206,8 +210,8 @@ Pour un premier essai, construis un autocanon en **fonte** composé d’une
 
 **B · Chariot mobileDevient un véhicule d’artillerie. Choisis cette route pour rouler, viser et tirer depuis le chariot.
 
-**Choisis maintenant :** le tube de l’autocanon reste identique, mais la liste de courses du support
-change.
+**Choisis maintenant :** le tube reste identique dans les deux cas. C’est seulement le support et sa
+liste de courses qui changent, donc inutile de recommencer le canon si tu changes d’avis.
 
 02
 
@@ -324,7 +328,8 @@ canons.
 le moule central de chaque couche.
 
 Chaque étage se prépare de la même manière. Le **deuxième clic** est indispensable : sans lui, tu
-n’as pas encore créé une véritable couche de coulée.
+n’as pas encore créé une véritable couche de coulée. C’est typiquement le clic qu’on oublie avant d’accuser le mod
+de ne pas fonctionner.
 
 **1 · Poser le moulePlace au sol le moule en bois correspondant à la pièce.
 
@@ -390,7 +395,8 @@ Usinage
 ## Aléser le tube de part en part.
 
 Les pièces sorties du moule sont pleines. Il faut créer leur passage intérieur avec la
-**[Cannon Drill / Foreuse à canon]** .
+**[Cannon Drill / Foreuse à canon]** . Pour l’instant, tu as donc surtout fabriqué une très jolie
+barre de fonte extrêmement lourde.
 
 **Rotation Create** fait avancer la foreuse
 
@@ -569,7 +575,8 @@ Assemblage et premier tir
 ## Suivre la procédure de ton support.
 
 Assembler signifie convertir la rangée de blocs en une seule contraption utilisable. Il ne faut pas de colle : le
-support récupère automatiquement toutes les pièces correctement connectées.
+support récupère automatiquement toutes les pièces correctement connectées. Si un morceau reste au sol, ce n’est
+pas décoratif : il manque une connexion quelque part.
 
 A · Tourelle sur affût
 
@@ -664,7 +671,8 @@ Après le prototype
 ## Améliorer :)
 
 Ton premier autocanon valide toute la chaîne : fonte, coulée connectée, alésage, ressort interne, finition de la
-culasse, affût et munitions. Tu peux maintenant choisir une seule piste à la fois.
+culasse, affût et munitions. Autrement dit, le prochain sera beaucoup moins terrifiant à fabriquer. Choisis quand
+même une seule amélioration à la fois, histoire de savoir ce qui a cassé si ça explose.
 
 **Changer de matériau** Passe au bronze ou à l’acier pour construire un canon plus performant.
 

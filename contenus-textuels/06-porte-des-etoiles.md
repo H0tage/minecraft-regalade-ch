@@ -16,8 +16,9 @@ Fonctionnement général
 
 # Comprendre une porte avant de construire l’usine
 
-Une installation complète repose sur quatre éléments : la porte, son clavier de composition, une interface
-énergétique et un stock d’électricité externe.
+Une porte seule ne fait pas grand-chose à part être très impressionnante au milieu d’une pièce. Pour voyager, il
+faut quatre éléments : la porte, son clavier, une interface énergétique et surtout un vrai stock d’électricité
+derrière.
 
 Stargate Journey 0.6.54 · règles énergétiques Régalade
 
@@ -60,8 +61,9 @@ B
 
 **1,36 MFE** dans la porte elle-même
 
-**Deux stratégies restent valables :** une petite production avec de gros accumulateurs pour voyager rarement,
-ou une centrale assez puissante pour soutenir la porte presque en continu.
+**Deux stratégies restent valables :** produire tranquillement et remplir de gros accumulateurs entre deux
+voyages, ou construire une centrale capable d’encaisser presque tout en direct. Les deux marchent, mais pas avec
+la même taille d’usine.
 
 C
 
@@ -81,7 +83,7 @@ Adresses
 d’origine et lance l’appel.
 
 Construire une porte ne suffit pas à créer une destination connue : il faut également obtenir l’adresse d’une
-porte sauvage, du spawn ou d’un autre joueur.
+porte sauvage, du spawn ou d’un autre joueur. Sans adresse, tu possèdes surtout un cercle hors de prix.
 
 D
 
@@ -103,8 +105,9 @@ De l’atelier expérimental au premier voyage
 
 # Construire sa première porte
 
-Ce parcours va des matières premières au premier voyage : prototype, production en série, composants, montage et
-alimentation.
+On part de matières premières assez banales et on finit avec un trou dans l’espace. Entre les deux, il faudra un
+prototype, une vraie raffinerie, de l’électronique, beaucoup de composants et une quantité franchement indécente
+d’électricité.
 
 Première installation : 21 fournées · 168 Cryostabilized Naquadah Crystals · 64 Naquadah Plates
 
@@ -116,8 +119,9 @@ Le résultat final
 
 ## Préparer l’installation complète
 
-L’installation comprend une **Classic Stargate formée** , un **DHD** , une
-**Basic Interface** et une alimentation FE externe.
+À la fin, il ne faudra pas seulement le grand cercle. L’installation comprend une
+**Classic Stargate formée** , un **DHD** , une **Basic Interface** et une
+alimentation FE externe capable de suivre derrière.
 
 **Structure1 Classic Stargate Base Block + 14 Classic Stargate Ring Blocks + 9 Classic Stargate Chevron Blocks.
 
@@ -234,7 +238,8 @@ plus des cristaux réservés.
 **Composants Create principaux :** 14 Andesite Casings, 28 Iron Sheets, 40 Sturdy Sheets, 24 Brass Sheets, 26
 Electron Tubes, 16 Precision Mechanisms, 11 Redstone Links et 4 Brass Casings.
 
-**Commence par une seule fournée** Produis les vingt suivantes après validation du prototype.
+**Commence par une seule fournée** Ne produis surtout pas les vingt suivantes tout de suite. Si une étape est mal
+réglée, autant le découvrir sur huit cristaux que sur l’intégralité de tes ressources.
 
 03
 
@@ -483,7 +488,8 @@ Premier cycle complet
 ## Valider une première fournée
 
 Exécute maintenant la chaîne entière avec les quantités d’une seule fournée. Déplace les objets manuellement entre
-les stocks : le but est de valider la recette, pas encore la vitesse.
+les stocks : le but est de prouver que chaque recette fonctionne, pas encore de construire une autoroute à tapis
+roulants autour.
 
 **Entrée16 améthystes · 4 or · 4 zinc · 8 obsidiennes · 8 Netherracks · 8 Blaze Powder · 8 redstones · 4 glowstones · 1
 000 mB potion · 500 mB lave
@@ -496,7 +502,7 @@ les stocks : le but est de valider la recette, pas encore la vitesse.
 
 **Réserve** 4 Catalytic Flux pour la métallurgie
 
-**Prototype validé :8 Cryostabilized Naquadah Crystals et 4 Catalytic Flux sont stockés, sans objet intermédiaire bloqué dans une
+**Prototype validé :8 Cryostabilized Naquadah Crystals et 4 Catalytic Flux sont stockés, sans objet intermédiaire oublié dans une
 machine.
 
 09
@@ -509,13 +515,13 @@ Passage à l’échelle
 
 **Dose une fournée**
 
-Prépare les trois groupes d’ingrédients dans des stockages séparés.
+Prépare les trois groupes d’ingrédients séparément. Sinon, le comptage va devenir infernal.
 
 2
 
 **Ajoute les tampons**
 
-Place un stockage entre les précurseurs, la synthèse et le raffinage.
+Place un stockage entre chaque grande étape pour voir immédiatement où la chaîne ralentit.
 
 3
 
@@ -532,7 +538,8 @@ Production de masse
 ## Produire et répartir 168 Cryostabilized Naquadah Crystals
 
 Réalise vingt et une fournées au total, prototype compris. Chaque sortie rejoint d’abord le coffre de comptage, puis
-trois stockages séparés.
+trois stockages séparés. Ne distribue rien directement depuis les machines : on compte d’abord, on se félicite
+ensuite.
 
 Coffre : 168 Cryostabilized Naquadah Crystals
 
@@ -558,7 +565,8 @@ Atelier de métallurgie
 
 L’Incomplete Naquadah Billet doit parcourir quatre fois la même séquence. Construis une boucle fermée et place une
 sortie filtrée sur le Stabilized Naquadah Billet : les objets incomplets continuent de tourner, le produit fini
-quitte la boucle.
+quitte la boucle. Sans ce filtre, tout sort au premier passage et tu obtiens une collection de billets à moitié
+terminés.
 
 Deployer
 1 flux→Spout
@@ -598,7 +606,7 @@ Activation finale
 Encased Fan»»Dragon Head»»Dormant Naquadah Ingots
 
 La Dragon Head reste en place et n’est pas consommée. Le souffle doit la traverser avant d’atteindre les Dormant
-Naquadah Ingots.
+Naquadah Ingots. Une seule tête suffit donc pour toute la production, ce qui est déjà assez pénible à récupérer.
 
 -
 **Produis seize Stabilized Naquadah Billets.Chaque billet consomme 8 Cryostabilized Naquadah Crystals, 4 Catalytic Flux et 500 mB de lave.
@@ -619,7 +627,9 @@ Machines spécialisées
 
 ## Installer le Naquadah Liquidizer et le Crystallizer
 
-Les deux Reaction Chambers sont des composants de recette : elles seront absorbées par les deux machines finales.
+Les deux Reaction Chambers ne sont pas des machines à poser dans l’atelier. Ce sont des composants de recette, et
+elles disparaîtront dans le Naquadah Liquidizer et le Crystallizer. Autant le savoir avant de leur construire une
+jolie salle dédiée.
 
 [Illustration : Reaction Chamber]
 
@@ -731,7 +741,8 @@ Cristallisation
 
 ## Produire les 33 cristaux technologiques
 
-Chaque opération du Crystallizer consomme 1 Crystal Base, 100 mB de Liquid Naquadah et les deux réactifs indiqués.
+Chaque opération du Crystallizer avale 1 Crystal Base, 100 mB de Liquid Naquadah et les deux réactifs indiqués. Les
+quantités changent selon le cristal, mais la machine et la logique restent exactement les mêmes.
 
 1 Crystal Base+100 mB Liquid Naquadah+Réactif A+Réactif B
 
@@ -787,7 +798,8 @@ Deux lignes séquencées
 ## Produire les Ring Blocks et les Incomplete Stargate Chevrons
 
 Ces deux recettes demandent deux passages. Elles utilisent la même logique que le billet, mais pas les mêmes
-ingrédients : construis deux petites boucles ou change soigneusement les filtres entre les séries.
+ingrédients : construis deux petites boucles, ou change soigneusement les filtres entre les séries si tu aimes vivre
+dangereusement.
 
 ### 14 Classic Stargate Ring Blocks
 
@@ -814,7 +826,8 @@ Mechanical Crafting
 ## Terminer les composants de la porte
 
 Ces quatre recettes se réalisent avec des Mechanical Crafters orientés vers une sortie commune. La taille indiquée
-correspond au rectangle réellement nécessaire.
+correspond au vrai rectangle à construire, pas à une vague suggestion décorative. Vérifie l’orientation avant de
+remplir tout le mur.
 
 ### Classic Stargate Chevron Block · 3 × 3
 
@@ -876,7 +889,8 @@ illustrées.
 **Clique le Classic Stargate Base Block à main nue.Les vingt-quatre blocs se convertissent en une porte animée.
 
 **Zone de sécurité :** laisse au moins sept blocs entièrement libres devant la porte. Le vortex d’ouverture peut
-détruire les blocs, objets et entités présents dans cet axe.
+détruire les blocs, objets et entités présents dans cet axe. Ce n’est vraiment pas l’endroit où installer le canapé
+du salon.
 
 19
 
@@ -909,12 +923,12 @@ atteint 5 000 FE/t.
 ### Voyage rare
 
 Charge complètement la porte et au moins 3 accumulateurs de 2 MFE. Quatre accumulateurs donnent une marge
-confortable.
+confortable et évitent que le premier voyage se transforme en aller simple involontaire.
 
 ### Usage fréquent
 
 Construis une production réelle d’au moins 4 500 FE/t et conserve un tampon pour absorber l’ouverture initiale
-d’un million de FE.
+d’un million de FE. La production continue paie le maintien, mais le gros choc du départ vient bien du stock.
 
 **Test sans appel :Jade ou l’interface montre que l’énergie entre réellement ; la porte est pleine et le stock externe dépasse 5,04
 MFE.
@@ -946,7 +960,7 @@ automatiquement le Point d’origine et lance l’appel.
 **Ferme depuis l’autre côté.Sur Régalade, le DHD d’arrivée peut couper la connexion et arrêter immédiatement la dépense.
 
 **Sécurité :** entrer par l’arrière de la porte reste mortel. Le passage stable est bidirectionnel, mais
-uniquement par les faces avant.
+uniquement par les faces avant. La physique extraterrestre a visiblement décidé d’être très stricte sur ce point.
 
 **Premier voyage réussi :les deux adresses sont conservées, le DHD d’arrivée est alimenté et tu peux couper puis recomposer la connexion
 pour revenir.
@@ -988,7 +1002,8 @@ Après le prototype
 ## Réutiliser l’usine pour la porte suivante
 
 La première porte finance toute l’infrastructure : raffinerie, Naquadah Liquidizer, Crystallizer, circuits de
-traitement et mur de Mechanical Crafters. Conserve-les comme une usine communautaire.
+traitement et mur de Mechanical Crafters. Ne rase surtout pas tout après le premier voyage : tu viens littéralement
+de construire l’usine qui rendra toutes les portes suivantes beaucoup moins atroces.
 
 **Une seconde porteElle réutilise les machines existantes et demande 19 fournées selon la nomenclature actuelle.
 
@@ -1000,7 +1015,8 @@ Référence technique
 
 ## Trouver rapidement une recette ou une valeur
 
-Choisir une rubrique pour accéder directement aux informations utiles.
+Cette page sert quand tu veux un chiffre précis sans relire toute l’épopée industrielle. Choisis une rubrique et
+va directement à l’information utile.
 
 TotauxRaffinerieCristauxComposantsÉnergieRéseau
 
