@@ -241,8 +241,25 @@ Exposure · améliorer le matériel
 
 # Construire un vrai studio photo
 
-Une fois le premier cliché imprimé, tu peux passer à la couleur, régler l’appareil plus finement, poser un trépied
-et ranger les séries dans des albums.
+Une fois le premier cliché imprimé, tu peux commencer à jouer avec le rendu : passer à la couleur, photographier
+dans le noir, modifier le cadrage ou préparer une vraie séance avec un Camera Stand. Le studio sert ensuite à
+développer des séries cohérentes et à les conserver dans un album.
+
+[Illustration : Coucher de soleil en noir et blanc]
+
+Noir et blanc
+
+[Illustration : Coucher de soleil en couleur]
+
+Couleur
+
+[Illustration : Maison de nuit en noir et blanc]
+
+Haute sensibilité
+
+[Illustration : Maison de nuit en couleur]
+
+Prise nocturne
 
 01
 
@@ -385,7 +402,12 @@ Immersive Paintings · images personnalisées
 # Importer une image et en faire un tableau
 
 Ici, aucun appareil photo ni développement. Tu pars d’un fichier déjà existant et tu le transformes en tableau,
-affiche, enseigne ou graffiti directement dans le jeu.
+affiche, enseigne ou graffiti directement dans le jeu. C’est pratique pour monter une galerie, signaler une
+boutique ou simplement faire disparaître un mur beaucoup trop vide.
+
+[Illustration : Tableau créé avec Immersive Paintings]
+
+Une image importée peut devenir un véritable élément du décor
 
 01
 
