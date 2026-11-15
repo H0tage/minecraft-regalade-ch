@@ -6,11 +6,10 @@
   const serverAddress = 'XXX.XXX.X.X';
 
   panel.innerHTML = `
-    <header class="connection-intro">
-      <span class="eyebrow">Connexion au serveur</span>
-      <h1>Rejoindre Régalade pas à pas</h1>
-      <p>Ce guide commence dans CurseForge et va jusqu’à ton arrivée sur le serveur. Suis les étapes dans l’ordre, même si tu n’as jamais rejoint un serveur Minecraft auparavant.</p>
-    </header>
+    <div class="connection-intro">
+      <h1>Se connecter au serveur</h1>
+      <p>Pars de CurseForge, lance le bon profil, puis ajoute Régalade dans Minecraft. Tout est détaillé ci-dessous, clic par clic.</p>
+    </div>
 
     <section class="connection-route" aria-label="Résumé des étapes de connexion">
       <span>CurseForge</span>
