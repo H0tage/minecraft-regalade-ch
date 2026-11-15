@@ -154,7 +154,7 @@
   });
   tabList.addEventListener('keydown', () => requestAnimationFrame(refresh));
   content.addEventListener('click', event => {
-    if (event.target.closest('.cbc-switcher [role="tab"]')) requestAnimationFrame(refresh);
+    if (event.target.closest('.cbc-switcher [role="tab"], .cff-switcher [role="tab"]')) requestAnimationFrame(refresh);
   });
 
   const changes = new MutationObserver(() => requestAnimationFrame(refresh));

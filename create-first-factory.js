@@ -13,7 +13,7 @@
   tab.setAttribute('role', 'tab');
   tab.setAttribute('aria-selected', 'false');
   tab.setAttribute('aria-controls', 'tutorial-create-first-factory');
-  tab.textContent = 'Première usine Create';
+  tab.textContent = 'Create';
   tabList.append(tab);
 
   const panel = document.createElement('div');
@@ -23,6 +23,99 @@
   panel.setAttribute('aria-labelledby', tab.id);
   panel.hidden = true;
   panel.innerHTML = `
+    <section class="cff-shell">
+      <nav class="cff-switcher" role="tablist" aria-label="Choisir le parcours Create">
+        <button id="cff-overview-tab" type="button" role="tab" aria-selected="true" aria-controls="cff-overview-panel">Description générale</button>
+        <button id="cff-factory-tab" type="button" role="tab" aria-selected="false" aria-controls="cff-factory-panel" tabindex="-1">Ma première usine</button>
+      </nav>
+
+      <div class="cff-panel" id="cff-overview-panel" role="tabpanel" aria-labelledby="cff-overview-tab">
+        <header class="cff-overview-hero">
+          <div>
+            <p class="cff-eyebrow">Machines, mouvement et imagination</p>
+            <h1>Comprendre Create</h1>
+            <p>Create transforme Minecraft en atelier mécanique. Le mod ne donne pas une machine magique pour chaque ressource : il fournit des pièces, des mouvements et des procédés que tu assembles pour fabriquer tes propres installations.</p>
+          </div>
+          <div class="cff-overview-icons" aria-label="Composants emblématiques de Create">
+            ${icon('water-wheel', 'Water Wheel')}${icon('cogwheel', 'Cogwheel')}${icon('belt', 'Mechanical Belt')}${icon('press', 'Mechanical Press')}
+          </div>
+        </header>
+
+        <section class="cff-overview-section" id="cff-overview-concept" data-phase="Les bases">
+          <div class="cff-title"><span>01</span><div><p>L’idée centrale</p><h2>Une boîte à outils plutôt qu’un arbre de compétences</h2></div></div>
+          <p class="cff-lead">Create ne t’impose pas une seule manière de jouer. Les mêmes composants peuvent servir à une boulangerie, une scierie, une ferme, une gare ou une usine de plusieurs bâtiments.</p>
+          <div class="cff-concept-grid">
+            <article><b>Produire un mouvement</b><span>Water Wheel, Windmill Bearing, Steam Engine ou simple Hand Crank</span></article>
+            <i>→</i><article><b>Transmettre ce mouvement</b><span>Shafts, Cogwheels, Gearboxes, Belts et Chain Drives</span></article>
+            <i>→</i><article><b>Faire travailler des machines</b><span>Press, Millstone, Mixer, Saw, Drill, Fan et beaucoup d’autres</span></article>
+          </div>
+          <div class="cff-card-grid cff-card-grid-3">
+            <article><h3>Pas de câble électrique</h3><p>La plupart des machines Create utilisent une rotation visible. Si un axe ne tourne pas, la machine ne fonctionne pas.</p></article>
+            <article><h3>Pas de bloc universel</h3><p>Une usine est un assemblage de machines, de transports et de stockages adaptés au résultat recherché.</p></article>
+            <article><h3>Tout reste visible</h3><p>Les objets circulent sur les Belts, les engrenages tournent et les procédés se déroulent réellement dans le monde.</p></article>
+          </div>
+        </section>
+
+        <section class="cff-overview-section" id="cff-overview-power" data-phase="Les bases">
+          <div class="cff-title"><span>02</span><div><p>Le moteur de Create</p><h2>Rotation, RPM et SU</h2></div></div>
+          <div class="cff-two-columns">
+            <article class="cff-card"><h3>RPM : la vitesse</h3><p>Les Revolutions Per Minute indiquent à quelle vitesse tourne le réseau. Davantage de RPM accélère généralement le travail, mais augmente aussi la charge des machines.</p></article>
+            <article class="cff-card"><h3>SU : la capacité</h3><p>Les Stress Units représentent la charge que la source peut supporter. Lorsque les machines demandent trop de SU, tout le réseau devient <strong>Overstressed</strong> et s’arrête.</p></article>
+          </div>
+          <div class="cff-power-model" aria-label="Fonctionnement d’un réseau Create">
+            <article class="source">${icon('water-wheel')}<b>Source</b><span>crée rotation et capacité</span></article><i>→</i>
+            <article>${icon('cogwheel')}<b>Transmission</b><span>transporte ou modifie la rotation</span></article><i>→</i>
+            <article>${icon('millstone')}<b>Machine</b><span>consomme une partie de la capacité</span></article>
+          </div>
+          <p class="cff-note"><strong>La règle simple :</strong> la source détermine ce que ton réseau peut supporter ; les engrenages déterminent sa vitesse et son sens.</p>
+        </section>
+
+        <section class="cff-overview-section" id="cff-overview-families" data-phase="Construire une machine">
+          <div class="cff-title"><span>03</span><div><p>Quatre familles de composants</p><h2>Comprendre le rôle de chaque bloc</h2></div></div>
+          <div class="cff-family-grid">
+            <article><div class="cff-family-icons">${icon('water-wheel')}${icon('cogwheel')}</div><h3>Énergie et transmission</h3><p>Water Wheels, Shafts, Cogwheels et Gearboxes créent puis distribuent la rotation dans l’atelier.</p></article>
+            <article><div class="cff-family-icons">${icon('millstone')}${icon('press')}</div><h3>Transformation</h3><p>Millstone, Mechanical Press, Mixer, Saw et Encased Fan modifient les matières selon des recettes Create.</p></article>
+            <article><div class="cff-family-icons">${icon('belt')}${icon('funnel')}</div><h3>Logistique</h3><p>Belts, Funnels, Chutes, Tunnels et Vaults déplacent, filtrent, distribuent et stockent les objets.</p></article>
+            <article><div class="cff-family-icons">${icon('wrench')}${icon('goggles')}</div><h3>Contrôle</h3><p>Wrench, Goggles, Clutch, Gearshift, Speedometer et Redstone Link permettent de régler et piloter l’installation.</p></article>
+          </div>
+        </section>
+
+        <section class="cff-overview-section" id="cff-overview-processes" data-phase="Construire une machine">
+          <div class="cff-title"><span>04</span><div><p>Les procédés</p><h2>Une ressource peut suivre plusieurs chemins</h2></div></div>
+          <p class="cff-lead">Dans JEI, une même matière peut avoir plusieurs transformations. Le choix de la machine modifie parfois le rendement ou les sous-produits.</p>
+          <div class="cff-process-library">
+            <article>${icon('millstone')}<b>Milling</b><span>broyer avec une Millstone</span></article>
+            <article>${icon('press')}<b>Pressing</b><span>aplatir sur Belt ou Depot</span></article>
+            <article>${icon('basin')}<b>Mixing</b><span>mélanger dans une Basin</span></article>
+            <article>${icon('fan')}<b>Bulk Processing</b><span>souffler à travers eau, feu ou lave</span></article>
+            <article>${icon('drill')}<b>Mechanical Harvesting</b><span>casser ou récolter automatiquement</span></article>
+            <article>${icon('belt')}<b>Sequenced Assembly</b><span>enchaîner plusieurs opérations</span></article>
+          </div>
+          <div class="cff-method"><b>Pour concevoir une usine</b><span>Pars de l’objet final dans JEI, remonte ses recettes, choisis les procédés puis relie les machines avec une circulation d’objets et une circulation de rotation.</span></div>
+        </section>
+
+        <section class="cff-overview-section" id="cff-overview-progression" data-phase="Progression">
+          <div class="cff-title"><span>05</span><div><p>Du premier engrenage au réseau ferroviaire</p><h2>La progression générale</h2></div></div>
+          <div class="cff-progression">
+            <article><span>Début</span><h3>Andesite</h3><p>Water Wheels, Shafts, Belts et premières machines de transformation. Tout le nécessaire pour une petite usine.</p></article>
+            <i>→</i><article><span>Intermédiaire</span><h3>Brass</h3><p>Le laiton, produit avec Copper, Zinc et un Blaze Burner chauffé, ouvre la logistique précise, les filtres avancés et les Mechanical Arms.</p></article>
+            <i>→</i><article><span>Infrastructure</span><h3>Vapeur et trains</h3><p>Les Steam Engines alimentent de grands réseaux. Les trains relient ensuite les usines, les villes et les joueurs.</p></article>
+          </div>
+          <p class="cff-note">Ce ne sont pas des niveaux obligatoires. Tu peux rester longtemps avec de petites Water Wheels ou construire une centrale commune avec d’autres joueurs.</p>
+        </section>
+
+        <section class="cff-overview-section" id="cff-overview-learn" data-phase="Commencer">
+          <div class="cff-title"><span>06</span><div><p>Les trois réflexes</p><h2>Apprendre sans connaître tout le mod</h2></div></div>
+          <div class="cff-learning-grid">
+            <article><b>1</b><div><h3>JEI pour les recettes</h3><p>Survole un objet et utilise les touches indiquées par JEI pour voir comment le fabriquer ou à quoi il sert.</p></div></article>
+            <article><b>2</b><div><h3>W pour Ponder</h3><p>Maintiens <kbd>W</kbd> sur un composant Create afin de voir une animation expliquant son fonctionnement.</p></div></article>
+            <article><b>3</b><div><h3>Goggles pour diagnostiquer</h3><p>Regarde les axes et les machines avec les Engineer's Goggles pour lire vitesse, capacité et consommation.</p></div></article>
+          </div>
+          <div class="cff-next-step"><div><b>Prêt à construire ?</b><span>Le parcours suivant applique immédiatement ces notions à une ferme automatisée de fer et de silex.</span></div><button type="button" data-open-cff-factory>Ouvrir « Ma première usine »</button></div>
+        </section>
+      </div>
+
+      <div class="cff-panel" id="cff-factory-panel" role="tabpanel" aria-labelledby="cff-factory-tab" hidden>
     <article class="cff-tutorial">
       <header class="cff-hero">
         <div>
@@ -222,7 +315,54 @@
         </div>
         <div class="cff-finish"><strong>Usine terminée</strong><span>Tu sais désormais produire de la rotation, connecter plusieurs machines, transformer une ressource et distribuer ses sorties. Tous les futurs projets Create réutilisent ces mêmes principes.</span></div>
       </section>
-    </article>`;
+    </article>
+      </div>
+    </section>`;
 
   tutorialContent.append(panel);
+
+  const innerTabs = [...panel.querySelectorAll('.cff-switcher [role="tab"]')];
+  const innerPanels = [...panel.querySelectorAll('.cff-panel[role="tabpanel"]')];
+  const storageKey = 'regalade.create.active';
+
+  function selectInner(selectedTab, remember = true) {
+    innerTabs.forEach(innerTab => {
+      const selected = innerTab === selectedTab;
+      innerTab.setAttribute('aria-selected', String(selected));
+      innerTab.tabIndex = selected ? 0 : -1;
+    });
+    innerPanels.forEach(innerPanel => {
+      innerPanel.hidden = innerPanel.id !== selectedTab.getAttribute('aria-controls');
+    });
+    if (remember) {
+      try { localStorage.setItem(storageKey, selectedTab.id); } catch (_) { /* Storage is optional. */ }
+    }
+  }
+
+  innerTabs.forEach((innerTab, index) => {
+    innerTab.addEventListener('click', () => selectInner(innerTab));
+    innerTab.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      const nextIndex = event.key === 'Home'
+        ? 0
+        : event.key === 'End'
+          ? innerTabs.length - 1
+          : (index + (event.key === 'ArrowRight' ? 1 : -1) + innerTabs.length) % innerTabs.length;
+      innerTabs[nextIndex].focus();
+      selectInner(innerTabs[nextIndex]);
+    });
+  });
+
+  panel.querySelector('[data-open-cff-factory]')?.addEventListener('click', () => {
+    selectInner(panel.querySelector('#cff-factory-tab'));
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  let initialTab = innerTabs[0];
+  try {
+    const savedId = localStorage.getItem(storageKey);
+    initialTab = innerTabs.find(innerTab => innerTab.id === savedId) || initialTab;
+  } catch (_) { /* Storage is optional. */ }
+  if (initialTab) selectInner(initialTab, false);
 })();
