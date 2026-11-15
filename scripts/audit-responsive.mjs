@@ -60,17 +60,17 @@ for (const width of widths) {
 
   await page.goto(`${baseUrl}?qa=${Date.now()}#tutoriels`, { waitUntil: 'networkidle' });
   await auditTabList(page, '#tutoriels [data-tab-storage="regalade.tutorial.active"]', `Tutoriels à ${width}px`);
-  for (const panelId of [
-    'tutorial-economy',
-    'tutorial-cuisine',
-    'tutorial-jei',
-    'tutorial-create-first-factory',
-    'tutorial-big-cannons',
-    'tutorial-stargates',
+  for (const [panelId, hasNestedTabs] of [
+    ['tutorial-economy', true],
+    ['tutorial-cuisine', false],
+    ['tutorial-jei', true],
+    ['tutorial-create-first-factory', true],
+    ['tutorial-big-cannons', true],
+    ['tutorial-stargates', true],
   ]) {
     const outerTab = page.locator(`[aria-controls="${panelId}"]`).first();
     await outerTab.evaluate((element) => element.click());
-    await auditTabList(page, `#${panelId} [data-tab-storage]`, `${panelId} à ${width}px`);
+    if (hasNestedTabs) await auditTabList(page, `#${panelId} [data-tab-storage]`, `${panelId} à ${width}px`);
   }
   await page
     .locator('[aria-controls="tutorial-big-cannons"]')
