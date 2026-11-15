@@ -9,7 +9,7 @@ const textExtensions = new Set(['.css', '.csv', '.html', '.js', '.json', '.md', 
 
 function walk(directory) {
   if (!existsSync(directory)) return [];
-  return readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
+  return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
     const path = join(directory, entry.name);
     return entry.isDirectory() ? walk(path) : [path];
   });
@@ -18,11 +18,11 @@ function walk(directory) {
 const tracked = execFileSync('git', ['ls-files'], { cwd: root, encoding: 'utf8' })
   .split(/\r?\n/)
   .filter(Boolean)
-  .map(file => join(root, file));
-const currentSources = ['src', 'scripts', 'contenus-textuels']
-  .flatMap(directory => walk(join(root, directory)));
-const files = [...new Set([...tracked, ...currentSources])]
-  .filter(file => existsSync(file) && textExtensions.has(extname(file).toLowerCase()));
+  .map((file) => join(root, file));
+const currentSources = ['src', 'scripts', 'contenus-textuels'].flatMap((directory) => walk(join(root, directory)));
+const files = [...new Set([...tracked, ...currentSources])].filter(
+  (file) => existsSync(file) && textExtensions.has(extname(file).toLowerCase()),
+);
 
 const violations = [];
 for (const file of files) {
@@ -34,7 +34,7 @@ for (const file of files) {
 
 if (violations.length) {
   console.error('Tiret cadratin interdit. Utiliser des parenthèses à la place :');
-  violations.forEach(violation => console.error(`- ${violation}`));
+  violations.forEach((violation) => console.error(`- ${violation}`));
   process.exit(1);
 }
 

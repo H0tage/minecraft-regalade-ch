@@ -53,7 +53,10 @@
 
 .cbc-structure-diagram {
   display: grid;
-  grid-template-columns: minmax(145px, 1fr) auto minmax(175px, 1.15fr) auto minmax(145px, 1fr) auto minmax(130px, .85fr);
+  grid-template-columns: minmax(145px, 1fr) auto minmax(175px, 1.15fr) auto minmax(145px, 1fr) auto minmax(
+      130px,
+      0.85fr
+    );
   align-items: stretch;
   gap: 8px;
   overflow-x: auto;
@@ -105,7 +108,7 @@
   display: block;
   margin-top: 5px;
   color: var(--cbc-muted);
-  font-size: .76rem;
+  font-size: 0.76rem;
 }
 
 .cbc-overview-callout {
@@ -152,15 +155,15 @@
 .cbc-build-examples p {
   margin: 8px 0 0;
   color: var(--cbc-muted);
-  font-size: .88rem;
+  font-size: 0.88rem;
 }
 
 .cbc-overview-label {
   margin: 0 !important;
   color: var(--cbc-orange) !important;
-  font-size: .72rem !important;
+  font-size: 0.72rem !important;
   font-weight: 900;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -180,7 +183,7 @@
   border: 1px solid var(--cbc-line);
   background: #fff;
   color: var(--cbc-muted);
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .cbc-length-scale b {
@@ -232,7 +235,7 @@
 .cbc-cause-chain span {
   margin-top: 3px;
   color: var(--cbc-muted);
-  font-size: .78rem;
+  font-size: 0.78rem;
 }
 
 .cbc-diameter-row {
@@ -252,12 +255,12 @@
 
 .cbc-diameter-row b {
   margin-top: 10px;
-  font-size: .76rem;
+  font-size: 0.76rem;
 }
 
 .cbc-diameter-row small {
   color: var(--cbc-muted);
-  font-size: .72rem;
+  font-size: 0.72rem;
 }
 
 .cbc-ring {
@@ -276,11 +279,30 @@
   background: #fff;
 }
 
-.cbc-ring.size-1 { width: 48px; height: 48px; }
-.cbc-ring.size-2 { width: 60px; height: 60px; }
-.cbc-ring.size-3 { width: 72px; height: 72px; }
-.cbc-ring.size-4 { width: 84px; height: 84px; }
-.cbc-ring.size-5 { width: 96px; height: 96px; }
+.cbc-ring.size-1 {
+  width: 48px;
+  height: 48px;
+}
+
+.cbc-ring.size-2 {
+  width: 60px;
+  height: 60px;
+}
+
+.cbc-ring.size-3 {
+  width: 72px;
+  height: 72px;
+}
+
+.cbc-ring.size-4 {
+  width: 84px;
+  height: 84px;
+}
+
+.cbc-ring.size-5 {
+  width: 96px;
+  height: 96px;
+}
 
 .cbc-diameter-explain {
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -304,7 +326,7 @@
   padding: 5px;
   border: 2px solid #52636b;
   background: #f4f7f8;
-  font-size: .61rem;
+  font-size: 0.61rem;
   font-weight: 800;
   text-align: center;
 }
@@ -324,8 +346,13 @@
   background: #fff1e7;
 }
 
-.cbc-mini-build .thick { min-height: 68px; }
-.cbc-mini-build .built { min-height: 60px; }
+.cbc-mini-build .thick {
+  min-height: 68px;
+}
+
+.cbc-mini-build .built {
+  min-height: 60px;
+}
 
 .cbc-mini-build .air {
   border: 2px dashed var(--cbc-orange);
@@ -364,7 +391,7 @@
 
 .cbc-overview-rules span {
   color: var(--cbc-muted);
-  font-size: .77rem;
+  font-size: 0.77rem;
 }
 
 .cbc-overview-rules strong {
@@ -401,7 +428,7 @@
   margin: 0;
   font-size: clamp(1.35rem, 2.5vw, 1.85rem);
   line-height: 1.08;
-  letter-spacing: -.03em;
+  letter-spacing: -0.03em;
 }
 
 .cbc-summary-text {
@@ -420,7 +447,7 @@
 .cbc-summary-next {
   margin: 12px 0 0;
   color: var(--cbc-muted);
-  font-size: .86rem;
+  font-size: 0.86rem;
 }
 
 .cbc-summary-next strong {
@@ -456,17 +483,17 @@
 }
 
 .cbc-stat-grid b {
-  font-size: .82rem;
+  font-size: 0.82rem;
 }
 
 .cbc-stat-grid strong {
   color: #a94b16;
-  font-size: .96rem;
+  font-size: 0.96rem;
 }
 
 .cbc-stat-grid span {
   color: var(--cbc-muted);
-  font-size: .78rem;
+  font-size: 0.78rem;
 }
 
 .cbc-autocannon-exception {
@@ -479,17 +506,17 @@
   border-radius: 10px;
   background: #f2f9fb;
   color: #315a69;
-  font-size: .82rem;
+  font-size: 0.82rem;
 }
 
-@media (max-width: 980px) {
+@media (width <= 980px) {
   .cbc-build-examples,
   .cbc-overview-rules {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 720px) {
+@media (width <= 720px) {
   .cbc-overview .cbc-overview-hero,
   .cbc-overview-section {
     padding: 20px;

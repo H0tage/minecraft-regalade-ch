@@ -2,9 +2,11 @@
 
 Ce dossier est la source canonique du site.
 
-- `index.html` définit le document général, les feuilles de style et l’ordre des scripts.
-- `pages` contient une page principale par fichier, assemblée avec la syntaxe `<!-- @include ... -->`.
-- `styles` sépare les fondations, les composants, les pages et les tutoriels.
-- `scripts` sépare le cœur de l’application, les données, les pages et les tutoriels.
+- `index.html` définit le document général et inclut les pages.
+- `pages` contient les pages principales et les enveloppes de navigation.
+- `content` contient le HTML détaillé des tutoriels et guides.
+- `data` contient les données structurées, dont l’unique catalogue des mods.
+- `styles` sépare le socle, les composants, les pages et les tutoriels.
+- `scripts` contient uniquement les comportements et le rendu des données.
 
-Les fichiers publics de la racine et de `dist` sont reconstruits par `npm run build`. Toute correction faite directement dans une sortie générée sera remplacée au build suivant.
+Le build produit un seul fichier CSS et un seul fichier JavaScript dans `dist`. Toute correction faite directement dans `dist` sera remplacée au build suivant.

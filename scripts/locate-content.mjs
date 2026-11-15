@@ -13,20 +13,21 @@ if (!query) {
 
 function walk(directory) {
   if (!existsSync(directory)) return [];
-  return readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
+  return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
     const path = join(directory, entry.name);
     return entry.isDirectory() ? walk(path) : [path];
   });
 }
 
-const files = walk(sourceRoot).filter(file => ['.html', '.js'].includes(extname(file)));
+const files = walk(sourceRoot).filter((file) => ['.html', '.js'].includes(extname(file)));
 const results = [];
 
 for (const file of files) {
   const lines = readFileSync(file, 'utf8').split(/\r?\n/);
   lines.forEach((line, index) => {
     if (line.toLocaleLowerCase('fr').includes(query)) {
-      results.push(`${relative(root, file)}:${index + 1}`);
+      const excerpt = line.trim().replace(/\s+/g, ' ').slice(0, 140);
+      results.push(`${relative(root, file)}:${index + 1}  ${excerpt}`);
     }
   });
 }

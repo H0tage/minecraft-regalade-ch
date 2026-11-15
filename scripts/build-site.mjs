@@ -6,7 +6,33 @@ import { fileURLToPath } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const sourceRoot = join(root, 'src');
 const dist = join(root, 'dist');
-const publicDirectories = ['styles', 'js'];
+const styleSources = [
+  'core/site.css',
+  'components/lightbox.css',
+  'pages/rules.css',
+  'pages/presentation.css',
+  'pages/mods.css',
+  'pages/status.css',
+  'pages/installation.css',
+  'tutorials/layout.css',
+  'tutorials/navigation.css',
+  'tutorials/economy.css',
+  'tutorials/create.css',
+  'tutorials/big-cannons-base.css',
+  'tutorials/big-cannons-overview.css',
+  'tutorials/big-cannons-survival.css',
+  'tutorials/stargate-guide.css',
+  'tutorials/stargates-survival.css',
+  'tutorials/stargates-interactive.css',
+];
+
+const scriptSources = [
+  'core/galleries.js',
+  'core/site.js',
+  'pages/mods-page.js',
+  'core/tab-groups.js',
+  'tutorials/layout.js',
+];
 
 function versionFor(file) {
   return createHash('sha256').update(readFileSync(file)).digest('hex').slice(0, 8);
@@ -36,14 +62,11 @@ function assembleTemplate(templatePath, stack = []) {
 }
 
 function injectContentVersions(html) {
-  return html.replace(
-    /\b(href|src)="([^"?#]+\.(?:css|js))(?:\?v=[^"]*)?"/g,
-    (_match, attribute, relativePath) => {
-      const publicFile = join(root, normalize(relativePath));
-      if (!existsSync(publicFile)) throw new Error(`Ressource publique absente : ${relativePath}`);
-      return `${attribute}="${relativePath}?v=${versionFor(publicFile)}"`;
-    }
-  );
+  return html.replace(/\b(href|src)="([^"?#]+\.(?:css|js))(?:\?v=[^"]*)?"/g, (_match, attribute, relativePath) => {
+    const publicFile = join(dist, normalize(relativePath));
+    if (!existsSync(publicFile)) throw new Error(`Ressource publique absente : ${relativePath}`);
+    return `${attribute}="${relativePath}?v=${versionFor(publicFile)}"`;
+  });
 }
 
 function resetDirectory(directory) {
@@ -51,31 +74,31 @@ function resetDirectory(directory) {
   mkdirSync(directory, { recursive: true });
 }
 
-function copySourceDirectory(sourceName, publicName) {
-  const target = join(root, publicName);
-  resetDirectory(target);
-  cpSync(join(sourceRoot, sourceName), target, { recursive: true });
+function bundle(sourceDirectory, files, targetFile, separator) {
+  const contents = files.map((file) => {
+    const sourceFile = join(sourceRoot, sourceDirectory, file);
+    if (!existsSync(sourceFile)) throw new Error(`Source de bundle absente : ${file}`);
+    return `/* ${file.replaceAll('*/', '')} */\n${readFileSync(sourceFile, 'utf8').trim()}`;
+  });
+  mkdirSync(dirname(targetFile), { recursive: true });
+  writeFileSync(targetFile, `${contents.join(separator)}\n`, 'utf8');
 }
-
-for (const directory of publicDirectories) {
-  copySourceDirectory(directory === 'js' ? 'scripts' : directory, directory);
-}
-
-const assembled = assembleTemplate(join(sourceRoot, 'index.html'));
-const generatedNotice = '<!-- FICHIER GÉNÉRÉ. Modifier src/, puis lancer npm run build. -->';
-const publicHtml = injectContentVersions(assembled.replace('<!doctype html>', `<!doctype html>\n${generatedNotice}`));
-writeFileSync(join(root, 'index.html'), publicHtml, 'utf8');
 
 resetDirectory(dist);
-cpSync(join(root, 'index.html'), join(dist, 'index.html'));
-for (const directory of publicDirectories) {
-  cpSync(join(root, directory), join(dist, directory), { recursive: true });
-}
+bundle('styles', styleSources, join(dist, 'styles', 'site.css'), '\n\n');
+bundle('scripts', scriptSources, join(dist, 'js', 'site.js'), '\n\n;\n\n');
+cpSync(join(sourceRoot, 'data'), join(dist, 'data'), { recursive: true });
 cpSync(join(root, 'assets'), join(dist, 'assets'), { recursive: true });
 cpSync(join(root, 'CNAME'), join(dist, 'CNAME'));
 writeFileSync(join(dist, '.nojekyll'), '');
 
+const assembled = assembleTemplate(join(sourceRoot, 'index.html'));
+const generatedNotice = '<!-- FICHIER GÉNÉRÉ. Modifier src/, puis lancer npm run build. -->';
+const publicHtml = injectContentVersions(assembled.replace('<!doctype html>', `<!doctype html>\n${generatedNotice}`));
+writeFileSync(join(dist, 'index.html'), publicHtml, 'utf8');
+
 console.log('Build terminé :');
 console.log('- sources assemblées depuis src/');
-console.log('- sortie GitHub Pages générée à la racine');
-console.log('- paquet de déploiement généré dans dist/');
+console.log(`- ${styleSources.length} feuilles réunies dans dist/styles/site.css`);
+console.log(`- ${scriptSources.length} scripts réunis dans dist/js/site.js`);
+console.log('- paquet de déploiement généré uniquement dans dist/');

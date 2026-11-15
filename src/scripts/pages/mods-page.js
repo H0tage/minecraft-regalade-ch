@@ -1,39 +1,113 @@
-(() => {
-  const detailMods = window.REGALE_MOD_DETAILS;
-  const modIcons = new Map(window.REGALE_MOD_ICONS);
+(async () => {
   const grid = document.querySelector('#mods-grid');
   const count = document.querySelector('#mod-count');
   const tabs = document.querySelector('#mod-tabs');
   const search = document.querySelector('#mod-search');
   const title = document.querySelector('#mods-title');
-  const categoryOrder = ['Ingénierie, énergie et transports','Cuisine, boissons et activités paisibles','Construction, décoration et éclairage','Vie communautaire, confort et interface','Exploration et monde vivant','Économie et missions','Qualité de vie et retours visuels','Administration et performances','Automatisation Create complémentaire'];
+  if (!grid || !count || !tabs || !search || !title) return;
+
+  const response = await fetch('data/mods.json');
+  if (!response.ok) throw new Error(`Impossible de charger la liste des mods (${response.status}).`);
+  const mods = await response.json();
+  const categoryOrder = [
+    'Ingénierie, énergie et transports',
+    'Cuisine, boissons et activités paisibles',
+    'Construction, décoration et éclairage',
+    'Vie communautaire, confort et interface',
+    'Exploration et monde vivant',
+    'Économie et missions',
+    'Qualité de vie et retours visuels',
+    'Administration et performances',
+    'Automatisation Create complémentaire',
+  ];
+  const categories = categoryOrder.filter((item) => mods.some((mod) => mod.category === item));
   let category = 'tous';
-  const categories = categoryOrder.filter(item => detailMods.some(mod => mod[1] === item));
 
-  title.textContent = `Les ${detailMods.length} mods principaux du serveur`;
-  tabs.innerHTML = ['tous', ...categories]
-    .map(item => `<button class="mod-tab ${item === 'tous' ? 'active' : ''}" data-category="${item}">${item === 'tous' ? 'Tous les mods' : item}</button>`)
-    .join('');
-
-  function renderDetailedMods() {
-    const query = search.value.toLowerCase();
-    const matches = detailMods.filter(mod => (category === 'tous' || mod[1] === category) && mod.join(' ').toLowerCase().includes(query));
-    count.textContent = `${matches.length} mod${matches.length > 1 ? 's' : ''} affiché${matches.length > 1 ? 's' : ''} · ${detailMods.length} mods principaux, sans les librairies ni dépendances.`;
-    let previousCategory = '';
-    grid.innerHTML = matches.map(mod => {
-      const groupTitle = category === 'tous' && mod[1] !== previousCategory ? `<h2 class="mod-group-title">${mod[1]}</h2>` : '';
-      previousCategory = mod[1];
-      return `${groupTitle}<a class="card mod mod-link" target="_blank" rel="noreferrer" href="${mod[4]}"><span class="tag">${mod[1]}</span><div class="mod-heading"><img class="mod-icon" loading="lazy" src="${modIcons.get(mod[0])}" alt="" width="38" height="38"><h3>${mod[0]}</h3></div><p class="mod-version">Version ${mod[2]}</p><p class="mod-description">${mod[3]}</p></a>`;
-    }).join('') || '<p>Aucun mod ne correspond à cette recherche.</p>';
+  function createCategoryButton(value) {
+    const button = document.createElement('button');
+    button.className = `mod-tab${value === 'tous' ? ' active' : ''}`;
+    button.dataset.category = value;
+    button.textContent = value === 'tous' ? 'Tous les mods' : value;
+    return button;
   }
 
-  tabs.addEventListener('click', event => {
+  function createModCard(mod) {
+    const card = document.createElement('a');
+    card.className = 'card mod mod-link';
+    card.target = '_blank';
+    card.rel = 'noreferrer';
+    card.href = mod.url;
+
+    const tag = document.createElement('span');
+    tag.className = 'tag';
+    tag.textContent = mod.category;
+
+    const heading = document.createElement('div');
+    heading.className = 'mod-heading';
+    const icon = document.createElement('img');
+    icon.className = 'mod-icon';
+    icon.loading = 'lazy';
+    icon.src = mod.icon;
+    icon.alt = '';
+    icon.width = 38;
+    icon.height = 38;
+    const name = document.createElement('h3');
+    name.textContent = mod.name;
+    heading.append(icon, name);
+
+    const version = document.createElement('p');
+    version.className = 'mod-version';
+    version.textContent = `Version ${mod.version}`;
+    const description = document.createElement('p');
+    description.className = 'mod-description';
+    description.textContent = mod.description;
+    card.append(tag, heading, version, description);
+    return card;
+  }
+
+  function render() {
+    const query = search.value.trim().toLocaleLowerCase('fr');
+    const matches = mods.filter((mod) => {
+      const inCategory = category === 'tous' || mod.category === category;
+      const searchable = `${mod.name} ${mod.category} ${mod.version} ${mod.description}`.toLocaleLowerCase('fr');
+      return inCategory && searchable.includes(query);
+    });
+
+    count.textContent = `${matches.length} mod${matches.length > 1 ? 's' : ''} affiché${matches.length > 1 ? 's' : ''} · ${mods.length} mods principaux, sans les librairies ni dépendances.`;
+    grid.replaceChildren();
+
+    let previousCategory = '';
+    for (const mod of matches) {
+      if (category === 'tous' && mod.category !== previousCategory) {
+        const groupTitle = document.createElement('h2');
+        groupTitle.className = 'mod-group-title';
+        groupTitle.textContent = mod.category;
+        grid.append(groupTitle);
+        previousCategory = mod.category;
+      }
+      grid.append(createModCard(mod));
+    }
+
+    if (!matches.length) {
+      const empty = document.createElement('p');
+      empty.textContent = 'Aucun mod ne correspond à cette recherche.';
+      grid.append(empty);
+    }
+  }
+
+  title.textContent = `Les ${mods.length} mods principaux du serveur`;
+  tabs.replaceChildren(...['tous', ...categories].map(createCategoryButton));
+  tabs.addEventListener('click', (event) => {
     const button = event.target.closest('.mod-tab');
     if (!button) return;
     category = button.dataset.category;
-    tabs.querySelectorAll('.mod-tab').forEach(tab => tab.classList.toggle('active', tab === button));
-    renderDetailedMods();
+    tabs.querySelectorAll('.mod-tab').forEach((tab) => tab.classList.toggle('active', tab === button));
+    render();
   });
-  search.addEventListener('input', renderDetailedMods);
-  renderDetailedMods();
-})();
+  search.addEventListener('input', render);
+  render();
+})().catch((error) => {
+  console.error(error);
+  const grid = document.querySelector('#mods-grid');
+  if (grid) grid.textContent = 'La liste des mods ne peut pas être chargée pour le moment.';
+});

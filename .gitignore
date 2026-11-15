@@ -2,3 +2,9 @@
 Thumbs.db
 *.log
 .tmp/
+node_modules/
+/dist/
+/index.html
+/styles/
+/js/
+/data/

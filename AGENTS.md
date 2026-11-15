@@ -9,4 +9,4 @@ Pour le contenu express, ne pas lancer de navigateur ni attendre GitHub Pages. M
 
 Pour une modification structurelle, lancer `node scripts/site-workflow.mjs structure`, puis réserver la prévisualisation aux seules pages et largeurs touchées.
 
-Ne jamais modifier manuellement `index.html`, `styles`, `js` ou `dist` à la racine. Ce sont des sorties entièrement régénérées par le workflow depuis `src`.
+Ne jamais modifier manuellement `dist`. Cette sortie est entièrement régénérée par le workflow depuis `src`.

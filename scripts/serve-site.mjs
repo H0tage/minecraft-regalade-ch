@@ -16,7 +16,7 @@ const contentTypes = {
   '.png': 'image/png',
   '.svg': 'image/svg+xml',
   '.webp': 'image/webp',
-  '.zip': 'application/zip'
+  '.zip': 'application/zip',
 };
 
 createServer((request, response) => {

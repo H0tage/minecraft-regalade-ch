@@ -1,9 +1,0 @@
-/* Page d’état du serveur. */
-
-.status-grid-single {
-  grid-template-columns: minmax(0, 1fr);
-}
-
-.status-faq {
-  margin-top: 30px;
-}

@@ -31,13 +31,13 @@
 }
 
 .tutorial-masthead-cue strong {
-  font-size: .7rem;
+  font-size: 0.7rem;
   line-height: 1.25;
 }
 
 .tutorial-masthead-cue i {
   color: var(--cyan);
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 900;
   line-height: 1;
@@ -57,10 +57,19 @@
   padding: 12px 16px 72px;
 }
 
-.tutorial-library { border-right: 1px solid var(--line); }
-.tutorial-chapters { border-left: 1px solid var(--line); }
+.tutorial-library {
+  border-right: 1px solid var(--line);
+}
+
+.tutorial-chapters {
+  border-left: 1px solid var(--line);
+}
+
 .tutorial-library-sticky,
-.tutorial-chapters-sticky { position: sticky; top: 24px; }
+.tutorial-chapters-sticky {
+  position: sticky;
+  top: 24px;
+}
 
 #tutoriels .tutorial-library .tutorial-tabs {
   display: grid;
@@ -79,7 +88,7 @@
   color: var(--muted);
   text-align: left;
   white-space: normal;
-  font-size: .82rem;
+  font-size: 0.82rem;
   line-height: 1.22;
 }
 
@@ -107,7 +116,10 @@
   background: linear-gradient(180deg, var(--cyan), var(--orange));
 }
 
-.tutorial-reader { min-width: 0; }
+.tutorial-reader {
+  min-width: 0;
+}
+
 #tutoriels .tutorial-reader .tutorial-content {
   width: min(100%, 900px);
   margin: 0 auto;
@@ -130,165 +142,146 @@
   padding: 9px 2px;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: .72rem;
+  font-size: 0.72rem;
   font-weight: 650;
   line-height: 1.35;
   text-decoration: none;
-  transition: color .16s ease, padding-left .16s ease;
+  transition:
+    color 0.16s ease,
+    padding-left 0.16s ease;
 }
 
-.tutorial-chapter-list a:last-child { border-bottom: 1px solid var(--line); }
+.tutorial-chapter-list a:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
 .tutorial-chapter-list a:hover,
 .tutorial-chapter-list a.active {
   padding-left: 8px;
   color: #147fa9;
 }
-.tutorial-chapter-list a.active { font-weight: 900; }
+
+.tutorial-chapter-list a.active {
+  font-weight: 900;
+}
 
 .tutorial-chapter-phase {
   display: block;
   margin: 14px 0 3px;
   color: var(--ink);
-  font-size: .61rem;
+  font-size: 0.61rem;
   font-weight: 950;
-  letter-spacing: .07em;
+  letter-spacing: 0.07em;
   line-height: 1.25;
   text-transform: uppercase;
 }
-.tutorial-chapter-phase:first-child { margin-top: 0; }
+
+.tutorial-chapter-phase:first-child {
+  margin-top: 0;
+}
 
 .tutorial-chapter-empty {
   margin: 0;
   color: var(--muted);
-  font-size: .8rem;
+  font-size: 0.8rem;
   line-height: 1.5;
 }
 
 .tutorial-library-toggle,
-.tutorial-chapter-toggle { display: none; }
+.tutorial-chapter-toggle {
+  display: none;
+}
 
 /* Le sommaire global remplace le sommaire interne du manuel Big Cannons. */
-#tutoriels .cbc-manual { grid-template-columns: minmax(0, 1fr) !important; }
-#tutoriels .cbc-manual-nav { display: none !important; }
 
 /* Densité de lecture : mêmes composants, avec moins de vide et une hiérarchie plus calme. */
-#tutoriels .tutorial-reader .tutorial-panel { font-size: .94rem; }
+#tutoriels .tutorial-reader .tutorial-panel {
+  font-size: 0.94rem;
+}
 
 #tutoriels .tutorial-reader #tutorial-install .install-overview {
   gap: 18px;
   padding: 14px 16px;
   margin-bottom: 18px;
 }
+
 #tutoriels .tutorial-reader .install-start {
   gap: 18px;
   padding: 18px 20px;
   margin: 18px 0 26px;
 }
-#tutoriels .tutorial-reader .install-steps { gap: 12px; }
+
+#tutoriels .tutorial-reader .install-steps {
+  gap: 12px;
+}
+
 #tutoriels .tutorial-reader .install-step {
   grid-template-columns: 50px minmax(0, 1fr);
   gap: 14px;
   padding: 18px;
   border-radius: 14px;
 }
+
 #tutoriels .tutorial-reader .install-step::before {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  font-size: .95rem;
+  font-size: 0.95rem;
 }
-#tutoriels .tutorial-reader .install-step h2 { font-size: 1.12rem; }
-#tutoriels .tutorial-reader .install-success { margin: 25px 0; padding: 21px; }
-#tutoriels .tutorial-reader .install-faq { margin-top: 22px; }
 
-#tutoriels .tutorial-reader .sg-intro { padding: 26px 28px; margin-bottom: 24px; }
-#tutoriels .tutorial-reader .sg-intro h2 { font-size: clamp(1.8rem, 3.2vw, 2.55rem); }
-#tutoriels .tutorial-reader .sg-roadmap { gap: 6px; margin: 20px 0 32px; }
-#tutoriels .tutorial-reader .sg-roadmap a { padding: 11px 10px; font-size: .71rem; }
+#tutoriels .tutorial-reader .install-step h2 {
+  font-size: 1.12rem;
+}
+
+#tutoriels .tutorial-reader .install-success {
+  margin: 25px 0;
+  padding: 21px;
+}
+
+#tutoriels .tutorial-reader .install-faq {
+  margin-top: 22px;
+}
+
 #tutoriels .tutorial-reader .sg-step {
   grid-template-columns: 58px minmax(0, 1fr);
   gap: 16px;
   padding: 28px 0;
 }
-#tutoriels .tutorial-reader .sg-step-marker {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  font-size: 1.05rem;
-}
-#tutoriels .tutorial-reader .sg-step-heading h2 { font-size: clamp(1.4rem, 2.4vw, 1.85rem); }
-#tutoriels .tutorial-reader .sg-recipe-grid,
-#tutoriels .tutorial-reader .sg-split,
-#tutoriels .tutorial-reader .sg-factory,
-#tutoriels .tutorial-reader .sg-power { margin-top: 17px; }
-#tutoriels .tutorial-reader .sg-recipe { min-height: 162px; padding: 14px 14px 14px 79px; }
-#tutoriels .tutorial-reader .sg-item { top: 14px; left: 14px; width: 52px; height: 52px; }
-#tutoriels .tutorial-reader .sg-track,
-#tutoriels .tutorial-reader .sg-assembly,
-#tutoriels .tutorial-reader .sg-totals,
-#tutoriels .tutorial-reader .sg-power article,
-#tutoriels .tutorial-reader .sg-upgrades { padding: 17px; }
 
-#tutoriels .tutorial-reader .cbc-hero { padding: 28px; }
-#tutoriels .tutorial-reader .cbc-hero h1 { font-size: clamp(2rem, 4.2vw, 3.45rem); }
-#tutoriels .tutorial-reader .cbc-goal { gap: 18px; margin: 14px 0 22px; padding: 18px; }
-#tutoriels .tutorial-reader .cbc-goal-icons span { width: 52px; height: 52px; }
-#tutoriels .tutorial-reader .cbc-mission-nav { gap: 6px; margin-bottom: 20px; }
-#tutoriels .tutorial-reader .cbc-mission-nav a { padding: 9px 8px; font-size: .73rem; }
-#tutoriels .tutorial-reader .cbc-mission {
-  grid-template-columns: 54px minmax(0, 1fr);
-  gap: 15px;
-  padding: 28px 0;
+#tutoriels .tutorial-reader .cbc-hero {
+  padding: 28px;
 }
-#tutoriels .tutorial-reader .cbc-number { width: 48px; height: 48px; border-radius: 14px; font-size: 1.05rem; }
-#tutoriels .tutorial-reader .cbc-mission h2 { font-size: clamp(1.45rem, 2.8vw, 2rem); }
-#tutoriels .tutorial-reader .cbc-diagram { padding: 17px; }
-#tutoriels .tutorial-reader .cbc-card { padding: 14px; }
-#tutoriels .tutorial-reader .cbc-manual-section { padding: 20px; margin-top: 15px; }
 
-#tutoriels .tutorial-reader .eco-intro { grid-template-columns: minmax(0, 1fr) 200px; gap: 22px; padding: 26px; }
-#tutoriels .tutorial-reader .eco-intro h1 { font-size: clamp(1.85rem, 3.6vw, 3rem); }
-#tutoriels .tutorial-reader .eco-coin { width: 58px; height: 58px; border-radius: 15px; }
-#tutoriels .tutorial-reader .eco-coin img { width: 41px; height: 41px; }
-#tutoriels .tutorial-reader .eco-route { gap: 7px; margin: 17px 0 30px; }
-#tutoriels .tutorial-reader .eco-route a { padding: 11px; font-size: .75rem; }
+#tutoriels .tutorial-reader .cbc-hero h1 {
+  font-size: clamp(2rem, 4.2vw, 3.45rem);
+}
+
 #tutoriels .tutorial-reader .eco-section {
   grid-template-columns: 58px minmax(0, 1fr);
   gap: 16px;
   padding: 28px 0;
 }
-#tutoriels .tutorial-reader .eco-marker { width: 48px; height: 48px; border-radius: 14px; font-size: 1rem; }
-#tutoriels .tutorial-reader .eco-heading h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); }
-#tutoriels .tutorial-reader .eco-income-grid,
-#tutoriels .tutorial-reader .eco-missions,
-#tutoriels .tutorial-reader .eco-sell-layout,
-#tutoriels .tutorial-reader .eco-fish-layout,
-#tutoriels .tutorial-reader .eco-loop { margin-top: 15px; }
-#tutoriels .tutorial-reader .eco-income { min-height: 120px; padding: 16px 16px 16px 74px; }
-#tutoriels .tutorial-reader .eco-income img { top: 17px; left: 16px; width: 43px; height: 43px; }
-#tutoriels .tutorial-reader .eco-panel,
-#tutoriels .tutorial-reader .eco-recipe,
-#tutoriels .tutorial-reader .eco-fish-card { padding: 16px; }
-#tutoriels .tutorial-reader .eco-sell-step { padding: 12px 13px; }
-#tutoriels .tutorial-reader .eco-loop article,
-#tutoriels .tutorial-reader .eco-example { padding: 14px 12px; }
+
+#tutoriels .tutorial-reader .eco-panel {
+  padding: 16px;
+}
 
 #tutoriels .install-step,
 #tutoriels .sg-step,
-#tutoriels .cbc-mission,
-#tutoriels .cbc-manual-section,
-#tutoriels .eco-section { scroll-margin-top: 24px; }
+#tutoriels .eco-section {
+  scroll-margin-top: 24px;
+}
 
 /* Grammaire visuelle commune à tous les tutoriels. */
 #tutoriels .tutorial-reader {
-  --tutorial-font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --tutorial-body-size: .94rem;
+  --tutorial-font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --tutorial-body-size: 0.94rem;
   --tutorial-lead-size: 1rem;
   --tutorial-title-size: clamp(2rem, 4vw, 3rem);
   --tutorial-section-size: clamp(1.35rem, 2.5vw, 1.85rem);
   --tutorial-card-title-size: 1rem;
-  --tutorial-label-size: .7rem;
-  --tutorial-tab-size: .82rem;
+  --tutorial-label-size: 0.7rem;
+  --tutorial-tab-size: 0.82rem;
 }
 
 #tutoriels .tutorial-reader .tutorial-panel,
@@ -299,78 +292,59 @@
   line-height: 1.58;
 }
 
-#tutoriels .tutorial-reader :is(
-  .page-head h1,
-  .eco-intro h1,
-  .cbc-overview-hero h1,
-  .cbc-survival-hero h1,
-  .sgu-hero h1
-) {
+#tutoriels .tutorial-reader :is(.page-head h1, .cbc-overview-hero h1, .cbc-survival-hero h1, .sgu-hero h1) {
   margin-top: 0;
   font-family: var(--tutorial-font);
   font-size: var(--tutorial-title-size);
   font-weight: 850;
   line-height: 1.02;
-  letter-spacing: -.045em;
+  letter-spacing: -0.045em;
 }
 
-#tutoriels .tutorial-reader :is(
-  .install-step h2,
-  .install-success h2,
-  .eco-heading h2,
-  .cbc-step-title h2,
-  .cbc-section-heading h2,
-  .sgu-step-title h2,
-  .sgx-mission-body > h2,
-  .sgx-reference-section h2
-) {
+#tutoriels
+  .tutorial-reader
+  :is(
+    .install-step h2,
+    .install-success h2,
+    .cbc-step-title h2,
+    .cbc-section-heading h2,
+    .sgu-step-title h2,
+    .sgx-reference-section h2
+  ) {
   font-family: var(--tutorial-font);
   font-size: var(--tutorial-section-size);
   font-weight: 850;
   line-height: 1.08;
-  letter-spacing: -.03em;
+  letter-spacing: -0.03em;
 }
 
-#tutoriels .tutorial-reader :is(
-  .install-step h3,
-  .eco-section h3,
-  .cbc-card h3,
-  .cbc-survival-step h3,
-  .sgu-step h3,
-  .sgx-mission h3,
-  .sgx-reference-section h3
-) {
+#tutoriels
+  .tutorial-reader
+  :is(.install-step h3, .eco-section h3, .cbc-survival-step h3, .sgu-step h3, .sgx-reference-section h3) {
   font-family: var(--tutorial-font);
   font-size: var(--tutorial-card-title-size);
   line-height: 1.25;
 }
 
-#tutoriels .tutorial-reader :is(
-  .page-head > p,
-  .eco-intro > div > p,
-  .cbc-overview-hero > p:not(.cbc-eyebrow),
-  .cbc-survival-hero > p:not(.cbc-eyebrow, .cbc-version),
-  .sgu-hero > p:not(.sgx-eyebrow, .sgu-version),
-  .sgx-lead
-) {
+#tutoriels
+  .tutorial-reader
+  :is(
+    .page-head > p,
+    .cbc-overview-hero > p:not(.cbc-eyebrow),
+    .cbc-survival-hero > p:not(.cbc-eyebrow, .cbc-version),
+    .sgu-hero > p:not(.sgx-eyebrow, .sgu-version)
+  ) {
   font-family: var(--tutorial-font);
   font-size: var(--tutorial-lead-size);
   line-height: 1.6;
 }
 
-#tutoriels .tutorial-reader :is(
-  .eyebrow,
-  .eco-kicker,
-  .eco-label,
-  .cbc-eyebrow,
-  .cbc-step-kicker,
-  .sgx-eyebrow
-) {
+#tutoriels .tutorial-reader :is(.eyebrow, .cbc-eyebrow, .cbc-step-kicker, .sgx-eyebrow) {
   font-family: var(--tutorial-font);
   font-size: var(--tutorial-label-size) !important;
   font-weight: 900;
   line-height: 1.25;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 
 /* Les deux tutoriels à sous-pages partagent exactement le même composant. */
@@ -389,7 +363,7 @@
   border: 1px solid #d6e0e4;
   border-radius: 12px;
   background: #fff;
-  box-shadow: 0 6px 20px rgba(25, 52, 64, .07);
+  box-shadow: 0 6px 20px rgb(25, 52, 64, 0.07);
   backdrop-filter: none;
 }
 
@@ -412,26 +386,46 @@
   color: var(--ink);
 }
 
-#tutoriels .tutorial-reader :is(
-  #tutorial-stargates .sgx-tab.active,
-  #tutorial-stargates .sgx-tab[aria-selected="true"],
-  #tutorial-big-cannons .cbc-switcher button[aria-selected="true"]
-) {
+#tutoriels
+  .tutorial-reader
+  :is(
+    #tutorial-stargates .sgx-tab.active,
+    #tutorial-stargates .sgx-tab[aria-selected='true'],
+    #tutorial-big-cannons .cbc-switcher button[aria-selected='true']
+  ) {
   background: var(--ink);
   color: #fff;
 }
 
-#tutoriels .tutorial-reader :is(#tutorial-stargates .sgx-tab, #tutorial-big-cannons .cbc-switcher button):focus-visible {
+#tutoriels
+  .tutorial-reader
+  :is(#tutorial-stargates .sgx-tab, #tutorial-big-cannons .cbc-switcher button):focus-visible {
   outline: 3px solid var(--cyan);
   outline-offset: 2px;
 }
 
-@media (max-width: 1180px) {
-  #tutoriels.view.active { width: min(1120px, calc(100vw - 28px)); }
-  .tutorial-workspace { grid-template-columns: 180px minmax(0, 1fr); }
-  .tutorial-masthead { grid-template-columns: 180px minmax(0, 1fr); }
-  .tutorial-masthead-cue-right { display: none; }
-  .tutorial-reader { grid-column: 2; grid-row: 1; }
+@media (width <= 1180px) {
+  #tutoriels.view.active {
+    width: min(1120px, calc(100vw - 28px));
+  }
+
+  .tutorial-workspace {
+    grid-template-columns: 180px minmax(0, 1fr);
+  }
+
+  .tutorial-masthead {
+    grid-template-columns: 180px minmax(0, 1fr);
+  }
+
+  .tutorial-masthead-cue-right {
+    display: none;
+  }
+
+  .tutorial-reader {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
   .tutorial-chapters {
     grid-column: 2;
     grid-row: 1;
@@ -441,7 +435,11 @@
     padding: 0;
     border: 0;
   }
-  .tutorial-chapters-sticky { position: static; }
+
+  .tutorial-chapters-sticky {
+    position: static;
+  }
+
   .tutorial-chapter-toggle {
     display: flex;
     width: 100%;
@@ -452,11 +450,20 @@
     border-radius: 11px;
     background: #fff;
     color: var(--ink);
-    font: 850 .82rem/1.2 inherit;
+    font: 850 0.82rem/1.2 inherit;
     cursor: pointer;
   }
-  .tutorial-chapter-toggle::after { content: "+"; color: var(--cyan); font-size: 1.1rem; }
-  .tutorial-chapters.open .tutorial-chapter-toggle::after { content: "−"; }
+
+  .tutorial-chapter-toggle::after {
+    content: '+';
+    color: var(--cyan);
+    font-size: 1.1rem;
+  }
+
+  .tutorial-chapters.open .tutorial-chapter-toggle::after {
+    content: '−';
+  }
+
   #tutoriels .tutorial-chapter-list {
     display: none;
     margin-top: 7px;
@@ -464,19 +471,31 @@
     border: 1px solid var(--line);
     border-radius: 11px;
     background: #fff;
-    box-shadow: 0 12px 30px rgba(20, 48, 61, .08);
+    box-shadow: 0 12px 30px rgb(20, 48, 61, 0.08);
   }
-  #tutoriels .tutorial-chapters.open .tutorial-chapter-list { display: grid; }
-  #tutoriels .tutorial-reader .tutorial-content { padding-top: 82px; }
+
+  #tutoriels .tutorial-chapters.open .tutorial-chapter-list {
+    display: grid;
+  }
+
+  #tutoriels .tutorial-reader .tutorial-content {
+    padding-top: 82px;
+  }
 }
 
-@media (max-width: 800px) {
+@media (width <= 800px) {
   #tutoriels.view.active {
     width: 100%;
     margin-left: 0;
     transform: none;
   }
-  .tutorial-workspace { display: flex; flex-direction: column; border: 0; }
+
+  .tutorial-workspace {
+    display: flex;
+    flex-direction: column;
+    border: 0;
+  }
+
   .tutorial-masthead {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     min-height: 0;
@@ -485,22 +504,46 @@
     border-radius: 14px;
     overflow: hidden;
   }
-  .tutorial-masthead-cue-right { display: flex; }
+
+  .tutorial-masthead-cue-right {
+    display: flex;
+  }
+
   .tutorial-masthead-cue {
     padding: 9px 8px;
     justify-content: center;
     text-align: center;
   }
-  .tutorial-masthead-cue strong { font-size: .64rem; }
-  .tutorial-masthead-cue i { display: none; }
-  .tutorial-library { order: 1; }
-  .tutorial-chapters { order: 2; }
-  .tutorial-reader { order: 3; }
+
+  .tutorial-masthead-cue strong {
+    font-size: 0.64rem;
+  }
+
+  .tutorial-masthead-cue i {
+    display: none;
+  }
+
+  .tutorial-library {
+    order: 1;
+  }
+
+  .tutorial-chapters {
+    order: 2;
+  }
+
+  .tutorial-reader {
+    order: 3;
+  }
+
   .tutorial-library {
     padding: 10px 0 0;
     border: 0;
   }
-  .tutorial-library-sticky { position: static; }
+
+  .tutorial-library-sticky {
+    position: static;
+  }
+
   .tutorial-library-toggle {
     display: flex;
     width: 100%;
@@ -511,10 +554,15 @@
     border-radius: 11px;
     background: #fff;
     color: var(--ink);
-    font: 850 .84rem/1.2 inherit;
+    font: 850 0.84rem/1.2 inherit;
     cursor: pointer;
   }
-  .tutorial-library-toggle::after { content: "▾"; color: var(--orange); }
+
+  .tutorial-library-toggle::after {
+    content: '▾';
+    color: var(--orange);
+  }
+
   #tutoriels .tutorial-library .tutorial-tabs {
     display: none !important;
     position: static !important;
@@ -524,23 +572,36 @@
     border: 1px solid var(--line);
     border-radius: 11px;
     background: #fff;
-    box-shadow: 0 12px 30px rgba(20, 48, 61, .08);
+    box-shadow: 0 12px 30px rgb(20, 48, 61, 0.08);
   }
-  #tutoriels .tutorial-library.open .tutorial-tabs { display: grid !important; }
+
+  #tutoriels .tutorial-library.open .tutorial-tabs {
+    display: grid !important;
+  }
+
   .tutorial-chapters {
     margin: 10px 0 -28px;
   }
+
   #tutoriels .tutorial-reader .tutorial-content {
     width: 100%;
     padding: 58px 0 72px;
   }
 
-  #tutoriels .tutorial-reader .tutorial-panel { font-size: 1rem; }
-  #tutoriels .tutorial-reader .install-step { grid-template-columns: 1fr; padding: 19px; }
+  #tutoriels .tutorial-reader .tutorial-panel {
+    font-size: 1rem;
+  }
+
+  #tutoriels .tutorial-reader .install-step {
+    grid-template-columns: 1fr;
+    padding: 19px;
+  }
+
   #tutoriels .tutorial-reader .sg-step,
-  #tutoriels .tutorial-reader .eco-section { grid-template-columns: 1fr; gap: 13px; }
-  #tutoriels .tutorial-reader .cbc-mission { grid-template-columns: 1fr; }
-  #tutoriels .tutorial-reader .eco-intro { grid-template-columns: 1fr; padding: 23px; }
+  #tutoriels .tutorial-reader .eco-section {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
 
   #tutoriels .tutorial-reader :is(#tutorial-stargates .sgx-tabs, #tutorial-big-cannons .cbc-switcher) {
     position: static;

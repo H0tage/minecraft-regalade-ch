@@ -2,110 +2,80 @@
 
 ## Règle fondamentale
 
-Le dossier `src` est la seule source applicative.
+Le dossier `src` est la seule source applicative. `dist` est une sortie temporaire entièrement reconstruite par `npm run build` et ne doit jamais être modifiée manuellement.
 
-Ne jamais modifier directement :
+## Où modifier quoi
 
-- `index.html` à la racine ;
-- `styles` à la racine ;
-- `js` à la racine ;
-- `dist`.
+```text
+src/pages/       structure des pages principales
+src/content/     textes et structure détaillée des guides et tutoriels
+src/data/        données structurées, notamment mods.json
+src/styles/      apparence, rangée par composants, pages et tutoriels
+src/scripts/     interactions, navigation et rendu des données
+assets/          images et fichiers à télécharger
+```
 
-Ces sorties sont supprimées puis reconstruites par `npm run build`. La racine générée permet de conserver le déploiement GitHub Pages actuel. `dist` alimente l’hébergement déclaré dans `.openai/hosting.json`.
-
-Les fichiers de `contenus-textuels` sont des exports de lecture. Ils ne remplacent pas la source canonique située dans `src`.
-
-## Trouver le bon fichier
+Pour trouver une phrase :
 
 ```powershell
 npm run locate -- "fragment reconnaissable du texte"
 ```
 
-L’outil recherche récursivement dans les pages et scripts source.
+La commande indique le fichier, la ligne et un extrait.
 
 ## 1. Contenu express
 
-### À utiliser pour
+Utiliser ce parcours pour corriger un texte, un titre, un lien, un chiffre ou une information déjà présente, sans modifier sa structure ni son apparence.
 
-- corriger ou remplacer un texte existant ;
-- modifier un titre, un libellé ou une valeur ;
-- changer un lien ou une adresse ;
-- corriger une faute ;
-- mettre à jour une version ou une information déjà affichée.
-
-Le composant, ses classes, sa position, son apparence et son comportement doivent rester identiques.
-
-### Procédure
-
-1. Localiser la source dans `src`.
-2. Modifier uniquement le fichier source concerné.
+1. Localiser la source dans `src/pages` ou `src/content`.
+2. Modifier uniquement le fichier concerné.
 3. Lancer `node scripts/site-workflow.mjs express`.
 4. Examiner le diff.
-5. Effectuer un seul commit et un seul push.
+5. Faire un seul commit et un seul push.
 
-Le workflow reconstruit les deux sorties publiques, ajoute les versions de cache et vérifie automatiquement les références, la syntaxe, les identifiants, l’absence de CSS incorporé et la synchronisation du déploiement.
+Ce parcours ne nécessite ni navigateur ni inspection générale du site.
 
 ## 2. Modification structurelle
 
-### À utiliser pour
+Utiliser ce parcours pour créer, déplacer ou retirer une section, modifier le CSS ou le responsive, ajouter une interaction, changer une navigation, ajouter un asset ou refondre un tutoriel.
 
-- créer, retirer ou déplacer une section ;
-- modifier la mise en page ;
-- changer les menus ou les onglets ;
-- intervenir sur le CSS, le responsive ou la typographie ;
-- ajouter une interaction JavaScript ;
-- ajouter une image ou une icône ;
-- refondre un tutoriel ;
-- résoudre un problème visuel.
-
-### Procédure
-
-1. Identifier les fichiers dans `src` et leurs dépendances.
+1. Identifier les fichiers source et leurs dépendances.
 2. Modifier les sources.
 3. Lancer `npm run qa`.
-4. Démarrer `npm run serve` si une inspection visuelle est nécessaire.
-5. Vérifier les pages touchées aux largeurs pertinentes parmi 390, 800 et 1366 pixels.
-6. Corriger les problèmes observés.
-7. Relancer `npm run qa`.
-8. Examiner le diff, puis effectuer un seul commit et un seul push.
+4. Démarrer `npm run serve`.
+5. Lancer `npm run audit:runtime`.
+6. Inspecter visuellement uniquement les pages touchées si la modification a un impact graphique.
+7. Examiner le diff, puis faire un seul commit et un seul push.
 
-## Arborescence
+## Build et contrôles
+
+`npm run qa` vérifie le formatage, le CSS, la syntaxe JavaScript, les références locales, les identifiants HTML, les règles éditoriales et la cohérence de la sortie. Il produit :
 
 ```text
-src/
+dist/
   index.html
-  pages/
-  styles/
-    core/
-    components/
-    pages/
-    tutorials/
-  scripts/
-    core/
-    data/
-    pages/
-    tutorials/
-assets/
-scripts/
-dist/                 sortie générée
-index.html            sortie générée
-styles/               sortie générée
-js/                   sortie générée
+  styles/site.css
+  js/site.js
+  data/
+  assets/
 ```
 
-## Garde-fous
+`npm run audit:runtime` ouvre le site local dans un navigateur sans interface et contrôle les sept pages aux largeurs 390, 800 et 1366 pixels.
 
-Le contrôle technique refuse :
+## Contenus textuels
 
-- une balise `<style>` ou un attribut `style` dans la source HTML ;
-- la création dynamique d’une feuille de style en JavaScript ;
+`contenus-textuels` est une copie éditoriale lisible. Elle peut servir à préparer une réécriture et à la transmettre à Codex. La source technique reste dans `src`. La commande `npm run export-content` régénère ces copies depuis le site et remplace donc leur contenu actuel.
+
+## Garde-fous permanents
+
+Les contrôles refusent notamment :
+
+- du CSS incorporé dans le HTML ;
+- une feuille de style créée dynamiquement en JavaScript ;
 - une inclusion HTML non résolue ;
 - une référence locale absente ;
-- un identifiant dupliqué ;
+- un identifiant HTML dupliqué ;
 - un script invalide ;
-- une sortie désynchronisée ;
-- le caractère éditorial interdit défini par le projet.
+- le caractère éditorial interdit par le projet.
 
-## Cas frontière
-
-Si un texte est difficile à modifier parce qu’il se trouve dans un grand gabarit JavaScript, une modification structurelle dédiée peut extraire ce gabarit dans un fichier de contenu séparé. Cette extraction ne doit être faite qu’une fois. Les corrections suivantes utiliseront le workflow express.
+Le catalogue des mods possède une seule source, `src/data/mods.json`. Les contenus longs sont du HTML statique dans `src/content`, pas des gabarits cachés dans du JavaScript.

@@ -1,0 +1,1370 @@
+[
+  {
+    "name": "Create",
+    "category": "Ingénierie, énergie et transports",
+    "version": "6.0.10",
+    "status": "OK",
+    "description": "Machines, automatisation et trains de base.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1065/184/256/256/638598725500886388.png"
+  },
+  {
+    "name": "Create Big Cannons",
+    "category": "Ingénierie, énergie et transports",
+    "version": "5.11.7",
+    "status": "WATCH",
+    "description": "Artillerie lourde, canons montés, munitions et procédés de fabrication compatibles avec Create.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-big-cannons",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1072/200/256/256/638608031487115551.png"
+  },
+  {
+    "name": "Create Crafts & Additions",
+    "category": "Ingénierie, énergie et transports",
+    "version": "1.7.2",
+    "status": "OK",
+    "description": "Électricité FE, câbles, alternateurs et accumulateurs pour le système énergétique de la Stargate.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/createaddition",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/405/250/256/256/637616939209778882.png"
+  },
+  {
+    "name": "Create Deco",
+    "category": "Ingénierie, énergie et transports",
+    "version": "2.1.3",
+    "status": "OK",
+    "description": "Décoration industrielle assortie à Create.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-deco",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1065/338/256/256/638598933457608969.png"
+  },
+  {
+    "name": "Create Horse Power",
+    "category": "Ingénierie, énergie et transports",
+    "version": "1.21.1-1.1.0",
+    "status": "OK",
+    "description": "Production de puissance cinétique Create à l'aide de chevaux.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-horse-power",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1098/808/256/256/638645262875973252.png"
+  },
+  {
+    "name": "Create Railways Navigator",
+    "category": "Ingénierie, énergie et transports",
+    "version": "1.21.1-beta-0.10.0-C6",
+    "status": "WATCH",
+    "description": "Horaires, itinéraires, écrans d'information et navigation pour les réseaux ferroviaires Create.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-railways-navigator",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1066/720/256/256/638600887691727882.png"
+  },
+  {
+    "name": "Create Slice & Dice",
+    "category": "Ingénierie, énergie et transports",
+    "version": "4.3.4",
+    "status": "OK",
+    "description": "Automatisation Create des recettes de Farmer's Delight.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/slice-and-dice",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1076/930/256/256/638614872387774853.png"
+  },
+  {
+    "name": "Create: Access Denied",
+    "category": "Ingénierie, énergie et transports",
+    "version": "0.0.4+c6.0.10.mc1.21.1",
+    "status": "OK",
+    "description": "Gestion nominative des accès aux réseaux logistiques Create, au-delà du simple verrouillage global.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-access-denied",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1510/910/256/256/638981406691961776.png"
+  },
+  {
+    "name": "Create: Addon Compatibility",
+    "category": "Ingénierie, énergie et transports",
+    "version": "1.0.0",
+    "status": "OK",
+    "description": "Unifie les blocs, objets et fluides équivalents de plusieurs addons Create ; utile notamment pour éviter les doublons entre Copycats+ et Create: Connected.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/createaddoncompatibility",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/991/66/256/256/638504825291860001.png"
+  },
+  {
+    "name": "Create: Bells & Whistles",
+    "category": "Ingénierie, énergie et transports",
+    "version": "0.4.7-1.21.1",
+    "status": "OK",
+    "description": "Décoration et pièces ferroviaires.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/bellsandwhistles",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1068/437/256/256/638602929669872740.png"
+  },
+  {
+    "name": "Create: Central Kitchen",
+    "category": "Ingénierie, énergie et transports",
+    "version": "2.6.2b",
+    "status": "OK",
+    "description": "Automatisation avec Create de plusieurs systèmes culinaires.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-central-kitchen",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1260/398/256/256/638820652823585106.png"
+  },
+  {
+    "name": "Create: Chimneys",
+    "category": "Ingénierie, énergie et transports",
+    "version": "1.4.1",
+    "status": "OK",
+    "description": "Cheminées et éléments d'échappement décoratifs pour les trains et machines.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-chimneys",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1154/933/256/256/638722416788508737.png"
+  },
+  {
+    "name": "Create: Connected",
+    "category": "Ingénierie, énergie et transports",
+    "version": "1.3.3-mc1.21.1",
+    "status": "OK",
+    "description": "Composants mécaniques et utilitaires complémentaires.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-connected",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/922/162/256/256/638387242479713653.png"
+  },
+  {
+    "name": "Create: Copycats+",
+    "category": "Ingénierie, énergie et transports",
+    "version": "3.0.11+mc.1.21.1-neoforge",
+    "status": "OK",
+    "description": "Blocs Create personnalisables avec l'apparence d'autres matériaux.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/copycats",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1682/115/256/256/639068700185455615.png"
+  },
+  {
+    "name": "Create: Diesel Generators",
+    "category": "Ingénierie, énergie et transports",
+    "version": "1.21.1-1.3.15",
+    "status": "OK",
+    "description": "Moteurs, carburants et production mécanique au diesel.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-diesel-generators",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1065/563/256/256/638599261172976487.png"
+  },
+  {
+    "name": "Create: Dragons Plus",
+    "category": "Ingénierie, énergie et transports",
+    "version": "1.11.9",
+    "status": "OK",
+    "description": "Étend Create avec de nouveaux procédés de ventilation et composants, notamment utilisés par la chaîne Stargate.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-dragons-plus",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1195/420/256/256/638771027943462603.png"
+  },
+  {
+    "name": "Create: Enchantment Industry",
+    "category": "Ingénierie, énergie et transports",
+    "version": "2.4.2",
+    "status": "CONFIG",
+    "description": "Automatisation de l'expérience, des enchantements et de l'encre.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-enchantment-industry",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1224/199/256/256/638802282774958966.png"
+  },
+  {
+    "name": "Create: Escalated",
+    "category": "Ingénierie, énergie et transports",
+    "version": "1.3.2",
+    "status": "OK",
+    "description": "Escalators mécaniques animés dans le style de Create.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-escalated",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1261/902/256/256/638821569425963837_animated.gif"
+  },
+  {
+    "name": "Create: Extra Gauges",
+    "category": "Ingénierie, énergie et transports",
+    "version": "2.1.3",
+    "status": "OK",
+    "description": "Jauges et logique redstone supplémentaires pour surveiller et piloter les installations.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-extra-gauges",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1770/452/256/256/639124919832946079.png"
+  },
+  {
+    "name": "Create: Interiors",
+    "category": "Ingénierie, énergie et transports",
+    "version": "0.6.1",
+    "status": "OK",
+    "description": "Sièges, panneaux et décoration intérieure particulièrement adaptés aux trains.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/interiors",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1068/436/256/256/638602929407669140.png"
+  },
+  {
+    "name": "Create: Numismatics",
+    "category": "Ingénierie, énergie et transports",
+    "version": "1.1.0+neoforge-mc1.21.1",
+    "status": "OK",
+    "description": "Monnaie, comptes bancaires, cartes et boutiques automatisées.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/numismatics",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/975/993/256/256/638479743236516111.png"
+  },
+  {
+    "name": "Create: Pattern Schematics",
+    "category": "Ingénierie, énergie et transports",
+    "version": "2.0.10",
+    "status": "OK",
+    "description": "Schémas répétables relativement à une contraption mobile pour appliquer des motifs pendant son déplacement.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-pattern-schematics",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1089/645/256/256/638632784144958497.png"
+  },
+  {
+    "name": "Create: Security Program",
+    "category": "Ingénierie, énergie et transports",
+    "version": "1.21.1-2.01-release",
+    "status": "OK",
+    "description": "Ajoute cartes d'accès réutilisables, tickets consommables, lecteurs et portiques pilotant la redstone pour sécuriser usines, gares et réseaux de transport.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-security-program",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1197/750/256/256/638773892853207783.png"
+  },
+  {
+    "name": "Create: Shuffle Filter",
+    "category": "Ingénierie, énergie et transports",
+    "version": "2.2.0",
+    "status": "OK",
+    "description": "Filtre Create distribuant aléatoirement des blocs ou objets, utile pour les constructions variées automatisées.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-shuffle-filter",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1463/826/256/256/638950215836998337.png"
+  },
+  {
+    "name": "Create: Transmission!",
+    "category": "Ingénierie, énergie et transports",
+    "version": "1.2.2+neoforge-create6-1.21.1",
+    "status": "OK",
+    "description": "Ajoute une chaîne de transmission placée sur les tapis pour transmettre la rotation entre tapis droits, perpendiculaires ou superposés sans montage encombrant.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-transmission",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1983/446/256/256/639223044510309383.png"
+  },
+  {
+    "name": "Create: Vibrant Vaults",
+    "category": "Ingénierie, énergie et transports",
+    "version": "0.3.2",
+    "status": "OK",
+    "description": "Variantes colorées et verticales des Item Vaults, sans modifier leur capacité.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-vibrant-vaults",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1241/110/256/256/638811984875891856.png"
+  },
+  {
+    "name": "KubeJS",
+    "category": "Ingénierie, énergie et transports",
+    "version": "2101.7.2-build.381",
+    "status": "OK",
+    "description": "Scripts, recettes et équilibrage personnalisé du serveur.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/kubejs",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1053/159/256/256/638583716122159056.png"
+  },
+  {
+    "name": "KubeJS Create",
+    "category": "Ingénierie, énergie et transports",
+    "version": "2101.3.1-build.18",
+    "status": "OK",
+    "description": "Intégration des procédés Create dans les scripts KubeJS.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/kubejs-create",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1053/163/256/256/638583716306077014.png"
+  },
+  {
+    "name": "Small Ships",
+    "category": "Ingénierie, énergie et transports",
+    "version": "2.0.2",
+    "status": "OK",
+    "description": "Navires pilotables pour le transport et l’exploration maritime en survie.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/small-ships",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/2092/28/256/256/639267223718623163.png"
+  },
+  {
+    "name": "Stargate Journey",
+    "category": "Ingénierie, énergie et transports",
+    "version": "0.6.54",
+    "status": "OK",
+    "description": "Portes des étoiles, réseau d'adresses et téléportation interdimensionnelle.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/sgjourney",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/938/585/256/256/638417849215075737.png"
+  },
+  {
+    "name": "Stargate Journey: MoreGates Addon",
+    "category": "Ingénierie, énergie et transports",
+    "version": "4.4.1",
+    "status": "WATCH",
+    "description": "Ajoute 31 variantes visuelles de Stargates fabricables avec des cristaux. Port NeoForge 1.21.1 récent à valider ; les variantes dépendant de mods absents resteront indisponibles.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/more-gates-mod-ver",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/993/248/256/256/638508001783964220.png"
+  },
+  {
+    "name": "Steam 'n' Rails NeoForge",
+    "category": "Ingénierie, énergie et transports",
+    "version": "0.2.1+neoforge-mc1.21.1",
+    "status": "OK",
+    "description": "Rails, bogies, sémaphores et accessoires ferroviaires ; port communautaire non officiel.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/steam-n-rails-neoforge",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1582/848/256/256/639024674263601857.png"
+  },
+  {
+    "name": "Brewin' and Chewin'",
+    "category": "Cuisine, boissons et activités paisibles",
+    "version": "4.5.0",
+    "status": "OK",
+    "description": "Fermentation, boissons, tonnelets et nourriture.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/564/35/256/256/637919784221963476.png"
+  },
+  {
+    "name": "Create: Bitterballen",
+    "category": "Cuisine, boissons et activités paisibles",
+    "version": "1.0.4",
+    "status": "OK",
+    "description": "Friterie et snacks néerlandais fabriquables avec des procédés Create.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-bitterballen",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1162/741/256/256/638731961792912481.png"
+  },
+  {
+    "name": "Farmer's Delight",
+    "category": "Cuisine, boissons et activités paisibles",
+    "version": "1.3.4",
+    "status": "OK",
+    "description": "Cuisine, agriculture et préparation des aliments.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/farmers-delight",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/396/11/256/256/637595005615179370.png"
+  },
+  {
+    "name": "Farmer's Respite (port non officiel)",
+    "category": "Cuisine, boissons et activités paisibles",
+    "version": "3.0.1",
+    "status": "WATCH",
+    "description": "Thé, café, cultures et bouilloire ; port récent encore peu éprouvé en multijoueur.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/farmers-respite-unofficial-port",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1700/452/256/256/639079829098058740.png"
+  },
+  {
+    "name": "Let's Do: Bakery (Farm & Charm)",
+    "category": "Cuisine, boissons et activités paisibles",
+    "version": "2.1.11",
+    "status": "OK",
+    "description": "Pains, pâtisseries et gâteaux ; succède au projet Bakery retenu en 1.20.1.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lets-do-bakery-farm-charm-compat",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1677/146/256/256/639066219257332861.png"
+  },
+  {
+    "name": "Let's Do: Camping",
+    "category": "Cuisine, boissons et activités paisibles",
+    "version": "2.1.6",
+    "status": "OK",
+    "description": "Tentes, couchages, grill et matériel de camping utilisables pendant l'exploration.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lets-do-camping",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1677/154/256/256/639066220085991461.png"
+  },
+  {
+    "name": "Let's Do: Candlelight (Farm & Charm Compat)",
+    "category": "Cuisine, boissons et activités paisibles",
+    "version": "2.1.15",
+    "status": "OK",
+    "description": "Compatibilité entre Candlelight et Farm & Charm pour les recettes et contenus culinaires.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lets-do-candlelight-farm-charm-compat",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1677/151/256/256/639066219860097715.png"
+  },
+  {
+    "name": "Let's Do: Farm & Charm",
+    "category": "Cuisine, boissons et activités paisibles",
+    "version": "1.1.29",
+    "status": "OK",
+    "description": "Agriculture, cuisine et décoration rustique, avec de nouveaux ateliers et recettes compatibles avec l’écosystème Let’s Do.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lets-do-farm-charm",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1677/145/256/256/639066218721273462.png"
+  },
+  {
+    "name": "Let's Do: Meadow",
+    "category": "Cuisine, boissons et activités paisibles",
+    "version": "1.4.10",
+    "status": "OK",
+    "description": "Pâturages alpins, nouvelles vaches, traite, fromages, fondue, fleurs et décoration rustique.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lets-do-meadow",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1677/141/256/256/639066218515383322.png"
+  },
+  {
+    "name": "Let's Do: Vinery",
+    "category": "Cuisine, boissons et activités paisibles",
+    "version": "1.5.6",
+    "status": "OK",
+    "description": "Viticulture, pressage, fermentation et décoration de domaines.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lets-do-vinery",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1681/782/256/256/639068578276109661.png"
+  },
+  {
+    "name": "Starcatcher",
+    "category": "Cuisine, boissons et activités paisibles",
+    "version": "3.3.10-NEOFORGE-1.21.1",
+    "status": "OK",
+    "description": "Refonte complète de la pêche avec plus de 100 poissons, de nouveaux équipements et du contenu lié aux biomes.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/starcatcher",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1463/902/256/256/638950258043549784.png"
+  },
+  {
+    "name": "Starcatcher's Delight",
+    "category": "Cuisine, boissons et activités paisibles",
+    "version": "3.2-NEOFORGE-1.21.1",
+    "status": "OK",
+    "description": "Recettes Farmer’s Delight utilisant les poissons de Starcatcher.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/starcatchers-delight",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1655/501/256/256/639055383246526440.png"
+  },
+  {
+    "name": "Additional Lanterns",
+    "category": "Construction, décoration et éclairage",
+    "version": "1.1.2",
+    "status": "OK",
+    "description": "Lanternes déclinées selon les couleurs et matériaux.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/additional-lanterns",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/404/491/256/256/637615248593989523.png"
+  },
+  {
+    "name": "Amendments",
+    "category": "Construction, décoration et éclairage",
+    "version": "1.21-2.2.7",
+    "status": "OK",
+    "description": "Améliore de nombreux blocs vanilla avec des variantes décoratives et de nouvelles interactions.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/amendments",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/951/632/256/256/638441223877296738_animated.gif"
+  },
+  {
+    "name": "Another Furniture",
+    "category": "Construction, décoration et éclairage",
+    "version": "4.0.3",
+    "status": "OK",
+    "description": "Mobilier fabriquable au style proche de Minecraft.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/another-furniture",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1198/569/256/256/638774822276226949.png"
+  },
+  {
+    "name": "Architect's Palette",
+    "category": "Construction, décoration et éclairage",
+    "version": "1.4.0-beta.5",
+    "status": "WATCH",
+    "description": "Familles de matériaux architecturaux fabriquables en survie ; version bêta.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/architects-palette",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/332/416/256/256/637463465409763931_animated.gif"
+  },
+  {
+    "name": "Chalk",
+    "category": "Construction, décoration et éclairage",
+    "version": "2.0.3",
+    "status": "OK",
+    "description": "Symboles, flèches et marquages sur les blocs.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/chalk",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/2004/497/256/256/639231802222654662.png"
+  },
+  {
+    "name": "Chipped",
+    "category": "Construction, décoration et éclairage",
+    "version": "4.0.2",
+    "status": "OK",
+    "description": "Nombreuses variantes décoratives de matériaux.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/chipped",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/495/254/256/256/637808243655328652_animated.gif"
+  },
+  {
+    "name": "Create Encased",
+    "category": "Construction, décoration et éclairage",
+    "version": "1.10.1",
+    "status": "OK",
+    "description": "Permet d'appliquer les différents casings Create aux arbres, engrenages et tuyaux afin d'intégrer proprement les transmissions dans les constructions.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-encased",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1947/27/256/256/639207767786029484.png"
+  },
+  {
+    "name": "Create: Tradeworks",
+    "category": "Construction, décoration et éclairage",
+    "version": "1.0.7",
+    "status": "OK",
+    "description": "Ajoute des nappes colorées et des étagères permettant d'exposer verticalement des objets pour construire marchés, cafés et boutiques dans le style de Create.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/tradeworks",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1780/246/256/256/639129629566644573.png"
+  },
+  {
+    "name": "Decorative Blocks Reborn",
+    "category": "Construction, décoration et éclairage",
+    "version": "6.0.2",
+    "status": "OK",
+    "description": "Successeur NeoForge de Decorative Blocks.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/decorative-blocks-reborn",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1401/732/256/256/638908604373933186.png"
+  },
+  {
+    "name": "FramedBlocks",
+    "category": "Construction, décoration et éclairage",
+    "version": "10.6.3",
+    "status": "OK",
+    "description": "Formes de blocs personnalisables avec différents matériaux.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/framedblocks",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/337/942/256/256/637476252137998899.png"
+  },
+  {
+    "name": "Handcrafted",
+    "category": "Construction, décoration et éclairage",
+    "version": "4.0.3",
+    "status": "OK",
+    "description": "Mobilier et décoration intérieure.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/handcrafted",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/676/448/256/256/638067467429210259_animated.gif"
+  },
+  {
+    "name": "Immersive Paintings",
+    "category": "Construction, décoration et éclairage",
+    "version": "0.8.0",
+    "status": "CONFIG",
+    "description": "Tableaux et affiches personnalisés ; prévoir une politique de modération.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/immersive-paintings",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/566/108/256/256/637924664947203365.png"
+  },
+  {
+    "name": "Macaw's Lights and Lamps",
+    "category": "Construction, décoration et éclairage",
+    "version": "1.1.5",
+    "status": "OK",
+    "description": "Lampadaires, plafonniers, appliques, lustres et lampes de jardin.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/macaws-lights-and-lamps",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1018/353/256/256/638544982594670903.png"
+  },
+  {
+    "name": "Macaw's Windows",
+    "category": "Construction, décoration et éclairage",
+    "version": "2.4.2",
+    "status": "OK",
+    "description": "Fenêtres, volets, stores, rideaux et vitrages.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/macaws-windows",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/877/195/256/256/638302089747019943.png"
+  },
+  {
+    "name": "Rechiseled",
+    "category": "Construction, décoration et éclairage",
+    "version": "1.2.6",
+    "status": "OK",
+    "description": "Variantes de blocs fabriquées avec un burin.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/rechiseled",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/473/70/256/256/637764150842291454.png"
+  },
+  {
+    "name": "Rechiseled: Chipped",
+    "category": "Construction, décoration et éclairage",
+    "version": "1.3",
+    "status": "OK",
+    "description": "Pont décoratif entre Rechiseled et Chipped.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/rechiseled-chipped",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/984/928/256/256/638494093225908762_animated.gif"
+  },
+  {
+    "name": "Rechiseled: Create",
+    "category": "Construction, décoration et éclairage",
+    "version": "1.1.1",
+    "status": "OK",
+    "description": "Variantes de matériaux Create et burinage automatisable.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/rechiseled-create",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/848/902/256/256/638249353195216679.png"
+  },
+  {
+    "name": "Snow! Real Magic!",
+    "category": "Construction, décoration et éclairage",
+    "version": "12.2.3",
+    "status": "OK",
+    "description": "Accumulation, gravité et rendu plus naturel de la neige.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/snow-real-magic",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/181/338/256/256/636799740021478717.png"
+  },
+  {
+    "name": "Supplementaries",
+    "category": "Construction, décoration et éclairage",
+    "version": "1.21.1-4.0.2",
+    "status": "OK",
+    "description": "Grande collection de blocs décoratifs et utilitaires de style vanilla.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/supplementaries",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/358/166/256/256/637518566737953306_animated.gif"
+  },
+  {
+    "name": "3D Skin Layers",
+    "category": "Vie communautaire, confort et interface",
+    "version": "1.11.4",
+    "status": "OK",
+    "description": "Donne du relief à la seconde couche des skins. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/skin-layers-3d",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/426/742/256/256/637657627491599401.png"
+  },
+  {
+    "name": "AmbientSounds",
+    "category": "Vie communautaire, confort et interface",
+    "version": "6.3.11",
+    "status": "OK (CLIENT)",
+    "description": "Enrichit l’ambiance sonore des biomes et environnements. Mod client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ambientsounds",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/65/45/256/256/636158453613581226.png"
+  },
+  {
+    "name": "AppleSkin",
+    "category": "Vie communautaire, confort et interface",
+    "version": "3.0.5",
+    "status": "OK",
+    "description": "Affiche la faim et la saturation réellement rendues par chaque aliment. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/appleskin",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/47/527/256/256/636066936394500688.png"
+  },
+  {
+    "name": "Buddycards",
+    "category": "Vie communautaire, confort et interface",
+    "version": "5.2.1",
+    "status": "OK",
+    "description": "Cartes à collectionner trouvées en explorant et en jouant.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/buddycards",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/470/383/256/256/637757191265711349.png"
+  },
+  {
+    "name": "Corpse",
+    "category": "Vie communautaire, confort et interface",
+    "version": "1.21.1-1.1.22",
+    "status": "OK",
+    "description": "Conserve l'inventaire dans un cadavre récupérable après la mort.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/corpse",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/194/489/256/256/636873305017840968.png"
+  },
+  {
+    "name": "Cosmetic Armor Reworked",
+    "category": "Vie communautaire, confort et interface",
+    "version": "1.21.1-v1-neoforge",
+    "status": "OK",
+    "description": "Sépare l'apparence de l'armure de ses statistiques et permet aussi de masquer l'armure portée.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/cosmetic-armor-reworked",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/27/600/256/256/635812915333870435.png"
+  },
+  {
+    "name": "Create Buddycards",
+    "category": "Vie communautaire, confort et interface",
+    "version": "2.0.4",
+    "status": "OK",
+    "description": "Ajoute une collection Create à Buddycards et permet de recycler les cartes en double avec des machines Create.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-buddycards",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1758/963/256/256/639118915667843494.png"
+  },
+  {
+    "name": "Delightful Buddycards",
+    "category": "Vie communautaire, confort et interface",
+    "version": "2.1.0",
+    "status": "OK",
+    "description": "Ajoute à Buddycards une collection inspirée de Farmer’s Delight et de ses extensions.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/delightful-buddycards",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1793/367/256/256/639136114020214855.png"
+  },
+  {
+    "name": "Easy Anvils",
+    "category": "Vie communautaire, confort et interface",
+    "version": "21.1.0",
+    "status": "OK",
+    "description": "Enclumes plus pratiques et coûts configurables.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/easy-anvils",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1842/888/256/256/639160367568716921.png"
+  },
+  {
+    "name": "Emotecraft",
+    "category": "Vie communautaire, confort et interface",
+    "version": "2.4.12",
+    "status": "OK",
+    "description": "Émotes et animations synchronisées entre joueurs.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/emotecraft-forge",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/294/964/256/256/637335210850751725.png"
+  },
+  {
+    "name": "Etched",
+    "category": "Vie communautaire, confort et interface",
+    "version": "5.1.0-regalade.2",
+    "status": "OK",
+    "description": "Musique personnalisée et radios diffusant des flux audio, avec réglage de volume et de portée par radio.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/etched",
+    "icon": "https://cdn.modrinth.com/data/zi3Fnfmc/ad6a88011826f38dc4aaad6a96b202947da31c67_96.webp"
+  },
+  {
+    "name": "Exposure",
+    "category": "Vie communautaire, confort et interface",
+    "version": "1.9.21",
+    "status": "OK",
+    "description": "Photographie argentique, développement et tirages exposables.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/exposure",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1219/142/256/256/638798088223804758_animated.gif"
+  },
+  {
+    "name": "Inventory Essentials",
+    "category": "Vie communautaire, confort et interface",
+    "version": "21.1.20",
+    "status": "OK",
+    "description": "Raccourcis pratiques pour déplacer, répartir et gérer les piles dans les inventaires. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/inventory-essentials",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/256/58/256/256/637203881905177301.png"
+  },
+  {
+    "name": "Jade",
+    "category": "Vie communautaire, confort et interface",
+    "version": "15.10.6",
+    "status": "OK",
+    "description": "Informations contextuelles sur les blocs et entités visés.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/jade",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/207/323/256/256/636965628804677340.png"
+  },
+  {
+    "name": "Jade Addons",
+    "category": "Vie communautaire, confort et interface",
+    "version": "6.1.1",
+    "status": "OK",
+    "description": "Intégrations supplémentaires pour Jade.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/jade-addons",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/497/744/256/256/637814611670008374.png"
+  },
+  {
+    "name": "Just Enough Items",
+    "category": "Vie communautaire, confort et interface",
+    "version": "19.64.0.455",
+    "status": "OK",
+    "description": "Consultation des recettes et usages.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/jei",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/29/69/256/256/635838945588716414.jpeg"
+  },
+  {
+    "name": "LambDynamicLights",
+    "category": "Vie communautaire, confort et interface",
+    "version": "4.8.11+1.21.1",
+    "status": "OK",
+    "description": "Éclairage dynamique optimisé des objets tenus et entités ; successeur retenu de Sodium/Embeddium Dynamic Lights. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lambdynamiclights",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1129/408/256/256/638687799770919257.png"
+  },
+  {
+    "name": "Mouse Tweaks",
+    "category": "Vie communautaire, confort et interface",
+    "version": "2.26.1",
+    "status": "OK",
+    "description": "Gestes de souris améliorés pour déplacer rapidement les objets entre inventaires. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/mouse-tweaks",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/467/691/256/256/637749969243449870.png"
+  },
+  {
+    "name": "Polymorph",
+    "category": "Vie communautaire, confort et interface",
+    "version": "1.1.0+1.21.1",
+    "status": "OK",
+    "description": "Permet de choisir le résultat lors des conflits de recettes.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/polymorph",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/279/271/256/256/637277042531842540.png"
+  },
+  {
+    "name": "Shuffle",
+    "category": "Vie communautaire, confort et interface",
+    "version": "21.1.0",
+    "status": "OK",
+    "description": "Choisit aléatoirement un bloc approprié dans la barre rapide pour faciliter les textures de construction variées. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/shuffle",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/247/174/256/256/637161770719810085.png"
+  },
+  {
+    "name": "Simple Radio",
+    "category": "Vie communautaire, confort et interface",
+    "version": "1.21.1-4.6.7.10",
+    "status": "OK",
+    "description": "Radios portatives, fréquences, antennes, émetteurs, récepteurs et haut-parleurs compatibles avec Simple Voice Chat. Le JAR retenu est bien la version NeoForge pour Minecraft 1.21.1.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/simple-voice-radio",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1228/416/256/256/638805632556962162.png"
+  },
+  {
+    "name": "Simple Voice Chat",
+    "category": "Vie communautaire, confort et interface",
+    "version": "1.21.1-2.6.22",
+    "status": "OK",
+    "description": "Discussion vocale de proximité.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/391/367/256/256/637584172062782791.png"
+  },
+  {
+    "name": "Sophisticated Backpacks",
+    "category": "Vie communautaire, confort et interface",
+    "version": "3.26.21",
+    "status": "OK",
+    "description": "Sacs à dos améliorables.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/375/56/256/256/637549610342642859.png"
+  },
+  {
+    "name": "Sound Physics Remastered",
+    "category": "Vie communautaire, confort et interface",
+    "version": "1.21.1-1.5.2",
+    "status": "OK",
+    "description": "Réverbération, obstruction et propagation réaliste du son côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/442/531/256/256/637694502660771592.png"
+  },
+  {
+    "name": "Storage Drawers",
+    "category": "Vie communautaire, confort et interface",
+    "version": "13.11.4",
+    "status": "OK",
+    "description": "Stockage visuel en tiroirs.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/storage-drawers",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/10/842/256/256/635468327818431130.png"
+  },
+  {
+    "name": "Straw Statues",
+    "category": "Vie communautaire, confort et interface",
+    "version": "21.1.0",
+    "status": "OK",
+    "description": "Mannequins de paille positionnables et personnalisables pour rendre les décors plus vivants.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/straw-statues",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/858/350/256/256/638263496881343345.png"
+  },
+  {
+    "name": "Trading Post",
+    "category": "Vie communautaire, confort et interface",
+    "version": "21.1.1",
+    "status": "OK",
+    "description": "Ajoute un comptoir regroupant les échanges des villageois proches dans une interface unique.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/trading-post",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/776/152/256/256/638118060002759129.png"
+  },
+  {
+    "name": "Xaero Train Map",
+    "category": "Vie communautaire, confort et interface",
+    "version": "1.0.0",
+    "status": "OK",
+    "description": "Affiche les voies et trains Create sur la carte Xaero. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/xaero-train-map",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1333/8/256/256/638866490310727212.png"
+  },
+  {
+    "name": "Xaero's World Map",
+    "category": "Vie communautaire, confort et interface",
+    "version": "1.47.0",
+    "status": "OK",
+    "description": "Grande carte personnelle explorée, complémentaire à la minicarte. Réintégrée à la demande, côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/196/654/256/256/636886857118683130.png"
+  },
+  {
+    "name": "Artifacts",
+    "category": "Exploration et monde vivant",
+    "version": "13.2.5",
+    "status": "OK",
+    "description": "Accessoires rares obtenus par l'exploration.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/artifacts",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/444/622/256/256/637699815276651872.png"
+  },
+  {
+    "name": "Create: Let The Adventure Begin",
+    "category": "Exploration et monde vivant",
+    "version": "4.1.0",
+    "status": "OK",
+    "description": "Ajoute à la génération du monde des structures équilibrées inspirées de Create. À installer avant la création ou la prégénération du monde définitif.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-let-the-adventure-begin",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1158/135/256/256/638726420331721627_animated.gif"
+  },
+  {
+    "name": "Critters and Companions",
+    "category": "Exploration et monde vivant",
+    "version": "2.7.0",
+    "status": "OK",
+    "description": "Petit bestiaire de créatures et compagnons de style vanilla.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/critters-and-companions",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/728/545/256/256/638081057334527379.png"
+  },
+  {
+    "name": "Doggy Talents Next",
+    "category": "Exploration et monde vivant",
+    "version": "1.19.1",
+    "status": "OK",
+    "description": "Développe les loups apprivoisés avec talents, commandes, animations, accessoires et mécanismes évitant de perdre définitivement son compagnon.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/doggy-talents-next",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/2010/896/256/256/639234542822652635.png"
+  },
+  {
+    "name": "Lootr",
+    "category": "Exploration et monde vivant",
+    "version": "1.21.1-1.11.38.127",
+    "status": "OK",
+    "description": "Butin des coffres générés séparément pour chaque joueur.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lootr",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1131/830/256/256/638691606432990450.png"
+  },
+  {
+    "name": "Towns and Towers",
+    "category": "Exploration et monde vivant",
+    "version": "1.13.11",
+    "status": "OK",
+    "description": "Nouvelles variantes de villages et d'avant-postes.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/towns-and-towers",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/551/161/256/256/637888384577155054.png"
+  },
+  {
+    "name": "Villager Names",
+    "category": "Exploration et monde vivant",
+    "version": "9.0",
+    "status": "OK",
+    "description": "Attribue automatiquement des noms aux villageois et affiche leur profession dans l’interface d’échange.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/villager-names",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/230/283/256/256/637059743994941605.png"
+  },
+  {
+    "name": "YUNG's Better Mineshafts",
+    "category": "Exploration et monde vivant",
+    "version": "1.21.1-NeoForge-5.1.1",
+    "status": "OK",
+    "description": "Refonte des mines abandonnées.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/yungs-better-mineshafts-neoforge",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/992/685/256/256/638507038979948571.png"
+  },
+  {
+    "name": "Create: Brassworks Missions",
+    "category": "Économie et missions",
+    "version": "2.1-hotfix",
+    "status": "OK",
+    "description": "Système principal de revenus : missions quotidiennes et hebdomadaires configurables, interface Create et récompenses versées en pièces Numismatics. Correctif de la branche 2.1 appliqué.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-brassworks-missions",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1638/538/256/256/639048482377328187.png"
+  },
+  {
+    "name": "Create: Numismatics Advancement Seeker",
+    "category": "Économie et missions",
+    "version": "0.5.0",
+    "status": "OK",
+    "description": "Récompense la progression et les advancements en pièces Numismatics ; la liste des mods dont les progrès sont rémunérés sera configurée explicitement et la prime de temps de jeu désactivée ou très faible.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-numismatics-advancement-seeker",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1775/214/256/256/639127334803961378.png"
+  },
+  {
+    "name": "Advancement Plaques",
+    "category": "Qualité de vie et retours visuels",
+    "version": "1.6.8",
+    "status": "OK",
+    "description": "Remplace les notifications de progrès par des plaques animées plus lisibles et valorisantes. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/advancement-plaques",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/409/257/256/256/637624038913829647.png"
+  },
+  {
+    "name": "Better Advanced Tooltips",
+    "category": "Qualité de vie et retours visuels",
+    "version": "2101.1.0-build.5",
+    "status": "OK",
+    "description": "Enrichit les infobulles d’objets avec des informations avancées plus lisibles.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/better-advanced-tooltips",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1961/333/256/256/639213545789598021.png"
+  },
+  {
+    "name": "Better Advancements",
+    "category": "Qualité de vie et retours visuels",
+    "version": "0.4.3.21",
+    "status": "WATCH",
+    "description": "Agrandit et améliore l'interface des progrès pour mieux gérer les nombreux onglets d'un pack moddé. Dernière version NeoForge 1.21.1 disponible, encore classée alpha. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/better-advancements",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/106/654/256/256/636360849723336023.png"
+  },
+  {
+    "name": "Better Ping Display",
+    "category": "Qualité de vie et retours visuels",
+    "version": "1.1",
+    "status": "OK",
+    "description": "Affiche le ping exact de chaque joueur dans la liste Tab à la place des seules barres de connexion. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/better-ping-display",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/477/83/256/256/637771296028904958.png"
+  },
+  {
+    "name": "BetterF3",
+    "category": "Qualité de vie et retours visuels",
+    "version": "11.0.3",
+    "status": "OK",
+    "description": "Remplace l'écran de débogage F3 par une présentation lisible, organisée et configurable. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/betterf3",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/293/27/256/256/637327750859254377.png"
+  },
+  {
+    "name": "BetterF3 Spark Module",
+    "category": "Qualité de vie et retours visuels",
+    "version": "5.0.0",
+    "status": "OK (CLIENT)",
+    "description": "Ajoute les informations de diagnostic de spark à l’écran BetterF3.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/betterf3-spark-module",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1957/184/256/256/639211923153590845.png"
+  },
+  {
+    "name": "Chat Heads",
+    "category": "Qualité de vie et retours visuels",
+    "version": "0.15.7",
+    "status": "OK",
+    "description": "Affiche la tête de l'expéditeur à côté de chaque message pour rendre le chat multijoueur plus lisible. Plusieurs correctifs de compatibilité sont inclus. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/chat-heads",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/299/225/256/256/637352537610256484.png"
+  },
+  {
+    "name": "Chat Notify",
+    "category": "Qualité de vie et retours visuels",
+    "version": "2.6.9+1.21.1",
+    "status": "OK",
+    "description": "Joue un son et met en évidence les messages qui mentionnent le pseudo du joueur ou un mot configuré. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/chatnotify",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1157/104/256/256/638725033571597349.png"
+  },
+  {
+    "name": "Clumps",
+    "category": "Qualité de vie et retours visuels",
+    "version": "19.0.0.1",
+    "status": "OK",
+    "description": "Regroupe les orbes d'expérience afin de les ramasser plus facilement et de réduire le nombre d'entités côté serveur.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/clumps",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1289/817/256/256/638838549850518521_animated.gif"
+  },
+  {
+    "name": "Controlling",
+    "category": "Qualité de vie et retours visuels",
+    "version": "19.0.5",
+    "status": "OK",
+    "description": "Ajoute une recherche dans le menu des raccourcis et permet d'identifier facilement les conflits de touches. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/controlling",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/49/603/256/256/636079972364045115.png"
+  },
+  {
+    "name": "Crafting Tweaks",
+    "category": "Qualité de vie et retours visuels",
+    "version": "21.1.11",
+    "status": "OK",
+    "description": "Ajoute des commandes pour équilibrer, vider, faire pivoter et remplir rapidement les grilles de craft. Cette version corrige un crash avec certains boutons ajoutés par d'autres mods.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/crafting-tweaks",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1979/183/256/256/639221225118369784.png"
+  },
+  {
+    "name": "Create: Storage Drawers & Functional Frogport/Packager input fix",
+    "category": "Qualité de vie et retours visuels",
+    "version": "1.0.0",
+    "status": "OK",
+    "description": "Corrige la livraison des colis Create par Frogport ou Packager vers les réseaux de Drawer Controllers de Storage Drawers.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-storage-drawers-functional-frogport",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1927/846/256/256/639199879166714756.png"
+  },
+  {
+    "name": "Cubes Without Borders",
+    "category": "Qualité de vie et retours visuels",
+    "version": "5.0.0+1.21.0.neoforge",
+    "status": "OK (CLIENT)",
+    "description": "Ajoute un véritable plein écran sans bordure pour des Alt+Tab rapides sans minimiser Minecraft ; compatible avec Sodium. Mod client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/cubes-without-borders",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/948/648/256/256/638436093486563938.png"
+  },
+  {
+    "name": "Ding",
+    "category": "Qualité de vie et retours visuels",
+    "version": "1.5.0",
+    "status": "OK",
+    "description": "Joue un son configurable lorsque le jeu a fini de démarrer, de rejoindre le serveur ou de recharger les ressources. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ding",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/19/170/256/256/635690976778588959.png"
+  },
+  {
+    "name": "Double Doors",
+    "category": "Qualité de vie et retours visuels",
+    "version": "7.5",
+    "status": "OK",
+    "description": "Ouvre simultanément les deux battants d'une double porte ; barrières et trappes peuvent être activées dans la configuration.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/double-doors",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/233/519/256/256/637072440646369425.png"
+  },
+  {
+    "name": "Drop Highlighter",
+    "category": "Qualité de vie et retours visuels",
+    "version": "1.3.1",
+    "status": "OK",
+    "description": "Ajoute un contour configurable aux objets tombés au sol afin de ne plus perdre un outil ou un matériau dans le décor. Rosetta est ajouté comme dépendance obligatoire. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/drop-highlighter",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1679/886/256/256/639067680443613876.png"
+  },
+  {
+    "name": "Dynamic FPS",
+    "category": "Qualité de vie et retours visuels",
+    "version": "3.11.4",
+    "status": "OK",
+    "description": "Réduit les FPS, le son et l'utilisation processeur lorsque Minecraft est en arrière-plan ou inactif. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/dynamic-fps",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/218/967/256/256/637013973797981040.png"
+  },
+  {
+    "name": "Enchantment Descriptions",
+    "category": "Qualité de vie et retours visuels",
+    "version": "21.1.11",
+    "status": "OK",
+    "description": "Explique les effets des enchantements dans les infobulles, utile avec un grand pack et Enchantment Industry.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/enchantment-descriptions",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/981/433/256/256/638488257207041172.png"
+  },
+  {
+    "name": "Extreme Sound Muffler",
+    "category": "Qualité de vie et retours visuels",
+    "version": "3.57",
+    "status": "OK (CLIENT)",
+    "description": "Permet de réduire ou couper sélectivement les sons du jeu, globalement ou autour d’un point précis.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/extreme-sound-muffler",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/314/978/256/256/637414152851892931.png"
+  },
+  {
+    "name": "Horse Statistics",
+    "category": "Qualité de vie et retours visuels",
+    "version": "2.0.0",
+    "status": "OK",
+    "description": "Affiche précisément la santé, la vitesse et la hauteur de saut des chevaux, ânes, mules et lamas. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/horse-statistics",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/301/412/256/256/637362237659668257.png"
+  },
+  {
+    "name": "Improved Sign Editing",
+    "category": "Qualité de vie et retours visuels",
+    "version": "1.7",
+    "status": "OK",
+    "description": "Gère automatiquement les retours à la ligne et facilite la correction des panneaux. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/improved-sign-editing",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/922/261/256/256/638387501983587419.png"
+  },
+  {
+    "name": "Item Highlighter",
+    "category": "Qualité de vie et retours visuels",
+    "version": "1.1.11",
+    "status": "OK",
+    "description": "Surligne temporairement les nouveaux objets dans l'inventaire jusqu'à leur consultation. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/item-highlighter",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/426/859/256/256/637657810753408357.png"
+  },
+  {
+    "name": "Just Enough Breeding",
+    "category": "Qualité de vie et retours visuels",
+    "version": "3.3.1",
+    "status": "OK",
+    "description": "Ajoute dans JEI les aliments et conditions nécessaires à la reproduction des animaux, notamment ceux de Critters and Companions.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/justenoughbreeding",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/862/389/256/256/638270817972208061.png"
+  },
+  {
+    "name": "Just Enough Effect Descriptions",
+    "category": "Qualité de vie et retours visuels",
+    "version": "1.21-2.3.5",
+    "status": "OK",
+    "description": "Ajoute dans JEI une fiche expliquant les effets de statut, leur durée et leurs sources.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/just-enough-effect-descriptions-jeed",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/438/886/256/256/637685255314420532.png"
+  },
+  {
+    "name": "NetherPortalFix",
+    "category": "Qualité de vie et retours visuels",
+    "version": "21.1.1",
+    "status": "OK",
+    "description": "Mémorise le portail emprunté afin d'éviter de ressortir par le portail d'un autre joueur en multijoueur. Serveur uniquement.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/netherportalfix",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/33/283/256/256/635893403164870085.png"
+  },
+  {
+    "name": "Not Enough Animations",
+    "category": "Qualité de vie et retours visuels",
+    "version": "1.12.7",
+    "status": "OK",
+    "description": "Rend visibles en troisième personne les animations normalement limitées à la première personne, notamment manger, boire et consulter une carte. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/not-enough-animations",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/329/74/256/256/637454010542845990.png"
+  },
+  {
+    "name": "Pick Up Notifier",
+    "category": "Qualité de vie et retours visuels",
+    "version": "21.1.1",
+    "status": "OK",
+    "description": "Affiche une liste discrète et configurable des objets, flèches et points d'expérience qui viennent d'être ramassés. Corrige un crash rare avec certains projectiles moddées.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/pick-up-notifier",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1847/438/256/256/639162494764743795.png"
+  },
+  {
+    "name": "Reese's Sodium Options",
+    "category": "Qualité de vie et retours visuels",
+    "version": "2.2.4+mc1.21.1",
+    "status": "OK",
+    "description": "Réorganise le menu vidéo de Sodium avec une recherche, des onglets et des groupes plus lisibles. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/reeses-sodium-options",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/414/599/256/256/637636962431399112.png"
+  },
+  {
+    "name": "RightClickHarvest",
+    "category": "Qualité de vie et retours visuels",
+    "version": "4.6.1+1.21.1",
+    "status": "CONFIG",
+    "description": "Récolte et replante les cultures mûres par clic droit. Configuration prévue : houe obligatoire, durabilité consommée et récolte de zone désactivée afin de préserver l'automatisation Create.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/rightclickharvest",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/827/189/256/256/638214128652935154.png"
+  },
+  {
+    "name": "Shulker Box Tooltip",
+    "category": "Qualité de vie et retours visuels",
+    "version": "5.1.9+1.21.1",
+    "status": "OK",
+    "description": "Prévisualise le contenu des shulker boxes directement depuis l'inventaire. Côté client ; installation serveur facultative pour quelques fonctions supplémentaires.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/shulkerboxtooltip",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/850/113/256/256/638251427406536090.png"
+  },
+  {
+    "name": "Subtle Effects",
+    "category": "Qualité de vie et retours visuels",
+    "version": "1.15.1",
+    "status": "OK (CLIENT; serveur facultatif pour fonctions étendues)",
+    "description": "Ajoute de petits effets visuels et particules pour rendre le monde plus vivant. Principalement client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/subtle-effects",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1001/518/256/256/638521081241619465.png"
+  },
+  {
+    "name": "Visual Workbench",
+    "category": "Qualité de vie et retours visuels",
+    "version": "21.1.2",
+    "status": "OK",
+    "description": "Conserve les ingrédients dans l'établi après fermeture et les affiche physiquement dessus.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/visual-workbench",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1185/919/256/256/638759979085029659.png"
+  },
+  {
+    "name": "What Are They Up To",
+    "category": "Qualité de vie et retours visuels",
+    "version": "1.21.0-1.2.7",
+    "status": "OK",
+    "description": "Montre visuellement lorsqu'un joueur écrit, consulte une interface ou reste inactif.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/what-are-they-up-to",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/914/103/256/256/638370880469858157.png"
+  },
+  {
+    "name": "Almost Unified",
+    "category": "Administration et performances",
+    "version": "1.21.1-1.4.2",
+    "status": "OK",
+    "description": "Réduit les doublons de minerais et d’ingots entre mods en harmonisant automatiquement leurs recettes.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/almostunified",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/560/421/256/256/637911433758832569.png"
+  },
+  {
+    "name": "Chunky",
+    "category": "Administration et performances",
+    "version": "1.4.23",
+    "status": "OK",
+    "description": "Prégénération administrative des dimensions.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/chunky-pregenerator-forge",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/385/932/256/256/637574074357834213.png"
+  },
+  {
+    "name": "Create Collision Crashfix",
+    "category": "Administration et performances",
+    "version": "1.0.1",
+    "status": "OK (TEMPORAIRE CREATE 6.0.10)",
+    "description": "Correctif temporaire client et serveur pour un crash de collision des contraptions sous Create 6.0.10. À retirer lors du passage à une version de Create intégrant la correction officielle.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-collision-fix",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1966/353/256/256/639215599604392463.png"
+  },
+  {
+    "name": "FastFurnace",
+    "category": "Administration et performances",
+    "version": "9.0.1",
+    "status": "OK",
+    "description": "Réduit le coût des recherches de recettes des fours et blocs dérivés ; complète FastSuite.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/fastfurnace",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/164/243/256/256/636686097562167838.png"
+  },
+  {
+    "name": "FastSuite",
+    "category": "Administration et performances",
+    "version": "6.0.7",
+    "status": "OK",
+    "description": "Optimise les recherches dans le système de recettes JSON, particulièrement utile avec un gros pack.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/fastsuite",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/376/17/256/256/637551781740482627.png"
+  },
+  {
+    "name": "FastWorkbench",
+    "category": "Administration et performances",
+    "version": "9.1.3",
+    "status": "OK",
+    "description": "Met en cache la dernière recette des établis afin d'éviter des recherches répétées ; complète FastSuite.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/fastworkbench",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/164/244/256/256/636686097718417988.png"
+  },
+  {
+    "name": "FerriteCore",
+    "category": "Administration et performances",
+    "version": "7.0.3",
+    "status": "OK",
+    "description": "Réduction de la mémoire utilisée.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ferritecore",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/323/941/256/256/637438748346113688.jpeg"
+  },
+  {
+    "name": "FTB Backups 3",
+    "category": "Administration et performances",
+    "version": "21.1.5",
+    "status": "OK",
+    "description": "Effectue automatiquement des sauvegardes compressées du monde avec rotation configurable.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-backups-3",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1330/191/256/256/638864644748882470.png"
+  },
+  {
+    "name": "FTB Chunks",
+    "category": "Administration et performances",
+    "version": "2101.1.23",
+    "status": "CONFIG",
+    "description": "Claims, territoires d'équipe et chargement permanent de chunks avec quotas configurables ; sa carte peut coexister avec Xaero.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-chunks-forge",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/972/573/256/256/638474885347244172.png"
+  },
+  {
+    "name": "FTB Ranks",
+    "category": "Administration et performances",
+    "version": "2101.1.5",
+    "status": "OK",
+    "description": "Rangs et permissions pour réserver ou augmenter les quotas de chunks chargés.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-ranks-forge",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/972/582/256/256/638474887461851886.png"
+  },
+  {
+    "name": "ImmediatelyFast",
+    "category": "Administration et performances",
+    "version": "1.6.15+1.21.1",
+    "status": "OK (CLIENT)",
+    "description": "Optimise plusieurs chemins de rendu afin d’améliorer les FPS. Mod client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/immediatelyfast",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/873/971/256/256/638294478643875692.png"
+  },
+  {
+    "name": "Lithium",
+    "category": "Administration et performances",
+    "version": "0.15.4+mc1.21.1",
+    "status": "OK (CLIENT + SERVEUR)",
+    "description": "Optimise la logique de jeu, les ticks, les entités, les collisions et plusieurs traitements de chunks. À conserver avec ModernFix ; installer sur le serveur et inclure aussi dans le client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lithium",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/246/646/256/256/637158441743060329.png"
+  },
+  {
+    "name": "ModernFix",
+    "category": "Administration et performances",
+    "version": "5.27.27+mc1.21.1",
+    "status": "OK",
+    "description": "Correctifs et optimisations générales.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/modernfix",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/881/436/256/256/638311693460984164.png"
+  },
+  {
+    "name": "Sodium",
+    "category": "Administration et performances",
+    "version": "0.8.13+mc1.21.1",
+    "status": "OK",
+    "description": "Moteur de rendu optimisé côté client : améliore les FPS, réduit les micro-saccades et remplace Embeddium.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/sodium",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/284/773/256/256/637298471098686391.png"
+  },
+  {
+    "name": "spark",
+    "category": "Administration et performances",
+    "version": "1.10.124",
+    "status": "OK",
+    "description": "Outil de profilage pour diagnostiquer les ralentissements, les ticks et l’usage mémoire du serveur.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/spark",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/495/151/256/256/637808085409071880.png"
+  },
+  {
+    "name": "Yet Another World Protector",
+    "category": "Administration et performances",
+    "version": "0.6.3-beta4",
+    "status": "WATCH",
+    "description": "Protection tridimensionnelle de régions ; conserve la liberté de construire sous le spawn.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/yawp",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1098/907/256/256/638645362316025803.png"
+  },
+  {
+    "name": "Create Cobblestone",
+    "category": "Automatisation Create complémentaire",
+    "version": "1.5.1+neoforge-1.21.1-160",
+    "status": "CONFIG",
+    "description": "Générateur mécanique compact de cobblestone, pierre, basalte, limestone et scoria, conçu pour réduire le coût serveur des générateurs classiques. À nerfer par configuration ou KubeJS : objectif 1 bloc/s à 16 RPM, 256–512 SU, limestone, scoria et deepslate désactivées initialement.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-cobblestone",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1123/211/256/256/638679629040934642.png"
+  }
+]

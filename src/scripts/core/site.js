@@ -5,13 +5,25 @@
   const views = [...document.querySelectorAll('.view')];
   const description = document.querySelector('meta[name="description"]');
   const pages = {
-    accueil: ['Régalade Minecraft', 'Découvre Régalade, un serveur communautaire Minecraft 1.21.1 centré sur Create, la construction et le jeu en groupe.'],
-    installation: ['Installation et connexion | Régalade', 'Installe le modpack Régalade et rejoins le serveur Minecraft pas à pas.'],
-    tutoriels: ['Tutoriels | Régalade', 'Tutoriels détaillés pour Create, Create Big Cannons, les Stargates et l’économie du serveur Régalade.'],
+    accueil: [
+      'Régalade Minecraft',
+      'Découvre Régalade, un serveur communautaire Minecraft 1.21.1 centré sur Create, la construction et le jeu en groupe.',
+    ],
+    installation: [
+      'Installation et connexion | Régalade',
+      'Installe le modpack Régalade et rejoins le serveur Minecraft pas à pas.',
+    ],
+    tutoriels: [
+      'Tutoriels | Régalade',
+      'Tutoriels détaillés pour Create, Create Big Cannons, les Stargates et l’économie du serveur Régalade.',
+    ],
     mods: ['Mods | Régalade', 'Consulte la liste triée et documentée des mods du serveur Minecraft Régalade.'],
     reglement: ['Règlement | Régalade', 'Le règlement simple et bienveillant du serveur Minecraft Régalade.'],
-    statut: ['État du serveur | Régalade', 'Consulte l’état d’avancement et la disponibilité du serveur Minecraft Régalade.'],
-    inscription: ['Inscription | Régalade', 'Inscris ton intérêt pour le serveur communautaire Minecraft Régalade.']
+    statut: [
+      'État du serveur | Régalade',
+      'Consulte l’état d’avancement et la disponibilité du serveur Minecraft Régalade.',
+    ],
+    inscription: ['Inscription | Régalade', 'Inscris ton intérêt pour le serveur communautaire Minecraft Régalade.'],
   };
   let initialRoute = true;
 
@@ -23,11 +35,11 @@
 
   function route() {
     const requested = location.hash.slice(1) || 'accueil';
-    const id = views.some(view => view.id === requested) ? requested : 'accueil';
-    const activeView = views.find(view => view.id === id);
+    const id = views.some((view) => view.id === requested) ? requested : 'accueil';
+    const activeView = views.find((view) => view.id === id);
 
-    views.forEach(view => view.classList.toggle('active', view === activeView));
-    links.forEach(link => {
+    views.forEach((view) => view.classList.toggle('active', view === activeView));
+    links.forEach((link) => {
       const active = link.getAttribute('href') === `#${id}`;
       link.classList.toggle('active', active);
       if (active) link.setAttribute('aria-current', 'page');
@@ -52,14 +64,15 @@
 
   window.addEventListener('hashchange', route);
   menuButton.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
-  document.addEventListener('keydown', event => {
+  document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && nav.classList.contains('open')) {
       setMenu(false);
       menuButton.focus();
     }
   });
-  document.addEventListener('click', event => {
-    if (nav.classList.contains('open') && !nav.contains(event.target) && !menuButton.contains(event.target)) setMenu(false);
+  document.addEventListener('click', (event) => {
+    if (nav.classList.contains('open') && !nav.contains(event.target) && !menuButton.contains(event.target))
+      setMenu(false);
   });
   route();
 
@@ -94,7 +107,7 @@
     }
 
     const fragment = document.createDocumentFragment();
-    members.forEach(member => {
+    members.forEach((member) => {
       const row = document.createElement('tr');
       row.append(makeCell(member.name), makeCell(member.source), makeCell(member.date));
       fragment.append(row);
@@ -109,12 +122,12 @@
   }
 
   renderMembers();
-  form.addEventListener('submit', event => {
+  form.addEventListener('submit', (event) => {
     event.preventDefault();
     const name = document.querySelector('#pseudo').value.trim();
     const source = document.querySelector('#source').value.trim();
 
-    if (members.some(member => member.name.toLowerCase() === name.toLowerCase())) {
+    if (members.some((member) => member.name.toLowerCase() === name.toLowerCase())) {
       showToast('Ce pseudo est déjà dans cette liste locale.');
       return;
     }
@@ -122,7 +135,7 @@
     members.push({
       name,
       source,
-      date: new Intl.DateTimeFormat('fr-CH', { day: '2-digit', month: 'short', year: 'numeric' }).format(new Date())
+      date: new Intl.DateTimeFormat('fr-CH', { day: '2-digit', month: 'short', year: 'numeric' }).format(new Date()),
     });
     localStorage.setItem('regalade-members', JSON.stringify(members));
     renderMembers();
@@ -132,8 +145,9 @@
 
   const rules = document.querySelector('#reglement .rules');
   const faq = document.querySelector('#statut .faq');
-  const consequence = [...document.querySelectorAll('#statut .faq details')]
-    .find(item => item.querySelector('summary')?.textContent.includes('contrevi'));
+  const consequence = [...document.querySelectorAll('#statut .faq details')].find((item) =>
+    item.querySelector('summary')?.textContent.includes('contrevi'),
+  );
 
   if (consequence && rules) {
     const card = document.createElement('article');

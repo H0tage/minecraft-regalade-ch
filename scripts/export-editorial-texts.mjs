@@ -8,51 +8,64 @@ const groups = [
   {
     file: '01-pages-principales.md',
     title: 'Pages principales du site',
-    sources: ['src/pages/accueil.html', 'src/pages/mods.html', 'src/pages/reglement.html', 'src/pages/statut.html', 'src/pages/inscription.html'],
+    sources: [
+      'src/pages/accueil.html',
+      'src/pages/mods.html',
+      'src/pages/reglement.html',
+      'src/pages/statut.html',
+      'src/pages/inscription.html',
+    ],
   },
   {
     file: '02-installation-et-connexion.md',
     title: 'Installation et connexion',
-    sources: ['src/pages/installation.html', 'src/scripts/pages/installation-guide.js', 'src/scripts/pages/installation-connection-page.js'],
+    sources: [
+      'src/pages/installation.html',
+      'src/content/installation/guide.html',
+      'src/content/installation/connection.html',
+    ],
   },
   {
     file: '03-argent-et-echanges.md',
     title: 'Argent et échanges',
-    sources: ['src/scripts/tutorials/economy.js'],
+    sources: ['src/content/tutorials/economy.html'],
   },
   {
     file: '04-create.md',
     title: 'Create (description générale et première usine)',
-    sources: ['src/scripts/tutorials/create.js'],
+    sources: ['src/content/tutorials/create.html'],
   },
   {
     file: '05-big-cannons.md',
     title: 'Big Cannons',
-    sources: ['src/scripts/tutorials/big-cannons.js', 'src/scripts/tutorials/big-cannons-survival.js'],
+    sources: ['src/content/tutorials/big-cannons.html'],
   },
   {
     file: '06-porte-des-etoiles.md',
     title: 'Porte des étoiles',
-    sources: ['src/scripts/tutorials/stargates.js', 'src/scripts/tutorials/stargates-survival.js', 'src/scripts/tutorials/stargates-industry.js'],
+    sources: ['src/content/tutorials/stargates.html'],
   },
 ];
 
 const entities = new Map([
-  ['&nbsp;', ' '], ['&amp;', '&'], ['&lt;', '<'], ['&gt;', '>'],
-  ['&quot;', '"'], ['&#39;', "'"], ['&apos;', "'"],
+  ['&nbsp;', ' '],
+  ['&amp;', '&'],
+  ['&lt;', '<'],
+  ['&gt;', '>'],
+  ['&quot;', '"'],
+  ['&#39;', "'"],
+  ['&apos;', "'"],
 ]);
 
 function decodeEntities(value) {
   return value
-    .replace(/&(nbsp|amp|lt|gt|quot|apos);|&#39;/g, match => entities.get(match) ?? match)
+    .replace(/&(nbsp|amp|lt|gt|quot|apos);|&#39;/g, (match) => entities.get(match) ?? match)
     .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)));
 }
 
 function extractHtml(source, extension) {
   if (extension === '.html') {
-    return source
-      .replace(/<script\b[\s\S]*?<\/script>/gi, '')
-      .replace(/<style\b[\s\S]*?<\/style>/gi, '');
+    return source.replace(/<script\b[\s\S]*?<\/script>/gi, '').replace(/<style\b[\s\S]*?<\/style>/gi, '');
   }
 
   const fragments = [];
@@ -65,7 +78,8 @@ function extractHtml(source, extension) {
     }
   }
 
-  const generatedSectionPattern = /\$\{(step|mission)\(\s*(\d+)\s*,\s*'([^']*)'\s*,\s*'([^']*)'\s*,\s*'([^']*)'\s*,\s*`([\s\S]*?)`\)\}/g;
+  const generatedSectionPattern =
+    /\$\{(step|mission)\(\s*(\d+)\s*,\s*'([^']*)'\s*,\s*'([^']*)'\s*,\s*'([^']*)'\s*,\s*`([\s\S]*?)`\)\}/g;
   while ((match = generatedSectionPattern.exec(source))) {
     const [, helper, number, phase, kickerOrTitle, titleOrIntro, body] = match;
     const kicker = helper === 'step' ? kickerOrTitle : phase;
@@ -79,7 +93,7 @@ function extractHtml(source, extension) {
 function htmlToMarkdown(source) {
   let text = source
     .replace(/\$\{[^}]*\}/g, '')
-    .replace(/<img\b[^>]*\balt=["']([^"']*)["'][^>]*>/gi, (_, alt) => alt ? `\n[Illustration : ${alt}]\n` : '')
+    .replace(/<img\b[^>]*\balt=["']([^"']*)["'][^>]*>/gi, (_, alt) => (alt ? `\n[Illustration : ${alt}]\n` : ''))
     .replace(/<br\s*\/?>/gi, '\n')
     .replace(/<h1\b[^>]*>/gi, '\n# ')
     .replace(/<h2\b[^>]*>/gi, '\n## ')
@@ -96,8 +110,14 @@ function htmlToMarkdown(source) {
     .replace(/<\/(?:em)>/gi, '*')
     .replace(/<(?:code|kbd)\b[^>]*>/gi, '`')
     .replace(/<\/(?:code|kbd)>/gi, '`')
-    .replace(/<(?:p|article|section|header|footer|div|nav|aside|figure|figcaption|table|thead|tbody|tr|td|th|ol|ul)\b[^>]*>/gi, '\n')
-    .replace(/<\/(?:p|article|section|header|footer|div|nav|aside|figure|figcaption|table|thead|tbody|tr|td|th|ol|ul)>/gi, '\n')
+    .replace(
+      /<(?:p|article|section|header|footer|div|nav|aside|figure|figcaption|table|thead|tbody|tr|td|th|ol|ul)\b[^>]*>/gi,
+      '\n',
+    )
+    .replace(
+      /<\/(?:p|article|section|header|footer|div|nav|aside|figure|figcaption|table|thead|tbody|tr|td|th|ol|ul)>/gi,
+      '\n',
+    )
     .replace(/<[^>]+>/g, '')
     .replace(/^\$\{(?:step|mission)\(.*$/gm, '')
     .replace(/\\`/g, '`');
@@ -117,7 +137,7 @@ function htmlToMarkdown(source) {
 fs.mkdirSync(output, { recursive: true });
 
 for (const group of groups) {
-  const sections = group.sources.map(sourceName => {
+  const sections = group.sources.map((sourceName) => {
     const sourcePath = path.join(root, sourceName);
     const source = fs.readFileSync(sourcePath, 'utf8');
     const extracted = htmlToMarkdown(extractHtml(source, path.extname(sourceName)));

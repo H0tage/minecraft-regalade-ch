@@ -68,7 +68,9 @@
   function chapterSections(panel) {
     if (!panel) return [];
     const preferred = [
-      ...panel.querySelectorAll('.install-step, .sg-step[id], .cbc-overview-section[id], .cbc-survival-step[id], .eco-section[id], .cff-step[id]')
+      ...panel.querySelectorAll(
+        '.install-step, .sg-step[id], .cbc-overview-section[id], .cbc-survival-step[id], .eco-section[id], .cff-step[id]',
+      ),
     ].filter(isVisible);
     if (preferred.length) return preferred;
     return [...panel.querySelectorAll('section[id], article[id]')].filter(isVisible);
@@ -80,7 +82,7 @@
   }
 
   function updateActiveChapter(id) {
-    chapterList.querySelectorAll('a').forEach(link => {
+    chapterList.querySelectorAll('a').forEach((link) => {
       link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
     });
   }
@@ -88,13 +90,16 @@
   function observeSections() {
     sectionObserver?.disconnect();
     if (!observedSections.length || !('IntersectionObserver' in window)) return;
-    sectionObserver = new IntersectionObserver(entries => {
-      const visible = entries
-        .filter(entry => entry.isIntersecting)
-        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-      if (visible[0]) updateActiveChapter(visible[0].target.id);
-    }, { rootMargin: '-12% 0px -72% 0px', threshold: 0 });
-    observedSections.forEach(section => sectionObserver.observe(section));
+    sectionObserver = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]) updateActiveChapter(visible[0].target.id);
+      },
+      { rootMargin: '-12% 0px -72% 0px', threshold: 0 },
+    );
+    observedSections.forEach((section) => sectionObserver.observe(section));
   }
 
   function refresh() {
@@ -114,16 +119,17 @@
     }
 
     let currentPhase = '';
-    chapterList.innerHTML = observedSections.map((section, index) => {
-      const phase = section.dataset.phase || '';
-      const phaseLabel = phase && phase !== currentPhase
-        ? `<span class="tutorial-chapter-phase">${phase}</span>`
-        : '';
-      currentPhase = phase || currentPhase;
-      return `${phaseLabel}<a href="#${section.id}">${chapterTitle(section, index)}</a>`;
-    }).join('');
-    chapterList.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', event => {
+    chapterList.innerHTML = observedSections
+      .map((section, index) => {
+        const phase = section.dataset.phase || '';
+        const phaseLabel =
+          phase && phase !== currentPhase ? `<span class="tutorial-chapter-phase">${phase}</span>` : '';
+        currentPhase = phase || currentPhase;
+        return `${phaseLabel}<a href="#${section.id}">${chapterTitle(section, index)}</a>`;
+      })
+      .join('');
+    chapterList.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', (event) => {
         const target = document.getElementById(link.hash.slice(1));
         if (!target) return;
         event.preventDefault();
@@ -146,14 +152,14 @@
     chapterToggle.setAttribute('aria-expanded', String(open));
   });
 
-  tabList.addEventListener('click', event => {
+  tabList.addEventListener('click', (event) => {
     if (!event.target.closest('[role="tab"]')) return;
     library.classList.remove('open');
     libraryToggle.setAttribute('aria-expanded', 'false');
     requestAnimationFrame(refresh);
   });
   tabList.addEventListener('keydown', () => requestAnimationFrame(refresh));
-  content.addEventListener('click', event => {
+  content.addEventListener('click', (event) => {
     if (event.target.closest('.cbc-switcher [role="tab"], .cff-switcher [role="tab"]')) requestAnimationFrame(refresh);
   });
 

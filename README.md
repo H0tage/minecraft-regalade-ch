@@ -2,59 +2,48 @@
 
 Site statique de présentation et de documentation du serveur Régalade.
 
-## Principe architectural
+## Architecture
 
-Le dossier `src` est l’unique source applicative :
+`src` est l’unique source du site :
 
 ```text
 src/
-  index.html          gabarit général et ordre de chargement
-  pages/              contenu HTML d’une page principale par fichier
-  styles/
-    core/             fondations et composants partagés
-    components/       composants autonomes
-    pages/            styles propres aux pages principales
-    tutorials/        styles propres aux tutoriels
-  scripts/
-    core/             navigation et comportements communs
-    data/             catalogue et métadonnées des mods
-    pages/            comportements des pages principales
-    tutorials/        contenu et interactions des tutoriels
+  index.html          document général et ordre des pages
+  pages/              pages principales et enveloppes de navigation
+  content/            contenu HTML détaillé des guides et tutoriels
+  data/               données structurées, dont le catalogue des mods
+  styles/             styles rangés par rôle et par fonctionnalité
+  scripts/            comportements rangés par rôle et par fonctionnalité
 ```
 
-Les répertoires `styles`, `js`, `dist` et le fichier `index.html` à la racine sont des sorties générées. Ils ne doivent jamais être modifiés directement.
+Le build assemble les inclusions HTML, réunit les feuilles de style dans un seul fichier, réunit les scripts dans un seul fichier et produit exclusivement `dist`. Le navigateur reçoit donc un document HTML, un bundle CSS, un bundle JavaScript, les données et les assets.
 
-`assets` contient les images et téléchargements statiques. `scripts` contient uniquement les outils de build, de contrôle et de maintenance.
+`assets` contient les images et téléchargements statiques. `scripts` contient les outils de build, de contrôle et de maintenance. `contenus-textuels` fournit une copie éditoriale lisible, utile pour relire ou préparer des changements de texte.
 
 ## Commandes
 
 ```powershell
+npm ci
 npm run build
 npm run verify
 npm run qa
 npm run serve
+npm run audit:runtime
 npm run locate -- "fragment du texte"
 ```
 
-Le build assemble les inclusions HTML, copie les styles et scripts, ajoute les versions de cache et produit simultanément la sortie GitHub Pages à la racine ainsi que `dist` pour l’hébergement Sites.
+## Modifier un contenu
 
-La vérification refuse notamment :
+Les pages principales se trouvent dans `src/pages`. Les textes longs des tutoriels et guides se trouvent dans `src/content`. Le catalogue des mods se trouve dans `src/data/mods.json`.
 
-- le CSS incorporé dans le HTML ;
-- le CSS créé dynamiquement en JavaScript ;
-- les références locales absentes ;
-- les identifiants HTML dupliqués ;
-- les scripts invalides ;
-- une sortie de déploiement désynchronisée.
-
-## Modifier le contenu
-
-Une page principale se trouve dans `src/pages`. Les tutoriels générés par JavaScript se trouvent dans `src/scripts/tutorials`.
-
-Pour localiser rapidement une phrase :
+Pour localiser une phrase :
 
 ```powershell
 npm run locate -- "début de la phrase"
 ```
 
-Après toute modification, lancer `npm run build` puis `npm run verify`. Une modification structurelle doit également être contrôlée avec `npm run qa` et une prévisualisation ciblée.
+Une correction purement textuelle utilise le workflow express. Une modification de structure, de style ou de comportement utilise le workflow structurel décrit dans `WORKFLOW-SITE.md`.
+
+## Déploiement
+
+GitHub Actions lance les contrôles, construit `dist` et publie ce répertoire sur GitHub Pages. Aucun fichier généré n’est versionné. `.openai/hosting.json` utilise également `dist`.

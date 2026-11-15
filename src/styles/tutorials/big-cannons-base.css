@@ -13,7 +13,11 @@
   --cbc-red: #aa4338;
   --cbc-green: #1d7a59;
   color: var(--cbc-ink);
-  font: 16px/1.55 Inter, "Segoe UI", Arial, sans-serif;
+  font:
+    16px/1.55 Inter,
+    'Segoe UI',
+    Arial,
+    sans-serif;
 }
 
 .cbc *,
@@ -48,10 +52,14 @@
   padding: 10px 15px;
   background: transparent;
   color: var(--cbc-muted);
-  font: 800 .88rem/1 Inter, "Segoe UI", Arial, sans-serif;
+  font:
+    800 0.88rem/1 Inter,
+    'Segoe UI',
+    Arial,
+    sans-serif;
 }
 
-.cbc-switcher button[aria-selected="true"] {
+.cbc-switcher button[aria-selected='true'] {
   background: var(--cbc-ink);
   color: #fff;
 }
@@ -77,7 +85,7 @@
   border-radius: 22px;
   background: linear-gradient(125deg, #1b292e, #34464d 68%, #674833);
   color: #fff;
-  box-shadow: 0 18px 45px rgba(26, 39, 45, .11);
+  box-shadow: 0 18px 45px rgb(26, 39, 45, 0.11);
 }
 
 .cbc-hero::after {
@@ -86,17 +94,17 @@
   bottom: -120px;
   width: 270px;
   height: 270px;
-  border: 24px solid rgba(255, 131, 54, .17);
+  border: 24px solid rgb(255, 131, 54, 0.17);
   border-radius: 50%;
-  content: "";
+  content: '';
 }
 
 .cbc-eyebrow {
   margin: 0 0 8px;
   color: var(--cbc-orange);
-  font-size: .74rem;
+  font-size: 0.74rem;
   font-weight: 900;
-  letter-spacing: .11em;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
 }
 
@@ -110,8 +118,8 @@
   max-width: 820px;
   margin: 0;
   font-size: clamp(2.35rem, 5.5vw, 4.5rem);
-  line-height: .96;
-  letter-spacing: -.06em;
+  line-height: 0.96;
+  letter-spacing: -0.06em;
 }
 
 .cbc-hero p:not(.cbc-eyebrow) {
@@ -144,7 +152,7 @@
 .cbc-section-heading h2 {
   margin: 0;
   font-size: clamp(1.38rem, 2.7vw, 1.95rem);
-  letter-spacing: -.035em;
+  letter-spacing: -0.035em;
 }
 
 .cbc-section-heading p {
@@ -153,8 +161,7 @@
 }
 
 .cbc-note,
-.cbc-warning,
-.cbc-success {
+.cbc-warning {
   margin-top: 17px;
   padding: 14px 17px;
   border-radius: 0 12px 12px 0;
@@ -172,13 +179,7 @@
   color: #74362f;
 }
 
-.cbc-success {
-  border-left: 4px solid var(--cbc-green);
-  background: #eaf8f2;
-  color: #245b49;
-}
-
-@media (max-width: 720px) {
+@media (width <= 720px) {
   .cbc-switcher {
     display: flex;
     width: 100%;
@@ -197,7 +198,7 @@
   }
 }
 
-@media (max-width: 520px) {
+@media (width <= 520px) {
   .cbc-hero h1 {
     font-size: 2.25rem;
   }

@@ -1,13 +1,84 @@
 <section id="tutoriels" class="view">
-  <div class="tutorial-tabs" role="tablist" aria-label="Choisir un tutoriel">
-    <button class="tutorial-tab active" id="tutorial-install-tab" type="button" role="tab" aria-selected="true" aria-controls="tutorial-install">Guide d’installation</button>
-    <button class="tutorial-tab" id="tutorial-connection-tab" type="button" role="tab" aria-selected="false" aria-controls="tutorial-connection">Informations de connexion</button>
-    <button class="tutorial-tab" id="tutorial-stargates-tab" type="button" role="tab" aria-selected="false" aria-controls="tutorial-stargates">Porte des étoiles</button>
+  <div
+    class="tutorial-tabs"
+    role="tablist"
+    aria-label="Choisir un tutoriel"
+    data-tab-storage="regalade.tutorial.active"
+  >
+    <button
+      class="tutorial-tab active"
+      id="tutorial-economy-tab"
+      type="button"
+      role="tab"
+      aria-selected="true"
+      aria-controls="tutorial-economy"
+    >
+      Argent et échanges
+    </button>
+    <button
+      class="tutorial-tab"
+      id="tutorial-create-first-factory-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="tutorial-create-first-factory"
+      tabindex="-1"
+    >
+      Create
+    </button>
+    <button
+      class="tutorial-tab"
+      id="tutorial-big-cannons-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="tutorial-big-cannons"
+      tabindex="-1"
+    >
+      Big Cannons
+    </button>
+    <button
+      class="tutorial-tab"
+      id="tutorial-stargates-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="tutorial-stargates"
+    >
+      Porte des étoiles
+    </button>
   </div>
 
   <div class="tutorial-content">
-    <div class="tutorial-panel active" id="tutorial-install" role="tabpanel" aria-labelledby="tutorial-install-tab"></div>
-    <div class="tutorial-panel" id="tutorial-connection" role="tabpanel" aria-labelledby="tutorial-connection-tab" hidden></div>
-    <div class="tutorial-panel" id="tutorial-stargates" role="tabpanel" aria-labelledby="tutorial-stargates-tab" hidden></div>
+    <section class="tutorial-panel active" id="tutorial-economy" role="tabpanel" aria-labelledby="tutorial-economy-tab">
+      <!-- @include ../content/tutorials/economy.html -->
+    </section>
+    <section
+      class="tutorial-panel"
+      id="tutorial-create-first-factory"
+      role="tabpanel"
+      aria-labelledby="tutorial-create-first-factory-tab"
+      hidden
+    >
+      <!-- @include ../content/tutorials/create.html -->
+    </section>
+    <section
+      class="tutorial-panel"
+      id="tutorial-big-cannons"
+      role="tabpanel"
+      aria-labelledby="tutorial-big-cannons-tab"
+      hidden
+    >
+      <!-- @include ../content/tutorials/big-cannons.html -->
+    </section>
+    <section
+      class="tutorial-panel"
+      id="tutorial-stargates"
+      role="tabpanel"
+      aria-labelledby="tutorial-stargates-tab"
+      hidden
+    >
+      <!-- @include ../content/tutorials/stargates.html -->
+    </section>
   </div>
 </section>

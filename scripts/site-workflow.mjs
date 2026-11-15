@@ -18,6 +18,8 @@ function run(script) {
 run('build-site.mjs');
 run('verify-site.mjs');
 
-console.log(mode === 'express'
-  ? 'Workflow express validé. Aucun contrôle visuel général n’est requis.'
-  : 'Contrôles techniques validés. Il reste à vérifier visuellement uniquement les pages et largeurs touchées.');
+console.log(
+  mode === 'express'
+    ? 'Workflow express validé. Aucun contrôle visuel général n’est requis.'
+    : 'Contrôles techniques validés. Il reste à vérifier visuellement uniquement les pages et largeurs touchées.',
+);

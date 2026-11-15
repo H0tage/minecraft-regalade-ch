@@ -5,12 +5,23 @@
   "scripts": {
     "build": "node scripts/build-site.mjs",
     "verify": "node scripts/verify-site.mjs",
-    "qa": "node scripts/site-workflow.mjs structure",
+    "format": "prettier --write src scripts package.json .prettierrc.json .stylelintrc.json",
+    "format:check": "prettier --check src scripts package.json .prettierrc.json .stylelintrc.json",
+    "lint:css": "stylelint \"src/styles/**/*.css\"",
+    "prune:css": "node scripts/prune-css.mjs",
+    "qa": "npm run format:check && npm run lint:css && node scripts/site-workflow.mjs structure",
+    "audit:runtime": "node scripts/audit-responsive.mjs",
     "serve": "node scripts/serve-site.mjs",
     "locate": "node scripts/locate-content.mjs",
     "export-content": "node scripts/export-editorial-texts.mjs"
   },
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "prettier": "^3.10.1",
+    "purgecss": "^9.1.0",
+    "stylelint": "^18.0.0",
+    "stylelint-config-standard": "^41.0.0"
   }
 }

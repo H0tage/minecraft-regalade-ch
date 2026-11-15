@@ -1,66 +1,60 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Régalade Minecraft (un serveur communautaire Minecraft 1.21.1, Create et NeoForge).">
-  <meta name="theme-color" content="#20272b">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Régalade Minecraft">
-  <meta property="og:title" content="Régalade Minecraft">
-  <meta property="og:description" content="Un serveur communautaire Minecraft 1.21.1 centré sur Create, la construction et le jeu en groupe.">
-  <meta property="og:url" content="https://minecraft.regalade.ch/">
-  <meta property="og:image" content="https://minecraft.regalade.ch/assets/hotage-logo.png">
-  <title>Régalade Minecraft</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23242a2e' d='M5 8h8v7H5zm14 0h8v7h-8zM5 18h8v7H5zm10 0h12v7H15z'/%3E%3Cpath fill='%234cb8e6' d='M3 4h13v2H5v11H3z'/%3E%3Cpath fill='%23fa843b' d='M16 4h13v13h-2V6H16z'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles/core/site.css">
-  <link rel="stylesheet" href="styles/components/lightbox.css">
-  <link rel="stylesheet" href="styles/pages/rules.css">
-  <link rel="stylesheet" href="styles/pages/presentation.css">
-  <link rel="stylesheet" href="styles/pages/mods.css">
-  <link rel="stylesheet" href="styles/pages/status.css">
-  <link rel="stylesheet" href="styles/pages/installation.css">
-  <link rel="stylesheet" href="styles/tutorials/layout.css">
-  <link rel="stylesheet" href="styles/tutorials/navigation.css">
-  <link rel="stylesheet" href="styles/tutorials/economy.css">
-  <link rel="stylesheet" href="styles/tutorials/create.css">
-  <link rel="stylesheet" href="styles/tutorials/big-cannons-base.css">
-  <link rel="stylesheet" href="styles/tutorials/big-cannons-overview.css">
-  <link rel="stylesheet" href="styles/tutorials/big-cannons-survival.css">
-  <link rel="stylesheet" href="styles/tutorials/stargate-overview.css">
-  <link rel="stylesheet" href="styles/tutorials/stargate-guide.css">
-  <link rel="stylesheet" href="styles/tutorials/stargates-survival.css">
-  <link rel="stylesheet" href="styles/tutorials/stargates-interactive.css">
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
-  <div class="topbar"></div>
-  <header class="shell"><a class="brand" href="#accueil"><img src="assets/hotage-logo.png" alt="Logo Hotage">Minecraft</a><button class="menu" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-navigation">☰</button><nav id="main-navigation"><a href="#accueil">Accueil</a><a href="#installation">Installation et connexion</a><a href="#tutoriels">Tutoriels</a><a href="#mods">Mods</a><a href="#reglement">Règlement</a><a href="#statut">État</a><a href="#inscription">Inscription</a></nav></header>
-  <main id="main-content" class="shell">
-    <!-- @include pages/installation.html -->
-    <!-- @include pages/accueil.html -->
-    <!-- @include pages/tutoriels.html -->
-    <!-- @include pages/mods.html -->
-    <!-- @include pages/reglement.html -->
-    <!-- @include pages/statut.html -->
-    <!-- @include pages/inscription.html -->
-  </main><footer class="footer"><div class="shell footer-inner"><p>Site communautaire créé par Hotage en 2026.</p><p>Minecraft est une marque de Mojang Studios. Ce site n’est pas affilié à Mojang.</p></div></footer><div id="toast" class="toast" role="status"></div>
-  <script src="js/data/mods.js"></script>
-  <script src="js/core/galleries.js"></script>
-  <script src="js/pages/installation-guide.js"></script>
-  <script src="js/data/mods-details.js"></script>
-  <script src="js/data/mods-icons.js"></script>
-  <script src="js/core/site.js"></script>
-  <script src="js/pages/mods-page.js"></script>
-  <script src="js/tutorials/big-cannons.js"></script>
-  <script src="js/tutorials/big-cannons-survival.js"></script>
-  <script src="js/tutorials/stargates.js"></script>
-  <script src="js/tutorials/stargates-survival.js"></script>
-  <script src="js/tutorials/stargates-industry.js"></script>
-  <script src="js/tutorials/economy.js"></script>
-  <script src="js/tutorials/create.js"></script>
-<script src="js/pages/installation-connection-guide.js"></script>
-  <script src="js/pages/installation-connection-page.js"></script>
-  <script src="js/tutorials/tabs.js"></script>
-  <script src="js/tutorials/layout.js"></script>
-</body></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Régalade Minecraft (un serveur communautaire Minecraft 1.21.1, Create et NeoForge)."
+    />
+    <meta name="theme-color" content="#20272b" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Régalade Minecraft" />
+    <meta property="og:title" content="Régalade Minecraft" />
+    <meta
+      property="og:description"
+      content="Un serveur communautaire Minecraft 1.21.1 centré sur Create, la construction et le jeu en groupe."
+    />
+    <meta property="og:url" content="https://minecraft.regalade.ch/" />
+    <meta property="og:image" content="https://minecraft.regalade.ch/assets/hotage-logo.png" />
+    <title>Régalade Minecraft</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23242a2e' d='M5 8h8v7H5zm14 0h8v7h-8zM5 18h8v7H5zm10 0h12v7H15z'/%3E%3Cpath fill='%234cb8e6' d='M3 4h13v2H5v11H3z'/%3E%3Cpath fill='%23fa843b' d='M16 4h13v13h-2V6H16z'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles/site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+    <div class="topbar"></div>
+    <header class="shell">
+      <a class="brand" href="#accueil"><img src="assets/hotage-logo.png" alt="Logo Hotage" />Minecraft</a
+      ><button class="menu" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-navigation">
+        ☰
+      </button>
+      <nav id="main-navigation">
+        <a href="#accueil">Accueil</a><a href="#installation">Installation et connexion</a
+        ><a href="#tutoriels">Tutoriels</a><a href="#mods">Mods</a><a href="#reglement">Règlement</a
+        ><a href="#statut">État</a><a href="#inscription">Inscription</a>
+      </nav>
+    </header>
+    <main id="main-content" class="shell">
+      <!-- @include pages/installation.html -->
+      <!-- @include pages/accueil.html -->
+      <!-- @include pages/tutoriels.html -->
+      <!-- @include pages/mods.html -->
+      <!-- @include pages/reglement.html -->
+      <!-- @include pages/statut.html -->
+      <!-- @include pages/inscription.html -->
+    </main>
+    <footer class="footer">
+      <div class="shell footer-inner">
+        <p>Site communautaire créé par Hotage en 2026.</p>
+        <p>Minecraft est une marque de Mojang Studios. Ce site n’est pas affilié à Mojang.</p>
+      </div>
+    </footer>
+    <div id="toast" class="toast" role="status"></div>
+    <script src="js/site.js"></script>
+  </body>
+</html>

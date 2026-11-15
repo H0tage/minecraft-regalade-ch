@@ -1,1 +1,54 @@
-<section id="inscription" class="view"><div class="page-head"><span class="eyebrow">Liste d’intérêt</span><h1>Tu veux en être ?</h1><p>Laisse ton pseudo et on pourra te prévenir lorsque Régalade se rapproche de l’ouverture.</p></div><div class="form-layout"><article class="card signup"><h2>Mon inscription</h2><form id="signup-form"><div class="field"><label for="pseudo">Pseudo Minecraft</label><input id="pseudo" required maxlength="16" pattern="[A-Za-z0-9_]{3,16}" placeholder="Ex. AlexBuilder" autocomplete="off"><p class="hint">3 à 16 caractères : lettres, chiffres et _.</p></div><div class="field"><label for="source">Comment as-tu connu le projet ?</label><input id="source" required maxlength="120" placeholder="Ex. Discord, un ami, Twitch…" autocomplete="off"></div><button class="button cyan" type="submit">Ajouter mon nom à la liste</button><p class="hint">Pour cette maquette, la liste est enregistrée uniquement dans ton navigateur. Elle sera reliée à un vrai stockage avant l’ouverture.</p></form></article><article class="card"><h2>Joueurs intéressés</h2><div class="table-wrap"><table class="members"><thead><tr><th>Pseudo</th><th>Découvert via</th><th>Inscription</th></tr></thead><tbody id="member-list"><tr><td colspan="3" class="empty">La liste attend son premier nom.</td></tr></tbody></table></div></article></div></section>
+<section id="inscription" class="view">
+  <div class="page-head">
+    <span class="eyebrow">Liste d’intérêt</span>
+    <h1>Tu veux en être ?</h1>
+    <p>Laisse ton pseudo et on pourra te prévenir lorsque Régalade se rapproche de l’ouverture.</p>
+  </div>
+  <div class="form-layout">
+    <article class="card signup">
+      <h2>Mon inscription</h2>
+      <form id="signup-form">
+        <div class="field">
+          <label for="pseudo">Pseudo Minecraft</label
+          ><input
+            id="pseudo"
+            required
+            maxlength="16"
+            pattern="[A-Za-z0-9_]{3,16}"
+            placeholder="Ex. AlexBuilder"
+            autocomplete="off"
+          />
+          <p class="hint">3 à 16 caractères : lettres, chiffres et _.</p>
+        </div>
+        <div class="field">
+          <label for="source">Comment as-tu connu le projet ?</label
+          ><input id="source" required maxlength="120" placeholder="Ex. Discord, un ami, Twitch…" autocomplete="off" />
+        </div>
+        <button class="button cyan" type="submit">Ajouter mon nom à la liste</button>
+        <p class="hint">
+          Pour cette maquette, la liste est enregistrée uniquement dans ton navigateur. Elle sera reliée à un vrai
+          stockage avant l’ouverture.
+        </p>
+      </form>
+    </article>
+    <article class="card">
+      <h2>Joueurs intéressés</h2>
+      <div class="table-wrap">
+        <table class="members">
+          <thead>
+            <tr>
+              <th>Pseudo</th>
+              <th>Découvert via</th>
+              <th>Inscription</th>
+            </tr>
+          </thead>
+          <tbody id="member-list">
+            <tr>
+              <td colspan="3" class="empty">La liste attend son premier nom.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+  </div>
+</section>
