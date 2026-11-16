@@ -232,46 +232,86 @@
   white-space: nowrap;
 }
 
-.minecraft-first-day-list {
+.minecraft-mission-list {
   display: grid;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  gap: 12px;
 }
 
-.minecraft-first-day-list li {
-  display: grid;
-  grid-template-columns: 38px minmax(0, 1fr);
-  gap: 12px;
-  align-items: center;
-  padding: 12px 14px;
+.minecraft-mission {
+  padding: 18px;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 14px;
   background: #fff;
 }
 
-.minecraft-first-day-list li > span {
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  border-radius: 9px;
+.minecraft-mission header {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.minecraft-mission header > span {
+  flex: 0 0 auto;
+  padding: 8px 10px;
+  border-radius: 10px;
   background: var(--orange-pale);
   color: #b84c0a;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 900;
+  text-transform: uppercase;
 }
 
-.minecraft-first-day-list strong,
-.minecraft-first-day-list small {
-  display: block;
+.minecraft-mission header p,
+.minecraft-mission header h3,
+.minecraft-mission-lesson {
+  margin: 0;
 }
 
-.minecraft-first-day-list small {
+.minecraft-mission header p {
+  color: #087ead;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.minecraft-mission header h3 {
   margin-top: 2px;
+  font-size: 1.16rem;
+  line-height: 1.25;
+}
+
+.minecraft-mission-tasks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px 18px;
+}
+
+.minecraft-mission-tasks label {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  color: #263a44;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.minecraft-mission-tasks input {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: var(--cyan);
+}
+
+.minecraft-mission-lesson {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
   color: var(--tutorial-muted);
-  font-size: 0.84rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
 }
 
 .minecraft-warning-strong {
@@ -280,30 +320,6 @@
   gap: 15px;
   align-items: center;
   margin-top: 12px;
-}
-
-.minecraft-checklist {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
-}
-
-.minecraft-checklist label {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  padding: 13px 14px;
-  border: 1px solid var(--line);
-  border-radius: 11px;
-  background: #fff;
-  font-size: 0.88rem;
-  font-weight: 750;
-}
-
-.minecraft-checklist input {
-  width: 17px;
-  height: 17px;
-  accent-color: var(--cyan);
 }
 
 .minecraft-finish {
@@ -359,7 +375,7 @@
   .minecraft-card-grid-four,
   .minecraft-action-grid,
   .minecraft-clicks,
-  .minecraft-checklist {
+  .minecraft-mission-tasks {
     grid-template-columns: 1fr;
   }
 
