@@ -68,6 +68,17 @@
           </button>
           <button
             class="tutorial-tab"
+            id="tutorial-agriculture-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-agriculture"
+            tabindex="-1"
+          >
+            Agriculture
+          </button>
+          <button
+            class="tutorial-tab"
             id="tutorial-economy-tab"
             type="button"
             role="tab"
@@ -176,6 +187,15 @@
           hidden
         >
           <!-- @include ../content/tutorials/storage.html -->
+        </section>
+        <section
+          class="tutorial-panel"
+          id="tutorial-agriculture"
+          role="tabpanel"
+          aria-labelledby="tutorial-agriculture-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/agriculture.html -->
         </section>
         <section
           class="tutorial-panel"

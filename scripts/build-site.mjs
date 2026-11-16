@@ -19,6 +19,7 @@ const styleSources = [
   'tutorials/first-minecraft.css',
   'tutorials/economy.css',
   'tutorials/cuisine.css',
+  'tutorials/agriculture.css',
   'tutorials/photography.css',
   'tutorials/fishing.css',
   'tutorials/jei.css',
