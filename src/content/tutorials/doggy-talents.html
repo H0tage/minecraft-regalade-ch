@@ -1,0 +1,76 @@
+<section class="doggy-tutorial">
+  <nav
+    class="doggy-switcher"
+    role="tablist"
+    aria-label="Choisir le parcours Doggy Talents"
+    data-tab-storage="regalade.doggy-talents.active"
+  >
+    <button
+      id="doggy-adoption-tab"
+      type="button"
+      role="tab"
+      aria-selected="true"
+      aria-controls="doggy-adoption-panel"
+      tabindex="0"
+    >
+      Mon premier chien
+    </button>
+    <button
+      id="doggy-care-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="doggy-care-panel"
+      tabindex="-1"
+    >
+      Nourrir et soigner
+    </button>
+    <button
+      id="doggy-orders-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="doggy-orders-panel"
+      tabindex="-1"
+    >
+      Ordres et déplacements
+    </button>
+    <button
+      id="doggy-talents-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="doggy-talents-panel"
+      tabindex="-1"
+    >
+      Niveaux et talents
+    </button>
+    <button
+      id="doggy-pack-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="doggy-pack-panel"
+      tabindex="-1"
+    >
+      Organiser une meute
+    </button>
+    <button
+      id="doggy-life-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="doggy-life-panel"
+      tabindex="-1"
+    >
+      Apparence et quotidien
+    </button>
+  </nav>
+
+  <!-- @include doggy-talents/adoption.html -->
+  <!-- @include doggy-talents/care.html -->
+  <!-- @include doggy-talents/orders.html -->
+  <!-- @include doggy-talents/talents.html -->
+  <!-- @include doggy-talents/pack.html -->
+  <!-- @include doggy-talents/life.html -->
+</section>

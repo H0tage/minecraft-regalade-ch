@@ -1,0 +1,141 @@
+<div class="doggy-panel" id="doggy-orders-panel" role="tabpanel" aria-labelledby="doggy-orders-tab" hidden>
+  <header class="doggy-hero">
+    <p class="doggy-eyebrow">Modes, Whistle et voyages</p>
+    <h1>Faire comprendre au chien ce que tu veux</h1>
+    <p>
+      Le comportement choisi détermine comment ton chien se déplace et réagit aux créatures. Le Whistle permet ensuite
+      de rappeler un chien précis, de commander toute une meute ou d’arrêter un combat qui part en sucette.
+    </p>
+  </header>
+
+  <section class="doggy-section" id="doggy-orders-modes" data-phase="Choisir un comportement">
+    <div class="doggy-title">
+      <span>01</span>
+      <div>
+        <p>Les modes du chien</p>
+        <h2>Choisir son comportement principal</h2>
+      </div>
+    </div>
+    <div class="doggy-mode-grid">
+      <article>
+        <strong>Docile</strong>
+        <p>Suit son propriétaire, évite les combats et peut jouer avec les objets à lancer.</p>
+      </article>
+      <article>
+        <strong>Wandering</strong>
+        <p>Reste près de son Food Bowl et vit dans cette zone.</p>
+      </article>
+      <article>
+        <strong>Aggressive</strong>
+        <p>Attaque ce qui blesse son propriétaire ou les cibles frappées par celui-ci.</p>
+      </article>
+      <article>
+        <strong>Guard</strong>
+        <p>Suit de près son propriétaire et réagit aux menaces qui approchent.</p>
+      </article>
+      <article>
+        <strong>Patrol</strong>
+        <p>Reste autour d’un point fixe et attaque les ennemis qui entrent dans sa zone.</p>
+      </article>
+      <article>
+        <strong>Tactical</strong>
+        <p>Attend une cible désignée avec le Whistle avant de lancer une attaque.</p>
+      </article>
+    </div>
+    <p class="doggy-info">
+      Commence en Docile pendant les trajets et dans les villes. Guard convient aux voyages dangereux. Patrol permet de
+      protéger un lieu précis sans emmener le chien partout.
+    </p>
+  </section>
+
+  <section class="doggy-section" id="doggy-orders-whistle" data-phase="Commander à distance">
+    <div class="doggy-title">
+      <span>02</span>
+      <div>
+        <p>Un seul objet pour toute la meute</p>
+        <h2>Fabriquer et régler le Whistle</h2>
+      </div>
+    </div>
+    <div class="doggy-action-pair">
+      <article>
+        <kbd>Accroupi + clic droit</kbd>
+        <p>Ouvre la liste des commandes. Sélectionne une commande avec la souris ou le clavier.</p>
+      </article>
+      <article>
+        <kbd>Clic droit</kbd>
+        <p>Exécute immédiatement la commande actuellement enregistrée.</p>
+      </article>
+    </div>
+    <div class="doggy-command-grid">
+      <article><b>Stand</b><span>Relève les chiens assis</span></article>
+      <article><b>Stay</b><span>Fait asseoir les chiens debout</span></article>
+      <article><b>Heel</b><span>Rappelle les chiens debout à proximité</span></article>
+      <article><b>Heel By Name</b><span>Rappelle un chien précis, même assis</span></article>
+      <article><b>Heel By Group</b><span>Rappelle tous les chiens d’un groupe</span></article>
+      <article><b>To Bed</b><span>Renvoie les chiens vers leur Dog Bed</span></article>
+      <article><b>Stop Attacking</b><span>Interrompt la cible des chiens proches</span></article>
+      <article><b>Tactical</b><span>Désigne la cible des chiens en mode Tactical</span></article>
+    </div>
+    <p class="doggy-note">
+      Le Whistle agit dans une grande zone autour du joueur. Sur le serveur, un rappel collectif peut commander jusqu’à
+      vingt chiens.
+    </p>
+  </section>
+
+  <section class="doggy-section" id="doggy-orders-travel" data-phase="Voyager sans le perdre">
+    <div class="doggy-title">
+      <span>03</span>
+      <div>
+        <p>Portails et longues distances</p>
+        <h2>Préparer les déplacements importants</h2>
+      </div>
+    </div>
+    <div class="doggy-travel-flow">
+      <article>
+        <p class="doggy-card-label">Même dimension</p>
+        <h3>Heel et Heel By Name</h3>
+        <p>Rappellent rapidement les chiens lorsque les chunks concernés sont accessibles.</p>
+      </article>
+      <article>
+        <p class="doggy-card-label">Suivi</p>
+        <h3>Radio Collar et Canine Tracker</h3>
+        <p>Équipe le collier sur le chien, puis sélectionne-le dans le Tracker pour obtenir sa direction.</p>
+      </article>
+      <article>
+        <p class="doggy-card-label">Autre dimension</p>
+        <h3>Cross-Origin Teleport</h3>
+        <p>Active cette option dans le menu du chien pour qu’il te rejoigne pendant un changement de dimension.</p>
+      </article>
+      <article>
+        <p class="doggy-card-label">Rappel avancé</p>
+        <h3>Conducting Bone</h3>
+        <p>Rappelle les chiens enregistrés, y compris depuis une autre dimension avec la configuration du serveur.</p>
+      </article>
+    </div>
+    <div class="doggy-warning">
+      <strong>Les portails sont bloqués pour les chiens</strong>
+      <p>
+        Ils ne les traversent pas accidentellement. Utilise Cross-Origin Teleport ou un outil de rappel pour organiser
+        le voyage.
+      </p>
+    </div>
+  </section>
+
+  <section class="doggy-section" id="doggy-orders-checklist" data-phase="Voyager sans le perdre">
+    <div class="doggy-title">
+      <span>04</span>
+      <div>
+        <p>Avant de quitter la base</p>
+        <h2>Petite checklist d’expédition</h2>
+      </div>
+    </div>
+    <div class="doggy-checklist">
+      <label><input type="checkbox" />Le chien a suffisamment de Nourishment Points</label>
+      <label><input type="checkbox" />Son mode correspond au trajet prévu</label>
+      <label><input type="checkbox" />Le Whistle est dans ton inventaire</label>
+      <label><input type="checkbox" />Le chien possède un Dog Bed attribué à la base</label>
+      <label><input type="checkbox" />Le moyen de rappel est prêt pour une longue expédition</label>
+      <label><input type="checkbox" />Cross-Origin Teleport est réglé si tu changes de dimension</label>
+    </div>
+  </section>
+</div>

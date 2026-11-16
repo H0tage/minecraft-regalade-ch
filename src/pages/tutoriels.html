@@ -68,6 +68,17 @@
           </button>
           <button
             class="tutorial-tab"
+            id="tutorial-doggy-talents-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-doggy-talents"
+            tabindex="-1"
+          >
+            Chiens et compagnons
+          </button>
+          <button
+            class="tutorial-tab"
             id="tutorial-storage-tab"
             type="button"
             role="tab"
@@ -209,6 +220,15 @@
           hidden
         >
           <!-- @include ../content/tutorials/create.html -->
+        </section>
+        <section
+          class="tutorial-panel"
+          id="tutorial-doggy-talents"
+          role="tabpanel"
+          aria-labelledby="tutorial-doggy-talents-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/doggy-talents.html -->
         </section>
         <section
           class="tutorial-panel"
