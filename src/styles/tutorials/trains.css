@@ -73,17 +73,6 @@
   border-bottom: 1px solid var(--train-line);
 }
 
-.train-hero::after {
-  position: absolute;
-  right: 38px;
-  bottom: 25px;
-  width: min(32%, 260px);
-  height: 6px;
-  content: '';
-  background: var(--train-ink);
-  box-shadow: 0 12px 0 -2px var(--train-orange);
-}
-
 .train-hero > * {
   max-width: 760px;
 }
@@ -112,7 +101,6 @@
 }
 
 .train-hero p:last-of-type {
-  padding-bottom: 30px;
   margin-bottom: 0;
 }
 
@@ -304,12 +292,6 @@
   .train-section {
     padding: 20px;
     border-radius: 14px;
-  }
-
-  .train-hero::after {
-    right: 20px;
-    bottom: 20px;
-    width: 42%;
   }
 
   .train-use-grid,
