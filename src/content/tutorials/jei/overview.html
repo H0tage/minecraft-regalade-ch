@@ -1,162 +1,218 @@
 <div class="jei-panel" id="jei-overview-panel" role="tabpanel" aria-labelledby="jei-overview-tab">
   <header class="jei-hero">
-    <p class="jei-eyebrow">Le moteur de recherche qui t’évite de fabriquer au hasard</p>
-    <h1>JEI : trouver n’importe quelle recette</h1>
+    <p class="jei-eyebrow">Le mode d’emploi directement dans ton inventaire</p>
+    <h1>JEI : arrêter de deviner les recettes</h1>
     <p>
-      Le pack contient beaucoup de machines, de poissons, de meubles, de canons et d’objets dont tu ne connais pas
-      encore le nom. JEI range tout ça à droite de ton inventaire et t’explique comment le fabriquer.
+      Tu récupères une plaque de métal inconnue, tu veux fabriquer une presse ou tu croises une machine dont le nom ne
+      te dit absolument rien. JEI rassemble les objets du serveur, leurs recettes et leurs utilisations au même endroit.
+    </p>
+    <p>
+      Ouvre ton inventaire : le catalogue apparaît à droite et sa barre de recherche se trouve en bas. À partir de là,
+      quelques touches suffisent pour remonter une recette entière, même lorsque plusieurs mods participent à sa
+      fabrication.
     </p>
   </header>
 
-  <section class="jei-section" id="jei-principle" data-phase="Les bases">
+  <section class="jei-section" id="jei-interface" data-phase="Prendre ses marques">
     <div class="jei-title">
       <span>01</span>
       <div>
-        <p>Le principe</p>
-        <h2>Trouver un objet, sa recette et son utilité</h2>
+        <p>Dans l’inventaire</p>
+        <h2>Repérer les différentes parties de JEI</h2>
       </div>
     </div>
     <p class="jei-lead">
-      Ouvre ton inventaire. Le gros mur d’objets à droite, c’est JEI. Tape quelques lettres dans la barre tout en bas
-      pour retrouver directement le bloc ou l’objet voulu. Voilà, tu viens déjà de gagner dix minutes.
+      JEI s’ajoute autour de ton inventaire habituel. Il ne remplace aucune case : il affiche simplement tout ce que le
+      jeu connaît et te permet de consulter les recettes associées.
     </p>
-    <div class="jei-flow" aria-label="Utilisation de base de JEI">
-      <article>
-        <b>1. Cherche l’objet</b>
-        <span>Tape une partie de son nom dans la barre de recherche</span>
+    <div class="jei-interface-map" aria-label="Emplacement des éléments de JEI dans l’inventaire">
+      <article class="jei-interface-inventory">
+        <p>Au centre</p>
+        <h3>Ton inventaire</h3>
+        <span>Les objets que tu transportes et la petite grille de fabrication.</span>
       </article>
-      <i>→</i>
-      <article>
-        <b>2. Survole-le et appuie sur <kbd>R</kbd></b>
-        <span>JEI affiche les recettes qui permettent de le fabriquer</span>
+      <article class="jei-interface-catalogue">
+        <p>À droite</p>
+        <h3>Le catalogue JEI</h3>
+        <span>Tous les objets disponibles, répartis sur plusieurs pages.</span>
       </article>
-      <i>→</i>
-      <article>
-        <b>3. Appuie sur <kbd>U</kbd></b>
-        <span>JEI montre toutes les recettes dans lesquelles cet objet est utilisé</span>
-      </article>
-    </div>
-    <div class="jei-card-grid jei-card-grid-2">
-      <article>
-        <h3><kbd>R</kbd> comme recette</h3>
-        <p>
-          Tu veux une Mechanical Press ? Survole-la, appuie sur <kbd>R</kbd> et JEI te montre ce qu’il faut mettre dans
-          la grille ou dans la machine appropriée.
-        </p>
-      </article>
-      <article>
-        <h3><kbd>U</kbd> comme utilisation</h3>
-        <p>
-          Tu viens de récupérer un matériau bizarre ? Appuie sur <kbd>U</kbd> pour savoir à quoi il sert avant de le
-          jeter dans le premier coffre venu.
-        </p>
+      <article class="jei-interface-search">
+        <p>En bas</p>
+        <h3>La barre de recherche</h3>
+        <span>Écris un nom, quelques lettres ou le code d’un mod pour réduire la liste.</span>
       </article>
     </div>
     <p class="jei-note">
-      <strong>Si les touches ne répondent pas :</strong> elles ont peut-être été modifiées. Cherche JEI dans le menu des
-      raccourcis du jeu pour retrouver ou changer les commandes.
+      Les petites flèches placées près du catalogue changent de page. Si aucun objet n’apparaît, efface le contenu de la
+      barre de recherche avant de recommencer.
     </p>
   </section>
 
-  <section class="jei-section" id="jei-search" data-phase="Chercher efficacement">
+  <section class="jei-section" id="jei-principle" data-phase="Les gestes essentiels">
     <div class="jei-title">
       <span>02</span>
       <div>
-        <p>La barre de recherche</p>
-        <h2>Passer de « le machin avec un engrenage » à trois résultats utiles</h2>
+        <p>Trois actions à retenir</p>
+        <h2>Chercher, fabriquer et comprendre un objet</h2>
       </div>
     </div>
+    <p class="jei-lead">
+      Ces trois gestes règlent la majorité des questions que tu te poseras pendant une partie. Ils fonctionnent dans le
+      catalogue JEI comme sur les objets affichés dans les recettes.
+    </p>
+    <div class="jei-essential-grid">
+      <article>
+        <span class="jei-action-key">Texte</span>
+        <div>
+          <h3>Chercher un objet</h3>
+          <p>Tape une partie de son nom dans la barre située sous le catalogue.</p>
+        </div>
+      </article>
+      <article>
+        <span class="jei-action-key"><kbd>R</kbd></span>
+        <div>
+          <h3>Afficher sa recette</h3>
+          <p>Survole l’objet puis appuie sur R pour voir comment le fabriquer.</p>
+        </div>
+      </article>
+      <article>
+        <span class="jei-action-key"><kbd>U</kbd></span>
+        <div>
+          <h3>Afficher ses utilisations</h3>
+          <p>Survole un ingrédient puis appuie sur U pour voir tout ce qu’il permet de produire.</p>
+        </div>
+      </article>
+    </div>
+    <div class="jei-example-path" aria-label="Exemple de recherche d’une Mechanical Press">
+      <div>
+        <small>Exemple</small>
+        <strong>Tu veux une Mechanical Press</strong>
+      </div>
+      <b>→</b>
+      <span>cherche <code>press</code></span>
+      <b>→</b>
+      <span>survole la machine</span>
+      <b>→</b>
+      <span>appuie sur <kbd>R</kbd></span>
+    </div>
+    <p class="jei-note">
+      <strong>Une touche ne répond pas ?</strong> Cherche JEI dans le menu des raccourcis du jeu. Tu pourras retrouver
+      la commande associée, voir si elle entre en conflit avec une autre et la modifier.
+    </p>
+  </section>
+
+  <section class="jei-section" id="jei-search" data-phase="Trouver le bon objet">
+    <div class="jei-title">
+      <span>03</span>
+      <div>
+        <p>La barre de recherche</p>
+        <h2>Réduire une liste de plusieurs centaines d’objets</h2>
+      </div>
+    </div>
+    <p class="jei-lead">
+      Tu n’as pas besoin de connaître le nom complet d’un objet. Commence par un mot simple, puis ajoute le nom du mod
+      si la liste reste trop longue.
+    </p>
     <div class="jei-search-examples">
       <article>
         <code>presse</code>
         <div>
           <h3>Chercher par nom</h3>
-          <p>Quelques lettres suffisent. Tu n’as pas besoin de connaître le nom complet de l’objet.</p>
+          <p>JEI affiche tous les objets dont le nom contient ce mot.</p>
         </div>
       </article>
       <article>
         <code>@create</code>
         <div>
-          <h3>Afficher un seul mod</h3>
-          <p>Le préfixe <code>@</code> limite la liste aux objets du mod indiqué.</p>
+          <h3>Afficher les objets d’un mod</h3>
+          <p>Le préfixe <code>@</code> limite le catalogue au mod indiqué.</p>
         </div>
       </article>
       <article>
         <code>@create presse</code>
         <div>
-          <h3>Combiner les deux</h3>
+          <h3>Combiner les deux recherches</h3>
           <p>Tu peux filtrer un mod puis chercher un objet précis à l’intérieur.</p>
         </div>
       </article>
     </div>
-    <p class="jei-note">
-      Le second sous-onglet contient les codes <code>@...</code> utiles pour le pack. Certains identifiants n’ont pas le
-      même nom que le mod affiché en jeu, donc autant éviter de les deviner.
-    </p>
+    <div class="jei-filter-link">
+      <div>
+        <p>Le code ne correspond pas toujours au nom affiché du mod</p>
+        <h3>Le sous-onglet « Filtres par mod » contient les codes utiles du pack</h3>
+      </div>
+      <button type="button" data-open-tab="jei-filters-tab">Consulter les filtres</button>
+    </div>
   </section>
 
   <section class="jei-section" id="jei-recipes" data-phase="Lire une recette">
     <div class="jei-title">
-      <span>03</span>
+      <span>04</span>
       <div>
-        <p>Les écrans de recette</p>
-        <h2>Comprendre ce que le jeu te demande réellement</h2>
+        <p>Les écrans de fabrication</p>
+        <h2>Comprendre ce que la recette te demande</h2>
       </div>
     </div>
     <p class="jei-lead">
-      JEI connaît aussi les fours, les machines Create, les bassins, les presses, les ventilateurs et globalement toutes
-      les idées plus ou moins raisonnables ajoutées par les autres mods.
+      Une recette indique toujours ce qui entre, le procédé utilisé et ce qui ressort. Le procédé peut être une grille
+      de Crafting Table, un four, une machine Create ou une chaîne de traitement plus longue.
     </p>
     <div class="jei-recipe-map" aria-label="Lecture d’une recette JEI">
       <article>
         <b>Entrées</b>
-        <span>les objets et liquides à fournir</span>
+        <span>Les objets et les liquides à fournir</span>
       </article>
       <i>→</i>
       <article>
         <b>Procédé</b>
-        <span>la grille, la machine ou le traitement nécessaire</span>
+        <span>La grille, la machine ou le traitement nécessaire</span>
       </article>
       <i>→</i>
       <article>
         <b>Sortie</b>
-        <span>ce que tu obtiens et en quelle quantité</span>
+        <span>Le résultat obtenu et sa quantité</span>
       </article>
     </div>
-    <div class="jei-card-grid jei-card-grid-3">
+    <div class="jei-recipe-checks">
       <article>
-        <h3>Regarde les onglets</h3>
-        <p>
-          Un objet peut avoir plusieurs méthodes de fabrication. Les onglets en haut changent de machine ou de procédé.
-        </p>
+        <span>1</span>
+        <div>
+          <h3>Vérifie les quantités</h3>
+          <p>Une case peut demander plusieurs objets ou un volume précis de liquide.</p>
+        </div>
       </article>
       <article>
-        <h3>Regarde les quantités</h3>
-        <p>
-          Une recette peut demander plusieurs exemplaires, un volume de liquide précis ou produire plusieurs sorties.
-        </p>
+        <span>2</span>
+        <div>
+          <h3>Regarde les onglets en haut</h3>
+          <p>Ils permettent de passer d’une méthode de fabrication à une autre.</p>
+        </div>
       </article>
       <article>
-        <h3>Remonte la chaîne</h3>
-        <p>
-          Si un ingrédient est lui-même fabriqué, appuie sur <kbd>R</kbd> dessus et continue jusqu’aux matières de base.
-        </p>
+        <span>3</span>
+        <div>
+          <h3>Ouvre la recette des ingrédients</h3>
+          <p>Survole un composant inconnu et appuie de nouveau sur R pour remonter la chaîne.</p>
+        </div>
       </article>
+    </div>
+    <div class="jei-chain" aria-label="Remonter une chaîne de fabrication dans JEI">
+      <span>Objet final</span><b>→ <kbd>R</kbd> →</b><span>Composants</span><b>→ <kbd>R</kbd> →</b
+      ><span>Matières premières</span>
     </div>
   </section>
 
-  <section class="jei-section" id="jei-create" data-phase="Avec Create">
+  <section class="jei-section" id="jei-create" data-phase="Préparer un projet">
     <div class="jei-title">
-      <span>04</span>
+      <span>05</span>
       <div>
-        <p>Le truc vraiment pratique</p>
-        <h2>Voir les machines Create fonctionner avant de les construire</h2>
+        <p>Avec Create</p>
+        <h2>Voir une machine fonctionner avant de la construire</h2>
       </div>
     </div>
     <p class="jei-lead">
-      Create fait encore mieux : certains objets ont une petite démonstration animée. Tu vois réellement comment la
-      machine se pose, par où les objets arrivent et quel bout est censé tourner. Quand un montage te paraît
-      incompréhensible, commence franchement par là.
+      De nombreux composants Create possèdent une démonstration animée appelée Ponder. Elle montre comment placer la
+      machine, par où arrivent les objets et quelle partie doit recevoir la rotation.
     </p>
     <div class="jei-create-flow" aria-label="Ouvrir une démonstration Create depuis JEI">
       <article><b>1</b><span>Trouve un composant Create dans JEI</span></article>
@@ -167,51 +223,33 @@
         <b>3</b><span>Maintiens <kbd>W</kbd></span>
       </article>
       <i>→</i>
-      <article><b>4</b><span>Regarde la démonstration et change de scène si plusieurs sont proposées</span></article>
+      <article><b>4</b><span>Fais défiler les scènes proposées</span></article>
+    </div>
+    <div class="jei-project-grid">
+      <article>
+        <span class="jei-action-key"><kbd>W</kbd></span>
+        <div>
+          <h3>Ouvrir Ponder</h3>
+          <p>
+            Le bouton apparaît dans l’infobulle lorsqu’une démonstration existe. Tu peux mettre la scène en pause et la
+            revoir autant de fois que nécessaire.
+          </p>
+        </div>
+      </article>
+      <article>
+        <span class="jei-action-key"><kbd>A</kbd></span>
+        <div>
+          <h3>Garder un objet en favori</h3>
+          <p>
+            Survole un objet et appuie sur A. Il restera affiché à gauche de l’inventaire pendant que tu réunis les
+            ressources du projet.
+          </p>
+        </div>
+      </article>
     </div>
     <p class="jei-note">
-      <strong>Si <kbd>W</kbd> ne fait rien :</strong> l’objet n’a probablement pas de démonstration. JEI continuera
-      quand même d’afficher ses recettes et ses utilisations normalement.
+      Pour préparer une construction importante, ajoute l’objet final aux favoris puis ouvre les recettes de ses
+      composants. Tu obtiens progressivement la liste des matériaux et des machines nécessaires.
     </p>
-  </section>
-
-  <section class="jei-section" id="jei-reflexes" data-phase="À retenir">
-    <div class="jei-title">
-      <span>05</span>
-      <div>
-        <p>Les bons réflexes</p>
-        <h2>Ne plus apprendre une recette par cœur</h2>
-      </div>
-    </div>
-    <div class="jei-card-grid jei-card-grid-2">
-      <article>
-        <h3>Pars toujours de l’objet final</h3>
-        <p>
-          Cherche ce que tu veux construire, ouvre sa recette, puis remonte les ingrédients un par un. Tu sauras ainsi
-          quelles ressources et quelles machines préparer.
-        </p>
-      </article>
-      <article>
-        <h3>Utilise <kbd>U</kbd> sur les matériaux inconnus</h3>
-        <p>
-          C’est le moyen le plus rapide de comprendre pourquoi un mod ajoute encore une nouvelle plaque de métal, une
-          poudre étrange ou un poisson dont personne n’avait besoin.
-        </p>
-      </article>
-      <article>
-        <h3>Filtre quand la liste devient absurde</h3>
-        <p>
-          Un simple <code>@create</code> ou <code>@sgjourney</code> transforme plusieurs centaines d’objets en une liste
-          lisible.
-        </p>
-      </article>
-      <article>
-        <h3>Ajoute les objets importants aux favoris</h3>
-        <p>
-          Par défaut, survole un objet et appuie sur <kbd>A</kbd>. Il restera à gauche de l’inventaire pendant que tu
-          prépares ton projet.
-        </p>
-      </article>
-    </div>
   </section>
 </div>

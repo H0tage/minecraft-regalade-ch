@@ -165,7 +165,6 @@
   line-height: 1.6;
 }
 
-.jei-flow,
 .jei-recipe-map,
 .jei-create-flow {
   display: flex;
@@ -174,7 +173,6 @@
   margin: 16px 0;
 }
 
-.jei-flow article,
 .jei-recipe-map article,
 .jei-create-flow article {
   display: flex;
@@ -189,13 +187,11 @@
   background: #fff;
 }
 
-.jei-flow article b,
 .jei-recipe-map article b {
   font-size: 0.9rem;
   line-height: 1.35;
 }
 
-.jei-flow article span,
 .jei-recipe-map article span,
 .jei-create-flow article span {
   margin-top: 5px;
@@ -204,7 +200,6 @@
   line-height: 1.45;
 }
 
-.jei-flow > i,
 .jei-recipe-map > i,
 .jei-create-flow > i {
   display: grid;
@@ -212,40 +207,6 @@
   color: var(--jei-orange);
   font-style: normal;
   font-weight: 950;
-}
-
-.jei-card-grid {
-  display: grid;
-  gap: 10px;
-  margin-top: 12px;
-}
-
-.jei-card-grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.jei-card-grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.jei-card-grid article {
-  padding: 16px;
-  border: 1px solid var(--jei-line);
-  border-radius: 12px;
-  background: #fff;
-}
-
-.jei-card-grid h3 {
-  margin: 0 0 6px;
-  font-size: var(--tutorial-card-title-size);
-  line-height: 1.3;
-}
-
-.jei-card-grid p {
-  margin: 0;
-  color: var(--jei-muted);
-  font-size: 0.84rem;
-  line-height: 1.55;
 }
 
 .jei-note {
@@ -260,6 +221,241 @@
 
 .jei-note strong {
   color: var(--jei-ink);
+}
+
+.jei-interface-map {
+  display: grid;
+  grid-template-areas:
+    'inventory catalogue'
+    'search catalogue';
+  grid-template-columns: minmax(0, 1.35fr) minmax(190px, 0.75fr);
+  gap: 9px;
+}
+
+.jei-interface-map article {
+  padding: 17px;
+  border: 1px solid var(--jei-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.jei-interface-inventory {
+  grid-area: inventory;
+}
+
+.jei-interface-catalogue {
+  grid-area: catalogue;
+}
+
+.jei-interface-search {
+  grid-area: search;
+}
+
+.jei-interface-map :is(p, h3, span) {
+  margin: 0;
+}
+
+.jei-interface-map p {
+  color: var(--jei-blue);
+  font-size: 0.67rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.jei-interface-map h3 {
+  margin-top: 3px;
+  font-size: 1rem;
+}
+
+.jei-interface-map span {
+  display: block;
+  margin-top: 5px;
+  color: var(--jei-muted);
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+
+.jei-essential-grid,
+.jei-project-grid,
+.jei-filter-steps {
+  display: grid;
+  gap: 9px;
+}
+
+.jei-essential-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.jei-project-grid,
+.jei-filter-steps {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.jei-essential-grid article,
+.jei-project-grid article,
+.jei-filter-steps article {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 15px;
+  border: 1px solid var(--jei-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.jei-action-key,
+.jei-filter-steps article > span,
+.jei-recipe-checks article > span {
+  display: grid;
+  min-width: 34px;
+  height: 34px;
+  padding: 0 8px;
+  place-items: center;
+  border-radius: 9px;
+  background: #eef7fb;
+  color: #0878a5;
+  font-size: 0.72rem;
+  font-weight: 950;
+}
+
+.jei-essential-grid :is(h3, p),
+.jei-project-grid :is(h3, p),
+.jei-filter-steps :is(h3, p),
+.jei-recipe-checks :is(h3, p) {
+  margin: 0;
+}
+
+.jei-essential-grid h3,
+.jei-project-grid h3,
+.jei-filter-steps h3,
+.jei-recipe-checks h3 {
+  font-size: 0.93rem;
+  line-height: 1.35;
+}
+
+.jei-essential-grid p,
+.jei-project-grid p,
+.jei-filter-steps p,
+.jei-recipe-checks p {
+  margin-top: 4px;
+  color: var(--jei-muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.jei-example-path,
+.jei-chain {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+  padding: 13px 15px;
+  border: 1px solid var(--jei-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.jei-example-path div {
+  min-width: 190px;
+  margin-right: auto;
+}
+
+.jei-example-path small,
+.jei-example-path strong {
+  display: block;
+}
+
+.jei-example-path small {
+  color: var(--jei-blue);
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.jei-example-path strong {
+  margin-top: 2px;
+  font-size: 0.88rem;
+}
+
+.jei-example-path > span,
+.jei-chain > span {
+  color: var(--jei-muted);
+  font-size: 0.8rem;
+}
+
+.jei-example-path > b,
+.jei-chain > b {
+  color: var(--jei-orange);
+  font-size: 0.78rem;
+}
+
+.jei-filter-link {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 16px;
+  border: 1px solid var(--jei-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.jei-filter-link :is(p, h3) {
+  margin: 0;
+}
+
+.jei-filter-link p {
+  color: var(--jei-blue);
+  font-size: 0.67rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.jei-filter-link h3 {
+  margin-top: 3px;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.jei-filter-link button {
+  flex: 0 0 auto;
+  padding: 10px 13px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--jei-ink);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.jei-recipe-checks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.jei-recipe-checks article {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--jei-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.jei-chain {
+  justify-content: center;
+}
+
+.jei-filter-steps {
+  margin-bottom: 16px;
 }
 
 .jei-search-examples {
@@ -433,29 +629,41 @@
     gap: 11px;
   }
 
-  .jei-flow,
   .jei-recipe-map,
   .jei-create-flow {
     display: grid;
     grid-template-columns: 1fr;
   }
 
-  .jei-flow article,
   .jei-recipe-map article,
   .jei-create-flow article {
     min-height: 0;
   }
 
-  .jei-flow > i,
   .jei-recipe-map > i,
   .jei-create-flow > i {
     height: 12px;
     transform: rotate(90deg);
   }
 
-  .jei-card-grid-2,
-  .jei-card-grid-3 {
+  .jei-interface-map,
+  .jei-essential-grid,
+  .jei-project-grid,
+  .jei-filter-steps,
+  .jei-recipe-checks {
     grid-template-columns: 1fr;
+  }
+
+  .jei-interface-map {
+    grid-template-areas:
+      'inventory'
+      'catalogue'
+      'search';
+  }
+
+  .jei-filter-link {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .jei-search-examples article {

@@ -1,11 +1,10 @@
 <div class="jei-panel" id="jei-filters-panel" role="tabpanel" aria-labelledby="jei-filters-tab" hidden>
   <header class="jei-hero">
-    <p class="jei-eyebrow">Les vrais identifiants du pack, sans jeu de devinettes</p>
-    <h1>Filtres JEI par mod</h1>
+    <p class="jei-eyebrow">Retrouver les objets d’un mod précis</p>
+    <h1>Les filtres @ du modpack</h1>
     <p>
-      Copie le code dans la barre de JEI et tous les autres mods dégagent temporairement de la liste. Tu peux même
-      ajouter un mot derrière, par exemple <code>@create train</code> ou <code>@chipped verre</code>, pour éviter de
-      chercher une aiguille dans une botte de blocs.
+      Un filtre comme <code>@create</code> limite le catalogue aux objets de Create. Tu peux ensuite ajouter un mot,
+      comme <code>@create train</code> ou <code>@chipped verre</code>, pour préciser la recherche.
     </p>
   </header>
 
@@ -21,6 +20,22 @@
       Ce tableau rassemble les mods qui ajoutent des objets ou des blocs consultables dans JEI. Les bibliothèques, les
       optimisations et les modifications purement visuelles sont volontairement laissées de côté.
     </p>
+    <div class="jei-filter-steps" aria-label="Utiliser le tableau des filtres JEI">
+      <article>
+        <span>1</span>
+        <div>
+          <h3>Retrouve le mod dans cette page</h3>
+          <p>Utilise le champ ci-dessous si tu connais une partie de son nom.</p>
+        </div>
+      </article>
+      <article>
+        <span>2</span>
+        <div>
+          <h3>Tape son code dans Minecraft</h3>
+          <p>Recopie le filtre dans la barre de recherche située sous le catalogue JEI.</p>
+        </div>
+      </article>
+    </div>
     <label class="jei-filter-search">
       <span>Rechercher un mod</span>
       <input type="search" placeholder="Ex. Stargate, Create, furniture…" autocomplete="off" data-jei-filter-search />
