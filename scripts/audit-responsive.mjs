@@ -66,6 +66,7 @@ for (const width of widths) {
     ['tutorial-photography', true],
     ['tutorial-jei', true],
     ['tutorial-create-first-factory', true],
+    ['tutorial-trains', true],
     ['tutorial-big-cannons', true],
     ['tutorial-stargates', true],
   ]) {

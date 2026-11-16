@@ -88,6 +88,17 @@
           </button>
           <button
             class="tutorial-tab"
+            id="tutorial-trains-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-trains"
+            tabindex="-1"
+          >
+            Trains et livraisons
+          </button>
+          <button
+            class="tutorial-tab"
             id="tutorial-big-cannons-tab"
             type="button"
             role="tab"
@@ -159,6 +170,15 @@
           hidden
         >
           <!-- @include ../content/tutorials/create.html -->
+        </section>
+        <section
+          class="tutorial-panel"
+          id="tutorial-trains"
+          role="tabpanel"
+          aria-labelledby="tutorial-trains-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/trains.html -->
         </section>
         <section
           class="tutorial-panel"
