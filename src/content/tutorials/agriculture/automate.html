@@ -1,0 +1,371 @@
+<div class="agri-panel" id="agri-automate-panel" role="tabpanel" aria-labelledby="agri-automate-tab" hidden>
+  <header class="agri-hero agri-hero-compact">
+    <p class="agri-eyebrow">Create · de la récolte manuelle à la ferme mécanique</p>
+    <h1>Faire récolter le champ par une machine</h1>
+    <div class="agri-introduction">
+      <p>
+        Quand le domaine commence à produire plusieurs champs de blé, de légumes et de céréales, la récolte finit par
+        prendre une bonne partie de la journée. Create permet de confier ce travail à une structure mobile qui passe
+        au-dessus des cultures, récupère les plantes mûres et les remet immédiatement au début de leur croissance.
+      </p>
+      <p>
+        Pour ce premier projet, on va construire une ferme rotative. Un bras tourne autour d’un Mechanical Bearing, une
+        rangée de Mechanical Harvesters traverse le champ et les récoltes rejoignent un inventaire fixé sur la machine.
+        À chaque tour, une Portable Storage Interface vide cet inventaire vers la grange.
+      </p>
+    </div>
+    <div class="agri-journey" aria-label="Parcours de construction de la ferme mécanique">
+      <span>Préparer le champ</span><i>→</i><span>Installer l’axe</span><i>→</i><span>Construire le bras</span><i>→</i
+      ><span>Ajouter le stockage</span><i>→</i><span>Lancer la récolte</span>
+    </div>
+  </header>
+
+  <section class="agri-section" id="agri-automate-principle" data-phase="Comprendre la machine">
+    <div class="agri-title">
+      <span>01</span>
+      <div>
+        <p>Le principe de la ferme</p>
+        <h2>Faire tourner une rangée de Harvesters</h2>
+      </div>
+    </div>
+    <p class="agri-lead">
+      Le Mechanical Bearing transforme les blocs attachés à sa face en Contraption / Structure mobile. Pendant la
+      rotation, chaque Mechanical Harvester récolte les cultures mûres qu’il rencontre et les ramène à leur premier
+      stade de croissance.
+    </p>
+    <div class="agri-rotation-diagram" aria-label="Fonctionnement général de la ferme rotative">
+      <article class="agri-rotation-center">
+        <b>Mechanical Bearing</b>
+        <span>Fait tourner l’ensemble</span>
+      </article>
+      <i>→</i>
+      <article>
+        <b>Bras collé</b>
+        <span>Porte les outils et le stockage</span>
+      </article>
+      <i>→</i>
+      <article>
+        <b>Mechanical Harvesters</b>
+        <span>Traversent les cultures mûres</span>
+      </article>
+      <i>→</i>
+      <article class="agri-rotation-result">
+        <b>Chest ou Barrel</b>
+        <span>Récupère les produits récoltés</span>
+      </article>
+    </div>
+    <p class="agri-note">
+      <strong>Le tutoriel Create reste disponible en jeu.</strong> Place le curseur sur un Mechanical Harvester, un
+      Mechanical Bearing ou une Portable Storage Interface dans JEI, puis maintiens <kbd>W</kbd> pour ouvrir sa scène
+      Ponder.
+    </p>
+  </section>
+
+  <section class="agri-section" id="agri-automate-project" data-phase="Préparer le projet">
+    <div class="agri-title">
+      <span>02</span>
+      <div>
+        <p>Le modèle de départ</p>
+        <h2>Construire un champ circulaire de six blocs de rayon</h2>
+      </div>
+    </div>
+    <p class="agri-lead">
+      Cette première ferme utilise un bras de six blocs. Le Bearing occupe le centre et quatre sources d’eau hydratent
+      la Farmland. Le modèle reste assez compact pour être construit tôt, tout en produisant déjà une quantité solide de
+      récoltes.
+    </p>
+    <div class="agri-rotary-plan">
+      <div class="agri-rotary-field" aria-hidden="true">
+        <span class="agri-rotary-limit">Rayon de 6 blocs</span>
+        <span class="agri-rotary-water agri-rotary-water-north">Eau</span>
+        <span class="agri-rotary-water agri-rotary-water-east">Eau</span>
+        <span class="agri-rotary-water agri-rotary-water-south">Eau</span>
+        <span class="agri-rotary-water agri-rotary-water-west">Eau</span>
+        <span class="agri-rotary-bearing">Bearing</span>
+        <span class="agri-rotary-arm">Bras + Harvesters</span>
+      </div>
+      <ol class="agri-build-steps">
+        <li><b>1</b><span>Marque le centre, puis compte six blocs dans les quatre directions.</span></li>
+        <li><b>2</b><span>Dessine un cercle autour de ces repères et remplis-le de Dirt / Terre.</span></li>
+        <li>
+          <b>3</b
+          ><span>Place quatre sources d’eau à trois blocs du centre, au nord, au sud, à l’est et à l’ouest.</span>
+        </li>
+        <li>
+          <b>4</b><span>Laboure tout le terrain disponible et plante une culture simple pour le premier essai.</span>
+        </li>
+      </ol>
+    </div>
+    <p class="agri-warning">
+      <strong>Laisse le bloc central libre.</strong> Il accueillera le Mechanical Bearing et son axe d’entraînement. Les
+      quatre sources peuvent rester ouvertes : le bras passera au-dessus.
+    </p>
+  </section>
+
+  <section class="agri-section" id="agri-automate-materials" data-phase="Préparer le projet">
+    <div class="agri-title">
+      <span>03</span>
+      <div>
+        <p>La liste de courses</p>
+        <h2>Rassembler la machine et son système de déchargement</h2>
+      </div>
+    </div>
+    <div class="agri-machine-materials">
+      <article><b>1 Mechanical Bearing</b><span>Le centre de rotation de la ferme</span></article>
+      <article><b>6 Mechanical Harvesters</b><span>Un outil pour chaque bloc du rayon</span></article>
+      <article><b>1 Chest ou Barrel</b><span>L’inventaire transporté par le bras</span></article>
+      <article><b>2 Portable Storage Interfaces</b><span>Une mobile et une fixe pour vider la récolte</span></article>
+      <article><b>1 tube de Super Glue</b><span>Pour réunir le bras, les outils et le stockage</span></article>
+      <article><b>Des blocs de construction</b><span>Un pilier central et une poutre de six blocs</span></article>
+      <article><b>Une source de rotation</b><span>Water Wheel, Shafts et un Clutch avant le Bearing</span></article>
+      <article><b>Une sortie fixe</b><span>Funnel, Chute, Belt, coffre ou Drawer selon la grange</span></article>
+    </div>
+    <p class="agri-note">
+      <strong>Les quantités correspondent au prototype de six blocs.</strong> Une ferme plus large demande un Harvester
+      supplémentaire par bloc ajouté au rayon.
+    </p>
+  </section>
+
+  <section class="agri-section" id="agri-automate-drive" data-phase="Construire la ferme">
+    <div class="agri-title">
+      <span>04</span>
+      <div>
+        <p>L’axe central</p>
+        <h2>Alimenter le Mechanical Bearing par-dessous</h2>
+      </div>
+    </div>
+    <div class="agri-drive-layout">
+      <div class="agri-drive-stack" aria-label="Coupe verticale de l’axe central">
+        <span>Support du bras</span>
+        <i>↓</i>
+        <span class="agri-drive-bearing">Mechanical Bearing face vers le haut</span>
+        <i>↓</i>
+        <span>Shaft sous le champ</span>
+        <i>↓</i>
+        <span>Water Wheel et transmission</span>
+      </div>
+      <ol class="agri-build-steps">
+        <li><b>1</b><span>Creuse sous le centre afin de faire arriver un Shaft vertical.</span></li>
+        <li>
+          <b>2</b><span>Pose le Mechanical Bearing au niveau du terrain, avec sa face circulaire vers le ciel.</span>
+        </li>
+        <li><b>3</b><span>Relie le Shaft à une Water Wheel ou au réseau de rotation du domaine.</span></li>
+        <li><b>4</b><span>Garde la transmission arrêtée avec un Clutch pendant la construction du bras.</span></li>
+      </ol>
+    </div>
+    <p class="agri-check">
+      <strong>Premier contrôle :</strong> avec les Engineer’s Goggles, vérifie que la rotation atteint bien le Bearing.
+      Le bras sera assemblé dès que l’axe recevra du mouvement.
+    </p>
+  </section>
+
+  <section class="agri-section" id="agri-automate-arm" data-phase="Construire la ferme">
+    <div class="agri-title">
+      <span>05</span>
+      <div>
+        <p>La partie mobile</p>
+        <h2>Coller le bras et orienter les Harvesters</h2>
+      </div>
+    </div>
+    <p class="agri-lead">
+      Le bras se trouve au-dessus des plantes. Les Harvesters descendent au niveau des cultures et leur face dentée
+      regarde dans le sens de rotation. Cette orientation leur permet de rencontrer les plantes par l’avant.
+    </p>
+    <div class="agri-arm-diagram" aria-label="Disposition du bras et des Mechanical Harvesters">
+      <div class="agri-arm-top">
+        <span class="agri-arm-axis">Axe</span>
+        <span class="agri-arm-beam">Poutre collée de 6 blocs</span>
+        <span class="agri-arm-direction">Sens de rotation ↻</span>
+      </div>
+      <div class="agri-arm-side">
+        <span>Poutre</span><i>↓</i><span class="agri-arm-tools">6 Harvesters face au mouvement</span><i>↓</i
+        ><span>Cultures</span><i>↓</i><span>Farmland</span>
+      </div>
+    </div>
+    <ol class="agri-action-steps">
+      <li>
+        <b>Monte un pilier d’un bloc sur le Bearing</b>
+        <span>Il élève la poutre afin que les outils puissent passer au niveau des plantes.</span>
+      </li>
+      <li>
+        <b>Prolonge une poutre de six blocs depuis le centre</b>
+        <span>Applique la Super Glue entre le pilier et toute la longueur de la poutre.</span>
+      </li>
+      <li>
+        <b>Fixe un Mechanical Harvester sous chaque bloc de la poutre</b>
+        <span>Les six faces dentées doivent regarder dans la même direction, perpendiculairement au bras.</span>
+      </li>
+      <li>
+        <b>Colle chaque outil à la poutre</b>
+        <span>Lorsque le Bearing s’assemble, le pilier, la poutre et tous les Harvesters doivent partir ensemble.</span>
+      </li>
+    </ol>
+    <p class="agri-warning">
+      <strong>Si le bras tourne dans l’autre sens :</strong> inverse la rotation avec un Gearshift ou retourne les
+      Harvesters. Leur face dentée doit rester tournée vers les plantes qui arrivent.
+    </p>
+  </section>
+
+  <section class="agri-section" id="agri-automate-storage" data-phase="Récupérer les récoltes">
+    <div class="agri-title">
+      <span>06</span>
+      <div>
+        <p>L’inventaire mobile</p>
+        <h2>Ranger les récoltes sur le bras</h2>
+      </div>
+    </div>
+    <p class="agri-lead">
+      Les Harvesters envoient leurs produits dans les inventaires attachés à la Contraption. Un Chest ou un Barrel collé
+      sur la poutre suffit pour ce premier modèle.
+    </p>
+    <div class="agri-storage-assembly">
+      <article><b>Mechanical Harvesters</b><span>Récoltent et réinitialisent les cultures mûres</span></article>
+      <i>→</i>
+      <article><b>Inventaire collé</b><span>Reçoit le blé, les légumes et les graines</span></article>
+      <i>→</i>
+      <article><b>Interface mobile</b><span>Donne accès à tout le stockage de la Contraption</span></article>
+    </div>
+    <p class="agri-note">
+      <strong>Le Chest peut être placé près du centre.</strong> Colle-le au pilier ou à la poutre, puis colle également
+      la Portable Storage Interface mobile. Leur position exacte importe moins que leur appartenance à la même
+      Contraption.
+    </p>
+  </section>
+
+  <section class="agri-section" id="agri-automate-unload" data-phase="Récupérer les récoltes">
+    <div class="agri-title">
+      <span>07</span>
+      <div>
+        <p>Le quai de déchargement</p>
+        <h2>Faire sortir les récoltes à chaque tour</h2>
+      </div>
+    </div>
+    <p class="agri-lead">
+      Une Portable Storage Interface reste sur le bras. La seconde est installée à côté du champ et reliée au stockage
+      fixe. Lorsque les deux faces se croisent, elles se connectent et la station accède à tous les inventaires de la
+      Contraption.
+    </p>
+    <div class="agri-interface-plan" aria-label="Disposition des Portable Storage Interfaces">
+      <article class="agri-interface-moving">
+        <p>Sur le bras</p>
+        <b>Interface mobile</b>
+        <span>Face tournée vers l’extérieur du cercle</span>
+      </article>
+      <div class="agri-interface-gap"><b>1 ou 2 blocs d’écart</b><span>Les faces se regardent</span></div>
+      <article class="agri-interface-fixed">
+        <p>À côté du champ</p>
+        <b>Interface fixe</b>
+        <span>Reliée à un Funnel, une Chute ou un Belt</span>
+      </article>
+      <i>→</i>
+      <article class="agri-interface-output">
+        <p>Dans la grange</p>
+        <b>Chest ou Drawer</b>
+        <span>Stockage permanent des récoltes</span>
+      </article>
+    </div>
+    <ol class="agri-action-steps">
+      <li>
+        <b>Place l’interface mobile à l’extrémité ou sur le côté du bras</b>
+        <span>Sa face doit regarder vers l’extérieur du champ lorsqu’elle arrive au quai.</span>
+      </li>
+      <li>
+        <b>Installe l’interface fixe face à elle</b>
+        <span>Laisse exactement un ou deux blocs vides entre les deux faces au moment de leur passage.</span>
+      </li>
+      <li>
+        <b>Relie l’interface fixe au stockage</b>
+        <span>Une Chute, un Funnel ou un Belt extrait les objets vers la grange.</span>
+      </li>
+    </ol>
+    <p class="agri-check">
+      <strong>Le déchargement est automatique.</strong> Les interfaces se connectent au passage, les objets sont
+      transférés, puis le bras reprend sa rotation lorsque plus rien ne circule pendant un court instant.
+    </p>
+  </section>
+
+  <section class="agri-section" id="agri-automate-test" data-phase="Mettre en route">
+    <div class="agri-title">
+      <span>08</span>
+      <div>
+        <p>Le premier tour</p>
+        <h2>Lancer lentement et suivre toute la récolte</h2>
+      </div>
+    </div>
+    <ol class="agri-action-steps">
+      <li>
+        <b>Laisse mûrir une partie du champ</b>
+        <span>Le premier essai sera plus lisible avec plusieurs cultures prêtes à être récoltées.</span>
+      </li>
+      <li>
+        <b>Active la rotation à faible vitesse</b>
+        <span>Observe l’assemblage du bras et vérifie qu’aucun bloc fixe ne coupe sa trajectoire.</span>
+      </li>
+      <li>
+        <b>Suis un Harvester pendant son passage</b>
+        <span>La culture mûre doit revenir à son premier stade et ses produits rejoindre le Chest mobile.</span>
+      </li>
+      <li>
+        <b>Regarde le quai de déchargement</b>
+        <span>Les interfaces se déploient face à face et la récolte arrive dans le stockage fixe.</span>
+      </li>
+    </ol>
+    <div class="agri-machine-checks">
+      <article>
+        <b>Les cultures repartent</b><span>Les plantes récoltées restent en place au premier stade.</span>
+      </article>
+      <article><b>Aucun objet au sol</b><span>Tous les produits atteignent l’inventaire mobile.</span></article>
+      <article>
+        <b>Le bras décharge</b><span>Le Chest mobile retrouve de la place après le passage au quai.</span>
+      </article>
+      <article>
+        <b>Le circuit reste dégagé</b><span>Le bras effectue un tour complet sans toucher de construction.</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="agri-section" id="agri-automate-troubleshoot" data-phase="Dépanner la machine">
+    <div class="agri-title">
+      <span>09</span>
+      <div>
+        <p>Si quelque chose coince</p>
+        <h2>Retrouver le problème étape par étape</h2>
+      </div>
+    </div>
+    <div class="agri-troubleshoot-list">
+      <article>
+        <b>Le Bearing tourne seul</b>
+        <span
+          >Le premier bloc du pilier n’est pas attaché à sa face ou la Super Glue ne relie pas toute la structure.</span
+        >
+      </article>
+      <article>
+        <b>Le bras traverse les plantes sans récolter</b>
+        <span>Vérifie la hauteur des Harvesters, leur face dentée et la maturité des cultures.</span>
+      </article>
+      <article>
+        <b>Des objets tombent dans le champ</b>
+        <span>Ajoute un Chest ou un Barrel à la Contraption et vérifie qu’il part bien avec le bras.</span>
+      </article>
+      <article>
+        <b>Les interfaces ne se connectent jamais</b>
+        <span>Aligne leurs faces et mesure un ou deux blocs vides entre elles au point de passage.</span>
+      </article>
+      <article>
+        <b>Les interfaces se connectent sans vider le Chest</b>
+        <span>Relie l’interface fixe à une sortie capable d’extraire les objets vers un inventaire disponible.</span>
+      </article>
+      <article>
+        <b>Le bras s’arrête contre le décor</b>
+        <span
+          >Retire les barrières, arbres, lampes ou blocs fixes placés dans le volume parcouru par la Contraption.</span
+        >
+      </article>
+    </div>
+    <p class="agri-check">
+      <strong>Première ferme Create terminée :</strong> tu disposes maintenant d’un cycle complet, depuis la plante mûre
+      jusqu’au stockage de la grange. Le prochain onglet suivra les récoltes après leur arrivée : cuisine,
+      transformation et vente.
+    </p>
+  </section>
+</div>

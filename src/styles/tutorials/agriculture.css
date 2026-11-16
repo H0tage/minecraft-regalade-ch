@@ -863,6 +863,361 @@
   line-height: 1.55;
 }
 
+.agri-rotation-diagram,
+.agri-storage-assembly {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  margin-top: 19px;
+}
+
+.agri-rotation-diagram article,
+.agri-machine-materials article,
+.agri-storage-assembly article,
+.agri-interface-plan article,
+.agri-machine-checks article,
+.agri-troubleshoot-list article {
+  border: 1px solid var(--agri-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.agri-rotation-diagram article,
+.agri-storage-assembly article {
+  display: grid;
+  flex: 1 1 0;
+  min-width: 0;
+  align-content: center;
+  padding: 15px;
+  text-align: center;
+}
+
+.agri-rotation-diagram > i,
+.agri-storage-assembly > i,
+.agri-interface-plan > i {
+  display: grid;
+  place-items: center;
+  color: var(--agri-orange);
+  font-style: normal;
+  font-weight: 950;
+}
+
+.agri-rotation-diagram b,
+.agri-storage-assembly b,
+.agri-machine-checks b,
+.agri-troubleshoot-list b {
+  display: block;
+  font-size: 0.87rem;
+  line-height: 1.3;
+}
+
+.agri-rotation-diagram span,
+.agri-storage-assembly span,
+.agri-machine-checks span,
+.agri-troubleshoot-list span {
+  display: block;
+  margin-top: 5px;
+  color: var(--agri-muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.agri-rotation-diagram .agri-rotation-center {
+  border-color: #9dc9dd;
+}
+
+.agri-rotation-diagram .agri-rotation-result {
+  border-color: #a8d8c7;
+}
+
+.agri-rotary-plan,
+.agri-drive-layout {
+  display: grid;
+  grid-template-columns: minmax(270px, 0.8fr) minmax(360px, 1.2fr);
+  gap: 14px;
+  margin-top: 19px;
+}
+
+.agri-rotary-field,
+.agri-drive-stack,
+.agri-arm-diagram {
+  border: 1px solid var(--agri-line);
+  border-radius: 13px;
+  background: #fff;
+}
+
+.agri-rotary-field {
+  position: relative;
+  width: min(100%, 360px);
+  margin: 0 auto;
+  overflow: hidden;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #f4edda;
+}
+
+.agri-rotary-field > span {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  padding: 5px 7px;
+  border-radius: 7px;
+  font-size: 0.7rem;
+  font-weight: 850;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.agri-rotary-limit {
+  top: 9%;
+  left: 50%;
+  background: #fff;
+  color: var(--agri-muted);
+  transform: translateX(-50%);
+}
+
+.agri-rotary-bearing {
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  background: var(--agri-ink);
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.agri-rotary-field > .agri-rotary-arm {
+  top: calc(50% - 15px);
+  right: 5%;
+  left: 50%;
+  justify-content: end;
+  min-height: 30px;
+  padding-right: 9px;
+  border: 1px solid #d78d58;
+  border-left: 0;
+  border-radius: 0 7px 7px 0;
+  background: #fff4eb;
+  color: #9a4210;
+}
+
+.agri-rotary-water {
+  background: #d8f1fb;
+  color: #08749d;
+}
+
+.agri-rotary-water-north {
+  top: 26%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.agri-rotary-water-east {
+  top: 50%;
+  right: 25%;
+  transform: translateY(-50%);
+}
+
+.agri-rotary-water-south {
+  bottom: 26%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.agri-rotary-water-west {
+  top: 50%;
+  left: 25%;
+  transform: translateY(-50%);
+}
+
+.agri-machine-materials,
+.agri-machine-checks,
+.agri-troubleshoot-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 19px;
+}
+
+.agri-machine-materials article {
+  padding: 15px 16px;
+}
+
+.agri-machine-materials b {
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.3;
+}
+
+.agri-machine-materials span {
+  display: block;
+  margin-top: 5px;
+  color: var(--agri-muted);
+  font-size: 0.79rem;
+  line-height: 1.5;
+}
+
+.agri-drive-stack {
+  display: grid;
+  align-content: center;
+  gap: 7px;
+  padding: 20px;
+}
+
+.agri-drive-stack span {
+  display: grid;
+  min-height: 46px;
+  place-items: center;
+  padding: 10px;
+  border: 1px solid var(--agri-line);
+  border-radius: 9px;
+  background: #fff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.agri-drive-stack i {
+  color: var(--agri-orange);
+  font-style: normal;
+  font-weight: 950;
+  text-align: center;
+}
+
+.agri-drive-stack .agri-drive-bearing {
+  border-color: #9dc9dd;
+}
+
+.agri-arm-diagram {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
+  gap: 12px;
+  margin-top: 19px;
+  padding: 18px;
+}
+
+.agri-arm-top,
+.agri-arm-side {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.agri-arm-top span,
+.agri-arm-side span {
+  display: grid;
+  min-height: 45px;
+  place-items: center;
+  padding: 9px;
+  border: 1px solid var(--agri-line);
+  border-radius: 9px;
+  background: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.agri-arm-top .agri-arm-axis {
+  flex: 0 0 58px;
+  background: var(--agri-ink);
+  color: #fff;
+}
+
+.agri-arm-top .agri-arm-beam {
+  flex: 1 1 auto;
+  border-color: #d6af8f;
+}
+
+.agri-arm-top .agri-arm-direction {
+  flex: 0 0 100px;
+  border-color: #f1bb91;
+  color: #9a4210;
+}
+
+.agri-arm-side {
+  flex-direction: column;
+}
+
+.agri-arm-side span {
+  width: 100%;
+}
+
+.agri-arm-side i {
+  color: var(--agri-orange);
+  font-style: normal;
+  line-height: 1;
+}
+
+.agri-arm-side .agri-arm-tools {
+  border-color: #f1bb91;
+}
+
+.agri-interface-plan {
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) minmax(130px, 0.75fr) minmax(150px, 1fr) auto minmax(150px, 1fr);
+  gap: 8px;
+  align-items: stretch;
+  margin-top: 19px;
+}
+
+.agri-interface-plan article,
+.agri-interface-gap {
+  display: grid;
+  min-width: 0;
+  align-content: center;
+  padding: 15px;
+  text-align: center;
+}
+
+.agri-interface-plan article > p {
+  margin: 0 0 5px;
+  color: var(--agri-blue);
+  font-size: 0.67rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.agri-interface-plan article > b,
+.agri-interface-gap b {
+  font-size: 0.84rem;
+  line-height: 1.3;
+}
+
+.agri-interface-plan article > span,
+.agri-interface-gap span {
+  display: block;
+  margin-top: 5px;
+  color: var(--agri-muted);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+.agri-interface-plan .agri-interface-moving,
+.agri-interface-plan .agri-interface-fixed {
+  border-color: #9dc9dd;
+}
+
+.agri-interface-plan .agri-interface-output {
+  border-color: #a8d8c7;
+}
+
+.agri-interface-gap {
+  border: 1px dashed #d6a47f;
+  border-radius: 10px;
+  background: #fff;
+  color: #9a4210;
+}
+
+.agri-machine-checks article,
+.agri-troubleshoot-list article {
+  padding: 16px;
+}
+
+.agri-troubleshoot-list article {
+  border-left: 3px solid var(--agri-orange);
+}
+
 @media (width <= 1080px) {
   .agri-card-grid-4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -883,6 +1238,14 @@
 
   .agri-tool-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .agri-interface-plan {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .agri-interface-plan > i {
+    display: none;
   }
 
   .agri-requirement-flow {
@@ -983,6 +1346,34 @@
 
   .agri-plot-modules > i,
   .agri-storage-flow > i {
+    transform: rotate(90deg);
+  }
+
+  .agri-rotation-diagram,
+  .agri-storage-assembly {
+    display: grid;
+  }
+
+  .agri-rotation-diagram > i,
+  .agri-storage-assembly > i {
+    transform: rotate(90deg);
+  }
+
+  .agri-rotary-plan,
+  .agri-drive-layout,
+  .agri-arm-diagram {
+    grid-template-columns: 1fr;
+  }
+
+  .agri-machine-materials,
+  .agri-machine-checks,
+  .agri-troubleshoot-list,
+  .agri-interface-plan {
+    grid-template-columns: 1fr;
+  }
+
+  .agri-interface-plan > i {
+    display: grid;
     transform: rotate(90deg);
   }
 
