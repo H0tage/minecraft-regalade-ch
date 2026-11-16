@@ -297,6 +297,22 @@
   line-height: 1.45;
 }
 
+.minecraft-mission-tasks label > span {
+  display: grid;
+  gap: 2px;
+}
+
+.minecraft-mission-tasks strong {
+  font-weight: 800;
+}
+
+.minecraft-mission-tasks small {
+  color: var(--tutorial-muted);
+  font-size: 0.78rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
 .minecraft-mission-tasks input {
   flex: 0 0 auto;
   width: 16px;
