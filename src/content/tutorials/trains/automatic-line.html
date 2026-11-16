@@ -1,0 +1,404 @@
+<div class="train-panel" id="train-automatic-panel" role="tabpanel" aria-labelledby="train-automatic-tab" hidden>
+  <header class="train-hero train-auto-hero">
+    <p class="train-eyebrow">Un conducteur, deux gares et beaucoup moins d’allers-retours</p>
+    <h1>Automatiser ma première ligne</h1>
+    <p>
+      Conduire soi-même est très sympa pendant environ trois trajets. Au quatrième aller-retour entre l’Atelier et le
+      Terminus, le charme commence tranquillement à disparaître.
+    </p>
+    <p>
+      Create permet de confier le train à un conducteur et de lui remettre un [Train Schedule]. Le train suivra alors
+      seul la liste des gares, respectera les temps d’arrêt et repartira dans l’autre sens sans attendre que tu viennes
+      toucher les leviers.
+    </p>
+    <p>
+      On va reprendre la locomotive du parcours précédent, lui donner un poste de conduite dans chaque direction,
+      installer un conducteur puis programmer une navette simple entre nos deux Stations.
+    </p>
+    <div class="train-project-summary" aria-label="Objectif du parcours automatique">
+      <span>2 Train Controls opposés</span>
+      <span>1 conducteur</span>
+      <span>1 Train Schedule</span>
+      <span>1 navette en boucle</span>
+    </div>
+  </header>
+
+  <section class="train-section" id="train-auto-principle" data-phase="Comprendre l’automatisation">
+    <div class="train-title">
+      <span>01</span>
+      <div>
+        <p>Ce qui va changer</p>
+        <h2>Transformer le train manuel en navette</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Une ligne automatique repose sur trois éléments. Le train doit pouvoir repartir dans les deux directions, un
+      conducteur doit être installé devant les Controls et un Schedule doit lui dire où aller.
+    </p>
+    <div class="train-auto-principles">
+      <article>
+        <span>1</span>
+        <h3>Deux postes de conduite</h3>
+        <p>Un [Train Controls] regarde vers le Terminus, l’autre vers l’Atelier.</p>
+      </article>
+      <article>
+        <span>2</span>
+        <h3>Un conducteur</h3>
+        <p>Un mob assis devant les Controls devient capable d’exécuter le Schedule.</p>
+      </article>
+      <article>
+        <span>3</span>
+        <h3>Un Schedule</h3>
+        <p>Il contient les destinations et la condition qui autorise chaque départ.</p>
+      </article>
+    </div>
+    <p class="train-note">
+      <strong>Pas besoin de Signal pour cette ligne.</strong> Un seul train circule sur une voie qui lui appartient. Les
+      Signals deviendront utiles quand plusieurs trains commenceront à partager le réseau.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-auto-disassemble" data-phase="Modifier la locomotive">
+    <div class="train-title">
+      <span>02</span>
+      <div>
+        <p>Retour à l’Atelier</p>
+        <h2>Désassembler le train en gare</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      La locomotive doit redevenir une construction en blocs avant d’être modifiée. Ramène-la à la Station « Atelier »
+      et gare-la correctement sur son marqueur.
+    </p>
+    <ol class="train-steps">
+      <li>
+        <span>1</span>
+        <p>Prends les Train Controls et approche lentement de la Station.</p>
+      </li>
+      <li>
+        <span>2</span>
+        <p>Maintiens la commande d’approche pour que le train se place sur le Station Marker.</p>
+      </li>
+      <li>
+        <span>3</span>
+        <p>Ouvre la Station et utilise l’option de désassemblage.</p>
+      </li>
+      <li>
+        <span>4</span>
+        <p>Vérifie que la locomotive est redevenue un ensemble de blocs sur le Bogey.</p>
+      </li>
+    </ol>
+    <p class="train-tip">
+      Si l’option n’apparaît pas, le train n’est probablement pas assez bien aligné avec la Station. Reprends les
+      Controls, éloigne-toi légèrement puis approche de nouveau en maintenant la commande prévue.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-auto-cab" data-phase="Créer la cabine réversible">
+    <div class="train-title">
+      <span>03</span>
+      <div>
+        <p>Un poste dans chaque sens</p>
+        <h2>Installer la cabine réversible</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Fabrique un deuxième [Train Controls], puis place le Seat du conducteur entre les deux postes. Les Controls
+      doivent regarder vers l’extérieur de la cabine, chacun dans la direction qu’il devra conduire.
+    </p>
+    <div class="train-cab-plan" aria-label="Plan de la cabine réversible">
+      <div class="train-cab-direction">Vers Atelier ←</div>
+      <strong>Train Controls</strong>
+      <span>Seat du conducteur</span>
+      <strong>Train Controls</strong>
+      <div class="train-cab-direction">→ Vers Terminus</div>
+    </div>
+    <div class="train-two-column">
+      <article>
+        <h3>Les flèches regardent vers l’extérieur</h3>
+        <p>
+          Le premier Controls permet de repartir vers l’Atelier. Le second permet de repartir vers le Terminus. S’ils
+          regardent tous les deux du même côté, la navette restera coincée à l’un des terminus.
+        </p>
+      </article>
+      <article>
+        <h3>Le Seat reste au milieu</h3>
+        <p>
+          Le conducteur assis entre les deux postes peut utiliser celui qui correspond au prochain départ. Il n’est pas
+          nécessaire d’engager un deuxième animal pour le retour.
+        </p>
+      </article>
+    </div>
+    <p class="train-warning">
+      Reprends la [Super Glue] et colle les deux Controls ainsi que le Seat au reste de la locomotive. Réassemble
+      ensuite le train depuis la Station avant d’installer le conducteur.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-auto-schedule-item" data-phase="Fabriquer le Schedule">
+    <div class="train-title">
+      <span>04</span>
+      <div>
+        <p>Le plan de route</p>
+        <h2>Fabriquer les Train Schedules</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Le [Train Schedule] est l’objet qui contient les ordres du conducteur. La recette en donne quatre, ce qui permet
+      de préparer plusieurs lignes sans refaire immédiatement des Sturdy Sheets.
+    </p>
+    <div class="train-schedule-recipe" aria-label="Recette du Train Schedule">
+      <article>
+        <strong>1 Sturdy Sheet</strong>
+        <span>Plaque d’obsidienne renforcée</span>
+      </article>
+      <span aria-hidden="true">+</span>
+      <article>
+        <strong>1 Paper</strong>
+        <span>La partie administrative du projet</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article class="train-output">
+        <strong>4 Train Schedules</strong>
+        <span>Un seul sera utilisé ici</span>
+      </article>
+    </div>
+    <p class="train-tip">
+      Recherche <code>@create schedule</code> dans JEI si tu veux retrouver la recette. Le Schedule vierge ne fait
+      encore rien : il faut l’ouvrir et lui ajouter des instructions.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-auto-program" data-phase="Programmer la navette">
+    <div class="train-title">
+      <span>05</span>
+      <div>
+        <p>Deux destinations en boucle</p>
+        <h2>Programmer le trajet Atelier ↔ Terminus</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Prends un Schedule en main et fais un clic droit pour ouvrir son interface. Chaque entrée contient une action,
+      puis une condition qui indique quand le train peut passer à l’entrée suivante.
+    </p>
+    <div class="train-schedule-plan" aria-label="Programme du premier Train Schedule">
+      <article>
+        <span>Entrée 1</span>
+        <strong>Travel to Station</strong>
+        <b>Terminus</b>
+        <p>Continue after: Scheduled Delay de 5 secondes</p>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article>
+        <span>Entrée 2</span>
+        <strong>Travel to Station</strong>
+        <b>Atelier</b>
+        <p>Continue after: Scheduled Delay de 5 secondes</p>
+      </article>
+      <span class="train-schedule-loop" aria-hidden="true">Retour à l’entrée 1 ↻</span>
+    </div>
+    <ol class="train-schedule-steps">
+      <li>
+        <span>1</span>
+        <p>Ajoute une instruction [Travel to Station] et écris exactement « Terminus ».</p>
+      </li>
+      <li>
+        <span>2</span>
+        <p>Ajoute la condition [Scheduled Delay] et règle-la sur 5 secondes.</p>
+      </li>
+      <li>
+        <span>3</span>
+        <p>Crée une deuxième instruction identique pour la Station « Atelier ».</p>
+      </li>
+      <li>
+        <span>4</span>
+        <p>Ajoute le même délai, vérifie l’ordre des deux entrées puis enregistre.</p>
+      </li>
+    </ol>
+    <p class="train-note">
+      Les noms doivent correspondre à ceux des Stations. Les filtres avec <code>*</code> sont pratiques sur les grands
+      réseaux, mais des noms exacts sont beaucoup plus simples pour cette première navette.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-auto-conductor" data-phase="Installer le conducteur">
+    <div class="train-title">
+      <span>06</span>
+      <div>
+        <p>Une carrière commence</p>
+        <h2>Installer le conducteur sur son Seat</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      N’importe quel mob assis devant les Train Controls peut conduire. Pour éviter une longue séance à pousser un
+      poulet dans un wagon, utilise un animal compatible avec une Lead et installe-le directement sur le Seat.
+    </p>
+    <div class="train-conductor-flow" aria-label="Installation du conducteur">
+      <article>
+        <strong>Trouve un animal</strong>
+        <span>Un poulet, une vache ou un autre mob compatible</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article>
+        <strong>Attache une Lead</strong>
+        <span>Amène le futur employé jusqu’au train assemblé</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article>
+        <strong>Clique sur le Seat</strong>
+        <span>Avec la Lead toujours reliée au mob</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article class="train-output">
+        <strong>Conducteur installé</strong>
+        <span>Il attend maintenant ses ordres</span>
+      </article>
+    </div>
+    <div class="train-two-column">
+      <article>
+        <h3>Comment vérifier le placement</h3>
+        <p>
+          Le mob doit être assis sur le Seat situé entre les deux Controls. S’il est simplement debout dans la cabine,
+          Create ne le considère pas comme conducteur.
+        </p>
+      </article>
+      <article>
+        <h3>L’alternative Blaze Burner</h3>
+        <p>
+          Un Blaze Burner installé devant les Controls peut également conduire. C’est propre et compact, mais un animal
+          avec une Lead reste plus simple pour ce premier essai.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="train-section" id="train-auto-launch" data-phase="Lancer la navette">
+    <div class="train-title">
+      <span>07</span>
+      <div>
+        <p>Remise des horaires</p>
+        <h2>Confier le Schedule et regarder le train partir</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Place le train à la Station « Atelier », prends le Schedule programmé en main puis fais un clic droit sur le
+      conducteur. Le Schedule lui est confié et la ligne devient automatique.
+    </p>
+    <div class="train-auto-loop" aria-label="Boucle automatique de la navette">
+      <article>
+        <strong>Atelier</strong>
+        <span>Attente de 5 secondes</span>
+      </article>
+      <div>
+        <span>Trajet aller →</span>
+        <span>← Trajet retour</span>
+      </div>
+      <article>
+        <strong>Terminus</strong>
+        <span>Attente de 5 secondes</span>
+      </article>
+    </div>
+    <ol class="train-launch-checks">
+      <li><span>1</span>Le conducteur reçoit le Schedule.</li>
+      <li><span>2</span>Le train attend la condition prévue à la Station actuelle.</li>
+      <li><span>3</span>Il part vers le Terminus, s’arrête puis attend cinq secondes.</li>
+      <li><span>4</span>Il utilise l’autre Controls et revient à l’Atelier.</li>
+      <li><span>5</span>Le cycle recommence tant que le Schedule reste confié.</li>
+    </ol>
+    <p class="train-warning">
+      Reste près de la ligne pendant le premier aller-retour. Le but est de vérifier le sens des Controls, les noms des
+      Stations et les temps d’arrêt avant de laisser la navette vivre sa vie.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-auto-control" data-phase="Modifier ou arrêter la ligne">
+    <div class="train-title">
+      <span>08</span>
+      <div>
+        <p>Garder le contrôle</p>
+        <h2>Récupérer ou modifier le Schedule</h2>
+      </div>
+    </div>
+    <div class="train-auto-actions">
+      <article>
+        <h3>Arrêter la navette</h3>
+        <p>
+          Attends que le train soit en gare puis fais un clic droit sur le conducteur pour récupérer son Schedule. Sans
+          ordre, il reste sur place.
+        </p>
+      </article>
+      <article>
+        <h3>Modifier les horaires</h3>
+        <p>
+          Ouvre le Schedule récupéré, change les délais ou les destinations, enregistre puis rends-le au conducteur.
+        </p>
+      </article>
+      <article>
+        <h3>Conduire manuellement</h3>
+        <p>
+          Récupère d’abord le Schedule, puis reprends les Train Controls comme dans le parcours précédent. Cela évite
+          que l’automatisation cherche à reprendre la main.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="train-section" id="train-auto-troubleshooting" data-phase="Corriger les problèmes">
+    <div class="train-title">
+      <span>09</span>
+      <div>
+        <p>Si personne ne part travailler</p>
+        <h2>Les blocages les plus fréquents</h2>
+      </div>
+    </div>
+    <div class="train-troubleshooting">
+      <article>
+        <h3>« Conductor needs to sit in front of a Controls block »</h3>
+        <p>
+          Le mob n’est pas sur le bon Seat ou les Controls ne sont pas orientés vers lui. Vérifie le plan de cabine.
+        </p>
+      </article>
+      <article>
+        <h3>Le train atteint le Terminus mais ne repart pas</h3>
+        <p>Le second Train Controls manque, regarde dans le mauvais sens ou n’est pas collé à la locomotive.</p>
+      </article>
+      <article>
+        <h3>Le conducteur refuse le Schedule</h3>
+        <p>Vérifie que le train est assemblé, que le mob est assis et que le Schedule contient au moins une entrée.</p>
+      </article>
+      <article>
+        <h3>Le train ne trouve aucune Station</h3>
+        <p>Contrôle l’orthographe des noms, le sens des Stations et la continuité physique des Tracks.</p>
+      </article>
+      <article>
+        <h3>Le train attend indéfiniment</h3>
+        <p>Ouvre le Schedule et vérifie la condition de départ. Ici, chaque entrée doit utiliser un Scheduled Delay.</p>
+      </article>
+      <article>
+        <h3>Le train part dans le mauvais sens</h3>
+        <p>Les deux Controls doivent pointer vers des directions opposées, avec le Seat du conducteur entre eux.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="train-section train-next" id="train-auto-next" data-phase="Faire évoluer la ligne">
+    <div class="train-title">
+      <span>10</span>
+      <div>
+        <p>La navette fonctionne</p>
+        <h2>Passer du trajet automatique au véritable réseau</h2>
+      </div>
+    </div>
+    <p>
+      Tu disposes maintenant d’une ligne qui fonctionne sans joueur aux commandes. Les prochaines étapes consistent à
+      transporter du fret, ajouter davantage de Stations et installer des Signals lorsque plusieurs trains commencent à
+      partager les mêmes voies.
+    </p>
+    <div class="train-roadmap">
+      <span>Ajouter une troisième Station</span>
+      <span>Attendre la présence de passagers</span>
+      <span>Charger des marchandises</span>
+      <span>Partager la voie avec un second train</span>
+    </div>
+  </section>
+</div>

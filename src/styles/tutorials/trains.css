@@ -630,6 +630,262 @@
   color: var(--train-muted);
 }
 
+.train-auto-principles,
+.train-auto-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.train-auto-principles article,
+.train-auto-actions article {
+  padding: 17px;
+  border: 1px solid var(--train-line);
+  border-radius: 12px;
+}
+
+.train-auto-principles article > span {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 11px;
+  color: var(--train-orange);
+  font-weight: 900;
+  border: 1px solid #f0cdb7;
+  border-radius: 8px;
+  place-items: center;
+}
+
+.train-auto-principles h3,
+.train-auto-actions h3 {
+  margin: 0 0 7px;
+  font-size: 1em;
+}
+
+.train-auto-principles p,
+.train-auto-actions p {
+  margin: 0;
+  color: var(--train-muted);
+}
+
+.train-cab-plan {
+  display: grid;
+  grid-template-columns: auto minmax(130px, 1fr) minmax(130px, 1fr) minmax(130px, 1fr) auto;
+  gap: 8px;
+  align-items: stretch;
+  padding: 18px;
+  margin-bottom: 14px;
+  border: 1px solid var(--train-line);
+  border-radius: 12px;
+}
+
+.train-cab-plan > strong,
+.train-cab-plan > span {
+  display: grid;
+  min-height: 70px;
+  padding: 11px;
+  text-align: center;
+  place-items: center;
+  border: 1px solid var(--train-line);
+  border-radius: 9px;
+}
+
+.train-cab-plan > strong {
+  color: #fff;
+  background: var(--train-ink);
+  border-color: var(--train-ink);
+}
+
+.train-cab-direction {
+  align-self: center;
+  color: var(--train-blue);
+  font-size: var(--tutorial-label-size);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.train-schedule-recipe,
+.train-conductor-flow {
+  display: grid;
+  grid-template-columns: minmax(130px, 1fr) auto minmax(130px, 1fr) auto minmax(150px, 1fr);
+  gap: 9px;
+  align-items: stretch;
+}
+
+.train-conductor-flow {
+  grid-template-columns: minmax(120px, 1fr) auto minmax(120px, 1fr) auto minmax(120px, 1fr) auto minmax(130px, 1fr);
+  margin-bottom: 14px;
+}
+
+.train-schedule-recipe article,
+.train-conductor-flow article {
+  display: grid;
+  gap: 5px;
+  align-content: center;
+  min-height: 92px;
+  padding: 13px;
+  text-align: center;
+  border: 1px solid var(--train-line);
+  border-radius: 11px;
+}
+
+.train-schedule-recipe > span,
+.train-conductor-flow > span {
+  align-self: center;
+  color: var(--train-orange);
+  font-weight: 900;
+}
+
+.train-schedule-recipe article span,
+.train-conductor-flow article span {
+  color: var(--train-muted);
+  font-size: 0.86em;
+  line-height: 1.35;
+}
+
+.train-schedule-plan {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.train-schedule-plan article {
+  display: grid;
+  gap: 7px;
+  min-height: 180px;
+  padding: 18px;
+  text-align: center;
+  place-content: center;
+  border: 1px solid var(--train-line);
+  border-radius: 12px;
+}
+
+.train-schedule-plan article > span {
+  color: var(--train-blue);
+  font-size: var(--tutorial-label-size);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.train-schedule-plan article b {
+  font-size: 1.15em;
+}
+
+.train-schedule-plan article p {
+  margin: 0;
+  color: var(--train-muted);
+}
+
+.train-schedule-plan > span:not(.train-schedule-loop) {
+  color: var(--train-orange);
+  font-weight: 900;
+}
+
+.train-schedule-loop {
+  grid-column: 1 / -1;
+  justify-self: center;
+  color: var(--train-green);
+  font-weight: 900;
+}
+
+.train-schedule-steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.train-schedule-steps li {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 11px;
+  align-items: start;
+  padding: 13px;
+  border: 1px solid var(--train-line);
+  border-radius: 10px;
+}
+
+.train-schedule-steps li > span {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  color: var(--train-orange);
+  font-weight: 900;
+  border: 1px solid #f0cdb7;
+  border-radius: 8px;
+  place-items: center;
+}
+
+.train-schedule-steps p {
+  margin: 2px 0 0;
+}
+
+.train-auto-loop {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) minmax(160px, 1.3fr) minmax(140px, 1fr);
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.train-auto-loop article {
+  display: grid;
+  gap: 5px;
+  min-height: 90px;
+  padding: 14px;
+  text-align: center;
+  place-content: center;
+  border: 1px solid var(--train-line);
+  border-radius: 11px;
+}
+
+.train-auto-loop article span {
+  color: var(--train-muted);
+  font-size: 0.87em;
+}
+
+.train-auto-loop > div {
+  display: grid;
+  gap: 8px;
+  color: var(--train-blue);
+  font-weight: 900;
+  text-align: center;
+}
+
+.train-launch-checks {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.train-launch-checks li {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 11px;
+  align-items: center;
+  padding: 11px 13px;
+  border: 1px solid var(--train-line);
+  border-radius: 10px;
+}
+
+.train-launch-checks li > span {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  color: var(--train-green);
+  font-weight: 900;
+  border: 1px solid #a9d5c7;
+  border-radius: 50%;
+  place-items: center;
+}
+
 @media (width <= 900px) {
   .train-line {
     grid-template-columns: 1fr;
@@ -649,14 +905,24 @@
   }
 
   .train-production-flow,
-  .train-bogey-flow {
+  .train-bogey-flow,
+  .train-conductor-flow {
     grid-template-columns: 1fr;
   }
 
   .train-production-flow > span,
-  .train-bogey-flow > span {
+  .train-bogey-flow > span,
+  .train-conductor-flow > span {
     justify-self: center;
     transform: rotate(90deg);
+  }
+
+  .train-cab-plan {
+    grid-template-columns: 1fr;
+  }
+
+  .train-cab-direction {
+    text-align: center;
   }
 }
 
@@ -684,7 +950,13 @@
   .train-controls-grid,
   .train-troubleshooting,
   .train-component-flow,
-  .train-line-plan {
+  .train-line-plan,
+  .train-auto-principles,
+  .train-auto-actions,
+  .train-schedule-recipe,
+  .train-schedule-plan,
+  .train-schedule-steps,
+  .train-auto-loop {
     grid-template-columns: 1fr;
   }
 
@@ -703,6 +975,12 @@
 
   .train-controls-grid article {
     grid-template-columns: 1fr;
+  }
+
+  .train-schedule-recipe > span,
+  .train-schedule-plan > span:not(.train-schedule-loop) {
+    justify-self: center;
+    transform: rotate(90deg);
   }
 
   .train-mod-main {
