@@ -109,7 +109,9 @@
 .storage-shopping-grid,
 .storage-drawer-types,
 .storage-control-grid,
-.storage-wall-rules {
+.storage-wall-rules,
+.storage-backpack-upgrade-grid,
+.storage-backpack-examples {
   display: grid;
   gap: 10px;
 }
@@ -123,6 +125,8 @@
 .storage-drawer-types article,
 .storage-control-grid article,
 .storage-wall-rules article,
+.storage-backpack-upgrade-grid article,
+.storage-backpack-examples article,
 .storage-controller-action,
 .storage-warning {
   padding: 17px;
@@ -141,6 +145,8 @@
 .storage-drawer-types h3,
 .storage-control-grid h3,
 .storage-wall-rules h3,
+.storage-backpack-upgrade-grid h3,
+.storage-backpack-examples h3,
 .storage-controller-action h3 {
   margin: 0 0 7px;
   color: var(--storage-ink);
@@ -152,6 +158,8 @@
 .storage-drawer-types article > div > span,
 .storage-control-grid p,
 .storage-wall-rules p,
+.storage-backpack-upgrade-grid p,
+.storage-backpack-examples p,
 .storage-controller-action > p,
 .storage-warning p {
   margin: 0;
@@ -165,6 +173,142 @@
   font-weight: 800;
   background: #edf4f6;
   border-radius: 4px;
+}
+
+.storage-lead code {
+  padding: 2px 5px;
+  color: var(--storage-ink);
+  font-weight: 800;
+  background: #edf4f6;
+  border-radius: 4px;
+}
+
+.storage-backpack-craft-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.65fr) minmax(320px, 1.35fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.storage-backpack-materials {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.storage-backpack-materials article,
+.storage-crafting-card {
+  padding: 17px;
+  border: 1px solid var(--storage-line);
+  border-radius: 12px;
+}
+
+.storage-backpack-materials article {
+  display: grid;
+  align-content: center;
+  min-height: 74px;
+  text-align: center;
+}
+
+.storage-backpack-materials strong {
+  color: var(--storage-orange);
+  font-size: 1.55rem;
+}
+
+.storage-backpack-materials span {
+  color: var(--storage-ink);
+  font-weight: 800;
+}
+
+.storage-crafting-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.storage-crafting-grid span,
+.storage-crafting-grid strong {
+  display: grid;
+  min-height: 62px;
+  padding: 7px;
+  color: var(--storage-ink);
+  font-size: 0.78rem;
+  text-align: center;
+  border: 1px solid var(--storage-line);
+  border-radius: 8px;
+  place-items: center;
+}
+
+.storage-crafting-grid strong {
+  color: #fff;
+  background: var(--storage-ink);
+  border-color: var(--storage-ink);
+}
+
+.storage-tier-table {
+  overflow: hidden;
+  border: 1px solid var(--storage-line);
+  border-radius: 12px;
+}
+
+.storage-tier-table > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px 150px;
+}
+
+.storage-tier-table > div + div {
+  border-top: 1px solid var(--storage-line);
+}
+
+.storage-tier-table span,
+.storage-tier-table b,
+.storage-tier-table strong {
+  padding: 11px 14px;
+}
+
+.storage-tier-table b,
+.storage-tier-table > div > strong:not(:first-child) {
+  color: var(--storage-green);
+  text-align: center;
+  border-left: 1px solid var(--storage-line);
+}
+
+.storage-tier-table > div:first-child {
+  color: var(--storage-ink);
+  background: #f3f7f8;
+}
+
+.storage-backpack-route {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr) auto) minmax(0, 1fr);
+  gap: 7px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.storage-backpack-route span {
+  display: grid;
+  min-height: 58px;
+  padding: 8px;
+  color: var(--storage-ink);
+  font-weight: 800;
+  text-align: center;
+  border: 1px solid var(--storage-line);
+  border-radius: 9px;
+  place-items: center;
+}
+
+.storage-backpack-route b {
+  color: var(--storage-orange);
+}
+
+.storage-backpack-upgrade-grid,
+.storage-backpack-examples {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.storage-backpack-examples {
+  margin-top: 18px;
 }
 
 .storage-drawer-types {
@@ -594,14 +738,21 @@
   .storage-base-route,
   .storage-progression,
   .storage-lock-flow,
-  .storage-controller-route {
+  .storage-controller-route,
+  .storage-backpack-route {
     grid-template-columns: 1fr;
   }
 
   .storage-shopping-grid,
   .storage-control-grid,
-  .storage-drawer-types {
+  .storage-drawer-types,
+  .storage-backpack-upgrade-grid,
+  .storage-backpack-examples {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .storage-backpack-craft-layout {
+    grid-template-columns: 1fr;
   }
 
   .storage-wall-layout,
@@ -617,7 +768,8 @@
   .storage-base-route > b,
   .storage-progression > b,
   .storage-lock-flow > b,
-  .storage-controller-route > b {
+  .storage-controller-route > b,
+  .storage-backpack-route > b {
     justify-self: center;
     transform: rotate(90deg);
   }
@@ -640,8 +792,14 @@
   .storage-base-plan,
   .storage-shopping-grid,
   .storage-control-grid,
-  .storage-drawer-types {
+  .storage-drawer-types,
+  .storage-backpack-upgrade-grid,
+  .storage-backpack-examples {
     grid-template-columns: 1fr;
+  }
+
+  .storage-tier-table > div {
+    grid-template-columns: minmax(0, 1fr) 88px 78px;
   }
 
   .storage-drawer-types article {
