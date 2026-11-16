@@ -100,8 +100,7 @@
 .storage-summary,
 .storage-role-grid,
 .storage-choice-flow,
-.storage-base-plan,
-.storage-limit-grid {
+.storage-base-plan {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
@@ -450,24 +449,21 @@
 }
 
 .storage-role-grid article,
-.storage-base-plan article,
-.storage-limit-grid article {
+.storage-base-plan article {
   padding: 17px;
   border: 1px solid var(--storage-line);
   border-radius: 12px;
 }
 
 .storage-role-grid h3,
-.storage-base-plan h3,
-.storage-limit-grid h3 {
+.storage-base-plan h3 {
   margin: 0 0 8px;
   color: var(--storage-ink);
   font-size: var(--tutorial-card-title-size);
 }
 
 .storage-role-grid article > p:not(.storage-card-label),
-.storage-base-plan article > p:not(.storage-card-label),
-.storage-limit-grid p {
+.storage-base-plan article > p:not(.storage-card-label) {
   margin: 0;
   color: var(--storage-muted);
   line-height: 1.55;
@@ -558,8 +554,7 @@
   font-style: normal;
 }
 
-.storage-base-plan,
-.storage-limit-grid {
+.storage-base-plan {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -583,10 +578,6 @@
   border: 1px solid var(--storage-line);
   border-radius: 10px;
   place-items: center;
-}
-
-.storage-limit-grid h3 {
-  font-size: 1rem;
 }
 
 .storage-next > p {
@@ -647,7 +638,6 @@
   .storage-role-grid,
   .storage-choice-flow,
   .storage-base-plan,
-  .storage-limit-grid,
   .storage-shopping-grid,
   .storage-control-grid,
   .storage-drawer-types {
