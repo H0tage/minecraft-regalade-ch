@@ -2,7 +2,10 @@
   <div class="page-head">
     <span class="eyebrow">Liste d’intérêt</span>
     <h1>Tu veux en être ?</h1>
-    <p>Laisse ton pseudo et on pourra te prévenir lorsque Régalade se rapproche de l’ouverture.</p>
+    <p>
+      Laisse ton pseudo pour signaler que le projet t’intéresse. Ton nom apparaîtra immédiatement dans la liste avec la
+      date de ton inscription.
+    </p>
   </div>
   <div class="form-layout">
     <article class="card signup">
@@ -17,9 +20,10 @@
             maxlength="16"
             pattern="[A-Za-z0-9_]{3,16}"
             placeholder="Ex. AlexBuilder"
-            autocomplete="off"
+            autocomplete="username"
+            aria-describedby="pseudo-hint"
           />
-          <p class="hint">3 à 16 caractères : lettres, chiffres et _.</p>
+          <p class="hint" id="pseudo-hint">3 à 16 caractères : lettres, chiffres et _.</p>
         </div>
         <div class="field">
           <label for="source">Comment as-tu connu le projet ?</label
@@ -32,11 +36,13 @@
             autocomplete="off"
           />
         </div>
-        <button class="button cyan" type="submit">Ajouter mon nom à la liste</button>
-        <p class="hint">
-          Pour cette maquette, la liste est enregistrée uniquement dans ton navigateur. Elle sera reliée à un vrai
-          stockage avant l’ouverture.
-        </p>
+        <div class="registration-honeypot" aria-hidden="true">
+          <label for="website">Laisse ce champ vide</label
+          ><input id="website" name="website" type="text" tabindex="-1" />
+        </div>
+        <button class="button cyan" id="signup-submit" type="submit">Ajouter mon nom à la liste</button>
+        <p class="form-feedback hint" id="signup-feedback" aria-live="polite"></p>
+        <p class="hint">Un même pseudo ne peut apparaître qu’une fois dans la liste.</p>
       </form>
     </article>
     <article class="card">
@@ -52,7 +58,7 @@
           </thead>
           <tbody id="member-list">
             <tr>
-              <td colspan="3" class="empty">La liste attend son premier nom.</td>
+              <td colspan="3" class="empty">Chargement de la liste…</td>
             </tr>
           </tbody>
         </table>

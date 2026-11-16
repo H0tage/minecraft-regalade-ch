@@ -40,6 +40,29 @@ async function auditTabList(page, selector, label) {
 
 for (const width of widths) {
   const page = await browser.newPage({ viewport: { width, height: 844 } });
+  const registrations = [];
+  await page.route('https://fvuvfdwdmwjpkrxxslgp.supabase.co/functions/v1/registrations', async (route) => {
+    const request = route.request();
+    if (request.method() === 'GET') {
+      await route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ registrations }) });
+      return;
+    }
+    if (request.method() === 'POST') {
+      const payload = request.postDataJSON();
+      registrations.push({
+        minecraft_username: payload.minecraftUsername,
+        discovery_source: payload.discoverySource,
+        created_at: '2026-11-17T00:00:00.000Z',
+      });
+      await route.fulfill({
+        status: 201,
+        contentType: 'application/json',
+        body: JSON.stringify({ message: 'Ajouté.' }),
+      });
+      return;
+    }
+    await route.fulfill({ status: 405, contentType: 'application/json', body: '{}' });
+  });
   const runtimeErrors = [];
   page.on('console', (message) => {
     if (message.type() === 'error') runtimeErrors.push(message.text());
@@ -138,6 +161,7 @@ for (const width of widths) {
     await page.locator('#pseudo').fill('QaRegalade');
     await page.locator('#source').fill('<img src=x onerror=alert(1)>');
     await page.locator('#signup-form button[type="submit"]').click();
+    await page.waitForFunction(() => document.querySelector('#member-list')?.textContent?.includes('<img src=x'));
     const registration = await page.evaluate(() => ({
       text: document.querySelector('#member-list')?.textContent || '',
       injectedImage: Boolean(document.querySelector('#member-list img')),

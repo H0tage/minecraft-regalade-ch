@@ -1,0 +1,25 @@
+.registration-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-feedback {
+  min-height: 1.2em;
+}
+
+.form-feedback[data-state='success'] {
+  color: #08724f;
+}
+
+.form-feedback[data-state='error'],
+.registration-error {
+  color: #a22f2f;
+}
+
+#signup-submit:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
