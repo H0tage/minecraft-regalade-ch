@@ -60,26 +60,66 @@
       Ces trois gestes règlent la majorité des questions que tu te poseras pendant une partie. Ils fonctionnent dans le
       catalogue JEI comme sur les objets affichés dans les recettes.
     </p>
+    <div class="jei-keyboard-legend" aria-label="Dispositions de clavier utilisées dans le tutoriel">
+      <span><img src="assets/ui/flag-ch.svg" alt="" /> Suisse <strong>QWERTZ</strong></span>
+      <span>
+        <span class="jei-flag-group">
+          <img src="assets/ui/flag-fr.svg" alt="" />
+          <img src="assets/ui/flag-be.svg" alt="" />
+        </span>
+        France et Belgique <strong>AZERTY</strong>
+      </span>
+    </div>
     <div class="jei-essential-grid">
       <article>
-        <span class="jei-action-key">Texte</span>
+        <span class="jei-search-label">Recherche</span>
         <div>
           <h3>Chercher un objet</h3>
           <p>Tape une partie de son nom dans la barre située sous le catalogue.</p>
         </div>
       </article>
       <article>
-        <span class="jei-action-key"><kbd>R</kbd></span>
+        <div class="jei-shortcut-pair" aria-label="Touche R sur les claviers QWERTZ et AZERTY">
+          <span>
+            <span class="jei-shortcut-layout"> <img src="assets/ui/flag-ch.svg" alt="" /><small>QWERTZ</small> </span>
+            <kbd>R</kbd>
+          </span>
+          <span>
+            <span class="jei-shortcut-layout">
+              <span class="jei-flag-group">
+                <img src="assets/ui/flag-fr.svg" alt="" />
+                <img src="assets/ui/flag-be.svg" alt="" />
+              </span>
+              <small>AZERTY</small>
+            </span>
+            <kbd>R</kbd>
+          </span>
+        </div>
         <div>
           <h3>Afficher sa recette</h3>
-          <p>Survole l’objet puis appuie sur R pour voir comment le fabriquer.</p>
+          <p>Survole l’objet puis utilise la touche indiquée pour voir comment le fabriquer.</p>
         </div>
       </article>
       <article>
-        <span class="jei-action-key"><kbd>U</kbd></span>
+        <div class="jei-shortcut-pair" aria-label="Touche U sur les claviers QWERTZ et AZERTY">
+          <span>
+            <span class="jei-shortcut-layout"> <img src="assets/ui/flag-ch.svg" alt="" /><small>QWERTZ</small> </span>
+            <kbd>U</kbd>
+          </span>
+          <span>
+            <span class="jei-shortcut-layout">
+              <span class="jei-flag-group">
+                <img src="assets/ui/flag-fr.svg" alt="" />
+                <img src="assets/ui/flag-be.svg" alt="" />
+              </span>
+              <small>AZERTY</small>
+            </span>
+            <kbd>U</kbd>
+          </span>
+        </div>
         <div>
           <h3>Afficher ses utilisations</h3>
-          <p>Survole un ingrédient puis appuie sur U pour voir tout ce qu’il permet de produire.</p>
+          <p>Survole un ingrédient puis utilise la touche indiquée pour voir tout ce qu’il permet de produire.</p>
         </div>
       </article>
     </div>
@@ -93,11 +133,23 @@
       <b>→</b>
       <span>survole la machine</span>
       <b>→</b>
-      <span>appuie sur <kbd>R</kbd></span>
+      <span>
+        appuie sur
+        <span class="jei-shortcut-inline" aria-label="R sur QWERTZ suisse et AZERTY français ou belge">
+          <span><img src="assets/ui/flag-ch.svg" alt="" /><kbd>R</kbd></span>
+          <span>
+            <span class="jei-flag-group">
+              <img src="assets/ui/flag-fr.svg" alt="" />
+              <img src="assets/ui/flag-be.svg" alt="" />
+            </span>
+            <kbd>R</kbd>
+          </span>
+        </span>
+      </span>
     </div>
     <p class="jei-note">
-      <strong>Une touche ne répond pas ?</strong> Cherche JEI dans le menu des raccourcis du jeu. Tu pourras retrouver
-      la commande associée, voir si elle entre en conflit avec une autre et la modifier.
+      <strong>Une touche ne répond pas ?</strong> Ces indications correspondent aux raccourcis par défaut. Cherche JEI
+      dans le menu des raccourcis du jeu pour retrouver la commande associée, vérifier les conflits et la modifier.
     </p>
   </section>
 
@@ -192,13 +244,51 @@
         <span>3</span>
         <div>
           <h3>Ouvre la recette des ingrédients</h3>
-          <p>Survole un composant inconnu et appuie de nouveau sur R pour remonter la chaîne.</p>
+          <p>
+            Survole un composant inconnu et utilise de nouveau
+            <span class="jei-shortcut-inline" aria-label="R sur QWERTZ suisse et AZERTY français ou belge">
+              <span><img src="assets/ui/flag-ch.svg" alt="" /><kbd>R</kbd></span>
+              <span>
+                <span class="jei-flag-group">
+                  <img src="assets/ui/flag-fr.svg" alt="" />
+                  <img src="assets/ui/flag-be.svg" alt="" />
+                </span>
+                <kbd>R</kbd>
+              </span>
+            </span>
+            pour remonter la chaîne.
+          </p>
         </div>
       </article>
     </div>
     <div class="jei-chain" aria-label="Remonter une chaîne de fabrication dans JEI">
-      <span>Objet final</span><b>→ <kbd>R</kbd> →</b><span>Composants</span><b>→ <kbd>R</kbd> →</b
-      ><span>Matières premières</span>
+      <span>Objet final</span>
+      <b>→</b>
+      <span class="jei-shortcut-inline" aria-label="R sur QWERTZ suisse et AZERTY français ou belge">
+        <span><img src="assets/ui/flag-ch.svg" alt="" /><kbd>R</kbd></span>
+        <span>
+          <span class="jei-flag-group">
+            <img src="assets/ui/flag-fr.svg" alt="" />
+            <img src="assets/ui/flag-be.svg" alt="" />
+          </span>
+          <kbd>R</kbd>
+        </span>
+      </span>
+      <b>→</b>
+      <span>Composants</span>
+      <b>→</b>
+      <span class="jei-shortcut-inline" aria-label="R sur QWERTZ suisse et AZERTY français ou belge">
+        <span><img src="assets/ui/flag-ch.svg" alt="" /><kbd>R</kbd></span>
+        <span>
+          <span class="jei-flag-group">
+            <img src="assets/ui/flag-fr.svg" alt="" />
+            <img src="assets/ui/flag-be.svg" alt="" />
+          </span>
+          <kbd>R</kbd>
+        </span>
+      </span>
+      <b>→</b>
+      <span>Matières premières</span>
     </div>
   </section>
 
@@ -220,29 +310,73 @@
       <article><b>2</b><span>Laisse la souris dessus</span></article>
       <i>→</i>
       <article>
-        <b>3</b><span>Maintiens <kbd>W</kbd></span>
+        <b>3</b>
+        <span>
+          Maintiens
+          <span class="jei-shortcut-inline" aria-label="W sur QWERTZ suisse, Z sur AZERTY français ou belge">
+            <span><img src="assets/ui/flag-ch.svg" alt="" /><kbd>W</kbd></span>
+            <span>
+              <span class="jei-flag-group">
+                <img src="assets/ui/flag-fr.svg" alt="" />
+                <img src="assets/ui/flag-be.svg" alt="" />
+              </span>
+              <kbd>Z</kbd>
+            </span>
+          </span>
+        </span>
       </article>
       <i>→</i>
       <article><b>4</b><span>Fais défiler les scènes proposées</span></article>
     </div>
     <div class="jei-project-grid">
       <article>
-        <span class="jei-action-key"><kbd>W</kbd></span>
+        <div class="jei-shortcut-pair" aria-label="W sur QWERTZ suisse, Z sur AZERTY français ou belge">
+          <span>
+            <span class="jei-shortcut-layout"> <img src="assets/ui/flag-ch.svg" alt="" /><small>QWERTZ</small> </span>
+            <kbd>W</kbd>
+          </span>
+          <span>
+            <span class="jei-shortcut-layout">
+              <span class="jei-flag-group">
+                <img src="assets/ui/flag-fr.svg" alt="" />
+                <img src="assets/ui/flag-be.svg" alt="" />
+              </span>
+              <small>AZERTY</small>
+            </span>
+            <kbd>Z</kbd>
+          </span>
+        </div>
         <div>
           <h3>Ouvrir Ponder</h3>
           <p>
             Le bouton apparaît dans l’infobulle lorsqu’une démonstration existe. Tu peux mettre la scène en pause et la
-            revoir autant de fois que nécessaire.
+            revoir autant de fois que nécessaire. Create reprend la touche « Avancer » : utilise ta touche actuelle si
+            tu l’as personnalisée.
           </p>
         </div>
       </article>
       <article>
-        <span class="jei-action-key"><kbd>A</kbd></span>
+        <div class="jei-shortcut-pair" aria-label="A sur QWERTZ suisse, Q sur AZERTY français ou belge">
+          <span>
+            <span class="jei-shortcut-layout"> <img src="assets/ui/flag-ch.svg" alt="" /><small>QWERTZ</small> </span>
+            <kbd>A</kbd>
+          </span>
+          <span>
+            <span class="jei-shortcut-layout">
+              <span class="jei-flag-group">
+                <img src="assets/ui/flag-fr.svg" alt="" />
+                <img src="assets/ui/flag-be.svg" alt="" />
+              </span>
+              <small>AZERTY</small>
+            </span>
+            <kbd>Q</kbd>
+          </span>
+        </div>
         <div>
           <h3>Garder un objet en favori</h3>
           <p>
-            Survole un objet et appuie sur A. Il restera affiché à gauche de l’inventaire pendant que tu réunis les
-            ressources du projet.
+            Survole un objet et utilise la touche indiquée. Il restera affiché à gauche de l’inventaire pendant que tu
+            réunis les ressources du projet.
           </p>
         </div>
       </article>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16" role="img" aria-label="Drapeau français">
+  <rect width="8" height="16" rx="1.5" fill="#0055a4"/>
+  <path fill="#fff" d="M8 0h8v16H8z"/>
+  <path fill="#ef4135" d="M16 0h6.5A1.5 1.5 0 0 1 24 1.5v13a1.5 1.5 0 0 1-1.5 1.5H16z"/>
+</svg>

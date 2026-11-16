@@ -305,7 +305,12 @@
   background: #fff;
 }
 
-.jei-action-key,
+.jei-essential-grid article,
+.jei-project-grid article {
+  grid-template-columns: 1fr;
+}
+
+.jei-search-label,
 .jei-filter-steps article > span,
 .jei-recipe-checks article > span {
   display: grid;
@@ -318,6 +323,10 @@
   color: #0878a5;
   font-size: 0.72rem;
   font-weight: 950;
+}
+
+.jei-search-label {
+  width: max-content;
 }
 
 .jei-essential-grid :is(h3, p),
@@ -343,6 +352,102 @@
   color: var(--jei-muted);
   font-size: 0.8rem;
   line-height: 1.5;
+}
+
+.jei-keyboard-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0 0 10px;
+}
+
+.jei-keyboard-legend > span {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  padding: 7px 9px;
+  border: 1px solid var(--jei-line);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--jei-muted);
+  font-size: 0.73rem;
+}
+
+.jei-keyboard-legend strong {
+  color: var(--jei-ink);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+.jei-flag-group {
+  display: inline-flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.jei-keyboard-legend img,
+.jei-shortcut-layout img,
+.jei-shortcut-inline img {
+  display: block;
+  width: 20px;
+  height: auto;
+  border: 1px solid rgb(23 52 64 / 14%);
+  border-radius: 2px;
+}
+
+.jei-shortcut-pair {
+  display: grid;
+  gap: 5px;
+}
+
+.jei-shortcut-pair > span {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 34px;
+  padding: 5px 7px;
+  border: 1px solid #dce6ea;
+  border-radius: 8px;
+  background: #f8fafb;
+}
+
+.jei-shortcut-layout {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.jei-shortcut-layout small {
+  color: var(--jei-muted);
+  font-size: 0.62rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+}
+
+.jei-shortcut-inline {
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.jei-shortcut-inline > span {
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+  padding: 2px 4px;
+  border: 1px solid #dce6ea;
+  border-radius: 6px;
+  background: #f8fafb;
+}
+
+.jei-shortcut-inline img {
+  width: 15px;
+}
+
+.jei-shortcut-inline .jei-flag-group {
+  gap: 1px;
 }
 
 .jei-example-path,
@@ -664,6 +769,11 @@
   .jei-filter-link {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .jei-keyboard-legend {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .jei-search-examples article {
