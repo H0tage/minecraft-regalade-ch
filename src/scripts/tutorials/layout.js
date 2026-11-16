@@ -123,7 +123,7 @@
   content.addEventListener('click', (event) => {
     if (
       event.target.closest(
-        '.cbc-switcher [role="tab"], .cff-switcher [role="tab"], .jei-switcher [role="tab"], .photo-switcher [role="tab"], .fish-switcher [role="tab"]',
+        '.cbc-switcher [role="tab"], .cff-switcher [role="tab"], .jei-switcher [role="tab"], .photo-switcher [role="tab"], .fish-switcher [role="tab"], .agri-switcher [role="tab"]',
       )
     ) {
       requestAnimationFrame(refresh);
