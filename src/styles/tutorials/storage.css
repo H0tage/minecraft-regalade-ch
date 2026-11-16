@@ -423,6 +423,16 @@
   align-items: center;
 }
 
+.storage-vault-flow {
+  grid-template-columns:
+    minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto
+    minmax(0, 1fr);
+}
+
+#storage-vault-panel .storage-base-plan {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .storage-lock-flow article,
 .storage-controller-route span,
 .storage-controller-route strong {
@@ -738,6 +748,7 @@
   .storage-base-route,
   .storage-progression,
   .storage-lock-flow,
+  .storage-vault-flow,
   .storage-controller-route,
   .storage-backpack-route {
     grid-template-columns: 1fr;
@@ -760,6 +771,10 @@
     grid-template-columns: 1fr;
   }
 
+  #storage-vault-panel .storage-base-plan {
+    grid-template-columns: 1fr;
+  }
+
   .storage-layer-flow article {
     min-height: 0;
   }
@@ -768,6 +783,7 @@
   .storage-base-route > b,
   .storage-progression > b,
   .storage-lock-flow > b,
+  .storage-vault-flow > b,
   .storage-controller-route > b,
   .storage-backpack-route > b {
     justify-self: center;

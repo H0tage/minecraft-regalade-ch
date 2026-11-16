@@ -1,0 +1,274 @@
+<div class="storage-panel" id="storage-vault-panel" role="tabpanel" aria-labelledby="storage-vault-tab" hidden>
+  <header class="storage-hero">
+    <p class="storage-eyebrow">Create Item Vault · une réserve au milieu des machines</p>
+    <h1>Construire un stock qui suit le rythme de l’usine</h1>
+    <p>
+      Dans une usine Create, deux machines travaillent rarement exactement à la même vitesse. Une branche produit trop
+      vite, la suivante ralentit et les objets commencent à s’accumuler sur les Belts. L’Item Vault crée une réserve
+      entre les deux : il reçoit la production, la conserve, puis alimente la suite de la chaîne.
+    </p>
+    <p>
+      Ce parcours va construire un premier Vault de trois blocs, lui ajouter une entrée et une sortie, puis installer un
+      contrôle simple pour suivre son remplissage. À la fin, tu auras un véritable tampon d’usine que tu pourras copier
+      entre tes différentes machines.
+    </p>
+    <div class="storage-summary" aria-label="Objectifs du parcours Item Vault">
+      <span>Comprendre</span>
+      <span>Fabriquer</span>
+      <span>Brancher</span>
+      <span>Contrôler</span>
+    </div>
+  </header>
+
+  <section class="storage-section" id="storage-vault-role" data-phase="Comprendre le Vault">
+    <div class="storage-title">
+      <span>01</span>
+      <div>
+        <p>Le stock au milieu de la chaîne</p>
+        <h2>Comprendre le rôle d’un Item Vault</h2>
+      </div>
+    </div>
+    <p class="storage-lead">
+      Tous les blocs réunis forment un seul inventaire. Les objets entrent par un côté, restent disponibles dans la
+      réserve et ressortent lorsqu’une machine en aval les demande.
+    </p>
+    <div class="storage-lock-flow" aria-label="Fonctionnement général d’un Item Vault">
+      <article>
+        <span>1</span>
+        <p>Une machine termine son travail et dépose sa production sur un Belt.</p>
+      </article>
+      <b>→</b>
+      <article>
+        <span>2</span>
+        <p>Un Funnel insère les objets dans l’Item Vault.</p>
+      </article>
+      <b>→</b>
+      <article>
+        <span>3</span>
+        <p>Un second Funnel alimente la prochaine étape de l’usine.</p>
+      </article>
+    </div>
+    <div class="storage-base-plan">
+      <article>
+        <p class="storage-card-label">Accès</p>
+        <h3>Transfert automatisé</h3>
+        <p>Funnels, Chutes, Hoppers et autres systèmes de transport peuvent insérer ou extraire les objets.</p>
+      </article>
+      <article>
+        <p class="storage-card-label">Contenu</p>
+        <h3>Inventaire commun</h3>
+        <p>Le Vault accepte plusieurs types d’objets. Les filtres se règlent sur les composants qui l’alimentent.</p>
+      </article>
+      <article>
+        <p class="storage-card-label">Consultation</p>
+        <h3>Lecture par les machines</h3>
+        <p>Le Vault ne possède pas d’interface manuelle. Un Threshold Switch permet de surveiller son remplissage.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="storage-section" id="storage-vault-craft" data-phase="Fabriquer les blocs">
+    <div class="storage-title">
+      <span>02</span>
+      <div>
+        <p>Le matériel du prototype</p>
+        <h2>Fabriquer trois Item Vaults</h2>
+      </div>
+    </div>
+    <p class="storage-lead">
+      Un bloc d’Item Vault demande deux Iron Sheets et un Barrel. Pour notre prototype de trois blocs, prépare six Iron
+      Sheets et trois Barrels.
+    </p>
+    <div class="storage-backpack-craft-layout">
+      <div class="storage-backpack-materials" aria-label="Matériaux des trois Item Vaults">
+        <article><strong>6</strong><span>Iron Sheets</span></article>
+        <article><strong>3</strong><span>Barrels</span></article>
+        <article><strong>3</strong><span>Item Vaults</span></article>
+      </div>
+      <div class="storage-crafting-card">
+        <p class="storage-card-label">Recette verticale dans la Crafting Table</p>
+        <div class="storage-crafting-grid" aria-label="Recette d’un Item Vault">
+          <span></span><span>Iron Sheet</span><span></span> <span></span><strong>Barrel</strong><span></span>
+          <span></span><span>Iron Sheet</span><span></span>
+        </div>
+      </div>
+    </div>
+    <div class="storage-warning">
+      <strong>Préparer les Iron Sheets</strong>
+      <p>Place les Iron Ingots sous une Mechanical Press. Chaque lingot pressé produit une Iron Sheet.</p>
+    </div>
+  </section>
+
+  <section class="storage-section" id="storage-vault-shape" data-phase="Choisir la taille">
+    <div class="storage-title">
+      <span>03</span>
+      <div>
+        <p>Une structure qui grandit avec l’usine</p>
+        <h2>Comprendre les dimensions et la capacité</h2>
+      </div>
+    </div>
+    <p class="storage-lead">
+      La section du Vault peut mesurer jusqu’à 3 × 3 blocs. Sa longueur maximale correspond à trois fois la largeur de
+      cette section. Chaque bloc ajouté apporte une capacité de 20 stacks.
+    </p>
+    <div class="storage-tier-table" role="table" aria-label="Exemples de tailles et capacités des Item Vaults">
+      <div role="row">
+        <strong role="columnheader">Structure</strong><strong role="columnheader">Blocs</strong
+        ><strong role="columnheader">Capacité</strong>
+      </div>
+      <div role="row"><span role="cell">1 × 1 × 1</span><b role="cell">1</b><b role="cell">20 stacks</b></div>
+      <div role="row"><span role="cell">1 × 1 × 3</span><b role="cell">3</b><b role="cell">60 stacks</b></div>
+      <div role="row"><span role="cell">2 × 2 × 6</span><b role="cell">24</b><b role="cell">480 stacks</b></div>
+      <div role="row"><span role="cell">3 × 3 × 9</span><b role="cell">81</b><b role="cell">1 620 stacks</b></div>
+    </div>
+    <p class="storage-note">
+      Commence par le modèle 1 × 1 × 3. Ses 60 stacks suffisent largement pour observer le fonctionnement d’un tampon
+      avant d’investir plusieurs dizaines d’Iron Sheets dans une structure plus imposante.
+    </p>
+  </section>
+
+  <section class="storage-section" id="storage-vault-build" data-phase="Assembler le prototype">
+    <div class="storage-title">
+      <span>04</span>
+      <div>
+        <p>Trois blocs et un seul inventaire</p>
+        <h2>Assembler le premier Vault</h2>
+      </div>
+    </div>
+    <div class="storage-control-grid">
+      <article>
+        <kbd>1</kbd>
+        <h3>Choisis son axe</h3>
+        <p>Prévois une ligne droite de trois blocs entre la machine qui produit et celle qui consomme.</p>
+      </article>
+      <article>
+        <kbd>2</kbd>
+        <h3>Pose le premier bloc</h3>
+        <p>Oriente-le dans le sens de la ligne. La Wrench permet de le faire pivoter si nécessaire.</p>
+      </article>
+      <article>
+        <kbd>3</kbd>
+        <h3>Continue dans le même axe</h3>
+        <p>Pose les deux autres Item Vaults directement à la suite du premier.</p>
+      </article>
+      <article>
+        <kbd>4</kbd>
+        <h3>Vérifie la connexion</h3>
+        <p>Les textures se rejoignent et les trois blocs deviennent un seul inventaire de 60 stacks.</p>
+      </article>
+    </div>
+    <p class="storage-note">
+      Si un bloc reste visuellement séparé, vérifie son orientation et la forme de la structure avant d’ajouter les
+      Belts et les Funnels.
+    </p>
+  </section>
+
+  <section class="storage-section" id="storage-vault-transfer" data-phase="Brancher les transferts">
+    <div class="storage-title">
+      <span>05</span>
+      <div>
+        <p>Faire entrer et sortir les objets</p>
+        <h2>Brancher les Belts et les Funnels</h2>
+      </div>
+    </div>
+    <div class="storage-lock-flow storage-vault-flow" aria-label="Montage du prototype Item Vault">
+      <article>
+        <span>1</span>
+        <p>Belt d’entrée</p>
+      </article>
+      <b>→</b>
+      <article>
+        <span>2</span>
+        <p>Funnel orienté vers le Vault</p>
+      </article>
+      <b>→</b>
+      <article>
+        <span>3</span>
+        <p>Item Vault 1 × 1 × 3</p>
+      </article>
+      <b>→</b>
+      <article>
+        <span>4</span>
+        <p>Funnel d’extraction puis Belt de sortie</p>
+      </article>
+    </div>
+    <div class="storage-base-plan">
+      <article>
+        <p class="storage-card-label">Insérer</p>
+        <h3>Pose le Funnel en étant accroupi</h3>
+        <p>Un Funnel placé en maintenant Maj envoie les objets vers l’inventaire auquel il est fixé.</p>
+      </article>
+      <article>
+        <p class="storage-card-label">Extraire</p>
+        <h3>Pose le Funnel normalement</h3>
+        <p>Il retire alors les objets du Vault pour les déposer sur le Belt situé devant lui.</p>
+      </article>
+      <article>
+        <p class="storage-card-label">Corriger</p>
+        <h3>Retourne le Funnel avec la Wrench</h3>
+        <p>Un clic avec la Wrench inverse son sens après la pose.</p>
+      </article>
+    </div>
+    <p class="storage-note">
+      Un Andesite Funnel extrait les objets un par un. Un Brass Funnel peut extraire jusqu’à un stack et recevoir un
+      filtre précis.
+    </p>
+  </section>
+
+  <section class="storage-section" id="storage-vault-control" data-phase="Contrôler le stock">
+    <div class="storage-title">
+      <span>06</span>
+      <div>
+        <p>Éviter la saturation de la chaîne</p>
+        <h2>Contrôler le remplissage du Vault</h2>
+      </div>
+    </div>
+    <p class="storage-lead">
+      Un signal de Redstone bloque un Funnel. Tu peux donc arrêter l’entrée ou la sortie du Vault avec un Lever, puis
+      automatiser cette décision avec un Threshold Switch.
+    </p>
+    <div class="storage-lock-flow" aria-label="Contrôle automatique du remplissage">
+      <article>
+        <span>1</span>
+        <p>Le Threshold Switch mesure le pourcentage de remplissage du Vault.</p>
+      </article>
+      <b>→</b>
+      <article>
+        <span>2</span>
+        <p>Le seuil supérieur déclenche un signal lorsque la réserve est presque pleine.</p>
+      </article>
+      <b>→</b>
+      <article>
+        <span>3</span>
+        <p>Ce signal bloque l’alimentation jusqu’au retour sous le seuil inférieur.</p>
+      </article>
+    </div>
+    <div class="storage-warning">
+      <strong>Premier réglage conseillé</strong>
+      <p>Coupe l’entrée autour de 80 % et autorise-la de nouveau autour de 40 %. Ajuste ensuite selon ton usine.</p>
+    </div>
+  </section>
+
+  <section class="storage-section storage-next" id="storage-vault-test" data-phase="Tester le tampon">
+    <div class="storage-title">
+      <span>07</span>
+      <div>
+        <p>Bien vérifier avant de raccorder l’usine</p>
+        <h2>Petite checklist du stock d’usine</h2>
+      </div>
+    </div>
+    <div class="storage-checklist">
+      <label><input type="checkbox" />Les trois blocs forment visuellement un seul Item Vault.</label>
+      <label><input type="checkbox" />Le Funnel d’entrée insère les objets dans le Vault.</label>
+      <label><input type="checkbox" />Le Funnel de sortie dépose les objets sur le Belt suivant.</label>
+      <label
+        ><input type="checkbox" />Les filtres empêchent les ressources indésirables d’entrer dans la réserve.</label
+      >
+      <label><input type="checkbox" />Le signal de contrôle arrête correctement le Funnel choisi.</label>
+    </div>
+    <p>
+      Ton premier tampon est prêt. Le prochain onglet utilisera les Packagers pour transformer le contenu des stocks en
+      colis destinés aux commandes et aux livraisons.
+    </p>
+  </section>
+</div>
