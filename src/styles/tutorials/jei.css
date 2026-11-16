@@ -227,7 +227,7 @@
   display: grid;
   grid-template-areas:
     'inventory catalogue'
-    'search catalogue';
+    'inventory search';
   grid-template-columns: minmax(0, 1.35fr) minmax(190px, 0.75fr);
   gap: 9px;
 }
