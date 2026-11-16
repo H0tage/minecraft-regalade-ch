@@ -83,7 +83,7 @@ a {
   background: linear-gradient(90deg, var(--cyan) 0 50%, var(--orange) 50%);
 }
 
-header {
+.site-header {
   height: 82px;
   display: flex;
   align-items: center;
@@ -91,7 +91,7 @@ header {
   border-bottom: 1px solid var(--line);
 }
 
-.brand {
+.site-brand {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -100,17 +100,17 @@ header {
   letter-spacing: 0.01em;
 }
 
-.brand img {
+.site-brand img {
   width: 39px;
   height: 39px;
   object-fit: contain;
 }
 
-.brand span {
+.site-brand span {
   color: var(--orange);
 }
 
-nav {
+.site-navigation {
   display: flex;
   align-items: center;
   gap: 21px;
@@ -118,17 +118,17 @@ nav {
   font-weight: 700;
 }
 
-nav a {
+.site-navigation a {
   color: #536068;
   transition: 0.15s;
 }
 
-nav a:hover,
-nav a.active {
+.site-navigation a:hover,
+.site-navigation a.active {
   color: var(--cyan);
 }
 
-.menu {
+.site-menu {
   display: none;
   border: 0;
   background: transparent;
@@ -540,15 +540,15 @@ nav a.active {
     padding: 0 18px;
   }
 
-  header {
+  .site-header {
     height: 70px;
   }
 
-  .menu {
+  .site-menu {
     display: block;
   }
 
-  nav {
+  .site-navigation {
     display: none;
     position: absolute;
     z-index: 4;
@@ -564,7 +564,7 @@ nav a.active {
     align-items: stretch;
   }
 
-  nav.open {
+  .site-navigation.open {
     display: flex;
   }
 

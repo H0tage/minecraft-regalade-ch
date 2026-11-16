@@ -24,6 +24,7 @@
   top: 0;
   z-index: 20;
   display: flex;
+  gap: 4px;
   width: fit-content;
   max-width: 100%;
   padding: 4px;
@@ -62,12 +63,6 @@
   background: #fff;
   border: 1px solid var(--storage-line);
   border-radius: 18px;
-}
-
-.storage-hero {
-  display: block;
-  height: auto;
-  overflow: hidden;
 }
 
 .storage-eyebrow,

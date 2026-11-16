@@ -115,11 +115,11 @@ for (const width of widths) {
 
   if (width === 390) {
     await page.goto(`${baseUrl}?qa=${Date.now()}#accueil`, { waitUntil: 'networkidle' });
-    await page.locator('.menu').click();
-    if ((await page.locator('.menu').getAttribute('aria-expanded')) !== 'true')
+    await page.locator('.site-menu').click();
+    if ((await page.locator('.site-menu').getAttribute('aria-expanded')) !== 'true')
       failures.push('Le menu mobile ne signale pas son ouverture.');
     await page.keyboard.press('Escape');
-    if ((await page.locator('.menu').getAttribute('aria-expanded')) !== 'false')
+    if ((await page.locator('.site-menu').getAttribute('aria-expanded')) !== 'false')
       failures.push('Le menu mobile ne se ferme pas avec Échap.');
 
     const firstGalleryImage = page.locator('.gallery-trigger').first();

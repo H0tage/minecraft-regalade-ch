@@ -1,6 +1,6 @@
 (() => {
   const nav = document.querySelector('#main-navigation');
-  const menuButton = document.querySelector('.menu');
+  const menuButton = document.querySelector('.site-menu');
   const links = [...nav.querySelectorAll('a')];
   const views = [...document.querySelectorAll('.view')];
   const description = document.querySelector('meta[name="description"]');
