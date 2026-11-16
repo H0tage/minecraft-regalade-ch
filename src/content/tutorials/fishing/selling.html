@@ -1,0 +1,149 @@
+<div class="fish-panel" id="fish-selling-panel" role="tabpanel" aria-labelledby="fish-selling-tab" hidden>
+  <header class="fish-hero fish-hero-compact">
+    <p class="fish-eyebrow">Selling Bin · transformer le surplus en argent</p>
+    <h1>Vendre les poissons dont tu n’as pas besoin</h1>
+    <p>
+      Quand la Boîte à pêche commence à déborder, le Selling Bin permet de revendre les prises plutôt que de les jeter.
+      Leur valeur dépend de leur rareté, mais aussi de la qualité du spécimen. Une journée de pêche peut donc financer
+      le matériel de la suivante.
+    </p>
+  </header>
+
+  <section class="fish-section" id="fish-selling-craft" data-phase="Installer le commerce">
+    <div class="fish-title">
+      <span>01</span>
+      <div>
+        <p>Le bloc de vente</p>
+        <h2>Fabriquer et placer le Selling Bin</h2>
+      </div>
+    </div>
+    <p class="fish-lead">
+      La recette utilise un Barrel, cinq Wooden Slabs et trois Wool Carpets. Vérifie-la dans JEI avec
+      <code>@selling_bin</code>, puis pose le bloc à un endroit où tu pourras facilement trier tes prises.
+    </p>
+    <div class="fish-craft-grid" aria-label="Recette simplifiée du Selling Bin">
+      <span>Carpet</span><span>Carpet</span><span>Carpet</span> <span>Slab</span><strong>Barrel</strong
+      ><span>Slab</span> <span>Slab</span><span>Slab</span><span>Slab</span>
+    </div>
+  </section>
+
+  <section class="fish-section" id="fish-selling-price" data-phase="Vendre à la main">
+    <div class="fish-title">
+      <span>02</span>
+      <div>
+        <p>Avant de confirmer</p>
+        <h2>Vérifier la valeur d’une prise</h2>
+      </div>
+    </div>
+    <p class="fish-lead">
+      Maintiens <kbd>Maj</kbd> en survolant un poisson pour afficher sa valeur, ou consulte les utilisations du Selling
+      Bin dans JEI. Tu y trouveras les objets acceptés, les monnaies disponibles et les règles qui modifient le prix.
+    </p>
+    <div class="fish-value-flow">
+      <article><b>Rareté</b><span>Fixe la valeur de départ</span></article>
+      <i>+</i>
+      <article><b>Classement</b><span>Les meilleurs spécimens rapportent davantage</span></article>
+      <i>+</i>
+      <article><b>Poisson doré</b><span>Applique un multiplicateur très important</span></article>
+      <i>=</i>
+      <article class="fish-result"><b>Prix final</b><span>Visible avant la vente</span></article>
+    </div>
+    <p class="fish-warning">
+      Un poisson doré ne peut être attrapé qu’une fois. Le vendre est possible, mais demande-toi quand même si tu ne
+      préfères pas l’exposer avant de cliquer.
+    </p>
+  </section>
+
+  <section class="fish-section" id="fish-selling-manual" data-phase="Vendre à la main">
+    <div class="fish-title">
+      <span>03</span>
+      <div>
+        <p>La première transaction</p>
+        <h2>Déposer, choisir puis vendre</h2>
+      </div>
+    </div>
+    <ol class="fish-steps">
+      <li><b>1</b><span>Ouvre le Selling Bin et dépose les poissons dans son inventaire.</span></li>
+      <li><b>2</b><span>Choisis la monnaie active dans l’interface.</span></li>
+      <li>
+        <b>3</b><span>Utilise <strong>Sell</strong> ou <strong>Sell All</strong> après avoir vérifié le prix.</span>
+      </li>
+      <li><b>4</b><span>Récupère la monnaie produite dans l’emplacement de sortie.</span></li>
+    </ol>
+    <p class="fish-note">
+      Le bac conserve ce qu’il ne peut pas vendre. Un objet refusé ne disparaît donc pas silencieusement avec le reste
+      du stock.
+    </p>
+  </section>
+
+  <section class="fish-section" id="fish-selling-bank" data-phase="Recevoir l’argent">
+    <div class="fish-title">
+      <span>04</span>
+      <div>
+        <p>Éviter les piles de pièces</p>
+        <h2>Relier une carte bancaire Numismatics</h2>
+      </div>
+    </div>
+    <p class="fish-lead">
+      L’interface possède un emplacement réservé à la Numismatic Bank Card. Une fois ta carte liée à ton compte et
+      insérée dans le bac, le produit des ventes peut être envoyé directement à la banque.
+    </p>
+    <div class="fish-flow">
+      <article><b>Compte bancaire</b><span>Créé et accessible avec un terminal</span></article>
+      <i>→</i>
+      <article><b>Carte liée au compte</b><span>Placée dans l’emplacement du Selling Bin</span></article>
+      <i>→</i>
+      <article class="fish-result"><b>Vente créditée</b><span>Plus besoin de transporter chaque pièce</span></article>
+    </div>
+    <button class="fish-link-button" type="button" data-open-tab="tutorial-economy-tab">
+      Ouvrir le tutoriel Argent et échanges
+    </button>
+  </section>
+
+  <section class="fish-section" id="fish-selling-automation" data-phase="Automatiser">
+    <div class="fish-title">
+      <span>05</span>
+      <div>
+        <p>Quand le volume augmente</p>
+        <h2>Alimenter automatiquement le Selling Bin</h2>
+      </div>
+    </div>
+    <p class="fish-lead">
+      Le bac accepte les Hoppers et les systèmes de transport des autres mods. Tu peux donc l’alimenter depuis un coffre
+      ou une ligne Create, puis utiliser le mode <strong>Auto-Sell</strong> pour vendre sans rouvrir l’interface.
+    </p>
+    <div class="fish-automation">
+      <article><b>Boîte à pêche ou coffre</b><span>Le stock à traiter</span></article>
+      <i>→</i>
+      <article><b>Filtre</b><span>Écarte les trophées et les prises à cuisiner</span></article>
+      <i>→</i>
+      <article><b>Selling Bin</b><span>Auto-Sell activé</span></article>
+      <i>→</i>
+      <article class="fish-result"><b>Banque</b><span>Carte insérée dans le bac</span></article>
+    </div>
+    <p class="fish-warning">
+      Ne branche jamais toute ta Boîte à pêche sur la vente automatique sans filtre. Le système ferait parfaitement son
+      travail, y compris avec le poisson légendaire que tu voulais garder depuis trois semaines.
+    </p>
+  </section>
+
+  <section class="fish-section" id="fish-selling-loop" data-phase="La boucle complète">
+    <div class="fish-title">
+      <span>06</span>
+      <div>
+        <p>Faire tourner l’activité</p>
+        <h2>Organiser le retour de pêche</h2>
+      </div>
+    </div>
+    <div class="fish-return-loop">
+      <article><b>Garder</b><span>Records, poissons dorés et collection</span></article>
+      <article><b>Installer</b><span>Espèces vivantes pour les aquariums</span></article>
+      <article><b>Cuisiner</b><span>Filets et plats pour la restauration</span></article>
+      <article><b>Vendre</b><span>Surplus transformé en argent</span></article>
+    </div>
+    <p class="fish-check">
+      <strong>La logique à retenir :</strong> trie avant de vendre. Le Selling Bin devient intéressant quand il écoule
+      le surplus, pas quand il décide à ta place de ce qui mérite d’être conservé.
+    </p>
+  </section>
+</div>

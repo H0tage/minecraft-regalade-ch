@@ -66,6 +66,17 @@
           </button>
           <button
             class="tutorial-tab"
+            id="tutorial-fishing-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-fishing"
+            tabindex="-1"
+          >
+            Pêche et commerce
+          </button>
+          <button
+            class="tutorial-tab"
             id="tutorial-create-first-factory-tab"
             type="button"
             role="tab"
@@ -130,6 +141,15 @@
           hidden
         >
           <!-- @include ../content/tutorials/photography.html -->
+        </section>
+        <section
+          class="tutorial-panel"
+          id="tutorial-fishing"
+          role="tabpanel"
+          aria-labelledby="tutorial-fishing-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/fishing.html -->
         </section>
         <section
           class="tutorial-panel"

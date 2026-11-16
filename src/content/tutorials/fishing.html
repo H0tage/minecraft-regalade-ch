@@ -1,0 +1,54 @@
+<section class="fish-tutorial">
+  <nav
+    class="fish-switcher"
+    role="tablist"
+    aria-label="Choisir le parcours Pêche et commerce"
+    data-tab-storage="regalade.fishing.active"
+  >
+    <button
+      id="fish-first-tab"
+      type="button"
+      role="tab"
+      aria-selected="true"
+      aria-controls="fish-first-panel"
+      tabindex="0"
+    >
+      Ma première prise
+    </button>
+    <button
+      id="fish-career-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="fish-career-panel"
+      tabindex="-1"
+    >
+      Le métier de pêcheur
+    </button>
+    <button
+      id="fish-cooking-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="fish-cooking-panel"
+      tabindex="-1"
+    >
+      Cuisiner ses prises
+    </button>
+    <button
+      id="fish-selling-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="fish-selling-panel"
+      tabindex="-1"
+    >
+      Vendre ses prises
+    </button>
+  </nav>
+
+  <!-- @include fishing/first-catch.html -->
+  <!-- @include fishing/career.html -->
+  <!-- @include fishing/cooking.html -->
+  <!-- @include fishing/selling.html -->
+</section>

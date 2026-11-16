@@ -1,0 +1,641 @@
+#tutorial-fishing {
+  --fish-ink: var(--tutorial-ink);
+  --fish-muted: var(--tutorial-muted);
+  --fish-line: #d2e0e5;
+  --fish-blue: #087fae;
+  --fish-teal: #14765f;
+  --fish-orange: #e96f21;
+  color: var(--fish-ink);
+}
+
+#tutorial-fishing * {
+  box-sizing: border-box;
+}
+
+#tutorial-fishing [hidden] {
+  display: none !important;
+}
+
+#tutorial-fishing :is(kbd, code) {
+  padding: 2px 6px;
+  border: 1px solid #ccd8dd;
+  border-radius: 5px;
+  background: #f1f4f5;
+  color: #17556d;
+  font:
+    800 0.9em ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+}
+
+.fish-tutorial {
+  max-width: 100%;
+  font-size: var(--tutorial-body-size);
+  line-height: 1.55;
+}
+
+.fish-switcher {
+  position: sticky;
+  top: 0;
+  z-index: 12;
+  display: flex;
+  width: max-content;
+  max-width: 100%;
+  gap: 4px;
+  margin: 0 0 22px;
+  padding: 4px;
+  border: 1px solid var(--fish-line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgb(25 52 64 / 7%);
+}
+
+.fish-switcher button {
+  min-height: 40px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #53656d;
+  font-family: var(--tutorial-font);
+  font-size: var(--tutorial-tab-size);
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.fish-switcher button:hover {
+  background: #f1f6f8;
+  color: var(--fish-ink);
+}
+
+.fish-switcher button[aria-selected='true'] {
+  background: var(--fish-ink);
+  color: #fff;
+}
+
+.fish-switcher button:focus-visible {
+  outline: 3px solid var(--fish-blue);
+  outline-offset: 2px;
+}
+
+.fish-hero {
+  display: block;
+  height: auto;
+  min-height: 0;
+  padding: 29px;
+  border: 1px solid var(--fish-line);
+  border-radius: 17px;
+  background: #fff;
+}
+
+.fish-eyebrow {
+  margin: 0 0 8px;
+  color: var(--fish-blue);
+  font-size: var(--tutorial-label-size);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.fish-hero h1 {
+  max-width: 820px;
+  margin: 0;
+  font-size: var(--tutorial-title-size);
+  line-height: 1.03;
+  letter-spacing: -0.045em;
+}
+
+.fish-hero-compact h1 {
+  font-size: clamp(1.85rem, 3.5vw, 2.65rem);
+}
+
+.fish-hero > p:not(.fish-eyebrow),
+.fish-introduction p {
+  max-width: 820px;
+  margin: 13px 0 0;
+  color: var(--fish-muted);
+  font-size: var(--tutorial-lead-size);
+  line-height: 1.65;
+}
+
+.fish-introduction {
+  display: grid;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.fish-introduction p {
+  margin: 0;
+}
+
+.fish-journey {
+  display: flex;
+  align-items: stretch;
+  gap: 7px;
+  margin-top: 23px;
+  padding-top: 18px;
+  border-top: 1px solid var(--fish-line);
+}
+
+.fish-journey span {
+  display: grid;
+  flex: 1 1 0;
+  min-height: 54px;
+  place-items: center;
+  padding: 10px;
+  border: 1px solid var(--fish-line);
+  border-radius: 10px;
+  background: #fff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.fish-journey i,
+.fish-flow > i,
+.fish-minigame-diagram > i,
+.fish-value-flow > i,
+.fish-automation > i,
+.fish-recipe > i {
+  display: grid;
+  place-items: center;
+  color: var(--fish-orange);
+  font-style: normal;
+  font-weight: 950;
+}
+
+.fish-section {
+  padding: 31px 0;
+  border-bottom: 1px solid var(--fish-line);
+  scroll-margin-top: 60px;
+}
+
+.fish-section:last-child {
+  border-bottom: 0;
+}
+
+.fish-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.fish-title > span {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  place-items: center;
+  border: 1px solid var(--fish-line);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--fish-blue);
+  font-size: 0.86rem;
+  font-weight: 950;
+}
+
+.fish-title p {
+  margin: 1px 0 4px;
+  color: var(--fish-blue);
+  font-size: var(--tutorial-label-size);
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.fish-title h2 {
+  margin: 0;
+  font-size: var(--tutorial-section-size);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.fish-lead {
+  max-width: 850px;
+  margin: 0 0 16px;
+  color: var(--fish-muted);
+  font-size: var(--tutorial-lead-size);
+  line-height: 1.6;
+}
+
+.fish-flow,
+.fish-minigame-diagram,
+.fish-value-flow,
+.fish-automation {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.fish-flow article,
+.fish-minigame-diagram article,
+.fish-value-flow article,
+.fish-automation article {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 92px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px;
+  border: 1px solid var(--fish-line);
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+}
+
+.fish-flow article b,
+.fish-minigame-diagram article b,
+.fish-value-flow article b,
+.fish-automation article b {
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.fish-flow article span,
+.fish-minigame-diagram article span,
+.fish-value-flow article span,
+.fish-automation article span {
+  margin-top: 4px;
+  color: var(--fish-muted);
+  font-size: 0.77rem;
+  line-height: 1.4;
+}
+
+.fish-result {
+  border-color: #a9d5c7 !important;
+}
+
+.fish-target {
+  border-color: #9acde0 !important;
+}
+
+.fish-card-grid,
+.fish-checklist,
+.fish-stat-row,
+.fish-expedition,
+.fish-return-loop {
+  display: grid;
+  gap: 10px;
+}
+
+.fish-card-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.fish-card-grid-3,
+.fish-checklist,
+.fish-return-loop {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.fish-checklist {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.fish-stat-row {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.fish-expedition {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.fish-card-grid article,
+.fish-checklist article,
+.fish-stat-row article,
+.fish-expedition article,
+.fish-return-loop article,
+.fish-equipment-table article {
+  padding: 15px;
+  border: 1px solid var(--fish-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.fish-card-grid h3 {
+  margin: 0 0 6px;
+  font-size: var(--tutorial-card-title-size);
+  line-height: 1.3;
+}
+
+.fish-card-grid p {
+  margin: 0;
+  color: var(--fish-muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.fish-checklist article,
+.fish-stat-row article,
+.fish-return-loop article {
+  display: grid;
+  gap: 4px;
+  text-align: center;
+}
+
+.fish-checklist b,
+.fish-stat-row b,
+.fish-return-loop b {
+  font-size: 0.87rem;
+}
+
+.fish-checklist span,
+.fish-stat-row span,
+.fish-return-loop span,
+.fish-expedition span,
+.fish-equipment-table span {
+  color: var(--fish-muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.fish-note,
+.fish-warning,
+.fish-check {
+  margin: 14px 0 0;
+  padding: 13px 15px;
+  border-left: 3px solid var(--fish-blue);
+  background: #f7f9fa;
+  color: var(--fish-muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.fish-warning {
+  border-color: var(--fish-orange);
+}
+
+.fish-check {
+  border-color: var(--fish-teal);
+}
+
+.fish-note strong,
+.fish-check strong {
+  color: var(--fish-ink);
+}
+
+.fish-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fish-steps li {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 14px;
+  border: 1px solid var(--fish-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.fish-steps li > b {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 9px;
+  background: #f2f5f6;
+  color: var(--fish-blue);
+}
+
+.fish-steps li > span {
+  color: var(--fish-muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.fish-equipment-table {
+  display: grid;
+  gap: 9px;
+}
+
+.fish-equipment-table article {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.25fr) minmax(0, 1fr);
+  gap: 15px;
+}
+
+.fish-expedition article {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.fish-decision {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.35fr) minmax(0, 1fr);
+  gap: 10px;
+  align-items: stretch;
+}
+
+.fish-decision > article,
+.fish-decision > div {
+  padding: 16px;
+  border: 1px solid var(--fish-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.fish-decision > article {
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.fish-decision > article span {
+  margin-top: 5px;
+  color: var(--fish-muted);
+  font-size: 0.79rem;
+}
+
+.fish-decision > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.fish-decision > div span {
+  display: grid;
+  min-height: 48px;
+  place-items: center;
+  padding: 8px;
+  border: 1px solid #dfe8eb;
+  border-radius: 8px;
+  color: var(--fish-muted);
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.fish-recipe {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.fish-recipe span,
+.fish-recipe strong {
+  display: grid;
+  min-height: 66px;
+  flex: 1 1 0;
+  place-items: center;
+  padding: 12px;
+  border: 1px solid var(--fish-line);
+  border-radius: 10px;
+  background: #fff;
+  text-align: center;
+}
+
+.fish-recipe strong {
+  border-color: #9acde0;
+}
+
+.fish-craft-grid {
+  display: grid;
+  width: min(100%, 330px);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin: 17px auto;
+}
+
+.fish-craft-grid span,
+.fish-craft-grid strong {
+  display: grid;
+  aspect-ratio: 1;
+  place-items: center;
+  padding: 6px;
+  border: 1px solid var(--fish-line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--fish-muted);
+  font-size: 0.72rem;
+  text-align: center;
+}
+
+.fish-craft-grid strong {
+  border-color: #9acde0;
+  color: var(--fish-ink);
+}
+
+.fish-link-button {
+  margin-top: 13px;
+  padding: 10px 14px;
+  border: 1px solid var(--fish-line);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--fish-blue);
+  font-weight: 850;
+}
+
+.fish-link-button:hover {
+  border-color: #9acde0;
+  background: #f7fafb;
+}
+
+@media (width <= 960px) {
+  .fish-checklist,
+  .fish-stat-row,
+  .fish-card-grid-3,
+  .fish-return-loop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fish-value-flow,
+  .fish-automation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .fish-value-flow article:last-child,
+  .fish-automation article:last-child {
+    grid-column: 1/-1;
+  }
+}
+
+@media (width <= 720px) {
+  .fish-switcher {
+    position: static;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .fish-switcher button {
+    flex: 0 0 auto;
+  }
+
+  .fish-hero {
+    padding: 22px 20px;
+  }
+
+  .fish-journey,
+  .fish-flow,
+  .fish-minigame-diagram,
+  .fish-value-flow,
+  .fish-automation,
+  .fish-recipe {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .fish-journey i,
+  .fish-flow > i,
+  .fish-minigame-diagram > i,
+  .fish-value-flow > i,
+  .fish-automation > i,
+  .fish-recipe > i {
+    height: 12px;
+    transform: rotate(90deg);
+  }
+
+  .fish-value-flow article:last-child,
+  .fish-automation article:last-child {
+    grid-column: auto;
+  }
+
+  .fish-card-grid-2,
+  .fish-card-grid-3,
+  .fish-checklist,
+  .fish-stat-row,
+  .fish-expedition,
+  .fish-return-loop,
+  .fish-steps,
+  .fish-decision {
+    grid-template-columns: 1fr;
+  }
+
+  .fish-equipment-table article,
+  .fish-expedition article {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
+@media (width <= 520px) {
+  .fish-title {
+    gap: 11px;
+  }
+
+  .fish-title > span {
+    width: 42px;
+    height: 40px;
+    flex-basis: 42px;
+  }
+
+  .fish-decision > div {
+    grid-template-columns: 1fr;
+  }
+}

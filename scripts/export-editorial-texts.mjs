@@ -56,6 +56,11 @@ const groups = [
     title: 'Photographie et tableaux',
     sources: ['src/content/tutorials/photography.html'],
   },
+  {
+    file: '10-peche-et-commerce.md',
+    title: 'Pêche et commerce des prises',
+    sources: ['src/content/tutorials/fishing.html'],
+  },
 ];
 
 const entities = new Map([

@@ -19,6 +19,7 @@ const styleSources = [
   'tutorials/economy.css',
   'tutorials/cuisine.css',
   'tutorials/photography.css',
+  'tutorials/fishing.css',
   'tutorials/jei.css',
   'tutorials/create.css',
   'tutorials/big-cannons-base.css',
