@@ -1,0 +1,400 @@
+<div class="agri-panel" id="agri-transform-panel" role="tabpanel" aria-labelledby="agri-transform-tab" hidden>
+  <header class="agri-hero agri-hero-compact">
+    <p class="agri-eyebrow">Production agricole · de la grange au reste du serveur</p>
+    <h1>Transformer les récoltes et les faire circuler</h1>
+    <div class="agri-introduction">
+      <p>
+        À ce stade, le domaine sait cultiver, récolter et ramener les produits jusqu’à la grange. C’est déjà très bien,
+        mais une ferme mécanique finit rapidement par remplir les coffres de blé, de tomates, de raisins et de toutes
+        les graines que personne n’avait prévu de stocker.
+      </p>
+      <p>
+        La dernière étape consiste à donner une destination à chaque ressource. Une partie retourne aux champs, une
+        autre alimente la cuisine ou un atelier, et les surplus peuvent rejoindre une boutique ou un Selling Bin. On va
+        commencer avec une petite chaîne de pain, puis organiser la vente sans vider accidentellement toute la réserve.
+      </p>
+    </div>
+    <div class="agri-journey" aria-label="Parcours de transformation et de vente">
+      <span>Trier la récolte</span><i>→</i><span>Garder les réserves</span><i>→</i><span>Transformer</span><i>→</i
+      ><span>Choisir un débouché</span><i>→</i><span>Vendre les surplus</span>
+    </div>
+  </header>
+
+  <section class="agri-section" id="agri-transform-destinations" data-phase="Organiser les sorties">
+    <div class="agri-title">
+      <span>01</span>
+      <div>
+        <p>La carte des débouchés</p>
+        <h2>Décider où part chaque récolte</h2>
+      </div>
+    </div>
+    <p class="agri-lead">
+      Le stockage central reçoit tout ce que les champs produisent. À partir de là, les ressources sont séparées selon
+      leur prochaine utilisation. Cette décision évite qu’une ligne de production consomme les dernières graines du
+      domaine ou qu’un bac de vente absorbe les ingrédients du restaurant.
+    </p>
+    <div class="agri-destination-map" aria-label="Destinations possibles des récoltes">
+      <article class="agri-destination-source">
+        <b>Grange centrale</b>
+        <span>Récoltes déchargées par les fermes</span>
+      </article>
+      <i>→</i>
+      <div>
+        <article>
+          <b>Semences</b>
+          <span>Réserve pour planter, agrandir et réparer les champs</span>
+        </article>
+        <article>
+          <b>Matières premières</b>
+          <span>Stock permanent de céréales, légumes et plantes</span>
+        </article>
+        <article>
+          <b>Transformation</b>
+          <span>Cuisine, boissons, textile et autres ateliers</span>
+        </article>
+        <article>
+          <b>Commerce</b>
+          <span>Boutique entre joueurs ou Selling Bin</span>
+        </article>
+      </div>
+    </div>
+    <p class="agri-note">
+      <strong>Commence avec des stocks séparés.</strong> Un Drawer pour le produit principal, un petit coffre pour les
+      graines et une sortie dédiée aux surplus suffisent pour rendre le trajet compréhensible.
+    </p>
+  </section>
+
+  <section class="agri-section" id="agri-transform-sort" data-phase="Organiser les sorties">
+    <div class="agri-title">
+      <span>02</span>
+      <div>
+        <p>Le tri à la sortie de la ferme</p>
+        <h2>Séparer les produits avant les machines</h2>
+      </div>
+    </div>
+    <p class="agri-lead">
+      Installe le premier tri juste après le stockage de la grange. Les Funnels filtrés dirigent chaque objet vers son
+      propre inventaire, tandis qu’une sortie générale récupère ce qui n’a pas encore de destination.
+    </p>
+    <div class="agri-sort-plan" aria-label="Exemple de tri d’une récolte de blé">
+      <article><b>Arrivée commune</b><span>Wheat et Wheat Seeds</span></article>
+      <i>→</i>
+      <article class="agri-sort-split"><b>Belt de tri</b><span>Deux Funnels avec filtre</span></article>
+      <i>→</i>
+      <div>
+        <article><b>Wheat</b><span>Drawer de production</span></article>
+        <article><b>Wheat Seeds</b><span>Coffre de semences</span></article>
+      </div>
+    </div>
+    <div class="agri-card-grid agri-card-grid-4">
+      <article>
+        <p>Filtrage</p>
+        <h3>Un produit par sortie</h3>
+        <span>Dépose l’objet attendu dans le filtre du Funnel afin de bloquer les autres ressources.</span>
+      </article>
+      <article>
+        <p>Réserve</p>
+        <h3>Des graines toujours disponibles</h3>
+        <span>Conserve au moins un stock de secours avant d’envoyer les graines restantes ailleurs.</span>
+      </article>
+      <article>
+        <p>Tampon</p>
+        <h3>Un inventaire avant les machines</h3>
+        <span
+          >Le coffre d’entrée permet à la ferme de continuer pendant qu’une ligne de transformation est arrêtée.</span
+        >
+      </article>
+      <article>
+        <p>Contrôle</p>
+        <h3>Un Clutch par ligne</h3>
+        <span>Chaque atelier peut être coupé pour modifier une recette ou vider un blocage.</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="agri-section" id="agri-transform-recipes" data-phase="Choisir une transformation">
+    <div class="agri-title">
+      <span>03</span>
+      <div>
+        <p>Plusieurs métiers possibles</p>
+        <h2>Choisir ce que le domaine va produire</h2>
+      </div>
+    </div>
+    <p class="agri-lead">
+      Une même ferme peut alimenter plusieurs activités. JEI reste le meilleur endroit pour vérifier les ingrédients,
+      les machines compatibles et toutes les utilisations d’une récolte précise.
+    </p>
+    <div class="agri-processing-grid">
+      <article>
+        <p>Céréales</p>
+        <h3>Pain, pâtes et pâtisseries</h3>
+        <span>Wheat, Barley et Oat rejoignent les Millstones, Mixers, fours et cuisines.</span>
+        <b><code>@create wheat</code> · <code>@farmersdelight wheat</code></b>
+      </article>
+      <article>
+        <p>Légumes</p>
+        <h3>Sauces, soupes et plats</h3>
+        <span>Tomatoes, Onions, Cabbages et autres légumes alimentent les Cutting Boards et Cooking Pots.</span>
+        <b><code>@farmersdelight tomato</code> · <code>@farm_and_charm onion</code></b>
+      </article>
+      <article>
+        <p>Boissons chaudes</p>
+        <h3>Thé et café</h3>
+        <span>Les feuilles et grains passent par le Brewing Kettle ou les installations compatibles avec Create.</span>
+        <b><code>@farmersrespite tea</code> · <code>@farmersrespite coffee</code></b>
+      </article>
+      <article>
+        <p>Vignoble</p>
+        <h3>Jus et vins</h3>
+        <span>Les cépages rejoignent les machines de Vinery avant le vieillissement et la mise en bouteille.</span>
+        <b><code>@vinery grape</code></b>
+      </article>
+      <article>
+        <p>Chanvre</p>
+        <h3>Fibres, textile et cuisine</h3>
+        <span>Les tiges, feuilles, graines et buds disposent de chaînes distinctes dans Hempdustry.</span>
+        <b><code>@hempdustry</code></b>
+      </article>
+      <article>
+        <p>Restauration</p>
+        <h3>Plats préparés en série</h3>
+        <span>Slice &amp; Dice et Central Kitchen relient les postes Farmer’s Delight aux machines Create.</span>
+        <b><code>@sliceanddice</code> · <code>@create_central_kitchen</code></b>
+      </article>
+    </div>
+    <p class="agri-check">
+      <strong>Le réflexe JEI :</strong> survole une récolte et appuie sur <kbd>U</kbd> pour afficher toutes ses
+      utilisations. Survole ensuite le produit voulu et appuie sur <kbd>R</kbd> pour remonter sa recette.
+    </p>
+  </section>
+
+  <section class="agri-section" id="agri-transform-bread" data-phase="Construire une première ligne">
+    <div class="agri-title">
+      <span>04</span>
+      <div>
+        <p>Le prototype de transformation</p>
+        <h2>Produire du pain avec Create</h2>
+      </div>
+    </div>
+    <p class="agri-lead">
+      Le pain permet de découvrir une chaîne complète avec peu de machines. Le Wheat devient de la Wheat Flour, la
+      farine est mélangée avec de l’eau, puis le Dough est cuit. Construis d’abord une ligne capable de produire un seul
+      pain avant de l’alimenter depuis le grand stock.
+    </p>
+    <div class="agri-bread-recipe" aria-label="Chaîne Create pour produire du pain">
+      <article><b>Wheat</b><span>1 unité</span></article>
+      <i>→</i>
+      <article class="agri-bread-machine"><b>Millstone</b><span>Produit au moins 1 Wheat Flour</span></article>
+      <i>→</i>
+      <article><b>Wheat Flour</b><span>1 unité</span></article>
+      <i>+</i>
+      <article><b>Water</b><span>1 000 mB</span></article>
+      <i>→</i>
+      <article class="agri-bread-machine"><b>Basin + Mechanical Mixer</b><span>Produit 1 Dough</span></article>
+      <i>→</i>
+      <article class="agri-bread-result"><b>Bread</b><span>Furnace, Smoker ou cuisson Create</span></article>
+    </div>
+    <div class="agri-machine-materials">
+      <article>
+        <b>1 Millstone</b><span>Transforme le Wheat en Wheat Flour et peut rendre quelques Seeds.</span>
+      </article>
+      <article><b>1 Basin et 1 Mechanical Mixer</b><span>Mélangent la farine avec 1 000 mB d’eau.</span></article>
+      <article><b>Une arrivée d’eau</b><span>Fluid Pipe, Mechanical Pump et source ou réservoir.</span></article>
+      <article>
+        <b>Une cuisson</b><span>Furnace, Smoker ou Encased Fan traversant une source de chaleur adaptée.</span>
+      </article>
+      <article>
+        <b>Belts, Funnels et coffres</b><span>Transportent et stockent chaque produit intermédiaire.</span>
+      </article>
+      <article>
+        <b>Une source de rotation</b><span>Alimente la Millstone, le Mixer, la Pump et les Belts.</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="agri-section" id="agri-transform-build" data-phase="Construire une première ligne">
+    <div class="agri-title">
+      <span>05</span>
+      <div>
+        <p>De la théorie aux machines</p>
+        <h2>Monter et tester la ligne de pain</h2>
+      </div>
+    </div>
+    <ol class="agri-action-steps">
+      <li>
+        <b>Relie un petit coffre de Wheat à la Millstone</b>
+        <span>Commence avec quelques unités et récupère la Wheat Flour dans un second inventaire.</span>
+      </li>
+      <li>
+        <b>Place le Basin sous le Mechanical Mixer</b>
+        <span>Alimente le Mixer en rotation et fais arriver l’eau dans le Basin avec un Fluid Pipe.</span>
+      </li>
+      <li>
+        <b>Envoie une Wheat Flour dans le Basin</b>
+        <span>Lorsque 1 000 mB d’eau sont disponibles, le Mixer produit un Dough.</span>
+      </li>
+      <li>
+        <b>Fais cuire un seul Dough</b>
+        <span
+          >Utilise d’abord le système de cuisson le plus simple disponible et vérifie que le Bread sort
+          correctement.</span
+        >
+      </li>
+      <li>
+        <b>Ajoute les Belts et Funnels</b>
+        <span>Automatise les transferts seulement lorsque chaque machine fonctionne séparément.</span>
+      </li>
+    </ol>
+    <div class="agri-line-checks">
+      <article><b>Entrée</b><span>Le Wheat quitte le coffre sans mélanger d’autres cultures.</span></article>
+      <article><b>Broyage</b><span>La Wheat Flour et les éventuelles Seeds trouvent une sortie.</span></article>
+      <article><b>Mélange</b><span>Le Basin reçoit à la fois la farine et la bonne quantité d’eau.</span></article>
+      <article><b>Cuisson</b><span>Le Bread rejoint un stockage accessible et disposant de place.</span></article>
+    </div>
+    <p class="agri-note">
+      <strong>Le tuto Cuisine et restauration va beaucoup plus loin.</strong> Il explique la découpe, les Cooking Pots,
+      les boissons, les colis de recettes et la Central Kitchen.
+    </p>
+  </section>
+
+  <section class="agri-section" id="agri-transform-choice" data-phase="Choisir un commerce">
+    <div class="agri-title">
+      <span>06</span>
+      <div>
+        <p>Trois sorties possibles</p>
+        <h2>Consommer, échanger ou vendre au serveur</h2>
+      </div>
+    </div>
+    <div class="agri-sale-compare">
+      <article>
+        <p>Utilisation directe</p>
+        <h3>Cuisine et ateliers</h3>
+        <span>Les récoltes deviennent des repas, boissons, matériaux ou composants utiles aux autres projets.</span>
+        <b>Destination : tes propres installations</b>
+      </article>
+      <article>
+        <p>Commerce entre joueurs</p>
+        <h3>Boutique Numismatics</h3>
+        <span>Tu choisis les produits et leur prix. Les autres joueurs peuvent acheter même pendant ton absence.</span>
+        <b>Destination : marché du serveur</b>
+      </article>
+      <article>
+        <p>Vente directe</p>
+        <h3>Selling Bin</h3>
+        <span>Le serveur rachète les objets déclarés comme vendables et crée les pièces correspondantes.</span>
+        <b>Destination : revenu immédiat</b>
+      </article>
+    </div>
+    <p class="agri-check">
+      <strong>Le guide Argent et échanges détaille le reste :</strong> première vente, valeur des pièces, compte
+      bancaire, carte et création d’une Boutique.
+    </p>
+  </section>
+
+  <section class="agri-section" id="agri-transform-bin" data-phase="Vendre les surplus">
+    <div class="agri-title">
+      <span>07</span>
+      <div>
+        <p>Le bac de vente agricole</p>
+        <h2>Vendre une première récolte au Selling Bin</h2>
+      </div>
+    </div>
+    <p class="agri-lead">
+      Le Selling Bin accepte uniquement les objets dont le prix est configuré dans le pack. JEI affiche directement la
+      liste actuelle, y compris les récoltes, plats, poissons et produits Hempdustry compatibles.
+    </p>
+    <div class="agri-bin-guide">
+      <article>
+        <b>1. Vérifie l’objet</b>
+        <span>Cherche le Selling Bin dans JEI, survole-le et appuie sur <kbd>U</kbd> pour consulter les ventes.</span>
+      </article>
+      <article>
+        <b>2. Dépose une unité</b>
+        <span>Ouvre le bac, place un seul objet et maintiens <kbd>Maj</kbd> dessus pour lire sa valeur.</span>
+      </article>
+      <article>
+        <b>3. Choisis la monnaie</b>
+        <span>Sélectionne une pièce ou <strong>Highest Possible</strong> pour recevoir la meilleure dénomination.</span>
+      </article>
+      <article>
+        <b>4. Confirme avec Sell</b>
+        <span>L’objet est consommé et le paiement apparaît dans le bac. Un reste de valeur éventuel est conservé.</span>
+      </article>
+    </div>
+    <p class="agri-warning">
+      <strong>Teste toujours une seule unité au départ.</strong> Les boutons <strong>Sell All</strong> et
+      <strong>Auto-Sell</strong> deviennent utiles après avoir contrôlé le prix, la monnaie choisie et la destination de
+      la récolte.
+    </p>
+  </section>
+
+  <section class="agri-section" id="agri-transform-auto-sale" data-phase="Vendre les surplus">
+    <div class="agri-title">
+      <span>08</span>
+      <div>
+        <p>La vente en bout de ligne</p>
+        <h2>Automatiser uniquement le surplus</h2>
+      </div>
+    </div>
+    <p class="agri-lead">
+      Une fois la vente manuelle validée, une sortie dédiée peut alimenter le Selling Bin. Le stock principal reste dans
+      la grange et seule la production destinée à la vente rejoint cette ligne.
+    </p>
+    <div class="agri-auto-sale-flow" aria-label="Ligne automatique de vente des surplus">
+      <article><b>Stock principal</b><span>Réserve agricole conservée</span></article>
+      <i>→</i>
+      <article><b>Sortie filtrée</b><span>Un seul produit autorisé</span></article>
+      <i>→</i>
+      <article><b>Coffre tampon</b><span>Quantité visible avant la vente</span></article>
+      <i>→</i>
+      <article class="agri-auto-sale-result"><b>Selling Bin</b><span>Auto-Sell après le premier test</span></article>
+    </div>
+    <div class="agri-card-grid agri-card-grid-4">
+      <article>
+        <p>Filtre</p>
+        <h3>Un objet précis</h3>
+        <span>La ligne reçoit uniquement le produit dont tu as validé la vente.</span>
+      </article>
+      <article>
+        <p>Tampon</p>
+        <h3>Un coffre observable</h3>
+        <span>Tu peux interrompre la vente et récupérer le stock avant son arrivée dans le bac.</span>
+      </article>
+      <article>
+        <p>Commande</p>
+        <h3>Un levier ou un Clutch</h3>
+        <span>La ligne de vente doit pouvoir être arrêtée indépendamment du reste de la ferme.</span>
+      </article>
+      <article>
+        <p>Contrôle</p>
+        <h3>Une première pile surveillée</h3>
+        <span>Vérifie la quantité consommée et la monnaie obtenue avant de laisser tourner l’installation.</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="agri-section" id="agri-transform-finish" data-phase="Terminer le domaine">
+    <div class="agri-title">
+      <span>09</span>
+      <div>
+        <p>Le cycle agricole complet</p>
+        <h2>Relier le champ au reste du serveur</h2>
+      </div>
+    </div>
+    <div class="agri-final-cycle" aria-label="Cycle complet du domaine agricole">
+      <article><b>Cultiver</b><span>Champs et cultures spécialisées</span></article>
+      <i>→</i>
+      <article><b>Récolter</b><span>Mechanical Harvesters</span></article>
+      <i>→</i>
+      <article><b>Trier</b><span>Grange, Drawers et filtres</span></article>
+      <i>→</i>
+      <article><b>Transformer</b><span>Cuisine et ateliers</span></article>
+      <i>→</i>
+      <article><b>Distribuer</b><span>Réserves, boutiques et ventes</span></article>
+    </div>
+    <p class="agri-check">
+      <strong>Le domaine fonctionne maintenant comme une véritable activité.</strong> Il produit ses ressources, garde
+      ses réserves, alimente les autres projets et transforme ses surplus en marchandises ou en monnaie.
+    </p>
+  </section>
+</div>

@@ -1218,6 +1218,232 @@
   border-left: 3px solid var(--agri-orange);
 }
 
+.agri-destination-map {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.65fr) auto minmax(0, 1.35fr);
+  gap: 10px;
+  align-items: stretch;
+  margin-top: 19px;
+}
+
+.agri-destination-map > article,
+.agri-destination-map > div article,
+.agri-sort-plan article,
+.agri-processing-grid article,
+.agri-bread-recipe article,
+.agri-line-checks article,
+.agri-sale-compare article,
+.agri-bin-guide article,
+.agri-auto-sale-flow article,
+.agri-final-cycle article {
+  border: 1px solid var(--agri-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.agri-destination-map > article {
+  display: grid;
+  align-content: center;
+  padding: 18px;
+  text-align: center;
+}
+
+.agri-destination-map > i,
+.agri-sort-plan > i,
+.agri-bread-recipe > i,
+.agri-auto-sale-flow > i,
+.agri-final-cycle > i {
+  display: grid;
+  place-items: center;
+  color: var(--agri-orange);
+  font-style: normal;
+  font-weight: 950;
+}
+
+.agri-destination-map > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.agri-destination-map > div article {
+  padding: 14px;
+}
+
+.agri-destination-map .agri-destination-source {
+  border-color: #9dc9dd;
+}
+
+.agri-destination-map b,
+.agri-sort-plan b,
+.agri-bread-recipe b,
+.agri-line-checks b,
+.agri-auto-sale-flow b,
+.agri-final-cycle b {
+  display: block;
+  font-size: 0.87rem;
+  line-height: 1.3;
+}
+
+.agri-destination-map span,
+.agri-sort-plan span,
+.agri-bread-recipe span,
+.agri-line-checks span,
+.agri-auto-sale-flow span,
+.agri-final-cycle span {
+  display: block;
+  margin-top: 5px;
+  color: var(--agri-muted);
+  font-size: 0.77rem;
+  line-height: 1.48;
+}
+
+.agri-sort-plan {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.8fr) auto minmax(160px, 0.8fr) auto minmax(200px, 1.2fr);
+  gap: 8px;
+  align-items: stretch;
+  margin-top: 19px;
+}
+
+.agri-sort-plan > article,
+.agri-sort-plan > div article {
+  display: grid;
+  align-content: center;
+  padding: 15px;
+  text-align: center;
+}
+
+.agri-sort-plan > div {
+  display: grid;
+  gap: 7px;
+}
+
+.agri-sort-plan .agri-sort-split {
+  border-color: #9dc9dd;
+}
+
+.agri-processing-grid,
+.agri-line-checks,
+.agri-sale-compare,
+.agri-bin-guide {
+  display: grid;
+  gap: 10px;
+  margin-top: 19px;
+}
+
+.agri-processing-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.agri-processing-grid article {
+  padding: 16px;
+}
+
+.agri-processing-grid article > p,
+.agri-sale-compare article > p {
+  margin: 0 0 6px;
+  color: var(--agri-green);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.agri-processing-grid h3,
+.agri-sale-compare h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.agri-processing-grid article > span,
+.agri-sale-compare article > span {
+  display: block;
+  margin-top: 7px;
+  color: var(--agri-muted);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.agri-processing-grid article > b,
+.agri-sale-compare article > b {
+  display: block;
+  margin-top: 11px;
+  padding-top: 9px;
+  border-top: 1px solid var(--agri-line);
+  color: var(--agri-ink);
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.agri-bread-recipe,
+.agri-auto-sale-flow,
+.agri-final-cycle {
+  display: flex;
+  align-items: stretch;
+  gap: 7px;
+  margin-top: 19px;
+}
+
+.agri-bread-recipe article,
+.agri-auto-sale-flow article,
+.agri-final-cycle article {
+  display: grid;
+  flex: 1 1 0;
+  min-width: 0;
+  align-content: center;
+  padding: 13px;
+  text-align: center;
+}
+
+.agri-bread-recipe .agri-bread-machine {
+  flex-grow: 1.3;
+  border-color: #9dc9dd;
+}
+
+.agri-bread-recipe .agri-bread-result,
+.agri-auto-sale-flow .agri-auto-sale-result {
+  border-color: #a8d8c7;
+}
+
+.agri-line-checks {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.agri-line-checks article {
+  padding: 15px;
+}
+
+.agri-sale-compare {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.agri-sale-compare article {
+  padding: 18px;
+}
+
+.agri-bin-guide {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.agri-bin-guide article {
+  padding: 16px 17px;
+}
+
+.agri-bin-guide b {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.agri-bin-guide span {
+  display: block;
+  margin-top: 6px;
+  color: var(--agri-muted);
+  font-size: 0.81rem;
+  line-height: 1.55;
+}
+
 @media (width <= 1080px) {
   .agri-card-grid-4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1242,6 +1468,25 @@
 
   .agri-interface-plan {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .agri-processing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .agri-line-checks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .agri-bread-recipe,
+  .agri-final-cycle {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .agri-bread-recipe > i,
+  .agri-final-cycle > i {
+    display: none;
   }
 
   .agri-interface-plan > i {
@@ -1370,6 +1615,40 @@
   .agri-troubleshoot-list,
   .agri-interface-plan {
     grid-template-columns: 1fr;
+  }
+
+  .agri-destination-map,
+  .agri-sort-plan {
+    grid-template-columns: 1fr;
+  }
+
+  .agri-destination-map > i,
+  .agri-sort-plan > i {
+    transform: rotate(90deg);
+  }
+
+  .agri-processing-grid,
+  .agri-line-checks,
+  .agri-sale-compare,
+  .agri-bin-guide {
+    grid-template-columns: 1fr;
+  }
+
+  .agri-bread-recipe,
+  .agri-auto-sale-flow,
+  .agri-final-cycle {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .agri-bread-recipe > i,
+  .agri-final-cycle > i {
+    display: grid;
+    transform: rotate(90deg);
+  }
+
+  .agri-auto-sale-flow > i {
+    transform: rotate(90deg);
   }
 
   .agri-interface-plan > i {
