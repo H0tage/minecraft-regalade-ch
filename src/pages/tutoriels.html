@@ -33,6 +33,17 @@
             JEI
           </button>
           <button
+            class="tutorial-tab"
+            id="tutorial-storage-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-storage"
+            tabindex="-1"
+          >
+            Stockage optimisé
+          </button>
+          <button
             class="tutorial-tab active"
             id="tutorial-economy-tab"
             type="button"
@@ -134,6 +145,15 @@
         </section>
         <section class="tutorial-panel" id="tutorial-jei" role="tabpanel" aria-labelledby="tutorial-jei-tab" hidden>
           <!-- @include ../content/tutorials/jei.html -->
+        </section>
+        <section
+          class="tutorial-panel"
+          id="tutorial-storage"
+          role="tabpanel"
+          aria-labelledby="tutorial-storage-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/storage.html -->
         </section>
         <section
           class="tutorial-panel"

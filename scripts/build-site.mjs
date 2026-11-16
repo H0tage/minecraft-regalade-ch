@@ -21,6 +21,7 @@ const styleSources = [
   'tutorials/photography.css',
   'tutorials/fishing.css',
   'tutorials/jei.css',
+  'tutorials/storage.css',
   'tutorials/create.css',
   'tutorials/trains.css',
   'tutorials/big-cannons-base.css',
