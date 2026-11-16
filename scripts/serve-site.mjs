@@ -22,7 +22,11 @@ const contentTypes = {
 createServer((request, response) => {
   const pathname = decodeURIComponent(new URL(request.url, `http://${request.headers.host}`).pathname);
   const relativePath = pathname === '/' ? 'index.html' : normalize(pathname).replace(/^[/\\]+/, '');
-  const file = resolve(join(root, relativePath));
+  const requestedFile = resolve(join(root, relativePath));
+  const file =
+    existsSync(requestedFile) && statSync(requestedFile).isDirectory()
+      ? join(requestedFile, 'index.html')
+      : requestedFile;
 
   if (!file.startsWith(root) || !existsSync(file) || !statSync(file).isFile()) {
     response.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });

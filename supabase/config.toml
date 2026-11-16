@@ -432,3 +432,8 @@ enabled = true
 enabled = true
 verify_jwt = false
 entrypoint = "./functions/registrations/index.ts"
+
+[functions.registrations-admin]
+enabled = true
+verify_jwt = false
+entrypoint = "./functions/registrations-admin/index.ts"

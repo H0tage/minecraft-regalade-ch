@@ -41,6 +41,14 @@ async function auditTabList(page, selector, label) {
 for (const width of widths) {
   const page = await browser.newPage({ viewport: { width, height: 844 } });
   const registrations = [];
+  const adminRegistrations = [
+    {
+      id: 1,
+      minecraft_username: 'QaRegalade',
+      discovery_source: 'Audit local',
+      created_at: '2026-11-17T00:00:00.000Z',
+    },
+  ];
   await page.route('https://fvuvfdwdmwjpkrxxslgp.supabase.co/functions/v1/registrations', async (route) => {
     const request = route.request();
     if (request.method() === 'GET') {
@@ -63,6 +71,41 @@ for (const width of widths) {
     }
     await route.fulfill({ status: 405, contentType: 'application/json', body: '{}' });
   });
+  await page.route('https://fvuvfdwdmwjpkrxxslgp.supabase.co/auth/v1/token**', async (route) => {
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({
+        access_token: 'qa-access-token',
+        refresh_token: 'qa-refresh-token',
+        expires_in: 3600,
+        user: { email: 'admin@regalade.ch' },
+      }),
+    });
+  });
+  await page.route('https://fvuvfdwdmwjpkrxxslgp.supabase.co/functions/v1/registrations-admin', async (route) => {
+    const request = route.request();
+    if (request.method() === 'GET') {
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({ registrations: adminRegistrations }),
+      });
+      return;
+    }
+    if (request.method() === 'DELETE') {
+      const payload = request.postDataJSON();
+      const index = adminRegistrations.findIndex((registration) => registration.id === payload.id);
+      if (index >= 0) adminRegistrations.splice(index, 1);
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({ deleted: { id: payload.id } }),
+      });
+      return;
+    }
+    await route.fulfill({ status: 405, contentType: 'application/json', body: '{}' });
+  });
   const runtimeErrors = [];
   page.on('console', (message) => {
     if (message.type() === 'error') runtimeErrors.push(message.text());
@@ -79,6 +122,19 @@ for (const width of widths) {
     if (metrics.width > metrics.viewport + 1)
       failures.push(`${route} déborde à ${width}px (${metrics.width - metrics.viewport}px).`);
     if (metrics.headings !== 1) failures.push(`${route} possède ${metrics.headings} H1 visibles à ${width}px.`);
+  }
+
+  await page.goto(`${baseUrl}superpower/?qa=${Date.now()}`, { waitUntil: 'networkidle' });
+  const superpowerMetrics = await page.evaluate(() => ({
+    viewport: window.innerWidth,
+    width: document.documentElement.scrollWidth,
+    headings: [...document.querySelectorAll('h1')].filter((element) => element.offsetParent).length,
+  }));
+  if (superpowerMetrics.width > superpowerMetrics.viewport + 1) {
+    failures.push(`Superpower déborde à ${width}px (${superpowerMetrics.width - superpowerMetrics.viewport}px).`);
+  }
+  if (superpowerMetrics.headings !== 1) {
+    failures.push(`Superpower possède ${superpowerMetrics.headings} H1 visibles à ${width}px.`);
   }
 
   await page.goto(`${baseUrl}?qa=${Date.now()}#tutoriels`, { waitUntil: 'networkidle' });
@@ -169,6 +225,21 @@ for (const width of widths) {
     if (!registration.text.includes('<img src=x onerror=alert(1)>') || registration.injectedImage) {
       failures.push('Les données de l’inscription ne sont pas rendues comme du texte sûr.');
     }
+
+    await page.goto(`${baseUrl}superpower/?qa=${Date.now()}`, { waitUntil: 'networkidle' });
+    await page.locator('#admin-email').fill('admin@regalade.ch');
+    await page.locator('#admin-password').fill('mot-de-passe-de-test');
+    await page.locator('#admin-login-button').click();
+    await page.locator('#admin-dashboard').waitFor({ state: 'visible' });
+    if ((await page.locator('.superpower-delete').count()) !== 1) {
+      failures.push('Superpower n’affiche pas les contrôles de suppression après connexion.');
+    } else {
+      page.once('dialog', (dialog) => dialog.accept());
+      await page.locator('.superpower-delete').click();
+      await page.waitForFunction(() =>
+        document.querySelector('#admin-member-list')?.textContent?.includes('premier nom'),
+      );
+    }
   }
 
   runtimeErrors.forEach((error) => failures.push(`Erreur navigateur à ${width}px : ${error}`));
@@ -183,4 +254,6 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Audit responsive réussi : ${routes.length} pages et Big Cannons testés à ${widths.join(', ')} pixels.`);
+console.log(
+  `Audit responsive réussi : ${routes.length} pages, Superpower et Big Cannons testés à ${widths.join(', ')} pixels.`,
+);

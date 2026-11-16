@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#20272b" />
+    <title>Administration | Régalade</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23242a2e' d='M5 8h8v7H5zm14 0h8v7h-8zM5 18h8v7H5zm10 0h12v7H15z'/%3E%3Cpath fill='%234cb8e6' d='M3 4h13v2H5v11H3z'/%3E%3Cpath fill='%23fa843b' d='M16 4h13v13h-2V6H16z'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="../styles/site.css" />
+  </head>
+  <body class="superpower-page">
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+    <div class="topbar"></div>
+    <header class="site-header shell superpower-header">
+      <a class="site-brand" href="../"><img src="../assets/hotage-logo.png" alt="Logo Hotage" />Minecraft</a>
+      <a class="superpower-back" href="../#inscription">Retour au site</a>
+    </header>
+
+    <main class="shell superpower-main" id="main-content">
+      <section class="superpower-content">
+        <div class="page-head">
+          <span class="eyebrow">Administration</span>
+          <h1>Superpower</h1>
+          <p>Cette page permet de gérer les inscriptions publiques du serveur.</p>
+        </div>
+
+        <article class="card superpower-login" id="admin-login-card">
+          <h2>Connexion</h2>
+          <form id="admin-login-form">
+            <div class="field">
+              <label for="admin-email">Adresse e-mail</label>
+              <input id="admin-email" type="email" required autocomplete="username" />
+            </div>
+            <div class="field">
+              <label for="admin-password">Mot de passe</label>
+              <input id="admin-password" type="password" required autocomplete="current-password" />
+            </div>
+            <button class="button cyan" id="admin-login-button" type="submit">Se connecter</button>
+            <p class="form-feedback hint" id="admin-login-feedback" aria-live="polite"></p>
+          </form>
+        </article>
+
+        <section class="card superpower-dashboard" id="admin-dashboard" hidden>
+          <header class="superpower-dashboard-head">
+            <div>
+              <span class="eyebrow">Session administrateur</span>
+              <h2>Inscriptions</h2>
+              <p class="hint" id="admin-identity"></p>
+            </div>
+            <button class="button superpower-logout" id="admin-logout" type="button">Se déconnecter</button>
+          </header>
+          <p class="form-feedback hint" id="admin-feedback" aria-live="polite"></p>
+          <div class="table-wrap">
+            <table class="members superpower-members">
+              <thead>
+                <tr>
+                  <th scope="col">Pseudo</th>
+                  <th scope="col">Découvert via</th>
+                  <th scope="col">Inscription</th>
+                  <th scope="col"><span class="superpower-visually-hidden">Action</span></th>
+                </tr>
+              </thead>
+              <tbody id="admin-member-list">
+                <tr>
+                  <td colspan="4" class="empty">Chargement de la liste…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status"></div>
+    <script src="../js/superpower.js"></script>
+  </body>
+</html>

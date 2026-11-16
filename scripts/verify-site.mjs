@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
 import { execFileSync, spawnSync } from 'node:child_process';
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
-import { extname, join, relative, resolve } from 'node:path';
+import { dirname, extname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(fileURLToPath(new URL('..', import.meta.url)));
@@ -36,8 +36,10 @@ function compareTrees(source, target, label) {
 
 const sourceIndex = join(sourceRoot, 'index.html');
 const indexPath = join(dist, 'index.html');
+const superpowerPath = join(dist, 'superpower', 'index.html');
 if (!existsSync(sourceIndex)) fail('La source src/index.html est absente.');
 if (!existsSync(indexPath)) fail('La sortie dist/index.html est absente. Lance le build.');
+if (!existsSync(superpowerPath)) fail('La sortie dist/superpower/index.html est absente. Lance le build.');
 
 const sourceFiles = walk(sourceRoot).filter((file) => ['.html', '.css', '.js'].includes(extname(file)));
 for (const file of sourceFiles) {
@@ -110,6 +112,23 @@ const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
 const duplicateIds = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
 if (duplicateIds.length) fail(`Identifiants HTML dupliqués : ${duplicateIds.join(', ')}`);
 
+const superpowerHtml = existsSync(superpowerPath) ? readFileSync(superpowerPath, 'utf8') : '';
+if (!superpowerHtml.includes('FICHIER GÉNÉRÉ'))
+  fail('superpower/index.html ne porte pas la signature de fichier généré.');
+if (/<style\b|\sstyle="/i.test(superpowerHtml)) fail('La page Superpower contient encore du CSS incorporé.');
+const superpowerReferences = [...superpowerHtml.matchAll(/\b(?:href|src)="([^"#]+)"/g)]
+  .map((match) => match[1].split('?')[0])
+  .filter((value) => !/^(?:https?:|data:|mailto:|tel:)/.test(value));
+for (const reference of new Set(superpowerReferences)) {
+  const target = resolve(dirname(superpowerPath), decodeURIComponent(reference));
+  if (!existsSync(target)) fail(`Référence locale absente dans Superpower : ${reference}`);
+}
+const superpowerIds = [...superpowerHtml.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
+const duplicateSuperpowerIds = [...new Set(superpowerIds.filter((id, index) => superpowerIds.indexOf(id) !== index))];
+if (duplicateSuperpowerIds.length) {
+  fail(`Identifiants HTML dupliqués dans Superpower : ${duplicateSuperpowerIds.join(', ')}`);
+}
+
 try {
   execFileSync(process.execPath, [join(root, 'scripts', 'check-editorial-style.mjs')], { cwd: root, stdio: 'pipe' });
 } catch (error) {
@@ -130,6 +149,7 @@ compareTrees(join(sourceRoot, 'data'), join(dist, 'data'), 'Donnée déployée')
 compareTrees(join(root, 'assets'), join(dist, 'assets'), 'Asset déployé');
 if (!existsSync(join(dist, 'styles', 'site.css'))) fail('Le bundle CSS dist/styles/site.css est absent.');
 if (!existsSync(join(dist, 'js', 'site.js'))) fail('Le bundle JavaScript dist/js/site.js est absent.');
+if (!existsSync(join(dist, 'js', 'superpower.js'))) fail('Le JavaScript dist/js/superpower.js est absent.');
 
 const oversizedImages = walk(join(root, 'assets'))
   .filter((file) => /\.(?:png|jpe?g|webp)$/i.test(file) && statSync(file).size > 750_000)
@@ -143,6 +163,6 @@ if (failures.length) {
 }
 
 console.log(
-  `Vérification réussie : ${sourceScripts.length} scripts source, ${new Set(localReferences).size} références locales et ${ids.length} identifiants contrôlés.`,
+  `Vérification réussie : ${sourceScripts.length} scripts source, ${new Set([...localReferences, ...superpowerReferences]).size} références locales et ${ids.length + superpowerIds.length} identifiants contrôlés.`,
 );
 notices.forEach((message) => console.warn(`À optimiser : ${message}`));

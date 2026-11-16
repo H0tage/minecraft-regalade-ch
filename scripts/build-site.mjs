@@ -15,6 +15,7 @@ const styleSources = [
   'pages/status.css',
   'pages/installation.css',
   'pages/registration.css',
+  'pages/superpower.css',
   'tutorials/layout.css',
   'tutorials/navigation.css',
   'tutorials/first-minecraft.css',
@@ -48,6 +49,8 @@ const scriptSources = [
   'tutorials/layout.js',
   'tutorials/jei.js',
 ];
+
+const standaloneScriptSources = ['pages/superpower.js'];
 
 function listFiles(directory, extension, baseDirectory = directory) {
   function walk(currentDirectory) {
@@ -106,9 +109,12 @@ function assembleTemplate(templatePath, stack = []) {
   });
 }
 
-function injectContentVersions(html) {
+function injectContentVersions(html, publicDirectory = dist) {
   return html.replace(/\b(href|src)="([^"?#]+\.(?:css|js))(?:\?v=[^"]*)?"/g, (_match, attribute, relativePath) => {
-    const publicFile = join(dist, normalize(relativePath));
+    const publicFile = resolve(publicDirectory, normalize(relativePath));
+    if (relative(dist, publicFile).startsWith('..')) {
+      throw new Error(`Ressource publique hors de dist interdite : ${relativePath}`);
+    }
     if (!existsSync(publicFile)) throw new Error(`Ressource publique absente : ${relativePath}`);
     return `${attribute}="${relativePath}?v=${versionFor(publicFile)}"`;
   });
@@ -130,11 +136,17 @@ function bundle(sourceDirectory, files, targetFile, separator) {
 }
 
 assertManifestCoverage(join(sourceRoot, 'styles'), '.css', styleSources, 'CSS');
-assertManifestCoverage(join(sourceRoot, 'scripts'), '.js', scriptSources, 'JavaScript');
+assertManifestCoverage(
+  join(sourceRoot, 'scripts'),
+  '.js',
+  [...scriptSources, ...standaloneScriptSources],
+  'JavaScript',
+);
 
 resetDirectory(dist);
 bundle('styles', styleSources, join(dist, 'styles', 'site.css'), '\n\n');
 bundle('scripts', scriptSources, join(dist, 'js', 'site.js'), '\n\n;\n\n');
+bundle('scripts', standaloneScriptSources, join(dist, 'js', 'superpower.js'), '\n\n;\n\n');
 cpSync(join(sourceRoot, 'data'), join(dist, 'data'), { recursive: true });
 cpSync(join(root, 'assets'), join(dist, 'assets'), { recursive: true });
 cpSync(join(root, 'CNAME'), join(dist, 'CNAME'));
@@ -145,8 +157,18 @@ const generatedNotice = '<!-- FICHIER GÉNÉRÉ. Modifier src/, puis lancer npm 
 const publicHtml = injectContentVersions(assembled.replace('<!doctype html>', `<!doctype html>\n${generatedNotice}`));
 writeFileSync(join(dist, 'index.html'), publicHtml, 'utf8');
 
+const superpowerDirectory = join(dist, 'superpower');
+mkdirSync(superpowerDirectory, { recursive: true });
+const assembledSuperpower = assembleTemplate(join(sourceRoot, 'superpower', 'index.html'));
+const superpowerHtml = injectContentVersions(
+  assembledSuperpower.replace('<!doctype html>', `<!doctype html>\n${generatedNotice}`),
+  superpowerDirectory,
+);
+writeFileSync(join(superpowerDirectory, 'index.html'), superpowerHtml, 'utf8');
+
 console.log('Build terminé :');
 console.log('- sources assemblées depuis src/');
 console.log(`- ${styleSources.length} feuilles réunies dans dist/styles/site.css`);
 console.log(`- ${scriptSources.length} scripts réunis dans dist/js/site.js`);
+console.log(`- ${standaloneScriptSources.length} script autonome généré dans dist/js/superpower.js`);
 console.log('- paquet de déploiement généré uniquement dans dist/');
