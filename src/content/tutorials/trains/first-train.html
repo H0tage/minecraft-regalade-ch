@@ -1,0 +1,490 @@
+<div class="train-panel" id="train-first-panel" role="tabpanel" aria-labelledby="train-first-tab" hidden>
+  <header class="train-hero train-build-hero">
+    <p class="train-eyebrow">De l’atelier au premier trajet</p>
+    <h1>Construire mon premier train</h1>
+    <p>
+      Maintenant qu’on sait à quoi peut servir un réseau ferroviaire, il est temps de fabriquer le truc qui roule
+      dessus. Le but est volontairement simple : une voie droite, deux gares et une petite locomotive capable de faire
+      le trajet sans perdre la moitié de ses blocs en chemin.
+    </p>
+    <p>
+      On va produire les composants en survie, poser la ligne, créer un Bogey, construire la locomotive puis
+      l’assembler. Pas encore d’horaire automatique, de signalisation ou de centre logistique. Pour l’instant, tu seras
+      le conducteur.
+    </p>
+    <div class="train-project-summary" aria-label="Objectif du parcours">
+      <span>2 Train Stations</span>
+      <span>1 voie droite</span>
+      <span>1 locomotive compacte</span>
+      <span>1 premier trajet</span>
+    </div>
+  </header>
+
+  <section class="train-section" id="train-first-prerequisites" data-phase="Préparer le projet">
+    <div class="train-title">
+      <span>01</span>
+      <div>
+        <p>Avant de commencer</p>
+        <h2>Ce projet commence après le laiton</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Les trains ne sont pas une technologie de début de partie. Il faut déjà savoir produire du Brass, des Precision
+      Mechanisms et des Sturdy Sheets. Si ta seule source de rotation est encore une manivelle, commence plutôt par le
+      guide « Ma première usine ».
+    </p>
+    <div class="train-prerequisite-grid">
+      <article>
+        <h3>Atelier nécessaire</h3>
+        <ul>
+          <li>2 Deployers alimentés</li>
+          <li>1 Mechanical Press</li>
+          <li>1 Spout avec de la lave</li>
+          <li>Des Belts ou Depots pour les assemblages</li>
+        </ul>
+      </article>
+      <article>
+        <h3>À fabriquer avant le chantier</h3>
+        <ul>
+          <li>24 à 32 [Train Tracks]</li>
+          <li>2 [Train Stations]</li>
+          <li>1 [Train Casing]</li>
+          <li>1 [Train Controls] et 1 [Seat]</li>
+          <li>1 [Super Glue] et 1 [Wrench]</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Pour la locomotive</h3>
+        <ul>
+          <li>12 à 20 blocs de construction</li>
+          <li>1 coffre ou 1 Barrel en option</li>
+          <li>Du charbon ou du Charcoal en option</li>
+          <li>Quelques blocs pour les deux quais</li>
+        </ul>
+      </article>
+    </div>
+    <p class="train-note">
+      <strong>Le train n’a pas besoin de SU.</strong> Pas de roue à eau ni de moteur à installer dans la locomotive. Une
+      fois assemblé, il roule tout seul. Le combustible stocké dans un coffre ou un Barrel sert seulement à le rendre
+      plus rapide.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-first-tracks" data-phase="Produire les voies">
+    <div class="train-title">
+      <span>02</span>
+      <div>
+        <p>Première chaîne de production</p>
+        <h2>Fabriquer les Train Tracks</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Les voies passent par une Sequenced Assembly très courte. Utilise une dalle en Stone, Smooth Stone ou Andesite
+      comme traverse, ajoute deux Nuggets puis termine avec la Mechanical Press.
+    </p>
+    <div class="train-production-flow" aria-label="Chaîne de fabrication des Train Tracks">
+      <article>
+        <strong>Stone Slab</strong>
+        <span>La traverse de départ</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article>
+        <strong>Deployer</strong>
+        <span>1 Iron ou Zinc Nugget</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article>
+        <strong>Deployer</strong>
+        <span>1 Iron ou Zinc Nugget</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article>
+        <strong>Mechanical Press</strong>
+        <span>Termine la voie</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article class="train-output">
+        <strong>Train Track</strong>
+        <span>Prêt à poser</span>
+      </article>
+    </div>
+    <div class="train-two-column">
+      <article>
+        <h3>Faire un premier lot</h3>
+        <p>
+          Produis entre 24 et 32 Tracks. C’est suffisant pour une ligne d’essai lisible, avec un peu de marge si la
+          distance réelle consomme davantage de voies que prévu.
+        </p>
+      </article>
+      <article>
+        <h3>Retrouver la recette dans JEI</h3>
+        <p>
+          Recherche <code>@create train track</code>, ouvre la recette puis consulte l’onglet Sequenced Assembly. Tu
+          peux aussi maintenir <kbd>W</kbd> sur l’objet pour voir son Ponder.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="train-section" id="train-first-components" data-phase="Fabriquer les composants">
+    <div class="train-title">
+      <span>03</span>
+      <div>
+        <p>Les pièces ferroviaires</p>
+        <h2>Passer de l’obsidienne à la locomotive</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Le [Train Casing] est la pièce commune du projet. Il sert à créer le Bogey, entre dans la recette des Stations et
+      permet aussi de fabriquer les Train Controls.
+    </p>
+    <div class="train-component-flow" aria-label="Chaîne de fabrication des composants ferroviaires">
+      <div class="train-component-branch">
+        <strong>Powdered Obsidian</strong>
+        <span>500 mB de Lava avec un Spout</span>
+        <span>Mechanical Press deux fois</span>
+        <b>Sturdy Sheet</b>
+      </div>
+      <span class="train-component-plus" aria-hidden="true">+</span>
+      <div class="train-component-branch">
+        <strong>Brass Casing</strong>
+        <span>Applique le Sturdy Sheet dessus</span>
+        <b>Train Casing</b>
+      </div>
+    </div>
+    <div class="train-recipe-grid">
+      <article>
+        <p>Train Casing + Compass</p>
+        <strong>2 Train Stations</strong>
+      </article>
+      <article>
+        <p>Lever + Train Casing + Precision Mechanism</p>
+        <strong>1 Train Controls</strong>
+      </article>
+      <article>
+        <p>Wool + Wooden Slab</p>
+        <strong>1 Seat</strong>
+      </article>
+      <article>
+        <p>Slimeballs + Iron Sheet + Iron Nugget</p>
+        <strong>1 Super Glue</strong>
+      </article>
+    </div>
+    <p class="train-note">
+      La recette des Stations en donne directement deux. C’est exactement ce qu’il faut pour notre départ et notre
+      terminus.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-first-line" data-phase="Construire la ligne">
+    <div class="train-title">
+      <span>04</span>
+      <div>
+        <p>Le chantier</p>
+        <h2>Poser une voie droite entre deux gares</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Choisis un terrain relativement plat et garde de l’espace autour des deux extrémités. La première Station doit
+      surtout disposer d’une portion droite suffisamment longue pour construire la locomotive devant elle.
+    </p>
+    <div class="train-line-plan" aria-label="Plan de la première ligne">
+      <div>
+        <strong>Atelier</strong>
+        <span>Station de montage</span>
+      </div>
+      <div class="train-line-rail"><span></span></div>
+      <div>
+        <strong>Terminus</strong>
+        <span>Premier objectif</span>
+      </div>
+    </div>
+    <ol class="train-steps">
+      <li>
+        <span>1</span>
+        <p>Pose un premier [Train Track] au sol.</p>
+      </li>
+      <li>
+        <span>2</span>
+        <p>Clic droit sur ce Track avec d’autres Tracks en main pour choisir le départ de la ligne.</p>
+      </li>
+      <li>
+        <span>3</span>
+        <p>Vise l’autre extrémité et confirme pour poser toute la rangée d’un coup.</p>
+      </li>
+      <li>
+        <span>4</span>
+        <p>Garde plusieurs Tracks droits libres devant chaque futur quai.</p>
+      </li>
+    </ol>
+    <p class="train-tip">
+      Les courbes et les pentes viendront plus tard. Pour le premier essai, une ligne droite évite de mélanger les
+      problèmes de construction du train avec ceux du tracé.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-first-stations" data-phase="Installer les gares">
+    <div class="train-title">
+      <span>05</span>
+      <div>
+        <p>Départ et arrivée</p>
+        <h2>Installer et nommer les deux Stations</h2>
+      </div>
+    </div>
+    <div class="train-station-layout">
+      <article>
+        <span>1</span>
+        <h3>Sélectionne la voie</h3>
+        <p>Avec une [Train Station] en main, fais un clic droit sur le Track où le train devra s’arrêter.</p>
+      </article>
+      <article>
+        <span>2</span>
+        <h3>Pose la Station à côté</h3>
+        <p>Le bloc peut être placé près de la voie. Le marqueur affiché sur les rails représente le véritable arrêt.</p>
+      </article>
+      <article>
+        <span>3</span>
+        <h3>Donne-lui un nom</h3>
+        <p>Ouvre son interface et appelle-la « Atelier ». Répète l’opération à l’autre bout avec « Terminus ».</p>
+      </article>
+    </div>
+    <p class="train-note">
+      Vérifie le sens des marqueurs. Une Station reconnaît les trains arrivant dans le sens indiqué. Si le Terminus
+      refuse ton approche, replace-le ou retourne son orientation avec la Wrench.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-first-bogey" data-phase="Créer le châssis">
+    <div class="train-title">
+      <span>06</span>
+      <div>
+        <p>Mode assemblage</p>
+        <h2>Faire apparaître le Bogey</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Un Bogey est le châssis à roues sur lequel repose la locomotive. Il ne se fabrique pas dans une Crafting Table :
+      la Station le crée directement sur la voie à partir d’un [Train Casing].
+    </p>
+    <div class="train-bogey-flow" aria-label="Création du premier Bogey">
+      <article>
+        <strong>Ouvre la Station « Atelier »</strong>
+        <span>Passe-la en Assembly Mode</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article>
+        <strong>Repère le Track bleu</strong>
+        <span>C’est le Station Marker</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article>
+        <strong>Utilise le Train Casing</strong>
+        <span>Clic droit sur le Track marqué</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article class="train-output">
+        <strong>Bogey</strong>
+        <span>Le châssis est prêt</span>
+      </article>
+    </div>
+    <p class="train-tip">
+      Un nouveau clic sur le Track permet de changer le modèle du Bogey. Pour ce premier train, le choix est surtout
+      esthétique. Garde simplement le Bogey placé sur le marqueur le plus proche de la Station.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-first-body" data-phase="Construire la locomotive">
+    <div class="train-title">
+      <span>07</span>
+      <div>
+        <p>Le premier véhicule</p>
+        <h2>Construire une locomotive compacte</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Construis un petit plancher autour ou au-dessus du Bogey. Il doit accueillir les Train Controls et laisser assez
+      de place pour que tu puisses te tenir derrière. Le Seat est pratique, mais pas obligatoire pour conduire.
+    </p>
+    <div class="train-locomotive-plan" aria-label="Disposition conseillée de la locomotive">
+      <div class="train-direction">Sens de départ →</div>
+      <div class="train-locomotive-top">
+        <span>Bloc avant</span>
+        <strong>Train Controls</strong>
+        <span>Seat</span>
+        <span>Coffre optionnel</span>
+      </div>
+      <div class="train-locomotive-base">
+        <span>Plancher de la locomotive</span>
+        <strong>Bogey sur la voie</strong>
+      </div>
+    </div>
+    <div class="train-two-column">
+      <article>
+        <h3>Oriente correctement les Controls</h3>
+        <p>
+          Leur flèche doit pointer vers le Terminus. S’ils regardent de côté ou vers l’arrière, l’assemblage peut être
+          refusé ou la conduite devenir inutilement confuse.
+        </p>
+      </article>
+      <article>
+        <h3>Le coffre et le combustible</h3>
+        <p>
+          Un Chest ou un Barrel collé au train peut contenir du charbon. Le train fonctionne sans, mais il se déplace
+          plus vite lorsqu’il trouve du combustible à bord.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="train-section" id="train-first-glue" data-phase="Relier les blocs">
+    <div class="train-title">
+      <span>08</span>
+      <div>
+        <p>L’étape qu’on oublie une fois</p>
+        <h2>Coller toute la locomotive au Bogey</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Des blocs simplement posés les uns contre les autres ne forment pas automatiquement un train. La [Super Glue]
+      indique à Create quels blocs doivent partir avec le Bogey au moment de l’assemblage.
+    </p>
+    <div class="train-glue-grid">
+      <article>
+        <span>1</span>
+        <h3>Prends la Super Glue</h3>
+        <p>Vise un premier coin de la locomotive et fais un clic droit.</p>
+      </article>
+      <article>
+        <span>2</span>
+        <h3>Encadre toute la construction</h3>
+        <p>Choisis le coin opposé pour créer une zone qui contient le Bogey, le plancher et les Controls.</p>
+      </article>
+      <article>
+        <span>3</span>
+        <h3>Vérifie les contours verts</h3>
+        <p>Ils doivent entourer tous les blocs destinés à partir, sans inclure le quai ni le décor de la gare.</p>
+      </article>
+    </div>
+    <p class="train-warning">
+      <strong>Si un bloc n’est pas collé, il reste sur place.</strong> Le train peut donc partir en abandonnant son
+      Seat, son coffre ou une partie de sa carrosserie avec une indifférence assez remarquable.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-first-assembly" data-phase="Assembler le train">
+    <div class="train-title">
+      <span>09</span>
+      <div>
+        <p>Le moment de vérité</p>
+        <h2>Transformer les blocs en véritable train</h2>
+      </div>
+    </div>
+    <ol class="train-checklist">
+      <li><span>✓</span>Le Bogey est placé sur le Station Marker bleu.</li>
+      <li><span>✓</span>Les Train Controls sont présents et orientés vers le départ.</li>
+      <li><span>✓</span>Le Bogey, le plancher, le Seat et les Controls sont collés ensemble.</li>
+      <li><span>✓</span>Aucun bloc du quai ou du décor n’est pris dans la zone de colle.</li>
+    </ol>
+    <p>
+      Ouvre ensuite la Station « Atelier » et confirme l’assemblage. Donne un nom au train si l’interface te le propose.
+      Les blocs deviennent alors une seule entité mobile posée sur les Tracks.
+    </p>
+    <p class="train-note">
+      Un train assemblé ne peut retrouver sa forme de blocs qu’à proximité d’une Station. Pour le modifier plus tard,
+      ramène-le en gare, ouvre la Station puis utilise l’option de désassemblage.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-first-drive" data-phase="Faire le premier trajet">
+    <div class="train-title">
+      <span>10</span>
+      <div>
+        <p>Départ immédiat</p>
+        <h2>Conduire jusqu’au Terminus</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Fais un clic droit sur les [Train Controls] pour prendre les commandes. Tu n’as pas besoin d’être assis, mais
+      reste suffisamment près du poste de conduite.
+    </p>
+    <div class="train-controls-grid">
+      <article>
+        <kbd>Avancer</kbd>
+        <p>Accélère dans le sens des Controls.</p>
+      </article>
+      <article>
+        <kbd>Reculer</kbd>
+        <p>Freine, puis repart en marche arrière.</p>
+      </article>
+      <article>
+        <kbd>Gauche / Droite</kbd>
+        <p>Choisit la direction à la prochaine bifurcation.</p>
+      </article>
+      <article>
+        <kbd>Molette</kbd>
+        <p>Règle la vitesse maximale du train.</p>
+      </article>
+      <article>
+        <kbd>Espace maintenu</kbd>
+        <p>Approche et rejoint automatiquement une Station proche.</p>
+      </article>
+      <article>
+        <kbd>S’accroupir ou recliquer</kbd>
+        <p>Quitte les Train Controls.</p>
+      </article>
+    </div>
+    <p class="train-warning">
+      Commence lentement. À l’approche du Terminus, maintiens Espace pour laisser le train se ranger correctement sur
+      son marqueur au lieu de dépasser la gare avec beaucoup d’enthousiasme.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-first-troubleshooting" data-phase="Corriger les problèmes">
+    <div class="train-title">
+      <span>11</span>
+      <div>
+        <p>Si l’assemblage refuse</p>
+        <h2>Les erreurs les plus courantes</h2>
+      </div>
+    </div>
+    <div class="train-troubleshooting">
+      <article>
+        <h3>« Frontmost Bogey must be at Station Marker »</h3>
+        <p>Le premier Bogey n’est pas sur le marqueur bleu de la Station. Détruis-le et recrée-le au bon endroit.</p>
+      </article>
+      <article>
+        <h3>Les Controls ne sont pas reconnus</h3>
+        <p>Vérifie qu’ils sont collés au même ensemble que le Bogey et que leur flèche suit la voie.</p>
+      </article>
+      <article>
+        <h3>Une partie du train reste au quai</h3>
+        <p>Les blocs concernés n’étaient pas inclus dans la zone de Super Glue. Désassemble le train et recolle-les.</p>
+      </article>
+      <article>
+        <h3>Le train ne trouve pas le Terminus</h3>
+        <p>Approche lentement, maintiens Espace et vérifie que la Station est orientée vers ton sens d’arrivée.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="train-section train-next" id="train-first-next" data-phase="Améliorer le train">
+    <div class="train-title">
+      <span>12</span>
+      <div>
+        <p>Premier trajet accompli</p>
+        <h2>Améliorer sans tout reconstruire</h2>
+      </div>
+    </div>
+    <p>
+      Tu as maintenant une vraie ligne et un train conduisible. Ramène-le en gare et désassemble-le pour ajouter une
+      carrosserie, un deuxième Bogey, une voiture de passagers ou du stockage. Garde simplement chaque future voiture
+      collée séparément des autres.
+    </p>
+    <div class="train-roadmap">
+      <span>Ajouter un second poste de conduite</span>
+      <span>Construire une voiture de passagers</span>
+      <span>Installer un wagon de marchandises</span>
+      <span>Préparer le premier Schedule</span>
+    </div>
+  </section>
+</div>
