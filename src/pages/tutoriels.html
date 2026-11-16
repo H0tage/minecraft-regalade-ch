@@ -46,6 +46,17 @@
           <p class="tutorial-library-group" role="presentation">Tous les autres</p>
           <button
             class="tutorial-tab"
+            id="tutorial-exploration-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-exploration"
+            tabindex="-1"
+          >
+            Exploration
+          </button>
+          <button
+            class="tutorial-tab"
             id="tutorial-create-first-factory-tab"
             type="button"
             role="tab"
@@ -169,6 +180,15 @@
         </section>
         <section class="tutorial-panel" id="tutorial-jei" role="tabpanel" aria-labelledby="tutorial-jei-tab" hidden>
           <!-- @include ../content/tutorials/jei.html -->
+        </section>
+        <section
+          class="tutorial-panel"
+          id="tutorial-exploration"
+          role="tabpanel"
+          aria-labelledby="tutorial-exploration-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/exploration.html -->
         </section>
         <section
           class="tutorial-panel"
