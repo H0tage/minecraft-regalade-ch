@@ -23,23 +23,25 @@
   top: 0;
   z-index: 20;
   display: flex;
-  width: fit-content;
+  width: 100%;
   max-width: 100%;
   padding: 4px;
   margin: 0 0 24px;
-  overflow-x: auto;
   background: #fff;
   border: 1px solid var(--train-line);
   border-radius: 14px;
 }
 
 .train-switcher button {
+  flex: 1 1 0;
+  min-width: 0;
   padding: 10px 16px;
   color: var(--train-muted);
   font: inherit;
   font-size: var(--tutorial-tab-size);
   font-weight: 800;
-  white-space: nowrap;
+  line-height: 1.15;
+  white-space: normal;
   background: transparent;
   border: 0;
   border-radius: 10px;
@@ -1073,6 +1075,7 @@
 
 .train-station-build li,
 .train-delivery-timeline article,
+.train-delivery-timeline li,
 .train-package-steps li {
   display: grid;
   grid-template-columns: 32px minmax(0, 1fr);
@@ -1085,6 +1088,7 @@
 
 .train-station-build li > span,
 .train-delivery-timeline article > span,
+.train-delivery-timeline li > span,
 .train-package-steps li > span {
   display: grid;
   width: 30px;
@@ -1102,7 +1106,8 @@
   margin: 0;
 }
 
-.train-delivery-timeline article > span {
+.train-delivery-timeline article > span,
+.train-delivery-timeline li > span {
   color: var(--train-green);
   border-color: #a9d5c7;
   border-radius: 50%;
@@ -1112,22 +1117,315 @@
   margin-bottom: 0;
 }
 
-@media (width <= 1200px) {
-  .train-switcher {
-    width: 100%;
-    overflow: visible;
-  }
+.train-network-vocabulary,
+.train-signal-placement,
+.train-signal-comparison {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
 
-  .train-switcher button {
-    flex: 1 1 0;
-    min-width: 0;
-    padding-inline: 8px;
-    line-height: 1.15;
-    white-space: normal;
-  }
+.train-network-vocabulary article,
+.train-signal-placement article,
+.train-signal-comparison article {
+  padding: 15px;
+  border: 1px solid var(--train-line);
+  border-radius: 12px;
+}
+
+.train-network-vocabulary strong,
+.train-signal-placement h3,
+.train-signal-comparison h3,
+.train-network-vocabulary p,
+.train-signal-placement p,
+.train-signal-comparison p {
+  margin-top: 0;
+}
+
+.train-network-vocabulary p,
+.train-signal-placement p,
+.train-signal-comparison p {
+  margin-bottom: 0;
+}
+
+.train-block-demo,
+.train-two-trains {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: stretch;
+  margin: 18px 0;
+}
+
+.train-block-demo article,
+.train-two-trains article,
+.train-section-map article {
+  display: grid;
+  gap: 5px;
+  align-content: center;
+  min-height: 84px;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid var(--train-line);
+  border-radius: 11px;
+}
+
+.train-block-demo b,
+.train-two-trains > i {
+  align-self: center;
+  color: var(--train-orange);
+  font-size: 0.75rem;
+  font-style: normal;
+  text-align: center;
+}
+
+.train-block-demo span,
+.train-two-trains span,
+.train-section-map span,
+.train-loop-track > span {
+  color: var(--train-blue);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.train-block-demo .is-occupied,
+.train-two-trains .is-train {
+  border-color: #e7a47a;
+}
+
+.train-loop-plan {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  margin: 18px 0;
+  border: 1px solid var(--train-line);
+  border-radius: 12px;
+}
+
+.train-loop-track {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr) auto auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 13px;
+  border: 1px solid var(--train-line);
+  border-radius: 10px;
+}
+
+.train-loop-track b:last-child {
+  text-align: right;
+}
+
+.train-loop-track i {
+  color: var(--train-orange);
+  font-size: 1.15rem;
+  font-style: normal;
+}
+
+.train-loop-turn {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 20px;
+  color: var(--train-green);
+  font-weight: 900;
+}
+
+.train-signal-recipe {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  margin: 18px 0;
+}
+
+.train-signal-recipe article {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 70px;
+  padding: 12px;
+  border: 1px solid var(--train-line);
+  border-radius: 11px;
+}
+
+.train-signal-recipe article > span,
+.train-signal-placement article > span {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  color: var(--train-orange);
+  font-weight: 900;
+  border: 1px solid #f0cdb7;
+  border-radius: 8px;
+  place-items: center;
+}
+
+.train-signal-recipe > b {
+  color: var(--train-orange);
+}
+
+.train-signal-recipe .is-result {
+  color: var(--train-green);
+  border-color: #a9d5c7;
+}
+
+.train-signal-placement article {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 6px 10px;
+  align-content: start;
+}
+
+.train-signal-placement article > span {
+  grid-row: 1 / span 2;
+}
+
+.train-section-map {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.train-section-map article {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.train-section-map i {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  left: 10px;
+  color: var(--train-orange);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.train-two-trains {
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+}
+
+.train-junction-plan {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 10px;
+  align-items: center;
+  margin: 18px 0;
+}
+
+.train-junction-plan article,
+.train-crossing-plan article,
+.train-bidirectional-plan article,
+.train-bidirectional-plan > div {
+  display: grid;
+  gap: 5px;
+  align-content: center;
+  min-height: 78px;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid var(--train-line);
+  border-radius: 11px;
+}
+
+.train-junction-plan > div {
+  display: grid;
+  gap: 8px;
+}
+
+.train-junction-plan > b,
+.train-crossing-plan > b {
+  color: var(--train-orange);
+}
+
+.train-junction-plan .is-junction,
+.train-crossing-plan .is-danger {
+  border-color: #e7a47a;
+}
+
+.train-signal-comparison {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 18px 0;
+}
+
+.train-signal-comparison .is-cross {
+  border-color: #c9ae68;
+}
+
+.train-crossing-plan {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  margin: 18px 0;
+}
+
+.train-bidirectional-plan {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.8fr) minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  margin: 18px 0;
+}
+
+.train-bidirectional-plan article {
+  grid-template-columns: 1fr auto;
+}
+
+.train-bidirectional-plan > div {
+  grid-template-columns: 1fr 1fr;
+  min-height: auto;
+}
+
+.train-next-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.train-next-grid span {
+  display: grid;
+  min-height: 76px;
+  padding: 12px;
+  font-weight: 800;
+  text-align: center;
+  border: 1px solid var(--train-line);
+  border-radius: 11px;
+  place-items: center;
 }
 
 @media (width <= 900px) {
+  .train-network-vocabulary,
+  .train-signal-placement,
+  .train-section-map,
+  .train-next-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .train-block-demo,
+  .train-two-trains,
+  .train-junction-plan,
+  .train-crossing-plan,
+  .train-bidirectional-plan {
+    grid-template-columns: 1fr;
+  }
+
+  .train-block-demo b,
+  .train-two-trains > i,
+  .train-junction-plan > b,
+  .train-crossing-plan > b {
+    transform: rotate(90deg);
+  }
+
+  .train-signal-recipe {
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+  }
+
   .train-line {
     grid-template-columns: 1fr;
   }
@@ -1214,8 +1512,27 @@
   .train-auto-loop,
   .train-freight-systems,
   .train-freight-recipes,
-  .train-freight-carriage-plan {
+  .train-freight-carriage-plan,
+  .train-network-vocabulary,
+  .train-signal-placement,
+  .train-signal-comparison,
+  .train-section-map,
+  .train-next-grid,
+  .train-signal-recipe {
     grid-template-columns: 1fr;
+  }
+
+  .train-signal-recipe > b {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+
+  .train-loop-track {
+    grid-template-columns: 1fr auto auto 1fr;
+  }
+
+  .train-loop-track > span {
+    grid-column: 1 / -1;
   }
 
   .train-coupling {

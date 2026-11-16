@@ -1,0 +1,537 @@
+<div class="train-panel" id="train-network-panel" role="tabpanel" aria-labelledby="train-network-tab" hidden>
+  <header class="train-hero">
+    <p class="train-eyebrow">Deux trains, un seul réseau et aucune collision au programme</p>
+    <h1>Faire circuler plusieurs trains</h1>
+    <p>
+      Jusqu’ici, notre train possédait toute la ligne. Il pouvait faire demi-tour, attendre en gare ou s’arrêter en
+      plein milieu sans gêner personne. À partir du moment où un deuxième conducteur arrive, cette liberté commence à
+      poser quelques problèmes assez évidents.
+    </p>
+    <p>
+      On va transformer la ligne Atelier-Terminus en boucle à sens unique, poser quatre Train Signals et lancer un
+      second train sur le réseau. Tu comprendras ensuite comment sécuriser une voie bidirectionnelle, un aiguillage et
+      un carrefour sans devoir apprendre la signalisation ferroviaire suisse dans son intégralité.
+    </p>
+    <div class="train-project-summary" aria-label="Objectif du parcours réseau">
+      <span>1 boucle complète</span>
+      <span>4 Train Signals</span>
+      <span>4 sections protégées</span>
+      <span>2 trains en circulation</span>
+    </div>
+  </header>
+
+  <section class="train-section" id="train-network-principle" data-phase="Comprendre les Signals">
+    <div class="train-title">
+      <span>01</span>
+      <div>
+        <p>Le principe à retenir</p>
+        <h2>Un Signal découpe la voie en sections</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Un [Train Signal] ne mesure pas la distance entre deux trains. Il crée une frontière sur le Track. Les frontières
+      successives découpent le réseau en sections, et Create évite que deux trains automatiques occupent la même section
+      en même temps.
+    </p>
+    <div class="train-network-vocabulary">
+      <article>
+        <strong>Signal</strong>
+        <p>Le bloc visible placé au bord de la voie. Il indique si un train automatique peut avancer.</p>
+      </article>
+      <article>
+        <strong>Frontière</strong>
+        <p>Le point précis du Track associé au Signal. C’est ici que commence la section suivante.</p>
+      </article>
+      <article>
+        <strong>Section</strong>
+        <p>La portion du réseau comprise entre deux frontières. Un seul train peut l’occuper.</p>
+      </article>
+    </div>
+    <div class="train-block-demo" aria-label="Exemple de découpage d'une voie en sections">
+      <article>
+        <span>SECTION A</span>
+        <strong>Libre</strong>
+      </article>
+      <b>Signal 1</b>
+      <article class="is-occupied">
+        <span>SECTION B</span>
+        <strong>Train présent</strong>
+      </article>
+      <b>Signal 2</b>
+      <article>
+        <span>SECTION C</span>
+        <strong>Libre</strong>
+      </article>
+    </div>
+    <p class="train-note">
+      Les Signals contrôlent surtout les trains conduits par un Schedule. Un joueur peut franchir un Signal rouge et
+      provoquer une collision. En conduite manuelle, considère donc le rouge comme un véritable arrêt.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-network-plan" data-phase="Choisir le premier réseau">
+    <div class="train-title">
+      <span>02</span>
+      <div>
+        <p>Un circuit simple à lire</p>
+        <h2>Transformer la navette en boucle à sens unique</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Une voie unique utilisée dans les deux sens fonctionne, mais elle demande des Signals dans les deux directions et
+      peut facilement créer un face-à-face. Pour ce premier réseau, une boucle est beaucoup plus claire : tous les
+      trains roulent dans le même sens et ne se croisent jamais de front.
+    </p>
+    <div class="train-loop-plan" aria-label="Plan de la boucle Atelier Terminus">
+      <div class="train-loop-track train-loop-outbound">
+        <span>ALLER</span>
+        <b>Atelier</b>
+        <i>→</i>
+        <i>→</i>
+        <b>Terminus</b>
+      </div>
+      <div class="train-loop-turn"><span>↘</span><span>↖</span></div>
+      <div class="train-loop-track train-loop-return">
+        <span>RETOUR</span>
+        <b>Atelier</b>
+        <i>←</i>
+        <i>←</i>
+        <b>Terminus</b>
+      </div>
+    </div>
+    <div class="train-two-column">
+      <article>
+        <h3>Ce que l’on conserve</h3>
+        <p>Les deux Stations, les quais, les Postboxes et le trajet aller déjà construit restent utilisables.</p>
+      </article>
+      <article>
+        <h3>Ce que l’on ajoute</h3>
+        <p>Une seconde voie relie le Terminus à l’Atelier et ferme le circuit sans croiser le trajet aller.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="train-section" id="train-network-shopping" data-phase="Préparer le matériel">
+    <div class="train-title">
+      <span>03</span>
+      <div>
+        <p>Avant de modifier la ligne</p>
+        <h2>Réunir les Tracks, les Signals et le second train</h2>
+      </div>
+    </div>
+    <div class="train-prerequisite-grid">
+      <article>
+        <h3>Pour fermer la boucle</h3>
+        <ul>
+          <li>Des [Train Tracks]</li>
+          <li>De quoi construire deux grandes courbes</li>
+          <li>Des blocs pour les ponts ou les remblais</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Pour la signalisation</h3>
+        <ul>
+          <li>4 [Train Signals]</li>
+          <li>1 [Wrench]</li>
+          <li>Éventuellement des Nixie Tubes</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Pour le second train</h3>
+        <ul>
+          <li>Une locomotive simple</li>
+          <li>Un conducteur</li>
+          <li>Un nouveau Schedule</li>
+        </ul>
+      </article>
+    </div>
+    <div class="train-signal-recipe" aria-label="Recette des Train Signals">
+      <article>
+        <span>1</span>
+        <strong>Railway Casing</strong>
+      </article>
+      <b>+</b>
+      <article>
+        <span>1</span>
+        <strong>Electron Tube</strong>
+      </article>
+      <b>→</b>
+      <article class="is-result">
+        <span>4</span>
+        <strong>Train Signals</strong>
+      </article>
+    </div>
+    <p class="train-note">
+      Le deuxième train peut rester très simple. Reprends la construction de « Mon premier train » et utilise une
+      Station de dépôt raccordée à la boucle pour l’assembler sans bloquer l’Atelier.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-network-build-loop" data-phase="Fermer la boucle">
+    <div class="train-title">
+      <span>04</span>
+      <div>
+        <p>Une voie aller, une voie retour</p>
+        <h2>Construire le trajet de retour</h2>
+      </div>
+    </div>
+    <ol class="train-schedule-steps">
+      <li>
+        <span>1</span>
+        <p>Récupère le Schedule du premier conducteur afin qu’il reste en gare pendant les travaux.</p>
+      </li>
+      <li>
+        <span>2</span>
+        <p>Depuis le Terminus, prolonge la voie avec une grande courbe qui s’éloigne du trajet aller.</p>
+      </li>
+      <li>
+        <span>3</span>
+        <p>Construis le retour parallèlement à la voie existante, avec assez d’espace pour les bâtiments.</p>
+      </li>
+      <li>
+        <span>4</span>
+        <p>À proximité de l’Atelier, utilise une seconde courbe pour raccorder le retour au départ.</p>
+      </li>
+      <li>
+        <span>5</span>
+        <p>Parcours la boucle manuellement une fois et vérifie qu’aucun Track ne termine dans le vide.</p>
+      </li>
+    </ol>
+    <div class="train-two-column">
+      <article>
+        <h3>Les Stations doivent regarder dans le bon sens</h3>
+        <p>Leur flèche suit le sens de circulation de la boucle. Retourne une Station mal orientée avant les essais.</p>
+      </article>
+      <article>
+        <h3>Les courbes doivent accepter tout le train</h3>
+        <p>Laisse assez de place pour que les wagons passent sans frotter un mur, un quai ou la voie voisine.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="train-section" id="train-network-place-signal" data-phase="Poser les Signals">
+    <div class="train-title">
+      <span>05</span>
+      <div>
+        <p>Créer une frontière sur le Track</p>
+        <h2>Placer et orienter un premier Train Signal</h2>
+      </div>
+    </div>
+    <div class="train-signal-placement">
+      <article>
+        <span>1</span>
+        <h3>Sélectionne le Track</h3>
+        <p>Avec le Train Signal en main, fais un clic droit sur le point de la voie où tu veux créer la frontière.</p>
+      </article>
+      <article>
+        <span>2</span>
+        <h3>Place le bloc à proximité</h3>
+        <p>Une prévisualisation relie le Signal à la voie. Pose-le au bord du Track, là où il reste visible.</p>
+      </article>
+      <article>
+        <span>3</span>
+        <h3>Vérifie son sens</h3>
+        <p>Le Signal autorise le passage dans une seule direction. Son indicateur doit suivre le sens de la boucle.</p>
+      </article>
+    </div>
+    <p class="train-note">
+      Un train automatique ne franchit jamais un Signal dans le sens opposé. Si toute la ligne devient introuvable après
+      la pose, le Signal regarde probablement du mauvais côté.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-network-sections" data-phase="Découper le circuit">
+    <div class="train-title">
+      <span>06</span>
+      <div>
+        <p>Quatre frontières pour deux trains</p>
+        <h2>Créer quatre sections assez longues</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Répartis les quatre Signals autour de la boucle, tous orientés dans le même sens. Chaque section doit pouvoir
+      contenir ton train le plus long sans qu’un wagon reste derrière le Signal précédent.
+    </p>
+    <div class="train-section-map" aria-label="Répartition des quatre Signals autour de la boucle">
+      <article><span>Atelier</span><strong>Signal A</strong><i>→ Section 1</i></article>
+      <article><span>Milieu de l’aller</span><strong>Signal B</strong><i>→ Section 2</i></article>
+      <article><span>Terminus</span><strong>Signal C</strong><i>→ Section 3</i></article>
+      <article><span>Milieu du retour</span><strong>Signal D</strong><i>→ Section 4</i></article>
+    </div>
+    <div class="train-two-column">
+      <article>
+        <h3>Le Signal se place avant la zone à protéger</h3>
+        <p>Le train s’arrête devant la frontière et attend que la section située après elle se libère.</p>
+      </article>
+      <article>
+        <h3>Une section trop courte n’est pas utile</h3>
+        <p>
+          Si le train dépasse sur la section précédente, il peut réserver deux zones et bloquer inutilement le réseau.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="train-section" id="train-network-first-test" data-phase="Tester un seul train">
+    <div class="train-title">
+      <span>07</span>
+      <div>
+        <p>Avant d’ajouter du trafic</p>
+        <h2>Faire un tour complet avec le premier train</h2>
+      </div>
+    </div>
+    <ol class="train-delivery-timeline">
+      <li>
+        <span>1</span>
+        <p>Modifie le Schedule pour qu’il visite l’Atelier puis le Terminus en suivant la boucle.</p>
+      </li>
+      <li>
+        <span>2</span>
+        <p>Rends le Schedule au conducteur et laisse le train effectuer un tour complet.</p>
+      </li>
+      <li>
+        <span>3</span>
+        <p>Vérifie que chaque Signal passe au rouge lorsque le train entre dans la section suivante.</p>
+      </li>
+      <li>
+        <span>4</span>
+        <p>Contrôle que le train trouve les deux Stations sans repartir en arrière.</p>
+      </li>
+    </ol>
+    <p class="train-note">
+      Si le train annonce qu’aucun chemin n’existe, ne rajoute pas des Signals au hasard. Vérifie d’abord leur sens,
+      l’orientation des Stations et la continuité de la boucle.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-network-second-train" data-phase="Ajouter le second train">
+    <div class="train-title">
+      <span>08</span>
+      <div>
+        <p>Le réseau commence réellement</p>
+        <h2>Lancer un deuxième train sur la même boucle</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Assemble le second train depuis la Station de dépôt, installe son conducteur et programme un Schedule identique.
+      Attends que le premier train soit au moins deux sections plus loin avant de le lancer.
+    </p>
+    <div class="train-two-trains" aria-label="Deux trains séparés par les sections du réseau">
+      <article class="is-train"><span>TRAIN 1</span><strong>Section 1 occupée</strong></article>
+      <i>Signal rouge</i>
+      <article><span>SECTION 2</span><strong>Libre</strong></article>
+      <i>Signal vert</i>
+      <article class="is-train"><span>TRAIN 2</span><strong>Section 3 occupée</strong></article>
+      <i>Signal rouge</i>
+      <article><span>SECTION 4</span><strong>Libre</strong></article>
+    </div>
+    <div class="train-two-column">
+      <article>
+        <h3>Le train de devant ralentit</h3>
+        <p>
+          Le second attendra devant un Signal rouge au lieu de le percuter. Il repartira quand la section sera libre.
+        </p>
+      </article>
+      <article>
+        <h3>Une gare reste occupée trop longtemps</h3>
+        <p>Le train suivant peut former une file. Réduis l’attente ou ajoute une voie de quai supplémentaire.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="train-section" id="train-network-junctions" data-phase="Comprendre les aiguillages">
+    <div class="train-title">
+      <span>09</span>
+      <div>
+        <p>Ajouter une nouvelle destination</p>
+        <h2>Créer un aiguillage sans bouton magique</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Dans Create, un aiguillage apparaît lorsqu’un nouveau Track est raccordé au côté d’une voie existante. Il n’y a
+      pas de bloc à activer pour envoyer un train automatique à gauche ou à droite : le conducteur calcule lui-même le
+      chemin vers la prochaine Station de son Schedule.
+    </p>
+    <div class="train-junction-plan" aria-label="Fonctionnement d'un aiguillage Create">
+      <article><strong>Ligne principale</strong><span>Atelier → Terminus</span></article>
+      <b>→</b>
+      <article class="is-junction"><strong>Aiguillage</strong><span>Le Track se divise</span></article>
+      <div>
+        <article><strong>Tout droit</strong><span>Vers Terminus</span></article>
+        <article><strong>Branche</strong><span>Vers la nouvelle Station</span></article>
+      </div>
+    </div>
+    <p class="train-note">
+      En conduite manuelle, les touches de déplacement permettent de choisir la branche. En conduite automatique, c’est
+      la destination du Schedule qui décide.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-network-cross-signal" data-phase="Protéger un carrefour">
+    <div class="train-title">
+      <span>10</span>
+      <div>
+        <p>Ne pas s’arrêter au milieu</p>
+        <h2>Utiliser le Cross Signal avant un carrefour</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Un Signal normal vérifie surtout que la section suivante est libre. À l’entrée d’un carrefour, cela peut autoriser
+      un train à avancer alors que sa sortie est bloquée. Il s’immobilise ensuite au milieu et condamne toutes les
+      autres voies.
+    </p>
+    <div class="train-signal-comparison">
+      <article>
+        <p class="train-card-label">Signal normal</p>
+        <h3>Protège une section</h3>
+        <p>Le train entre si la zone juste après le Signal est disponible.</p>
+      </article>
+      <article class="is-cross">
+        <p class="train-card-label">Cross Signal en laiton</p>
+        <h3>Protège la sortie du carrefour</h3>
+        <p>Le train entre seulement s’il peut traverser la zone et ressortir immédiatement.</p>
+      </article>
+    </div>
+    <div class="train-crossing-plan" aria-label="Placement des Signals autour d'un carrefour">
+      <article><span>Avant le carrefour</span><strong>Cross Signal</strong></article>
+      <b>→</b>
+      <article class="is-danger"><span>Zone à garder vide</span><strong>Carrefour</strong></article>
+      <b>→</b>
+      <article><span>Après chaque sortie</span><strong>Signal normal</strong></article>
+    </div>
+    <ol class="train-schedule-steps">
+      <li>
+        <span>1</span>
+        <p>Pose d’abord des Signals normaux après toutes les sorties du carrefour.</p>
+      </li>
+      <li>
+        <span>2</span>
+        <p>Pose un Signal à chaque entrée, orienté vers le carrefour.</p>
+      </li>
+      <li>
+        <span>3</span>
+        <p>Utilise la Wrench sur les Signals d’entrée pour les passer en mode Cross Signal.</p>
+      </li>
+      <li>
+        <span>4</span>
+        <p>Teste chaque trajet avec un train avant d’ouvrir le carrefour au trafic normal.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="train-section" id="train-network-two-way" data-phase="Gérer les deux sens">
+    <div class="train-title">
+      <span>11</span>
+      <div>
+        <p>Quand une seule voie doit suffire</p>
+        <h2>Autoriser les trains dans les deux directions</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Un Signal seul interdit aux trains automatiques d’arriver depuis le côté opposé. Pour créer une frontière
+      bidirectionnelle, ajoute un second Signal lié au même point du Track et orienté dans l’autre sens.
+    </p>
+    <div class="train-bidirectional-plan" aria-label="Frontières d'une voie bidirectionnelle">
+      <article><span>Train vers la droite</span><strong>→</strong></article>
+      <div><b>Signal →</b><b>← Signal</b></div>
+      <article><strong>←</strong><span>Train vers la gauche</span></article>
+    </div>
+    <p class="train-note">
+      Une voie bidirectionnelle reste plus facile à bloquer qu’une boucle. Prévois des zones de croisement assez longues
+      pour qu’un train puisse attendre pendant que l’autre libère la voie unique.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-network-observer" data-phase="Détecter sans protéger">
+    <div class="train-title">
+      <span>12</span>
+      <div>
+        <p>Une confusion fréquente</p>
+        <h2>Le Train Observer ne remplace pas un Signal</h2>
+      </div>
+    </div>
+    <div class="train-two-column">
+      <article>
+        <h3>Train Signal</h3>
+        <p>Réserve les sections et empêche les trains automatiques d’entrer dans une zone occupée.</p>
+      </article>
+      <article>
+        <h3>Train Observer</h3>
+        <p>Détecte le passage d’un train et émet de la Redstone. Son filtre peut aussi reconnaître une cargaison.</p>
+      </article>
+    </div>
+    <div class="train-signal-recipe" aria-label="Recette des Train Observers">
+      <article><span>1</span><strong>Railway Casing</strong></article>
+      <b>+</b>
+      <article><span>1</span><strong>Wooden Pressure Plate</strong></article>
+      <b>→</b>
+      <article class="is-result"><span>2</span><strong>Train Observers</strong></article>
+    </div>
+    <p class="train-note">
+      Utilise un Observer pour ouvrir une porte, sonner une cloche, activer un panneau ou déclencher une machine. Pour
+      éviter les collisions, utilise toujours de vrais Train Signals.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-network-troubleshooting" data-phase="Corriger les blocages">
+    <div class="train-title">
+      <span>13</span>
+      <div>
+        <p>Quand tout le monde attend</p>
+        <h2>Les erreurs les plus fréquentes</h2>
+      </div>
+    </div>
+    <div class="train-troubleshooting">
+      <article>
+        <h3>Le train ne trouve plus sa Station</h3>
+        <p>Un Signal regarde à contresens, une Station est inversée ou la boucle n’est pas complètement reliée.</p>
+      </article>
+      <article>
+        <h3>Deux trains restent face à face</h3>
+        <p>La voie bidirectionnelle ne possède aucune zone de croisement où l’un des trains peut patienter.</p>
+      </article>
+      <article>
+        <h3>Le train attend devant un Signal vert</h3>
+        <p>
+          Une section plus loin est peut-être réservée, ou un Cross Signal vérifie également la sortie du carrefour.
+        </p>
+      </article>
+      <article>
+        <h3>Un train bloque tout le carrefour</h3>
+        <p>Remplace le Signal d’entrée par un Cross Signal et place des Signals normaux après les sorties.</p>
+      </article>
+      <article>
+        <h3>Les trains se suivent de trop près</h3>
+        <p>Ajoute une frontière pour créer davantage de sections, sans les rendre plus courtes que tes trains.</p>
+      </article>
+      <article>
+        <h3>Le Signal reste rouge</h3>
+        <p>
+          Un train ou un wagon occupe encore la section. Vérifie aussi qu’aucun Signal n’est forcé au rouge par la
+          Redstone.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="train-section train-next" id="train-network-next" data-phase="Faire évoluer le réseau">
+    <div class="train-title">
+      <span>14</span>
+      <div>
+        <p>Le réseau peut grandir</p>
+        <h2>Passer de deux trains à un véritable service ferroviaire</h2>
+      </div>
+    </div>
+    <p>
+      Tu disposes maintenant d’une boucle partagée, de sections protégées et des bases nécessaires pour ajouter des
+      branches sans provoquer une collision toutes les trois minutes. La suite dépend surtout de ce que les joueurs ont
+      envie de relier entre eux.
+    </p>
+    <div class="train-next-grid">
+      <span>Ajouter des quais parallèles</span>
+      <span>Construire une gare de tri</span>
+      <span>Afficher les départs</span>
+      <span>Créer plusieurs lignes</span>
+    </div>
+  </section>
+</div>
