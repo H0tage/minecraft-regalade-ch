@@ -23,6 +23,7 @@ const styleSources = [
   'tutorials/agriculture.css',
   'tutorials/photography.css',
   'tutorials/fishing.css',
+  'tutorials/buddycards.css',
   'tutorials/jei.css',
   'tutorials/storage.css',
   'tutorials/create.css',

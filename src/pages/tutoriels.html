@@ -145,6 +145,17 @@
           </button>
           <button
             class="tutorial-tab"
+            id="tutorial-buddycards-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-buddycards"
+            tabindex="-1"
+          >
+            Collectionner les Buddycards
+          </button>
+          <button
+            class="tutorial-tab"
             id="tutorial-big-cannons-tab"
             type="button"
             role="tab"
@@ -261,6 +272,15 @@
           hidden
         >
           <!-- @include ../content/tutorials/photography.html -->
+        </section>
+        <section
+          class="tutorial-panel"
+          id="tutorial-buddycards"
+          role="tabpanel"
+          aria-labelledby="tutorial-buddycards-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/buddycards.html -->
         </section>
         <section
           class="tutorial-panel"
