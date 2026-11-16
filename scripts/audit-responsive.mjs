@@ -61,6 +61,7 @@ for (const width of widths) {
   await page.goto(`${baseUrl}?qa=${Date.now()}#tutoriels`, { waitUntil: 'networkidle' });
   await auditTabList(page, '#tutoriels [data-tab-storage="regalade.tutorial.active"]', `Tutoriels à ${width}px`);
   for (const [panelId, hasNestedTabs] of [
+    ['tutorial-agriculture', true],
     ['tutorial-economy', true],
     ['tutorial-cuisine', true],
     ['tutorial-photography', true],
