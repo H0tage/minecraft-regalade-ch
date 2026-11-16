@@ -21,6 +21,17 @@
           aria-label="Choisir un tutoriel"
           data-tab-storage="regalade.tutorial.active"
         >
+          <p class="tutorial-library-group" role="presentation">Tutos ultra essentiels</p>
+          <button
+            class="tutorial-tab active"
+            id="tutorial-first-minecraft-tab"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="tutorial-first-minecraft"
+          >
+            Première fois sur Minecraft ?
+          </button>
           <button
             class="tutorial-tab"
             id="tutorial-jei-tab"
@@ -31,6 +42,18 @@
             tabindex="-1"
           >
             JEI
+          </button>
+          <p class="tutorial-library-group" role="presentation">Tous les autres</p>
+          <button
+            class="tutorial-tab"
+            id="tutorial-create-first-factory-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-create-first-factory"
+            tabindex="-1"
+          >
+            Create
           </button>
           <button
             class="tutorial-tab"
@@ -44,14 +67,26 @@
             Stockage optimisé
           </button>
           <button
-            class="tutorial-tab active"
+            class="tutorial-tab"
             id="tutorial-economy-tab"
             type="button"
             role="tab"
-            aria-selected="true"
+            aria-selected="false"
             aria-controls="tutorial-economy"
+            tabindex="-1"
           >
             Argent et échanges
+          </button>
+          <button
+            class="tutorial-tab"
+            id="tutorial-trains-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-trains"
+            tabindex="-1"
+          >
+            Trains et livraisons
           </button>
           <button
             class="tutorial-tab"
@@ -66,17 +101,6 @@
           </button>
           <button
             class="tutorial-tab"
-            id="tutorial-photography-tab"
-            type="button"
-            role="tab"
-            aria-selected="false"
-            aria-controls="tutorial-photography"
-            tabindex="-1"
-          >
-            Photographie et tableaux
-          </button>
-          <button
-            class="tutorial-tab"
             id="tutorial-fishing-tab"
             type="button"
             role="tab"
@@ -88,25 +112,14 @@
           </button>
           <button
             class="tutorial-tab"
-            id="tutorial-create-first-factory-tab"
+            id="tutorial-photography-tab"
             type="button"
             role="tab"
             aria-selected="false"
-            aria-controls="tutorial-create-first-factory"
+            aria-controls="tutorial-photography"
             tabindex="-1"
           >
-            Create
-          </button>
-          <button
-            class="tutorial-tab"
-            id="tutorial-trains-tab"
-            type="button"
-            role="tab"
-            aria-selected="false"
-            aria-controls="tutorial-trains"
-            tabindex="-1"
-          >
-            Trains et livraisons
+            Photographie et tableaux
           </button>
           <button
             class="tutorial-tab"
@@ -137,50 +150,14 @@
       <div class="tutorial-content">
         <section
           class="tutorial-panel active"
-          id="tutorial-economy"
+          id="tutorial-first-minecraft"
           role="tabpanel"
-          aria-labelledby="tutorial-economy-tab"
+          aria-labelledby="tutorial-first-minecraft-tab"
         >
-          <!-- @include ../content/tutorials/economy.html -->
+          <!-- @include ../content/tutorials/first-minecraft.html -->
         </section>
         <section class="tutorial-panel" id="tutorial-jei" role="tabpanel" aria-labelledby="tutorial-jei-tab" hidden>
           <!-- @include ../content/tutorials/jei.html -->
-        </section>
-        <section
-          class="tutorial-panel"
-          id="tutorial-storage"
-          role="tabpanel"
-          aria-labelledby="tutorial-storage-tab"
-          hidden
-        >
-          <!-- @include ../content/tutorials/storage.html -->
-        </section>
-        <section
-          class="tutorial-panel"
-          id="tutorial-cuisine"
-          role="tabpanel"
-          aria-labelledby="tutorial-cuisine-tab"
-          hidden
-        >
-          <!-- @include ../content/tutorials/cuisine.html -->
-        </section>
-        <section
-          class="tutorial-panel"
-          id="tutorial-photography"
-          role="tabpanel"
-          aria-labelledby="tutorial-photography-tab"
-          hidden
-        >
-          <!-- @include ../content/tutorials/photography.html -->
-        </section>
-        <section
-          class="tutorial-panel"
-          id="tutorial-fishing"
-          role="tabpanel"
-          aria-labelledby="tutorial-fishing-tab"
-          hidden
-        >
-          <!-- @include ../content/tutorials/fishing.html -->
         </section>
         <section
           class="tutorial-panel"
@@ -193,12 +170,57 @@
         </section>
         <section
           class="tutorial-panel"
+          id="tutorial-storage"
+          role="tabpanel"
+          aria-labelledby="tutorial-storage-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/storage.html -->
+        </section>
+        <section
+          class="tutorial-panel"
+          id="tutorial-economy"
+          role="tabpanel"
+          aria-labelledby="tutorial-economy-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/economy.html -->
+        </section>
+        <section
+          class="tutorial-panel"
           id="tutorial-trains"
           role="tabpanel"
           aria-labelledby="tutorial-trains-tab"
           hidden
         >
           <!-- @include ../content/tutorials/trains.html -->
+        </section>
+        <section
+          class="tutorial-panel"
+          id="tutorial-cuisine"
+          role="tabpanel"
+          aria-labelledby="tutorial-cuisine-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/cuisine.html -->
+        </section>
+        <section
+          class="tutorial-panel"
+          id="tutorial-fishing"
+          role="tabpanel"
+          aria-labelledby="tutorial-fishing-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/fishing.html -->
+        </section>
+        <section
+          class="tutorial-panel"
+          id="tutorial-photography"
+          role="tabpanel"
+          aria-labelledby="tutorial-photography-tab"
+          hidden
+        >
+          <!-- @include ../content/tutorials/photography.html -->
         </section>
         <section
           class="tutorial-panel"

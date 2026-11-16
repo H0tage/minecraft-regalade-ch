@@ -78,6 +78,20 @@
   border: 0;
 }
 
+.tutorial-library-group {
+  margin: 13px 8px 3px;
+  color: #7b8a91;
+  font-size: 0.61rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.tutorial-library-group:first-child {
+  margin-top: 2px;
+}
+
 #tutoriels .tutorial-library .tutorial-tab {
   position: relative;
   width: 100%;
