@@ -1,0 +1,294 @@
+<div class="storage-panel" id="storage-drawers-panel" role="tabpanel" aria-labelledby="storage-drawers-tab" hidden>
+  <header class="storage-hero">
+    <p class="storage-eyebrow">Premier chantier de stockage</p>
+    <h1>Construire un mur de Drawers</h1>
+    <p>
+      Un mur de Drawers, c’est le moment où ton entrepôt arrête de ressembler à une décharge municipale. Chaque façade
+      annonce clairement ce qu’elle contient, les ressources produites en masse disposent enfin d’une vraie réserve et
+      le Drawer Controller permet de tout ranger depuis un seul endroit.
+    </p>
+    <p>
+      On va commencer avec un petit mur facile à agrandir : huit Drawers, un Controller et une Drawer Key. Il suffira
+      déjà pour ranger les blocs, les minerais, les récoltes et les matériaux Create qui encombrent habituellement
+      quinze coffres différents.
+    </p>
+    <div class="storage-summary" aria-label="Objectifs du parcours Drawers">
+      <span>Choisir les bons Drawers</span>
+      <span>Construire le réseau</span>
+      <span>Ranger rapidement</span>
+      <span>Verrouiller et améliorer</span>
+    </div>
+  </header>
+
+  <section class="storage-section" id="storage-drawers-project" data-phase="Préparer le chantier">
+    <div class="storage-title">
+      <span>01</span>
+      <div>
+        <p>Un premier mur raisonnable</p>
+        <h2>Préparer le matériel sans construire un hangar entier</h2>
+      </div>
+    </div>
+    <p class="storage-lead">
+      Pour ce prototype, réserve un mur large de trois blocs et haut de trois blocs. Tu pourras ensuite l’étendre sur
+      les côtés ou lui ajouter un second étage sans démonter ce qui fonctionne déjà.
+    </p>
+    <div class="storage-shopping-grid">
+      <article>
+        <strong>4</strong>
+        <h3>Full Drawers 1x1</h3>
+        <p>Pour quatre ressources que tu produis en très grande quantité.</p>
+      </article>
+      <article>
+        <strong>4</strong>
+        <h3>Full Drawers 1x2</h3>
+        <p>Pour huit ressources régulières qui prennent un peu moins de place.</p>
+      </article>
+      <article>
+        <strong>1</strong>
+        <h3>Drawer Controller</h3>
+        <p>Le point d’entrée commun de tout le mur.</p>
+      </article>
+      <article>
+        <strong>1</strong>
+        <h3>Drawer Key</h3>
+        <p>Pour empêcher un emplacement vide d’oublier l’objet qui lui était attribué.</p>
+      </article>
+    </div>
+    <p class="storage-note">
+      Dans JEI, tape <code>@storagedrawers</code> pour afficher les recettes du mod. Les essences de bois changent
+      l’apparence des Drawers, pas leur fonctionnement.
+    </p>
+  </section>
+
+  <section class="storage-section" id="storage-drawers-types" data-phase="Préparer le chantier">
+    <div class="storage-title">
+      <span>02</span>
+      <div>
+        <p>Un bloc ne signifie pas une seule case</p>
+        <h2>Choisir entre 1x1, 1x2 et 2x2</h2>
+      </div>
+    </div>
+    <p class="storage-lead">
+      Plus un bloc possède de compartiments, plus il accepte de types d’objets différents. En échange, chaque
+      compartiment contient moins de piles. Les valeurs ci-dessous correspondent directement à la configuration du
+      serveur Régalade.
+    </p>
+    <div class="storage-drawer-types" aria-label="Capacité des Full Drawers sur le serveur Régalade">
+      <article>
+        <div class="storage-drawer-face storage-drawer-face-one"><span></span></div>
+        <div>
+          <h3>Full Drawer 1x1</h3>
+          <p><strong>1 objet différent</strong> · 32 piles</p>
+          <span>Cobblestone, bois, fer, Andesite Alloy</span>
+        </div>
+      </article>
+      <article>
+        <div class="storage-drawer-face storage-drawer-face-two"><span></span><span></span></div>
+        <div>
+          <h3>Full Drawer 1x2</h3>
+          <p><strong>2 objets différents</strong> · 16 piles par compartiment</p>
+          <span>Récoltes, produits intermédiaires, décoration</span>
+        </div>
+      </article>
+      <article>
+        <div class="storage-drawer-face storage-drawer-face-four">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div>
+          <h3>Full Drawer 2x2</h3>
+          <p><strong>4 objets différents</strong> · 8 piles par compartiment</p>
+          <span>Petites séries que tu veux tout de même garder visibles</span>
+        </div>
+      </article>
+    </div>
+    <p class="storage-note">
+      Les Half Drawers occupent moins de profondeur, mais offrent deux fois moins de capacité. Garde-les pour un mur fin
+      ou décoratif ; pour un premier entrepôt, les Full Drawers sont plus simples à prévoir.
+    </p>
+  </section>
+
+  <section class="storage-section" id="storage-drawers-layout" data-phase="Monter le réseau">
+    <div class="storage-title">
+      <span>03</span>
+      <div>
+        <p>Tout doit rester connecté</p>
+        <h2>Monter le mur autour du Drawer Controller</h2>
+      </div>
+    </div>
+    <div class="storage-wall-layout">
+      <div class="storage-wall-diagram" aria-label="Disposition conseillée pour un premier mur de Drawers">
+        <span>Drawer 1x1</span><span>Drawer 1x2</span><span>Drawer 1x1</span> <span>Drawer 1x2</span
+        ><strong>Drawer Controller</strong><span>Drawer 1x2</span> <span>Drawer 1x1</span><span>Drawer 1x2</span
+        ><span>Drawer 1x1</span>
+      </div>
+      <div class="storage-wall-rules">
+        <article>
+          <h3>Les faces doivent se toucher</h3>
+          <p>Chaque Drawer rejoint le réseau en touchant le Controller ou un autre Drawer déjà connecté.</p>
+        </article>
+        <article>
+          <h3>Un seul Controller suffit</h3>
+          <p>Il devient l’entrée commune du réseau. Plusieurs Controllers dans le même mur ne l’améliorent pas.</p>
+        </article>
+        <article>
+          <h3>Les Trim Blocks peuvent faire le lien</h3>
+          <p>Ils permettent de franchir un angle ou une zone vide sans ajouter un compartiment inutile.</p>
+        </article>
+      </div>
+    </div>
+    <p class="storage-note">
+      Sur Régalade, le Controller peut atteindre les Drawers connectés jusqu’à 50 blocs sur chaque axe. Cette portée
+      n’est pas magique : le réseau doit rester relié par des Drawers ou des Trim Blocks.
+    </p>
+  </section>
+
+  <section class="storage-section" id="storage-drawers-controls" data-phase="Utiliser le mur">
+    <div class="storage-title">
+      <span>04</span>
+      <div>
+        <p>Pas besoin d’ouvrir quinze interfaces</p>
+        <h2>Déposer et retirer les objets directement sur la façade</h2>
+      </div>
+    </div>
+    <div class="storage-control-grid">
+      <article>
+        <kbd>Clic droit</kbd>
+        <h3>Déposer la pile tenue</h3>
+        <p>Vise le compartiment voulu avec l’objet en main.</p>
+      </article>
+      <article>
+        <kbd>Double clic droit</kbd>
+        <h3>Déposer tous les objets identiques</h3>
+        <p>Le Drawer récupère aussi les exemplaires correspondants présents dans ton inventaire.</p>
+      </article>
+      <article>
+        <kbd>Clic gauche</kbd>
+        <h3>Retirer un objet</h3>
+        <p>Pratique quand tu veux seulement une unité pour une recette.</p>
+      </article>
+      <article>
+        <kbd>Maj + clic gauche</kbd>
+        <h3>Retirer une pile</h3>
+        <p>Le raccourci à utiliser quand tu repars travailler avec la ressource.</p>
+      </article>
+    </div>
+    <div class="storage-controller-action">
+      <div>
+        <p class="storage-card-label">Le geste qui change tout</p>
+        <h3>Double clic droit sur le Drawer Controller</h3>
+      </div>
+      <p>
+        Le Controller parcourt ton inventaire et range tous les objets dont un compartiment existe déjà dans le réseau.
+        Les objets inconnus restent sur toi : le mur ne choisit jamais leur place au hasard.
+      </p>
+    </div>
+  </section>
+
+  <section class="storage-section" id="storage-drawers-lock" data-phase="Sécuriser l’organisation">
+    <div class="storage-title">
+      <span>05</span>
+      <div>
+        <p>Le vide ne doit pas effacer le rangement</p>
+        <h2>Verrouiller les compartiments avec la Drawer Key</h2>
+      </div>
+    </div>
+    <div class="storage-lock-flow" aria-label="Procédure pour préparer et verrouiller le mur de Drawers">
+      <article>
+        <span>1</span>
+        <p>Place au moins un exemplaire de chaque ressource dans le compartiment prévu.</p>
+      </article>
+      <b>→</b>
+      <article>
+        <span>2</span>
+        <p>Prends la Drawer Key et utilise-la sur le Drawer Controller.</p>
+      </article>
+      <b>→</b>
+      <article>
+        <span>3</span>
+        <p>Tous les Drawers connectés conservent désormais leur objet attribué, même lorsqu’ils sont vides.</p>
+      </article>
+    </div>
+    <p class="storage-note">
+      Ce verrouillage organise les emplacements, mais n’interdit pas aux autres joueurs de prendre les objets. Pour
+      protéger un entrepôt, utilise les claims et les permissions du serveur.
+    </p>
+  </section>
+
+  <section class="storage-section" id="storage-drawers-upgrades" data-phase="Augmenter la capacité">
+    <div class="storage-title">
+      <span>06</span>
+      <div>
+        <p>Agrandir le contenu, pas le bâtiment</p>
+        <h2>Ajouter les premières Storage Upgrades</h2>
+      </div>
+    </div>
+    <p class="storage-lead">
+      Une Storage Upgrade multiplie la capacité de chaque compartiment du Drawer. Applique-la sur le bloc concerné, puis
+      ouvre son interface d’amélioration avec <strong>Maj + clic droit, main vide</strong> si tu veux vérifier ou
+      retirer ce qui est installé.
+    </p>
+    <div class="storage-upgrade-table" role="table" aria-label="Multiplicateurs de capacité sur Régalade">
+      <div role="row">
+        <strong role="columnheader">Amélioration</strong><strong role="columnheader">Capacité</strong>
+      </div>
+      <div role="row"><span role="cell">Obsidian</span><b role="cell">x2</b></div>
+      <div role="row"><span role="cell">Copper</span><b role="cell">x4</b></div>
+      <div role="row"><span role="cell">Iron</span><b role="cell">x8</b></div>
+      <div role="row"><span role="cell">Gold</span><b role="cell">x16</b></div>
+      <div role="row"><span role="cell">Emerald</span><b role="cell">x64</b></div>
+      <div role="row"><span role="cell">Diamond</span><b role="cell">x256</b></div>
+      <div role="row"><span role="cell">Netherite</span><b role="cell">x2048</b></div>
+    </div>
+    <div class="storage-warning">
+      <strong>Le Void Upgrade détruit le surplus</strong>
+      <p>
+        Il est utile sur une ferme infinie ou un générateur de Cobblestone, mais dangereux dans un entrepôt général. Ne
+        l’installe que si tu acceptes réellement de perdre tout ce qui dépasse la capacité du Drawer.
+      </p>
+    </div>
+  </section>
+
+  <section class="storage-section" id="storage-drawers-controller" data-phase="Automatiser l’entrée">
+    <div class="storage-title">
+      <span>07</span>
+      <div>
+        <p>Le mur devient un véritable inventaire</p>
+        <h2>Faire entrer les objets par le Drawer Controller</h2>
+      </div>
+    </div>
+    <p class="storage-lead">
+      Le Controller se comporte comme l’inventaire commun du mur. Un Hopper, un Funnel Create ou un autre système de
+      transport peut lui envoyer des objets ; il les dirige ensuite vers les compartiments compatibles et déjà
+      attribués.
+    </p>
+    <div class="storage-controller-route" aria-label="Exemple d'alimentation automatique du mur de Drawers">
+      <span>Coffre d’arrivée</span><b>→</b><span>Funnel ou Hopper</span><b>→</b><strong>Drawer Controller</strong
+      ><b>→</b><span>Drawer correspondant</span>
+    </div>
+    <p class="storage-note">
+      Fais d’abord l’essai avec quelques piles faciles à reconnaître. Si un objet reste bloqué avant le Controller,
+      vérifie qu’un Drawer connecté lui est bien attribué et qu’il n’est pas plein.
+    </p>
+  </section>
+
+  <section class="storage-section storage-next" id="storage-drawers-test" data-phase="Valider le mur">
+    <div class="storage-title">
+      <span>08</span>
+      <div>
+        <p>Le test avant de déménager tous les coffres</p>
+        <h2>Vérifier que le mur est prêt</h2>
+      </div>
+    </div>
+    <div class="storage-checklist">
+      <label><input type="checkbox" /> Chaque compartiment important possède déjà son objet de référence</label>
+      <label><input type="checkbox" /> La Drawer Key a verrouillé l’ensemble depuis le Controller</label>
+      <label><input type="checkbox" /> Le double clic droit sur le Controller range les ressources connues</label>
+      <label><input type="checkbox" /> Un Funnel ou un Hopper peut alimenter le réseau</label>
+      <label><input type="checkbox" /> Les Drawers les plus remplis disposent d’une amélioration adaptée</label>
+    </div>
+    <p>
+      Une fois ces cinq points validés, tu peux vider les anciens coffres sans transformer le chantier en pile d’objets
+      au sol. Le prochain onglet s’occupera du stockage que tu emportes avec toi : le Sophisticated Backpack.
+    </p>
+  </section>
+</div>
