@@ -156,7 +156,6 @@
 
 .fish-journey i,
 .fish-flow > i,
-.fish-minigame-diagram > i,
 .fish-value-flow > i,
 .fish-automation > i,
 .fish-recipe > i {
@@ -224,7 +223,6 @@
 }
 
 .fish-flow,
-.fish-minigame-diagram,
 .fish-value-flow,
 .fish-automation {
   display: flex;
@@ -234,7 +232,6 @@
 }
 
 .fish-flow article,
-.fish-minigame-diagram article,
 .fish-value-flow article,
 .fish-automation article {
   display: flex;
@@ -251,7 +248,6 @@
 }
 
 .fish-flow article b,
-.fish-minigame-diagram article b,
 .fish-value-flow article b,
 .fish-automation article b {
   font-size: 0.9rem;
@@ -259,7 +255,6 @@
 }
 
 .fish-flow article span,
-.fish-minigame-diagram article span,
 .fish-value-flow article span,
 .fish-automation article span {
   margin-top: 4px;
@@ -270,10 +265,6 @@
 
 .fish-result {
   border-color: #a9d5c7 !important;
-}
-
-.fish-target {
-  border-color: #9acde0 !important;
 }
 
 .fish-card-grid,
@@ -403,41 +394,6 @@
   color: var(--fish-muted);
   font-size: 0.86rem;
   line-height: 1.58;
-}
-
-.fish-calm-option ol {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.fish-calm-option li {
-  display: grid;
-  grid-template-columns: 30px 1fr;
-  gap: 9px;
-  align-items: start;
-  padding: 12px;
-  border: 1px solid var(--fish-line);
-  border-radius: 9px;
-}
-
-.fish-calm-option li b {
-  display: grid;
-  width: 30px;
-  height: 30px;
-  place-items: center;
-  border-radius: 8px;
-  background: #f2f5f6;
-  color: var(--fish-teal);
-}
-
-.fish-calm-option li span {
-  color: var(--fish-muted);
-  font-size: 0.78rem;
-  line-height: 1.45;
 }
 
 .fish-calm-result {
@@ -657,7 +613,6 @@
 
   .fish-journey,
   .fish-flow,
-  .fish-minigame-diagram,
   .fish-value-flow,
   .fish-automation,
   .fish-recipe {
@@ -667,7 +622,6 @@
 
   .fish-journey i,
   .fish-flow > i,
-  .fish-minigame-diagram > i,
   .fish-value-flow > i,
   .fish-automation > i,
   .fish-recipe > i {
@@ -695,10 +649,6 @@
   .fish-expedition article {
     grid-template-columns: 1fr;
     gap: 4px;
-  }
-
-  .fish-calm-option ol {
-    grid-template-columns: 1fr;
   }
 }
 
