@@ -886,6 +886,247 @@
   place-items: center;
 }
 
+.train-freight-systems,
+.train-freight-recipes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.train-freight-systems article,
+.train-freight-recipes article {
+  padding: 18px;
+  border: 1px solid var(--train-line);
+  border-radius: 12px;
+}
+
+.train-freight-systems h3 {
+  margin: 0 0 8px;
+  font-size: 1.05em;
+}
+
+.train-freight-systems article > p:not(.train-card-label),
+.train-freight-systems article > span,
+.train-freight-recipes p {
+  color: var(--train-muted);
+}
+
+.train-freight-systems article > p:not(.train-card-label) {
+  margin: 0 0 12px;
+}
+
+.train-freight-systems article > span {
+  display: block;
+  padding-top: 11px;
+  font-size: 0.88em;
+  border-top: 1px solid var(--train-line);
+}
+
+.train-card-label {
+  margin: 0 0 6px;
+  color: var(--train-blue);
+  font-size: var(--tutorial-label-size);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.train-freight-recipes {
+  margin-top: 12px;
+}
+
+.train-freight-recipes p {
+  margin: 0 0 7px;
+}
+
+.train-freight-recipes strong {
+  color: var(--train-green);
+}
+
+.train-freight-carriage-plan {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.train-freight-carriage-plan article {
+  display: grid;
+  gap: 6px;
+  min-height: 130px;
+  padding: 18px;
+  text-align: center;
+  place-content: center;
+  border: 1px solid var(--train-line);
+  border-radius: 12px;
+}
+
+.train-freight-carriage-plan article span {
+  color: var(--train-muted);
+}
+
+.train-freight-carriage-plan article b {
+  padding-top: 9px;
+  color: var(--train-green);
+  border-top: 1px solid var(--train-line);
+}
+
+.train-coupling {
+  color: var(--train-orange);
+  font-size: var(--tutorial-label-size);
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.train-psi-plan {
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) auto minmax(120px, 1fr) minmax(130px, auto) minmax(120px, 1fr) auto minmax(
+      120px,
+      1fr
+    );
+  gap: 8px;
+  align-items: stretch;
+  margin-bottom: 14px;
+}
+
+.train-psi-plan article,
+.train-psi-gap {
+  display: grid;
+  gap: 5px;
+  align-content: center;
+  min-height: 105px;
+  padding: 13px;
+  text-align: center;
+  border: 1px solid var(--train-line);
+  border-radius: 11px;
+}
+
+.train-psi-plan article span,
+.train-psi-gap span {
+  color: var(--train-muted);
+  font-size: 0.84em;
+  line-height: 1.35;
+}
+
+.train-psi-plan > span {
+  align-self: center;
+  color: var(--train-orange);
+  font-weight: 900;
+}
+
+.train-psi-gap {
+  border-style: dashed;
+}
+
+.train-freight-flow,
+.train-package-flow {
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) auto minmax(120px, 1fr) auto minmax(120px, 1fr) auto minmax(130px, 1fr);
+  gap: 8px;
+  align-items: stretch;
+  margin-bottom: 14px;
+}
+
+.train-package-flow {
+  grid-template-columns:
+    minmax(105px, 1fr) auto minmax(105px, 1fr) auto minmax(105px, 1fr) auto minmax(90px, 0.8fr)
+    auto minmax(115px, 1fr);
+}
+
+.train-freight-flow article,
+.train-package-flow article {
+  display: grid;
+  gap: 5px;
+  align-content: center;
+  min-height: 98px;
+  padding: 13px;
+  text-align: center;
+  border: 1px solid var(--train-line);
+  border-radius: 11px;
+}
+
+.train-freight-flow article span,
+.train-package-flow article span {
+  color: var(--train-muted);
+  font-size: 0.84em;
+  line-height: 1.35;
+}
+
+.train-freight-flow > span,
+.train-package-flow > span {
+  align-self: center;
+  color: var(--train-orange);
+  font-weight: 900;
+}
+
+.train-station-build,
+.train-delivery-timeline,
+.train-package-steps {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.train-station-build li,
+.train-delivery-timeline article,
+.train-package-steps li {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 11px;
+  align-items: start;
+  padding: 12px 13px;
+  border: 1px solid var(--train-line);
+  border-radius: 10px;
+}
+
+.train-station-build li > span,
+.train-delivery-timeline article > span,
+.train-package-steps li > span {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  color: var(--train-orange);
+  font-weight: 900;
+  border: 1px solid #f0cdb7;
+  border-radius: 8px;
+  place-items: center;
+}
+
+.train-station-build li,
+.train-delivery-timeline p,
+.train-package-steps p {
+  margin: 0;
+}
+
+.train-delivery-timeline article > span {
+  color: var(--train-green);
+  border-color: #a9d5c7;
+  border-radius: 50%;
+}
+
+.train-cargo-schedule {
+  margin-bottom: 0;
+}
+
+@media (width <= 1200px) {
+  .train-switcher {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .train-switcher button {
+    flex: 1 1 0;
+    min-width: 0;
+    padding-inline: 8px;
+    line-height: 1.15;
+    white-space: normal;
+  }
+}
+
 @media (width <= 900px) {
   .train-line {
     grid-template-columns: 1fr;
@@ -906,13 +1147,19 @@
 
   .train-production-flow,
   .train-bogey-flow,
-  .train-conductor-flow {
+  .train-conductor-flow,
+  .train-psi-plan,
+  .train-freight-flow,
+  .train-package-flow {
     grid-template-columns: 1fr;
   }
 
   .train-production-flow > span,
   .train-bogey-flow > span,
-  .train-conductor-flow > span {
+  .train-conductor-flow > span,
+  .train-psi-plan > span,
+  .train-freight-flow > span,
+  .train-package-flow > span {
     justify-self: center;
     transform: rotate(90deg);
   }
@@ -927,6 +1174,14 @@
 }
 
 @media (width <= 650px) {
+  .train-switcher {
+    flex-wrap: wrap;
+  }
+
+  .train-switcher button {
+    flex-basis: calc(50% - 4px);
+  }
+
   .train-panel {
     gap: 18px;
   }
@@ -956,8 +1211,15 @@
   .train-schedule-recipe,
   .train-schedule-plan,
   .train-schedule-steps,
-  .train-auto-loop {
+  .train-auto-loop,
+  .train-freight-systems,
+  .train-freight-recipes,
+  .train-freight-carriage-plan {
     grid-template-columns: 1fr;
+  }
+
+  .train-coupling {
+    padding: 4px 0;
   }
 
   .train-component-plus {

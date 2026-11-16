@@ -1,0 +1,517 @@
+<div class="train-panel" id="train-freight-panel" role="tabpanel" aria-labelledby="train-freight-tab" hidden>
+  <header class="train-hero train-freight-hero">
+    <p class="train-eyebrow">Des caisses pleines, des quais utiles et moins d’inventaires bouchés</p>
+    <h1>Transporter des marchandises</h1>
+    <p>
+      Une navette de passagers, c’est déjà pratique. Mais un train commence vraiment à changer le serveur quand il
+      déplace les ressources à ta place : du bois depuis la scierie, du minerai depuis la carrière, des légumes vers le
+      restaurant ou une quantité franchement préoccupante de pommes de terre jusqu’à l’usine de frites.
+    </p>
+    <p>
+      On va ajouter un wagon de fret à notre locomotive, le charger automatiquement à l’Atelier et le vider au Terminus.
+      Ensuite, on verra comment le même train peut aussi transporter des colis adressés entre plusieurs Postboxes.
+    </p>
+    <div class="train-project-summary" aria-label="Objectif du parcours de fret">
+      <span>1 wagon séparé</span>
+      <span>3 Portable Storage Interfaces</span>
+      <span>2 quais automatisés</span>
+      <span>1 première livraison</span>
+    </div>
+  </header>
+
+  <section class="train-section" id="train-freight-systems" data-phase="Comprendre le fret">
+    <div class="train-title">
+      <span>01</span>
+      <div>
+        <p>Deux besoins différents</p>
+        <h2>Choisir entre fret en vrac et colis adressés</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Create propose deux manières de faire voyager les objets. Elles peuvent utiliser le même train, mais elles ne
+      répondent pas au même besoin et ne passent pas par les mêmes blocs.
+    </p>
+    <div class="train-freight-systems">
+      <article>
+        <p class="train-card-label">Fret en vrac</p>
+        <h3>Portable Storage Interfaces</h3>
+        <p>
+          Le quai charge ou vide directement les inventaires du wagon. C’est le bon système pour déplacer beaucoup de
+          ressources entre deux sites connus.
+        </p>
+        <span>Exemples : minerai, bois, nourriture, matériaux de construction</span>
+      </article>
+      <article>
+        <p class="train-card-label">Colis adressés</p>
+        <h3>Packagers et Postboxes</h3>
+        <p>
+          Les objets sont emballés avec une adresse. Les trains qui passent récupèrent les colis et les déposent dans la
+          Postbox correspondant au destinataire.
+        </p>
+        <span>Exemples : commandes, livraisons entre joueurs, pièces précises</span>
+      </article>
+    </div>
+    <p class="train-note">
+      On commence par le fret en vrac. Les colis seront ajoutés une fois que le wagon et les deux quais fonctionneront
+      correctement.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-freight-shopping" data-phase="Préparer le matériel">
+    <div class="train-title">
+      <span>02</span>
+      <div>
+        <p>Liste de courses</p>
+        <h2>Fabriquer le wagon et ses interfaces</h2>
+      </div>
+    </div>
+    <div class="train-prerequisite-grid">
+      <article>
+        <h3>Pour le wagon</h3>
+        <ul>
+          <li>1 [Train Casing] pour créer le Bogey</li>
+          <li>3 [Item Vaults]</li>
+          <li>1 [Portable Storage Interface]</li>
+          <li>Des blocs pour le plancher et la carrosserie</li>
+          <li>La [Super Glue]</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Pour les deux quais</h3>
+        <ul>
+          <li>2 [Portable Storage Interfaces]</li>
+          <li>2 coffres ou Item Vaults fixes</li>
+          <li>Des Belts, Funnels ou Chutes</li>
+          <li>Quelques Shafts et Cogwheels</li>
+          <li>Une source de rotation pour les Belts</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Pour le premier test</h3>
+        <ul>
+          <li>Un coffre rempli à l’Atelier</li>
+          <li>Un coffre vide au Terminus</li>
+          <li>Une ressource facile à reconnaître</li>
+          <li>Le Schedule de la navette</li>
+        </ul>
+      </article>
+    </div>
+    <div class="train-freight-recipes">
+      <article>
+        <p>Andesite Casing + Chute</p>
+        <strong>1 Portable Storage Interface</strong>
+      </article>
+      <article>
+        <p>Iron Sheet + Barrel + Iron Sheet</p>
+        <strong>1 Item Vault</strong>
+      </article>
+    </div>
+  </section>
+
+  <section class="train-section" id="train-freight-carriage" data-phase="Construire le wagon">
+    <div class="train-title">
+      <span>03</span>
+      <div>
+        <p>Une nouvelle voiture</p>
+        <h2>Ajouter un wagon de fret séparé</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Ramène le train à l’Atelier, désassemble-le puis repasse la Station en Assembly Mode. Les Tracks disponibles
+      derrière la locomotive indiquent les emplacements où un nouveau Bogey peut être ajouté.
+    </p>
+    <ol class="train-steps">
+      <li>
+        <span>1</span>
+        <p>Utilise un [Train Casing] sur un Track marqué derrière la locomotive pour créer le second Bogey.</p>
+      </li>
+      <li>
+        <span>2</span>
+        <p>Construis un plancher autour du nouveau Bogey sans le relier par des blocs à la locomotive.</p>
+      </li>
+      <li>
+        <span>3</span>
+        <p>Pose trois Item Vaults alignés sur le wagon afin qu’ils forment un seul stockage.</p>
+      </li>
+      <li>
+        <span>4</span>
+        <p>Place une Portable Storage Interface sur le côté du wagon, orientée vers l’extérieur.</p>
+      </li>
+      <li>
+        <span>5</span>
+        <p>Colle le Bogey, le plancher, les Vaults et l’Interface dans une zone propre à ce wagon.</p>
+      </li>
+    </ol>
+    <div class="train-freight-carriage-plan" aria-label="Plan du train avec wagon de fret">
+      <article>
+        <strong>Locomotive</strong>
+        <span>Cabine, conducteur et Train Controls</span>
+        <b>Bogey 1</b>
+      </article>
+      <div class="train-coupling" aria-hidden="true">couplage automatique</div>
+      <article>
+        <strong>Wagon de fret</strong>
+        <span>Item Vaults + Interface tournée vers le quai</span>
+        <b>Bogey 2</b>
+      </article>
+    </div>
+    <p class="train-warning">
+      <strong>Ne colle pas le wagon à la locomotive.</strong> Chaque voiture doit être un ensemble séparé. La Station
+      crée elle-même le couplage entre les deux Bogeys au moment de l’assemblage.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-freight-interface" data-phase="Comprendre les Interfaces">
+    <div class="train-title">
+      <span>04</span>
+      <div>
+        <p>Le pont entre le quai et le train</p>
+        <h2>Faire communiquer les Portable Storage Interfaces</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Une Interface voyage avec le wagon. L’autre reste sur le quai. Lorsqu’elles se retrouvent face à face, elles se
+      connectent et l’Interface fixe représente temporairement tous les inventaires du wagon.
+    </p>
+    <div class="train-psi-plan" aria-label="Disposition des Portable Storage Interfaces">
+      <article>
+        <strong>Stockage de la gare</strong>
+        <span>Coffre, Vault, Belt ou Funnel</span>
+      </article>
+      <span aria-hidden="true">↔</span>
+      <article>
+        <strong>Interface fixe</strong>
+        <span>Reliée au système du quai</span>
+      </article>
+      <div class="train-psi-gap">
+        <b>1 ou 2 blocs d’air</b>
+        <span>Les deux faces se regardent</span>
+      </div>
+      <article>
+        <strong>Interface mobile</strong>
+        <span>Collée au wagon</span>
+      </article>
+      <span aria-hidden="true">↔</span>
+      <article>
+        <strong>Item Vaults</strong>
+        <span>Le stockage transporté</span>
+      </article>
+    </div>
+    <div class="train-two-column">
+      <article>
+        <h3>L’alignement est précis</h3>
+        <p>
+          Les deux faces doivent être opposées, à la même hauteur, avec exactement un ou deux blocs d’air entre elles
+          lorsque le train est arrêté sur le Station Marker.
+        </p>
+      </article>
+      <article>
+        <h3>L’Interface fixe devient le wagon</h3>
+        <p>
+          Pendant la connexion, un Funnel ou un Belt peut insérer ou extraire des objets comme s’il touchait directement
+          les Item Vaults embarqués.
+        </p>
+      </article>
+    </div>
+    <p class="train-note">
+      Alimenter l’Interface fixe en Redstone l’empêche volontairement de se connecter. Si rien ne se passe, vérifie donc
+      aussi qu’un levier ou un câble ne la maintient pas sous tension.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-freight-loading" data-phase="Construire le quai de chargement">
+    <div class="train-title">
+      <span>05</span>
+      <div>
+        <p>Gare Atelier</p>
+        <h2>Envoyer les objets vers le wagon</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Le quai de chargement doit pousser les objets depuis un stockage fixe vers l’Interface de la gare. La direction
+      des Belts et des Funnels doit donc aller vers le train.
+    </p>
+    <div class="train-freight-flow" aria-label="Flux du quai de chargement">
+      <article>
+        <strong>Coffre de départ</strong>
+        <span>Les ressources à expédier</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article>
+        <strong>Belt ou Funnel</strong>
+        <span>Direction : vers la voie</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article>
+        <strong>Interface fixe</strong>
+        <span>Connexion au train arrêté</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article class="train-output">
+        <strong>Item Vaults du wagon</strong>
+        <span>Le fret est chargé</span>
+      </article>
+    </div>
+    <ol class="train-station-build">
+      <li><span>1</span>Gare le train à l’Atelier et repère la position exacte de l’Interface mobile.</li>
+      <li><span>2</span>Place l’Interface fixe en face, avec un ou deux blocs d’air entre elles.</li>
+      <li><span>3</span>Relie un coffre à l’Interface fixe avec un Belt ou un Funnel orienté vers elle.</li>
+      <li><span>4</span>Dépose quelques stacks faciles à reconnaître dans le coffre de départ.</li>
+    </ol>
+  </section>
+
+  <section class="train-section" id="train-freight-unloading" data-phase="Construire le quai de déchargement">
+    <div class="train-title">
+      <span>06</span>
+      <div>
+        <p>Gare Terminus</p>
+        <h2>Extraire les objets vers le stockage d’arrivée</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Au Terminus, on construit le même point de connexion, mais le sens du transport est inversé. Les objets sortent de
+      l’Interface fixe pour rejoindre le coffre d’arrivée.
+    </p>
+    <div class="train-freight-flow" aria-label="Flux du quai de déchargement">
+      <article>
+        <strong>Item Vaults du wagon</strong>
+        <span>Le fret transporté</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article>
+        <strong>Interface fixe</strong>
+        <span>Accès au stockage mobile</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article>
+        <strong>Funnel ou Belt</strong>
+        <span>Direction : loin de la voie</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article class="train-output">
+        <strong>Coffre d’arrivée</strong>
+        <span>La livraison est terminée</span>
+      </article>
+    </div>
+    <p class="train-warning">
+      Si les deux quais poussent les objets vers le train, rien ne sera jamais livré. Le chargement pointe vers
+      l’Interface. Le déchargement part de l’Interface.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-freight-schedule" data-phase="Adapter le Schedule">
+    <div class="train-title">
+      <span>07</span>
+      <div>
+        <p>Attendre la fin des échanges</p>
+        <h2>Remplacer le délai fixe par Cargo Inactivity</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Cinq secondes ne suffiront pas toujours à vider un gros wagon. La condition [Cargo Inactivity] attend que plus
+      aucun objet ne soit échangé pendant la durée choisie avant d’autoriser le départ.
+    </p>
+    <div class="train-schedule-plan train-cargo-schedule" aria-label="Schedule de la ligne de fret">
+      <article>
+        <span>Entrée 1</span>
+        <strong>Travel to Station</strong>
+        <b>Atelier</b>
+        <p>Continue after: Cargo Inactivity pendant 5 secondes</p>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article>
+        <span>Entrée 2</span>
+        <strong>Travel to Station</strong>
+        <b>Terminus</b>
+        <p>Continue after: Cargo Inactivity pendant 5 secondes</p>
+      </article>
+      <span class="train-schedule-loop" aria-hidden="true">Retour à l’entrée 1 ↻</span>
+    </div>
+    <p class="train-note">
+      Cargo Inactivity ne signifie pas « wagon plein » ou « wagon vide ». Le train repart lorsqu’aucun transfert ne se
+      produit depuis cinq secondes. C’est généralement le comportement le plus robuste pour un premier réseau de fret.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-freight-test" data-phase="Tester la livraison">
+    <div class="train-title">
+      <span>08</span>
+      <div>
+        <p>Premier transport complet</p>
+        <h2>Suivre les objets du coffre de départ au coffre d’arrivée</h2>
+      </div>
+    </div>
+    <div class="train-delivery-timeline" aria-label="Étapes du premier transport de fret">
+      <article>
+        <span>1</span>
+        <p>Le train s’arrête à l’Atelier et les Interfaces se connectent.</p>
+      </article>
+      <article>
+        <span>2</span>
+        <p>Les ressources quittent le coffre et remplissent les Item Vaults.</p>
+      </article>
+      <article>
+        <span>3</span>
+        <p>Après cinq secondes sans transfert, le train part vers le Terminus.</p>
+      </article>
+      <article>
+        <span>4</span>
+        <p>Les Interfaces du Terminus se connectent et le wagon se vide.</p>
+      </article>
+      <article>
+        <span>5</span>
+        <p>Les objets apparaissent dans le coffre d’arrivée et le train repart.</p>
+      </article>
+    </div>
+    <p class="train-tip">
+      Pour ce premier test, utilise un seul type d’objet et laisse le coffre d’arrivée complètement vide. Tu verras
+      immédiatement si le chargement, le Schedule et le déchargement fonctionnent dans le bon ordre.
+    </p>
+  </section>
+
+  <section class="train-section" id="train-freight-packages" data-phase="Ajouter les colis">
+    <div class="train-title">
+      <span>09</span>
+      <div>
+        <p>Une adresse plutôt qu’un simple trajet</p>
+        <h2>Créer une première livraison avec Packager et Postbox</h2>
+      </div>
+    </div>
+    <p class="train-lead">
+      Le fret en vrac sait déplacer le contenu d’un wagon, mais il ne sait pas à qui appartient chaque objet. Les
+      Packages ajoutent une adresse et les Postboxes servent de boîtes aux lettres reliées aux Stations.
+    </p>
+    <div class="train-package-flow" aria-label="Parcours d’un colis adressé">
+      <article>
+        <strong>Coffre source</strong>
+        <span>Les objets commandés</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article>
+        <strong>Packager</strong>
+        <span>Emballe et écrit l’adresse</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article>
+        <strong>Postbox Atelier</strong>
+        <span>Le train récupère le colis</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article>
+        <strong>Train</strong>
+        <span>Le colis voyage dans le fret</span>
+      </article>
+      <span aria-hidden="true">→</span>
+      <article class="train-output">
+        <strong>Postbox Terminus</strong>
+        <span>Le colis est livré</span>
+      </article>
+    </div>
+    <ol class="train-package-steps">
+      <li>
+        <span>1</span>
+        <p>Avec une Postbox en main, fais un clic droit sur la Station « Atelier », puis pose-la à proximité.</p>
+      </li>
+      <li>
+        <span>2</span>
+        <p>Ouvre-la et attribue-lui l’adresse « Atelier ». Répète l’opération au Terminus.</p>
+      </li>
+      <li>
+        <span>3</span>
+        <p>Fixe un [Packager] sur le coffre source et place un Sign dessus avec le texte « Terminus ».</p>
+      </li>
+      <li>
+        <span>4</span>
+        <p>Alimente le Packager en Redstone : il prélève les objets du coffre et produit un colis adressé.</p>
+      </li>
+      <li>
+        <span>5</span>
+        <p>Dépose le colis dans la Postbox « Atelier ». Le prochain train qui s’arrête le récupère.</p>
+      </li>
+      <li>
+        <span>6</span>
+        <p>Au Terminus, le colis correspondant est automatiquement déposé dans la Postbox destinataire.</p>
+      </li>
+    </ol>
+    <div class="train-two-column">
+      <article>
+        <h3>Récupérer le contenu</h3>
+        <p>
+          Le destinataire peut prendre le Package dans sa Postbox puis l’insérer dans un Packager relié à son propre
+          coffre. Le colis est détruit et son contenu est rangé dans l’inventaire.
+        </p>
+      </article>
+      <article>
+        <h3>Ce système est parallèle aux Interfaces</h3>
+        <p>
+          Les Postboxes échangent les colis quand le train s’arrête en gare. Le Packager ne se branche pas directement
+          sur une Portable Storage Interface.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="train-section" id="train-freight-troubleshooting" data-phase="Corriger les problèmes">
+    <div class="train-title">
+      <span>10</span>
+      <div>
+        <p>Quand la cargaison refuse de voyager</p>
+        <h2>Les erreurs les plus fréquentes</h2>
+      </div>
+    </div>
+    <div class="train-troubleshooting">
+      <article>
+        <h3>Les Interfaces ne se connectent pas</h3>
+        <p>Vérifie leur orientation, leur hauteur et le vide d’un ou deux blocs entre leurs faces.</p>
+      </article>
+      <article>
+        <h3>Le wagon reste vide</h3>
+        <p>
+          Le Belt ou le Funnel de l’Atelier pointe probablement dans le mauvais sens, ou le stockage embarqué est plein.
+        </p>
+      </article>
+      <article>
+        <h3>Le wagon ne se vide jamais</h3>
+        <p>Au Terminus, le flux doit partir de l’Interface fixe vers le coffre, pas l’inverse.</p>
+      </article>
+      <article>
+        <h3>Le train attend indéfiniment</h3>
+        <p>
+          Un objet circule peut-être en boucle. Vérifie les Funnels et assure-toi que le coffre de destination a de la
+          place.
+        </p>
+      </article>
+      <article>
+        <h3>La Postbox ne reçoit rien</h3>
+        <p>Contrôle son lien avec la Station et l’adresse exacte écrite sur le Package.</p>
+      </article>
+      <article>
+        <h3>Le Package reste dans le Packager</h3>
+        <p>
+          Le Packager doit pouvoir sortir le colis par sa face libre et recevoir un signal Redstone pour l’emballage.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="train-section train-next" id="train-freight-next" data-phase="Développer le réseau">
+    <div class="train-title">
+      <span>11</span>
+      <div>
+        <p>La première livraison est arrivée</p>
+        <h2>Passer du wagon de fret au service logistique</h2>
+      </div>
+    </div>
+    <p>
+      Le train peut maintenant transporter des stocks complets et distribuer des colis adressés. Avec davantage de
+      Stations, les instructions [Retrieve Package] et [Deliver Package] permettent ensuite de créer un train postal
+      capable de choisir lui-même où récupérer et déposer ses livraisons.
+    </p>
+    <div class="train-roadmap">
+      <span>Filtrer le fret par type d’objet</span>
+      <span>Ajouter des Postboxes de joueurs</span>
+      <span>Créer une gare de tri</span>
+      <span>Construire un train postal dédié</span>
+    </div>
+  </section>
+</div>
