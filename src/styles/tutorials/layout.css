@@ -71,6 +71,35 @@
   top: 24px;
 }
 
+.tutorial-library-sticky {
+  box-sizing: border-box;
+  width: calc(100% + 16px);
+  max-height: calc(100vh - 48px);
+  padding-right: 16px;
+  margin-right: -16px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: #c7d4da transparent;
+  scrollbar-width: thin;
+}
+
+.tutorial-library-sticky::-webkit-scrollbar {
+  width: 4px;
+}
+
+.tutorial-library-sticky::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tutorial-library-sticky::-webkit-scrollbar-thumb {
+  background: #c7d4da;
+  border-radius: 4px;
+}
+
+.tutorial-library-sticky::-webkit-scrollbar-thumb:hover {
+  background: #8fa4ad;
+}
+
 #tutoriels .tutorial-library .tutorial-tabs {
   display: grid;
   gap: 5px;
@@ -554,6 +583,11 @@
 
   .tutorial-library-sticky {
     position: static;
+    width: auto;
+    max-height: none;
+    padding-right: 0;
+    margin-right: 0;
+    overflow: visible;
   }
 
   .tutorial-library-toggle {
