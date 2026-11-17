@@ -1,0 +1,208 @@
+<div class="cff-panel" id="cff-advanced-panel" role="tabpanel" aria-labelledby="cff-advanced-tab" hidden="">
+  <article class="cff-tutorial">
+    <header class="cff-hero">
+      <div>
+        <p class="cff-eyebrow">Faire évoluer l’atelier</p>
+        <h1>Aller plus loin avec Create</h1>
+        <p>
+          Une fois les premières machines maîtrisées, Create ouvre la logistique en laiton, l’assemblage en plusieurs
+          opérations, les grands réseaux à vapeur et des systèmes de contrôle beaucoup plus précis.
+        </p>
+      </div>
+    </header>
+
+    <section class="cff-step" id="cff-advanced-brass" data-phase="Le laiton">
+      <div class="cff-title">
+        <span>01</span>
+        <div>
+          <p>Le deuxième âge de l’atelier</p>
+          <h2>Produire du Brass</h2>
+        </div>
+      </div>
+      <p class="cff-lead">
+        Le Brass débloque les composants capables de filtrer, distribuer et assembler les objets avec beaucoup plus de
+        précision. Sa production demande un Mechanical Mixer, une Basin et un Blaze Burner correctement chauffé.
+      </p>
+      <div class="cff-process cff-process-three">
+        <article><b>Copper + Zinc</b><span>les métaux indiqués dans JEI</span></article>
+        <i>→</i>
+        <article><b>Mixer + Basin chauffée</b><span>la recette exige une source de chaleur</span></article>
+        <i>→</i>
+        <article class="cff-result"><b>Brass Ingot</b><span>matière des composants avancés</span></article>
+      </div>
+      <div class="cff-connection-rules">
+        <article>
+          <h3>Blaze Burner</h3>
+          <p>
+            Fournit la chaleur sous la Basin. Ponder montre sa mise en service et ses différents niveaux de chauffe.
+          </p>
+        </article>
+        <article>
+          <h3>Mechanical Mixer</h3>
+          <p>Doit tourner assez vite pour descendre dans la Basin et lancer la recette.</p>
+        </article>
+        <article>
+          <h3>JEI</h3>
+          <p>Affiche les quantités exactes, la chaleur requise et toutes les utilisations du Brass dans le pack.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cff-step" id="cff-advanced-sequenced" data-phase="Assemblage">
+      <div class="cff-title">
+        <span>02</span>
+        <div>
+          <p>Plusieurs opérations sur le même objet</p>
+          <h2>Comprendre la Sequenced Assembly</h2>
+        </div>
+      </div>
+      <p class="cff-lead">
+        Certaines pièces doivent passer plusieurs fois devant une série de machines. JEI affiche l’ordre des opérations,
+        le nombre de cycles et la chance d’obtenir le produit terminé.
+      </p>
+      <div class="cff-network-map">
+        <div class="cff-network-row items">
+          <b>Un cycle</b><span>Objet de départ</span><i>→</i><span>Deployer</span><i>→</i><span>Press ou Saw</span
+          ><i>→</i><span>Retour au début</span>
+        </div>
+        <div class="cff-network-row power">
+          <b>Fin</b><span>Nombre de cycles atteint</span><i>→</i><span>Composant terminé</span>
+        </div>
+      </div>
+      <ol class="cff-number-list">
+        <li>Ouvre la recette du composant dans JEI.</li>
+        <li>Note l’ordre exact des opérations et les ingrédients appliqués par les Deployers.</li>
+        <li>Construis une boucle de Belt qui ramène l’objet au début de la séquence.</li>
+        <li>Ajoute une sortie filtrée pour récupérer uniquement le composant terminé.</li>
+        <li>Teste un seul objet avant d’alimenter la ligne en continu.</li>
+      </ol>
+    </section>
+
+    <section class="cff-step" id="cff-advanced-logistics" data-phase="Logistique avancée">
+      <div class="cff-title">
+        <span>03</span>
+        <div>
+          <p>Distribuer avec précision</p>
+          <h2>Passer aux composants en laiton</h2>
+        </div>
+      </div>
+      <div class="cff-family-grid">
+        <article>
+          <h3>Brass Funnel</h3>
+          <p>Contrôle plus finement les quantités extraites ou injectées et accepte des filtres plus avancés.</p>
+        </article>
+        <article>
+          <h3>Brass Tunnel</h3>
+          <p>Répartit les objets entre plusieurs Belts selon le mode choisi et les filtres installés.</p>
+        </article>
+        <article>
+          <h3>Mechanical Arm</h3>
+          <p>Prend les objets sur des points définis et les dépose sur une ou plusieurs destinations.</p>
+        </article>
+        <article>
+          <h3>Threshold Switch</h3>
+          <p>Émet un signal Redstone selon le niveau de remplissage d’un stockage et peut commander la production.</p>
+        </article>
+      </div>
+      <p class="cff-note">
+        <strong>Construis la logique autour d’un besoin précis.</strong> Un filtre, une quantité ou un seuil de stockage
+        doit correspondre à une décision réelle de l’usine.
+      </p>
+    </section>
+
+    <section class="cff-step" id="cff-advanced-steam" data-phase="Grands réseaux">
+      <div class="cff-title">
+        <span>04</span>
+        <div>
+          <p>Produire davantage de puissance</p>
+          <h2>Passer à la vapeur</h2>
+        </div>
+      </div>
+      <div class="cff-process">
+        <article><b>Eau</b><span>alimente la chaudière</span></article>
+        <i>+</i>
+        <article><b>Chaleur</b><span>vient des Blaze Burners</span></article>
+        <i>→</i>
+        <article><b>Steam Engine</b><span>convertit la vapeur en rotation</span></article>
+        <i>→</i>
+        <article class="cff-result"><b>Réseau principal</b><span>alimente une grande usine</span></article>
+      </div>
+      <div class="cff-card-grid cff-card-grid-3">
+        <article>
+          <h3>Construis avec Ponder</h3>
+          <p>
+            La taille de la chaudière, l’eau, la chaleur et le nombre de Steam Engines déterminent ses performances.
+          </p>
+        </article>
+        <article>
+          <h3>Mesure avant de connecter</h3>
+          <p>Installe un Speedometer et un Stressometer sur la sortie principale.</p>
+        </article>
+        <article>
+          <h3>Garde une commande générale</h3>
+          <p>Un Clutch ou une commande Redstone permet d’arrêter une branche pendant les travaux.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cff-step" id="cff-advanced-control" data-phase="Contrôle">
+      <div class="cff-title">
+        <span>05</span>
+        <div>
+          <p>Commander l’installation</p>
+          <h2>Mesurer, arrêter et automatiser les décisions</h2>
+        </div>
+      </div>
+      <div class="cff-shopping-grid">
+        <article><b>Speedometer</b><span>affiche la vitesse de rotation du réseau</span></article>
+        <article><b>Stressometer</b><span>affiche la capacité utilisée et encore disponible</span></article>
+        <article><b>Clutch</b><span>coupe une transmission avec un signal Redstone</span></article>
+        <article><b>Gearshift</b><span>inverse le sens d’un axe lorsqu’il reçoit un signal</span></article>
+        <article><b>Redstone Link</b><span>transmet une commande sans câble entre deux points</span></article>
+        <article>
+          <b>Threshold Switch</b><span>réagit au niveau de remplissage d’un inventaire ou d’un réservoir</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="cff-step" id="cff-advanced-projects" data-phase="Choisir la suite">
+      <div class="cff-title">
+        <span>06</span>
+        <div>
+          <p>Des projets complets</p>
+          <h2>Utiliser Create dans le reste du serveur</h2>
+        </div>
+      </div>
+      <div class="cff-family-grid">
+        <article>
+          <h3>Agriculture</h3>
+          <p>Construis une récolteuse, trie les cultures et alimente automatiquement les ateliers de transformation.</p>
+        </article>
+        <article>
+          <h3>Cuisine et restauration</h3>
+          <p>Relie les champs, les cuisines, les stocks et les commerces pour produire des plats en quantité.</p>
+        </article>
+        <article>
+          <h3>Trains et livraisons</h3>
+          <p>
+            Le tutoriel ferroviaire présente la construction des trains, les horaires et le transport de marchandises.
+          </p>
+        </article>
+        <article>
+          <h3>Big Cannons et Porte des étoiles</h3>
+          <p>
+            Ces projets utilisent Create pour produire des matériaux, fabriquer des pièces et organiser de longues
+            chaînes.
+          </p>
+        </article>
+      </div>
+      <div class="cff-finish">
+        <strong>Tu possèdes maintenant la carte complète</strong
+        ><span
+          >Pars d’un produit final, remonte ses recettes dans JEI, découpe la production en modules et teste chaque
+          module avant de les relier.</span
+        >
+      </div>
+    </section>
+  </article>
+</div>

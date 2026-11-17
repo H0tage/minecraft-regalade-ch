@@ -1,0 +1,199 @@
+<div class="cff-panel" id="cff-logistics-panel" role="tabpanel" aria-labelledby="cff-logistics-tab" hidden="">
+  <article class="cff-tutorial">
+    <header class="cff-hero">
+      <div>
+        <p class="cff-eyebrow">Faire circuler les ressources sans courir derrière</p>
+        <h1>Transporter et trier les objets</h1>
+        <p>
+          Une machine peut parfaitement fonctionner et quand même bloquer toute l’usine parce que sa sortie est pleine.
+          Cette partie présente les composants qui déplacent, filtrent, répartissent et stockent les ressources.
+        </p>
+      </div>
+    </header>
+
+    <section class="cff-step" id="cff-logistics-map" data-phase="Les composants">
+      <div class="cff-title">
+        <span>01</span>
+        <div>
+          <p>Choisir le bon outil</p>
+          <h2>Une fonction logistique par composant</h2>
+        </div>
+      </div>
+      <div class="cff-family-grid">
+        <article>
+          <h3>Mechanical Belt</h3>
+          <p>Déplace les objets horizontalement et peut traverser plusieurs machines ou postes de traitement.</p>
+        </article>
+        <article>
+          <h3>Andesite Funnel</h3>
+          <p>Fait entrer ou sortir les objets d’un coffre, d’une machine, d’un Belt, d’un Depot ou d’une Basin.</p>
+        </article>
+        <article>
+          <h3>Chute</h3>
+          <p>Fait descendre les objets verticalement entre deux niveaux ou directement dans un inventaire.</p>
+        </article>
+        <article>
+          <h3>Depot</h3>
+          <p>Maintient un objet dans le monde pour le presser, le découper, le déployer ou simplement l’observer.</p>
+        </article>
+        <article>
+          <h3>Tunnel</h3>
+          <p>Répartit ou regroupe plusieurs lignes de Belts. Les versions en laiton offrent davantage de contrôle.</p>
+        </article>
+        <article>
+          <h3>Item Vault</h3>
+          <p>Forme un grand stockage d’usine qui peut être rempli et vidé automatiquement par plusieurs côtés.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cff-step" id="cff-logistics-direction" data-phase="Faire circuler">
+      <div class="cff-title">
+        <span>02</span>
+        <div>
+          <p>Sens et connexions</p>
+          <h2>Construire une ligne qui va au bon endroit</h2>
+        </div>
+      </div>
+      <div class="cff-process">
+        <article><b>Stockage d’entrée</b><span>les ressources attendent ici</span></article>
+        <i>→</i>
+        <article><b>Funnel de sortie</b><span>extrait vers le Belt</span></article>
+        <i>→</i>
+        <article><b>Mechanical Belt</b><span>transporte les objets</span></article>
+        <i>→</i>
+        <article class="cff-result"><b>Funnel d’entrée</b><span>remplit la machine ou le coffre</span></article>
+      </div>
+      <div class="cff-build-grid">
+        <article>
+          <b>1</b>
+          <div>
+            <h3>Pose les deux Shafts</h3>
+            <p>Ils doivent être parallèles, alignés et séparés par la longueur prévue du Belt.</p>
+          </div>
+        </article>
+        <article>
+          <b>2</b>
+          <div>
+            <h3>Crée le Belt</h3>
+            <p>Utilise les Belt Connectors sur les deux extrémités et alimente au moins un des Shafts.</p>
+          </div>
+        </article>
+        <article>
+          <b>3</b>
+          <div>
+            <h3>Place les Funnels</h3>
+            <p>La forme et la flèche indiquent si le Funnel extrait ou injecte les objets.</p>
+          </div>
+        </article>
+        <article>
+          <b>4</b>
+          <div>
+            <h3>Teste avec un seul objet</h3>
+            <p>Suis-le du coffre de départ jusqu’à sa destination avant de remplir la ligne.</p>
+          </div>
+        </article>
+      </div>
+      <p class="cff-note">
+        <strong>La Wrench corrige l’orientation.</strong> Utilise-la directement sur le Funnel, le Belt ou le composant
+        concerné lorsque le sens ne correspond pas au trajet prévu.
+      </p>
+    </section>
+
+    <section class="cff-step" id="cff-logistics-filter" data-phase="Trier">
+      <div class="cff-title">
+        <span>03</span>
+        <div>
+          <p>Donner une destination à chaque objet</p>
+          <h2>Utiliser les filtres</h2>
+        </div>
+      </div>
+      <div class="cff-sort-flow">
+        <article><b>Ligne commune</b><span>plusieurs objets circulent sur le même Belt</span></article>
+        <i>↙</i><i>↘</i>
+        <article class="iron"><b>Funnel filtré : objet A</b><span>vers sa machine ou son stockage</span></article>
+        <article class="flint"><b>Funnel filtré : objet B</b><span>continue vers la sortie suivante</span></article>
+      </div>
+      <ol class="cff-number-list">
+        <li>Pose un Funnel entre le Belt et la première destination.</li>
+        <li>Glisse l’objet attendu dans la case de filtre du Funnel.</li>
+        <li>Ajoute les autres sorties plus loin sur le même Belt.</li>
+        <li>Place un stockage de débordement à la fin de la ligne.</li>
+        <li>Teste chaque objet séparément, puis lance un lot mélangé.</li>
+      </ol>
+      <p class="cff-check">
+        <strong>Résultat attendu</strong
+        ><span>Chaque ressource rejoint sa destination et aucun objet ne reste au sol ou ne bloque le Belt.</span>
+      </p>
+    </section>
+
+    <section class="cff-step" id="cff-logistics-buffer" data-phase="Stabiliser">
+      <div class="cff-title">
+        <span>04</span>
+        <div>
+          <p>Éviter les bouchons</p>
+          <h2>Prévoir des tampons entre les machines</h2>
+        </div>
+      </div>
+      <div class="cff-card-grid cff-card-grid-3">
+        <article>
+          <h3>Un stockage intermédiaire</h3>
+          <p>
+            Un coffre, un Barrel ou un Item Vault absorbe les différences de vitesse entre deux étapes de production.
+          </p>
+        </article>
+        <article>
+          <h3>Une sortie de débordement</h3>
+          <p>Le dernier stockage récupère les objets dont aucune sortie filtrée ne s’est occupée.</p>
+        </article>
+        <article>
+          <h3>Une vitesse cohérente</h3>
+          <p>Le transport doit pouvoir évacuer les objets aussi vite que les machines les produisent.</p>
+        </article>
+      </div>
+      <div class="cff-network-map">
+        <div class="cff-network-row items">
+          <b>Flux stable</b><span>Machine A</span><i>→</i><span>Stock tampon</span><i>→</i><span>Machine B</span><i>→</i
+          ><span>Stock final</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cff-step" id="cff-logistics-project" data-phase="Petit projet">
+      <div class="cff-title">
+        <span>05</span>
+        <div>
+          <p>Mettre tout ensemble</p>
+          <h2>Construire un répartiteur à deux sorties</h2>
+        </div>
+      </div>
+      <div class="cff-two-columns">
+        <article class="cff-card">
+          <h3>Le montage</h3>
+          <ol>
+            <li>Un coffre d’entrée alimente un Belt</li>
+            <li>Un premier Funnel filtré récupère un objet choisi</li>
+            <li>Un second Funnel récupère un autre objet</li>
+            <li>Un coffre final reçoit le reste</li>
+          </ol>
+        </article>
+        <article class="cff-card">
+          <h3>Le test</h3>
+          <ol>
+            <li>Place plusieurs objets différents dans le coffre d’entrée</li>
+            <li>Observe chaque extraction</li>
+            <li>Corrige les filtres et le sens des Funnels</li>
+            <li>Laisse tourner jusqu’à ce que le coffre soit vide</li>
+          </ol>
+        </article>
+      </div>
+      <div class="cff-next-step">
+        <div>
+          <b>La logistique peut maintenant suivre une structure mobile</b
+          ><span>Le parcours suivant transforme des blocs collés ensemble en véritable machine.</span>
+        </div>
+        <button type="button" data-open-tab="cff-contraptions-tab">Ouvrir « Machines mobiles »</button>
+      </div>
+    </section>
+  </article>
+</div>
