@@ -1,0 +1,245 @@
+/* Sélection de packs de textures facultatifs.
+   Source canonique : modifier ce fichier, jamais les sorties générées. */
+
+.texture-page-head {
+  max-width: 800px;
+}
+
+.texture-pack-notice {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+  margin: -10px 0 28px;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--cyan);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.texture-pack-notice strong {
+  font-size: 0.9rem;
+}
+
+.texture-pack-notice p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.texture-pack-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.texture-pack-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #cedade;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.texture-pack-card-featured {
+  border-color: #8ecce5;
+}
+
+.texture-pack-card-wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+
+.texture-pack-card-wide .texture-pack-gallery img {
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+.texture-pack-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px;
+  background: var(--line);
+}
+
+.texture-pack-gallery .gallery-trigger {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: #e8edef;
+  cursor: zoom-in;
+}
+
+.texture-pack-gallery .gallery-trigger:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 3px solid var(--cyan);
+  outline-offset: -3px;
+}
+
+.texture-pack-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.texture-pack-content {
+  padding: 22px;
+}
+
+.texture-pack-heading {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.texture-pack-order {
+  display: block;
+  color: #167ea9;
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.texture-pack-heading h2 {
+  margin: 4px 0 0;
+  font-size: 1.55rem;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.texture-pack-resolution {
+  flex: 0 0 auto;
+  padding: 5px 8px;
+  border: 1px solid #cbd8dd;
+  border-radius: 999px;
+  color: #526068;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.texture-pack-content > p {
+  margin: 16px 0;
+  color: #56676f;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.texture-pack-facts {
+  margin: 0 0 18px;
+  border-top: 1px solid var(--line);
+}
+
+.texture-pack-facts div {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.79rem;
+}
+
+.texture-pack-facts dt {
+  color: #38474e;
+  font-weight: 800;
+}
+
+.texture-pack-facts dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+.texture-pack-link {
+  color: #bd5415;
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.texture-pack-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.texture-pack-install {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+  gap: 32px;
+  margin-top: 30px;
+  padding: 28px;
+  border: 1px solid #cedade;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.texture-pack-install h2 {
+  margin: 8px 0 0;
+  font-size: 1.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.texture-pack-install ol {
+  margin: 0;
+  padding-left: 22px;
+  color: #56676f;
+  font-size: 0.9rem;
+}
+
+.texture-pack-install li {
+  padding: 4px 0 4px 5px;
+}
+
+.texture-pack-credits {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  text-align: right;
+}
+
+@media (width <= 800px) {
+  .texture-pack-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .texture-pack-card-wide {
+    display: block;
+    grid-column: auto;
+  }
+
+  .texture-pack-card-wide .texture-pack-gallery img {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (width <= 620px) {
+  .texture-pack-notice,
+  .texture-pack-install {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .texture-pack-content {
+    padding: 19px;
+  }
+
+  .texture-pack-facts div {
+    grid-template-columns: 105px minmax(0, 1fr);
+  }
+}
+
+@media (width <= 420px) {
+  .texture-pack-heading {
+    display: block;
+  }
+
+  .texture-pack-resolution {
+    display: inline-block;
+    margin-top: 10px;
+  }
+}

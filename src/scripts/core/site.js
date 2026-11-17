@@ -18,6 +18,10 @@
       'Tutoriels détaillés pour Create, Create Big Cannons, les Stargates et l’économie du serveur Régalade.',
     ],
     mods: ['Mods | Régalade', 'Consulte la liste triée et documentée des mods du serveur Minecraft Régalade.'],
+    textures: [
+      'Packs de textures | Régalade',
+      'Compare plusieurs packs de textures facultatifs compatibles avec Minecraft 1.21.1 et le modpack Régalade.',
+    ],
     reglement: ['Règlement | Régalade', 'Le règlement simple et bienveillant du serveur Minecraft Régalade.'],
     statut: [
       'État du serveur | Régalade',

@@ -13,7 +13,7 @@ const browserCandidates = [
 ].filter(Boolean);
 const executablePath = browserCandidates.find(existsSync);
 const widths = [390, 800, 1366];
-const routes = ['accueil', 'installation', 'tutoriels', 'mods', 'reglement', 'statut', 'inscription'];
+const routes = ['accueil', 'installation', 'tutoriels', 'mods', 'textures', 'reglement', 'statut', 'inscription'];
 const browser = await chromium.launch({ headless: true, executablePath });
 const failures = [];
 
@@ -242,7 +242,8 @@ for (const width of widths) {
     if ((await page.locator('.site-menu').getAttribute('aria-expanded')) !== 'false')
       failures.push('Le menu mobile ne se ferme pas avec Échap.');
 
-    const firstGalleryImage = page.locator('.gallery-trigger').first();
+    await page.goto(`${baseUrl}?qa=${Date.now()}#textures`, { waitUntil: 'networkidle' });
+    const firstGalleryImage = page.locator('#textures .gallery-trigger').first();
     if ((await firstGalleryImage.count()) > 0) {
       await firstGalleryImage.click();
       if ((await page.locator('.image-lightbox').getAttribute('aria-hidden')) !== 'false') {

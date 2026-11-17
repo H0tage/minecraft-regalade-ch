@@ -12,6 +12,7 @@ const styleSources = [
   'pages/rules.css',
   'pages/presentation.css',
   'pages/mods.css',
+  'pages/textures.css',
   'pages/status.css',
   'pages/installation.css',
   'pages/registration.css',
