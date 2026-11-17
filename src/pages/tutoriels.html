@@ -57,6 +57,17 @@
           </button>
           <button
             class="tutorial-tab"
+            id="tutorial-qol-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-qol"
+            tabindex="-1"
+          >
+            Confort et réglages
+          </button>
+          <button
+            class="tutorial-tab"
             id="tutorial-create-first-factory-tab"
             type="button"
             role="tab"
@@ -211,6 +222,9 @@
           hidden
         >
           <!-- @include ../content/tutorials/exploration.html -->
+        </section>
+        <section class="tutorial-panel" id="tutorial-qol" role="tabpanel" aria-labelledby="tutorial-qol-tab" hidden>
+          <!-- @include ../content/tutorials/qol.html -->
         </section>
         <section
           class="tutorial-panel"
