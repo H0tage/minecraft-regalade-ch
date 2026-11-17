@@ -203,6 +203,19 @@ for (const width of widths) {
       failures.push('Le lien interne Create n’ouvre pas le sous-onglet demandé.');
     }
 
+    await page.locator('#cff-start-panel').evaluate((element) =>
+      window.scrollTo({
+        top: element.getBoundingClientRect().top + window.scrollY + element.scrollHeight,
+        behavior: 'auto',
+      }),
+    );
+    const scrollBeforeTabClick = await page.evaluate(() => window.scrollY);
+    await page.locator('#cff-factory-tab').click();
+    await page.waitForFunction((previousScroll) => window.scrollY < previousScroll - 100, scrollBeforeTabClick);
+    if ((await page.locator('#cff-factory-tab').getAttribute('aria-selected')) !== 'true') {
+      failures.push('Le menu Create n’ouvre pas le sous-onglet demandé.');
+    }
+
     await page.goto(`${baseUrl}?qa=${Date.now()}#tutoriels`, { waitUntil: 'networkidle' });
     await page
       .locator('[aria-controls="tutorial-big-cannons"]')

@@ -8,7 +8,7 @@
     const panels = tabs.map((tab) => document.getElementById(tab.getAttribute('aria-controls'))).filter(Boolean);
     const storageKey = tabList.dataset.tabStorage;
 
-    function select(selectedTab, remember = true) {
+    function select(selectedTab, remember = true, scrollToStart = false) {
       tabs.forEach((tab) => {
         const selected = tab === selectedTab;
         tab.classList.toggle('active', selected);
@@ -30,10 +30,17 @@
         }
       }
       document.dispatchEvent(new CustomEvent('regalade:tutorial-content-changed'));
+
+      if (scrollToStart) {
+        const selectedPanel = document.getElementById(selectedTab.getAttribute('aria-controls'));
+        const parentPanel = tabList.closest('[role="tabpanel"]');
+        const scrollTarget = parentPanel || selectedPanel;
+        scrollTarget?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
 
     tabs.forEach((tab, index) => {
-      tab.addEventListener('click', () => select(tab));
+      tab.addEventListener('click', () => select(tab, true, true));
       tab.addEventListener('keydown', (event) => {
         if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
         event.preventDefault();
@@ -44,7 +51,7 @@
               ? tabs.length - 1
               : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
         tabs[nextIndex].focus();
-        select(tabs[nextIndex]);
+        select(tabs[nextIndex], true, true);
       });
     });
 
@@ -61,9 +68,7 @@
 
     tabs.forEach((tab) =>
       groups.set(tab.id, {
-        panel: document.getElementById(tab.getAttribute('aria-controls')),
-        tabList,
-        select: () => select(tab),
+        select: () => select(tab, true, true),
       }),
     );
   }
@@ -75,13 +80,6 @@
       const group = groups.get(button.dataset.openTab);
       if (!group) return;
       group.select();
-
-      // Un onglet sticky reste techniquement visible même lorsque son contenu est
-      // presque terminé. On remonte donc vers le panneau qui contient la barre,
-      // ou vers le nouveau panneau pour la navigation entre deux tutoriels.
-      const parentPanel = group.tabList.closest('[role="tabpanel"]');
-      const scrollTarget = parentPanel || group.panel;
-      scrollTarget?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 })();
