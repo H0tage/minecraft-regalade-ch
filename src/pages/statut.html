@@ -1,20 +1,29 @@
 <section id="statut" class="view">
   <div class="page-head">
-    <span class="eyebrow">Suivi du projet</span>
-    <h1>Le serveur est en préparation.</h1>
-    <p>
-      On préfère prendre le temps de tester le pack, l’économie et les protections avant de vous laisser construire vos
-      premiers villages.
-    </p>
+    <span class="eyebrow">État du serveur</span>
+    <h1>Disponibilité de Régalade</h1>
+    <p>L’état est récupéré automatiquement depuis la machine qui héberge le serveur.</p>
   </div>
   <div class="status-grid status-grid-single">
     <article class="card status-card">
       <span class="eyebrow">Disponibilité</span>
-      <div class="server-state"><span class="state-dot"></span> Pas encore ouvert</div>
-      <p class="lede">
-        Aucune date d’ouverture n’est annoncée pour le moment. Inscris-toi pour être prévenu·e quand le projet avancera.
+      <div class="server-state" aria-live="polite">
+        <span class="server-status-light server-status-light-large is-unknown" data-server-status-dot></span>
+        <span data-server-status-label>Vérification en cours</span>
+      </div>
+      <p class="lede status-description" data-server-status-description>
+        Le site attend le prochain signal envoyé par le serveur.
       </p>
-      <div class="actions"><a href="#inscription" class="button primary">S’inscrire à la liste</a></div>
+      <dl class="status-details">
+        <div>
+          <dt>Joueurs connectés</dt>
+          <dd data-server-player-count>Indisponible</dd>
+        </div>
+        <div>
+          <dt>Dernier signal</dt>
+          <dd data-server-updated>En attente</dd>
+        </div>
+      </dl>
     </article>
   </div>
   <div class="faq status-faq">

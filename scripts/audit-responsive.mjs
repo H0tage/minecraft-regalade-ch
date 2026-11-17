@@ -106,6 +106,18 @@ for (const width of widths) {
     }
     await route.fulfill({ status: 405, contentType: 'application/json', body: '{}' });
   });
+  await page.route('https://fvuvfdwdmwjpkrxxslgp.supabase.co/functions/v1/server-status', async (route) => {
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({
+        state: 'online',
+        players: 3,
+        maxPlayers: 20,
+        updatedAt: new Date().toISOString(),
+      }),
+    });
+  });
   const runtimeErrors = [];
   page.on('console', (message) => {
     if (message.type() === 'error') runtimeErrors.push(message.text());

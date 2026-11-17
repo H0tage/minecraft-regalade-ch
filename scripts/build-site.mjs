@@ -45,6 +45,7 @@ const scriptSources = [
   'core/site.js',
   'pages/mods-page.js',
   'pages/registration.js',
+  'pages/status.js',
   'core/tab-groups.js',
   'tutorials/layout.js',
   'tutorials/jei.js',
