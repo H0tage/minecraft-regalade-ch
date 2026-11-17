@@ -151,6 +151,7 @@ bundle('scripts', standaloneScriptSources, join(dist, 'js', 'superpower.js'), '\
 cpSync(join(sourceRoot, 'data'), join(dist, 'data'), { recursive: true });
 cpSync(join(root, 'assets'), join(dist, 'assets'), { recursive: true });
 cpSync(join(root, 'CNAME'), join(dist, 'CNAME'));
+cpSync(join(root, 'robots.txt'), join(dist, 'robots.txt'));
 writeFileSync(join(dist, '.nojekyll'), '');
 
 const assembled = assembleTemplate(join(sourceRoot, 'index.html'));
