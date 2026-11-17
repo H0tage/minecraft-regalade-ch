@@ -191,6 +191,20 @@ for (const width of widths) {
   if (width === 800) {
     await page.goto(`${baseUrl}?qa=${Date.now()}#tutoriels`, { waitUntil: 'networkidle' });
     await page
+      .locator('[aria-controls="tutorial-create-first-factory"]')
+      .first()
+      .evaluate((element) => element.click());
+    await page.locator('[aria-controls="cff-overview-panel"]').evaluate((element) => element.click());
+    await page.locator('#cff-overview-panel [data-open-tab="cff-start-tab"]').scrollIntoViewIfNeeded();
+    const scrollBeforeInternalLink = await page.evaluate(() => window.scrollY);
+    await page.locator('#cff-overview-panel [data-open-tab="cff-start-tab"]').click();
+    await page.waitForFunction((previousScroll) => window.scrollY < previousScroll - 100, scrollBeforeInternalLink);
+    if ((await page.locator('#cff-start-tab').getAttribute('aria-selected')) !== 'true') {
+      failures.push('Le lien interne Create n’ouvre pas le sous-onglet demandé.');
+    }
+
+    await page.goto(`${baseUrl}?qa=${Date.now()}#tutoriels`, { waitUntil: 'networkidle' });
+    await page
       .locator('[aria-controls="tutorial-big-cannons"]')
       .first()
       .evaluate((element) => element.click());

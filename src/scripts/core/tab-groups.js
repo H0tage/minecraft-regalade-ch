@@ -59,7 +59,13 @@
     }
     select(initial, false);
 
-    tabs.forEach((tab) => groups.set(tab.id, { tabList, select: () => select(tab) }));
+    tabs.forEach((tab) =>
+      groups.set(tab.id, {
+        panel: document.getElementById(tab.getAttribute('aria-controls')),
+        tabList,
+        select: () => select(tab),
+      }),
+    );
   }
 
   document.querySelectorAll('[role="tablist"][data-tab-storage]').forEach(initializeTabList);
@@ -69,7 +75,13 @@
       const group = groups.get(button.dataset.openTab);
       if (!group) return;
       group.select();
-      group.tabList.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // Un onglet sticky reste techniquement visible même lorsque son contenu est
+      // presque terminé. On remonte donc vers le panneau qui contient la barre,
+      // ou vers le nouveau panneau pour la navigation entre deux tutoriels.
+      const parentPanel = group.tabList.closest('[role="tabpanel"]');
+      const scrollTarget = parentPanel || group.panel;
+      scrollTarget?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 })();
