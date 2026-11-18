@@ -4,38 +4,70 @@
       <span class="eyebrow">Historique du modpack</span>
       <h2 id="status-patch-notes-title">Dernier patch-note</h2>
     </div>
-    <span class="status-patch-current-version">Version 2.2</span>
+    <span class="status-patch-current-version">Version 2.3</span>
   </header>
 
   <article class="status-patch-latest">
     <div class="status-patch-latest-head">
       <div>
-        <span class="status-patch-label">Patch Régalade v2.2</span>
-        <h3>Hempdustry et automatisation Create</h3>
+        <span class="status-patch-label">Patch Régalade v2.3</span>
+        <h3>Des radios fiables pour les ambiances du serveur</h3>
       </div>
       <span class="status-patch-date">Dernière version</span>
     </div>
     <ul class="status-patch-list">
-      <li>Hempdustry passe à la révision Régalade <code>2.1.0-regalade.1</code>.</li>
+      <li>Etched passe à la révision Régalade <code>regalade.9</code>.</li>
       <li>
-        Le Sifting Box accepte les matériaux par le dessus et ses neuf produits peuvent être récupérés automatiquement
-        par-dessous.
-      </li>
-      <li>La Wrench de Create permet de vider un Sifting Box encore incomplet.</li>
-      <li>
-        L’Infuser accepte le lait depuis les Fluid Pipes de Create. Un cycle demande exactement
-        <code>1 000 mB</code>, soit un seau de lait vanilla.
+        Les radios actives reprennent automatiquement après une reconnexion, y compris lorsque le joueur revient depuis
+        l’extérieur de leur portée sonore.
       </li>
       <li>
-        L’Infuser et le Hemp Press reconnaissent les Blaze Burners de Create, y compris les variantes chauffées et
-        superheated.
+        Les flux sont préparés silencieusement à proximité. Les connexions automatiques n’affichent plus de message à
+        l’écran.
       </li>
-      <li>Le correctif du crash entre le Decarboxylator et Decorative Blocks Reborn reste inclus.</li>
+      <li>
+        Lorsqu’un joueur ajoute ou modifie une URL, lui seul reçoit désormais le message de confirmation correspondant.
+      </li>
+      <li>
+        Une radio éteinte ou momentanément hors zone conserve son flux pendant 30 secondes. Elle peut donc reprendre
+        immédiatement sans recharger toute la station.
+      </li>
+      <li>
+        Après ce délai, les connexions inutilisées sont libérées progressivement. L’ouverture et la fermeture des flux
+        ne bloquent plus le jeu.
+      </li>
+      <li>Un échec temporaire est retiré du cache puis retenté automatiquement après un court délai.</li>
     </ul>
   </article>
 
   <div class="status-patch-history">
     <h3>Versions précédentes</h3>
+
+    <details class="status-patch-entry">
+      <summary>
+        <span class="status-patch-version">v2.2</span>
+        <span>Hempdustry et automatisation Create</span>
+      </summary>
+      <div class="status-patch-body">
+        <ul class="status-patch-list">
+          <li>Hempdustry passe à la révision Régalade <code>2.1.0-regalade.1</code>.</li>
+          <li>
+            Le Sifting Box accepte les matériaux par le dessus et ses neuf produits peuvent être récupérés
+            automatiquement par-dessous.
+          </li>
+          <li>La Wrench de Create permet de vider un Sifting Box encore incomplet.</li>
+          <li>
+            L’Infuser accepte le lait depuis les Fluid Pipes de Create. Un cycle demande exactement
+            <code>1 000 mB</code>, soit un seau de lait vanilla.
+          </li>
+          <li>
+            L’Infuser et le Hemp Press reconnaissent les Blaze Burners de Create, y compris les variantes chauffées et
+            superheated.
+          </li>
+          <li>Le correctif du crash entre le Decarboxylator et Decorative Blocks Reborn reste inclus.</li>
+        </ul>
+      </div>
+    </details>
 
     <details class="status-patch-entry">
       <summary>
