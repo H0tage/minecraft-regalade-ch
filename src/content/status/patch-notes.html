@@ -4,44 +4,67 @@
       <span class="eyebrow">Historique du modpack</span>
       <h2 id="status-patch-notes-title">Dernier patch-note</h2>
     </div>
-    <span class="status-patch-current-version">Version 2.3</span>
+    <span class="status-patch-current-version">Version 2.4</span>
   </header>
 
   <article class="status-patch-latest">
     <div class="status-patch-latest-head">
       <div>
-        <span class="status-patch-label">Patch Régalade v2.3</span>
-        <h3>Des radios fiables pour les ambiances du serveur</h3>
+        <span class="status-patch-label">Patch Régalade v2.4</span>
+        <h3>Automatiser les machines Hempdustry avec Create</h3>
       </div>
       <span class="status-patch-date">Dernière version</span>
     </div>
     <ul class="status-patch-list">
-      <li>Etched passe à la révision Régalade <code>regalade.9</code>.</li>
+      <li>Hempdustry passe à la révision Régalade <code>2.1.0-regalade.2</code>.</li>
       <li>
-        Les radios actives reprennent automatiquement après une reconnexion, y compris lorsque le joueur revient depuis
-        l’extérieur de leur portée sonore.
+        Le Sifting Box, le Decarboxylator, le Hemp Press et l’Infuser acceptent désormais les automatisations Create sur
+        leurs quatre faces horizontales.
       </li>
       <li>
-        Les flux sont préparés silencieusement à proximité. Les connexions automatiques n’affichent plus de message à
-        l’écran.
+        Le Sifting Box conserve son entrée par le dessus et sa sortie par le dessous. Les autres faces permettent de
+        construire une véritable ligne de production visible et accessible.
       </li>
       <li>
-        Lorsqu’un joueur ajoute ou modifie une URL, lui seul reçoit désormais le message de confirmation correspondant.
+        Le Hemp Press rend son résultat disponible dès la fin du traitement. Le sens du Funnel ou du Belt détermine si
+        la machine reçoit un produit ou en extrait un.
       </li>
       <li>
-        Une radio éteinte ou momentanément hors zone conserve son flux pendant 30 secondes. Elle peut donc reprendre
-        immédiatement sans recharger toute la station.
+        L’Infuser accepte le lait depuis les Fluid Pipes horizontaux. Un cycle utilise exactement <code>1 000 mB</code>,
+        soit un seau de lait vanilla.
       </li>
       <li>
-        Après ce délai, les connexions inutilisées sont libérées progressivement. L’ouverture et la fermeture des flux
-        ne bloquent plus le jeu.
+        Un Funnel simple récupère le premier Cannabutter disponible. Un Attribute Filter peut attendre une qualité
+        précise : Rough, Standard, Clean ou Perfect.
       </li>
-      <li>Un échec temporaire est retiré du cache puis retenté automatiquement après un court délai.</li>
+      <li>Le filtre tient compte de la qualité du Cannabutter et ignore sa dose.</li>
+      <li>Les utilisations manuelles et les sources de chaleur déjà compatibles restent disponibles.</li>
     </ul>
   </article>
 
   <div class="status-patch-history">
     <h3>Versions précédentes</h3>
+
+    <details class="status-patch-entry">
+      <summary>
+        <span class="status-patch-version">v2.3</span>
+        <span>Des radios fiables pour les ambiances du serveur</span>
+      </summary>
+      <div class="status-patch-body">
+        <ul class="status-patch-list">
+          <li>Etched passe à la révision Régalade <code>regalade.9</code>.</li>
+          <li>
+            Les radios actives reprennent automatiquement après une reconnexion, y compris lorsque le joueur revient
+            depuis l’extérieur de leur portée sonore.
+          </li>
+          <li>Les flux sont préparés silencieusement à proximité, sans message automatique à l’écran.</li>
+          <li>Seul le joueur qui ajoute ou modifie une URL reçoit le message de confirmation.</li>
+          <li>Une radio momentanément hors zone conserve son flux pendant 30 secondes pour reprendre immédiatement.</li>
+          <li>Les connexions inutilisées sont ensuite libérées progressivement sans bloquer le jeu.</li>
+          <li>Un échec temporaire est retiré du cache puis retenté automatiquement après un court délai.</li>
+        </ul>
+      </div>
+    </details>
 
     <details class="status-patch-entry">
       <summary>
