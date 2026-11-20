@@ -92,16 +92,6 @@
   color: var(--muted);
 }
 
-.status-discord-placeholder {
-  flex: 0 0 auto;
-  padding: 10px 14px;
-  border: 1px solid var(--line);
-  border-radius: 9px;
-  color: var(--muted);
-  font-size: 0.85rem;
-  font-weight: 750;
-}
-
 .status-patch-notes {
   margin-top: 54px;
 }
@@ -267,11 +257,6 @@
   .status-discord {
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  .status-discord-placeholder {
-    width: 100%;
-    text-align: center;
   }
 
   .status-patch-notes {
