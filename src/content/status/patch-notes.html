@@ -4,46 +4,68 @@
       <span class="eyebrow">Historique du modpack</span>
       <h2 id="status-patch-notes-title">Dernier patch-note</h2>
     </div>
-    <span class="status-patch-current-version">Version 2.4</span>
+    <span class="status-patch-current-version">Version 2.5</span>
   </header>
 
   <article class="status-patch-latest">
     <div class="status-patch-latest-head">
       <div>
-        <span class="status-patch-label">Patch Régalade v2.4</span>
-        <h3>Automatiser les machines Hempdustry avec Create</h3>
+        <span class="status-patch-label">Patch Régalade v2.5</span>
+        <h3>Des radios plus complètes et un horizon beaucoup plus vaste</h3>
       </div>
       <span class="status-patch-date">Dernière version</span>
     </div>
     <ul class="status-patch-list">
-      <li>Hempdustry passe à la révision Régalade <code>2.1.0-regalade.2</code>.</li>
+      <li>Etched passe à la révision Régalade <code>5.1.0-regalade.10</code>.</li>
       <li>
-        Le Sifting Box, le Decarboxylator, le Hemp Press et l’Infuser acceptent désormais les automatisations Create sur
-        leurs quatre faces horizontales.
+        La radio permet maintenant de chercher une station avec Radio Browser et de lire les liens Drive, Dropbox,
+        SoundCloud, AAC, HLS et fMP4 compatibles.
       </li>
       <li>
-        Le Sifting Box conserve son entrée par le dessus et sa sortie par le dessous. Les autres faces permettent de
-        construire une véritable ligne de production visible et accessible.
+        Ajouter, remplacer ou retirer une URL, se reconnecter et détruire une radio active ne provoquent plus de blocage
+        du jeu.
       </li>
       <li>
-        Le Hemp Press rend son résultat disponible dès la fin du traitement. Le sens du Funnel ou du Belt détermine si
-        la machine reçoit un produit ou en extrait un.
+        Roxy, Voxy et Forgified Fabric API sont ajoutés côté client pour conserver le terrain déjà découvert au-delà de
+        la distance envoyée en direct par le serveur.
       </li>
+      <li>La compatibilité Create de Roxy conserve la géométrie statique des courroies dans l’affichage lointain.</li>
       <li>
-        L’Infuser accepte le lait depuis les Fluid Pipes horizontaux. Un cycle utilise exactement <code>1 000 mB</code>,
-        soit un seau de lait vanilla.
+        JEI est maintenant présent côté serveur afin que le bouton de transfert d’une recette vers la grille de
+        fabrication fonctionne.
       </li>
-      <li>
-        Un Funnel simple récupère le premier Cannabutter disponible. Un Attribute Filter peut attendre une qualité
-        précise : Rough, Standard, Clean ou Perfect.
-      </li>
-      <li>Le filtre tient compte de la qualité du Cannabutter et ignore sa dose.</li>
-      <li>Les utilisations manuelles et les sources de chaleur déjà compatibles restent disponibles.</li>
+      <li>Le serveur Régalade est préconfiguré dans la liste multijoueur du nouveau profil.</li>
+      <li>La musique commence à 0 % et les sons d’ambiance à 15 %, avec des réglages toujours modifiables.</li>
     </ul>
   </article>
 
   <div class="status-patch-history">
     <h3>Versions précédentes</h3>
+
+    <details class="status-patch-entry">
+      <summary>
+        <span class="status-patch-version">v2.4</span>
+        <span>Automatiser les machines Hempdustry avec Create</span>
+      </summary>
+      <div class="status-patch-body">
+        <ul class="status-patch-list">
+          <li>Hempdustry passe à la révision Régalade <code>2.1.0-regalade.2</code>.</li>
+          <li>
+            Le Sifting Box, le Decarboxylator, le Hemp Press et l’Infuser acceptent les automatisations Create sur leurs
+            quatre faces horizontales.
+          </li>
+          <li>Le Sifting Box conserve également son entrée par le dessus et sa sortie par le dessous.</li>
+          <li>Le Hemp Press rend son résultat disponible dès la fin du traitement.</li>
+          <li>
+            L’Infuser accepte exactement <code>1 000 mB</code> de lait par cycle depuis les Fluid Pipes horizontaux.
+          </li>
+          <li>
+            Un Funnel simple récupère le premier Cannabutter disponible. Un Attribute Filter peut attendre la qualité
+            Rough, Standard, Clean ou Perfect sans tenir compte de la dose.
+          </li>
+        </ul>
+      </div>
+    </details>
 
     <details class="status-patch-entry">
       <summary>
