@@ -33,15 +33,6 @@ jobs:
       - name: Contrôler et construire
         run: npm run qa
 
-      - name: Installer Chromium
-        run: npx playwright install --with-deps chromium
-
-      - name: Tester le site dans le navigateur
-        run: |
-          npm run serve &
-          sleep 1
-          npm run audit:runtime
-
       - name: Préparer GitHub Pages
         uses: actions/configure-pages@v6
 

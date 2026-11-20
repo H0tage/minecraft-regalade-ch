@@ -7,6 +7,6 @@ Avant toute modification, lire `WORKFLOW-SITE.md` et classer la demande dans l�
 
 Pour le contenu express, ne pas lancer de navigateur ni attendre GitHub Pages. Modifier uniquement la source correspondante dans `src`, lancer `node scripts/site-workflow.mjs express`, puis faire un seul commit et un seul push.
 
-Pour une modification structurelle, lancer `node scripts/site-workflow.mjs structure`, puis réserver la prévisualisation aux seules pages et largeurs touchées.
+Pour une modification structurelle, lancer `npm run qa`. Lancer ensuite `npm run audit:runtime` uniquement si la modification touche le CSS, le responsive, la navigation, les onglets, un formulaire ou un comportement JavaScript. Réserver la prévisualisation aux seules pages et largeurs touchées.
 
 Ne jamais modifier manuellement `dist`. Cette sortie est entièrement régénérée par le workflow depuis `src`.

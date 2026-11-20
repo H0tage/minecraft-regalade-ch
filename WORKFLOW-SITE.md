@@ -52,10 +52,9 @@ Utiliser ce parcours pour créer, déplacer ou retirer une section, modifier le 
 1. Identifier les fichiers source et leurs dépendances.
 2. Modifier les sources.
 3. Lancer `npm run qa`.
-4. Démarrer `npm run serve`.
-5. Lancer `npm run audit:runtime`.
-6. Inspecter visuellement uniquement les pages touchées si la modification a un impact graphique.
-7. Examiner le diff, puis faire un seul commit et un seul push.
+4. Si la modification touche le CSS, le responsive, la navigation, les onglets, un formulaire ou un comportement JavaScript, démarrer `npm run serve` puis lancer `npm run audit:runtime`.
+5. Inspecter visuellement uniquement les pages touchées si la modification a un impact graphique.
+6. Examiner le diff, puis faire un seul commit et un seul push.
 
 ## Build et contrôles
 
@@ -70,8 +69,9 @@ dist/
   assets/
 ```
 
-`npm run audit:runtime` ouvre le site local dans un navigateur sans interface et contrôle les sept pages aux largeurs 390, 800 et 1366 pixels.
-Le déploiement GitHub exécute également cet audit dans Chromium avant toute publication.
+`npm run audit:runtime` ouvre le site local dans un navigateur sans interface et contrôle les pages aux largeurs 390, 800 et 1366 pixels. Cet audit est réservé aux modifications qui peuvent réellement affecter l’affichage ou les interactions.
+
+GitHub Actions ne répète pas l’audit navigateur. Il reconstruit le site sur une machine propre, exécute les contrôles techniques rapides avec `npm run qa`, puis publie `dist` sur GitHub Pages.
 
 ## Contenus textuels
 
