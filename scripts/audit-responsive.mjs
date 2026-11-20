@@ -231,6 +231,20 @@ for (const width of widths) {
     if ((await page.locator('[aria-controls="cbc-autocannon-panel"]').getAttribute('aria-selected')) !== 'true') {
       failures.push('Le sous-onglet sélectionné n’est pas conservé après rechargement.');
     }
+
+    await page.goto(`${baseUrl}?qa=${Date.now()}#tutoriels/create-first-factory/logistics`, {
+      waitUntil: 'networkidle',
+    });
+    if (
+      (await page.locator('#tutorial-create-first-factory-tab').getAttribute('aria-selected')) !== 'true' ||
+      (await page.locator('#cff-logistics-tab').getAttribute('aria-selected')) !== 'true'
+    ) {
+      failures.push('Un lien partagé n’ouvre pas le tutoriel et le sous-onglet demandés.');
+    }
+    await page.locator('#cff-advanced-tab').click();
+    if ((await page.evaluate(() => location.hash)) !== '#tutoriels/create-first-factory/advanced') {
+      failures.push('L’adresse ne suit pas la navigation dans les sous-onglets des tutoriels.');
+    }
   }
 
   if (width === 390) {

@@ -1,5 +1,46 @@
 (() => {
   const groups = new Map();
+  const tutorialRoot = document.querySelector('#tutoriels');
+  const tutorialTabList = tutorialRoot?.querySelector('.tutorial-tabs');
+
+  function nestedTabSlug(tab) {
+    const id = tab.id.replace(/-tab$/, '');
+    return id.slice(id.indexOf('-') + 1);
+  }
+
+  function syncTutorialHash() {
+    if (!tutorialRoot?.classList.contains('active')) return;
+    const tutorialTab = tutorialTabList?.querySelector(':scope > [role="tab"][aria-selected="true"]');
+    if (!tutorialTab) return;
+
+    const path = ['tutoriels', tutorialTab.id.replace(/^tutorial-|-tab$/g, '')];
+    const tutorialPanel = document.getElementById(tutorialTab.getAttribute('aria-controls'));
+    const nestedTab = tutorialPanel?.querySelector(
+      '[role="tablist"][data-tab-storage] > [role="tab"][aria-selected="true"]',
+    );
+    if (nestedTab) path.push(nestedTabSlug(nestedTab));
+    history.replaceState(null, '', `#${path.join('/')}`);
+  }
+
+  function applyTutorialHash() {
+    const [page, tutorialSlug, nestedSlug] = location.hash.slice(1).split('/');
+    if (page !== 'tutoriels') return;
+    if (!tutorialSlug) {
+      syncTutorialHash();
+      return;
+    }
+
+    const tutorialTab = document.getElementById(`tutorial-${tutorialSlug}-tab`);
+    if (!tutorialTab || !tutorialTabList?.contains(tutorialTab)) return;
+    groups.get(tutorialTab.id)?.select(true, false, false);
+
+    if (!nestedSlug) return;
+    const tutorialPanel = document.getElementById(tutorialTab.getAttribute('aria-controls'));
+    const nestedTab = [
+      ...(tutorialPanel?.querySelectorAll('[role="tablist"][data-tab-storage] > [role="tab"]') || []),
+    ].find((tab) => nestedTabSlug(tab) === nestedSlug);
+    if (nestedTab) groups.get(nestedTab.id)?.select(true, false, false);
+  }
 
   function initializeTabList(tabList) {
     const tabs = [...tabList.querySelectorAll(':scope > [role="tab"]')];
@@ -8,7 +49,7 @@
     const panels = tabs.map((tab) => document.getElementById(tab.getAttribute('aria-controls'))).filter(Boolean);
     const storageKey = tabList.dataset.tabStorage;
 
-    function select(selectedTab, remember = true, scrollToStart = false) {
+    function select(selectedTab, remember = true, scrollToStart = false, syncHash = remember) {
       tabs.forEach((tab) => {
         const selected = tab === selectedTab;
         tab.classList.toggle('active', selected);
@@ -29,6 +70,7 @@
           /* Storage is optional. */
         }
       }
+      if (syncHash) syncTutorialHash();
       document.dispatchEvent(new CustomEvent('regalade:tutorial-content-changed'));
 
       if (scrollToStart) {
@@ -68,7 +110,8 @@
 
     tabs.forEach((tab) =>
       groups.set(tab.id, {
-        select: () => select(tab, true, true),
+        select: (remember = true, scrollToStart = true, syncHash = remember) =>
+          select(tab, remember, scrollToStart, syncHash),
       }),
     );
   }
@@ -82,4 +125,7 @@
       group.select();
     });
   });
+
+  applyTutorialHash();
+  window.addEventListener('hashchange', applyTutorialHash);
 })();

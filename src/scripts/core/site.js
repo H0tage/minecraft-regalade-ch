@@ -38,7 +38,7 @@
   }
 
   function route() {
-    const requested = location.hash.slice(1) || 'accueil';
+    const requested = location.hash.slice(1).split('/')[0] || 'accueil';
     const id = views.some((view) => view.id === requested) ? requested : 'accueil';
     const activeView = views.find((view) => view.id === id);
 
