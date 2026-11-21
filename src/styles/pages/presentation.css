@@ -141,6 +141,12 @@
   background: #e8edef;
 }
 
+.home-activity-card img.home-activity-icon {
+  object-fit: contain;
+  padding: 18px;
+  background: #dce6ff;
+}
+
 .home-activity-card > div {
   padding: 18px 18px 20px;
 }
