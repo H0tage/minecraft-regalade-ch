@@ -324,6 +324,15 @@
     "icon": "https://media.forgecdn.net/avatars/thumbnails/1700/452/256/256/639079829098058740.png"
   },
   {
+    "name": "Hempdustry 2",
+    "category": "Cuisine, boissons et activités paisibles",
+    "version": "2.1.0-regalade.2+1.21.1",
+    "status": "OK",
+    "description": "Culture et transformation du chanvre avec quatre machines automatisables par Create, gestion du lait par tuyaux, chaleur compatible et filtres de qualité pour le cannabutter.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ganjacraft",
+    "icon": "https://minecraft.regalade.ch/assets/mods/hempdustry/icon.png"
+  },
+  {
     "name": "Let's Do: Bakery (Farm & Charm)",
     "category": "Cuisine, boissons et activités paisibles",
     "version": "2.1.11",
@@ -353,9 +362,9 @@
   {
     "name": "Let's Do: Farm & Charm",
     "category": "Cuisine, boissons et activités paisibles",
-    "version": "1.1.29",
+    "version": "1.1.29-regalade.1",
     "status": "OK",
-    "description": "Agriculture, cuisine et décoration rustique, avec de nouveaux ateliers et recettes compatibles avec l’écosystème Let’s Do.",
+    "description": "Agriculture, cuisine et décoration rustique, avec charrue et semoir utilisables lorsqu’ils sont tirés par un cheval ou un âne.",
     "url": "https://www.curseforge.com/minecraft/mc-mods/lets-do-farm-charm",
     "icon": "https://media.forgecdn.net/avatars/thumbnails/1677/145/256/256/639066218721273462.png"
   },
@@ -470,9 +479,9 @@
   {
     "name": "Decorative Blocks Reborn",
     "category": "Construction, décoration et éclairage",
-    "version": "6.0.2",
+    "version": "6.0.2-regalade.1",
     "status": "OK",
-    "description": "Successeur NeoForge de Decorative Blocks.",
+    "description": "Blocs décoratifs pour NeoForge, avec un correctif de compatibilité pour le calcul du combustible des machines Hempdustry.",
     "url": "https://www.curseforge.com/minecraft/mc-mods/decorative-blocks-reborn",
     "icon": "https://media.forgecdn.net/avatars/thumbnails/1401/732/256/256/638908604373933186.png"
   },
@@ -659,9 +668,9 @@
   {
     "name": "Etched",
     "category": "Vie communautaire, confort et interface",
-    "version": "5.1.0-regalade.2",
+    "version": "5.1.0-regalade.15",
     "status": "OK",
-    "description": "Musique personnalisée et radios diffusant des flux audio, avec réglage de volume et de portée par radio.",
+    "description": "Radios internet avec recherche de stations, favoris, presets locaux, métadonnées ICY et lecture MP3, AAC et HLS sur un traitement audio asynchrone.",
     "url": "https://www.curseforge.com/minecraft/mc-mods/etched",
     "icon": "https://cdn.modrinth.com/data/zi3Fnfmc/ad6a88011826f38dc4aaad6a96b202947da31c67_96.webp"
   },
@@ -844,6 +853,15 @@
     "description": "Ajoute à la génération du monde des structures équilibrées inspirées de Create. À installer avant la création ou la prégénération du monde définitif.",
     "url": "https://www.curseforge.com/minecraft/mc-mods/create-let-the-adventure-begin",
     "icon": "https://media.forgecdn.net/avatars/thumbnails/1158/135/256/256/638726420331721627_animated.gif"
+  },
+  {
+    "name": "Epic Knights",
+    "category": "Exploration et monde vivant",
+    "version": "10.17",
+    "status": "OK",
+    "description": "Armes blanches, armures et boucliers médiévaux avec de nombreux matériaux et styles historiques.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/epic-knights-armor-and-weapons",
+    "icon": "https://minecraft.regalade.ch/assets/mods/epic-knights/icon.png"
   },
   {
     "name": "Critters and Companions",
@@ -1179,6 +1197,15 @@
     "icon": "https://media.forgecdn.net/avatars/thumbnails/827/189/256/256/638214128652935154.png"
   },
   {
+    "name": "Roxy",
+    "category": "Qualité de vie et retours visuels",
+    "version": "0.4.2",
+    "status": "OK (CLIENT)",
+    "description": "Couche de compatibilité NeoForge permettant à Voxy d’afficher les terrains lointains déjà explorés. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/roxy",
+    "icon": "https://minecraft.regalade.ch/assets/mods/roxy/icon.png"
+  },
+  {
     "name": "Shulker Box Tooltip",
     "category": "Qualité de vie et retours visuels",
     "version": "5.1.9+1.21.1",
@@ -1204,6 +1231,15 @@
     "description": "Conserve les ingrédients dans l'établi après fermeture et les affiche physiquement dessus.",
     "url": "https://www.curseforge.com/minecraft/mc-mods/visual-workbench",
     "icon": "https://media.forgecdn.net/avatars/thumbnails/1185/919/256/256/638759979085029659.png"
+  },
+  {
+    "name": "Voxy",
+    "category": "Qualité de vie et retours visuels",
+    "version": "0.2.16-beta+1.21.11",
+    "status": "OK (CLIENT)",
+    "description": "Rendu de terrain à très longue distance à partir des zones déjà explorées, conservées dans un cache local. Côté client.",
+    "url": "https://modrinth.com/mod/voxy",
+    "icon": "https://minecraft.regalade.ch/assets/mods/voxy/icon.png"
   },
   {
     "name": "What Are They Up To",
