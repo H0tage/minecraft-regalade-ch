@@ -126,6 +126,12 @@ for (const width of widths) {
 
   for (const route of routes) {
     await page.goto(`${baseUrl}?qa=${Date.now()}#${route}`, { waitUntil: 'networkidle' });
+    const countdown = page.locator('[data-opening-countdown]');
+    if ((await countdown.count()) !== 1) {
+      failures.push(`${route} ne contient pas le compte à rebours d’ouverture à ${width}px.`);
+    } else if (!/\d+ j \d{2} h \d{2} min \d{2} s|Le serveur est ouvert !/.test((await countdown.textContent()) || '')) {
+      failures.push(`${route} n’actualise pas le compte à rebours d’ouverture à ${width}px.`);
+    }
     const metrics = await page.evaluate(() => ({
       viewport: window.innerWidth,
       width: document.documentElement.scrollWidth,

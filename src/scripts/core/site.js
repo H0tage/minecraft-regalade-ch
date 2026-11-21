@@ -1,6 +1,7 @@
 (() => {
   const nav = document.querySelector('#main-navigation');
   const menuButton = document.querySelector('.site-menu');
+  const openingCountdown = document.querySelector('[data-opening-countdown]');
   const links = [...nav.querySelectorAll('a')];
   const views = [...document.querySelectorAll('.view')];
   const description = document.querySelector('meta[name="description"]');
@@ -30,6 +31,33 @@
     inscription: ['Inscription | Régalade', 'Inscris ton intérêt pour le serveur communautaire Minecraft Régalade.'],
   };
   let initialRoute = true;
+
+  if (openingCountdown) {
+    const openingTime = Date.parse(openingCountdown.dateTime);
+    if (Number.isFinite(openingTime)) {
+      const updateOpeningCountdown = () => {
+        const seconds = Math.max(0, Math.ceil((openingTime - Date.now()) / 1000));
+        if (seconds === 0) {
+          openingCountdown.textContent = 'Le serveur est ouvert !';
+          openingCountdown.setAttribute('aria-label', 'Le serveur est ouvert.');
+          window.clearInterval(countdownInterval);
+          return;
+        }
+
+        const days = Math.floor(seconds / 86_400);
+        const hours = Math.floor((seconds % 86_400) / 3_600);
+        const minutes = Math.floor((seconds % 3_600) / 60);
+        const remainingSeconds = seconds % 60;
+        const text = `${days} j ${String(hours).padStart(2, '0')} h ${String(minutes).padStart(2, '0')} min ${String(
+          remainingSeconds,
+        ).padStart(2, '0')} s`;
+        openingCountdown.textContent = text;
+        openingCountdown.setAttribute('aria-label', `Temps restant avant l’ouverture : ${text}`);
+      };
+      const countdownInterval = window.setInterval(updateOpeningCountdown, 1_000);
+      updateOpeningCountdown();
+    }
+  }
 
   function setMenu(open) {
     nav.classList.toggle('open', open);
