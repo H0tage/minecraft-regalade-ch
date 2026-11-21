@@ -18,26 +18,50 @@
     <ul class="status-patch-list">
       <li>Etched passe à la révision Régalade <code>5.1.0-regalade.15</code>.</li>
       <li>
-        Chaque radio possède six presets partagés. Chaque joueur peut également conserver autant de stations qu’il le
-        souhaite dans sa bibliothèque personnelle.
+        L’interface des radios a été entièrement réorganisée. Elle s’adapte à la taille de la fenêtre et réserve la
+        place occupée par JEI, à gauche comme à droite.
       </li>
       <li>
-        Radio Browser permet de chercher une station, de l’écouter immédiatement ou de l’ajouter aux favoris sans
-        recopier son adresse.
+        Chaque radio possède six presets partagés et renommables. Chaque joueur peut également conserver autant de
+        stations qu’il le souhaite dans sa bibliothèque personnelle, indépendamment des presets de la radio.
       </li>
       <li>
-        Le nom de la station et le morceau en cours apparaissent directement sur la radio. Les textes trop longs
-        défilent jusqu’à leur fin et les caractères accentués sont correctement affichés.
+        Radio Browser permet de chercher une station, de l’écouter immédiatement ou de l’ajouter aux favoris. Les
+        recherches peuvent être annulées et disposent de délais réseau et d’une taille de réponse limitée.
       </li>
       <li>
-        L’interface reprend l’allure d’un ancien poste de radio, s’adapte à la taille de la fenêtre et conserve de la
-        place pour JEI.
+        Le nom de la station et le morceau en cours apparaissent directement sur la radio lorsqu’un flux fournit des
+        métadonnées ICY. Les textes trop longs défilent entièrement et les encodages UTF-8 et Latin-1 sont pris en
+        charge. L’adresse du flux reste fixe pendant l’édition.
       </li>
-      <li>Les liens SoundCloud, Drive et Dropbox ainsi que les flux MP3, AAC, HLS et fMP4 restent pris en charge.</li>
+      <li>
+        Les liens SoundCloud, Google Drive et Dropbox ainsi que les flux MP3, AAC, HLS et fMP4 sont pris en charge. Les
+        liens de partage Drive et Dropbox reconnus sont convertis automatiquement et leur contenu audio est vérifié.
+      </li>
+      <li>
+        Les URL fournies par les joueurs sont limitées aux adresses HTTP et HTTPS publiques. Les destinations locales,
+        privées, multicast ou réservées sont refusées, chaque redirection est contrôlée et la résolution DNS dispose
+        d’un délai maximal.
+      </li>
+      <li>
+        La préparation, le décodage et la fermeture des flux radio s’effectuent hors du thread principal. Retirer ou
+        remplacer une URL, détruire une radio active et entrer dans sa zone de détection ne bloquent plus le jeu.
+      </li>
+      <li>
+        Une radio active prépare son flux dans une zone de 32 blocs tout en respectant sa portée sonore configurée. Son
+        état est correctement recréé après une reconnexion.
+      </li>
       <li>
         La musique de Minecraft s’interrompt pendant l’écoute d’une radio et retrouve son fonctionnement normal ensuite.
       </li>
-      <li>Le checker client et serveur passe à la version 2.6 du modpack.</li>
+      <li>
+        Les sources des fonctions adaptées et les licences des bibliothèques audio sont désormais consignées dans le
+        projet Etched.
+      </li>
+      <li>
+        Le checker client et serveur passe à la version 2.6 du modpack et indique clairement lorsqu’un joueur tente de
+        se connecter avec une ancienne version.
+      </li>
     </ul>
   </article>
 
