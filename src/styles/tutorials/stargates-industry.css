@@ -656,6 +656,24 @@
   text-align: center;
 }
 
+#tutorial-stargates .sgu-production-inputs .sgu-input-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+#tutorial-stargates .sgu-production-inputs .sgu-input-with-icon img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+#tutorial-stargates .sgu-process-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  object-fit: contain;
+}
+
 #tutorial-stargates .sgu-production-inputs i,
 #tutorial-stargates .sgu-production-arrow {
   align-self: center;
