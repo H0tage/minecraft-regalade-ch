@@ -765,15 +765,6 @@
     "icon": "https://media.forgecdn.net/avatars/thumbnails/247/174/256/256/637161770719810085.png"
   },
   {
-    "name": "Simple Radio",
-    "category": "Vie communautaire, confort et interface",
-    "version": "1.21.1-4.6.7.10",
-    "status": "OK",
-    "description": "Radios portatives, fréquences, antennes, émetteurs, récepteurs et haut-parleurs compatibles avec Simple Voice Chat. Le JAR retenu est bien la version NeoForge pour Minecraft 1.21.1.",
-    "url": "https://www.curseforge.com/minecraft/mc-mods/simple-voice-radio",
-    "icon": "https://media.forgecdn.net/avatars/thumbnails/1228/416/256/256/638805632556962162.png"
-  },
-  {
     "name": "Simple Voice Chat",
     "category": "Vie communautaire, confort et interface",
     "version": "1.21.1-2.6.22",

@@ -4,59 +4,71 @@
       <span class="eyebrow">Historique du modpack</span>
       <h2 id="status-patch-notes-title">Dernier patch-note</h2>
     </div>
-    <span class="status-patch-current-version">Version 2.7</span>
+    <span class="status-patch-current-version">Version 2.8</span>
   </header>
 
   <article class="status-patch-latest">
     <div class="status-patch-latest-head">
       <div>
-        <span class="status-patch-label">Patch Régalade v2.7</span>
-        <h3>Ajout de shaders, de packs de textures et d’une seconde canne Starcatcher</h3>
+        <span class="status-patch-label">Patch Régalade v2.8</span>
+        <h3>Nouvelles textures Stargate et retrait de Simple Radio</h3>
       </div>
       <span class="status-patch-date">Dernière version</span>
     </div>
     <ul class="status-patch-list">
+      <li>Les 13 objets personnalisés du cycle du naquadah utilisent des textures carrées en 1024 × 1024.</li>
       <li>
-        Iris Shaders <code>1.8.14-beta.1</code> est ajouté côté client pour charger et configurer les shaderpacks.
+        Ces textures s’affichent dans l’inventaire, JEI, les mains des joueurs et les transports Create qui présentent
+        les objets produits.
       </li>
+      <li>Les recettes, les identifiants et la progression Stargate restent inchangés.</li>
       <li>
-        Iris &amp; Oculus Flywheel Compat <code>2.4.0</code> conserve les optimisations de rendu de Create lorsqu’un
-        shader est actif.
+        Simple Radio est retiré du client et du serveur en raison de ses défaillances de transmission audio. Ses
+        configurations et ses références JEI sont également supprimées.
       </li>
-      <li>
-        Quatre shaders compatibles avec Voxy sont fournis : Complementary Reimagined, Sildur’s Enhanced Default, MakeUp
-        Ultra Fast et BSL.
-      </li>
-      <li>Quatre packs de textures sont fournis : Faithful 32x, Reimagined, Bare Bones et Tooniverse 64x.</li>
-      <li>
-        Complementary Reimagined passe en version <code>5.10</code>, Sildur’s Enhanced Default en version
-        <code>1.20</code> et BSL en version <code>10.1.8</code> pour assurer leur compatibilité avec le rendu distant.
-      </li>
-      <li>
-        Les shaders et les packs de textures restent désactivés par défaut. Chaque joueur peut choisir sa combinaison
-        dans les options vidéo et les packs de ressources.
-      </li>
-      <li>
-        Le mini-jeu de la canne Starcatcher normale est réactivé. Une nouvelle Canne à pêche simplifiée permet de
-        conserver une pêche classique.
-      </li>
-      <li>
-        La Canne à pêche simplifiée utilise les hameçons, flotteurs, appâts, poissons et conditions de capture de
-        Starcatcher tout en passant directement l’étape du mini-jeu.
-      </li>
-      <li>
-        Tous les composants graphiques restent réservés au client. Un correctif commun empêche Small Ships 2.0.2 de
-        traiter les configurations synchronisées comme des fichiers locaux.
-      </li>
-      <li>
-        Le ZIP d’import CurseForge reste proche de 30 Mio. CurseForge télécharge environ 73 Mio supplémentaires pendant
-        l’installation pour ajouter les shaders et les packs de textures.
-      </li>
+      <li>Etched <code>5.1.0-regalade.15</code> reste le système de diffusion musicale du serveur.</li>
+      <li>Simple Voice Chat <code>2.6.22</code> reste le système de discussion vocale de proximité.</li>
+      <li>Le checker client et serveur passe à la version 2.8 du modpack.</li>
     </ul>
   </article>
 
   <div class="status-patch-history">
     <h3>Versions précédentes</h3>
+
+    <details class="status-patch-entry">
+      <summary>
+        <span class="status-patch-version">v2.7</span>
+        <span>Shaders, packs de textures et seconde canne Starcatcher</span>
+      </summary>
+      <div class="status-patch-body">
+        <ul class="status-patch-list">
+          <li>
+            Iris Shaders <code>1.8.14-beta.1</code> est ajouté côté client pour charger et configurer les shaderpacks.
+          </li>
+          <li>
+            Iris &amp; Oculus Flywheel Compat <code>2.4.0</code> conserve les optimisations de rendu de Create lorsqu’un
+            shader est actif.
+          </li>
+          <li>
+            Quatre shaders compatibles avec Voxy sont fournis : Complementary Reimagined, Sildur’s Enhanced Default,
+            MakeUp Ultra Fast et BSL.
+          </li>
+          <li>Quatre packs de textures sont fournis : Faithful 32x, Reimagined, Bare Bones et Tooniverse 64x.</li>
+          <li>
+            Les shaders et les packs de textures restent désactivés par défaut. Chaque joueur choisit sa combinaison
+            dans les options vidéo et les packs de ressources.
+          </li>
+          <li>
+            Le mini-jeu de la canne Starcatcher normale est réactivé. La Canne à pêche simplifiée conserve les hameçons,
+            flotteurs, appâts et captures de Starcatcher en passant directement l’étape du mini-jeu.
+          </li>
+          <li>
+            Les composants graphiques restent réservés au client. Un correctif commun synchronise correctement les
+            configurations de Small Ships 2.0.2.
+          </li>
+        </ul>
+      </div>
+    </details>
 
     <details class="status-patch-entry">
       <summary>
