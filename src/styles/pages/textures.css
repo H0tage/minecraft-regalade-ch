@@ -1,8 +1,50 @@
-/* Sélection de packs de textures facultatifs.
+/* Sélection de shaders et de packs de textures facultatifs.
    Source canonique : modifier ce fichier, jamais les sorties générées. */
 
 .texture-page-head {
   max-width: 800px;
+}
+
+.texture-page-tabs {
+  display: flex;
+  gap: 7px;
+  margin: 0 0 28px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.texture-page-tabs button {
+  padding: 10px 15px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: #fff;
+  color: #53656d;
+  font-weight: 850;
+}
+
+.texture-page-tabs button:hover {
+  border-color: #9dc8d9;
+  color: #087ca9;
+}
+
+.texture-page-tabs button[aria-selected='true'] {
+  border-color: #173039;
+  background: #173039;
+  color: #fff;
+}
+
+.texture-page-tabs button:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+.texture-page-panel:not([hidden]) {
+  display: block;
+  animation: in 0.24s ease;
+}
+
+.texture-page-panel > .texture-pack-notice {
+  margin-top: 0;
 }
 
 .texture-pack-notice {
@@ -218,6 +260,14 @@
 }
 
 @media (width <= 620px) {
+  .texture-page-tabs {
+    overflow-x: auto;
+  }
+
+  .texture-page-tabs button {
+    flex: 0 0 auto;
+  }
+
   .texture-pack-notice,
   .texture-pack-install {
     grid-template-columns: 1fr;
