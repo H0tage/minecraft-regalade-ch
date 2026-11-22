@@ -4,69 +4,94 @@
       <span class="eyebrow">Historique du modpack</span>
       <h2 id="status-patch-notes-title">Dernier patch-note</h2>
     </div>
-    <span class="status-patch-current-version">Version 2.6</span>
+    <span class="status-patch-current-version">Version 2.7</span>
   </header>
 
   <article class="status-patch-latest">
     <div class="status-patch-latest-head">
       <div>
-        <span class="status-patch-label">Patch Régalade v2.6</span>
-        <h3>Nouvelle interface et gestion des stations de radio</h3>
+        <span class="status-patch-label">Patch Régalade v2.7</span>
+        <h3>Ajout de shaders, de packs de textures et d’une seconde canne Starcatcher</h3>
       </div>
       <span class="status-patch-date">Dernière version</span>
     </div>
     <ul class="status-patch-list">
-      <li>Etched passe à la révision Régalade <code>5.1.0-regalade.15</code>.</li>
       <li>
-        L’interface des radios a été entièrement réorganisée. Elle s’adapte à la taille de la fenêtre et réserve la
-        place occupée par JEI, à gauche comme à droite.
+        Iris Shaders <code>1.8.14-beta.1</code> est ajouté côté client pour charger et configurer les shaderpacks.
       </li>
       <li>
-        Chaque radio possède six presets partagés et renommables. Chaque joueur peut également conserver autant de
-        stations qu’il le souhaite dans sa bibliothèque personnelle, indépendamment des presets de la radio.
+        Iris &amp; Oculus Flywheel Compat <code>2.4.0</code> conserve les optimisations de rendu de Create lorsqu’un
+        shader est actif.
       </li>
       <li>
-        Radio Browser permet de chercher une station, de l’écouter immédiatement ou de l’ajouter aux favoris. Les
-        recherches peuvent être annulées et disposent de délais réseau et d’une taille de réponse limitée.
+        Six shaders sont fournis : Complementary Reimagined, Sildur’s Enhanced Default, MakeUp Ultra Fast, BSL, Bliss et
+        Outline Shader.
       </li>
       <li>
-        Le nom de la station et le morceau en cours apparaissent directement sur la radio lorsqu’un flux fournit des
-        métadonnées ICY. Les textes trop longs défilent entièrement et les encodages UTF-8 et Latin-1 sont pris en
-        charge. L’adresse du flux reste fixe pendant l’édition.
+        Cinq packs de textures sont fournis : Faithful 32x, Reimagined, Bare Bones, Sapixcraft 16x et Tooniverse 64x.
       </li>
       <li>
-        Les liens SoundCloud, Google Drive et Dropbox ainsi que les flux MP3, AAC, HLS et fMP4 sont pris en charge. Les
-        liens de partage Drive et Dropbox reconnus sont convertis automatiquement et leur contenu audio est vérifié.
+        Les shaders et les packs de textures restent désactivés par défaut. Chaque joueur peut choisir sa combinaison
+        dans les options vidéo et les packs de ressources.
       </li>
       <li>
-        Les URL fournies par les joueurs sont limitées aux adresses HTTP et HTTPS publiques. Les destinations locales,
-        privées, multicast ou réservées sont refusées, chaque redirection est contrôlée et la résolution DNS dispose
-        d’un délai maximal.
+        Le mini-jeu de la canne Starcatcher normale est réactivé. Une nouvelle Canne à pêche simplifiée permet de
+        conserver une pêche classique.
       </li>
       <li>
-        La préparation, le décodage et la fermeture des flux radio s’effectuent hors du thread principal. Retirer ou
-        remplacer une URL, détruire une radio active et entrer dans sa zone de détection ne bloquent plus le jeu.
+        La Canne à pêche simplifiée utilise les hameçons, flotteurs, appâts, poissons et conditions de capture de
+        Starcatcher tout en passant directement l’étape du mini-jeu.
       </li>
       <li>
-        Une radio active prépare son flux dans une zone de 32 blocs tout en respectant sa portée sonore configurée. Son
-        état est correctement recréé après une reconnexion.
+        Tous les composants graphiques restent réservés au client. L’archive serveur reçoit uniquement l’addon de pêche
+        et le checker de version 2.7.
       </li>
       <li>
-        La musique de Minecraft s’interrompt pendant l’écoute d’une radio et retrouve son fonctionnement normal ensuite.
-      </li>
-      <li>
-        Les sources des fonctions adaptées et les licences des bibliothèques audio sont désormais consignées dans le
-        projet Etched.
-      </li>
-      <li>
-        Le checker client et serveur passe à la version 2.6 du modpack et indique clairement lorsqu’un joueur tente de
-        se connecter avec une ancienne version.
+        Le ZIP d’import CurseForge reste proche de 30 Mio. CurseForge télécharge environ 90 Mio supplémentaires pendant
+        l’installation pour ajouter les shaders et les packs de textures.
       </li>
     </ul>
   </article>
 
   <div class="status-patch-history">
     <h3>Versions précédentes</h3>
+
+    <details class="status-patch-entry">
+      <summary>
+        <span class="status-patch-version">v2.6</span>
+        <span>Nouvelle interface et gestion des stations de radio</span>
+      </summary>
+      <div class="status-patch-body">
+        <ul class="status-patch-list">
+          <li>Etched passe à la révision Régalade <code>5.1.0-regalade.15</code>.</li>
+          <li>
+            L’interface des radios est réorganisée, s’adapte à la taille de la fenêtre et réserve la place occupée par
+            JEI à gauche comme à droite.
+          </li>
+          <li>
+            Chaque radio possède six presets partagés et renommables. Chaque joueur dispose également de sa propre
+            bibliothèque de stations.
+          </li>
+          <li>Radio Browser permet de chercher une station, de l’écouter immédiatement ou de l’ajouter aux favoris.</li>
+          <li>
+            Le nom de la station et le morceau en cours apparaissent sur la radio lorsque le flux fournit des
+            métadonnées ICY.
+          </li>
+          <li>
+            Les liens SoundCloud, Google Drive et Dropbox ainsi que les flux MP3, AAC, HLS et fMP4 sont pris en charge.
+          </li>
+          <li>
+            Les destinations réseau locales ou réservées sont refusées, les redirections sont contrôlées et les
+            opérations audio s’exécutent hors du thread principal.
+          </li>
+          <li>
+            Une radio active prépare son flux dans une zone de 32 blocs, reprend après une reconnexion et interrompt la
+            musique de Minecraft pendant l’écoute.
+          </li>
+          <li>Le checker client et serveur passe à la version 2.6 du modpack.</li>
+        </ul>
+      </div>
+    </details>
 
     <details class="status-patch-entry">
       <summary>

@@ -396,6 +396,15 @@
     "icon": "https://media.forgecdn.net/avatars/thumbnails/1463/902/256/256/638950258043549784.png"
   },
   {
+    "name": "Starcatcher: Relaxed Fishing",
+    "category": "Cuisine, boissons et activités paisibles",
+    "version": "1.0.1",
+    "status": "OK",
+    "description": "Ajoute une seconde canne compatible avec les accessoires et les prises de Starcatcher, mais qui ignore son mini-jeu.",
+    "url": "https://minecraft.regalade.ch/#tutoriels/fishing/first",
+    "icon": "https://media.forgecdn.net/avatars/thumbnails/1463/902/256/256/638950258043549784.png"
+  },
+  {
     "name": "Starcatcher's Delight",
     "category": "Cuisine, boissons et activités paisibles",
     "version": "3.2-NEOFORGE-1.21.1",
@@ -1123,6 +1132,24 @@
     "description": "Gère automatiquement les retours à la ligne et facilite la correction des panneaux. Côté client.",
     "url": "https://www.curseforge.com/minecraft/mc-mods/improved-sign-editing",
     "icon": "https://media.forgecdn.net/avatars/thumbnails/922/261/256/256/638387501983587419.png"
+  },
+  {
+    "name": "Iris Shaders",
+    "category": "Qualité de vie et retours visuels",
+    "version": "1.8.14-beta.1",
+    "status": "OK (CLIENT)",
+    "description": "Charge les shaderpacks compatibles et permet de modifier leur configuration depuis les options vidéo. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/irisshaders",
+    "icon": "https://cdn.modrinth.com/data/YL57xq9U/18d0e7f076d3d6ed5bedd472b853909aac5da202_96.webp"
+  },
+  {
+    "name": "Iris & Oculus Flywheel Compat",
+    "category": "Qualité de vie et retours visuels",
+    "version": "2.4.0",
+    "status": "OK (CLIENT)",
+    "description": "Conserve les optimisations de rendu Flywheel de Create lorsqu’un shader est actif. Côté client.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/iris-flywheel-compat",
+    "icon": "https://cdn.modrinth.com/data/ndHYMY2K/7d3794f7fdc4974ce4386bfc3e0ec27140a33de5.png"
   },
   {
     "name": "Item Highlighter",
