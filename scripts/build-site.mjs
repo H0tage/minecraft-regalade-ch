@@ -22,6 +22,7 @@ const styleSources = [
   'tutorials/first-minecraft.css',
   'tutorials/exploration.css',
   'tutorials/qol.css',
+  'tutorials/radio.css',
   'tutorials/economy.css',
   'tutorials/cuisine.css',
   'tutorials/agriculture.css',

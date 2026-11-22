@@ -1,0 +1,32 @@
+<section class="radio-tutorial">
+  <nav
+    class="radio-switcher"
+    role="tablist"
+    aria-label="Choisir une partie du tutoriel Radiocommunications"
+    data-tab-storage="regalade.radio.active"
+  >
+    <button
+      id="radio-voice-chat-tab"
+      type="button"
+      role="tab"
+      aria-selected="true"
+      aria-controls="radio-voice-chat-panel"
+      tabindex="0"
+    >
+      Voice Chat
+    </button>
+    <button
+      id="radio-simple-radio-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="radio-simple-radio-panel"
+      tabindex="-1"
+    >
+      Simple Radio
+    </button>
+  </nav>
+
+  <!-- @include radio/voice-chat.html -->
+  <!-- @include radio/simple-radio.html -->
+</section>

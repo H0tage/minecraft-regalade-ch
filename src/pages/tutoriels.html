@@ -68,6 +68,17 @@
           </button>
           <button
             class="tutorial-tab"
+            id="tutorial-radio-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tutorial-radio"
+            tabindex="-1"
+          >
+            Radiocommunications
+          </button>
+          <button
+            class="tutorial-tab"
             id="tutorial-create-first-factory-tab"
             type="button"
             role="tab"
@@ -225,6 +236,9 @@
         </section>
         <section class="tutorial-panel" id="tutorial-qol" role="tabpanel" aria-labelledby="tutorial-qol-tab" hidden>
           <!-- @include ../content/tutorials/qol.html -->
+        </section>
+        <section class="tutorial-panel" id="tutorial-radio" role="tabpanel" aria-labelledby="tutorial-radio-tab" hidden>
+          <!-- @include ../content/tutorials/radio.html -->
         </section>
         <section
           class="tutorial-panel"
