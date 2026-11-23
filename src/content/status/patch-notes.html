@@ -4,36 +4,83 @@
       <span class="eyebrow">Historique du modpack</span>
       <h2 id="status-patch-notes-title">Dernier patch-note</h2>
     </div>
-    <span class="status-patch-current-version">Version 2.9</span>
+    <span class="status-patch-current-version">Version 3.0</span>
   </header>
 
   <article class="status-patch-latest">
     <div class="status-patch-latest-head">
       <div>
-        <span class="status-patch-label">Patch Régalade v2.9</span>
-        <h3>Magie, enchantements et nouvelles décorations</h3>
+        <span class="status-patch-label">Patch Régalade v3.0</span>
+        <h3>Équilibrage des déplacements magiques</h3>
       </div>
       <span class="status-patch-date">Dernière version</span>
     </div>
     <ul class="status-patch-list">
-      <li>Malum ajoute la magie des esprits, ses rituels, ses runes, ses équipements et ses ressources.</li>
-      <li>Apothic Enchanting développe le système d’enchantement autour de l’Eterna, de la Quanta et de l’Arcana.</li>
-      <li>Ars Nouveau permet de composer des sorts et de créer des rituels, serviteurs et automatisations magiques.</li>
       <li>
-        Occultism ajoute les invocations, les familiers, le stockage dimensionnel et l’automatisation par les esprits.
+        Ars Nouveau : <code>warp_scroll</code>, <code>stable_warp_scroll</code>, <code>ritual_warping</code> et
+        <code>thread_starbuncle</code> sont retirés des recettes, de JEI et de l’onglet créatif. Leur utilisation par
+        clic droit est bloquée côté serveur.
       </li>
-      <li>Thaumic Decoration fournit de nouveaux blocs pour les constructions et ateliers arcaniques.</li>
       <li>
-        Fantasy’s Furniture Complete rassemble les collections Core, Nordic, Bone, Dunmer, Royal, Venthyr, Necrolord et
-        Decorations.
+        Les Warp Portals d’Ars Nouveau sont désactivés dans la configuration serveur et les tomes de sorts préconfigurés
+        ne se génèrent plus dans les coffres.
       </li>
-      <li>Les objets et recettes de ces mods sont indexés et regroupés dans JEI.</li>
-      <li>Le checker client et serveur passe à la version 2.9 du modpack.</li>
+      <li>
+        Occultism : les Stable Wormholes, Entity Wormholes, leurs variantes Dark et la Vitality Compass sont retirés des
+        recettes, de JEI et de l’onglet créatif.
+      </li>
+      <li>
+        Les rituels de fabrication Occultism correspondants sont supprimés. Le placement et l’utilisation des quatre
+        Wormholes ainsi que l’utilisation de la Vitality Compass sont bloqués côté serveur.
+      </li>
+      <li>
+        Les boussoles vanilla restent disponibles. Elles ne configurent plus de destination puisque les Entity Wormholes
+        sont désactivés.
+      </li>
+      <li>KubeJS Ars Nouveau <code>1.3.2</code> applique les restrictions propres au mod.</li>
+      <li>Le checker client et serveur passe à la version 3.0 du modpack.</li>
+    </ul>
+
+    <h4>Vérifications en jeu</h4>
+    <ul class="status-patch-list">
+      <li>Contrôler l’absence des neuf objets concernés dans JEI et dans les onglets créatifs de leurs mods.</li>
+      <li>Contrôler l’absence de leurs recettes et rituels de fabrication.</li>
+      <li>
+        Tester les clics droits, le placement des quatre Wormholes et l’activation d’un Warp Portal avec des objets
+        obtenus par commande.
+      </li>
+      <li>Contrôler que les nouveaux coffres générés ne contiennent plus de tome de sort préconfiguré.</li>
     </ul>
   </article>
 
   <div class="status-patch-history">
     <h3>Versions précédentes</h3>
+
+    <details class="status-patch-entry">
+      <summary>
+        <span class="status-patch-version">v2.9</span>
+        <span>Magie, enchantements et nouvelles décorations</span>
+      </summary>
+      <div class="status-patch-body">
+        <ul class="status-patch-list">
+          <li>Malum ajoute la magie des esprits, ses rituels, ses runes, ses équipements et ses ressources.</li>
+          <li>Apothic Enchanting développe l’enchantement autour de l’Eterna, de la Quanta et de l’Arcana.</li>
+          <li>
+            Ars Nouveau permet de composer des sorts et de créer des rituels, serviteurs et automatisations magiques.
+          </li>
+          <li>
+            Occultism ajoute les invocations, les familiers, le stockage dimensionnel et l’automatisation par les
+            esprits.
+          </li>
+          <li>Thaumic Decoration fournit de nouveaux blocs pour les constructions et ateliers arcaniques.</li>
+          <li>
+            Fantasy’s Furniture Complete rassemble Core, Nordic, Bone, Dunmer, Royal, Venthyr, Necrolord et Decorations.
+          </li>
+          <li>Les objets et recettes de ces mods sont indexés et regroupés dans JEI.</li>
+          <li>Le checker client et serveur passe à la version 2.9 du modpack.</li>
+        </ul>
+      </div>
+    </details>
 
     <details class="status-patch-entry">
       <summary>
