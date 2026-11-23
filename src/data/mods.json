@@ -414,6 +414,42 @@
     "icon": "https://media.forgecdn.net/avatars/thumbnails/1655/501/256/256/639055383246526440.png"
   },
   {
+    "name": "Malum",
+    "category": "Magie, enchantements et occultisme",
+    "version": "1.8.2",
+    "status": "OK",
+    "description": "Magie des esprits, rituels, runes, équipements et nouveaux matériaux liés à l’arcane spirituelle.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/malum",
+    "icon": "https://minecraft.regalade.ch/assets/images/mod-icons/malum.png"
+  },
+  {
+    "name": "Apothic Enchanting",
+    "category": "Magie, enchantements et occultisme",
+    "version": "1.6.4",
+    "status": "OK",
+    "description": "Développe l’enchantement autour de l’Eterna, de la Quanta et de l’Arcana, avec de nouvelles bibliothèques et possibilités de progression.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/apothic-enchanting",
+    "icon": "https://media.forgecdn.net/avatars/1040/72/638565844830525735.png"
+  },
+  {
+    "name": "Ars Nouveau",
+    "category": "Magie, enchantements et occultisme",
+    "version": "5.13.5",
+    "status": "OK",
+    "description": "Création de sorts personnalisés, serviteurs magiques, rituels, artefacts et automatisations alimentées par la Source.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ars-nouveau",
+    "icon": "https://cdn.modrinth.com/data/TKB6INcv/7ccd369857b70b16e0fbd3f10e5278b0f75c7772_96.webp"
+  },
+  {
+    "name": "Occultism",
+    "category": "Magie, enchantements et occultisme",
+    "version": "1.227.0",
+    "status": "OK",
+    "description": "Rituels d’invocation, familiers, stockage dimensionnel et esprits capables d’automatiser différentes tâches.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/occultism",
+    "icon": "https://minecraft.regalade.ch/assets/images/mod-icons/occultism.png"
+  },
+  {
     "name": "Additional Lanterns",
     "category": "Construction, décoration et éclairage",
     "version": "1.1.2",
@@ -421,6 +457,24 @@
     "description": "Lanternes déclinées selon les couleurs et matériaux.",
     "url": "https://www.curseforge.com/minecraft/mc-mods/additional-lanterns",
     "icon": "https://media.forgecdn.net/avatars/thumbnails/404/491/256/256/637615248593989523.png"
+  },
+  {
+    "name": "Thaumic Decoration",
+    "category": "Construction, décoration et éclairage",
+    "version": "0.3.0",
+    "status": "OK",
+    "description": "Blocs décoratifs inspirés de Thaumcraft pour construire des ateliers, bibliothèques et espaces arcaniques.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/thaumic-decoration",
+    "icon": "https://minecraft.regalade.ch/assets/images/mod-icons/thaumic-decoration.png"
+  },
+  {
+    "name": "Fantasy's Furniture Complete",
+    "category": "Construction, décoration et éclairage",
+    "version": "10.3",
+    "status": "OK",
+    "description": "Pack complet de mobilier fantastique fabriquable : Core, Nordic, Bone, Dunmer, Royal, Venthyr, Necrolord et Decorations.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/fantasys-furniture-1-21-1-neoforge-unofficial-port",
+    "icon": "https://minecraft.regalade.ch/assets/images/mod-icons/fantasys-furniture.png"
   },
   {
     "name": "Amendments",
