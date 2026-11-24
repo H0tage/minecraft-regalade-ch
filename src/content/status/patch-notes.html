@@ -4,57 +4,79 @@
       <span class="eyebrow">Historique du modpack</span>
       <h2 id="status-patch-notes-title">Dernier patch-note</h2>
     </div>
-    <span class="status-patch-current-version">Version 3.0</span>
+    <span class="status-patch-current-version">Version 3.1</span>
   </header>
 
   <article class="status-patch-latest">
     <div class="status-patch-latest-head">
       <div>
-        <span class="status-patch-label">Patch Régalade v3.0</span>
-        <h3>Équilibrage des déplacements magiques</h3>
+        <span class="status-patch-label">Patch Régalade v3.1</span>
+        <h3>Iron's Spells 'n Spellbooks et équilibrage magique</h3>
       </div>
       <span class="status-patch-date">Dernière version</span>
     </div>
     <ul class="status-patch-list">
       <li>
-        Ars Nouveau : <code>warp_scroll</code>, <code>stable_warp_scroll</code>, <code>ritual_warping</code> et
-        <code>thread_starbuncle</code> sont retirés des recettes, de JEI et de l’onglet créatif. Leur utilisation par
-        clic droit est bloquée côté serveur.
+        Iron's Spells 'n Spellbooks <code>3.16.4</code> et Iron's Lib <code>2.4.0</code> sont ajoutés au modpack et au
+        serveur.
       </li>
       <li>
-        Les Warp Portals d’Ars Nouveau sont désactivés dans la configuration serveur et les tomes de sorts préconfigurés
-        ne se génèrent plus dans les coffres.
+        Recall, Pocket Dimension, Portal, Angel Wings, Invisibility, Summon Ender Chest et Spectral Hammer sont
+        désactivés côté serveur et ne peuvent plus être fabriqués.
       </li>
       <li>
-        Occultism : les Stable Wormholes, Entity Wormholes, leurs variantes Dark et la Vitality Compass sont retirés des
-        recettes, de JEI et de l’onglet créatif.
+        Portal Frame et Amulet of Teleportation sont retirés des recettes, des tables de butin concernées, de JEI et des
+        onglets créatifs. Leur utilisation est également bloquée côté serveur.
       </li>
       <li>
-        Les rituels de fabrication Occultism correspondants sont supprimés. Le placement et l’utilisation des quatre
-        Wormholes ainsi que l’utilisation de la Vitality Compass sont bloqués côté serveur.
+        Une Amulet of Teleportation déjà équipée est retirée de son emplacement Curios et rendue au joueur à sa
+        connexion.
       </li>
       <li>
-        Les boussoles vanilla restent disponibles. Elles ne configurent plus de destination puisque les Entity Wormholes
-        sont désactivés.
+        Teleport reste disponible avec une portée de 8 à 16 blocs, un coût de 20 à 40 points de mana et une recharge de
+        6 secondes. Touch Dig reste également disponible.
       </li>
-      <li>KubeJS Ars Nouveau <code>1.3.2</code> applique les restrictions propres au mod.</li>
-      <li>Le checker client et serveur passe à la version 3.0 du modpack.</li>
+      <li>
+        Blink d’Ars Nouveau coûte 100 points de mana de base, accepte deux Amplify au maximum et atteint 14 blocs au
+        maximum.
+      </li>
+      <li>Le checker client et serveur passe à la version 3.1 du modpack.</li>
     </ul>
 
     <h4>Vérifications en jeu</h4>
     <ul class="status-patch-list">
-      <li>Contrôler l’absence des neuf objets concernés dans JEI et dans les onglets créatifs de leurs mods.</li>
-      <li>Contrôler l’absence de leurs recettes et rituels de fabrication.</li>
-      <li>
-        Tester les clics droits, le placement des quatre Wormholes et l’activation d’un Warp Portal avec des objets
-        obtenus par commande.
-      </li>
-      <li>Contrôler que les nouveaux coffres générés ne contiennent plus de tome de sort préconfiguré.</li>
+      <li>Contrôler l’absence des sept sorts interdits, du Portal Frame et de l’Amulet of Teleportation.</li>
+      <li>Tester la restitution d’une ancienne amulette déjà équipée.</li>
+      <li>Confirmer que Teleport et Touch Dig restent disponibles et fonctionnels.</li>
+      <li>Mesurer le coût et la portée de Blink avec zéro, un puis deux glyphes Amplify.</li>
     </ul>
   </article>
 
   <div class="status-patch-history">
     <h3>Versions précédentes</h3>
+
+    <details class="status-patch-entry">
+      <summary>
+        <span class="status-patch-version">v3.0</span>
+        <span>Équilibrage des déplacements magiques</span>
+      </summary>
+      <div class="status-patch-body">
+        <ul class="status-patch-list">
+          <li>
+            Ars Nouveau : <code>warp_scroll</code>, <code>stable_warp_scroll</code>, <code>ritual_warping</code> et
+            <code>thread_starbuncle</code> sont retirés des recettes, de JEI et de l’onglet créatif.
+          </li>
+          <li>Les Warp Portals sont désactivés et les tomes de sorts préconfigurés ne se génèrent plus.</li>
+          <li>
+            Occultism : les Stable Wormholes, Entity Wormholes, leurs variantes Dark et la Vitality Compass sont retirés
+            des recettes, de JEI et de l’onglet créatif.
+          </li>
+          <li>Le placement et l’utilisation des Wormholes et de la Vitality Compass sont bloqués côté serveur.</li>
+          <li>KubeJS Ars Nouveau <code>1.3.2</code> applique les restrictions propres au mod.</li>
+          <li>Le checker client et serveur passe à la version 3.0 du modpack.</li>
+        </ul>
+      </div>
+    </details>
 
     <details class="status-patch-entry">
       <summary>

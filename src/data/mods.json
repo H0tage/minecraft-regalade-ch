@@ -450,6 +450,15 @@
     "icon": "https://minecraft.regalade.ch/assets/images/mod-icons/occultism.png"
   },
   {
+    "name": "Iron's Spells 'n Spellbooks",
+    "category": "Magie, enchantements et occultisme",
+    "version": "3.16.4",
+    "status": "OK",
+    "description": "Grimoires, parchemins, écoles de magie, équipements de mage, créatures et structures consacrées à la progression magique.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/irons-spells-n-spellbooks",
+    "icon": "https://cdn.modrinth.com/data/s4OWxYQQ/6a1f5c6adb434a6c56c1975af6f4fbde3ba907ff.png"
+  },
+  {
     "name": "Additional Lanterns",
     "category": "Construction, décoration et éclairage",
     "version": "1.1.2",
