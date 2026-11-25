@@ -193,6 +193,11 @@ for (const width of widths) {
   if ((await page.locator('#mods-grid .mod-link').count()) < 100) {
     failures.push(`Le catalogue des mods paraît incomplet à ${width}px.`);
   }
+  const modCategories = await page.locator('#mods-grid .mod-group-title').allTextContents();
+  const modFilters = await page.locator('#mod-tabs .mod-tab:not([data-category="tous"])').allTextContents();
+  if (modCategories.some((category) => !modFilters.includes(category))) {
+    failures.push(`Une catégorie du catalogue des mods est absente des filtres à ${width}px.`);
+  }
 
   if (width === 800) {
     await page.goto(`${baseUrl}?qa=${Date.now()}#tutoriels`, { waitUntil: 'networkidle' });

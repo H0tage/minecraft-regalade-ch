@@ -12,6 +12,7 @@ const profilePath = join(packDir, 'minecraftinstance.json');
 const CATEGORY_ORDER = [
   'Ingénierie, énergie et transports',
   'Cuisine, boissons et activités paisibles',
+  'Magie, enchantements et occultisme',
   'Construction, décoration et éclairage',
   'Vie communautaire, confort et interface',
   'Exploration et monde vivant',

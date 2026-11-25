@@ -9,18 +9,7 @@
   const response = await fetch('data/mods.json');
   if (!response.ok) throw new Error(`Impossible de charger la liste des mods (${response.status}).`);
   const mods = await response.json();
-  const categoryOrder = [
-    'Ingénierie, énergie et transports',
-    'Cuisine, boissons et activités paisibles',
-    'Construction, décoration et éclairage',
-    'Vie communautaire, confort et interface',
-    'Exploration et monde vivant',
-    'Économie et missions',
-    'Qualité de vie et retours visuels',
-    'Administration et performances',
-    'Automatisation Create complémentaire',
-  ];
-  const categories = categoryOrder.filter((item) => mods.some((mod) => mod.category === item));
+  const categories = [...new Set(mods.map((mod) => mod.category))];
   let category = 'tous';
 
   function createCategoryButton(value) {
