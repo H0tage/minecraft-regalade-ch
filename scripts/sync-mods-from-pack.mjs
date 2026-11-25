@@ -279,6 +279,7 @@ writeDataset(
   'src/data/mods.json',
   records.map(({ name, category, version, status, description, link, icon }) => ({
     name,
+    jei: oldDetailsByName.get(name)?.jei,
     category,
     version,
     status,

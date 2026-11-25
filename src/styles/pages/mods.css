@@ -24,6 +24,19 @@
   background: #fff;
 }
 
+.mod .mod-jei {
+  margin: 12px 0 0;
+  font-size: 0.8rem;
+}
+
+.mod-jei code {
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: #edf5f1;
+  color: #304f43;
+  overflow-wrap: anywhere;
+}
+
 .mod-group-title {
   grid-column: 1/-1;
   margin: 22px 0 0;

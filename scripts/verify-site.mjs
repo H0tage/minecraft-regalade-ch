@@ -69,6 +69,9 @@ if (!existsSync(modsPath)) {
         requiredFields.forEach((field) => {
           if (typeof mod[field] !== 'string' || !mod[field].trim()) fail(`${label} : champ ${field} absent ou vide.`);
         });
+        if (mod.jei !== undefined && (typeof mod.jei !== 'string' || !/^@[a-z0-9_]+$/.test(mod.jei))) {
+          fail(`Filtre JEI invalide pour ${mod.name}.`);
+        }
         const normalizedName = typeof mod.name === 'string' ? mod.name.trim().toLocaleLowerCase('fr') : '';
         if (normalizedName && names.has(normalizedName)) fail(`Mod dupliqué : ${mod.name}.`);
         names.add(normalizedName);

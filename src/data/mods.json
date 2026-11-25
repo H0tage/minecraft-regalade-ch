@@ -1,6 +1,7 @@
 [
   {
     "name": "Create",
+    "jei": "@create",
     "category": "Ingénierie, énergie et transports",
     "version": "6.0.10",
     "status": "OK",
@@ -10,6 +11,7 @@
   },
   {
     "name": "Create Big Cannons",
+    "jei": "@createbigcannons",
     "category": "Ingénierie, énergie et transports",
     "version": "5.11.7",
     "status": "WATCH",
@@ -19,6 +21,7 @@
   },
   {
     "name": "Create Crafts & Additions",
+    "jei": "@createaddition",
     "category": "Ingénierie, énergie et transports",
     "version": "1.7.2",
     "status": "OK",
@@ -28,6 +31,7 @@
   },
   {
     "name": "Create Deco",
+    "jei": "@createdeco",
     "category": "Ingénierie, énergie et transports",
     "version": "2.1.3",
     "status": "OK",
@@ -37,6 +41,7 @@
   },
   {
     "name": "Create Horse Power",
+    "jei": "@createhorsepower",
     "category": "Ingénierie, énergie et transports",
     "version": "1.21.1-1.1.0",
     "status": "OK",
@@ -46,6 +51,7 @@
   },
   {
     "name": "Create Railways Navigator",
+    "jei": "@createrailwaysnavigator",
     "category": "Ingénierie, énergie et transports",
     "version": "1.21.1-beta-0.10.0-C6",
     "status": "WATCH",
@@ -55,6 +61,7 @@
   },
   {
     "name": "Create Slice & Dice",
+    "jei": "@sliceanddice",
     "category": "Ingénierie, énergie et transports",
     "version": "4.3.4",
     "status": "OK",
@@ -82,6 +89,7 @@
   },
   {
     "name": "Create: Bells & Whistles",
+    "jei": "@bellsandwhistles",
     "category": "Ingénierie, énergie et transports",
     "version": "0.4.7-1.21.1",
     "status": "OK",
@@ -100,6 +108,7 @@
   },
   {
     "name": "Create: Chimneys",
+    "jei": "@create_chimneys",
     "category": "Ingénierie, énergie et transports",
     "version": "1.4.1",
     "status": "OK",
@@ -109,6 +118,7 @@
   },
   {
     "name": "Create: Connected",
+    "jei": "@create_connected",
     "category": "Ingénierie, énergie et transports",
     "version": "1.3.3-mc1.21.1",
     "status": "OK",
@@ -118,6 +128,7 @@
   },
   {
     "name": "Create: Copycats+",
+    "jei": "@copycats",
     "category": "Ingénierie, énergie et transports",
     "version": "3.0.11+mc.1.21.1-neoforge",
     "status": "OK",
@@ -127,6 +138,7 @@
   },
   {
     "name": "Create: Diesel Generators",
+    "jei": "@createdieselgenerators",
     "category": "Ingénierie, énergie et transports",
     "version": "1.21.1-1.3.15",
     "status": "OK",
@@ -136,6 +148,7 @@
   },
   {
     "name": "Create: Dragons Plus",
+    "jei": "@create_dragons_plus",
     "category": "Ingénierie, énergie et transports",
     "version": "1.11.9",
     "status": "OK",
@@ -145,6 +158,7 @@
   },
   {
     "name": "Create: Enchantment Industry",
+    "jei": "@create_enchantment_industry",
     "category": "Ingénierie, énergie et transports",
     "version": "2.4.2",
     "status": "CONFIG",
@@ -154,6 +168,7 @@
   },
   {
     "name": "Create: Escalated",
+    "jei": "@escalated",
     "category": "Ingénierie, énergie et transports",
     "version": "1.3.2",
     "status": "OK",
@@ -163,6 +178,7 @@
   },
   {
     "name": "Create: Extra Gauges",
+    "jei": "@extra_gauges",
     "category": "Ingénierie, énergie et transports",
     "version": "2.1.3",
     "status": "OK",
@@ -172,6 +188,7 @@
   },
   {
     "name": "Create: Interiors",
+    "jei": "@interiors",
     "category": "Ingénierie, énergie et transports",
     "version": "0.6.1",
     "status": "OK",
@@ -181,6 +198,7 @@
   },
   {
     "name": "Create: Numismatics",
+    "jei": "@numismatics",
     "category": "Ingénierie, énergie et transports",
     "version": "1.1.0+neoforge-mc1.21.1",
     "status": "OK",
@@ -190,6 +208,7 @@
   },
   {
     "name": "Create: Pattern Schematics",
+    "jei": "@create_pattern_schematics",
     "category": "Ingénierie, énergie et transports",
     "version": "2.0.10",
     "status": "OK",
@@ -199,6 +218,7 @@
   },
   {
     "name": "Create: Security Program",
+    "jei": "@create_security",
     "category": "Ingénierie, énergie et transports",
     "version": "1.21.1-2.01-release",
     "status": "OK",
@@ -208,6 +228,7 @@
   },
   {
     "name": "Create: Shuffle Filter",
+    "jei": "@createshufflefilter",
     "category": "Ingénierie, énergie et transports",
     "version": "2.2.0",
     "status": "OK",
@@ -217,6 +238,7 @@
   },
   {
     "name": "Create: Transmission!",
+    "jei": "@createtransmission",
     "category": "Ingénierie, énergie et transports",
     "version": "1.2.2+neoforge-create6-1.21.1",
     "status": "OK",
@@ -226,6 +248,7 @@
   },
   {
     "name": "Create: Vibrant Vaults",
+    "jei": "@create_vibrant_vaults",
     "category": "Ingénierie, énergie et transports",
     "version": "0.3.2",
     "status": "OK",
@@ -235,6 +258,7 @@
   },
   {
     "name": "KubeJS",
+    "jei": "@kubejs",
     "category": "Ingénierie, énergie et transports",
     "version": "2101.7.2-build.381",
     "status": "OK",
@@ -253,6 +277,7 @@
   },
   {
     "name": "Small Ships",
+    "jei": "@smallships",
     "category": "Ingénierie, énergie et transports",
     "version": "2.0.2",
     "status": "OK",
@@ -262,6 +287,7 @@
   },
   {
     "name": "Stargate Journey",
+    "jei": "@sgjourney",
     "category": "Ingénierie, énergie et transports",
     "version": "0.6.54",
     "status": "OK",
@@ -271,6 +297,7 @@
   },
   {
     "name": "Stargate Journey: MoreGates Addon",
+    "jei": "@moregates",
     "category": "Ingénierie, énergie et transports",
     "version": "4.4.1",
     "status": "WATCH",
@@ -280,6 +307,7 @@
   },
   {
     "name": "Steam 'n' Rails NeoForge",
+    "jei": "@railways",
     "category": "Ingénierie, énergie et transports",
     "version": "0.2.1+neoforge-mc1.21.1",
     "status": "OK",
@@ -289,6 +317,7 @@
   },
   {
     "name": "Brewin' and Chewin'",
+    "jei": "@brewinandchewin",
     "category": "Cuisine, boissons et activités paisibles",
     "version": "4.5.0",
     "status": "OK",
@@ -298,6 +327,7 @@
   },
   {
     "name": "Create: Bitterballen",
+    "jei": "@create_bic_bit",
     "category": "Cuisine, boissons et activités paisibles",
     "version": "1.0.4",
     "status": "OK",
@@ -307,6 +337,7 @@
   },
   {
     "name": "Farmer's Delight",
+    "jei": "@farmersdelight",
     "category": "Cuisine, boissons et activités paisibles",
     "version": "1.3.4",
     "status": "OK",
@@ -316,6 +347,7 @@
   },
   {
     "name": "Farmer's Respite (port non officiel)",
+    "jei": "@farmersrespite",
     "category": "Cuisine, boissons et activités paisibles",
     "version": "3.0.1",
     "status": "WATCH",
@@ -325,6 +357,7 @@
   },
   {
     "name": "Hempdustry 2",
+    "jei": "@hempdustry",
     "category": "Cuisine, boissons et activités paisibles",
     "version": "2.1.0-regalade.2+1.21.1",
     "status": "OK",
@@ -334,6 +367,7 @@
   },
   {
     "name": "Let's Do: Bakery (Farm & Charm)",
+    "jei": "@bakery",
     "category": "Cuisine, boissons et activités paisibles",
     "version": "2.1.11",
     "status": "OK",
@@ -343,6 +377,7 @@
   },
   {
     "name": "Let's Do: Camping",
+    "jei": "@camping",
     "category": "Cuisine, boissons et activités paisibles",
     "version": "2.1.6",
     "status": "OK",
@@ -352,6 +387,7 @@
   },
   {
     "name": "Let's Do: Candlelight (Farm & Charm Compat)",
+    "jei": "@candlelight",
     "category": "Cuisine, boissons et activités paisibles",
     "version": "2.1.15",
     "status": "OK",
@@ -361,6 +397,7 @@
   },
   {
     "name": "Let's Do: Farm & Charm",
+    "jei": "@farm_and_charm",
     "category": "Cuisine, boissons et activités paisibles",
     "version": "1.1.29-regalade.1",
     "status": "OK",
@@ -370,6 +407,7 @@
   },
   {
     "name": "Let's Do: Meadow",
+    "jei": "@meadow",
     "category": "Cuisine, boissons et activités paisibles",
     "version": "1.4.10",
     "status": "OK",
@@ -379,6 +417,7 @@
   },
   {
     "name": "Let's Do: Vinery",
+    "jei": "@vinery",
     "category": "Cuisine, boissons et activités paisibles",
     "version": "1.5.6",
     "status": "OK",
@@ -388,6 +427,7 @@
   },
   {
     "name": "Starcatcher",
+    "jei": "@starcatcher",
     "category": "Cuisine, boissons et activités paisibles",
     "version": "3.3.10-NEOFORGE-1.21.1",
     "status": "OK",
@@ -397,6 +437,7 @@
   },
   {
     "name": "Starcatcher: Relaxed Fishing",
+    "jei": "@starcatcher_relaxed_fishing",
     "category": "Cuisine, boissons et activités paisibles",
     "version": "1.0.1",
     "status": "OK",
@@ -406,6 +447,7 @@
   },
   {
     "name": "Starcatcher's Delight",
+    "jei": "@starcatcher_delight",
     "category": "Cuisine, boissons et activités paisibles",
     "version": "3.2-NEOFORGE-1.21.1",
     "status": "OK",
@@ -415,6 +457,7 @@
   },
   {
     "name": "Malum",
+    "jei": "@malum",
     "category": "Magie, enchantements et occultisme",
     "version": "1.8.2",
     "status": "OK",
@@ -424,6 +467,7 @@
   },
   {
     "name": "Apothic Enchanting",
+    "jei": "@apothic_enchanting",
     "category": "Magie, enchantements et occultisme",
     "version": "1.6.4",
     "status": "OK",
@@ -433,6 +477,7 @@
   },
   {
     "name": "Ars Nouveau",
+    "jei": "@ars_nouveau",
     "category": "Magie, enchantements et occultisme",
     "version": "5.13.5",
     "status": "OK",
@@ -442,6 +487,7 @@
   },
   {
     "name": "Occultism",
+    "jei": "@occultism",
     "category": "Magie, enchantements et occultisme",
     "version": "1.227.0",
     "status": "OK",
@@ -451,6 +497,7 @@
   },
   {
     "name": "Iron's Spells 'n Spellbooks",
+    "jei": "@irons_spellbooks",
     "category": "Magie, enchantements et occultisme",
     "version": "3.16.4",
     "status": "OK",
@@ -460,6 +507,7 @@
   },
   {
     "name": "Additional Lanterns",
+    "jei": "@additionallanterns",
     "category": "Construction, décoration et éclairage",
     "version": "1.1.2",
     "status": "OK",
@@ -469,6 +517,7 @@
   },
   {
     "name": "Thaumic Decoration",
+    "jei": "@thaumic_decoration",
     "category": "Construction, décoration et éclairage",
     "version": "0.3.0",
     "status": "OK",
@@ -478,6 +527,7 @@
   },
   {
     "name": "Fantasy's Furniture Complete",
+    "jei": "@fantasyfurniture",
     "category": "Construction, décoration et éclairage",
     "version": "10.3",
     "status": "OK",
@@ -487,6 +537,7 @@
   },
   {
     "name": "Amendments",
+    "jei": "@amendments",
     "category": "Construction, décoration et éclairage",
     "version": "1.21-2.2.7",
     "status": "OK",
@@ -496,6 +547,7 @@
   },
   {
     "name": "Another Furniture",
+    "jei": "@another_furniture",
     "category": "Construction, décoration et éclairage",
     "version": "4.0.3",
     "status": "OK",
@@ -505,6 +557,7 @@
   },
   {
     "name": "Architect's Palette",
+    "jei": "@architects_palette",
     "category": "Construction, décoration et éclairage",
     "version": "1.4.0-beta.5",
     "status": "WATCH",
@@ -514,6 +567,7 @@
   },
   {
     "name": "Chalk",
+    "jei": "@chalk",
     "category": "Construction, décoration et éclairage",
     "version": "2.0.3",
     "status": "OK",
@@ -523,6 +577,7 @@
   },
   {
     "name": "Chipped",
+    "jei": "@chipped",
     "category": "Construction, décoration et éclairage",
     "version": "4.0.2",
     "status": "OK",
@@ -532,6 +587,7 @@
   },
   {
     "name": "Create Encased",
+    "jei": "@createcasing",
     "category": "Construction, décoration et éclairage",
     "version": "1.10.1",
     "status": "OK",
@@ -541,6 +597,7 @@
   },
   {
     "name": "Create: Tradeworks",
+    "jei": "@tradeworks",
     "category": "Construction, décoration et éclairage",
     "version": "1.0.7",
     "status": "OK",
@@ -550,6 +607,7 @@
   },
   {
     "name": "Decorative Blocks Reborn",
+    "jei": "@decorative_blocks",
     "category": "Construction, décoration et éclairage",
     "version": "6.0.2-regalade.1",
     "status": "OK",
@@ -559,6 +617,7 @@
   },
   {
     "name": "FramedBlocks",
+    "jei": "@framedblocks",
     "category": "Construction, décoration et éclairage",
     "version": "10.6.3",
     "status": "OK",
@@ -568,6 +627,7 @@
   },
   {
     "name": "Handcrafted",
+    "jei": "@handcrafted",
     "category": "Construction, décoration et éclairage",
     "version": "4.0.3",
     "status": "OK",
@@ -577,6 +637,7 @@
   },
   {
     "name": "Immersive Paintings",
+    "jei": "@immersive_paintings",
     "category": "Construction, décoration et éclairage",
     "version": "0.8.0",
     "status": "CONFIG",
@@ -586,6 +647,7 @@
   },
   {
     "name": "Macaw's Lights and Lamps",
+    "jei": "@mcwlights",
     "category": "Construction, décoration et éclairage",
     "version": "1.1.5",
     "status": "OK",
@@ -595,6 +657,7 @@
   },
   {
     "name": "Macaw's Windows",
+    "jei": "@mcwwindows",
     "category": "Construction, décoration et éclairage",
     "version": "2.4.2",
     "status": "OK",
@@ -604,6 +667,7 @@
   },
   {
     "name": "Rechiseled",
+    "jei": "@rechiseled",
     "category": "Construction, décoration et éclairage",
     "version": "1.2.6",
     "status": "OK",
@@ -622,6 +686,7 @@
   },
   {
     "name": "Rechiseled: Create",
+    "jei": "@rechiseledcreate",
     "category": "Construction, décoration et éclairage",
     "version": "1.1.1",
     "status": "OK",
@@ -640,6 +705,7 @@
   },
   {
     "name": "Supplementaries",
+    "jei": "@supplementaries",
     "category": "Construction, décoration et éclairage",
     "version": "1.21.1-4.0.2",
     "status": "OK",
@@ -676,6 +742,7 @@
   },
   {
     "name": "Buddycards",
+    "jei": "@buddycards",
     "category": "Vie communautaire, confort et interface",
     "version": "5.2.1",
     "status": "OK",
@@ -703,6 +770,7 @@
   },
   {
     "name": "Create Buddycards",
+    "jei": "@createbuddycards",
     "category": "Vie communautaire, confort et interface",
     "version": "2.0.4",
     "status": "OK",
@@ -712,6 +780,7 @@
   },
   {
     "name": "Delightful Buddycards",
+    "jei": "@delightfulbuddycards",
     "category": "Vie communautaire, confort et interface",
     "version": "2.1.0",
     "status": "OK",
@@ -739,6 +808,7 @@
   },
   {
     "name": "Etched",
+    "jei": "@etched",
     "category": "Vie communautaire, confort et interface",
     "version": "5.1.0-regalade.15",
     "status": "OK",
@@ -748,6 +818,7 @@
   },
   {
     "name": "Exposure",
+    "jei": "@exposure",
     "category": "Vie communautaire, confort et interface",
     "version": "1.9.21",
     "status": "OK",
@@ -838,6 +909,7 @@
   },
   {
     "name": "Sophisticated Backpacks",
+    "jei": "@sophisticatedbackpacks",
     "category": "Vie communautaire, confort et interface",
     "version": "3.26.21",
     "status": "OK",
@@ -856,6 +928,7 @@
   },
   {
     "name": "Storage Drawers",
+    "jei": "@storagedrawers",
     "category": "Vie communautaire, confort et interface",
     "version": "13.11.4",
     "status": "OK",
@@ -865,6 +938,7 @@
   },
   {
     "name": "Straw Statues",
+    "jei": "@strawstatues",
     "category": "Vie communautaire, confort et interface",
     "version": "21.1.0",
     "status": "OK",
@@ -874,6 +948,7 @@
   },
   {
     "name": "Trading Post",
+    "jei": "@tradingpost",
     "category": "Vie communautaire, confort et interface",
     "version": "21.1.1",
     "status": "OK",
@@ -901,6 +976,7 @@
   },
   {
     "name": "Artifacts",
+    "jei": "@artifacts",
     "category": "Exploration et monde vivant",
     "version": "13.2.5",
     "status": "OK",
@@ -919,6 +995,7 @@
   },
   {
     "name": "Epic Knights",
+    "jei": "@magistuarmory",
     "category": "Exploration et monde vivant",
     "version": "10.17",
     "status": "OK",
@@ -928,6 +1005,7 @@
   },
   {
     "name": "Critters and Companions",
+    "jei": "@crittersandcompanions",
     "category": "Exploration et monde vivant",
     "version": "2.7.0",
     "status": "OK",
@@ -937,6 +1015,7 @@
   },
   {
     "name": "Doggy Talents Next",
+    "jei": "@doggytalents",
     "category": "Exploration et monde vivant",
     "version": "1.19.1",
     "status": "OK",
@@ -946,6 +1025,7 @@
   },
   {
     "name": "Lootr",
+    "jei": "@lootr",
     "category": "Exploration et monde vivant",
     "version": "1.21.1-1.11.38.127",
     "status": "OK",
@@ -1477,6 +1557,7 @@
   },
   {
     "name": "Create Cobblestone",
+    "jei": "@createcobblestone",
     "category": "Automatisation Create complémentaire",
     "version": "1.5.1+neoforge-1.21.1-160",
     "status": "CONFIG",

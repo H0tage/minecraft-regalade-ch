@@ -51,6 +51,15 @@
     description.className = 'mod-description';
     description.textContent = mod.description;
     card.append(tag, heading, version, description);
+
+    if (mod.jei) {
+      const filter = document.createElement('p');
+      filter.className = 'mod-jei';
+      const shortcut = document.createElement('code');
+      shortcut.textContent = mod.jei;
+      filter.append('JEI ', shortcut);
+      card.append(filter);
+    }
     return card;
   }
 
@@ -58,7 +67,8 @@
     const query = search.value.trim().toLocaleLowerCase('fr');
     const matches = mods.filter((mod) => {
       const inCategory = category === 'tous' || mod.category === category;
-      const searchable = `${mod.name} ${mod.category} ${mod.version} ${mod.description}`.toLocaleLowerCase('fr');
+      const searchable =
+        `${mod.name} ${mod.category} ${mod.version} ${mod.description} ${mod.jei ?? ''}`.toLocaleLowerCase('fr');
       return inCategory && searchable.includes(query);
     });
 
