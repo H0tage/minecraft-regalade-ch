@@ -1,3 +1,48 @@
 <section class="radio-tutorial">
+  <nav class="radio-switcher" role="tablist" aria-label="Radio et talkie" data-tab-storage="regalade.radio.active">
+    <button
+      id="radio-voice-chat-tab"
+      type="button"
+      role="tab"
+      aria-selected="true"
+      aria-controls="radio-voice-chat-panel"
+      tabindex="0"
+    >
+      Simple Voice Chat
+    </button>
+    <button
+      id="radio-talkies-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="radio-talkies-panel"
+      tabindex="-1"
+    >
+      Talkies-walkies
+    </button>
+    <button
+      id="radio-postes-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="radio-postes-panel"
+      tabindex="-1"
+    >
+      Postes radio
+    </button>
+    <button
+      id="radio-pylones-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="radio-pylones-panel"
+      tabindex="-1"
+    >
+      Pylônes et stations
+    </button>
+  </nav>
   <!-- @include radio/voice-chat.html -->
+  <!-- @include radio/talkies.html -->
+  <!-- @include radio/postes.html -->
+  <!-- @include radio/pylones.html -->
 </section>

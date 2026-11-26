@@ -1,0 +1,81 @@
+<div class="radio-panel" id="radio-postes-panel" role="tabpanel" aria-labelledby="radio-postes-tab" hidden>
+  <header class="radio-hero radio-hero-dark">
+    <h1>Écouter une radio</h1>
+    <p>
+      Pose un poste à portée d’un pylône pour capter les programmes d’une station. Chaque poste peut mémoriser six
+      raccourcis accessibles aux joueurs qui l’ouvrent.
+    </p>
+  </header>
+
+  <section class="radio-section" id="radio-postes-ecouter" data-phase="Choisir un programme">
+    <h2>Choisir un programme et l’enregistrer</h2>
+    <ol class="radio-steps">
+      <li>
+        <b>1</b
+        ><span
+          >Cherche <code>@radihotage</code> dans JEI, fabrique un <strong>Poste radio</strong> et pose-le dans la zone
+          couverte par une station.</span
+        >
+      </li>
+      <li>
+        <b>2</b
+        ><span
+          >Ouvre le poste au clic droit, va dans <strong>Stations captées</strong> et sélectionne un programme.</span
+        >
+      </li>
+      <li>
+        <b>3</b
+        ><span
+          >Choisis <strong>Écouter</strong> pour le lancer, ou <strong>Associer</strong> pour le mémoriser sur l’un des
+          six boutons et le jouer.</span
+        >
+      </li>
+      <li>
+        <b>4</b
+        ><span
+          >Règle le volume et la portée sonore, puis clique sur <strong>Appliquer</strong> à côté du réglage concerné.
+          Un poste neuf se règle à <strong>50 % et 16 blocs</strong> par défaut.</span
+        >
+      </li>
+    </ol>
+    <div class="radio-note">
+      <strong>Si tu entends de la friture</strong>
+      <p>
+        Rapproche le poste d’un pylône qui reçoit la station. À la limite de la couverture, le signal se mêle
+        progressivement à la friture. La portée sonore détermine à quelle distance du poste tu peux l’entendre. La
+        couverture détermine quels programmes le poste reçoit.
+      </p>
+    </div>
+    <p>
+      Quand le flux fournit le titre du morceau, le poste l’affiche sous le nom de la station et du programme. Alimenter
+      le poste en redstone l’éteint. Couper l’alimentation relance le programme sélectionné.
+    </p>
+  </section>
+
+  <section class="radio-section" id="radio-postes-favoris" data-phase="Favoris et sonorisation">
+    <h2>Favoris personnels et sonorisation</h2>
+    <div class="radio-card-grid radio-card-grid-3">
+      <article>
+        <h3>Mes radios</h3>
+        <p>
+          Si le serveur active le mode Free, recherche une station dans Radio Browser ou ajoute un lien audio public.
+          Tes favoris restent dans ton profil. Les programmes choisis dans cette liste peuvent jouer hors couverture.
+        </p>
+      </article>
+      <article>
+        <h3>Enceinte d’ambiance</h3>
+        <p>
+          Colle un lien audio public pour sonoriser un lieu. Un fichier se joue en boucle. Un signal redstone coupe le
+          son jusqu’à ce que le signal s’arrête.
+        </p>
+      </article>
+      <article>
+        <h3>Haut-parleur d’annonce</h3>
+        <p>
+          Enregistre un lien audio public et envoie une impulsion redstone. Le fichier joue une fois, pendant 40
+          secondes au maximum. Une nouvelle impulsion le relance.
+        </p>
+      </article>
+    </div>
+  </section>
+</div>
