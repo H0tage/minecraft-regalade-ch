@@ -847,14 +847,14 @@
     "icon": "https://media.forgecdn.net/avatars/thumbnails/294/964/256/256/637335210850751725.png"
   },
   {
-    "name": "Etched",
-    "jei": "@etched",
+    "name": "RadiHotage",
+    "jei": "@radihotage",
     "category": "Vie communautaire, confort et interface",
-    "version": "5.1.0-regalade.15",
+    "version": "0.1.0-alpha.2",
     "status": "OK",
-    "description": "Radios internet avec recherche de stations, favoris, presets locaux, métadonnées ICY et lecture MP3, AAC et HLS sur un traitement audio asynchrone.",
-    "url": "https://www.curseforge.com/minecraft/mc-mods/etched",
-    "icon": "https://cdn.modrinth.com/data/zi3Fnfmc/ad6a88011826f38dc4aaad6a96b202947da31c67_96.webp"
+    "description": "Postes radio, stations de diffusion, pylônes et relais, enceintes d’ambiance et talkies-walkies intégrés à Simple Voice Chat.",
+    "url": "https://minecraft.regalade.ch/#statut",
+    "icon": "https://minecraft.regalade.ch/assets/hotage-logo.png"
   },
   {
     "name": "Exposure",
