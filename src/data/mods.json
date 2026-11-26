@@ -98,6 +98,16 @@
     "icon": "https://media.forgecdn.net/avatars/thumbnails/1068/437/256/256/638602929669872740.png"
   },
   {
+    "name": "Create: Bits 'n' Bobs",
+    "jei": "@bits_n_bobs",
+    "category": "Ingénierie, énergie et transports",
+    "version": "2.3.5",
+    "status": "CONFIG",
+    "description": "Ajoute des transmissions par chaîne, des poutres, des luminaires et des composants industriels. La transmission par chaîne est réservée aux roues à rebord et le chariot de chaîne est désactivé.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-bits-n-bobs",
+    "icon": "https://cdn.modrinth.com/data/T8bvmqVZ/f7f35471f0a411deb04f91158254e8177be332b7_96.webp"
+  },
+  {
     "name": "Create: Central Kitchen",
     "category": "Ingénierie, énergie et transports",
     "version": "2.6.2b",
@@ -135,6 +145,16 @@
     "description": "Blocs Create personnalisables avec l'apparence d'autres matériaux.",
     "url": "https://www.curseforge.com/minecraft/mc-mods/copycats",
     "icon": "https://media.forgecdn.net/avatars/thumbnails/1682/115/256/256/639068700185455615.png"
+  },
+  {
+    "name": "Create: Design n' Decor",
+    "jei": "@dndecor",
+    "category": "Ingénierie, énergie et transports",
+    "version": "2.2b",
+    "status": "OK",
+    "description": "Ajoute des variantes de roues de broyage, de conteneurs et de blocs de décoration industrielle.",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-design-n-decor",
+    "icon": "https://cdn.modrinth.com/data/x49wilh8/c52e15692d7911bd7a74413ca97d4e98ece0cefb_96.webp"
   },
   {
     "name": "Create: Diesel Generators",
@@ -187,6 +207,16 @@
     "icon": "https://media.forgecdn.net/avatars/thumbnails/1770/452/256/256/639124919832946079.png"
   },
   {
+    "name": "Create: Integrated Farming",
+    "jei": "@create_integrated_farming",
+    "category": "Ingénierie, énergie et transports",
+    "version": "1.4.3",
+    "status": "OK",
+    "description": "Automatise la récolte et la replantation, la collecte de produits des poulaillers et la pêche au filet sur les contraptions.",
+    "url": "https://modrinth.com/mod/create-integrated-farming",
+    "icon": "https://cdn.modrinth.com/data/9k1pAsfR/904e6311ef61f595854d872a7248a43fcbc9140d_96.webp"
+  },
+  {
     "name": "Create: Interiors",
     "jei": "@interiors",
     "category": "Ingénierie, énergie et transports",
@@ -205,6 +235,16 @@
     "description": "Monnaie, comptes bancaires, cartes et boutiques automatisées.",
     "url": "https://www.curseforge.com/minecraft/mc-mods/numismatics",
     "icon": "https://media.forgecdn.net/avatars/thumbnails/975/993/256/256/638479743236516111.png"
+  },
+  {
+    "name": "Create: Power Loader",
+    "jei": "@create_power_loader",
+    "category": "Ingénierie, énergie et transports",
+    "version": "2.0.5-mc1.21.1",
+    "status": "CONFIG",
+    "description": "Charge temporairement les chunks autour d'une gare équipée d'un chargeur en laiton quand un train y stationne.",
+    "url": "https://modrinth.com/mod/create-power-loader",
+    "icon": "https://cdn.modrinth.com/data/wPQ6GgFE/2f6c7a922eeb1b1064737e95b3ba1794b0c2c980.png"
   },
   {
     "name": "Create: Pattern Schematics",
