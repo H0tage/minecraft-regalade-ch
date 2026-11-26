@@ -44,11 +44,10 @@
           return;
         }
 
-        const days = Math.floor(seconds / 86_400);
-        const hours = Math.floor((seconds % 86_400) / 3_600);
+        const hours = Math.floor(seconds / 3_600);
         const minutes = Math.floor((seconds % 3_600) / 60);
         const remainingSeconds = seconds % 60;
-        const text = `${days} j ${String(hours).padStart(2, '0')} h ${String(minutes).padStart(2, '0')} min ${String(
+        const text = `${String(hours).padStart(2, '0')} h ${String(minutes).padStart(2, '0')} min ${String(
           remainingSeconds,
         ).padStart(2, '0')} s`;
         openingCountdown.textContent = text;
