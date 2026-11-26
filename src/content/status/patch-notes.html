@@ -4,68 +4,107 @@
       <span class="eyebrow">Historique du modpack</span>
       <h2 id="status-patch-notes-title">Dernier patch-note</h2>
     </div>
-    <span class="status-patch-current-version">Version 3.3</span>
+    <span class="status-patch-current-version">Version 3.4</span>
   </header>
 
   <article class="status-patch-latest">
     <div class="status-patch-latest-head">
       <div>
-        <span class="status-patch-label">Patch Régalade v3.3</span>
-        <h3>RadiHotage et mise à jour KubeJS</h3>
+        <span class="status-patch-label">Patch Régalade v3.4</span>
+        <h3>Mise à jour de RadiHotage</h3>
       </div>
       <span class="status-patch-date">Dernière version</span>
     </div>
-    <h4>Radiodiffusion et communications</h4>
+    <h4>RadiHotage 0.1.0-alpha.4</h4>
     <ul class="status-patch-list">
       <li>
-        <strong>RadiHotage <code>0.1.0-alpha.2</code> remplace Etched</strong> dans le modpack client et le pack
-        serveur. Cherche <code>@radihotage</code> dans JEI pour retrouver les appareils et leurs recettes.
+        Les enceintes d’ambiance reprennent au passage en cours pour les fichiers dont la durée est connue et qui
+        permettent de reprendre à un point précis. Une sortie de portée de moins d’une seconde peut conserver le canal
+        si le budget audio le permet.
       </li>
       <li>
-        Les postes radio disposent de six presets, de réglages de volume et de portée, et affichent le titre en cours
-        quand le flux le fournit. Le mode Legacy utilise les stations captées. Le mode Free, configurable côté serveur,
-        permet aussi d’écouter les programmes de sa bibliothèque personnelle hors couverture.
+        Le mât et l’antenne ont désormais des collisions. Les bases d’origine et de relais reprennent l’acier anthracite
+        et les attaches en cuivre du mât.
       </li>
       <li>
-        Un desk de diffusion permet de créer une station et d’alimenter son catalogue via Radio Browser ou par lien
-        audio. Les pylônes relaient les programmes. L’alpha.2 ajoute un nouveau modèle de mât et une embase d’antenne
-        isolée qui se pose en un clic sur deux blocs. Un brin suffit à terminer l’antenne. Les antennes RadiHotage déjà
-        installées restent utilisables.
+        Le module musical indique si le desk manque, si son catalogue est vide ou si un programme est en cours. Le
+        module talkie affiche des ondes rouges quand le pylône est indisponible et des pulsations turquoise quand il
+        peut relayer la voix.
       </li>
       <li>
-        Les enceintes d’ambiance peuvent lire un fichier en boucle. Les haut-parleurs d’annonce jouent un fichier à
-        chaque impulsion redstone.
-      </li>
-      <li>
-        Les talkies-walkies utilisent Simple Voice Chat. Sur la même fréquence, deux joueurs peuvent se parler
-        directement jusqu’à 30 blocs et étendre la portée avec des relais équipés. Le chat de proximité reste
-        disponible.
+        Le haut-parleur d’annonce se pose au sol, au mur ou au plafond selon 16 orientations. Les haut-parleurs déjà
+        posés gardent leur orientation.
       </li>
     </ul>
-    <h4>KubeJS</h4>
-    <ul class="status-patch-list">
-      <li>Onze nouvelles figurines rejoignent le butin des Trial Chambers. La texture d’IceSaiyan est mise à jour.</li>
-      <li>Le chargeur de chunks en andésite de Power Loader et sa version vide sont masqués dans JEI.</li>
-      <li>
-        Les anciens scripts des blocs de lumière et du renouvellement hebdomadaire des missions sont retirés. La
-        propagation du feu suit le réglage du monde.
-      </li>
-    </ul>
-    <h4>Mise à jour</h4>
+    <h4>Mise à jour depuis la 3.3</h4>
     <ul class="status-patch-list">
       <li>
-        Le checker passe à la version 3.3 côté client et serveur. Pour une mise à jour manuelle, retire l’ancien JAR
-        d’Etched avant d’ajouter RadiHotage. Les postes, presets et favoris d’Etched doivent être recréés.
-      </li>
-      <li>
-        Si RadiHotage alpha.1 est déjà installé, remplace le JAR des deux côtés et conserve les réglages existants. Les
-        configurations client et serveur sont fournies pour une première installation.
+        Pour une mise à jour manuelle, remplace les JAR de RadiHotage et du checker sur le serveur et chaque client. Le
+        checker passe à la version 3.4. Conserve les configurations RadiHotage existantes.
       </li>
     </ul>
   </article>
 
   <div class="status-patch-history">
     <h3>Versions précédentes</h3>
+
+    <details class="status-patch-entry">
+      <summary>
+        <span class="status-patch-version">v3.3</span>
+        <span>RadiHotage et mise à jour KubeJS</span>
+      </summary>
+      <div class="status-patch-body">
+        <h4>Radiodiffusion et communications</h4>
+        <ul class="status-patch-list">
+          <li>
+            <strong>RadiHotage <code>0.1.0-alpha.2</code> remplace Etched</strong> dans le modpack client et le pack
+            serveur. Cherche <code>@radihotage</code> dans JEI pour retrouver les appareils et leurs recettes.
+          </li>
+          <li>
+            Les postes radio disposent de six presets, de réglages de volume et de portée, et affichent le titre en
+            cours quand le flux le fournit. Le mode Legacy utilise les stations captées. Le mode Free, configurable côté
+            serveur, permet aussi d’écouter les programmes de sa bibliothèque personnelle hors couverture.
+          </li>
+          <li>
+            Un desk de diffusion permet de créer une station et d’alimenter son catalogue via Radio Browser ou par lien
+            audio. Les pylônes relaient les programmes. L’alpha.2 ajoute un nouveau modèle de mât et une embase
+            d’antenne isolée qui se pose en un clic sur deux blocs. Un brin suffit à terminer l’antenne. Les antennes
+            RadiHotage déjà installées restent utilisables.
+          </li>
+          <li>
+            Les enceintes d’ambiance peuvent lire un fichier en boucle. Les haut-parleurs d’annonce jouent un fichier à
+            chaque impulsion redstone.
+          </li>
+          <li>
+            Les talkies-walkies utilisent Simple Voice Chat. Sur la même fréquence, deux joueurs peuvent se parler
+            directement jusqu’à 30 blocs et étendre la portée avec des relais équipés. Le chat de proximité reste
+            disponible.
+          </li>
+        </ul>
+        <h4>KubeJS</h4>
+        <ul class="status-patch-list">
+          <li>
+            Onze nouvelles figurines rejoignent le butin des Trial Chambers. La texture d’IceSaiyan est mise à jour.
+          </li>
+          <li>Le chargeur de chunks en andésite de Power Loader et sa version vide sont masqués dans JEI.</li>
+          <li>
+            Les anciens scripts des blocs de lumière et du renouvellement hebdomadaire des missions sont retirés. La
+            propagation du feu suit le réglage du monde.
+          </li>
+        </ul>
+        <h4>Mise à jour</h4>
+        <ul class="status-patch-list">
+          <li>
+            Le checker passe à la version 3.3 côté client et serveur. Pour une mise à jour manuelle, retire l’ancien JAR
+            d’Etched avant d’ajouter RadiHotage. Les postes, presets et favoris d’Etched doivent être recréés.
+          </li>
+          <li>
+            Si RadiHotage alpha.1 est déjà installé, remplace le JAR des deux côtés et conserve les réglages existants.
+            Les configurations client et serveur sont fournies pour une première installation.
+          </li>
+        </ul>
+      </div>
+    </details>
 
     <details class="status-patch-entry">
       <summary>
