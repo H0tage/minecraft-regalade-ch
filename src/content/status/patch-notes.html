@@ -4,58 +4,86 @@
       <span class="eyebrow">Historique du modpack</span>
       <h2 id="status-patch-notes-title">Dernier patch-note</h2>
     </div>
-    <span class="status-patch-current-version">Version 3.4</span>
+    <span class="status-patch-current-version">Version 3.5</span>
   </header>
 
   <article class="status-patch-latest">
     <div class="status-patch-latest-head">
       <div>
-        <span class="status-patch-label">Patch Régalade v3.4</span>
-        <h3>Mise à jour de RadiHotage</h3>
+        <span class="status-patch-label">Patch Régalade v3.5</span>
+        <h3>Nouvelles commandes du talkie-walkie</h3>
       </div>
       <span class="status-patch-date">Dernière version</span>
     </div>
-    <h4>RadiHotage 0.1.0-alpha.4</h4>
     <ul class="status-patch-list">
       <li>
-        Correctif du 27 novembre. Sur un serveur en <code>online-mode=false</code>, le propriétaire peut ajouter un
-        cogestionnaire avant sa première connexion. Saisis le pseudo avec la casse exacte pour lui donner accès au
-        catalogue privé dès son arrivée. Si une attribution précédente a échoué, ajoute à nouveau le joueur.
+        En main principale ou secondaire, maintiens le <strong>clic droit</strong> pour parler et relâche-le pour couper
+        l’émission. <strong>Maj + clic droit</strong> ouvre les réglages de fréquence et de volume.
       </li>
       <li>
-        Les enceintes d’ambiance reprennent au passage en cours pour les fichiers dont la durée est connue et qui
-        permettent de reprendre à un point précis. Une sortie de portée de moins d’une seconde peut conserver le canal
-        si le budget audio le permet.
+        Le clic gauche sert à frapper ou à miner. Avec le talkie en main secondaire, l’objet en main principale garde la
+        priorité lors des interactions. Après une interaction, relâche le clic droit puis appuie de nouveau en visant le
+        vide pour parler.
       </li>
-      <li>
-        Le mât et l’antenne ont désormais des collisions. Les bases d’origine et de relais reprennent l’acier anthracite
-        et les attaches en cuivre du mât.
-      </li>
-      <li>
-        Le module musical indique si le desk manque, si son catalogue est vide ou si un programme est en cours. Le
-        module talkie affiche des ondes rouges quand le pylône est indisponible et des pulsations turquoise quand il
-        peut relayer la voix.
-      </li>
-      <li>
-        Le haut-parleur d’annonce se pose au sol, au mur ou au plafond selon 16 orientations. Les haut-parleurs déjà
-        posés gardent leur orientation.
-      </li>
+      <li>Survole le talkie dans l’inventaire et maintiens <strong>Maj</strong> pour afficher ses commandes.</li>
     </ul>
-    <h4>Mise à jour depuis la 3.3</h4>
+    <h4>Mise à jour depuis la 3.4</h4>
     <ul class="status-patch-list">
       <li>
-        Pour une mise à jour manuelle, remplace les JAR de RadiHotage et du checker sur le serveur et chaque client. Le
-        checker passe à la version 3.4. Conserve les configurations RadiHotage existantes.
-      </li>
-      <li>
-        Si tu as déjà installé la 3.4, remplace simplement le JAR RadiHotage par
-        <code>radihotage-0.1.0-alpha.4-correctif-cogestion.jar</code> sur le serveur et chaque client.
+        Le serveur et les joueurs passent à la 3.5 ensemble. Pour une mise à jour manuelle, remplace les JAR de
+        RadiHotage et du checker des deux côtés. Garde tes configurations et ton dossier <code>kubejs/</code>.
       </li>
     </ul>
   </article>
 
   <div class="status-patch-history">
     <h3>Versions précédentes</h3>
+
+    <details class="status-patch-entry">
+      <summary>
+        <span class="status-patch-version">v3.4</span>
+        <span>Mise à jour de RadiHotage</span>
+      </summary>
+      <div class="status-patch-body">
+        <h4>RadiHotage 0.1.0-alpha.4</h4>
+        <ul class="status-patch-list">
+          <li>
+            Correctif du 27 novembre. Sur un serveur en <code>online-mode=false</code>, le propriétaire peut ajouter un
+            cogestionnaire avant sa première connexion. Saisis le pseudo avec la casse exacte pour lui donner accès au
+            catalogue privé dès son arrivée. Si une attribution précédente a échoué, ajoute à nouveau le joueur.
+          </li>
+          <li>
+            Les enceintes d’ambiance reprennent au passage en cours pour les fichiers dont la durée est connue et qui
+            permettent de reprendre à un point précis. Une sortie de portée de moins d’une seconde peut conserver le
+            canal si le budget audio le permet.
+          </li>
+          <li>
+            Le mât et l’antenne ont désormais des collisions. Les bases d’origine et de relais reprennent l’acier
+            anthracite et les attaches en cuivre du mât.
+          </li>
+          <li>
+            Le module musical indique si le desk manque, si son catalogue est vide ou si un programme est en cours. Le
+            module talkie affiche des ondes rouges quand le pylône est indisponible et des pulsations turquoise quand il
+            peut relayer la voix.
+          </li>
+          <li>
+            Le haut-parleur d’annonce se pose au sol, au mur ou au plafond selon 16 orientations. Les haut-parleurs déjà
+            posés gardent leur orientation.
+          </li>
+        </ul>
+        <h4>Mise à jour depuis la 3.3</h4>
+        <ul class="status-patch-list">
+          <li>
+            Pour une mise à jour manuelle, remplace les JAR de RadiHotage et du checker sur le serveur et chaque client.
+            Le checker passe à la version 3.4. Conserve les configurations RadiHotage existantes.
+          </li>
+          <li>
+            Si tu as déjà installé la 3.4, remplace simplement le JAR RadiHotage par
+            <code>radihotage-0.1.0-alpha.4-correctif-cogestion.jar</code> sur le serveur et chaque client.
+          </li>
+        </ul>
+      </div>
+    </details>
 
     <details class="status-patch-entry">
       <summary>
