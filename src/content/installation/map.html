@@ -1,0 +1,113 @@
+<aside class="install-start">
+  <div>
+    <h2>Voir le paysage au loin dès ta première connexion</h2>
+    <p>
+      Cette carte facultative permet à ton jeu d’afficher les montagnes, les vallées et les constructions déjà
+      enregistrées, même si tu n’y as jamais mis les pieds. Installe d’abord le modpack Régalade dans CurseForge.
+    </p>
+  </div>
+  <a
+    class="button"
+    href="https://www.swisstransfer.com/dl/01a21d1f-6b92-75f3-95b9-e2bc0a0ae52d"
+    target="_blank"
+    rel="noopener"
+  >
+    Télécharger la carte (.zip)
+  </a>
+</aside>
+
+<div class="install-steps">
+  <article class="install-step">
+    <div>
+      <h2>Télécharge la carte sur SwissTransfer</h2>
+      <p>
+        Le bouton ci-dessus ouvre SwissTransfer. Clique sur <strong>Télécharger</strong> et attends la fin du
+        téléchargement de <strong>voxy.zip</strong>. Tu le retrouveras normalement dans
+        <strong>Téléchargements</strong>.
+      </p>
+      <p>
+        Le ZIP pèse environ <strong>10 Go</strong>. Il faut encore <strong>10 Go libres</strong> dans le profil pour
+        l’extraire. Si tout est sur le même disque, prévois un peu plus de <strong>20 Go</strong> avant de commencer.
+      </p>
+    </div>
+  </article>
+
+  <article class="install-step">
+    <div>
+      <h2>Ouvre le dossier du profil Régalade</h2>
+      <p>
+        Ferme Minecraft. Dans CurseForge, choisis <strong>Minecraft</strong>, puis <strong>Mes modpacks</strong>. Clique
+        sur la vignette du profil Régalade avec lequel tu joues. Ouvre son menu <strong>⋯</strong> et choisis
+        <strong>Ouvrir le dossier</strong> (<strong>Open Folder</strong> en anglais).
+      </p>
+      <p>
+        Dans la fenêtre qui s’ouvre, tu dois voir les dossiers <code>mods</code> et <code>config</code> côte à côte.
+        C’est ce qu’on appelle la <strong>racine du profil</strong>. Garde cette fenêtre ouverte.
+      </p>
+      <details class="install-callout">
+        <summary>Tu as déjà un dossier .voxy dans ce profil ?</summary>
+        <p>
+          Ouvre <code>.voxy</code>, puis <code>saves</code>. Compare son contenu avec le dossier
+          <code>.voxy/saves</code> du ZIP. Si un dossier porte exactement le même nom aux deux endroits, ajoute
+          <code>-ancien</code> à son nom dans ton profil pour garder tes paysages précédents. Reviens ensuite au niveau
+          de <code>mods</code> et <code>config</code>.
+        </p>
+      </details>
+    </div>
+  </article>
+
+  <article class="install-step">
+    <div>
+      <h2>Extrais le ZIP dans ce dossier</h2>
+      <p>
+        <strong>Sur Windows</strong>, dans la fenêtre du profil, appuie sur <kbd>Alt</kbd> + <kbd>D</kbd> pour
+        sélectionner l’adresse du dossier, puis sur <kbd>Ctrl</kbd> + <kbd>C</kbd> pour la copier. Dans
+        <strong>Téléchargements</strong>, fais un clic droit sur <strong>voxy.zip</strong> et choisis
+        <strong>Extraire tout…</strong>.
+      </p>
+      <p>
+        Clique dans le champ de destination, appuie sur <kbd>Ctrl</kbd> + <kbd>A</kbd> pour sélectionner le chemin
+        proposé, puis sur <kbd>Ctrl</kbd> + <kbd>V</kbd> pour le remplacer par celui du profil. Clique sur
+        <strong>Extraire</strong> et attends la fin de la copie.
+      </p>
+      <p>
+        <strong>Sur Mac</strong>, double-clique sur le ZIP dans le Finder. Appuie sur <kbd>⌘</kbd> + <kbd>Maj</kbd> +
+        <kbd>.</kbd> pour afficher les dossiers cachés. Ouvre le dossier extrait si nécessaire, puis copie le dossier
+        <code>.voxy</code> à côté de <code>mods</code> et <code>config</code>. Si le Finder te propose de fusionner avec
+        un dossier existant, choisis <strong>Fusionner</strong>.
+      </p>
+    </div>
+  </article>
+
+  <article class="install-step">
+    <div>
+      <h2>Vérifie que les trois dossiers sont côte à côte</h2>
+      <p>Retourne dans la fenêtre du profil. Voici ce que tu dois y retrouver, parmi tes autres dossiers.</p>
+      <pre aria-label="Emplacement du dossier .voxy dans le profil"><code>Profil Régalade/
+├── .voxy/
+├── config/
+└── mods/</code></pre>
+      <p>
+        Ouvre <code>.voxy</code>. Tu dois y voir <code>saves</code>. Si tu as un dossier <code>voxy</code> qui contient
+        lui-même <code>.voxy</code>, déplace le dossier <strong>avec le point</strong> à côté de <code>mods</code>.
+      </p>
+      <p>Tu peux maintenant lancer ton profil dans CurseForge et rejoindre le serveur.</p>
+    </div>
+  </article>
+</div>
+
+<div class="install-faq">
+  <details>
+    <summary>J’ai installé la carte, mais le paysage au loin reste vide</summary>
+    <p>
+      Voxy range les paysages selon l’adresse saisie dans Minecraft. Le ZIP utilise l’adresse IP du serveur. Si tu as
+      saisi une autre adresse, par exemple <code>play.regalade.ch</code>, entre une fois en jeu, puis ferme Minecraft.
+      Dans le profil, ouvre <code>.voxy</code>, puis <code>saves</code>.
+    </p>
+    <p>
+      Repère le dossier créé pour ton adresse (par exemple <code>play.regalade.ch</code>) et copie son nom exact. Ajoute
+      <code>-ancien</code> au nom de ce dossier pour garder ta copie. Donne ensuite le nom que tu as copié au dossier
+      apporté par le ZIP (son nom commence par l’IP et se termine par <code>_25565</code>). Relance le jeu.
+    </p>
+  </details>
+</div>

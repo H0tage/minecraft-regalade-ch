@@ -26,6 +26,16 @@
     >
       Informations de connexion
     </button>
+    <button
+      id="installation-precharger-la-map-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="installation-map"
+      tabindex="-1"
+    >
+      précharger toute la MAP (c'est banger)
+    </button>
   </div>
   <div class="installation-page-content">
     <section class="installation-panel" id="tutorial-install" role="tabpanel" aria-labelledby="installation-guide-tab">
@@ -39,6 +49,15 @@
       hidden
     >
       <!-- @include ../content/installation/connection.html -->
+    </section>
+    <section
+      class="installation-panel"
+      id="installation-map"
+      role="tabpanel"
+      aria-labelledby="installation-precharger-la-map-tab"
+      hidden
+    >
+      <!-- @include ../content/installation/map.html -->
     </section>
   </div>
 </section>

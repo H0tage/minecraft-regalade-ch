@@ -22,8 +22,12 @@
     history.replaceState(null, '', `#${path.join('/')}`);
   }
 
-  function applyTutorialHash() {
+  function applyTabHash() {
     const [page, tutorialSlug, nestedSlug] = location.hash.slice(1).split('/');
+    if (page === 'installation') {
+      groups.get(`installation-${tutorialSlug}-tab`)?.select(true, false, false);
+      return;
+    }
     if (page !== 'tutoriels') return;
     if (!tutorialSlug) {
       syncTutorialHash();
@@ -70,7 +74,13 @@
           /* Storage is optional. */
         }
       }
-      if (syncHash) syncTutorialHash();
+      if (syncHash) {
+        if (tabList.closest('#installation')) {
+          history.replaceState(null, '', `#installation/${nestedTabSlug(selectedTab)}`);
+        } else {
+          syncTutorialHash();
+        }
+      }
       document.dispatchEvent(new CustomEvent('regalade:tutorial-content-changed'));
 
       if (scrollToStart) {
@@ -126,6 +136,6 @@
     });
   });
 
-  applyTutorialHash();
-  window.addEventListener('hashchange', applyTutorialHash);
+  applyTabHash();
+  window.addEventListener('hashchange', applyTabHash);
 })();

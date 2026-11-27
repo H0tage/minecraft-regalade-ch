@@ -340,6 +340,7 @@
 
 .installation-page-tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 7px;
   margin: 0 0 28px;
   padding-bottom: 10px;
@@ -519,14 +520,6 @@
 @media (width <= 620px) {
   #installation.view {
     padding-top: 30px;
-  }
-
-  .installation-page-tabs {
-    overflow-x: auto;
-  }
-
-  .installation-page-tabs button {
-    flex: 0 0 auto;
   }
 
   .installation-page-head h1 {
