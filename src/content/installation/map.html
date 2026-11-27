@@ -98,16 +98,17 @@
 
 <div class="install-faq">
   <details>
-    <summary>J’ai installé la carte, mais le paysage au loin reste vide</summary>
+    <summary>L’IP du serveur a changé et je ne vois plus les paysages au loin</summary>
     <p>
-      Voxy range les paysages selon l’adresse saisie dans Minecraft. Le ZIP utilise l’adresse IP du serveur. Si tu as
-      saisi une autre adresse, par exemple <code>play.regalade.ch</code>, entre une fois en jeu, puis ferme Minecraft.
-      Dans le profil, ouvre <code>.voxy</code>, puis <code>saves</code>.
+      Dans <code>.voxy/saves</code>, le nom du dossier de la carte doit correspondre à l’adresse IP que tu utilises dans
+      Minecraft. Si tu saisis aussi le port, Voxy remplace les deux-points par un tiret bas. Par exemple, l’adresse
+      <code>192.0.2.10:25565</code> donne le dossier <code>192.0.2.10_25565</code>.
     </p>
     <p>
-      Repère le dossier créé pour ton adresse (par exemple <code>play.regalade.ch</code>) et copie son nom exact. Ajoute
-      <code>-ancien</code> au nom de ce dossier pour garder ta copie. Donne ensuite le nom que tu as copié au dossier
-      apporté par le ZIP (son nom commence par l’IP et se termine par <code>_25565</code>). Relance le jeu.
+      Si l’IP change, connecte-toi une fois avec la nouvelle adresse, puis ferme Minecraft. Dans ton profil, ouvre
+      <code>.voxy</code>, puis <code>saves</code>. Copie le nom exact du dossier que Voxy vient de créer pour la
+      nouvelle IP, puis ajoute <code>-sauvegarde</code> au nom de ce nouveau dossier pour le garder de côté. Renomme le
+      dossier de l’ancienne IP en y collant le nom copié. Relance le jeu et rejoins le serveur.
     </p>
   </details>
 </div>
